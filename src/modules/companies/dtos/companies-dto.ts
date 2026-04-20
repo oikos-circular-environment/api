@@ -157,3 +157,73 @@ export const businessHourSchema = z.object({
 export type BusinessHour = z.infer<typeof businessHourSchema>;
 
 export const companyBusinessHoursSchema = z.array(businessHourSchema);
+
+export const measurementSchema = z.enum([
+	"KG",
+	"L",
+	"UNIT",
+	"M",
+	"M2",
+	"M3",
+	"ML",
+]);
+
+export type Measurement = z.infer<typeof measurementSchema>;
+
+export const wasteTypeSchema = z.enum(["RECYCLABLE", "GARBAGE"]);
+
+export type WasteType = z.infer<typeof wasteTypeSchema>;
+
+const companyItemBaseSchema = z.object({
+	name: z.string().min(1, "Name is required"),
+	description: z.string().optional().nullable(),
+	price: z.number().nonnegative("Price must be non-negative"),
+	unit: measurementSchema,
+	waste_type: wasteTypeSchema,
+	sub_items: z.array(z.string().min(1)).optional().nullable(),
+});
+
+export const companyWasteInputSchema = companyItemBaseSchema;
+
+export type CompanyWasteInput = z.infer<typeof companyWasteInputSchema>;
+
+export const companyWasteSchema = companyItemBaseSchema.extend({
+	id: z.string(),
+	sub_items: z.array(z.string()).nullable(),
+	created_at: z.date(),
+	updated_at: z.date(),
+});
+
+export type CompanyWaste = z.infer<typeof companyWasteSchema>;
+
+export const companyWastesSchema = z.array(companyWasteSchema);
+
+export const upsertCompanyWastesSchema = z.object({
+	wastes: z.array(companyWasteInputSchema),
+});
+
+export type UpsertCompanyWastes = z.infer<typeof upsertCompanyWastesSchema>;
+
+export const companyServiceInputSchema = companyItemBaseSchema.extend({
+	quantity: z.number().int().positive("Quantity must be greater than zero"),
+	observations: z.string().optional().nullable(),
+});
+
+export type CompanyServiceInput = z.infer<typeof companyServiceInputSchema>;
+
+export const companyServiceSchema = companyServiceInputSchema.extend({
+	id: z.string(),
+	sub_items: z.array(z.string()).nullable(),
+	created_at: z.date(),
+	updated_at: z.date(),
+});
+
+export type CompanyService = z.infer<typeof companyServiceSchema>;
+
+export const companyServicesSchema = z.array(companyServiceSchema);
+
+export const upsertCompanyServicesSchema = z.object({
+	services: z.array(companyServiceInputSchema),
+});
+
+export type UpsertCompanyServices = z.infer<typeof upsertCompanyServicesSchema>;
