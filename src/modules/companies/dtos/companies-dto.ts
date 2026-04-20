@@ -81,3 +81,79 @@ export const companyAddressSchema = z.object({
 });
 
 export type CompanyAddress = z.infer<typeof companyAddressSchema>;
+
+const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
+
+export const dayOfWeekSchema = z.enum([
+	"SUNDAY",
+	"MONDAY",
+	"TUESDAY",
+	"WEDNESDAY",
+	"THURSDAY",
+	"FRIDAY",
+	"SATURDAY",
+]);
+
+export type DayOfWeek = z.infer<typeof dayOfWeekSchema>;
+
+export const businessHourTimeSlotInputSchema = z.object({
+	start_time: z
+		.string()
+		.regex(timePattern, "start_time must be in HH:mm format"),
+	end_time: z.string().regex(timePattern, "end_time must be in HH:mm format"),
+});
+
+export type BusinessHourTimeSlotInput = z.infer<
+	typeof businessHourTimeSlotInputSchema
+>;
+
+export const businessHourUpsertInputSchema = z.object({
+	day_of_week: dayOfWeekSchema,
+	is_open: z.boolean(),
+	time_slots: z.array(businessHourTimeSlotInputSchema),
+});
+
+export type BusinessHourUpsertInput = z.infer<
+	typeof businessHourUpsertInputSchema
+>;
+
+export const upsertCompanyBusinessHoursSchema = z
+	.object({
+		business_hours: z.array(businessHourUpsertInputSchema).min(1),
+	})
+	.refine(
+		(data) => {
+			const uniqueDays = new Set(
+				data.business_hours.map((item) => item.day_of_week),
+			);
+
+			return uniqueDays.size === data.business_hours.length;
+		},
+		{
+			message: "day_of_week must be unique",
+			path: ["business_hours"],
+		},
+	);
+
+export type UpsertCompanyBusinessHours = z.infer<
+	typeof upsertCompanyBusinessHoursSchema
+>;
+
+export const businessHourTimeSlotSchema = z.object({
+	id: z.string(),
+	start_time: z.string(),
+	end_time: z.string(),
+});
+
+export type BusinessHourTimeSlot = z.infer<typeof businessHourTimeSlotSchema>;
+
+export const businessHourSchema = z.object({
+	id: z.string(),
+	day_of_week: dayOfWeekSchema,
+	is_open: z.boolean(),
+	time_slots: z.array(businessHourTimeSlotSchema),
+});
+
+export type BusinessHour = z.infer<typeof businessHourSchema>;
+
+export const companyBusinessHoursSchema = z.array(businessHourSchema);
