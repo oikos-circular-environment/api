@@ -20,6 +20,9 @@ import { CreateCompanyUseCase } from "./use-cases/create-company-use-case.js";
 import { GetCompanyUseCase } from "./use-cases/get-company-use-case.js";
 import { UpdateCompanyUseCase } from "./use-cases/update-company-use-case.js";
 
+const COMPANIES_TAG = "Companies";
+const COMPANIES_ADDRESSES_TAG = "Companies / Addresses";
+
 export async function companiesRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const companiesRepository = new PrismaCompaniesRepository();
@@ -49,7 +52,7 @@ export async function companiesRoutes(app: FastifyInstance) {
 		"/companies",
 		{
 			schema: withBearerAuth({
-				tags: ["Companies"],
+				tags: [COMPANIES_TAG],
 				summary: "Create user company",
 				description: "Creates a company for the authenticated user.",
 				body: createCompanySchema.omit({ user_id: true }),
@@ -75,7 +78,7 @@ export async function companiesRoutes(app: FastifyInstance) {
 		"/companies",
 		{
 			schema: withBearerAuth({
-				tags: ["Companies"],
+				tags: [COMPANIES_TAG],
 				summary: "Get user company",
 				description: "Returns the company of the authenticated user.",
 				response: {
@@ -96,7 +99,7 @@ export async function companiesRoutes(app: FastifyInstance) {
 		"/companies",
 		{
 			schema: withBearerAuth({
-				tags: ["Companies"],
+				tags: [COMPANIES_TAG],
 				summary: "Update user company",
 				description:
 					"Updates only company data for the authenticated user. Related entities are not handled by this route.",
@@ -123,7 +126,7 @@ export async function companiesRoutes(app: FastifyInstance) {
 		"/companies/addresses",
 		{
 			schema: withBearerAuth({
-				tags: ["Companies"],
+				tags: [COMPANIES_ADDRESSES_TAG],
 				summary: "Create company address",
 				description: "Creates an address for the authenticated user's company.",
 				body: createCompanyAddressSchema.omit({ company_id: true }),
@@ -150,7 +153,7 @@ export async function companiesRoutes(app: FastifyInstance) {
 		"/companies/addresses",
 		{
 			schema: withBearerAuth({
-				tags: ["Companies"],
+				tags: [COMPANIES_ADDRESSES_TAG],
 				summary: "Get company address",
 				description: "Returns the address of the authenticated user's company.",
 				response: {
@@ -172,7 +175,7 @@ export async function companiesRoutes(app: FastifyInstance) {
 		"/companies/addresses",
 		{
 			schema: withBearerAuth({
-				tags: ["Companies"],
+				tags: [COMPANIES_ADDRESSES_TAG],
 				summary: "Update company address",
 				description:
 					"Updates only address data for the authenticated user's company.",
