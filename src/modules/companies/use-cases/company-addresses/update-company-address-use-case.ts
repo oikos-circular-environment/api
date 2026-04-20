@@ -5,7 +5,6 @@ import type {
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { AddressesRepository } from "@/modules/companies/repositories/address-repository.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
-import type { CompanyAddressesRepository } from "@/modules/companies/repositories/company-addresses-repository.js";
 
 type UpdateCompanyAddressUseCaseRequest = {
 	userId: string;
@@ -15,7 +14,6 @@ type UpdateCompanyAddressUseCaseRequest = {
 export class UpdateCompanyAddressUseCase {
 	constructor(
 		private readonly companiesRepository: CompaniesRepository,
-		private readonly companyAddressesRepository: CompanyAddressesRepository,
 		private readonly addressesRepository: AddressesRepository,
 	) {}
 
@@ -29,13 +27,14 @@ export class UpdateCompanyAddressUseCase {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);
 		}
 
-		const companyAddress =
-			await this.companyAddressesRepository.findByCompanyId(company.id);
+		const companyAddress = await this.addressesRepository.findByCompanyId(
+			company.id,
+		);
 
 		if (!companyAddress) {
 			throw new AppError("Address not found", "ADDRESS_NOT_FOUND", 404);
 		}
 
-		return this.addressesRepository.update(companyAddress.address_id, data);
+		return this.addressesRepository.update(companyAddress.id, data);
 	}
 }

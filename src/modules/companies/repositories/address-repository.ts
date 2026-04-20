@@ -6,6 +6,7 @@ import type {
 
 export interface AddressesRepository {
 	findById(id: string): Promise<CompanyAddress | null>;
+	findByCompanyId(companyId: string): Promise<CompanyAddress | null>;
 	create(data: CreateCompanyAddress): Promise<CompanyAddress>;
 	update(
 		id: string,

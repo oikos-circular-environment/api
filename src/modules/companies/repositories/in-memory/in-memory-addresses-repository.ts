@@ -19,6 +19,12 @@ export class InMemoryAddressesRepository implements AddressesRepository {
 		return address ? this.mapAddress(address) : null;
 	}
 
+	async findByCompanyId(companyId: string) {
+		const address = this.items.find((item) => item.company_id === companyId);
+
+		return address ? this.mapAddress(address) : null;
+	}
+
 	async create(data: CreateCompanyAddress) {
 		const now = new Date();
 

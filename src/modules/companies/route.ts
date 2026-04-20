@@ -13,7 +13,6 @@ import {
 } from "./dtos/companies-dto.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repository-prisma.js";
-import { PrismaCompanyAddressesRepository } from "./repositories/prisma/company-addresses-repository-prisma.js";
 import { CreateCompanyAddressUseCase } from "./use-cases/company-addresses/create-company-address-use-case.js";
 import { GetCompanyAddressUseCase } from "./use-cases/company-addresses/get-company-address-use-case.js";
 import { UpdateCompanyAddressUseCase } from "./use-cases/company-addresses/update-company-address-use-case.js";
@@ -24,7 +23,6 @@ import { UpdateCompanyUseCase } from "./use-cases/update-company-use-case.js";
 export async function companiesRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const companiesRepository = new PrismaCompaniesRepository();
-	const companyAddressesRepository = new PrismaCompanyAddressesRepository();
 	const addressesRepository = new PrismaAddressesRepository();
 
 	const createCompanyUseCase = new CreateCompanyUseCase(companiesRepository);
@@ -32,17 +30,14 @@ export async function companiesRoutes(app: FastifyInstance) {
 	const updateCompanyUseCase = new UpdateCompanyUseCase(companiesRepository);
 	const createCompanyAddressUseCase = new CreateCompanyAddressUseCase(
 		companiesRepository,
-		companyAddressesRepository,
 		addressesRepository,
 	);
 	const getCompanyAddressUseCase = new GetCompanyAddressUseCase(
 		companiesRepository,
-		companyAddressesRepository,
 		addressesRepository,
 	);
 	const updateCompanyAddressUseCase = new UpdateCompanyAddressUseCase(
 		companiesRepository,
-		companyAddressesRepository,
 		addressesRepository,
 	);
 

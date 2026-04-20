@@ -2,17 +2,14 @@ import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
-import { InMemoryCompanyAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-addresses-repository.js";
 import { CreateCompanyAddressUseCase } from "./create-company-address-use-case.js";
 
 describe("create-company-address-use-case", () => {
 	it("creates a company address when company does not have one", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const companyAddressesRepository = new InMemoryCompanyAddressesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new CreateCompanyAddressUseCase(
 			companiesRepository,
-			companyAddressesRepository,
 			addressesRepository,
 		);
 
@@ -58,17 +55,13 @@ describe("create-company-address-use-case", () => {
 		expect(result.latitude).toBe(-23.5505);
 		expect(result.longitude).toBe(-46.6333);
 		expect(addressesRepository.items.length).toBe(1);
-		expect(companyAddressesRepository.items.length).toBe(1);
-		expect(companyAddressesRepository.items[0].address_id).toBe(result.id);
 	});
 
 	it("throws when company does not exist", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const companyAddressesRepository = new InMemoryCompanyAddressesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new CreateCompanyAddressUseCase(
 			companiesRepository,
-			companyAddressesRepository,
 			addressesRepository,
 		);
 
@@ -105,11 +98,9 @@ describe("create-company-address-use-case", () => {
 
 	it("throws when company address already exists", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const companyAddressesRepository = new InMemoryCompanyAddressesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new CreateCompanyAddressUseCase(
 			companiesRepository,
-			companyAddressesRepository,
 			addressesRepository,
 		);
 
