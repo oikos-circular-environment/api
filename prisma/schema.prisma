@@ -72,12 +72,28 @@ model Profile {
   created_at   DateTime @default(now())
   updated_at   DateTime @updatedAt
 
-  user_id    String   @unique
+  user_id String @unique
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
   address_id String?  @unique
-  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
   address    Address? @relation(fields: [address_id], references: [id], onDelete: SetNull)
 
+  profile_image    ProfileImage? @relation(fields: [profile_image_id], references: [id])
+  profile_image_id String?
+
   @@map("profiles")
+}
+
+model ProfileImage {
+  id         String    @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  base64     String
+  created_at DateTime  @default(now())
+  profiles   Profile[]
+
+  @@map("profile_images")
 }
 
 model Company {

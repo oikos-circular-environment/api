@@ -10,16 +10,13 @@
 		"dev": "tsx watch --env-file=.env src/server.ts",
 		"build": "tsc",
 		"start": "node dist/server.js",
-
 		"format": "biome format --write --files-ignore-unknown=true .",
 		"lint": "biome lint --write --files-ignore-unknown=true .",
 		"prepare": "lefthook install",
-
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage",
 		"test:ui": "vitest --ui",
-
 		"migrate:dev": "prisma migrate dev",
 		"migrate:generate": "prisma generate"
 	},
@@ -32,6 +29,7 @@
 		"@prisma/adapter-pg": "^7.7.0",
 		"@prisma/client": "^7.7.0",
 		"@scalar/fastify-api-reference": "^1.52.1",
+		"@supabase/supabase-js": "^2.104.0",
 		"bcryptjs": "^3.0.3",
 		"fastify": "^5.8.5",
 		"fastify-type-provider-zod": "^6.1.0",
