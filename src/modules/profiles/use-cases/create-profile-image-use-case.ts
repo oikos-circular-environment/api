@@ -1,6 +1,6 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
-import type { Profile } from "@/modules/profiles/dtos/profiles-dto.js";
+import type { ProfileImage } from "@/modules/profiles/dtos/profiles-dto.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
 
 const PROFILE_IMAGE_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
@@ -30,7 +30,7 @@ export class CreateProfileImageUseCase {
 	async execute({
 		userId,
 		file,
-	}: CreateProfileImageUseCaseRequest): Promise<Profile> {
+	}: CreateProfileImageUseCaseRequest): Promise<ProfileImage> {
 		const profile = await this.profilesRepository.findByUserId(userId);
 
 		if (!profile) {
@@ -79,7 +79,7 @@ export class CreateProfileImageUseCase {
 		}
 
 		const { url } = await this.storageProvider.getFileUrl(filePath);
-		const profileWithImage = await this.profilesRepository.saveProfileImage(
+		const profileImage = await this.profilesRepository.saveProfileImage(
 			profile.id,
 			{
 				url,
@@ -89,10 +89,10 @@ export class CreateProfileImageUseCase {
 			},
 		);
 
-		if (!profileWithImage) {
+		if (!profileImage) {
 			throw new AppError("Profile not found", "PROFILE_NOT_FOUND", 404);
 		}
 
-		return profileWithImage;
+		return profileImage;
 	}
 }

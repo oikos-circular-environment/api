@@ -79,7 +79,7 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 		};
 		profile.updated_at = new Date();
 
-		return profile;
+		return profile.profile_image;
 	}
 
 	async deleteProfileImage(id: string) {

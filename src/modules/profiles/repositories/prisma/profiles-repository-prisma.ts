@@ -150,7 +150,11 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 			},
 		});
 
-		return profileMapper(updatedProfile as PrismaProfileWithRelations);
+		const mappedProfile = profileMapper(
+			updatedProfile as PrismaProfileWithRelations,
+		);
+
+		return mappedProfile?.profile_image ?? null;
 	}
 
 	async deleteProfileImage(profile_id: string) {

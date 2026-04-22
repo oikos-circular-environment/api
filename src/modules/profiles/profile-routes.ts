@@ -1,5 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
+import z from "zod";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { SupabaseBucket } from "../common/providers/storage/supabase/supabase-bucket.js";
@@ -8,6 +9,7 @@ import {
 	addressSchema,
 	createAddressSchema,
 	createProfileSchema,
+	profileImageSchema,
 	profileSchema,
 	updateAddressSchema,
 	updateProfileSchema,
@@ -144,7 +146,7 @@ export async function profileRoutes(app: FastifyInstance) {
 					"Creates or updates the authenticated user's profile image. Only jpeg and png files are accepted up to 10MB.",
 				consumes: ["multipart/form-data"],
 				response: {
-					200: profileSchema,
+					200: profileImageSchema,
 					400: appErrorSchema,
 					401: appErrorSchema,
 					404: appErrorSchema,
@@ -164,7 +166,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				);
 			}
 
-			const profile = await createProfileImageUseCase.execute({
+			const profileImage = await createProfileImageUseCase.execute({
 				userId,
 				file: {
 					fileName: file.filename,
@@ -173,10 +175,10 @@ export async function profileRoutes(app: FastifyInstance) {
 				},
 			});
 
-			return reply.send(profile);
+			return reply.send(profileImage);
 		},
 	);
-
+	("");
 	typedApp.delete(
 		"/profiles/images",
 		{
@@ -185,7 +187,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				summary: "Delete profile image",
 				description: "Deletes the authenticated user's profile image.",
 				response: {
-					202: null,
+					202: z.null(),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -195,7 +197,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			await deleteProfileImageUseCase.execute({ userId });
 
-			return reply.status(202).send();
+			return reply.status(202).send(null);
 		},
 	);
 

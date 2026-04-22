@@ -35,11 +35,11 @@ describe("create-profile-image-use-case", () => {
 			},
 		});
 
-		expect(result.profile_image?.path).toBe(
+		expect(result.path).toBe(
 			"profiles/11111111-1111-1111-1111-111111111111.jpeg",
 		);
-		expect(result.profile_image?.file_name).toBe("avatar.jpeg");
-		expect(result.profile_image?.base64).toBe(imageContent.toString("base64"));
+		expect(result.file_name).toBe("avatar.jpeg");
+		expect(result.base64).toBe(imageContent.toString("base64"));
 		expect(
 			await storageProvider.checkFileExists(
 				"profiles/11111111-1111-1111-1111-111111111111.jpeg",
@@ -84,7 +84,7 @@ describe("create-profile-image-use-case", () => {
 			},
 		});
 
-		expect(result.profile_image?.path).toBe(
+		expect(result.path).toBe(
 			"profiles/11111111-1111-1111-1111-111111111111.png",
 		);
 		expect(await storageProvider.checkFileExists(oldImagePath)).toBe(false);
