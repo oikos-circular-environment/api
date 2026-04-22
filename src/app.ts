@@ -1,6 +1,7 @@
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
 import fastifyJwt from "@fastify/jwt";
+import fastifyMultipart from "@fastify/multipart";
 import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
 import ScalarApiReference from "@scalar/fastify-api-reference";
@@ -32,6 +33,13 @@ app.register(fastifyJwt, {
 });
 
 app.register(fastifyCookie);
+
+app.register(fastifyMultipart, {
+	limits: {
+		files: 1,
+		fileSize: 10 * 1024 * 1024,
+	},
+});
 
 app.register(fastifyRateLimit, {
 	max: 100,

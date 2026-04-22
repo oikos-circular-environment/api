@@ -1,4 +1,8 @@
-import type { Address, Profile } from "@/modules/profiles/dtos/profiles-dto.js";
+import type {
+	Address,
+	Profile,
+	ProfileImage,
+} from "@/modules/profiles/dtos/profiles-dto.js";
 
 export type PrismaAddressWithRelations = {
 	id: string;
@@ -28,6 +32,14 @@ export type PrismaProfileWithRelations = {
 	created_at: Date;
 	updated_at: Date;
 	address?: PrismaAddressWithRelations | null;
+	profile_image?: {
+		id: string;
+		url: string;
+		file_name: string;
+		path: string;
+		base64: string;
+		created_at: Date;
+	} | null;
 } | null;
 
 export function profileMapper(
@@ -38,6 +50,7 @@ export function profileMapper(
 	}
 
 	const address = profile.address;
+	const profileImage = profile.profile_image;
 
 	return {
 		id: profile.id,
@@ -66,6 +79,16 @@ export function profileMapper(
 					created_at: address.created_at,
 					updated_at: address.updated_at,
 				} satisfies Address)
+			: null,
+		profile_image: profileImage
+			? ({
+					id: profileImage.id,
+					url: profileImage.url,
+					file_name: profileImage.file_name,
+					path: profileImage.path,
+					base64: profileImage.base64,
+					created_at: profileImage.created_at,
+				} satisfies ProfileImage)
 			: null,
 	};
 }

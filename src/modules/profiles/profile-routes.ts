@@ -1,7 +1,8 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
-import { appErrorSchema } from "../common/errors/app-error.js";
+import { AppError, appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
+import { SupabaseBucket } from "../common/providers/storage/supabase/supabase-bucket.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	addressSchema,
@@ -14,7 +15,9 @@ import {
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
 import { CreateProfileAddressUseCase } from "./use-cases/create-profile-address-use-case.js";
+import { CreateProfileImageUseCase } from "./use-cases/create-profile-image-use-case.js";
 import { CreateProfileUseCase } from "./use-cases/create-profile-use-case.js";
+import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
 import { UpdateProfileAddressUseCase } from "./use-cases/update-profile-address-use-case.js";
@@ -27,6 +30,7 @@ export async function profileRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const profilesRepository = new PrismaProfilesRepository();
 	const addressesRepository = new PrismaAddressesRepository();
+	const storageProvider = new SupabaseBucket();
 
 	const createProfileUseCase = new CreateProfileUseCase(profilesRepository);
 	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
@@ -34,6 +38,14 @@ export async function profileRoutes(app: FastifyInstance) {
 	const createProfileAddressUseCase = new CreateProfileAddressUseCase(
 		profilesRepository,
 		addressesRepository,
+	);
+	const createProfileImageUseCase = new CreateProfileImageUseCase(
+		profilesRepository,
+		storageProvider,
+	);
+	const deleteProfileImageUseCase = new DeleteProfileImageUseCase(
+		profilesRepository,
+		storageProvider,
 	);
 	const getProfileAddressUseCase = new GetProfileAddressUseCase(
 		profilesRepository,
@@ -119,6 +131,71 @@ export async function profileRoutes(app: FastifyInstance) {
 			});
 
 			return reply.send(updatedProfile);
+		},
+	);
+
+	typedApp.post(
+		"/profiles/images",
+		{
+			schema: withBearerAuth({
+				tags: [PROFILES_TAG],
+				summary: "Create profile image",
+				description:
+					"Creates or updates the authenticated user's profile image. Only jpeg and png files are accepted up to 10MB.",
+				consumes: ["multipart/form-data"],
+				response: {
+					200: profileSchema,
+					400: appErrorSchema,
+					401: appErrorSchema,
+					404: appErrorSchema,
+					500: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			const file = await request.file();
+
+			if (!file) {
+				throw new AppError(
+					"Profile image file is required",
+					"PROFILE_IMAGE_FILE_REQUIRED",
+					400,
+				);
+			}
+
+			const profile = await createProfileImageUseCase.execute({
+				userId,
+				file: {
+					fileName: file.filename,
+					mimeType: file.mimetype,
+					content: await file.toBuffer(),
+				},
+			});
+
+			return reply.send(profile);
+		},
+	);
+
+	typedApp.delete(
+		"/profiles/images",
+		{
+			schema: withBearerAuth({
+				tags: [PROFILES_TAG],
+				summary: "Delete profile image",
+				description: "Deletes the authenticated user's profile image.",
+				response: {
+					202: null,
+					401: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			await deleteProfileImageUseCase.execute({ userId });
+
+			return reply.status(202).send();
 		},
 	);
 
