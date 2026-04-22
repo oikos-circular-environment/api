@@ -37,11 +37,14 @@ describe("delete-profile-image-use-case", () => {
 			userId: "11111111-1111-1111-1111-111111111111",
 		});
 
-		expect(result.profile_image).toBe(null);
+		expect(result).toBeUndefined();
+		expect((await profilesRepository.findById(profile.id))?.profile_image).toBe(
+			null,
+		);
 		expect(await storageProvider.checkFileExists(filePath)).toBe(false);
 	});
 
-	it("returns profile unchanged when image does not exist", async () => {
+	it("throws when profile does not have an image", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new DeleteProfileImageUseCase(
@@ -49,7 +52,7 @@ describe("delete-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		const profile = await profilesRepository.create({
+		await profilesRepository.create({
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
@@ -59,12 +62,25 @@ describe("delete-profile-image-use-case", () => {
 			is_collector: false,
 		});
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		let thrownError: unknown;
 
-		expect(result.id).toBe(profile.id);
-		expect(result.profile_image).toBe(null);
+		try {
+			await sut.execute({
+				userId: "11111111-1111-1111-1111-111111111111",
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.message).toBe(
+				"Profile does not have an image to delete",
+			);
+			expect(thrownError.code).toBe("PROFILE_IMAGE_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
+		}
 	});
 
 	it("throws when profile does not exist", async () => {
@@ -94,10 +110,10 @@ describe("delete-profile-image-use-case", () => {
 		}
 	});
 
-	it("throws when delete image returns null", async () => {
+	it("propagates internal error when delete operation fails", async () => {
 		class DeleteProfileImageFailRepository extends InMemoryProfilesRepository {
 			async deleteProfileImage() {
-				return null;
+				throw new Error("Delete failed");
 			}
 		}
 
@@ -138,12 +154,10 @@ describe("delete-profile-image-use-case", () => {
 			thrownError = error;
 		}
 
-		expect(thrownError instanceof AppError).toBe(true);
+		expect(thrownError instanceof Error).toBe(true);
 
-		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Profile not found");
-			expect(thrownError.code).toBe("PROFILE_NOT_FOUND");
-			expect(thrownError.statusCode).toBe(404);
+		if (thrownError instanceof Error) {
+			expect(thrownError.message).toBe("Delete failed");
 		}
 	});
 });
