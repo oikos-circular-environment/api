@@ -1,104 +1,189 @@
 import { prisma } from "@/lib/prisma.js";
-import type { CreateProfile, UpdateProfile } from "@/modules/profiles/dtos/profiles-dto.js";
+import type {
+	CreateProfile,
+	SaveProfileImage,
+	UpdateProfile,
+} from "@/modules/profiles/dtos/profiles-dto.js";
 import type { ProfilesRepository } from "../profiles-repository.js";
-import { type PrismaProfileWithRelations, profileMapper } from "./mappers/profile-mapper.js";
+import {
+	type PrismaProfileWithRelations,
+	profileMapper,
+} from "./mappers/profile-mapper.js";
 
 export class PrismaProfilesRepository implements ProfilesRepository {
-  async findById(id: string) {
-    const profile = await prisma.profile.findUnique({
-      where: {
-        id,
-      },
-      include: {
-        profile_address: {
-          include: {
-            address: true,
-          },
-        },
-      },
-    });
+	async findById(id: string) {
+		const profile = await prisma.profile.findUnique({
+			where: {
+				id,
+			},
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
 
-    return profileMapper(profile as PrismaProfileWithRelations);
-  }
+		return profileMapper(profile as PrismaProfileWithRelations);
+	}
 
-  async findByUserId(userId: string) {
-    const profile = await prisma.profile.findUnique({
-      where: {
-        user_id: userId,
-      },
-      include: {
-        profile_address: {
-          include: {
-            address: true,
-          },
-        },
-      },
-    });
+	async findByUserId(userId: string) {
+		const profile = await prisma.profile.findUnique({
+			where: {
+				user_id: userId,
+			},
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
 
-    return profileMapper(profile as PrismaProfileWithRelations);
-  }
+		return profileMapper(profile as PrismaProfileWithRelations);
+	}
 
-  async create(data: CreateProfile) {
-    const profile = await prisma.profile.create({
-      data: {
-        user_id: data.user_id,
-        full_name: data.full_name,
-        display_name: data.display_name,
-        cpf: data.cpf,
-        phone: data.phone,
-        email: data.email,
-        is_collector: data.is_collector,
-      },
-      include: {
-        profile_address: {
-          include: {
-            address: true,
-          },
-        },
-      },
-    });
+	async create(data: CreateProfile) {
+		const profile = await prisma.profile.create({
+			data: {
+				user_id: data.user_id,
+				full_name: data.full_name,
+				display_name: data.display_name,
+				cpf: data.cpf,
+				phone: data.phone,
+				email: data.email,
+				is_collector: data.is_collector,
+			},
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
 
-    const mappedProfile = profileMapper(profile as PrismaProfileWithRelations);
+		const mappedProfile = profileMapper(profile as PrismaProfileWithRelations);
 
-    if (!mappedProfile) {
-      throw new Error("Failed to create profile");
-    }
+		if (!mappedProfile) {
+			throw new Error("Failed to create profile");
+		}
 
-    return mappedProfile;
-  }
+		return mappedProfile;
+	}
 
-  async update(id: string, data: UpdateProfile) {
-    const currentProfile = await prisma.profile.findUnique({
-      where: {
-        id,
-      },
-      include: {
-        profile_address: {
-          include: {
-            address: true,
-          },
-        },
-      },
-    });
+	async update(id: string, data: UpdateProfile) {
+		const currentProfile = await prisma.profile.findUnique({
+			where: {
+				id,
+			},
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
 
-    if (!currentProfile) {
-      return null;
-    }
+		if (!currentProfile) {
+			return null;
+		}
 
-    const profile = await prisma.profile.update({
-      where: {
-        id,
-      },
-      data,
-      include: {
-        profile_address: {
-          include: {
-            address: true,
-          },
-        },
-      },
-    });
+		const profile = await prisma.profile.update({
+			where: {
+				id,
+			},
+			data,
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
 
-    return profileMapper(profile as PrismaProfileWithRelations);
-  }
+		return profileMapper(profile as PrismaProfileWithRelations);
+	}
+
+	async saveProfileImage(profile_id: string, data: SaveProfileImage) {
+		const currentProfile = await prisma.profile.findUnique({
+			where: {
+				id: profile_id,
+			},
+			include: {
+				profile_image: true,
+			},
+		});
+
+		if (!currentProfile) {
+			return null;
+		}
+
+		if (currentProfile.profile_image_id) {
+			await prisma.profileImage.update({
+				where: {
+					id: currentProfile.profile_image_id,
+				},
+				data: {
+					url: data.url,
+					file_name: data.file_name,
+					path: data.path,
+					base64: data.base64,
+				},
+			});
+		} else {
+			const profileImage = await prisma.profileImage.create({
+				data: {
+					url: data.url,
+					file_name: data.file_name,
+					path: data.path,
+					base64: data.base64,
+				},
+			});
+
+			await prisma.profile.update({
+				where: {
+					id: profile_id,
+				},
+				data: {
+					profile_image_id: profileImage.id,
+				},
+			});
+		}
+
+		const updatedProfile = await prisma.profile.findUnique({
+			where: {
+				id: profile_id,
+			},
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
+
+		const mappedProfile = profileMapper(
+			updatedProfile as PrismaProfileWithRelations,
+		);
+
+		return mappedProfile?.profile_image ?? null;
+	}
+
+	async deleteProfileImage(profile_id: string) {
+		const currentProfile = await prisma.profile.findUnique({
+			where: {
+				id: profile_id,
+			},
+			include: {
+				profile_image: true,
+			},
+		});
+
+		if (currentProfile) {
+			if (currentProfile.profile_image_id) {
+				await prisma.profile.update({
+					where: {
+						id: profile_id,
+					},
+					data: {
+						profile_image_id: null,
+					},
+				});
+
+				await prisma.profileImage.delete({
+					where: {
+						id: currentProfile.profile_image_id,
+					},
+				});
+			}
+		}
+	}
 }

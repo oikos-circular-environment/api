@@ -72,11 +72,28 @@ model Profile {
   created_at   DateTime @default(now())
   updated_at   DateTime @updatedAt
 
-  user_id         String          @unique
-  user            User            @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  profile_address ProfileAddress?
+  user_id String @unique
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  address_id String?  @unique
+  address    Address? @relation(fields: [address_id], references: [id], onDelete: SetNull)
+
+  profile_image    ProfileImage? @relation(fields: [profile_image_id], references: [id])
+  profile_image_id String?
 
   @@map("profiles")
+}
+
+model ProfileImage {
+  id         String    @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  base64     String
+  created_at DateTime  @default(now())
+  profiles   Profile[]
+
+  @@map("profile_images")
 }
 
 model Company {
@@ -95,12 +112,13 @@ model Company {
   created_at          DateTime     @default(now())
   updated_at          DateTime     @updatedAt
 
-  company_address CompanyAddress?
-  business_hours  CompanyBusinessHour[]
-  wastes          CompanyWaste[]
-  services        CompanyService[]
-  user_id         String                @unique
-  user            User                  @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  address_id     String?               @unique
+  address        Address?              @relation(fields: [address_id], references: [id], onDelete: SetNull)
+  business_hours CompanyBusinessHour[]
+  wastes         CompanyWaste[]
+  services       CompanyService[]
+  user_id        String                @unique
+  user           User                  @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@map("companies")
 }
@@ -120,38 +138,10 @@ model Address {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
-  profile_address ProfileAddress?
-  company_address CompanyAddress?
+  profile Profile?
+  company Company?
 
   @@map("addresses")
-}
-
-model ProfileAddress {
-  id         String   @id @default(uuid())
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-
-  profile_id String @unique
-  address_id String @unique
-
-  profile Profile @relation(fields: [profile_id], references: [id], onDelete: Cascade)
-  address Address @relation(fields: [address_id], references: [id], onDelete: Cascade)
-
-  @@map("profile_addresses")
-}
-
-model CompanyAddress {
-  id         String   @id @default(uuid())
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-
-  company_id String @unique
-  address_id String @unique
-
-  company Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
-  address Address @relation(fields: [address_id], references: [id], onDelete: Cascade)
-
-  @@map("company_addresses")
 }
 
 model CompanyBusinessHour {
