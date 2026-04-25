@@ -13,7 +13,8 @@ import {
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env } from "@/env/index.js";
-import { companiesRoutes } from "./modules/companies/company-route.js";
+import { companyRoutes } from "./modules/companies/company-routes.js";
+import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
 
@@ -119,4 +120,5 @@ app.register(ScalarApiReference, {
 
 app.register(userRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
-app.register(companiesRoutes, { prefix: "/v1" });
+app.register(companyRoutes, { prefix: "/v1" });
+app.register(complaintRoutes, { prefix: "/v1" });

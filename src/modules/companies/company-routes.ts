@@ -41,7 +41,7 @@ const COMPANIES_BUSINESS_HOURS_TAG = "Companies / Business Hours";
 const COMPANIES_WASTES_TAG = "Companies / Wastes";
 const COMPANIES_SERVICES_TAG = "Companies / Services";
 
-export async function companiesRoutes(app: FastifyInstance) {
+export async function companyRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const companiesRepository = new PrismaCompaniesRepository();
 	const addressesRepository = new PrismaAddressesRepository();
