@@ -5,8 +5,8 @@ import {
 	type ComplaintResume,
 	type ComplaintStatus,
 	type CreateComplaint,
-	type CreateComplaintAttachment,
 	geospatialSchema,
+	type SaveComplaintAttachment,
 	type UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
@@ -192,7 +192,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	async attachByUserAndComplaintId(
 		userId: string,
 		complaintId: string,
-		data: Omit<CreateComplaintAttachment, "complaint_id">,
+		data: SaveComplaintAttachment,
 	) {
 		const attachedComplaintId = await prisma.$transaction(
 			async (transaction) => {

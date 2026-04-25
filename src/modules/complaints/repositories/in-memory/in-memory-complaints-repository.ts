@@ -5,8 +5,8 @@ import type {
 	ComplaintResume,
 	ComplaintStatus,
 	CreateComplaint,
-	CreateComplaintAttachment,
 	Geospatial,
+	SaveComplaintAttachment,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
@@ -136,7 +136,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	async attachByUserAndComplaintId(
 		userId: string,
 		complaintId: string,
-		data: Omit<CreateComplaintAttachment, "complaint_id">,
+		data: SaveComplaintAttachment,
 	) {
 		const userComplaint = this.userComplaints.find(
 			(item) => item.user_id === userId && item.complaint_id === complaintId,

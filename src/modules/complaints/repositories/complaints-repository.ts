@@ -3,7 +3,7 @@ import type {
 	ComplaintResume,
 	ComplaintStatus,
 	CreateComplaint,
-	CreateComplaintAttachment,
+	SaveComplaintAttachment,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 
@@ -27,7 +27,7 @@ export interface ComplaintsRepository {
 	attachByUserAndComplaintId(
 		userId: string,
 		complaintId: string,
-		data: Omit<CreateComplaintAttachment, "complaint_id">,
+		data: SaveComplaintAttachment,
 	): Promise<Complaint | null>;
 	getDashboardByUserId(userId: string): Promise<ComplaintResume>;
 }

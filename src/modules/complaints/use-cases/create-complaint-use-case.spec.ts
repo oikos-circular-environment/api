@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 
 const geospatial: Geospatial = {
@@ -40,10 +41,21 @@ const geospatial: Geospatial = {
 describe("create-complaint-use-case", () => {
 	it("creates complaint with OPEN status for user", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
-		const sut = new CreateComplaintUseCase(complaintsRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new CreateComplaintUseCase(
+			complaintsRepository,
+			usersRepository,
+		);
+
+		await usersRepository.create({
+			email: "user@example.com",
+			password: "123456",
+		});
+
+		const user = usersRepository.items[0];
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: user?.id ?? "",
 			data: {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",

@@ -1,25 +1,42 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type {
-	Complaint,
-	CreateComplaintAttachment,
-} from "@/modules/complaints/dtos/complaints-dto.js";
+import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
+import type { Complaint } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
+
+const COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
+
+const COMPLAINT_ATTACHMENT_MIME_TYPES = {
+	"image/jpeg": "jpeg",
+	"image/png": "png",
+} as const;
+
+type SupportedComplaintAttachmentMimeType =
+	keyof typeof COMPLAINT_ATTACHMENT_MIME_TYPES;
 
 type CreateComplaintAttachmentUseCaseRequest = {
 	userId: string;
-	data: CreateComplaintAttachment;
+	complaint_id: string;
+	file: {
+		fileName: string;
+		mimeType: string;
+		content: Buffer;
+	};
 };
 
 export class CreateComplaintAttachmentUseCase {
-	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
+	constructor(
+		private readonly complaintsRepository: ComplaintsRepository,
+		private readonly storageProvider: StorageProvider,
+	) {}
 
 	async execute({
 		userId,
-		data,
+		complaint_id,
+		file,
 	}: CreateComplaintAttachmentUseCaseRequest): Promise<Complaint> {
 		const complaint = await this.complaintsRepository.findByUserAndComplaintId(
 			userId,
-			data.complaint_id,
+			complaint_id,
 		);
 
 		if (!complaint) {
@@ -34,16 +51,54 @@ export class CreateComplaintAttachmentUseCase {
 			);
 		}
 
+		if (!(file.mimeType in COMPLAINT_ATTACHMENT_MIME_TYPES)) {
+			throw new AppError(
+				"Complaint attachment type is invalid. Allowed types: jpeg and png",
+				"COMPLAINT_ATTACHMENT_TYPE_INVALID",
+				400,
+			);
+		}
+
+		if (file.content.length > COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES) {
+			throw new AppError(
+				"Complaint attachment exceeds the maximum size of 10MB",
+				"COMPLAINT_ATTACHMENT_TOO_LARGE",
+				400,
+			);
+		}
+
+		const extension =
+			COMPLAINT_ATTACHMENT_MIME_TYPES[
+				file.mimeType as SupportedComplaintAttachmentMimeType
+			];
+
+		const filePath = `complaints/${complaint_id}.${extension}`;
+
+		const uploadResult = await this.storageProvider.uploadFile(
+			filePath,
+			file.content,
+		);
+
+		if (!uploadResult) {
+			throw new AppError(
+				"Failed to upload complaint attachment",
+				"COMPLAINT_ATTACHMENT_UPLOAD_FAILED",
+				500,
+			);
+		}
+
+		const { url } = await this.storageProvider.getFileUrl(filePath);
+
 		const updatedComplaint =
 			await this.complaintsRepository.attachByUserAndComplaintId(
 				userId,
-				data.complaint_id,
+				complaint_id,
 				{
-					url: data.url,
-					file_name: data.file_name,
-					path: data.path,
-					base64: data.base64,
-					type: data.type,
+					url,
+					file_name: file.fileName,
+					path: filePath,
+					base64: file.content.toString("base64"),
+					type: "PHOTO",
 				},
 			);
 

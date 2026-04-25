@@ -105,15 +105,22 @@ export type UpdateComplaint = z.infer<typeof updateComplaintSchema>;
 
 export const createComplaintAttachmentSchema = z.object({
 	complaint_id: z.string().uuid(),
-	url: z.string().min(1, "url is required"),
-	file_name: z.string().min(1, "file_name is required"),
-	path: z.string().min(1, "path is required"),
-	base64: z.string().min(1, "base64 is required"),
-	type: complaintCaptureModeSchema.default("PHOTO"),
 });
 
 export type CreateComplaintAttachment = z.infer<
 	typeof createComplaintAttachmentSchema
+>;
+
+export const saveComplaintAttachmentSchema = z.object({
+	url: z.string().min(1, "url is required"),
+	file_name: z.string().min(1, "file_name is required"),
+	path: z.string().min(1, "path is required"),
+	base64: z.string().min(1, "base64 is required"),
+	type: complaintCaptureModeSchema,
+});
+
+export type SaveComplaintAttachment = z.infer<
+	typeof saveComplaintAttachmentSchema
 >;
 
 export const complaintSchema = z.object({
