@@ -13,7 +13,6 @@ import {
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env } from "@/env/index.js";
-import { registerTrpcPlugin } from "@/lib/trpc/trpc-plugin.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
@@ -63,7 +62,6 @@ app.register(fastifyCors, {
 	origin: "*",
 });
 
-registerTrpcPlugin(app);
 
 app.register(fastifySwagger, {
 	openapi: {
