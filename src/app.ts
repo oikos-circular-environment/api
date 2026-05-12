@@ -13,6 +13,7 @@ import {
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env } from "@/env/index.js";
+import { registerTrpcPlugin } from "@/lib/trpc/trpc-plugin.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
@@ -20,6 +21,9 @@ import { userRoutes } from "./modules/users/user-routes.js";
 
 export const app = Fastify({
 	logger: true,
+	routerOptions: {
+		maxParamLength: 5000,
+	},
 }).withTypeProvider<ZodTypeProvider>();
 
 app.register(fastifyJwt, {
@@ -46,7 +50,7 @@ app.register(fastifyRateLimit, {
 	max: 100,
 	timeWindow: "1 minute",
 	cache: 10000,
-	allowList: ["/docs", "/docs/openapi.json"],
+	allowList: ["/docs", "/docs/openapi.json", "/trpc"],
 	skipOnError: false,
 	keyGenerator: (request: FastifyRequest) => {
 		return request.ip;
@@ -58,6 +62,8 @@ app.setSerializerCompiler(serializerCompiler);
 app.register(fastifyCors, {
 	origin: "*",
 });
+
+registerTrpcPlugin(app);
 
 app.register(fastifySwagger, {
 	openapi: {
@@ -117,6 +123,8 @@ app.register(ScalarApiReference, {
 		],
 	},
 });
+
+
 
 app.register(userRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
