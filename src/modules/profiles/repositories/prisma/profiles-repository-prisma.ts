@@ -105,6 +105,31 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return profileMapper(profile as PrismaProfileWithRelations);
 	}
 
+	async upsert(data: CreateProfile) {
+		const payload = {
+			full_name: data.full_name,
+			display_name: data.display_name,
+			cpf: data.cpf,
+			phone: data.phone,
+			is_collector: data.is_collector,
+		};
+
+		const profile = await prisma.profile.upsert({
+			where: { user_id: data.user_id },
+			create: { user_id: data.user_id, ...payload },
+			update: payload,
+			include: { address: true, profile_image: true },
+		});
+
+		const mapped = profileMapper(profile as PrismaProfileWithRelations);
+
+		if (!mapped) {
+			throw new Error("Failed to upsert profile");
+		}
+
+		return mapped;
+	}
+
 	async saveProfileImage(profileId: string, data: SaveProfileImage) {
 		const currentProfile = await prisma.profile.findUnique({
 			where: {

@@ -88,6 +88,17 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 		return profile.profile_image;
 	}
 
+	async upsert(data: CreateProfile): Promise<Profile> {
+		const existing = await this.findByUserId(data.user_id);
+
+		if (existing) {
+			Object.assign(existing, { ...data, updated_at: new Date() });
+			return existing;
+		}
+
+		return this.create(data);
+	}
+
 	async deleteProfileImage(profileId: string) {
 		const profile = await this.findById(profileId);
 

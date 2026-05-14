@@ -12,18 +12,16 @@ import {
 	profileImageSchema,
 	profileSchema,
 	updateAddressSchema,
-	updateProfileSchema,
 } from "./dtos/profiles-dto.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
 import { CreateProfileAddressUseCase } from "./use-cases/create-profile-address-use-case.js";
 import { CreateProfileImageUseCase } from "./use-cases/create-profile-image-use-case.js";
-import { CreateProfileUseCase } from "./use-cases/create-profile-use-case.js";
 import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
 import { UpdateProfileAddressUseCase } from "./use-cases/update-profile-address-use-case.js";
-import { UpdateProfileUseCase } from "./use-cases/update-profile-use-case.js";
+import { UpsertProfileUseCase } from "./use-cases/upsert-profile-use-case.js";
 
 const PROFILES_TAG = "Profiles";
 const PROFILES_ADDRESSES_TAG = "Profiles / Addresses";
@@ -34,9 +32,8 @@ export async function profileRoutes(app: FastifyInstance) {
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = new SupabaseBucket();
 
-	const createProfileUseCase = new CreateProfileUseCase(profilesRepository);
+	const upsertProfileUseCase = new UpsertProfileUseCase(profilesRepository);
 	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
-	const updateProfileUseCase = new UpdateProfileUseCase(profilesRepository);
 	const createProfileAddressUseCase = new CreateProfileAddressUseCase(
 		profilesRepository,
 		addressesRepository,
@@ -62,13 +59,14 @@ export async function profileRoutes(app: FastifyInstance) {
 		await verifyJwt(request);
 	});
 
-	typedApp.post(
+	typedApp.put(
 		"/profiles",
 		{
 			schema: withBearerAuth({
 				tags: [PROFILES_TAG],
-				summary: "Create user profile",
-				description: "Creates a profile for the authenticated user.",
+				summary: "Upsert user profile",
+				description:
+					"Creates or updates the profile for the authenticated user. Address fields are not handled by this route.",
 				body: createProfileSchema.omit({ user_id: true }),
 				response: {
 					200: z.object({
@@ -81,7 +79,7 @@ export async function profileRoutes(app: FastifyInstance) {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const profile = await createProfileUseCase.execute({
+			const profile = await upsertProfileUseCase.execute({
 				userId,
 				data: request.body,
 			});
@@ -111,37 +109,6 @@ export async function profileRoutes(app: FastifyInstance) {
 
 			return reply.send({
 				profile: profile,
-			});
-		},
-	);
-
-	typedApp.put(
-		"/profiles",
-		{
-			schema: withBearerAuth({
-				tags: [PROFILES_TAG],
-				summary: "Update user profile",
-				description:
-					"Updates only profile data for the authenticated user. Address fields are not handled by this route.",
-				body: updateProfileSchema,
-				response: {
-					200: z.object({
-						profile: profileSchema.nullable(),
-					}),
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const updatedProfile = await updateProfileUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
-			return reply.send({
-				profile: updatedProfile,
 			});
 		},
 	);

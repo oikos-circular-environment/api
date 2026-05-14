@@ -12,6 +12,7 @@ export interface ProfilesRepository {
 	findByCpf(cpf: string): Promise<Profile | null>;
 	create(data: CreateProfile): Promise<Profile>;
 	update(id: string, data: UpdateProfile): Promise<Profile | null>;
+	upsert(data: CreateProfile): Promise<Profile>;
 	saveProfileImage(
 		profileId: string,
 		data: SaveProfileImage,
