@@ -94,10 +94,10 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return profileMapper(profile as PrismaProfileWithRelations);
 	}
 
-	async saveProfileImage(profile_id: string, data: SaveProfileImage) {
+	async saveProfileImage(profileId: string, data: SaveProfileImage) {
 		const currentProfile = await prisma.profile.findUnique({
 			where: {
-				id: profile_id,
+				id: profileId,
 			},
 			include: {
 				profile_image: true,
@@ -132,7 +132,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 
 			await prisma.profile.update({
 				where: {
-					id: profile_id,
+					id: profileId,
 				},
 				data: {
 					profile_image_id: profileImage.id,
@@ -142,7 +142,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 
 		const updatedProfile = await prisma.profile.findUnique({
 			where: {
-				id: profile_id,
+				id: profileId,
 			},
 			include: {
 				address: true,
@@ -157,10 +157,10 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return mappedProfile?.profile_image ?? null;
 	}
 
-	async deleteProfileImage(profile_id: string) {
+	async deleteProfileImage(profileId: string) {
 		const currentProfile = await prisma.profile.findUnique({
 			where: {
-				id: profile_id,
+				id: profileId,
 			},
 			include: {
 				profile_image: true,
@@ -171,7 +171,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 			if (currentProfile.profile_image_id) {
 				await prisma.profile.update({
 					where: {
-						id: profile_id,
+						id: profileId,
 					},
 					data: {
 						profile_image_id: null,

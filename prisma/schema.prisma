@@ -56,7 +56,8 @@ model User {
   created_at DateTime @default(now())
   profile    Profile?
 
-  company Company?
+  company        Company?
+  userComplaints UserComplaint[]
 
   @@map("users")
 }
@@ -206,4 +207,72 @@ model CompanyService {
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
 
   @@map("company_services")
+}
+
+enum ComplaintType {
+  IRREGULAR_DISPOSAL
+  DEFORESTATION
+  BURNING
+  VACANT_LOT
+}
+
+enum ComplaintStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  REJECTED
+  CANCELED
+}
+
+model UserComplaint {
+  id     String          @id @default(uuid())
+  status ComplaintStatus @default(OPEN)
+  // complaint_captures ComplaintCapture[] @relation("ComplaintCaptures")
+
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id String
+
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+  complaint_id String
+
+  created_at DateTime @default(now())
+
+  @@map("user_complaints")
+}
+
+model Complaint {
+  id           String        @id @default(uuid())
+  date         DateTime
+  type         ComplaintType
+  observations String?
+
+  /// Expected payload shape stored as raw JSON from expo-location.
+  /// The application should validate this structure before persisting it.
+  geospatial Json
+
+  userComplaints UserComplaint[]
+
+  attachment    ComplaintAttachment? @relation(fields: [attachment_id], references: [id])
+  attachment_id String?
+
+  @@map("complaints")
+}
+
+enum ComplaintCaptureMode {
+  PHOTO
+  VIDEO
+}
+
+model ComplaintAttachment {
+  id         String   @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  base64     String
+  created_at DateTime @default(now())
+
+  type       ComplaintCaptureMode @default(PHOTO)
+  complaints Complaint[]
+
+  @@map("complaint_attachments")
 }

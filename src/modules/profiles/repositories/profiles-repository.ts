@@ -12,8 +12,8 @@ export interface ProfilesRepository {
 	create(data: CreateProfile): Promise<Profile>;
 	update(id: string, data: UpdateProfile): Promise<Profile | null>;
 	saveProfileImage(
-		id: string,
+		profileId: string,
 		data: SaveProfileImage,
 	): Promise<ProfileImage | null>;
-	deleteProfileImage(profile_id: string): Promise<void>;
+	deleteProfileImage(profileId: string): Promise<void>;
 }
