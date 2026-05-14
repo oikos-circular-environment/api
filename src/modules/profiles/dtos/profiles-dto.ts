@@ -28,7 +28,6 @@ export const createProfileSchema = z.object({
 	display_name: z.string().min(1, "Display name is required"),
 	cpf: z.string().min(1, "CPF is required"),
 	phone: z.string().min(1, "Phone is required"),
-	email: z.email("Invalid email address"),
 	is_collector: z.boolean().default(false),
 });
 

@@ -27,7 +27,6 @@ export type PrismaProfileWithRelations = {
 	display_name: string;
 	cpf: string;
 	phone: string;
-	email: string;
 	is_collector: boolean;
 	created_at: Date;
 	updated_at: Date;
@@ -59,7 +58,6 @@ export function profileMapper(
 		display_name: profile.display_name,
 		cpf: profile.cpf,
 		phone: profile.phone,
-		email: profile.email,
 		is_collector: profile.is_collector,
 		created_at: profile.created_at,
 		updated_at: profile.updated_at,

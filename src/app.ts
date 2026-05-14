@@ -39,7 +39,7 @@ app.register(fastifySwagger, {
 			version: "1.0.0",
 			contact: {
 				name: "Christian Cesar",
-				email: "christian.cesar@gmail.com",
+				email: "christian.cesar@oikos.company",
 			},
 		},
 		components: {
@@ -121,8 +121,6 @@ app.register(ScalarApiReference, {
 		],
 	},
 });
-
-
 
 app.register(userRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });

@@ -30,6 +30,49 @@ describe("create-profile-use-case", () => {
     expect(result.id.length > 0).toBe(true);
   });
 
+  it("throws when CPF is already in use by another user", async () => {
+    const profilesRepository = new InMemoryProfilesRepository();
+    const sut = new CreateProfileUseCase(profilesRepository);
+
+    await profilesRepository.create({
+      user_id: "11111111-1111-1111-1111-111111111111",
+      full_name: "John Doe",
+      display_name: "john",
+      cpf: "12345678900",
+      phone: "5511999999999",
+      email: "john@example.com",
+      is_collector: false,
+    });
+
+    let thrownError: unknown;
+
+    try {
+      await sut.execute({
+        userId: "22222222-2222-2222-2222-222222222222",
+        data: {
+          full_name: "Jane Doe",
+          display_name: "jane",
+          cpf: "12345678900",
+          phone: "5511888888888",
+          email: "jane@example.com",
+          is_collector: false,
+        },
+      });
+    } catch (error) {
+      thrownError = error;
+    }
+
+    expect(thrownError instanceof AppError).toBe(true);
+
+    if (thrownError instanceof AppError) {
+      expect(thrownError.message).toBe("CPF already in use");
+      expect(thrownError.code).toBe("CPF_ALREADY_IN_USE");
+      expect(thrownError.statusCode).toBe(409);
+    }
+
+    expect(profilesRepository.items.length).toBe(1);
+  });
+
   it("throws when profile already exists for user", async () => {
     const profilesRepository = new InMemoryProfilesRepository();
     const sut = new CreateProfileUseCase(profilesRepository);

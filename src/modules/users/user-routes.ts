@@ -2,7 +2,7 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { appErrorSchema } from "../common/errors/app-error.js";
-import { createUserSchema, userSchema } from "./dtos/users-dto.js";
+import { createUserSchema } from "./dtos/users-dto.js";
 import { PrismaUsersRepository } from "./repositories/prisma/users-repository-prisma.js";
 import { AuthenticateUserUseCase } from "./use-cases/authenticate-user-use-case.js";
 import { RegisterUserUseCase } from "./use-cases/register-user-use-case.js";

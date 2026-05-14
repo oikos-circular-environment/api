@@ -71,7 +71,9 @@ export async function profileRoutes(app: FastifyInstance) {
 				description: "Creates a profile for the authenticated user.",
 				body: createProfileSchema.omit({ user_id: true }),
 				response: {
-					200: profileSchema,
+					200: z.object({
+						profile: profileSchema,
+					}),
 					401: appErrorSchema,
 					409: appErrorSchema,
 				},
@@ -84,7 +86,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				data: request.body,
 			});
 
-			return reply.send(profile);
+			return reply.send({ profile });
 		},
 	);
 
@@ -123,9 +125,9 @@ export async function profileRoutes(app: FastifyInstance) {
 					"Updates only profile data for the authenticated user. Address fields are not handled by this route.",
 				body: updateProfileSchema,
 				response: {
-					200: {
+					200: z.object({
 						profile: profileSchema.nullable(),
-					},
+					}),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -218,7 +220,9 @@ export async function profileRoutes(app: FastifyInstance) {
 				description: "Creates an address for the authenticated user's profile.",
 				body: createAddressSchema.omit({ profile_id: true }),
 				response: {
-					200: addressSchema,
+					200: z.object({
+						address: addressSchema,
+					}),
 					401: appErrorSchema,
 					404: appErrorSchema,
 					409: appErrorSchema,
@@ -232,7 +236,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				data: request.body,
 			});
 
-			return reply.send(address);
+			return reply.send({ address });
 		},
 	);
 
@@ -244,7 +248,9 @@ export async function profileRoutes(app: FastifyInstance) {
 				summary: "Get profile address",
 				description: "Returns only the authenticated user's profile address.",
 				response: {
-					200: addressSchema.nullable(),
+					200: z.object({
+						address: addressSchema.nullable(),
+					}),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -254,7 +260,9 @@ export async function profileRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const address = await getProfileAddressUseCase.execute({ userId });
 
-			return reply.send(address);
+			return reply.send({
+				address,
+			});
 		},
 	);
 
@@ -268,7 +276,9 @@ export async function profileRoutes(app: FastifyInstance) {
 					"Updates only address data for the authenticated user's profile.",
 				body: updateAddressSchema,
 				response: {
-					200: addressSchema.nullable(),
+					200: z.object({
+						address: addressSchema.nullable(),
+					}),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -281,7 +291,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				data: request.body,
 			});
 
-			return reply.send(updatedAddress);
+			return reply.send({ address: updatedAddress });
 		},
 	);
 }

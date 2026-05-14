@@ -68,7 +68,6 @@ model Profile {
   display_name String
   cpf          String   @unique
   phone        String
-  email        String   @unique
   is_collector Boolean  @default(false)
   created_at   DateTime @default(now())
   updated_at   DateTime @updatedAt

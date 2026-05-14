@@ -39,6 +39,18 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return profileMapper(profile as PrismaProfileWithRelations);
 	}
 
+	async findByCpf(cpf: string) {
+		const profile = await prisma.profile.findUnique({
+			where: { cpf },
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
+
+		return profileMapper(profile as PrismaProfileWithRelations);
+	}
+
 	async create(data: CreateProfile) {
 		const profile = await prisma.profile.create({
 			data: {
@@ -47,7 +59,6 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 				display_name: data.display_name,
 				cpf: data.cpf,
 				phone: data.phone,
-				email: data.email,
 				is_collector: data.is_collector,
 			},
 			include: {

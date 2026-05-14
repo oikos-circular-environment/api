@@ -21,6 +21,8 @@ type CreateProfileImageUseCaseRequest = {
 	};
 };
 
+// Criar caso de uso que funciona como update e insert, deve verificar apenas se o usuário é válido
+// Ao adicionar ou atualizar a imagem, a imagem antiga deve ser deletada do bucket também
 export class CreateProfileImageUseCase {
 	constructor(
 		private readonly profilesRepository: ProfilesRepository,
