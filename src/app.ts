@@ -25,6 +25,36 @@ export const app = Fastify({
 	},
 }).withTypeProvider<ZodTypeProvider>();
 
+app.register(fastifyCors, {
+	origin: "*",
+});
+
+app.setValidatorCompiler(validatorCompiler);
+app.setSerializerCompiler(serializerCompiler);
+
+app.register(fastifySwagger, {
+	openapi: {
+		info: {
+			title: "Oikos Documentation",
+			version: "1.0.0",
+			contact: {
+				name: "Christian Cesar",
+				email: "christian.cesar@gmail.com",
+			},
+		},
+		components: {
+			securitySchemes: {
+				bearerAuth: {
+					type: "http",
+					scheme: "bearer",
+					bearerFormat: "JWT",
+				},
+			},
+		},
+	},
+	transform: jsonSchemaTransform,
+});
+
 app.register(fastifyJwt, {
 	secret: env.JWT_SECRET,
 	cookie: {
@@ -49,41 +79,11 @@ app.register(fastifyRateLimit, {
 	max: 100,
 	timeWindow: "1 minute",
 	cache: 10000,
-	allowList: ["/docs", "/docs/openapi.json", "/trpc"],
+	allowList: ["/docs"],
 	skipOnError: false,
 	keyGenerator: (request: FastifyRequest) => {
 		return request.ip;
 	},
-});
-
-app.setValidatorCompiler(validatorCompiler);
-app.setSerializerCompiler(serializerCompiler);
-app.register(fastifyCors, {
-	origin: "*",
-});
-
-
-app.register(fastifySwagger, {
-	openapi: {
-		info: {
-			title: "Oikos Documentation",
-			version: "1.0.0",
-			contact: {
-				name: "Christian Cesar",
-				email: "christian.cesar@gmail.com",
-			},
-		},
-		components: {
-			securitySchemes: {
-				bearerAuth: {
-					type: "http",
-					scheme: "bearer",
-					bearerFormat: "JWT",
-				},
-			},
-		},
-	},
-	transform: jsonSchemaTransform,
 });
 
 app.register(ScalarApiReference, {

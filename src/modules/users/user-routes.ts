@@ -1,6 +1,7 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
+import { appErrorSchema } from "../common/errors/app-error.js";
 import { createUserSchema, userSchema } from "./dtos/users-dto.js";
 import { PrismaUsersRepository } from "./repositories/prisma/users-repository-prisma.js";
 import { AuthenticateUserUseCase } from "./use-cases/authenticate-user-use-case.js";
@@ -19,7 +20,9 @@ export async function userRoutes(app: FastifyInstance) {
 					"Creates a new user account with the provided information.",
 				body: createUserSchema,
 				response: {
-					200: userSchema,
+					204: z.object(),
+
+					409: appErrorSchema,
 				},
 			},
 		},
@@ -27,12 +30,12 @@ export async function userRoutes(app: FastifyInstance) {
 			const { email, password } = request.body;
 			const usersRepository = new PrismaUsersRepository();
 			const registerUserUseCase = new RegisterUserUseCase(usersRepository);
-			const user = await registerUserUseCase.execute({
+			await registerUserUseCase.execute({
 				email,
 				password,
 			});
 
-			reply.send(user);
+			reply.status(204);
 		},
 	);
 
