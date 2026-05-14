@@ -96,7 +96,9 @@ export async function profileRoutes(app: FastifyInstance) {
 				summary: "Get user profile",
 				description: "Returns the profile of the authenticated user.",
 				response: {
-					200: profileSchema.nullable(),
+					200: z.object({
+						profile: profileSchema.nullable(),
+					}),
 					401: appErrorSchema,
 				},
 			}),
@@ -105,7 +107,9 @@ export async function profileRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const profile = await getProfileUseCase.execute({ userId });
 
-			return reply.send(profile);
+			return reply.send({
+				profile: profile,
+			});
 		},
 	);
 
@@ -119,7 +123,9 @@ export async function profileRoutes(app: FastifyInstance) {
 					"Updates only profile data for the authenticated user. Address fields are not handled by this route.",
 				body: updateProfileSchema,
 				response: {
-					200: profileSchema.nullable(),
+					200: {
+						profile: profileSchema.nullable(),
+					},
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -132,7 +138,9 @@ export async function profileRoutes(app: FastifyInstance) {
 				data: request.body,
 			});
 
-			return reply.send(updatedProfile);
+			return reply.send({
+				profile: updatedProfile,
+			});
 		},
 	);
 

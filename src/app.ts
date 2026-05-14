@@ -13,13 +13,47 @@ import {
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env } from "@/env/index.js";
-import { companiesRoutes } from "./modules/companies/company-route.js";
+import { companyRoutes } from "./modules/companies/company-routes.js";
+import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
 
 export const app = Fastify({
 	logger: true,
+	routerOptions: {
+		maxParamLength: 5000,
+	},
 }).withTypeProvider<ZodTypeProvider>();
+
+app.register(fastifyCors, {
+	origin: "*",
+});
+
+app.setValidatorCompiler(validatorCompiler);
+app.setSerializerCompiler(serializerCompiler);
+
+app.register(fastifySwagger, {
+	openapi: {
+		info: {
+			title: "Oikos Documentation",
+			version: "1.0.0",
+			contact: {
+				name: "Christian Cesar",
+				email: "christian.cesar@gmail.com",
+			},
+		},
+		components: {
+			securitySchemes: {
+				bearerAuth: {
+					type: "http",
+					scheme: "bearer",
+					bearerFormat: "JWT",
+				},
+			},
+		},
+	},
+	transform: jsonSchemaTransform,
+});
 
 app.register(fastifyJwt, {
 	secret: env.JWT_SECRET,
@@ -45,40 +79,11 @@ app.register(fastifyRateLimit, {
 	max: 100,
 	timeWindow: "1 minute",
 	cache: 10000,
-	allowList: ["/docs", "/docs/openapi.json"],
+	allowList: ["/docs"],
 	skipOnError: false,
 	keyGenerator: (request: FastifyRequest) => {
 		return request.ip;
 	},
-});
-
-app.setValidatorCompiler(validatorCompiler);
-app.setSerializerCompiler(serializerCompiler);
-app.register(fastifyCors, {
-	origin: "*",
-});
-
-app.register(fastifySwagger, {
-	openapi: {
-		info: {
-			title: "Oikos Documentation",
-			version: "1.0.0",
-			contact: {
-				name: "Christian Cesar",
-				email: "christian.cesar@gmail.com",
-			},
-		},
-		components: {
-			securitySchemes: {
-				bearerAuth: {
-					type: "http",
-					scheme: "bearer",
-					bearerFormat: "JWT",
-				},
-			},
-		},
-	},
-	transform: jsonSchemaTransform,
 });
 
 app.register(ScalarApiReference, {
@@ -117,6 +122,9 @@ app.register(ScalarApiReference, {
 	},
 });
 
+
+
 app.register(userRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
-app.register(companiesRoutes, { prefix: "/v1" });
+app.register(companyRoutes, { prefix: "/v1" });
+app.register(complaintRoutes, { prefix: "/v1" });

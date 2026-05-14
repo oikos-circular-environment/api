@@ -59,8 +59,8 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 		return profile;
 	}
 
-	async saveProfileImage(id: string, data: SaveProfileImage) {
-		const profile = await this.findById(id);
+	async saveProfileImage(profileId: string, data: SaveProfileImage) {
+		const profile = await this.findById(profileId);
 
 		if (!profile) {
 			return null;
@@ -82,8 +82,8 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 		return profile.profile_image;
 	}
 
-	async deleteProfileImage(id: string) {
-		const profile = await this.findById(id);
+	async deleteProfileImage(profileId: string) {
+		const profile = await this.findById(profileId);
 
 		if (profile) {
 			profile.profile_image = null;
