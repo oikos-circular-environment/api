@@ -124,17 +124,23 @@ model Company {
 }
 
 model Address {
-  id         String   @id @default(uuid())
+  id         String  @id @default(uuid())
   zip_code   String
   street     String
   number     String
   complement String?
   district   String
-  city       String
-  state      String
-  state_code String
-  latitude   Float?
-  longitude  Float?
+
+  city_ibge_id Int
+  city         String
+
+  state_ibge_id Int
+  state         String
+  state_code    String
+
+  latitude  Float?
+  longitude Float?
+
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 

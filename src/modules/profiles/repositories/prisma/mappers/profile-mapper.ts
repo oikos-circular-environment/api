@@ -11,7 +11,9 @@ export type PrismaAddressWithRelations = {
 	number: string;
 	complement: string | null;
 	district: string;
+	city_ibge_id: number;
 	city: string;
+	state_ibge_id: number;
 	state: string;
 	state_code: string;
 	latitude: number | null;
@@ -69,7 +71,9 @@ export function profileMapper(
 					number: address.number,
 					complement: address.complement,
 					district: address.district,
+					city_ibge_id: address.city_ibge_id,
 					city: address.city,
+					state_ibge_id: address.state_ibge_id,
 					state: address.state,
 					state_code: address.state_code,
 					latitude: address.latitude,
