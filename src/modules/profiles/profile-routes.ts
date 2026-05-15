@@ -16,7 +16,7 @@ import {
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
 import { CreateProfileAddressUseCase } from "./use-cases/create-profile-address-use-case.js";
-import { CreateProfileImageUseCase } from "./use-cases/create-profile-image-use-case.js";
+import { UpsertProfileImageUseCase } from "./use-cases/upsert-profile-image-use-case.js";
 import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
@@ -38,7 +38,7 @@ export async function profileRoutes(app: FastifyInstance) {
 		profilesRepository,
 		addressesRepository,
 	);
-	const createProfileImageUseCase = new CreateProfileImageUseCase(
+	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
 	);
@@ -113,14 +113,14 @@ export async function profileRoutes(app: FastifyInstance) {
 		},
 	);
 
-	typedApp.post(
+	typedApp.put(
 		"/profiles/images",
 		{
 			schema: withBearerAuth({
 				tags: [PROFILES_TAG],
-				summary: "Create profile image",
+				summary: "Upsert profile image",
 				description:
-					"Creates or updates the authenticated user's profile image. Only jpeg and png files are accepted up to 10MB.",
+					"Creates or replaces the authenticated user's profile image. The old image is always deleted from storage. Only jpeg and png files are accepted up to 10MB.",
 				consumes: ["multipart/form-data"],
 				response: {
 					200: profileImageSchema,
@@ -143,7 +143,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				);
 			}
 
-			const profileImage = await createProfileImageUseCase.execute({
+			const profileImage = await upsertProfileImageUseCase.execute({
 				userId,
 				file: {
 					fileName: file.filename,
