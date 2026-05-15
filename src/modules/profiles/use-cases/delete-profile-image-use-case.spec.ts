@@ -19,7 +19,6 @@ describe("delete-profile-image-use-case", () => {
 			display_name: "john",
 			cpf: "12345678900",
 			phone: "5511999999999",
-			email: "john@example.com",
 			is_collector: false,
 		});
 
@@ -58,7 +57,6 @@ describe("delete-profile-image-use-case", () => {
 			display_name: "john",
 			cpf: "12345678900",
 			phone: "5511999999999",
-			email: "john@example.com",
 			is_collector: false,
 		});
 
@@ -130,7 +128,6 @@ describe("delete-profile-image-use-case", () => {
 			display_name: "john",
 			cpf: "12345678900",
 			phone: "5511999999999",
-			email: "john@example.com",
 			is_collector: false,
 		});
 

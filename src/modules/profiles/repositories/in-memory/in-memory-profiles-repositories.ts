@@ -37,7 +37,6 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 			display_name: data.display_name,
 			cpf: data.cpf,
 			phone: data.phone,
-			email: data.email,
 			is_collector: data.is_collector,
 			created_at: now,
 			updated_at: now,

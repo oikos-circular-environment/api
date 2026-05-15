@@ -11,16 +11,13 @@ import {
 	createProfileSchema,
 	profileImageSchema,
 	profileSchema,
-	updateAddressSchema,
 } from "./dtos/profiles-dto.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
-import { CreateProfileAddressUseCase } from "./use-cases/create-profile-address-use-case.js";
 import { UpsertProfileImageUseCase } from "./use-cases/upsert-profile-image-use-case.js";
 import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
-import { UpdateProfileAddressUseCase } from "./use-cases/update-profile-address-use-case.js";
 import { UpsertProfileUseCase } from "./use-cases/upsert-profile-use-case.js";
 
 const PROFILES_TAG = "Profiles";
@@ -32,12 +29,11 @@ export async function profileRoutes(app: FastifyInstance) {
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = new SupabaseBucket();
 
-	const upsertProfileUseCase = new UpsertProfileUseCase(profilesRepository);
-	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
-	const createProfileAddressUseCase = new CreateProfileAddressUseCase(
+	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,
 		addressesRepository,
 	);
+	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
 	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
@@ -47,10 +43,6 @@ export async function profileRoutes(app: FastifyInstance) {
 		storageProvider,
 	);
 	const getProfileAddressUseCase = new GetProfileAddressUseCase(
-		profilesRepository,
-		addressesRepository,
-	);
-	const updateProfileAddressUseCase = new UpdateProfileAddressUseCase(
 		profilesRepository,
 		addressesRepository,
 	);
@@ -66,8 +58,10 @@ export async function profileRoutes(app: FastifyInstance) {
 				tags: [PROFILES_TAG],
 				summary: "Upsert user profile",
 				description:
-					"Creates or updates the profile for the authenticated user. Address fields are not handled by this route.",
-				body: createProfileSchema.omit({ user_id: true }),
+					"Creates or updates the profile for the authenticated user. Optionally creates or updates the address in the same request.",
+				body: createProfileSchema.omit({ user_id: true }).extend({
+					address: createAddressSchema.omit({ profile_id: true }).optional().nullable(),
+				}),
 				response: {
 					200: z.object({
 						profile: profileSchema,
@@ -178,35 +172,6 @@ export async function profileRoutes(app: FastifyInstance) {
 		},
 	);
 
-	typedApp.post(
-		"/profiles/addresses",
-		{
-			schema: withBearerAuth({
-				tags: [PROFILES_ADDRESSES_TAG],
-				summary: "Create profile address",
-				description: "Creates an address for the authenticated user's profile.",
-				body: createAddressSchema.omit({ profile_id: true }),
-				response: {
-					200: z.object({
-						address: addressSchema,
-					}),
-					401: appErrorSchema,
-					404: appErrorSchema,
-					409: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const address = await createProfileAddressUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
-			return reply.send({ address });
-		},
-	);
-
 	typedApp.get(
 		"/profiles/addresses",
 		{
@@ -233,32 +198,4 @@ export async function profileRoutes(app: FastifyInstance) {
 		},
 	);
 
-	typedApp.put(
-		"/profiles/addresses",
-		{
-			schema: withBearerAuth({
-				tags: [PROFILES_ADDRESSES_TAG],
-				summary: "Update profile address",
-				description:
-					"Updates only address data for the authenticated user's profile.",
-				body: updateAddressSchema,
-				response: {
-					200: z.object({
-						address: addressSchema.nullable(),
-					}),
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const updatedAddress = await updateProfileAddressUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
-			return reply.send({ address: updatedAddress });
-		},
-	);
 }
