@@ -7,6 +7,12 @@ export const loginSchema = z.object({
 
 export type LoginInput = z.infer<typeof loginSchema>;
 
+export const refreshBodySchema = z.object({
+	refreshToken: z.string().optional(),
+});
+
+export type RefreshBodyInput = z.infer<typeof refreshBodySchema>;
+
 export type AuthUser = {
 	id: string;
 	email: string;
