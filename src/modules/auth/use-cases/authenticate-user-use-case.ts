@@ -1,6 +1,6 @@
 import { compare } from "bcryptjs";
-import { InvalidCredentialsError } from "@/modules/users/errors/invalid-credentials-error.js";
-import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
+import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
+import type { AuthRepository } from "@/modules/auth/repositories/auth-repository.js";
 
 type AuthenticateUserUseCaseRequest = {
 	email: string;
@@ -13,13 +13,13 @@ export type AuthenticatedUser = {
 };
 
 export class AuthenticateUserUseCase {
-	constructor(private readonly usersRepository: UsersRepository) {}
+	constructor(private readonly authRepository: AuthRepository) {}
 
 	async execute({
 		email,
 		password,
 	}: AuthenticateUserUseCaseRequest): Promise<AuthenticatedUser> {
-		const user = await this.usersRepository.findByEmail(email);
+		const user = await this.authRepository.findByEmail(email);
 
 		if (!user) {
 			throw new InvalidCredentialsError();

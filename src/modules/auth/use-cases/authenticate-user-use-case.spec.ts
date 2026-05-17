@@ -1,17 +1,17 @@
 import { hash } from "bcryptjs";
 import { describe, expect, it } from "vitest";
-import { InvalidCredentialsError } from "@/modules/users/errors/invalid-credentials-error.js";
-import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
+import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
+import { InMemoryAuthRepository } from "@/modules/auth/repositories/in-memory/in-memory-auth-repository.js";
 import { AuthenticateUserUseCase } from "./authenticate-user-use-case.js";
 
 describe("authenticate-user-use-case", () => {
 	it("returns user when credentials are valid", async () => {
-		const usersRepository = new InMemoryUsersRepository();
-		const sut = new AuthenticateUserUseCase(usersRepository);
+		const authRepository = new InMemoryAuthRepository();
+		const sut = new AuthenticateUserUseCase(authRepository);
 
 		const passwordHash = await hash("123456", 6);
 
-		const createdUser = await usersRepository.create({
+		const createdUser = await authRepository.create({
 			email: "john@example.com",
 			password: passwordHash,
 		});
@@ -28,8 +28,8 @@ describe("authenticate-user-use-case", () => {
 	});
 
 	it("throws when user does not exist", async () => {
-		const usersRepository = new InMemoryUsersRepository();
-		const sut = new AuthenticateUserUseCase(usersRepository);
+		const authRepository = new InMemoryAuthRepository();
+		const sut = new AuthenticateUserUseCase(authRepository);
 
 		let thrownError: unknown;
 
@@ -52,12 +52,12 @@ describe("authenticate-user-use-case", () => {
 	});
 
 	it("throws when password is invalid", async () => {
-		const usersRepository = new InMemoryUsersRepository();
-		const sut = new AuthenticateUserUseCase(usersRepository);
+		const authRepository = new InMemoryAuthRepository();
+		const sut = new AuthenticateUserUseCase(authRepository);
 
 		const passwordHash = await hash("123456", 6);
 
-		await usersRepository.create({
+		await authRepository.create({
 			email: "john@example.com",
 			password: passwordHash,
 		});
