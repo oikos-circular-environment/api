@@ -22,6 +22,12 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 		return profile ?? null;
 	}
 
+	async findByCpf(cpf: string) {
+		const profile = this.items.find((item) => item.cpf === cpf);
+
+		return profile ?? null;
+	}
+
 	async create(data: CreateProfile) {
 		const now = new Date();
 		const profile = {
@@ -31,7 +37,6 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 			display_name: data.display_name,
 			cpf: data.cpf,
 			phone: data.phone,
-			email: data.email,
 			is_collector: data.is_collector,
 			created_at: now,
 			updated_at: now,
@@ -74,12 +79,22 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			created_at: createdAt,
 		};
 		profile.updated_at = new Date();
 
 		return profile.profile_image;
+	}
+
+	async upsert(data: CreateProfile): Promise<Profile> {
+		const existing = await this.findByUserId(data.user_id);
+
+		if (existing) {
+			Object.assign(existing, { ...data, updated_at: new Date() });
+			return existing;
+		}
+
+		return this.create(data);
 	}
 
 	async deleteProfileImage(profileId: string) {

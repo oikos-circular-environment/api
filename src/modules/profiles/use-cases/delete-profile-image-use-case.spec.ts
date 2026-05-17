@@ -19,7 +19,6 @@ describe("delete-profile-image-use-case", () => {
 			display_name: "john",
 			cpf: "12345678900",
 			phone: "5511999999999",
-			email: "john@example.com",
 			is_collector: false,
 		});
 
@@ -30,7 +29,6 @@ describe("delete-profile-image-use-case", () => {
 			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
 			file_name: "avatar.jpeg",
 			path: filePath,
-			base64: Buffer.from("image-content").toString("base64"),
 		});
 
 		const result = await sut.execute({
@@ -58,7 +56,6 @@ describe("delete-profile-image-use-case", () => {
 			display_name: "john",
 			cpf: "12345678900",
 			phone: "5511999999999",
-			email: "john@example.com",
 			is_collector: false,
 		});
 
@@ -130,7 +127,6 @@ describe("delete-profile-image-use-case", () => {
 			display_name: "john",
 			cpf: "12345678900",
 			phone: "5511999999999",
-			email: "john@example.com",
 			is_collector: false,
 		});
 
@@ -141,7 +137,6 @@ describe("delete-profile-image-use-case", () => {
 			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
 			file_name: "avatar.jpeg",
 			path: filePath,
-			base64: Buffer.from("image-content").toString("base64"),
 		});
 
 		let thrownError: unknown;

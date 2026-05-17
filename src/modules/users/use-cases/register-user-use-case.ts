@@ -4,25 +4,28 @@ import { UserAlreadyExistsError } from "@/modules/users/errors/user-already-exis
 import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
 
 type RegisterUserUseCaseRequest = {
-  email: string;
-  password: string;
+	email: string;
+	password: string;
 };
 
 export class RegisterUserUseCase {
-  constructor(private readonly usersRepository: UsersRepository) {}
+	constructor(private readonly usersRepository: UsersRepository) {}
 
-  async execute({ email, password }: RegisterUserUseCaseRequest): Promise<User> {
-    const userWithSameEmail = await this.usersRepository.findByEmail(email);
+	async execute({
+		email,
+		password,
+	}: RegisterUserUseCaseRequest): Promise<User> {
+		const userWithSameEmail = await this.usersRepository.findByEmail(email);
 
-    if (userWithSameEmail) {
-      throw new UserAlreadyExistsError();
-    }
+		if (userWithSameEmail) {
+			throw new UserAlreadyExistsError();
+		}
 
-    const passwordHash = await hash(password, 6);
+		const passwordHash = await hash(password, 6);
 
-    return this.usersRepository.create({
-      email,
-      password: passwordHash,
-    });
-  }
+		return this.usersRepository.create({
+			email,
+			password: passwordHash,
+		});
+	}
 }

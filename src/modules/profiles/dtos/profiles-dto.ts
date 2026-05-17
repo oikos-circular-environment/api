@@ -7,7 +7,9 @@ export const createAddressSchema = z.object({
 	number: z.string().min(1, "Number is required"),
 	complement: z.string().optional().nullable(),
 	district: z.string().min(1, "District is required"),
+	city_ibge_id: z.number().int(),
 	city: z.string().min(1, "City is required"),
+	state_ibge_id: z.number().int(),
 	state: z.string().min(1, "State is required"),
 	state_code: z.string().length(2, "State code must have 2 characters"),
 	latitude: z.number().optional().nullable(),
@@ -28,7 +30,6 @@ export const createProfileSchema = z.object({
 	display_name: z.string().min(1, "Display name is required"),
 	cpf: z.string().min(1, "CPF is required"),
 	phone: z.string().min(1, "Phone is required"),
-	email: z.email("Invalid email address"),
 	is_collector: z.boolean().default(false),
 });
 
@@ -44,8 +45,13 @@ export const saveProfileImageSchema = z.object({
 	url: z.string().url(),
 	file_name: z.string().min(1, "File name is required"),
 	path: z.string().min(1, "Path is required"),
-	base64: z.string().min(1, "Base64 is required"),
 });
+
+export const uploadProfileImageSchema = z.object({
+	file: z.string().meta({ format: "binary" }),
+});
+
+export type UploadProfileImage = z.infer<typeof uploadProfileImageSchema>;
 
 export type SaveProfileImage = z.infer<typeof saveProfileImageSchema>;
 
@@ -56,7 +62,9 @@ export const addressSchema = z.object({
 	number: z.string(),
 	complement: z.string().nullable(),
 	district: z.string(),
+	city_ibge_id: z.number(),
 	city: z.string(),
+	state_ibge_id: z.number(),
 	state: z.string(),
 	state_code: z.string(),
 	latitude: z.number().nullable(),
@@ -72,7 +80,6 @@ export const profileImageSchema = z.object({
 	url: z.string(),
 	file_name: z.string(),
 	path: z.string(),
-	base64: z.string(),
 	created_at: z.date(),
 });
 

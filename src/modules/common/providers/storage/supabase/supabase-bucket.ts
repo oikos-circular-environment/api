@@ -16,13 +16,18 @@ export class SupabaseBucket implements StorageProvider {
 		fileContent: Buffer,
 	): Promise<StorageFile | null> {
 		try {
-			const bucket = await supabase.storage
+			const { data, error } = await supabase.storage
 				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET)
 				.upload(filePath, fileContent, {
 					upsert: true,
 				});
 
-			return bucket.data as StorageFile;
+			if (error) {
+				console.error(error.toJSON());
+				return null;
+			}
+
+			return data as StorageFile;
 		} catch (error) {
 			if (error instanceof StorageApiError) {
 				console.error(error.toJSON());
