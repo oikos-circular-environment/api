@@ -38,7 +38,6 @@ export type PrismaProfileWithRelations = {
 		url: string;
 		file_name: string;
 		path: string;
-		base64: string;
 		created_at: Date;
 	} | null;
 } | null;
@@ -88,7 +87,6 @@ export function profileMapper(
 					url: profileImage.url,
 					file_name: profileImage.file_name,
 					path: profileImage.path,
-					base64: profileImage.base64,
 					created_at: profileImage.created_at,
 				} satisfies ProfileImage)
 			: null,

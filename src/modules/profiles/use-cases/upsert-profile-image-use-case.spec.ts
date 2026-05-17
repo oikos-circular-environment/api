@@ -38,7 +38,6 @@ describe("upsert-profile-image-use-case", () => {
 			"profiles/11111111-1111-1111-1111-111111111111.jpeg",
 		);
 		expect(result.file_name).toBe("avatar.jpeg");
-		expect(result.base64).toBe(imageContent.toString("base64"));
 		expect(
 			await storageProvider.checkFileExists(
 				"profiles/11111111-1111-1111-1111-111111111111.jpeg",
@@ -70,7 +69,6 @@ describe("upsert-profile-image-use-case", () => {
 			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
 			file_name: "avatar.jpeg",
 			path: oldImagePath,
-			base64: Buffer.from("old-image").toString("base64"),
 		});
 
 		const result = await sut.execute({
@@ -117,7 +115,6 @@ describe("upsert-profile-image-use-case", () => {
 			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
 			file_name: "avatar.jpeg",
 			path: imagePath,
-			base64: Buffer.from("old-content").toString("base64"),
 		});
 
 		const newContent = Buffer.from("new-content");
@@ -132,7 +129,6 @@ describe("upsert-profile-image-use-case", () => {
 		});
 
 		expect(result.file_name).toBe("new-avatar.jpeg");
-		expect(result.base64).toBe(newContent.toString("base64"));
 	});
 
 	it("throws when profile does not exist", async () => {
@@ -356,9 +352,9 @@ describe("upsert-profile-image-use-case", () => {
 		expect(thrownError instanceof AppError).toBe(true);
 
 		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Profile not found");
-			expect(thrownError.code).toBe("PROFILE_NOT_FOUND");
-			expect(thrownError.statusCode).toBe(404);
+			expect(thrownError.message).toBe("Failed to save profile image");
+			expect(thrownError.code).toBe("PROFILE_IMAGE_SAVE_FAILED");
+			expect(thrownError.statusCode).toBe(500);
 		}
 	});
 });

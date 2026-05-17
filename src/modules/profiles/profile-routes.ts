@@ -14,10 +14,10 @@ import {
 } from "./dtos/profiles-dto.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
-import { UpsertProfileImageUseCase } from "./use-cases/upsert-profile-image-use-case.js";
 import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
+import { UpsertProfileImageUseCase } from "./use-cases/upsert-profile-image-use-case.js";
 import { UpsertProfileUseCase } from "./use-cases/upsert-profile-use-case.js";
 
 const PROFILES_TAG = "Profiles";
@@ -60,7 +60,10 @@ export async function profileRoutes(app: FastifyInstance) {
 				description:
 					"Creates or updates the profile for the authenticated user. Optionally creates or updates the address in the same request.",
 				body: createProfileSchema.omit({ user_id: true }).extend({
-					address: createAddressSchema.omit({ profile_id: true }).optional().nullable(),
+					address: createAddressSchema
+						.omit({ profile_id: true })
+						.optional()
+						.nullable(),
 				}),
 				response: {
 					200: z.object({
@@ -108,13 +111,13 @@ export async function profileRoutes(app: FastifyInstance) {
 	);
 
 	typedApp.put(
-		"/profiles/images",
+		"/profiles/avatar",
 		{
 			schema: withBearerAuth({
 				tags: [PROFILES_TAG],
-				summary: "Upsert profile image",
+				summary: "Upsert profile avatar",
 				description:
-					"Creates or replaces the authenticated user's profile image. The old image is always deleted from storage. Only jpeg and png files are accepted up to 10MB.",
+					"Creates or replaces the authenticated user's profile image. Send a `multipart/form-data` request with a single file field named **`file`**. Accepted types: `image/jpeg`, `image/png`. Maximum size: 10MB.",
 				consumes: ["multipart/form-data"],
 				response: {
 					200: profileImageSchema,
@@ -131,8 +134,16 @@ export async function profileRoutes(app: FastifyInstance) {
 
 			if (!file) {
 				throw new AppError(
-					"Profile image file is required",
+					"Profile image file is required. Send a multipart/form-data request with a field named 'file'",
 					"PROFILE_IMAGE_FILE_REQUIRED",
+					400,
+				);
+			}
+
+			if (file.fieldname !== "file") {
+				throw new AppError(
+					"Invalid field name. The file must be sent in a field named 'file'",
+					"PROFILE_IMAGE_INVALID_FIELD_NAME",
 					400,
 				);
 			}
@@ -149,7 +160,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			return reply.send(profileImage);
 		},
 	);
-	("");
+
 	typedApp.delete(
 		"/profiles/images",
 		{
@@ -197,5 +208,4 @@ export async function profileRoutes(app: FastifyInstance) {
 			});
 		},
 	);
-
 }

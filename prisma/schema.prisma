@@ -89,7 +89,6 @@ model ProfileImage {
   url        String
   file_name  String
   path       String
-  base64     String
   created_at DateTime  @default(now())
   profiles   Profile[]
 

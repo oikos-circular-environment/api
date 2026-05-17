@@ -45,8 +45,13 @@ export const saveProfileImageSchema = z.object({
 	url: z.string().url(),
 	file_name: z.string().min(1, "File name is required"),
 	path: z.string().min(1, "Path is required"),
-	base64: z.string().min(1, "Base64 is required"),
 });
+
+export const uploadProfileImageSchema = z.object({
+	file: z.string().meta({ format: "binary" }),
+});
+
+export type UploadProfileImage = z.infer<typeof uploadProfileImageSchema>;
 
 export type SaveProfileImage = z.infer<typeof saveProfileImageSchema>;
 
@@ -75,7 +80,6 @@ export const profileImageSchema = z.object({
 	url: z.string(),
 	file_name: z.string(),
 	path: z.string(),
-	base64: z.string(),
 	created_at: z.date(),
 });
 

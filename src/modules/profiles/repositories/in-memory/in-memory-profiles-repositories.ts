@@ -79,7 +79,6 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			created_at: createdAt,
 		};
 		profile.updated_at = new Date();

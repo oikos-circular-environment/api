@@ -153,26 +153,22 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 					url: data.url,
 					file_name: data.file_name,
 					path: data.path,
-					base64: data.base64,
 				},
 			});
 		} else {
-			const profileImage = await prisma.profileImage.create({
-				data: {
-					url: data.url,
-					file_name: data.file_name,
-					path: data.path,
-					base64: data.base64,
-				},
-			});
+			await prisma.$transaction(async (tx) => {
+				const profileImage = await tx.profileImage.create({
+					data: {
+						url: data.url,
+						file_name: data.file_name,
+						path: data.path,
+					},
+				});
 
-			await prisma.profile.update({
-				where: {
-					id: profileId,
-				},
-				data: {
-					profile_image_id: profileImage.id,
-				},
+				await tx.profile.update({
+					where: { id: profileId },
+					data: { profile_image_id: profileImage.id },
+				});
 			});
 		}
 

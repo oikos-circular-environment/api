@@ -29,7 +29,6 @@ describe("delete-profile-image-use-case", () => {
 			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
 			file_name: "avatar.jpeg",
 			path: filePath,
-			base64: Buffer.from("image-content").toString("base64"),
 		});
 
 		const result = await sut.execute({
@@ -138,7 +137,6 @@ describe("delete-profile-image-use-case", () => {
 			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
 			file_name: "avatar.jpeg",
 			path: filePath,
-			base64: Buffer.from("image-content").toString("base64"),
 		});
 
 		let thrownError: unknown;
