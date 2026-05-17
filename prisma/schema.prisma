@@ -68,7 +68,6 @@ model Profile {
   display_name String
   cpf          String   @unique
   phone        String
-  email        String   @unique
   is_collector Boolean  @default(false)
   created_at   DateTime @default(now())
   updated_at   DateTime @updatedAt
@@ -90,7 +89,6 @@ model ProfileImage {
   url        String
   file_name  String
   path       String
-  base64     String
   created_at DateTime  @default(now())
   profiles   Profile[]
 
@@ -125,17 +123,23 @@ model Company {
 }
 
 model Address {
-  id         String   @id @default(uuid())
+  id         String  @id @default(uuid())
   zip_code   String
   street     String
   number     String
   complement String?
   district   String
-  city       String
-  state      String
-  state_code String
-  latitude   Float?
-  longitude  Float?
+
+  city_ibge_id Int
+  city         String
+
+  state_ibge_id Int
+  state         String
+  state_code    String
+
+  latitude  Float?
+  longitude Float?
+
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 

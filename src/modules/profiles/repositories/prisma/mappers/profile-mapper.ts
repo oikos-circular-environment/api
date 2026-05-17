@@ -11,7 +11,9 @@ export type PrismaAddressWithRelations = {
 	number: string;
 	complement: string | null;
 	district: string;
+	city_ibge_id: number;
 	city: string;
+	state_ibge_id: number;
 	state: string;
 	state_code: string;
 	latitude: number | null;
@@ -27,7 +29,6 @@ export type PrismaProfileWithRelations = {
 	display_name: string;
 	cpf: string;
 	phone: string;
-	email: string;
 	is_collector: boolean;
 	created_at: Date;
 	updated_at: Date;
@@ -37,7 +38,6 @@ export type PrismaProfileWithRelations = {
 		url: string;
 		file_name: string;
 		path: string;
-		base64: string;
 		created_at: Date;
 	} | null;
 } | null;
@@ -59,7 +59,6 @@ export function profileMapper(
 		display_name: profile.display_name,
 		cpf: profile.cpf,
 		phone: profile.phone,
-		email: profile.email,
 		is_collector: profile.is_collector,
 		created_at: profile.created_at,
 		updated_at: profile.updated_at,
@@ -71,7 +70,9 @@ export function profileMapper(
 					number: address.number,
 					complement: address.complement,
 					district: address.district,
+					city_ibge_id: address.city_ibge_id,
 					city: address.city,
+					state_ibge_id: address.state_ibge_id,
 					state: address.state,
 					state_code: address.state_code,
 					latitude: address.latitude,
@@ -86,7 +87,6 @@ export function profileMapper(
 					url: profileImage.url,
 					file_name: profileImage.file_name,
 					path: profileImage.path,
-					base64: profileImage.base64,
 					created_at: profileImage.created_at,
 				} satisfies ProfileImage)
 			: null,

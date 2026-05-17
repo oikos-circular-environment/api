@@ -4,22 +4,24 @@ import type { AddressesRepository } from "@/modules/profiles/repositories/addres
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
 
 type GetProfileAddressUseCaseRequest = {
-  userId: string;
+	userId: string;
 };
 
 export class GetProfileAddressUseCase {
-  constructor(
-    private readonly profilesRepository: ProfilesRepository,
-    private readonly addressesRepository: AddressesRepository,
-  ) {}
+	constructor(
+		private readonly profilesRepository: ProfilesRepository,
+		private readonly addressesRepository: AddressesRepository,
+	) {}
 
-  async execute({ userId }: GetProfileAddressUseCaseRequest): Promise<Address | null> {
-    const profile = await this.profilesRepository.findByUserId(userId);
+	async execute({
+		userId,
+	}: GetProfileAddressUseCaseRequest): Promise<Address | null> {
+		const profile = await this.profilesRepository.findByUserId(userId);
 
-    if (!profile) {
-      throw new AppError("Profile not found", "PROFILE_NOT_FOUND", 404);
-    }
+		if (!profile) {
+			throw new AppError("Profile not found", "PROFILE_NOT_FOUND", 404);
+		}
 
-    return this.addressesRepository.findByProfileId(profile.id);
-  }
+		return this.addressesRepository.findByProfileId(profile.id);
+	}
 }

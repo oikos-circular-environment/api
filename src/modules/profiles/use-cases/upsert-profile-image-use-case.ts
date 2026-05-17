@@ -12,7 +12,7 @@ const PROFILE_IMAGE_MIME_TYPES = {
 
 type SupportedProfileImageMimeType = keyof typeof PROFILE_IMAGE_MIME_TYPES;
 
-type CreateProfileImageUseCaseRequest = {
+type UpsertProfileImageUseCaseRequest = {
 	userId: string;
 	file: {
 		fileName: string;
@@ -21,7 +21,7 @@ type CreateProfileImageUseCaseRequest = {
 	};
 };
 
-export class CreateProfileImageUseCase {
+export class UpsertProfileImageUseCase {
 	constructor(
 		private readonly profilesRepository: ProfilesRepository,
 		private readonly storageProvider: StorageProvider,
@@ -30,7 +30,7 @@ export class CreateProfileImageUseCase {
 	async execute({
 		userId,
 		file,
-	}: CreateProfileImageUseCaseRequest): Promise<ProfileImage> {
+	}: UpsertProfileImageUseCaseRequest): Promise<ProfileImage> {
 		const profile = await this.profilesRepository.findByUserId(userId);
 
 		if (!profile) {
@@ -58,10 +58,7 @@ export class CreateProfileImageUseCase {
 
 		const filePath = `profiles/${userId}.${extension}`;
 
-		if (
-			profile.profile_image?.path &&
-			profile.profile_image.path !== filePath
-		) {
+		if (profile.profile_image?.path && profile.profile_image.path !== filePath) {
 			await this.storageProvider.deleteFile(profile.profile_image.path);
 		}
 
@@ -85,12 +82,15 @@ export class CreateProfileImageUseCase {
 				url,
 				file_name: file.fileName,
 				path: filePath,
-				base64: file.content.toString("base64"),
 			},
 		);
 
 		if (!profileImage) {
-			throw new AppError("Profile not found", "PROFILE_NOT_FOUND", 404);
+			throw new AppError(
+				"Failed to save profile image",
+				"PROFILE_IMAGE_SAVE_FAILED",
+				500,
+			);
 		}
 
 		return profileImage;

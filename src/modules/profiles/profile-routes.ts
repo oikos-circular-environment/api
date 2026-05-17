@@ -11,19 +11,14 @@ import {
 	createProfileSchema,
 	profileImageSchema,
 	profileSchema,
-	updateAddressSchema,
-	updateProfileSchema,
 } from "./dtos/profiles-dto.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
-import { CreateProfileAddressUseCase } from "./use-cases/create-profile-address-use-case.js";
-import { CreateProfileImageUseCase } from "./use-cases/create-profile-image-use-case.js";
-import { CreateProfileUseCase } from "./use-cases/create-profile-use-case.js";
 import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
-import { UpdateProfileAddressUseCase } from "./use-cases/update-profile-address-use-case.js";
-import { UpdateProfileUseCase } from "./use-cases/update-profile-use-case.js";
+import { UpsertProfileImageUseCase } from "./use-cases/upsert-profile-image-use-case.js";
+import { UpsertProfileUseCase } from "./use-cases/upsert-profile-use-case.js";
 
 const PROFILES_TAG = "Profiles";
 const PROFILES_ADDRESSES_TAG = "Profiles / Addresses";
@@ -34,14 +29,12 @@ export async function profileRoutes(app: FastifyInstance) {
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = new SupabaseBucket();
 
-	const createProfileUseCase = new CreateProfileUseCase(profilesRepository);
-	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
-	const updateProfileUseCase = new UpdateProfileUseCase(profilesRepository);
-	const createProfileAddressUseCase = new CreateProfileAddressUseCase(
+	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,
 		addressesRepository,
 	);
-	const createProfileImageUseCase = new CreateProfileImageUseCase(
+	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
+	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
 	);
@@ -53,25 +46,29 @@ export async function profileRoutes(app: FastifyInstance) {
 		profilesRepository,
 		addressesRepository,
 	);
-	const updateProfileAddressUseCase = new UpdateProfileAddressUseCase(
-		profilesRepository,
-		addressesRepository,
-	);
 
 	typedApp.addHook("onRequest", async (request) => {
 		await verifyJwt(request);
 	});
 
-	typedApp.post(
+	typedApp.put(
 		"/profiles",
 		{
 			schema: withBearerAuth({
 				tags: [PROFILES_TAG],
-				summary: "Create user profile",
-				description: "Creates a profile for the authenticated user.",
-				body: createProfileSchema.omit({ user_id: true }),
+				summary: "Upsert user profile",
+				description:
+					"Creates or updates the profile for the authenticated user. Optionally creates or updates the address in the same request.",
+				body: createProfileSchema.omit({ user_id: true }).extend({
+					address: createAddressSchema
+						.omit({ profile_id: true })
+						.optional()
+						.nullable(),
+				}),
 				response: {
-					200: profileSchema,
+					200: z.object({
+						profile: profileSchema,
+					}),
 					401: appErrorSchema,
 					409: appErrorSchema,
 				},
@@ -79,12 +76,12 @@ export async function profileRoutes(app: FastifyInstance) {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const profile = await createProfileUseCase.execute({
+			const profile = await upsertProfileUseCase.execute({
 				userId,
 				data: request.body,
 			});
 
-			return reply.send(profile);
+			return reply.send({ profile });
 		},
 	);
 
@@ -114,44 +111,13 @@ export async function profileRoutes(app: FastifyInstance) {
 	);
 
 	typedApp.put(
-		"/profiles",
+		"/profiles/avatar",
 		{
 			schema: withBearerAuth({
 				tags: [PROFILES_TAG],
-				summary: "Update user profile",
+				summary: "Upsert profile avatar",
 				description:
-					"Updates only profile data for the authenticated user. Address fields are not handled by this route.",
-				body: updateProfileSchema,
-				response: {
-					200: {
-						profile: profileSchema.nullable(),
-					},
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const updatedProfile = await updateProfileUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
-			return reply.send({
-				profile: updatedProfile,
-			});
-		},
-	);
-
-	typedApp.post(
-		"/profiles/images",
-		{
-			schema: withBearerAuth({
-				tags: [PROFILES_TAG],
-				summary: "Create profile image",
-				description:
-					"Creates or updates the authenticated user's profile image. Only jpeg and png files are accepted up to 10MB.",
+					"Creates or replaces the authenticated user's profile image. Send a `multipart/form-data` request with a single file field named **`file`**. Accepted types: `image/jpeg`, `image/png`. Maximum size: 10MB.",
 				consumes: ["multipart/form-data"],
 				response: {
 					200: profileImageSchema,
@@ -168,13 +134,21 @@ export async function profileRoutes(app: FastifyInstance) {
 
 			if (!file) {
 				throw new AppError(
-					"Profile image file is required",
+					"Profile image file is required. Send a multipart/form-data request with a field named 'file'",
 					"PROFILE_IMAGE_FILE_REQUIRED",
 					400,
 				);
 			}
 
-			const profileImage = await createProfileImageUseCase.execute({
+			if (file.fieldname !== "file") {
+				throw new AppError(
+					"Invalid field name. The file must be sent in a field named 'file'",
+					"PROFILE_IMAGE_INVALID_FIELD_NAME",
+					400,
+				);
+			}
+
+			const profileImage = await upsertProfileImageUseCase.execute({
 				userId,
 				file: {
 					fileName: file.filename,
@@ -186,7 +160,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			return reply.send(profileImage);
 		},
 	);
-	("");
+
 	typedApp.delete(
 		"/profiles/images",
 		{
@@ -209,33 +183,6 @@ export async function profileRoutes(app: FastifyInstance) {
 		},
 	);
 
-	typedApp.post(
-		"/profiles/addresses",
-		{
-			schema: withBearerAuth({
-				tags: [PROFILES_ADDRESSES_TAG],
-				summary: "Create profile address",
-				description: "Creates an address for the authenticated user's profile.",
-				body: createAddressSchema.omit({ profile_id: true }),
-				response: {
-					200: addressSchema,
-					401: appErrorSchema,
-					404: appErrorSchema,
-					409: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const address = await createProfileAddressUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
-			return reply.send(address);
-		},
-	);
-
 	typedApp.get(
 		"/profiles/addresses",
 		{
@@ -244,7 +191,9 @@ export async function profileRoutes(app: FastifyInstance) {
 				summary: "Get profile address",
 				description: "Returns only the authenticated user's profile address.",
 				response: {
-					200: addressSchema.nullable(),
+					200: z.object({
+						address: addressSchema.nullable(),
+					}),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -254,34 +203,9 @@ export async function profileRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const address = await getProfileAddressUseCase.execute({ userId });
 
-			return reply.send(address);
-		},
-	);
-
-	typedApp.put(
-		"/profiles/addresses",
-		{
-			schema: withBearerAuth({
-				tags: [PROFILES_ADDRESSES_TAG],
-				summary: "Update profile address",
-				description:
-					"Updates only address data for the authenticated user's profile.",
-				body: updateAddressSchema,
-				response: {
-					200: addressSchema.nullable(),
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const updatedAddress = await updateProfileAddressUseCase.execute({
-				userId,
-				data: request.body,
+			return reply.send({
+				address,
 			});
-
-			return reply.send(updatedAddress);
 		},
 	);
 }

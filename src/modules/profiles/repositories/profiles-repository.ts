@@ -9,8 +9,10 @@ import type {
 export interface ProfilesRepository {
 	findById(id: string): Promise<Profile | null>;
 	findByUserId(userId: string): Promise<Profile | null>;
+	findByCpf(cpf: string): Promise<Profile | null>;
 	create(data: CreateProfile): Promise<Profile>;
 	update(id: string, data: UpdateProfile): Promise<Profile | null>;
+	upsert(data: CreateProfile): Promise<Profile>;
 	saveProfileImage(
 		profileId: string,
 		data: SaveProfileImage,

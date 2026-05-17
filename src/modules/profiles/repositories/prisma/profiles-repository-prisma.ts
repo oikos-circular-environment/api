@@ -39,6 +39,18 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return profileMapper(profile as PrismaProfileWithRelations);
 	}
 
+	async findByCpf(cpf: string) {
+		const profile = await prisma.profile.findUnique({
+			where: { cpf },
+			include: {
+				address: true,
+				profile_image: true,
+			},
+		});
+
+		return profileMapper(profile as PrismaProfileWithRelations);
+	}
+
 	async create(data: CreateProfile) {
 		const profile = await prisma.profile.create({
 			data: {
@@ -47,7 +59,6 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 				display_name: data.display_name,
 				cpf: data.cpf,
 				phone: data.phone,
-				email: data.email,
 				is_collector: data.is_collector,
 			},
 			include: {
@@ -94,6 +105,31 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return profileMapper(profile as PrismaProfileWithRelations);
 	}
 
+	async upsert(data: CreateProfile) {
+		const payload = {
+			full_name: data.full_name,
+			display_name: data.display_name,
+			cpf: data.cpf,
+			phone: data.phone,
+			is_collector: data.is_collector,
+		};
+
+		const profile = await prisma.profile.upsert({
+			where: { user_id: data.user_id },
+			create: { user_id: data.user_id, ...payload },
+			update: payload,
+			include: { address: true, profile_image: true },
+		});
+
+		const mapped = profileMapper(profile as PrismaProfileWithRelations);
+
+		if (!mapped) {
+			throw new Error("Failed to upsert profile");
+		}
+
+		return mapped;
+	}
+
 	async saveProfileImage(profileId: string, data: SaveProfileImage) {
 		const currentProfile = await prisma.profile.findUnique({
 			where: {
@@ -117,26 +153,22 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 					url: data.url,
 					file_name: data.file_name,
 					path: data.path,
-					base64: data.base64,
 				},
 			});
 		} else {
-			const profileImage = await prisma.profileImage.create({
-				data: {
-					url: data.url,
-					file_name: data.file_name,
-					path: data.path,
-					base64: data.base64,
-				},
-			});
+			await prisma.$transaction(async (tx) => {
+				const profileImage = await tx.profileImage.create({
+					data: {
+						url: data.url,
+						file_name: data.file_name,
+						path: data.path,
+					},
+				});
 
-			await prisma.profile.update({
-				where: {
-					id: profileId,
-				},
-				data: {
-					profile_image_id: profileImage.id,
-				},
+				await tx.profile.update({
+					where: { id: profileId },
+					data: { profile_image_id: profileImage.id },
+				});
 			});
 		}
 

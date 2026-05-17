@@ -1,6 +1,5 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
-import type { Profile } from "@/modules/profiles/dtos/profiles-dto.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
 
 type DeleteProfileImageUseCaseRequest = {
