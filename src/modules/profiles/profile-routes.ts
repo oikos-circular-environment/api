@@ -117,7 +117,7 @@ export async function profileRoutes(app: FastifyInstance) {
 				tags: [PROFILES_TAG],
 				summary: "Upsert profile avatar",
 				description:
-					"Creates or replaces the authenticated user's profile image. Send a `multipart/form-data` request with a single file field named **`file`**. Accepted types: `image/jpeg`, `image/png`. Maximum size: 10MB.",
+					"Creates or replaces the authenticated user's profile image. Accepted types: `image/jpeg`, `image/png`. Maximum size: 10MB.",
 				consumes: ["multipart/form-data"],
 				response: {
 					200: profileImageSchema,

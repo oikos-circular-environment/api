@@ -7,7 +7,8 @@ const envSchema = z.object({
 	DATABASE_URL: z.string(),
 
 	SUPABASE_URL: z.string(),
-	SUPABASE_KEY: z.string(),
+	SUPABASE_PUBLISHABLE_KEY: z.string(),
+	SUPABASE_SECRET_KEY: z.string(),
 	SUPABASE_OIKOS_PROFILES_BUCKET: z.string(),
 });
 
