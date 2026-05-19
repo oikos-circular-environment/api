@@ -20,7 +20,15 @@ import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
 
 export const app = Fastify({
-	logger: true,
+	logger: {
+		transport: {
+			target: "pino-pretty",
+			options: {
+				translateTime: "HH:MM:ss Z",
+				ignore: "pid,hostname",
+			},
+		},
+	},
 	routerOptions: {
 		maxParamLength: 5000,
 	},

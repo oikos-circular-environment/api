@@ -66,6 +66,12 @@ export const updateCompanyAddressSchema = createCompanyAddressSchema
 
 export type UpdateCompanyAddress = z.infer<typeof updateCompanyAddressSchema>;
 
+export const upsertCompanyAddressSchema = createCompanyAddressSchema.omit({
+	company_id: true,
+});
+
+export type UpsertCompanyAddress = z.infer<typeof upsertCompanyAddressSchema>;
+
 export const companyAddressSchema = z.object({
 	id: z.string(),
 	zip_code: z.string(),
