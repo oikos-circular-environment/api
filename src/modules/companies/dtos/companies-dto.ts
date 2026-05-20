@@ -190,6 +190,8 @@ const companyItemBaseSchema = z.object({
 	price: z.number().nonnegative("Price must be non-negative"),
 	unit: measurementSchema,
 	waste_type: wasteTypeSchema,
+	quantity: z.number().positive("Quantity must be greater than zero"),
+	observations: z.string().optional().nullable(),
 	sub_items: z.array(z.string().min(1)).optional().nullable(),
 });
 
@@ -214,10 +216,7 @@ export const upsertCompanyWastesSchema = z.object({
 
 export type UpsertCompanyWastes = z.infer<typeof upsertCompanyWastesSchema>;
 
-export const companyServiceInputSchema = companyItemBaseSchema.extend({
-	quantity: z.number().int().positive("Quantity must be greater than zero"),
-	observations: z.string().optional().nullable(),
-});
+export const companyServiceInputSchema = companyItemBaseSchema;
 
 export type CompanyServiceInput = z.infer<typeof companyServiceInputSchema>;
 

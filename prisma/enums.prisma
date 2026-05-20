@@ -1,0 +1,51 @@
+enum IdentityType {
+  CPF
+  CNPJ
+}
+
+enum CompanyType {
+  ONG
+  COMPANY
+  GOVERNMENT
+  COLLECTOR
+}
+
+enum DayOfWeek {
+  SUNDAY
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+}
+
+enum Measurement {
+  KG
+  L
+  UNIT
+  M
+  M2
+  M3
+  ML
+}
+
+enum WasteType {
+  RECYCLABLE
+  GARBAGE
+}
+
+enum ComplaintType {
+  IRREGULAR_DISPOSAL
+  DEFORESTATION
+  BURNING
+  VACANT_LOT
+}
+
+enum ComplaintStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  REJECTED
+  CANCELED
+}

@@ -46,6 +46,8 @@ describe("get-company-wastes-use-case", () => {
 					price: 12.5,
 					unit: "KG",
 					waste_type: "RECYCLABLE",
+					quantity: 100,
+					observations: null,
 					sub_items: ["cardboard"],
 				},
 			],
