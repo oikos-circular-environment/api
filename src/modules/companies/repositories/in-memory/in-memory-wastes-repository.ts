@@ -38,6 +38,8 @@ export class InMemoryWastesRepository implements WastesRepository {
 			price: item.price,
 			unit: item.unit,
 			waste_type: item.waste_type,
+			quantity: item.quantity,
+			observations: item.observations,
 			sub_items: normalizeSubItems(item.sub_items),
 			created_at: new Date(now.getTime() + index),
 			updated_at: new Date(now.getTime() + index),

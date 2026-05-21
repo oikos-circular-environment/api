@@ -41,6 +41,8 @@ describe("upsert-company-wastes-use-case", () => {
 					price: 12.5,
 					unit: "KG",
 					waste_type: "RECYCLABLE",
+					quantity: 100,
+					observations: "Handle with care",
 					sub_items: ["cardboard"],
 				},
 				{
@@ -49,6 +51,8 @@ describe("upsert-company-wastes-use-case", () => {
 					price: 4.75,
 					unit: "KG",
 					waste_type: "GARBAGE",
+					quantity: 50,
+					observations: null,
 					sub_items: null,
 				},
 			],
@@ -60,12 +64,16 @@ describe("upsert-company-wastes-use-case", () => {
 		expect(result[0].price).toBe(12.5);
 		expect(result[0].unit).toBe("KG");
 		expect(result[0].waste_type).toBe("RECYCLABLE");
+		expect(result[0].quantity).toBe(100);
+		expect(result[0].observations).toBe("Handle with care");
 		expect(result[0].sub_items).toStrictEqual(["cardboard"]);
 		expect(result[1].name).toBe("Organic");
 		expect(result[1].description).toBeNull();
 		expect(result[1].price).toBe(4.75);
 		expect(result[1].unit).toBe("KG");
 		expect(result[1].waste_type).toBe("GARBAGE");
+		expect(result[1].quantity).toBe(50);
+		expect(result[1].observations).toBeNull();
 		expect(result[1].sub_items).toBeNull();
 		expect(wastesRepository.items.length).toBe(2);
 
@@ -78,6 +86,8 @@ describe("upsert-company-wastes-use-case", () => {
 					price: 18,
 					unit: "KG",
 					waste_type: "RECYCLABLE",
+					quantity: 30,
+					observations: null,
 					sub_items: ["bottles"],
 				},
 			],
@@ -139,6 +149,8 @@ describe("upsert-company-wastes-use-case", () => {
 						price: 10,
 						unit: "KG",
 						waste_type: "RECYCLABLE",
+						quantity: 10,
+						observations: null,
 						sub_items: null,
 					},
 					{
@@ -147,6 +159,8 @@ describe("upsert-company-wastes-use-case", () => {
 						price: 20,
 						unit: "KG",
 						waste_type: "GARBAGE",
+						quantity: 5,
+						observations: null,
 						sub_items: null,
 					},
 				],

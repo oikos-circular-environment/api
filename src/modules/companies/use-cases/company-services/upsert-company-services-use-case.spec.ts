@@ -41,7 +41,7 @@ describe("upsert-company-services-use-case", () => {
 					price: 250,
 					unit: "UNIT",
 					waste_type: "GARBAGE",
-					quantity: 2,
+					quantity: 2.5,
 					observations: "Includes transport",
 					sub_items: ["bins"],
 				},
@@ -64,7 +64,7 @@ describe("upsert-company-services-use-case", () => {
 		expect(result[0].price).toBe(250);
 		expect(result[0].unit).toBe("UNIT");
 		expect(result[0].waste_type).toBe("GARBAGE");
-		expect(result[0].quantity).toBe(2);
+		expect(result[0].quantity).toBe(2.5);
 		expect(result[0].observations).toBe("Includes transport");
 		expect(result[0].sub_items).toStrictEqual(["bins"]);
 		expect(result[1].name).toBe("Sorting");
