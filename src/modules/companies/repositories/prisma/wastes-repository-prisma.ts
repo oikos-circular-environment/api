@@ -20,6 +20,8 @@ function mapWaste(waste: {
 	price: { toNumber: () => number } | number;
 	unit: string;
 	waste_type: string;
+	quantity: { toNumber: () => number } | number;
+	observations: string | null;
 	sub_items: string[];
 	created_at: Date;
 	updated_at: Date;
@@ -31,6 +33,8 @@ function mapWaste(waste: {
 		price: Number(waste.price),
 		unit: waste.unit as CompanyWaste["unit"],
 		waste_type: waste.waste_type as CompanyWaste["waste_type"],
+		quantity: Number(waste.quantity),
+		observations: waste.observations,
 		sub_items: waste.sub_items.length === 0 ? null : waste.sub_items,
 		created_at: waste.created_at,
 		updated_at: waste.updated_at,
@@ -68,6 +72,8 @@ export class PrismaWastesRepository implements WastesRepository {
 						price: item.price,
 						unit: item.unit,
 						waste_type: item.waste_type,
+						quantity: item.quantity,
+						observations: item.observations,
 						sub_items: normalizeSubItems(item.sub_items),
 					})),
 				});

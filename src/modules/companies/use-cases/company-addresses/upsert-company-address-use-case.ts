@@ -1,17 +1,17 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type {
 	CompanyAddress,
-	CreateCompanyAddress,
+	UpsertCompanyAddress,
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { AddressesRepository } from "@/modules/companies/repositories/address-repository.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
 
-type CreateCompanyAddressUseCaseRequest = {
+type UpsertCompanyAddressUseCaseRequest = {
 	userId: string;
-	data: Omit<CreateCompanyAddress, "company_id">;
+	data: UpsertCompanyAddress;
 };
 
-export class CreateCompanyAddressUseCase {
+export class UpsertCompanyAddressUseCase {
 	constructor(
 		private readonly companiesRepository: CompaniesRepository,
 		private readonly addressesRepository: AddressesRepository,
@@ -20,7 +20,7 @@ export class CreateCompanyAddressUseCase {
 	async execute({
 		userId,
 		data,
-	}: CreateCompanyAddressUseCaseRequest): Promise<CompanyAddress> {
+	}: UpsertCompanyAddressUseCaseRequest): Promise<CompanyAddress> {
 		const company = await this.companiesRepository.findByUserId(userId);
 
 		if (!company) {
@@ -32,18 +32,12 @@ export class CreateCompanyAddressUseCase {
 		);
 
 		if (existingAddress) {
-			throw new AppError(
-				"Address already exists",
-				"COMPANY_ADDRESS_ALREADY_EXISTS",
-				409,
-			);
+			return (await this.addressesRepository.update(
+				existingAddress.id,
+				data,
+			)) as CompanyAddress;
 		}
 
-		const address = await this.addressesRepository.create({
-			...data,
-			company_id: company.id,
-		});
-
-		return address;
+		return this.addressesRepository.create({ ...data, company_id: company.id });
 	}
 }

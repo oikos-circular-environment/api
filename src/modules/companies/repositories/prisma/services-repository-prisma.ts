@@ -20,7 +20,7 @@ function mapService(service: {
 	price: { toNumber: () => number } | number;
 	unit: string;
 	waste_type: string;
-	quantity: number;
+	quantity: { toNumber: () => number } | number;
 	observations: string | null;
 	sub_items: string[];
 	created_at: Date;
@@ -33,7 +33,7 @@ function mapService(service: {
 		price: Number(service.price),
 		unit: service.unit as CompanyService["unit"],
 		waste_type: service.waste_type as CompanyService["waste_type"],
-		quantity: service.quantity,
+		quantity: Number(service.quantity),
 		observations: service.observations,
 		sub_items: service.sub_items.length === 0 ? null : service.sub_items,
 		created_at: service.created_at,

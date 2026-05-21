@@ -1,5 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
+import z from "zod";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
@@ -9,10 +10,9 @@ import {
 	companySchema,
 	companyServicesSchema,
 	companyWastesSchema,
-	createCompanyAddressSchema,
 	createCompanySchema,
-	updateCompanyAddressSchema,
 	updateCompanySchema,
+	upsertCompanyAddressSchema,
 	upsertCompanyBusinessHoursSchema,
 	upsertCompanyServicesSchema,
 	upsertCompanyWastesSchema,
@@ -22,9 +22,8 @@ import { PrismaBusinessHoursRepository } from "./repositories/prisma/business-ho
 import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repository-prisma.js";
 import { PrismaServicesRepository } from "./repositories/prisma/services-repository-prisma.js";
 import { PrismaWastesRepository } from "./repositories/prisma/wastes-repository-prisma.js";
-import { CreateCompanyAddressUseCase } from "./use-cases/company-addresses/create-company-address-use-case.js";
 import { GetCompanyAddressUseCase } from "./use-cases/company-addresses/get-company-address-use-case.js";
-import { UpdateCompanyAddressUseCase } from "./use-cases/company-addresses/update-company-address-use-case.js";
+import { UpsertCompanyAddressUseCase } from "./use-cases/company-addresses/upsert-company-address-use-case.js";
 import { GetCompanyBusinessHoursUseCase } from "./use-cases/company-business-hours/get-company-business-hours-use-case.js";
 import { UpsertCompanyBusinessHoursUseCase } from "./use-cases/company-business-hours/upsert-company-business-hours-use-case.js";
 import { GetCompanyServicesUseCase } from "./use-cases/company-services/get-company-services-use-case.js";
@@ -52,15 +51,11 @@ export async function companyRoutes(app: FastifyInstance) {
 	const createCompanyUseCase = new CreateCompanyUseCase(companiesRepository);
 	const getCompanyUseCase = new GetCompanyUseCase(companiesRepository);
 	const updateCompanyUseCase = new UpdateCompanyUseCase(companiesRepository);
-	const createCompanyAddressUseCase = new CreateCompanyAddressUseCase(
+	const upsertCompanyAddressUseCase = new UpsertCompanyAddressUseCase(
 		companiesRepository,
 		addressesRepository,
 	);
 	const getCompanyAddressUseCase = new GetCompanyAddressUseCase(
-		companiesRepository,
-		addressesRepository,
-	);
-	const updateCompanyAddressUseCase = new UpdateCompanyAddressUseCase(
 		companiesRepository,
 		addressesRepository,
 	);
@@ -103,7 +98,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				description: "Creates a company for the authenticated user.",
 				body: createCompanySchema.omit({ user_id: true }),
 				response: {
-					200: companySchema,
+					200: z.object({ company: companySchema }),
 					401: appErrorSchema,
 					409: appErrorSchema,
 				},
@@ -116,35 +111,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				data: request.body,
 			});
 
-			return reply.send(company);
-		},
-	);
-
-	typedApp.post(
-		"/companies/business-hours",
-		{
-			schema: withBearerAuth({
-				tags: [COMPANIES_BUSINESS_HOURS_TAG],
-				summary: "Create company business hours",
-				description:
-					"Creates or updates business hours for the authenticated user's company.",
-				body: upsertCompanyBusinessHoursSchema,
-				response: {
-					200: companyBusinessHoursSchema,
-					401: appErrorSchema,
-					404: appErrorSchema,
-					400: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const businessHours = await upsertCompanyBusinessHoursUseCase.execute({
-				userId,
-				data: request.body.business_hours,
-			});
-
-			return reply.send(businessHours);
+			return reply.send({ company });
 		},
 	);
 
@@ -157,7 +124,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				description:
 					"Returns business hours from Sunday to Saturday for the authenticated user's company.",
 				response: {
-					200: companyBusinessHoursSchema,
+					200: z.object({ business_hours: companyBusinessHoursSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -165,11 +132,11 @@ export async function companyRoutes(app: FastifyInstance) {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const businessHours = await getCompanyBusinessHoursUseCase.execute({
+			const business_hours = await getCompanyBusinessHoursUseCase.execute({
 				userId,
 			});
 
-			return reply.send(businessHours);
+			return reply.send({ business_hours });
 		},
 	);
 
@@ -178,12 +145,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		{
 			schema: withBearerAuth({
 				tags: [COMPANIES_BUSINESS_HOURS_TAG],
-				summary: "Update company business hours",
+				summary: "Upsert company business hours",
 				description:
-					"Upserts business hours for the authenticated user's company allowing partial payload.",
+					"Creates or updates business hours for the authenticated user's company.",
 				body: upsertCompanyBusinessHoursSchema,
 				response: {
-					200: companyBusinessHoursSchema,
+					200: z.object({ business_hours: companyBusinessHoursSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 					400: appErrorSchema,
@@ -192,40 +159,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const businessHours = await upsertCompanyBusinessHoursUseCase.execute({
+			const business_hours = await upsertCompanyBusinessHoursUseCase.execute({
 				userId,
 				data: request.body.business_hours,
 			});
 
-			return reply.send(businessHours);
-		},
-	);
-
-	typedApp.post(
-		"/companies/wastes",
-		{
-			schema: withBearerAuth({
-				tags: [COMPANIES_WASTES_TAG],
-				summary: "Create company wastes",
-				description:
-					"Creates or replaces the wastes linked to the authenticated user's company.",
-				body: upsertCompanyWastesSchema,
-				response: {
-					200: companyWastesSchema,
-					401: appErrorSchema,
-					404: appErrorSchema,
-					400: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const wastes = await upsertCompanyWastesUseCase.execute({
-				userId,
-				data: request.body.wastes,
-			});
-
-			return reply.send(wastes);
+			return reply.send({ business_hours });
 		},
 	);
 
@@ -234,12 +173,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		{
 			schema: withBearerAuth({
 				tags: [COMPANIES_WASTES_TAG],
-				summary: "Update company wastes",
+				summary: "Upsert company wastes",
 				description:
-					"Replaces the wastes linked to the authenticated user's company.",
+					"Creates or replaces the wastes linked to the authenticated user's company.",
 				body: upsertCompanyWastesSchema,
 				response: {
-					200: companyWastesSchema,
+					200: z.object({ wastes: companyWastesSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 					400: appErrorSchema,
@@ -253,7 +192,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				data: request.body.wastes,
 			});
 
-			return reply.send(wastes);
+			return reply.send({ wastes });
 		},
 	);
 
@@ -266,7 +205,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				description:
 					"Returns all wastes linked to the authenticated user's company.",
 				response: {
-					200: companyWastesSchema,
+					200: z.object({ wastes: companyWastesSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -276,35 +215,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const wastes = await getCompanyWastesUseCase.execute({ userId });
 
-			return reply.send(wastes);
-		},
-	);
-
-	typedApp.post(
-		"/companies/services",
-		{
-			schema: withBearerAuth({
-				tags: [COMPANIES_SERVICES_TAG],
-				summary: "Create company services",
-				description:
-					"Creates or replaces the services linked to the authenticated user's company.",
-				body: upsertCompanyServicesSchema,
-				response: {
-					200: companyServicesSchema,
-					401: appErrorSchema,
-					404: appErrorSchema,
-					400: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const services = await upsertCompanyServicesUseCase.execute({
-				userId,
-				data: request.body.services,
-			});
-
-			return reply.send(services);
+			return reply.send({ wastes });
 		},
 	);
 
@@ -313,12 +224,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		{
 			schema: withBearerAuth({
 				tags: [COMPANIES_SERVICES_TAG],
-				summary: "Update company services",
+				summary: "Upsert company services",
 				description:
-					"Replaces the services linked to the authenticated user's company.",
+					"Creates or replaces the services linked to the authenticated user's company.",
 				body: upsertCompanyServicesSchema,
 				response: {
-					200: companyServicesSchema,
+					200: z.object({ services: companyServicesSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 					400: appErrorSchema,
@@ -332,7 +243,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				data: request.body.services,
 			});
 
-			return reply.send(services);
+			return reply.send({ services });
 		},
 	);
 
@@ -345,7 +256,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				description:
 					"Returns all services linked to the authenticated user's company.",
 				response: {
-					200: companyServicesSchema,
+					200: z.object({ services: companyServicesSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -355,7 +266,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const services = await getCompanyServicesUseCase.execute({ userId });
 
-			return reply.send(services);
+			return reply.send({ services });
 		},
 	);
 
@@ -367,7 +278,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Get user company",
 				description: "Returns the company of the authenticated user.",
 				response: {
-					200: companySchema.nullable(),
+					200: z.object({ company: companySchema.nullable() }),
 					401: appErrorSchema,
 				},
 			}),
@@ -376,7 +287,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const company = await getCompanyUseCase.execute({ userId });
 
-			return reply.send(company);
+			return reply.send({ company });
 		},
 	);
 
@@ -390,7 +301,7 @@ export async function companyRoutes(app: FastifyInstance) {
 					"Updates only company data for the authenticated user. Related entities are not handled by this route.",
 				body: updateCompanySchema,
 				response: {
-					200: companySchema.nullable(),
+					200: z.object({ company: companySchema.nullable() }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -398,39 +309,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const updatedCompany = await updateCompanyUseCase.execute({
+			const company = await updateCompanyUseCase.execute({
 				userId,
 				data: request.body,
 			});
 
-			return reply.send(updatedCompany);
-		},
-	);
-
-	typedApp.post(
-		"/companies/addresses",
-		{
-			schema: withBearerAuth({
-				tags: [COMPANIES_ADDRESSES_TAG],
-				summary: "Create company address",
-				description: "Creates an address for the authenticated user's company.",
-				body: createCompanyAddressSchema.omit({ company_id: true }),
-				response: {
-					200: companyAddressSchema,
-					401: appErrorSchema,
-					404: appErrorSchema,
-					409: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const address = await createCompanyAddressUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
-			return reply.send(address);
+			return reply.send({ company });
 		},
 	);
 
@@ -442,7 +326,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Get company address",
 				description: "Returns the address of the authenticated user's company.",
 				response: {
-					200: companyAddressSchema.nullable(),
+					200: z.object({ address: companyAddressSchema.nullable() }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -452,7 +336,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			const userId = request.user.sub;
 			const address = await getCompanyAddressUseCase.execute({ userId });
 
-			return reply.send(address);
+			return reply.send({ address });
 		},
 	);
 
@@ -461,12 +345,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		{
 			schema: withBearerAuth({
 				tags: [COMPANIES_ADDRESSES_TAG],
-				summary: "Update company address",
+				summary: "Upsert company address",
 				description:
-					"Updates only address data for the authenticated user's company.",
-				body: updateCompanyAddressSchema,
+					"Creates or updates the address for the authenticated user's company.",
+				body: upsertCompanyAddressSchema,
 				response: {
-					200: companyAddressSchema.nullable(),
+					200: z.object({ address: companyAddressSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -474,12 +358,12 @@ export async function companyRoutes(app: FastifyInstance) {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const updatedAddress = await updateCompanyAddressUseCase.execute({
+			const address = await upsertCompanyAddressUseCase.execute({
 				userId,
 				data: request.body,
 			});
 
-			return reply.send(updatedAddress);
+			return reply.send({ address });
 		},
 	);
 }
