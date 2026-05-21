@@ -69,7 +69,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				summary: "List complaints",
 				description: "Returns all complaints from the authenticated user.",
 				response: {
-					200: complaintsSchema,
+					200: z.object({ complaints: complaintsSchema }),
 					401: appErrorSchema,
 				},
 			}),
@@ -78,7 +78,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			const userId = request.user.sub;
 			const complaints = await getComplaintsUseCase.execute({ userId });
 
-			return reply.send(complaints);
+			return reply.send({ complaints });
 		},
 	);
 
@@ -91,7 +91,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				description:
 					"Returns a summary of complaint statuses for the authenticated user.",
 				response: {
-					200: complaintResumeSchema,
+					200: z.object({ dashboard: complaintResumeSchema }),
 					401: appErrorSchema,
 				},
 			}),
@@ -100,7 +100,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			const userId = request.user.sub;
 			const dashboard = await getComplaintsDashboardUseCase.execute({ userId });
 
-			return reply.send(dashboard);
+			return reply.send({ dashboard });
 		},
 	);
 
@@ -116,7 +116,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 					id: z.string().uuid(),
 				}),
 				response: {
-					200: complaintSchema,
+					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -129,7 +129,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				complaintId: request.params.id,
 			});
 
-			return reply.send(complaint);
+			return reply.send({ complaint });
 		},
 	);
 
@@ -143,7 +143,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 					"Creates a complaint with raw geospatial data and no attachment.",
 				body: createComplaintSchema,
 				response: {
-					200: complaintSchema,
+					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -156,7 +156,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				data: request.body,
 			});
 
-			return reply.send(complaint);
+			return reply.send({ complaint });
 		},
 	);
 
@@ -173,7 +173,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				}),
 				body: updateComplaintSchema,
 				response: {
-					200: complaintSchema,
+					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -187,7 +187,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				data: request.body,
 			});
 
-			return reply.send(complaint);
+			return reply.send({ complaint });
 		},
 	);
 
@@ -202,7 +202,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 					id: z.string().uuid(),
 				}),
 				response: {
-					200: complaintSchema,
+					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -215,7 +215,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				complaintId: request.params.id,
 			});
 
-			return reply.send(complaint);
+			return reply.send({ complaint });
 		},
 	);
 
@@ -230,7 +230,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 					id: z.string().uuid(),
 				}),
 				response: {
-					200: complaintSchema,
+					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 				},
@@ -243,7 +243,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				complaintId: request.params.id,
 			});
 
-			return reply.send(complaint);
+			return reply.send({ complaint });
 		},
 	);
 
@@ -257,7 +257,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				consumes: ["multipart/form-data"],
 				body: createComplaintAttachmentSchema,
 				response: {
-					200: complaintSchema,
+					200: z.object({ complaint: complaintSchema }),
 					400: appErrorSchema,
 					401: appErrorSchema,
 					404: appErrorSchema,
@@ -288,7 +288,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				},
 			});
 
-			return reply.send(complaint);
+			return reply.send({ complaint });
 		},
 	);
 }
