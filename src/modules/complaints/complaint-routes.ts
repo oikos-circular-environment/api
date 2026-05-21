@@ -12,6 +12,7 @@ import {
 	complaintsSchema,
 	createComplaintAttachmentSchema,
 	createComplaintSchema,
+	getComplaintsQuerySchema,
 	updateComplaintSchema,
 } from "./dtos/complaints-dto.js";
 import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-repository-prisma.js";
@@ -67,18 +68,30 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "List complaints",
-				description: "Returns all complaints from the authenticated user.",
+				description:
+					"Returns a paginated list of complaints for the authenticated user. Use `cursor` (the `next_cursor` from the previous response) for infinite scroll. Filter by `type` and/or `status` as needed.",
+				querystring: getComplaintsQuerySchema,
 				response: {
-					200: z.object({ complaints: complaintsSchema }),
+					200: z.object({
+						complaints: complaintsSchema,
+						next_cursor: z.string().datetime().nullable(),
+					}),
 					401: appErrorSchema,
 				},
 			}),
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const complaints = await getComplaintsUseCase.execute({ userId });
+			const { type, status, cursor, limit } = request.query;
 
-			return reply.send({ complaints });
+			const result = await getComplaintsUseCase.execute({
+				userId,
+				filters: { type, status },
+				cursor: cursor ? new Date(cursor) : undefined,
+				limit,
+			});
+
+			return reply.send(result);
 		},
 	);
 
@@ -113,7 +126,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				description:
 					"Returns the full complaint data for the authenticated user.",
 				params: z.object({
-					id: z.string().uuid(),
+					id: z.uuid(),
 				}),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
@@ -169,7 +182,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				description:
 					"Updates only the basic complaint fields: type and observations.",
 				params: z.object({
-					id: z.string().uuid(),
+					id: z.uuid(),
 				}),
 				body: updateComplaintSchema,
 				response: {
@@ -199,7 +212,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				summary: "Resolve complaint",
 				description: "Marks the authenticated user's complaint as resolved.",
 				params: z.object({
-					id: z.string().uuid(),
+					id: z.uuid(),
 				}),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
@@ -227,7 +240,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				summary: "Cancel complaint",
 				description: "Marks the authenticated user's complaint as canceled.",
 				params: z.object({
-					id: z.string().uuid(),
+					id: z.uuid(),
 				}),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
@@ -248,14 +261,16 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 
 	typedApp.post(
-		"/complaints/attachments",
+		"/complaints/:id/attachments",
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_ATTACHMENTS_TAG],
 				summary: "Create complaint attachment",
 				description: "Uploads and attaches a file to an existing complaint.",
 				consumes: ["multipart/form-data"],
-				body: createComplaintAttachmentSchema,
+				params: z.object({
+					id: z.uuid(),
+				}),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
 					400: appErrorSchema,
@@ -280,7 +295,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 
 			const complaint = await createComplaintAttachmentUseCase.execute({
 				userId,
-				complaint_id: request.body.complaint_id,
+				complaint_id: request.params.id,
 				file: {
 					fileName: file.filename,
 					mimeType: file.mimetype,
