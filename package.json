@@ -18,7 +18,12 @@
 		"test:coverage": "vitest run --coverage",
 		"test:ui": "vitest --ui",
 		"migrate:dev": "prisma migrate dev",
-		"migrate:generate": "prisma generate"
+		"migrate:generate": "prisma generate",
+		"seed": "tsx prisma/seeds/recycling-companies.ts",
+		"seed:fetch": "tsx scripts/fetch-recycling-places.ts"
+	},
+	"prisma": {
+		"seed": "tsx prisma/seeds/recycling-companies.ts"
 	},
 	"dependencies": {
 		"@fastify/cookie": "^11.0.2",
