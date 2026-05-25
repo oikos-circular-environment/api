@@ -57,7 +57,7 @@ const addressesSchema = z.object({
 	name: z.string().nullable(),
 	isoCountryCode: z.string().nullable(),
 	timezone: z.string().nullable(),
-	formattedAddress: z.string().nullable(),
+	formattedAddress: z.string().nullish(),
 });
 
 export const geospatialSchema = z.object({
@@ -148,3 +148,24 @@ export const complaintResumeSchema = z.object({
 });
 
 export type ComplaintResume = z.infer<typeof complaintResumeSchema>;
+
+export const getComplaintsFiltersSchema = z.object({
+	type: complaintTypeSchema.optional(),
+	status: complaintStatusSchema.optional(),
+});
+
+export type GetComplaintsFilters = z.infer<typeof getComplaintsFiltersSchema>;
+
+export const getComplaintsQuerySchema = getComplaintsFiltersSchema.extend({
+	cursor: z.string().datetime().optional(),
+	limit: z.coerce.number().int().min(1).max(100).default(20),
+});
+
+export type GetComplaintsQuery = z.infer<typeof getComplaintsQuerySchema>;
+
+export const paginatedComplaintsSchema = z.object({
+	complaints: complaintsSchema,
+	next_cursor: z.string().datetime().nullable(),
+});
+
+export type PaginatedComplaints = z.infer<typeof paginatedComplaintsSchema>;

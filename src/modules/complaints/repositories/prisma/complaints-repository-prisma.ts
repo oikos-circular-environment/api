@@ -6,6 +6,7 @@ import {
 	type ComplaintStatus,
 	type CreateComplaint,
 	geospatialSchema,
+	type GetComplaintsFilters,
 	type SaveComplaintAttachment,
 	type UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
@@ -64,10 +65,18 @@ function mapComplaint(payload: PrismaUserComplaintPayload): Complaint {
 }
 
 export class PrismaComplaintsRepository implements ComplaintsRepository {
-	async findManyByUserId(userId: string) {
+	async findManyByUserId(
+		userId: string,
+		params: { filters?: GetComplaintsFilters; cursor?: Date; limit: number },
+	) {
+		const { filters, cursor, limit } = params;
+
 		const userComplaints = await prisma.userComplaint.findMany({
 			where: {
 				user_id: userId,
+				...(filters?.status && { status: filters.status }),
+				...(cursor && { created_at: { lt: cursor } }),
+				...(filters?.type && { complaint: { type: filters.type } }),
 			},
 			include: {
 				complaint: {
@@ -79,6 +88,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			orderBy: {
 				created_at: "desc",
 			},
+			take: limit + 1,
 		});
 
 		return userComplaints.map((item) => mapComplaint(item));
