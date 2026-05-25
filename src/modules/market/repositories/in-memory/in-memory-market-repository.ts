@@ -54,11 +54,19 @@ export class InMemoryMarketRepository implements MarketRepository {
 				const inBusinessName =
 					company.business_name !== null &&
 					company.business_name.toLowerCase().includes(lowerQ);
-				const inServices = company.services.some((service) =>
-					service.name.toLowerCase().includes(lowerQ),
+				const inServices = company.services.some(
+					(service) =>
+						service.name.toLowerCase().includes(lowerQ) ||
+						(service.sub_items ?? []).some((sub) =>
+							sub.toLowerCase().includes(lowerQ),
+						),
 				);
-				const inWastes = company.wastes.some((waste) =>
-					waste.name.toLowerCase().includes(lowerQ),
+				const inWastes = company.wastes.some(
+					(waste) =>
+						waste.name.toLowerCase().includes(lowerQ) ||
+						(waste.sub_items ?? []).some((sub) =>
+							sub.toLowerCase().includes(lowerQ),
+						),
 				);
 				return inBusinessName || inServices || inWastes;
 			});

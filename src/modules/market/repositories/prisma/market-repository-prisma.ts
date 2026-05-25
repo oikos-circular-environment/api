@@ -45,8 +45,20 @@ export class MarketRepositoryPrisma implements MarketRepository {
 		const textFilter = q
 			? Prisma.sql`AND (
       c.business_name ILIKE ${`%${q}%`}
-      OR EXISTS (SELECT 1 FROM company_services cs WHERE cs.company_id = c.id AND cs.name ILIKE ${`%${q}%`})
-      OR EXISTS (SELECT 1 FROM company_wastes cw WHERE cw.company_id = c.id AND cw.name ILIKE ${`%${q}%`})
+      OR EXISTS (
+        SELECT 1 FROM company_services cs
+        WHERE cs.company_id = c.id AND (
+          cs.name ILIKE ${`%${q}%`}
+          OR EXISTS (SELECT 1 FROM unnest(cs.sub_items) AS sub WHERE sub ILIKE ${`%${q}%`})
+        )
+      )
+      OR EXISTS (
+        SELECT 1 FROM company_wastes cw
+        WHERE cw.company_id = c.id AND (
+          cw.name ILIKE ${`%${q}%`}
+          OR EXISTS (SELECT 1 FROM unnest(cw.sub_items) AS sub WHERE sub ILIKE ${`%${q}%`})
+        )
+      )
     )`
 			: Prisma.empty;
 
