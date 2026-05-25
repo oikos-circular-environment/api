@@ -3,12 +3,16 @@ import type {
 	ComplaintResume,
 	ComplaintStatus,
 	CreateComplaint,
+	GetComplaintsFilters,
 	SaveComplaintAttachment,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 
 export interface ComplaintsRepository {
-	findManyByUserId(userId: string): Promise<Complaint[]>;
+	findManyByUserId(
+		userId: string,
+		params: { filters?: GetComplaintsFilters; cursor?: Date; limit: number },
+	): Promise<Complaint[]>;
 	findByUserAndComplaintId(
 		userId: string,
 		complaintId: string,

@@ -6,6 +6,7 @@ import type {
 	ComplaintStatus,
 	CreateComplaint,
 	Geospatial,
+	GetComplaintsFilters,
 	SaveComplaintAttachment,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
@@ -33,14 +34,24 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	public attachments: ComplaintAttachment[] = [];
 	public userComplaints: UserComplaintEntity[] = [];
 
-	async findManyByUserId(userId: string) {
+	async findManyByUserId(
+		userId: string,
+		params: { filters?: GetComplaintsFilters; cursor?: Date; limit: number },
+	) {
+		const { filters, cursor, limit } = params;
+
 		const userComplaints = this.userComplaints
 			.filter((item) => item.user_id === userId)
+			.filter((item) => !filters?.status || item.status === filters.status)
+			.filter((item) => !cursor || item.created_at < cursor)
 			.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
 
-		return userComplaints
+		const mapped = userComplaints
 			.map((item) => this.mapUserComplaint(item))
-			.filter((item) => item !== null);
+			.filter((item) => item !== null)
+			.filter((item) => !filters?.type || item.type === filters.type);
+
+		return mapped.slice(0, limit + 1);
 	}
 
 	async findByUserAndComplaintId(userId: string, complaintId: string) {
