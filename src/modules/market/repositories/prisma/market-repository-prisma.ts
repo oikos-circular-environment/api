@@ -10,6 +10,7 @@ type RawCompanyRow = {
 	company_type: string;
 	accept_appointments: boolean;
 	status: boolean;
+	phones: string[];
 	address_id: string;
 	zip_code: string;
 	street: string;
@@ -93,6 +94,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
         c.company_type,
         c.accept_appointments,
         c.status,
+        c.phones,
         a.id AS address_id,
         a.zip_code,
         a.street,
@@ -186,6 +188,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 				company_type: row.company_type as MarketCompany["company_type"],
 				accept_appointments: row.accept_appointments,
 				status: row.status,
+				phones: row.phones,
 				address: {
 					id: row.address_id,
 					zip_code: row.zip_code,

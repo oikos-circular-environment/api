@@ -30,6 +30,7 @@ const makeCompany = (
 		latitude: -16.4757009,
 		longitude: -54.6684927,
 	},
+	phones: ["(66) 99999-0001"],
 	services: [],
 	wastes: [
 		{
@@ -372,6 +373,25 @@ describe("ListMarketUseCase", () => {
 		});
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].id).toBe("company-plastico");
+	});
+
+	it("deve retornar phones da empresa", async () => {
+		repo.companies = [
+			makeCompany({ phones: ["(66) 99999-0001", "(66) 3411-0002"] }),
+		];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].phones).toEqual([
+			"(66) 99999-0001",
+			"(66) 3411-0002",
+		]);
+	});
+
+	it("deve retornar phones vazio quando empresa não tem telefone", async () => {
+		repo.companies = [makeCompany({ phones: [] })];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].phones).toEqual([]);
 	});
 
 	it("deve aplicar radius padrão de 1000m quando não informado", async () => {

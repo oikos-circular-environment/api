@@ -1,9 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
-import { appErrorSchema } from "../common/errors/app-error.js";
-import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	getMarketQuerySchema,
 	marketCompanySchema,
@@ -14,14 +11,10 @@ import { ListMarketUseCase } from "./use-cases/list-market-use-case.js";
 export async function marketRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 
-	typedApp.addHook("onRequest", async (request) => {
-		await verifyJwt(request);
-	});
-
 	typedApp.get(
 		"/market",
 		{
-			schema: withBearerAuth({
+			schema: {
 				tags: ["Market"],
 				summary: "List market companies",
 				description:
@@ -32,9 +25,8 @@ export async function marketRoutes(app: FastifyInstance) {
 						companies: z.array(marketCompanySchema),
 						next_cursor: z.string().nullable(),
 					}),
-					401: appErrorSchema,
 				},
-			}),
+			},
 		},
 		async (request, reply) => {
 			const { lat, lon, radius, q, category, cursor, limit } = request.query;
