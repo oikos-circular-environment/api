@@ -102,6 +102,7 @@ model Address {
 
   latitude  Float?
   longitude Float?
+  location  Unsupported("geography(Point, 4326)")?
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt

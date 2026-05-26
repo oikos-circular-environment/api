@@ -48,6 +48,14 @@ export class PrismaAddressesRepository implements AddressesRepository {
 				},
 			});
 
+			if (data.latitude != null && data.longitude != null) {
+				await transaction.$executeRaw`
+					UPDATE "addresses"
+					SET "location" = ST_SetSRID(ST_Point(${data.longitude}, ${data.latitude}), 4326)
+					WHERE "id" = ${createdAddress.id}
+				`
+			}
+
 			await transaction.profile.update({
 				where: {
 					id: data.profile_id,
@@ -80,6 +88,14 @@ export class PrismaAddressesRepository implements AddressesRepository {
 			},
 			data,
 		});
+
+		if (data.latitude != null && data.longitude != null) {
+			await prisma.$executeRaw`
+				UPDATE "addresses"
+				SET "location" = ST_SetSRID(ST_Point(${data.longitude}, ${data.latitude}), 4326)
+				WHERE "id" = ${id}
+			`
+		}
 
 		return updatedAddress;
 	}
