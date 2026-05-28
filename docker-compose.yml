@@ -1,0 +1,35 @@
+services:
+  postgresql:
+    image: bitnami/postgresql:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRESQL_USERNAME: oikos
+      POSTGRESQL_PASSWORD: oikos_dev
+      POSTGRESQL_DATABASE: oikos
+      POSTGRESQL_DATABASE_EXTENSIONS: postgis
+    volumes:
+      - postgresql_data:/bitnami/postgresql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "oikos", "-d", "oikos"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: bitnami/redis:latest
+    ports:
+      - "6379:6379"
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - redis_data:/bitnami/redis/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgresql_data:
+  redis_data:
