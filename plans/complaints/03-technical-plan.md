@@ -165,9 +165,127 @@ flowchart TD
 
 ## Fora de escopo (deixado explícito)
 
-- Comentários/fórum, "me too" e qualquer interação textual entre cidadãos.
+- Comentários/fórum, "me todo" e qualquer interação textual entre cidadãos.
 - Confiabilidade de perfis e empresas (Epic separado).
 - Transição para `IN_PROGRESS` e fluxo de `REJECTED` (moderação).
 - Exposição de identidade dos votantes/resolvedores.
 - UI mobile do mapa, filtros visuais e clustering visual.
+
+---
+
+## Fluxo de Execução
+
+Ordem de implementação baseada em dependências técnicas e valor incremental. Cada fase só inicia após a anterior estar com testes passando.
+
+### Fase 0 — Empresas (pré-requisito do resolver)
+
+> Deve ser concluída antes da Fase 5. `ComplaintResolution.resolver_user_id` deriva de `User → Company`; o resolver público exige `description` e avatar de `Company`.
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 0.1 | Schema: relação `User → Company` vira 1:N (remove `@unique` de `company.user_id`); adiciona `description String?` + novo model `CompanyAvatar` com `avatar_id String?` em `Company` | `prisma/schema.prisma` |
+| 0.2 | Migration aditiva | `prisma/migrations/` |
+| 0.3 | DTO: `business_name` obrigatório quando `identity_type = CPF` via `.superRefine` | `src/modules/companies/dtos/companies-dto.ts` |
+| 0.4 | Repositório: `findByUserId` retorna array; adiciona `findByUserAndCompanyId` para operações de escrita | `repositories/companies-repository.ts` + impls |
+| 0.5 | Use-cases: remove guard de empresa única; todas as escritas verificam `company_id ∈ user` | todos use-cases de companies |
+| 0.6 | Novo use-case `upload-company-avatar` + spec + rota `POST /companies/:id/avatar` | `use-cases/` + `company-routes.ts` |
+
+---
+
+### Fase 1 — Schema e Infra (fundação)
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 1.1 | Enums: `ComplaintMethod { AUTOMATIC, MANUAL }` e `ComplaintVoteType { RESOLVED, NOT_RESOLVED }` | `prisma/enums.prisma` |
+| 1.2 | Schema: novos models `Complaint` (agregado raiz com `complaint_method`, `event_group_id`, `location geography(Point,4326)`), `ComplaintCapture`, `ComplaintVote`, `ComplaintResolution` (com `resolver_user_id`); atualiza `ComplaintAttachment` com `metadata Json?` | `prisma/schema.prisma` |
+| 1.3 | Índice GiST em `Complaint.location` | `prisma/schema.prisma` |
+| 1.4 | Migration aditiva (preserva dados existentes) | `prisma/migrations/` |
+| 1.5 | Setup BullMQ + Redis: client, fila base, sem workers ainda | `src/lib/queue/` |
+
+---
+
+### Fase 2 — Refactor core do módulo complaints
+
+> Preserva contratos externos dos endpoints enquanto adapta a hierarquia interna `Complaint → ComplaintCapture → ComplaintAttachment`.
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 2.1 | DTOs: novos schemas `ComplaintCapture`, `ComplaintVote`, `ComplaintResolution`; `geospatialManualSchema` (heading nullable, addresses obrigatórios); `resolverSchema` polimórfico (`{ type: "company" } \| { type: "profile" }`) | `dtos/complaints-dto.ts` |
+| 2.2 | Interface do repositório: novos métodos para votos, resoluções e consulta por raio | `repositories/complaints-repository.ts` |
+| 2.3 | In-memory: atualizar implementação completa | `repositories/in-memory/` |
+| 2.4 | Prisma: atualizar implementação (novo modelo hierárquico) | `repositories/prisma/` |
+| 2.5 | Refatorar use-cases existentes: `create`, `get`, `getMany`, `update`, `cancel` | `use-cases/` |
+| 2.6 | Atualizar rotas existentes sem quebrar contratos | `complaint-routes.ts` |
+
+---
+
+### Fase 3 — Criação de denúncias (Flows 1 e 2)
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 3.1 | Use-case `create-complaint-automatic` + spec; ao final dispara job de agrupamento | `use-cases/create-complaint-automatic-use-case.ts` |
+| 3.2 | Use-case `create-complaint-manual` + spec; valida `geospatialManualSchema` (lat/lon + address obrigatórios, heading null) | `use-cases/create-complaint-manual-use-case.ts` |
+| 3.3 | Rotas: `POST /complaints` (automático) + `POST /complaints/manual` | `complaint-routes.ts` |
+
+---
+
+### Fase 4 — Acesso público (Flows 8 e 9)
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 4.1 | Repositório Prisma: query `ST_DWithin` com filtros opcionais (`type`, `status`, intervalo de data) e limite 500 | `repositories/prisma/` |
+| 4.2 | Use-case `get-map-complaints` + spec de integração com Postgres+PostGIS real | `use-cases/get-map-complaints-use-case.ts` |
+| 4.3 | Use-case `get-public-complaint` + spec; popula `resolver` lendo `User → Company` (se existir) ou `User → Profile` (fallback) | `use-cases/get-public-complaint-use-case.ts` |
+| 4.4 | Rotas: `GET /complaints/map` (autenticado) + `GET /complaints/:id/public` | `complaint-routes.ts` |
+
+---
+
+### Fase 5 — Votação e resolução (Flows 5, 6 e 7)
+
+> Depende da **Fase 0** estar concluída: `Company.description` e `CompanyAvatar` precisam existir para popular o resolver público.
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 5.1 | Use-case `vote-complaint` + spec: 1 voto por user por denúncia, alternável/removível enquanto `OPEN`; peso dono=2 / terceiro=1; dispara job de quórum | `use-cases/vote-complaint-use-case.ts` |
+| 5.2 | Use-case `submit-resolution` + spec: cria ou atualiza resolução; `resolver_user_id` = userId do request (sem campo livre); editável enquanto `OPEN` | `use-cases/submit-resolution-use-case.ts` |
+| 5.3 | Atualizar semântica de `PATCH /complaints/:id/resolved`: registra voto peso-2 do dono + exige resolução estruturada no mesmo request | `use-cases/resolve-complaint-use-case.ts` + rota |
+| 5.4 | Rotas: `POST /complaints/:id/votes`, `DELETE /complaints/:id/votes`, `POST /complaints/:id/resolutions`, `PATCH /complaints/:id/resolutions` | `complaint-routes.ts` |
+
+---
+
+### Fase 6 — Workers assíncronos (Flows 10 e 11)
+
+| # | Tarefa | Arquivos principais |
+|---|---|---|
+| 6.1 | Worker `group-complaints`: busca denúncias `OPEN` no raio de 15m com mesmo `type`; atribui `event_group_id` existente ou gera novo | `workers/group-complaints-worker.ts` |
+| 6.2 | Worker `resolve-by-quorum`: recalcula `pesos_positivos` e `pesos_negativos`; se `positivos ≥ 5 + negativos` → status `RESOLVED` (terminal) | `workers/resolve-by-quorum-worker.ts` |
+| 6.3 | Registrar workers no bootstrap da aplicação | `src/app.ts` |
+
+---
+
+### Fase 7 — Testes e integração
+
+| # | Tarefa |
+|---|---|
+| 7.1 | Unitários por use-case com repositórios in-memory (Fases 2–5) |
+| 7.2 | Integração: `get-map-complaints` com Postgres+PostGIS real |
+| 7.3 | Integração: fluxo completo de quórum (vote → worker → status `RESOLVED`) |
+
+---
+
+### Mapa de dependências
+
+```
+Fase 0 ────────────────────────────────────────────┐
+                                                    │
+Fase 1 ──► Fase 2 ──► Fase 3                       │
+                  │                                 │
+                  └──► Fase 4                       │
+                  │                                 ▼
+                  └──► Fase 5 ◄──────────── (resolver identity)
+                           │
+                           └──► Fase 6
+                                   │
+Todas ──────────────────────────── └──► Fase 7
+```
 
