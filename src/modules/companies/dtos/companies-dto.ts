@@ -11,7 +11,7 @@ export const companyTypeSchema = z.enum([
 ]);
 export type CompanyType = z.infer<typeof companyTypeSchema>;
 
-export const createCompanySchema = z.object({
+export const createCompanyInputSchema = z.object({
 	user_id: z.string().uuid(),
 	identity: z.string().min(1, "Identity is required"),
 	identity_type: identityTypeSchema,
@@ -24,23 +24,64 @@ export const createCompanySchema = z.object({
 	email: z.email("Invalid email address").optional().nullable(),
 	phones: z.array(z.string().min(1, "Phone is required")),
 	started_activity_in: z.coerce.date(),
+	description: z.string().optional().nullable(),
 });
+
+export const createCompanySchema = createCompanyInputSchema.superRefine(
+	(data, ctx) => {
+		if (data.identity_type === "CPF" && !data.business_name) {
+			ctx.addIssue({
+				code: z.ZodIssueCode.custom,
+				message: "business_name is required for CPF identity type",
+				path: ["business_name"],
+			});
+		}
+	},
+);
 
 export type CreateCompany = z.infer<typeof createCompanySchema>;
 
-export const updateCompanySchema = createCompanySchema
+export const updateCompanyInputSchema = createCompanyInputSchema
 	.partial()
 	.omit({ user_id: true });
 
+export const updateCompanySchema = updateCompanyInputSchema.superRefine(
+	(data, ctx) => {
+		if (data.identity_type === "CPF" && !data.business_name) {
+			ctx.addIssue({
+				code: z.ZodIssueCode.custom,
+				message: "business_name is required for CPF identity type",
+				path: ["business_name"],
+			});
+		}
+	},
+);
+
 export type UpdateCompany = z.infer<typeof updateCompanySchema>;
 
-export const companySchema = createCompanySchema.extend({
+export const companySchema = createCompanyInputSchema.extend({
 	id: z.string(),
+	description: z.string().nullable(),
+	avatar: z
+		.object({
+			id: z.string(),
+			url: z.string(),
+			file_name: z.string(),
+			path: z.string(),
+			created_at: z.date(),
+		})
+		.nullable(),
 	created_at: z.date(),
 	updated_at: z.date(),
 });
 
 export type Company = z.infer<typeof companySchema>;
+
+export const uploadCompanyAvatarSchema = z.object({
+	company_id: z.string().uuid(),
+});
+
+export type UploadCompanyAvatar = z.infer<typeof uploadCompanyAvatarSchema>;
 
 export const createCompanyAddressSchema = z.object({
 	company_id: z.string().uuid(),

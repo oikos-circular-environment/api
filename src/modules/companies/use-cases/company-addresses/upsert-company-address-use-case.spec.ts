@@ -17,6 +17,7 @@ const baseCompany = {
 	email: "contato@oikos.dev",
 	phones: ["5511999999999"],
 	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
+	description: null,
 };
 
 const baseAddress = {
@@ -43,10 +44,11 @@ describe("upsert-company-address-use-case", () => {
 			addressesRepository,
 		);
 
-		await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(baseCompany);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
 			data: baseAddress,
 		});
 
@@ -80,6 +82,7 @@ describe("upsert-company-address-use-case", () => {
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
 			data: {
 				...baseAddress,
 				street: "Updated Street",
@@ -108,6 +111,7 @@ describe("upsert-company-address-use-case", () => {
 		try {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
+				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 				data: baseAddress,
 			});
 		} catch (error) {

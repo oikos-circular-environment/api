@@ -8,6 +8,7 @@ import type { ServicesRepository } from "@/modules/companies/repositories/servic
 
 type UpsertCompanyServicesUseCaseRequest = {
 	userId: string;
+	companyId: string;
 	data: CompanyServiceInput[];
 };
 
@@ -19,9 +20,13 @@ export class UpsertCompanyServicesUseCase {
 
 	async execute({
 		userId,
+		companyId,
 		data,
 	}: UpsertCompanyServicesUseCaseRequest): Promise<CompanyService[]> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

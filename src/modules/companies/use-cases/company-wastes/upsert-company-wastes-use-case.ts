@@ -8,6 +8,7 @@ import type { WastesRepository } from "@/modules/companies/repositories/wastes-r
 
 type UpsertCompanyWastesUseCaseRequest = {
 	userId: string;
+	companyId: string;
 	data: CompanyWasteInput[];
 };
 
@@ -19,9 +20,13 @@ export class UpsertCompanyWastesUseCase {
 
 	async execute({
 		userId,
+		companyId,
 		data,
 	}: UpsertCompanyWastesUseCaseRequest): Promise<CompanyWaste[]> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

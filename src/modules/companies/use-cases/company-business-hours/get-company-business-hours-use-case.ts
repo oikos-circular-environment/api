@@ -25,6 +25,7 @@ const DAY_ORDER: Record<BusinessHour["day_of_week"], number> = {
 
 type GetCompanyBusinessHoursUseCaseRequest = {
 	userId: string;
+	companyId: string;
 };
 
 export class GetCompanyBusinessHoursUseCase {
@@ -35,8 +36,12 @@ export class GetCompanyBusinessHoursUseCase {
 
 	async execute({
 		userId,
+		companyId,
 	}: GetCompanyBusinessHoursUseCaseRequest): Promise<BusinessHour[]> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

@@ -1,4 +1,3 @@
-import { AppError } from "@/modules/common/errors/app-error.js";
 import type {
 	Company,
 	CreateCompany,
@@ -17,16 +16,6 @@ export class CreateCompanyUseCase {
 		userId,
 		data,
 	}: CreateCompanyUseCaseRequest): Promise<Company> {
-		const existingCompany = await this.companiesRepository.findByUserId(userId);
-
-		if (existingCompany) {
-			throw new AppError(
-				"Company already exists",
-				"COMPANY_ALREADY_EXISTS",
-				409,
-			);
-		}
-
 		return this.companiesRepository.create({
 			...data,
 			user_id: userId,

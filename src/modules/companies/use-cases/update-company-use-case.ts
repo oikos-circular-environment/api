@@ -7,6 +7,7 @@ import type { CompaniesRepository } from "@/modules/companies/repositories/compa
 
 type UpdateCompanyUseCaseRequest = {
 	userId: string;
+	companyId: string;
 	data: UpdateCompany;
 };
 
@@ -15,9 +16,13 @@ export class UpdateCompanyUseCase {
 
 	async execute({
 		userId,
+		companyId,
 		data,
 	}: UpdateCompanyUseCaseRequest): Promise<Company | null> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

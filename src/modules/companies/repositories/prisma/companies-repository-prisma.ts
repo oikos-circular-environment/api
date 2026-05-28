@@ -9,22 +9,29 @@ import { companyMapper } from "./mappers/company-mapper.js";
 export class PrismaCompaniesRepository implements CompaniesRepository {
 	async findById(id: string) {
 		const company = await prisma.company.findUnique({
-			where: {
-				id,
-			},
+			where: { id },
+			include: { avatar: true },
 		});
 
 		return companyMapper(company);
 	}
 
 	async findByUserId(userId: string) {
-		const company = await prisma.company.findUnique({
-			where: {
-				user_id: userId,
-			},
+		const companies = await prisma.company.findMany({
+			where: { user_id: userId },
+			include: { avatar: true },
 		});
 
-		return companyMapper(company);
+		return companies.map((c) => companyMapper(c)).filter((c) => c !== null);
+	}
+
+	async findByUserAndCompanyId(userId: string, companyId: string) {
+		const company = await prisma.company.findFirst({
+			where: { id: companyId, user_id: userId },
+			include: { avatar: true },
+		});
+
+		return companyMapper(company ?? null);
 	}
 
 	async create(data: CreateCompany) {
@@ -42,7 +49,9 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 				email: data.email,
 				phones: data.phones,
 				started_activity_in: data.started_activity_in,
+				description: data.description,
 			},
+			include: { avatar: true },
 		});
 
 		const mappedCompany = companyMapper(company);
@@ -56,9 +65,7 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 
 	async update(id: string, data: UpdateCompany) {
 		const currentCompany = await prisma.company.findUnique({
-			where: {
-				id,
-			},
+			where: { id },
 		});
 
 		if (!currentCompany) {
@@ -66,10 +73,38 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 		}
 
 		const company = await prisma.company.update({
-			where: {
-				id,
-			},
+			where: { id },
 			data,
+			include: { avatar: true },
+		});
+
+		return companyMapper(company);
+	}
+
+	async uploadAvatar(
+		companyId: string,
+		data: { url: string; file_name: string; path: string },
+	) {
+		const currentCompany = await prisma.company.findUnique({
+			where: { id: companyId },
+		});
+
+		if (!currentCompany) {
+			return null;
+		}
+
+		const avatar = await prisma.companyAvatar.create({
+			data: {
+				url: data.url,
+				file_name: data.file_name,
+				path: data.path,
+			},
+		});
+
+		const company = await prisma.company.update({
+			where: { id: companyId },
+			data: { avatar_id: avatar.id },
+			include: { avatar: true },
 		});
 
 		return companyMapper(company);

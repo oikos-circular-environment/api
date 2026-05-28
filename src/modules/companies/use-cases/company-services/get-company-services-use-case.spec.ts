@@ -5,22 +5,21 @@ import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-
 import { GetCompanyServicesUseCase } from "./get-company-services-use-case.js";
 import { UpsertCompanyServicesUseCase } from "./upsert-company-services-use-case.js";
 
-async function seedCompany(companiesRepository: InMemoryCompaniesRepository) {
-	return companiesRepository.create({
-		user_id: "11111111-1111-1111-1111-111111111111",
-		identity: "12345678900",
-		identity_type: "CPF",
-		company_type: "COMPANY",
-		status: true,
-		is_headquarters: false,
-		business_name: "Oikos Tech",
-		corporate_name: "Oikos Tech LTDA",
-		accept_appointments: false,
-		email: "contato@oikos.dev",
-		phones: ["5511999999999"],
-		started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-	});
-}
+const baseCompany = {
+	user_id: "11111111-1111-1111-1111-111111111111",
+	identity: "12345678900",
+	identity_type: "CPF" as const,
+	company_type: "COMPANY" as const,
+	status: true,
+	is_headquarters: false,
+	business_name: "Oikos Tech",
+	corporate_name: "Oikos Tech LTDA",
+	accept_appointments: false,
+	email: "contato@oikos.dev",
+	phones: ["5511999999999"],
+	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
+	description: null,
+};
 
 describe("get-company-services-use-case", () => {
 	it("returns the company services list", async () => {
@@ -35,10 +34,11 @@ describe("get-company-services-use-case", () => {
 			servicesRepository,
 		);
 
-		await seedCompany(companiesRepository);
+		const company = await companiesRepository.create(baseCompany);
 
 		await upsertUseCase.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
 			data: [
 				{
 					name: "Collection",
@@ -55,6 +55,7 @@ describe("get-company-services-use-case", () => {
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
 		});
 
 		expect(result).toHaveLength(1);
@@ -71,10 +72,11 @@ describe("get-company-services-use-case", () => {
 			servicesRepository,
 		);
 
-		await seedCompany(companiesRepository);
+		const company = await companiesRepository.create(baseCompany);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
 		});
 
 		expect(result).toStrictEqual([]);
@@ -93,6 +95,7 @@ describe("get-company-services-use-case", () => {
 		try {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
+				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 			});
 		} catch (error) {
 			thrownError = error;

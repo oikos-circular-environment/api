@@ -8,6 +8,7 @@ import type { CompaniesRepository } from "@/modules/companies/repositories/compa
 
 type UpsertCompanyAddressUseCaseRequest = {
 	userId: string;
+	companyId: string;
 	data: UpsertCompanyAddress;
 };
 
@@ -19,9 +20,13 @@ export class UpsertCompanyAddressUseCase {
 
 	async execute({
 		userId,
+		companyId,
 		data,
 	}: UpsertCompanyAddressUseCaseRequest): Promise<CompanyAddress> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

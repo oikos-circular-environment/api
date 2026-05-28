@@ -14,8 +14,16 @@ export type PrismaCompany = {
 	email: string | null;
 	phones: string[];
 	started_activity_in: Date;
+	description: string | null;
 	created_at: Date;
 	updated_at: Date;
+	avatar: {
+		id: string;
+		url: string;
+		file_name: string;
+		path: string;
+		created_at: Date;
+	} | null;
 } | null;
 
 export function companyMapper(company: PrismaCompany): Company | null {
@@ -37,6 +45,16 @@ export function companyMapper(company: PrismaCompany): Company | null {
 		email: company.email,
 		phones: company.phones,
 		started_activity_in: company.started_activity_in,
+		description: company.description,
+		avatar: company.avatar
+			? {
+					id: company.avatar.id,
+					url: company.avatar.url,
+					file_name: company.avatar.file_name,
+					path: company.avatar.path,
+					created_at: company.avatar.created_at,
+				}
+			: null,
 		created_at: company.created_at,
 		updated_at: company.updated_at,
 	};
