@@ -41,7 +41,7 @@ const geospatial: Geospatial = {
 };
 
 describe("create-complaint-attachment-use-case", () => {
-	it("attaches image to complaint once", async () => {
+	it("attaches image to capture", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new CreateComplaintAttachmentUseCase(
@@ -57,11 +57,14 @@ describe("create-complaint-attachment-use-case", () => {
 				observations: null,
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
+
+		const captureId = created.captures[0]?.id ?? "";
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
-			complaint_id: created.id,
+			capture_id: captureId,
 			file: {
 				fileName: "1.jpg",
 				mimeType: "image/jpeg",
@@ -69,17 +72,17 @@ describe("create-complaint-attachment-use-case", () => {
 			},
 		});
 
-		expect(result.attachment?.url).toBe(
-			`https://in-memory.storage/complaints/${created.id}.jpeg`,
+		expect(result.captures[0]?.attachments[0]?.url).toBe(
+			`https://in-memory.storage/complaints/${captureId}.jpeg`,
 		);
-		expect(result.attachment?.file_name).toBe("1.jpg");
-		expect(result.attachment?.type).toBe("PHOTO");
+		expect(result.captures[0]?.attachments[0]?.file_name).toBe("1.jpg");
+		expect(result.captures[0]?.attachments[0]?.type).toBe("PHOTO");
 		expect(
-			await storageProvider.checkFileExists(`complaints/${created.id}.jpeg`),
+			await storageProvider.checkFileExists(`complaints/${captureId}.jpeg`),
 		).toBe(true);
 	});
 
-	it("throws when complaint already has attachment", async () => {
+	it("can attach multiple images to a capture", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new CreateComplaintAttachmentUseCase(
@@ -95,11 +98,14 @@ describe("create-complaint-attachment-use-case", () => {
 				observations: null,
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
+
+		const captureId = created.captures[0]?.id ?? "";
 
 		await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
-			complaint_id: created.id,
+			capture_id: captureId,
 			file: {
 				fileName: "1.jpg",
 				mimeType: "image/jpeg",
@@ -107,32 +113,20 @@ describe("create-complaint-attachment-use-case", () => {
 			},
 		});
 
-		let thrownError: unknown;
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			capture_id: captureId,
+			file: {
+				fileName: "2.jpg",
+				mimeType: "image/jpeg",
+				content: Buffer.from("image-content-2"),
+			},
+		});
 
-		try {
-			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-				complaint_id: created.id,
-				file: {
-					fileName: "2.jpg",
-					mimeType: "image/jpeg",
-					content: Buffer.from("image-content-2"),
-				},
-			});
-		} catch (error) {
-			thrownError = error;
-		}
-
-		expect(thrownError instanceof AppError).toBe(true);
-
-		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Complaint attachment already exists");
-			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_ALREADY_EXISTS");
-			expect(thrownError.statusCode).toBe(409);
-		}
+		expect(result.captures[0]?.attachments).toHaveLength(2);
 	});
 
-	it("throws when complaint does not exist", async () => {
+	it("throws when capture does not exist", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new CreateComplaintAttachmentUseCase(
@@ -145,7 +139,7 @@ describe("create-complaint-attachment-use-case", () => {
 		try {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
-				complaint_id: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				capture_id: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 				file: {
 					fileName: "2.jpg",
 					mimeType: "image/jpeg",
@@ -159,8 +153,8 @@ describe("create-complaint-attachment-use-case", () => {
 		expect(thrownError instanceof AppError).toBe(true);
 
 		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Complaint not found");
-			expect(thrownError.code).toBe("COMPLAINT_NOT_FOUND");
+			expect(thrownError.message).toBe("Capture not found");
+			expect(thrownError.code).toBe("CAPTURE_NOT_FOUND");
 			expect(thrownError.statusCode).toBe(404);
 		}
 	});
@@ -181,14 +175,17 @@ describe("create-complaint-attachment-use-case", () => {
 				observations: null,
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
+
+		const captureId = created.captures[0]?.id ?? "";
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
-				complaint_id: created.id,
+				capture_id: captureId,
 				file: {
 					fileName: "attachment.gif",
 					mimeType: "image/gif",
@@ -226,14 +223,17 @@ describe("create-complaint-attachment-use-case", () => {
 				observations: null,
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
+
+		const captureId = created.captures[0]?.id ?? "";
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
-				complaint_id: created.id,
+				capture_id: captureId,
 				file: {
 					fileName: "attachment.png",
 					mimeType: "image/png",
@@ -291,14 +291,17 @@ describe("create-complaint-attachment-use-case", () => {
 				observations: null,
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
+
+		const captureId = created.captures[0]?.id ?? "";
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
-				complaint_id: created.id,
+				capture_id: captureId,
 				file: {
 					fileName: "attachment.jpeg",
 					mimeType: "image/jpeg",

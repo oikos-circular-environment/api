@@ -23,6 +23,14 @@ export const complaintCaptureModeSchema = z.enum(["PHOTO", "VIDEO"]);
 
 export type ComplaintCaptureMode = z.infer<typeof complaintCaptureModeSchema>;
 
+export const complaintMethodSchema = z.enum(["AUTOMATIC", "MANUAL"]);
+
+export type ComplaintMethod = z.infer<typeof complaintMethodSchema>;
+
+export const complaintVoteTypeSchema = z.enum(["RESOLVED", "NOT_RESOLVED"]);
+
+export type ComplaintVoteType = z.infer<typeof complaintVoteTypeSchema>;
+
 const headingSchema = z.object({
 	trueHeading: z.number(),
 	magHeading: z.number(),
@@ -68,69 +76,57 @@ export const geospatialSchema = z.object({
 
 export type Geospatial = z.infer<typeof geospatialSchema>;
 
+export const geospatialManualSchema = z.object({
+	heading: z.null(),
+	location: locationSchema,
+	addresses: addressesSchema.extend({
+		city: z.string().min(1),
+		district: z.string().min(1),
+		street: z.string().min(1),
+		streetNumber: z.string().min(1),
+		postalCode: z.string().min(1),
+		region: z.string().min(1),
+	}),
+});
+
+export type GeospatialManual = z.infer<typeof geospatialManualSchema>;
+
 export const complaintAttachmentSchema = z.object({
 	id: z.string(),
 	url: z.string(),
 	file_name: z.string(),
 	path: z.string(),
 	base64: z.string(),
+	metadata: z.record(z.string(), z.unknown()).nullable(),
 	type: complaintCaptureModeSchema,
 	created_at: z.date(),
 });
 
 export type ComplaintAttachment = z.infer<typeof complaintAttachmentSchema>;
 
-export const createComplaintSchema = z.object({
-	date: z.coerce.date(),
-	type: complaintTypeSchema,
-	observations: z.string().optional().nullable(),
+export const complaintCaptureSchema = z.object({
+	id: z.string(),
+	date: z.date(),
+	observations: z.string().nullable(),
 	geospatial: geospatialSchema,
+	attachments: z.array(complaintAttachmentSchema),
+	created_at: z.date(),
 });
 
-export type CreateComplaint = z.infer<typeof createComplaintSchema>;
-
-export const updateComplaintSchema = z
-	.object({
-		type: complaintTypeSchema.optional(),
-		observations: z.string().optional().nullable(),
-	})
-	.refine(
-		(data) => data.type !== undefined || data.observations !== undefined,
-		{
-			message: "At least one field must be provided",
-		},
-	);
-
-export type UpdateComplaint = z.infer<typeof updateComplaintSchema>;
-
-export const createComplaintAttachmentSchema = z.object({
-	complaint_id: z.string().uuid(),
-});
-
-export type CreateComplaintAttachment = z.infer<
-	typeof createComplaintAttachmentSchema
->;
-
-export const saveComplaintAttachmentSchema = z.object({
-	url: z.string().min(1, "url is required"),
-	file_name: z.string().min(1, "file_name is required"),
-	path: z.string().min(1, "path is required"),
-	base64: z.string().min(1, "base64 is required"),
-	type: complaintCaptureModeSchema,
-});
-
-export type SaveComplaintAttachment = z.infer<
-	typeof saveComplaintAttachmentSchema
->;
+export type ComplaintCapture = z.infer<typeof complaintCaptureSchema>;
 
 export const complaintSchema = z.object({
 	id: z.string(),
-	date: z.date(),
 	type: complaintTypeSchema,
-	observations: z.string().nullable(),
-	geospatial: geospatialSchema,
 	status: complaintStatusSchema,
-	attachment: complaintAttachmentSchema.nullable(),
+	complaint_method: complaintMethodSchema,
+	event_group_id: z.string().nullable(),
+	captures: z.array(complaintCaptureSchema),
+	vote_counts: z.object({
+		resolved: z.number().int().nonnegative(),
+		not_resolved: z.number().int().nonnegative(),
+	}),
+	resolution_count: z.number().int().nonnegative(),
 	created_at: z.date(),
 });
 
@@ -148,6 +144,47 @@ export const complaintResumeSchema = z.object({
 });
 
 export type ComplaintResume = z.infer<typeof complaintResumeSchema>;
+
+export const createComplaintSchema = z.object({
+	date: z.coerce.date(),
+	type: complaintTypeSchema,
+	observations: z.string().optional().nullable(),
+	geospatial: geospatialSchema,
+});
+
+export type CreateComplaint = z.infer<typeof createComplaintSchema>;
+
+export const createComplaintManualSchema = z.object({
+	date: z.coerce.date(),
+	type: complaintTypeSchema,
+	observations: z.string().optional().nullable(),
+	geospatial: geospatialManualSchema,
+});
+
+export type CreateComplaintManual = z.infer<typeof createComplaintManualSchema>;
+
+export const updateComplaintSchema = z
+	.object({
+		observations: z.string().optional().nullable(),
+	})
+	.refine((data) => data.observations !== undefined, {
+		message: "At least one field must be provided",
+	});
+
+export type UpdateComplaint = z.infer<typeof updateComplaintSchema>;
+
+export const saveComplaintAttachmentSchema = z.object({
+	url: z.string().min(1, "url is required"),
+	file_name: z.string().min(1, "file_name is required"),
+	path: z.string().min(1, "path is required"),
+	base64: z.string().min(1, "base64 is required"),
+	metadata: z.record(z.string(), z.unknown()).nullable().optional(),
+	type: complaintCaptureModeSchema,
+});
+
+export type SaveComplaintAttachment = z.infer<
+	typeof saveComplaintAttachmentSchema
+>;
 
 export const getComplaintsFiltersSchema = z.object({
 	type: complaintTypeSchema.optional(),
@@ -169,3 +206,94 @@ export const paginatedComplaintsSchema = z.object({
 });
 
 export type PaginatedComplaints = z.infer<typeof paginatedComplaintsSchema>;
+
+// Shape polimórfico do resolver (nunca expõe user_id)
+export const resolverCompanySchema = z.object({
+	type: z.literal("company"),
+	corporate_name: z.string(),
+	business_name: z.string().nullable(),
+	description: z.string().nullable(),
+	avatar_url: z.string().nullable(),
+});
+
+export const resolverProfileSchema = z.object({
+	type: z.literal("profile"),
+	full_name: z.string(),
+	display_name: z.string(),
+	avatar_url: z.string().nullable(),
+});
+
+export const resolverSchema = z.union([resolverCompanySchema, resolverProfileSchema]);
+export type Resolver = z.infer<typeof resolverSchema>;
+
+export const publicResolutionSchema = z.object({
+	id: z.string(),
+	description: z.string(),
+	resolver_name: z.string(),
+	rating: z.number().int().min(1).max(5),
+	resolver: resolverSchema,
+	attachment_count: z.number().int().nonnegative(),
+	created_at: z.date(),
+});
+export type PublicResolution = z.infer<typeof publicResolutionSchema>;
+
+export const publicComplaintSchema = z.object({
+	id: z.string(),
+	type: complaintTypeSchema,
+	status: complaintStatusSchema,
+	complaint_method: complaintMethodSchema,
+	event_group_id: z.string().nullable(),
+	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
+	captures: z.array(complaintCaptureSchema),
+	vote_counts: z.object({ resolved: z.number().int(), not_resolved: z.number().int() }),
+	resolutions: z.array(publicResolutionSchema),
+	created_at: z.date(),
+});
+export type PublicComplaint = z.infer<typeof publicComplaintSchema>;
+
+// Para o mapa, retorna item resumido (sem captures detalhadas, sem base64)
+export const mapComplaintItemSchema = z.object({
+	id: z.string(),
+	type: complaintTypeSchema,
+	status: complaintStatusSchema,
+	event_group_id: z.string().nullable(),
+	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
+	vote_counts: z.object({ resolved: z.number().int(), not_resolved: z.number().int() }),
+	resolution_count: z.number().int().nonnegative(),
+	capture_count: z.number().int().nonnegative(),
+	created_at: z.date(),
+});
+export type MapComplaintItem = z.infer<typeof mapComplaintItemSchema>;
+
+export const getMapComplaintsQuerySchema = z.object({
+	lat: z.coerce.number(),
+	lon: z.coerce.number(),
+	radius: z.coerce.number().int().positive().max(50000).default(1000),
+	type: complaintTypeSchema.optional(),
+	status: z.array(complaintStatusSchema).optional(),
+	from: z.string().datetime().optional(),
+	to: z.string().datetime().optional(),
+});
+export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;
+
+export const complaintVoteSchema = z.object({
+	id: z.string(),
+	complaint_id: z.string(),
+	user_id: z.string(),
+	vote_type: complaintVoteTypeSchema,
+	created_at: z.date(),
+	updated_at: z.date(),
+});
+export type ComplaintVote = z.infer<typeof complaintVoteSchema>;
+
+export const submitVoteSchema = z.object({
+	vote_type: complaintVoteTypeSchema,
+});
+export type SubmitVote = z.infer<typeof submitVoteSchema>;
+
+export const submitResolutionSchema = z.object({
+	description: z.string().min(1),
+	resolver: z.string().min(1),
+	rating: z.number().int().min(1).max(5),
+});
+export type SubmitResolution = z.infer<typeof submitResolutionSchema>;

@@ -51,6 +51,7 @@ describe("get-complaint-use-case", () => {
 				observations: "Descarte de pneus",
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
 
 		const result = await sut.execute({
@@ -60,7 +61,8 @@ describe("get-complaint-use-case", () => {
 
 		expect(result.id).toBe(created.id);
 		expect(result.type).toBe("IRREGULAR_DISPOSAL");
-		expect(result.observations).toBe("Descarte de pneus");
+		expect(result.captures[0]?.observations).toBe("Descarte de pneus");
+		expect(result.captures).toHaveLength(1);
 	});
 
 	it("throws when complaint does not exist for user", async () => {

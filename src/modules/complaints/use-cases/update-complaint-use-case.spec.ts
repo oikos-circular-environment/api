@@ -39,7 +39,7 @@ const geospatial: Geospatial = {
 };
 
 describe("update-complaint-use-case", () => {
-	it("updates complaint type and observations", async () => {
+	it("updates complaint observations on latest capture", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new UpdateComplaintUseCase(complaintsRepository);
 
@@ -51,20 +51,20 @@ describe("update-complaint-use-case", () => {
 				observations: "Inicial",
 				geospatial,
 			},
+			"AUTOMATIC",
 		);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
 			complaintId: created.id,
 			data: {
-				type: "VACANT_LOT",
 				observations: "Atualizada",
 			},
 		});
 
 		expect(result.id).toBe(created.id);
-		expect(result.type).toBe("VACANT_LOT");
-		expect(result.observations).toBe("Atualizada");
+		expect(result.type).toBe("BURNING");
+		expect(result.captures[0]?.observations).toBe("Atualizada");
 	});
 
 	it("throws when complaint does not exist", async () => {

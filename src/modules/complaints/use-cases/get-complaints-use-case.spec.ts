@@ -45,19 +45,27 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-20T10:00:00.000Z"),
-			type: "VACANT_LOT",
-			observations: "Lote com entulho",
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				type: "VACANT_LOT",
+				observations: "Lote com entulho",
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
-		await complaintsRepository.createForUser(USER_B, {
-			date: new Date("2026-04-21T10:00:00.000Z"),
-			type: "DEFORESTATION",
-			observations: null,
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_B,
+			{
+				date: new Date("2026-04-21T10:00:00.000Z"),
+				type: "DEFORESTATION",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
 		const { complaints } = await sut.execute({ userId: USER_A, limit: 20 });
 
@@ -84,16 +92,20 @@ describe("get-complaints-use-case", () => {
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
-			await complaintsRepository.createForUser(USER_A, {
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial,
-			});
+			await complaintsRepository.createForUser(
+				USER_A,
+				{
+					date: new Date("2026-04-01T10:00:00.000Z"),
+					type: "BURNING",
+					observations: null,
+					geospatial,
+				},
+				"AUTOMATIC",
+			);
 		}
 
-		complaintsRepository.userComplaints.forEach((uc, i) => {
-			uc.created_at = new Date(2026, 3, 20 - i);
+		complaintsRepository.complaints.forEach((c, i) => {
+			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
@@ -110,16 +122,20 @@ describe("get-complaints-use-case", () => {
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 3; i++) {
-			await complaintsRepository.createForUser(USER_A, {
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial,
-			});
+			await complaintsRepository.createForUser(
+				USER_A,
+				{
+					date: new Date("2026-04-01T10:00:00.000Z"),
+					type: "BURNING",
+					observations: null,
+					geospatial,
+				},
+				"AUTOMATIC",
+			);
 		}
 
-		complaintsRepository.userComplaints.forEach((uc, i) => {
-			uc.created_at = new Date(2026, 3, 20 - i);
+		complaintsRepository.complaints.forEach((c, i) => {
+			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
@@ -136,17 +152,21 @@ describe("get-complaints-use-case", () => {
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
-			await complaintsRepository.createForUser(USER_A, {
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial,
-			});
+			await complaintsRepository.createForUser(
+				USER_A,
+				{
+					date: new Date("2026-04-01T10:00:00.000Z"),
+					type: "BURNING",
+					observations: null,
+					geospatial,
+				},
+				"AUTOMATIC",
+			);
 		}
 
 		// garante created_at distintos e ordenados de forma decrescente
-		complaintsRepository.userComplaints.forEach((uc, i) => {
-			uc.created_at = new Date(2026, 3, 20 - i);
+		complaintsRepository.complaints.forEach((c, i) => {
+			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
 		const firstPage = await sut.execute({ userId: USER_A, limit: 3 });
@@ -173,18 +193,26 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
-			observations: null,
-			geospatial,
-		});
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-02T10:00:00.000Z"),
-			type: "DEFORESTATION",
-			observations: null,
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-02T10:00:00.000Z"),
+				type: "DEFORESTATION",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
 		const { complaints } = await sut.execute({
 			userId: USER_A,
@@ -200,24 +228,32 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		const c1 = await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
-			observations: null,
-			geospatial,
-		});
+		const c1 = await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(
 			USER_A,
 			c1.id,
 			"RESOLVED",
 		);
 
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-02T10:00:00.000Z"),
-			type: "DEFORESTATION",
-			observations: null,
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-02T10:00:00.000Z"),
+				type: "DEFORESTATION",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
 		const { complaints } = await sut.execute({
 			userId: USER_A,
@@ -233,31 +269,43 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
-			observations: null,
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
-		const c2 = await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-02T10:00:00.000Z"),
-			type: "BURNING",
-			observations: null,
-			geospatial,
-		});
+		const c2 = await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-02T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(
 			USER_A,
 			c2.id,
 			"RESOLVED",
 		);
 
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-03T10:00:00.000Z"),
-			type: "DEFORESTATION",
-			observations: null,
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-03T10:00:00.000Z"),
+				type: "DEFORESTATION",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
 		const { complaints } = await sut.execute({
 			userId: USER_A,
@@ -274,12 +322,16 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
-			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
-			observations: null,
-			geospatial,
-		});
+		await complaintsRepository.createForUser(
+			USER_A,
+			{
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+			"AUTOMATIC",
+		);
 
 		const { complaints, next_cursor } = await sut.execute({
 			userId: USER_A,

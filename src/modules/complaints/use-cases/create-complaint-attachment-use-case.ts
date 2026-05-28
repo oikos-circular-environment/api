@@ -15,7 +15,7 @@ type SupportedComplaintAttachmentMimeType =
 
 type CreateComplaintAttachmentUseCaseRequest = {
 	userId: string;
-	complaint_id: string;
+	capture_id: string;
 	file: {
 		fileName: string;
 		mimeType: string;
@@ -31,24 +31,17 @@ export class CreateComplaintAttachmentUseCase {
 
 	async execute({
 		userId,
-		complaint_id,
+		capture_id,
 		file,
 	}: CreateComplaintAttachmentUseCaseRequest): Promise<Complaint> {
-		const complaint = await this.complaintsRepository.findByUserAndComplaintId(
-			userId,
-			complaint_id,
-		);
-
-		if (!complaint) {
-			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
-		}
-
-		if (complaint.attachment) {
-			throw new AppError(
-				"Complaint attachment already exists",
-				"COMPLAINT_ATTACHMENT_ALREADY_EXISTS",
-				409,
+		const capture =
+			await this.complaintsRepository.findCaptureByUserAndCaptureId(
+				userId,
+				capture_id,
 			);
+
+		if (!capture) {
+			throw new AppError("Capture not found", "CAPTURE_NOT_FOUND", 404);
 		}
 
 		if (!(file.mimeType in COMPLAINT_ATTACHMENT_MIME_TYPES)) {
@@ -72,7 +65,7 @@ export class CreateComplaintAttachmentUseCase {
 				file.mimeType as SupportedComplaintAttachmentMimeType
 			];
 
-		const filePath = `complaints/${complaint_id}.${extension}`;
+		const filePath = `complaints/${capture_id}.${extension}`;
 
 		const uploadResult = await this.storageProvider.uploadFile(
 			filePath,
@@ -90,20 +83,17 @@ export class CreateComplaintAttachmentUseCase {
 		const { url } = await this.storageProvider.getFileUrl(filePath);
 
 		const updatedComplaint =
-			await this.complaintsRepository.attachByUserAndComplaintId(
-				userId,
-				complaint_id,
-				{
-					url,
-					file_name: file.fileName,
-					path: filePath,
-					base64: file.content.toString("base64"),
-					type: "PHOTO",
-				},
-			);
+			await this.complaintsRepository.attachByCaptureId(userId, capture_id, {
+				url,
+				file_name: file.fileName,
+				path: filePath,
+				base64: file.content.toString("base64"),
+				type: "PHOTO",
+				metadata: null,
+			});
 
 		if (!updatedComplaint) {
-			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
+			throw new AppError("Capture not found", "CAPTURE_NOT_FOUND", 404);
 		}
 
 		return updatedComplaint;
