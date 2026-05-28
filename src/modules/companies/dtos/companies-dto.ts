@@ -12,7 +12,7 @@ export const companyTypeSchema = z.enum([
 export type CompanyType = z.infer<typeof companyTypeSchema>;
 
 export const createCompanyInputSchema = z.object({
-	user_id: z.string().uuid(),
+	user_id: z.uuid(),
 	identity: z.string().min(1, "Identity is required"),
 	identity_type: identityTypeSchema,
 	company_type: companyTypeSchema,
@@ -78,13 +78,13 @@ export const companySchema = createCompanyInputSchema.extend({
 export type Company = z.infer<typeof companySchema>;
 
 export const uploadCompanyAvatarSchema = z.object({
-	company_id: z.string().uuid(),
+	company_id: z.uuid(),
 });
 
 export type UploadCompanyAvatar = z.infer<typeof uploadCompanyAvatarSchema>;
 
 export const createCompanyAddressSchema = z.object({
-	company_id: z.string().uuid(),
+	company_id: z.uuid(),
 	zip_code: z.string().min(1, "Zip code is required"),
 	street: z.string().min(1, "Street is required"),
 	number: z.string().min(1, "Number is required"),

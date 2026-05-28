@@ -150,7 +150,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Update user company",
 				description:
 					"Updates only company data for the authenticated user. Related entities are not handled by this route.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: updateCompanyInputSchema,
 				response: {
 					200: z.object({ company: companySchema.nullable() }),
@@ -179,7 +179,8 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_TAG],
 				summary: "Upload company avatar",
 				description: "Uploads an avatar image for a company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
+				consumes: ["multipart/form-data"],
 				response: {
 					200: z.object({ company: companySchema }),
 					400: appErrorSchema,
@@ -195,9 +196,11 @@ export async function companyRoutes(app: FastifyInstance) {
 			const data = await request.file();
 
 			if (!data) {
-				return reply
-					.status(400)
-					.send({ message: "No file provided", code: "NO_FILE", statusCode: 400 });
+				return reply.status(400).send({
+					message: "No file provided",
+					code: "NO_FILE",
+					statusCode: 400,
+				});
 			}
 
 			const content = await data.toBuffer();
@@ -224,7 +227,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Get company business hours",
 				description:
 					"Returns business hours from Sunday to Saturday for the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ business_hours: companyBusinessHoursSchema }),
 					401: appErrorSchema,
@@ -252,7 +255,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Upsert company business hours",
 				description:
 					"Creates or updates business hours for the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: upsertCompanyBusinessHoursSchema,
 				response: {
 					200: z.object({ business_hours: companyBusinessHoursSchema }),
@@ -283,7 +286,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Upsert company wastes",
 				description:
 					"Creates or replaces the wastes linked to the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: upsertCompanyWastesSchema,
 				response: {
 					200: z.object({ wastes: companyWastesSchema }),
@@ -313,7 +316,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_WASTES_TAG],
 				summary: "Get company wastes",
 				description: "Returns all wastes linked to the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ wastes: companyWastesSchema }),
 					401: appErrorSchema,
@@ -324,7 +327,10 @@ export async function companyRoutes(app: FastifyInstance) {
 		async (request, reply) => {
 			const userId = request.user.sub;
 			const { id: companyId } = request.params;
-			const wastes = await getCompanyWastesUseCase.execute({ userId, companyId });
+			const wastes = await getCompanyWastesUseCase.execute({
+				userId,
+				companyId,
+			});
 
 			return reply.send({ wastes });
 		},
@@ -338,7 +344,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				summary: "Upsert company services",
 				description:
 					"Creates or replaces the services linked to the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: upsertCompanyServicesSchema,
 				response: {
 					200: z.object({ services: companyServicesSchema }),
@@ -368,7 +374,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_SERVICES_TAG],
 				summary: "Get company services",
 				description: "Returns all services linked to the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ services: companyServicesSchema }),
 					401: appErrorSchema,
@@ -395,7 +401,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_ADDRESSES_TAG],
 				summary: "Get company address",
 				description: "Returns the address of the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ address: companyAddressSchema.nullable() }),
 					401: appErrorSchema,
@@ -421,8 +427,9 @@ export async function companyRoutes(app: FastifyInstance) {
 			schema: withBearerAuth({
 				tags: [COMPANIES_ADDRESSES_TAG],
 				summary: "Upsert company address",
-				description: "Creates or updates the address for the specified company.",
-				params: z.object({ id: z.string().uuid() }),
+				description:
+					"Creates or updates the address for the specified company.",
+				params: z.object({ id: z.uuid() }),
 				body: upsertCompanyAddressSchema,
 				response: {
 					200: z.object({ address: companyAddressSchema }),

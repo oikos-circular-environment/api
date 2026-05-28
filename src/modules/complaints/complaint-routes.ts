@@ -8,8 +8,8 @@ import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	complaintResumeSchema,
 	complaintSchema,
-	complaintVoteSchema,
 	complaintsSchema,
+	complaintVoteSchema,
 	createComplaintManualSchema,
 	createComplaintSchema,
 	getComplaintsQuerySchema,
@@ -63,8 +63,13 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		complaintsRepository,
 		jobDispatcher,
 	);
-	const voteComplaintUseCase = new VoteComplaintUseCase(complaintsRepository, jobDispatcher);
-	const submitResolutionUseCase = new SubmitResolutionUseCase(complaintsRepository);
+	const voteComplaintUseCase = new VoteComplaintUseCase(
+		complaintsRepository,
+		jobDispatcher,
+	);
+	const submitResolutionUseCase = new SubmitResolutionUseCase(
+		complaintsRepository,
+	);
 	const cancelComplaintUseCase = new CancelComplaintUseCase(
 		complaintsRepository,
 	);
@@ -75,8 +80,12 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	const getComplaintsDashboardUseCase = new GetComplaintsDashboardUseCase(
 		complaintsRepository,
 	);
-	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(complaintsRepository);
-	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(complaintsRepository);
+	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(
+		complaintsRepository,
+	);
+	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(
+		complaintsRepository,
+	);
 
 	typedApp.addHook("onRequest", async (request) => {
 		await verifyJwt(request);
@@ -162,7 +171,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Get public complaint detail",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ complaint: publicComplaintSchema }),
 					401: appErrorSchema,
@@ -267,8 +276,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Update complaint",
-				description:
-					"Updates only the basic complaint fields: observations.",
+				description: "Updates only the basic complaint fields: observations.",
 				params: z.object({
 					id: z.uuid(),
 				}),
@@ -298,7 +306,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Resolve complaint",
-				description: "Marks the authenticated user's complaint as resolved. Requires a resolution description.",
+				description:
+					"Marks the authenticated user's complaint as resolved. Requires a resolution description.",
 				params: z.object({
 					id: z.uuid(),
 				}),
@@ -329,7 +338,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Vote on complaint",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: submitVoteSchema,
 				response: {
 					200: z.object({ vote: complaintVoteSchema }),
@@ -356,7 +365,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Remove vote from complaint",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					204: z.undefined(),
 					401: appErrorSchema,
@@ -365,7 +374,10 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			await complaintsRepository.removeVoteFromComplaint(userId, request.params.id);
+			await complaintsRepository.removeVoteFromComplaint(
+				userId,
+				request.params.id,
+			);
 			return reply.status(204).send();
 		},
 	);
@@ -376,7 +388,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Submit resolution",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: submitResolutionSchema,
 				response: {
 					204: z.undefined(),
@@ -403,7 +415,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Update resolution",
-				params: z.object({ id: z.string().uuid() }),
+				params: z.object({ id: z.uuid() }),
 				body: submitResolutionSchema,
 				response: {
 					204: z.undefined(),

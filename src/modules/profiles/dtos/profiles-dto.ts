@@ -1,7 +1,7 @@
 import z from "zod";
 
 export const createAddressSchema = z.object({
-	profile_id: z.string().uuid(),
+	profile_id: z.uuid(),
 	zip_code: z.string().min(1, "Zip code is required"),
 	street: z.string().min(1, "Street is required"),
 	number: z.string().min(1, "Number is required"),
@@ -25,7 +25,7 @@ export const updateAddressSchema = createAddressSchema
 export type UpdateAddress = z.infer<typeof updateAddressSchema>;
 
 export const createProfileSchema = z.object({
-	user_id: z.string().uuid(),
+	user_id: z.uuid(),
 	full_name: z.string().min(1, "Full name is required"),
 	display_name: z.string().min(1, "Display name is required"),
 	cpf: z.string().min(1, "CPF is required"),
