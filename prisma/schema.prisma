@@ -19,8 +19,10 @@ model User {
   created_at DateTime @default(now())
   profile    Profile?
 
-  company        Company?
-  userComplaints UserComplaint[]
+  companies  Company[]
+  complaints Complaint[]
+  votes      ComplaintVote[]
+  resolutions ComplaintResolution[] @relation("ResolutionResolver")
 
   @@map("users")
 }
@@ -71,6 +73,7 @@ model Company {
   email               String?
   phones              String[]
   started_activity_in DateTime
+  description         String?
   created_at          DateTime     @default(now())
   updated_at          DateTime     @updatedAt
 
@@ -79,10 +82,25 @@ model Company {
   business_hours CompanyBusinessHour[]
   wastes         CompanyWaste[]
   services       CompanyService[]
-  user_id        String                @unique
-  user           User                  @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  avatar_id String?
+  avatar    CompanyAvatar? @relation(fields: [avatar_id], references: [id])
 
   @@map("companies")
+}
+
+model CompanyAvatar {
+  id         String    @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  created_at DateTime  @default(now())
+  companies  Company[]
+
+  @@map("company_avatars")
 }
 
 model Address {
@@ -179,37 +197,38 @@ model CompanyService {
   @@map("company_services")
 }
 
-model UserComplaint {
-  id     String          @id @default(uuid())
-  status ComplaintStatus @default(OPEN)
-
-  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  user_id String
-
-  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
-  complaint_id String
-
-  created_at DateTime @default(now())
-
-  @@map("user_complaints")
-}
-
 model Complaint {
-  id           String        @id @default(uuid())
-  date         DateTime
-  type         ComplaintType
-  observations String?
+  id               String          @id @default(uuid())
+  status           ComplaintStatus @default(OPEN)
+  type             ComplaintType
+  complaint_method ComplaintMethod
+  event_group_id   String?
+  location         Unsupported("geography(Point, 4326)")?
+  created_at       DateTime        @default(now())
 
-  /// Expected payload shape stored as raw JSON from expo-location.
-  /// The application should validate this structure before persisting it.
-  geospatial Json
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
-  userComplaints UserComplaint[]
-
-  attachment    ComplaintAttachment? @relation(fields: [attachment_id], references: [id])
-  attachment_id String?
+  captures    ComplaintCapture[]
+  votes       ComplaintVote[]
+  resolutions ComplaintResolution[]
 
   @@map("complaints")
+}
+
+model ComplaintCapture {
+  id           String   @id @default(uuid())
+  date         DateTime
+  observations String?
+  geospatial   Json
+  created_at   DateTime @default(now())
+
+  complaint_id String
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+
+  attachments ComplaintAttachment[]
+
+  @@map("complaint_captures")
 }
 
 enum ComplaintCaptureMode {
@@ -223,10 +242,64 @@ model ComplaintAttachment {
   file_name  String
   path       String
   base64     String
+  metadata   Json?
   created_at DateTime @default(now())
 
   type       ComplaintCaptureMode @default(PHOTO)
-  complaints Complaint[]
+
+  capture_id String
+  capture    ComplaintCapture @relation(fields: [capture_id], references: [id], onDelete: Cascade)
 
   @@map("complaint_attachments")
+}
+
+model ComplaintVote {
+  id         String            @id @default(uuid())
+  vote_type  ComplaintVoteType
+  created_at DateTime          @default(now())
+  updated_at DateTime          @updatedAt
+
+  complaint_id String
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([complaint_id, user_id])
+  @@map("complaint_votes")
+}
+
+model ComplaintResolution {
+  id          String   @id @default(uuid())
+  description String
+  resolver    String
+  rating      Int
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  complaint_id String
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+
+  resolver_user_id String
+  resolver_user    User   @relation("ResolutionResolver", fields: [resolver_user_id], references: [id], onDelete: Cascade)
+
+  attachments ComplaintResolutionAttachment[]
+
+  @@unique([complaint_id, resolver_user_id])
+  @@map("complaint_resolutions")
+}
+
+model ComplaintResolutionAttachment {
+  id         String   @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  base64     String
+  created_at DateTime @default(now())
+
+  type          ComplaintCaptureMode @default(PHOTO)
+  resolution_id String
+  resolution    ComplaintResolution @relation(fields: [resolution_id], references: [id], onDelete: Cascade)
+
+  @@map("complaint_resolution_attachments")
 }
