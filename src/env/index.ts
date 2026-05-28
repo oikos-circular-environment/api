@@ -10,6 +10,8 @@ const envSchema = z.object({
 	SUPABASE_PUBLISHABLE_KEY: z.string(),
 	SUPABASE_SECRET_KEY: z.string(),
 	SUPABASE_OIKOS_PROFILES_BUCKET: z.string(),
+
+	REDIS_URL: z.string(),
 });
 
 const _env = envSchema.safeParse(process.env);
