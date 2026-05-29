@@ -15,7 +15,7 @@ import {
 	type SaveComplaintAttachment,
 	type SubmitResolution,
 	type UpdateComplaint,
-	geospatialSchema,
+	geospatialReadSchema,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
@@ -73,7 +73,7 @@ function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 				id: capture.id,
 				date: capture.date,
 				observations: capture.observations,
-				geospatial: geospatialSchema.parse(capture.geospatial),
+				geospatial: geospatialReadSchema.parse(capture.geospatial),
 				attachments: capture.attachments.map((attachment) => ({
 					id: attachment.id,
 					url: attachment.url,
@@ -156,7 +156,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			id: capture.id,
 			date: capture.date,
 			observations: capture.observations,
-			geospatial: geospatialSchema.parse(capture.geospatial),
+			geospatial: geospatialReadSchema.parse(capture.geospatial),
 			attachments: capture.attachments.map((attachment) => ({
 				id: attachment.id,
 				url: attachment.url,
@@ -176,25 +176,21 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		data: CreateComplaint,
 		method: ComplaintMethod,
 	) {
-		const complaint = await prisma.$transaction(async (tx) => {
-			const createdComplaint = await tx.complaint.create({
-				data: {
-					user_id: userId,
-					type: data.type,
-					complaint_method: method,
-					status: "OPEN",
-					captures: {
-						create: {
-							date: data.date,
-							observations: data.observations ?? null,
-							geospatial: data.geospatial,
-						},
+		const complaint = await prisma.complaint.create({
+			data: {
+				user_id: userId,
+				type: data.type,
+				complaint_method: method,
+				status: "OPEN",
+				captures: {
+					create: {
+						date: data.date,
+						observations: data.observations ?? null,
+						geospatial: data.geospatial,
 					},
 				},
-				include: complaintInclude,
-			});
-
-			return createdComplaint;
+			},
+			include: complaintInclude,
 		});
 
 		return mapComplaint(complaint as PrismaComplaintPayload);
@@ -392,7 +388,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 					id: c.id,
 					date: c.date,
 					observations: c.observations,
-					geospatial: geospatialSchema.parse(c.geospatial),
+					geospatial: geospatialReadSchema.parse(c.geospatial),
 					attachments: c.attachments.map((a) => ({
 						id: a.id,
 						url: a.url,

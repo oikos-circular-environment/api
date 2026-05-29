@@ -9,8 +9,8 @@ export default defineConfig({
   },
   test: {
     root: './',
+    globalSetup: './src/test/integration-setup.ts',
     include: ['src/**/*.integration.spec.ts'],
-    // Roda em sequência para evitar conflitos no banco
     fileParallelism: false,
   },
 });

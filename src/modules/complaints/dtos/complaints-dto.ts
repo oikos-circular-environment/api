@@ -91,6 +91,10 @@ export const geospatialManualSchema = z.object({
 
 export type GeospatialManual = z.infer<typeof geospatialManualSchema>;
 
+export const geospatialReadSchema = z.union([geospatialSchema, geospatialManualSchema]);
+
+export type GeospatialRead = z.infer<typeof geospatialReadSchema>;
+
 export const complaintAttachmentSchema = z.object({
 	id: z.string(),
 	url: z.string(),
@@ -108,7 +112,7 @@ export const complaintCaptureSchema = z.object({
 	id: z.string(),
 	date: z.date(),
 	observations: z.string().nullable(),
-	geospatial: geospatialSchema,
+	geospatial: geospatialReadSchema,
 	attachments: z.array(complaintAttachmentSchema),
 	created_at: z.date(),
 });
