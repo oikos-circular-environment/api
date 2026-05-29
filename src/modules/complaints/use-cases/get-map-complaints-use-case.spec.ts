@@ -91,7 +91,7 @@ describe("get-map-complaints-use-case", () => {
 		expect(items[0]?.type).toBe("BURNING");
 	});
 
-	it("returns complaints matching multiple statuses", async () => {
+	it("filters by single status", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
@@ -113,13 +113,14 @@ describe("get-map-complaints-use-case", () => {
 			lat: -23.55,
 			lon: -46.63,
 			radius: 1000,
-			status: ["OPEN", "RESOLVED"],
+			status: "RESOLVED",
 		});
 
-		expect(items.length).toBe(2);
+		expect(items.length).toBe(1);
+		expect(items[0]?.status).toBe("RESOLVED");
 	});
 
-	it("returns items with correct MapComplaintItem shape", async () => {
+	it("returns items with correct MapComplaintItem shape including captures", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
@@ -136,17 +137,19 @@ describe("get-map-complaints-use-case", () => {
 		expect(item).toMatchObject({
 			type: "VACANT_LOT",
 			status: "OPEN",
+			complaint_method: "AUTOMATIC",
 			event_group_id: null,
-			location: null,
+			location: { lat: -23.55, lon: -46.63 },
 			vote_counts: { resolved: 0, not_resolved: 0 },
 			resolution_count: 0,
-			capture_count: 1,
 		});
+		expect(item?.captures).toHaveLength(1);
+		expect(item?.captures[0]?.geospatial).toBeDefined();
 		expect(item?.id).toBeDefined();
 		expect(item?.created_at).toBeInstanceOf(Date);
 	});
 
-	it("filters by from/to date range", async () => {
+	it("location is derived from capture coordinates", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
@@ -155,26 +158,9 @@ describe("get-map-complaints-use-case", () => {
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
 			"AUTOMATIC",
 		);
-		await complaintsRepository.createForUser(
-			USER_A,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
-			"AUTOMATIC",
-		);
 
-		// Set distinct created_at dates
-		const [c1, c2] = complaintsRepository.complaints;
-		if (c1) c1.created_at = new Date("2026-01-01T10:00:00.000Z");
-		if (c2) c2.created_at = new Date("2026-03-01T10:00:00.000Z");
+		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
 
-		const items = await sut.execute({
-			lat: -23.55,
-			lon: -46.63,
-			radius: 1000,
-			status: ["OPEN"],
-			from: "2026-02-01T00:00:00.000Z",
-		});
-
-		expect(items.length).toBe(1);
-		expect(items[0]?.type).toBe("DEFORESTATION");
+		expect(items[0]?.location).toEqual({ lat: -23.55, lon: -46.63 });
 	});
 });

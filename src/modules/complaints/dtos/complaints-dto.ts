@@ -264,19 +264,19 @@ export const publicComplaintSchema = z.object({
 });
 export type PublicComplaint = z.infer<typeof publicComplaintSchema>;
 
-// Para o mapa, retorna item resumido (sem captures detalhadas, sem base64)
 export const mapComplaintItemSchema = z.object({
 	id: z.string(),
 	type: complaintTypeSchema,
 	status: complaintStatusSchema,
+	complaint_method: complaintMethodSchema,
 	event_group_id: z.string().nullable(),
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
+	captures: z.array(complaintCaptureSchema),
 	vote_counts: z.object({
 		resolved: z.number().int(),
 		not_resolved: z.number().int(),
 	}),
 	resolution_count: z.number().int().nonnegative(),
-	capture_count: z.number().int().nonnegative(),
 	created_at: z.date(),
 });
 export type MapComplaintItem = z.infer<typeof mapComplaintItemSchema>;
@@ -286,9 +286,7 @@ export const getMapComplaintsQuerySchema = z.object({
 	lon: z.coerce.number(),
 	radius: z.coerce.number().int().positive().max(50000).default(1000),
 	type: complaintTypeSchema.optional(),
-	status: z.array(complaintStatusSchema).optional(),
-	from: z.iso.datetime().optional(),
-	to: z.iso.datetime().optional(),
+	status: complaintStatusSchema.optional(),
 });
 export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;
 

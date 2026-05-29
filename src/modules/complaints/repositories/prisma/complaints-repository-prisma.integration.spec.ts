@@ -61,13 +61,16 @@ describe('PrismaComplaintsRepository — findMapComplaints (PostGIS)', () => {
   it('returns complaints within radius', async () => {
     const repo = new PrismaComplaintsRepository();
     // Centro: São Paulo (-23.5505, -46.6333)
-    await insertComplaintWithLocation(-23.5505, -46.6333); // dentro (0m)
-    await insertComplaintWithLocation(-23.551, -46.634); // dentro (~90m)
-    await insertComplaintWithLocation(-23.6, -46.7); // fora (>7km)
+    const idNear1 = await insertComplaintWithLocation(-23.5505, -46.6333); // dentro (0m)
+    const idNear2 = await insertComplaintWithLocation(-23.551, -46.634); // dentro (~90m)
+    const idFar = await insertComplaintWithLocation(-23.6, -46.7); // fora (>7km)
 
     const result = await repo.findMapComplaints({ lat: -23.5505, lon: -46.6333, radius: 500 });
+    const resultIds = result.map((r) => r.id);
 
-    expect(result.length).toBe(2);
+    expect(resultIds).toContain(idNear1);
+    expect(resultIds).toContain(idNear2);
+    expect(resultIds).not.toContain(idFar);
   });
 
   it('filters by type', async () => {

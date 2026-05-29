@@ -280,27 +280,33 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	}
 
 	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
-		const { type, status, from, to } = query;
-		const statuses = status?.length ? status : ["OPEN"];
+		const { type, status } = query;
+		const statusValue = status ?? "OPEN";
 
 		const filtered = this.complaints
-			.filter((c) => statuses.includes(c.status))
-			.filter((c) => !type || c.type === type)
-			.filter((c) => !from || c.created_at >= new Date(from))
-			.filter((c) => !to || c.created_at <= new Date(to));
+			.filter((c) => c.status === statusValue)
+			.filter((c) => !type || c.type === type);
 
 		return filtered.slice(0, 500).map((c) => {
-			const captureCount = this.captures.filter((cap) => cap.complaint_id === c.id).length;
+			const captures = this.captures
+				.filter((cap) => cap.complaint_id === c.id)
+				.map((cap) => this.mapCapture(cap));
 			const resolutionCount = this.resolutions.filter((r) => r.complaint_id === c.id).length;
+			const coords = captures[0]?.geospatial?.location?.coords;
+
 			return {
 				id: c.id,
 				type: c.type,
 				status: c.status,
+				complaint_method: c.complaint_method,
 				event_group_id: c.event_group_id,
-				location: null,
+				location:
+					coords?.latitude != null && coords?.longitude != null
+						? { lat: coords.latitude, lon: coords.longitude }
+						: null,
+				captures,
 				vote_counts: { resolved: 0, not_resolved: 0 },
 				resolution_count: resolutionCount,
-				capture_count: captureCount,
 				created_at: c.created_at,
 			} satisfies MapComplaintItem;
 		});

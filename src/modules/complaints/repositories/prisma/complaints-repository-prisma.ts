@@ -193,6 +193,14 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			include: complaintInclude,
 		});
 
+		const { latitude, longitude } = data.geospatial.location.coords;
+		await prisma.$executeRawUnsafe(
+			`UPDATE complaints SET location = ST_SetSRID(ST_MakePoint($1, $2), 4326)::geography WHERE id = $3`,
+			longitude,
+			latitude,
+			complaint.id,
+		);
+
 		return mapComplaint(complaint as PrismaComplaintPayload);
 	}
 
@@ -296,28 +304,20 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	}
 
 	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
-		const { lat, lon, radius, type, status, from, to } = query;
-		const statuses = status?.length ? status : ["OPEN"];
+		const { lat, lon, radius, type, status } = query;
+		const statusValue = status ?? "OPEN";
 
-		const paramValues: unknown[] = [lon, lat, radius, statuses];
+		const paramValues: unknown[] = [lon, lat, radius, statusValue];
 		let paramIndex = 5;
 
 		const typeClause = type ? `AND type::text = $${paramIndex++}` : "";
 		if (type) paramValues.push(type);
 
-		const fromClause = from ? `AND created_at >= $${paramIndex++}` : "";
-		if (from) paramValues.push(new Date(from));
-
-		const toClause = to ? `AND created_at <= $${paramIndex++}` : "";
-		if (to) paramValues.push(new Date(to));
-
 		const rows = await prisma.$queryRawUnsafe<Array<{ id: string }>>(
 			`SELECT id FROM complaints
        WHERE ST_DWithin(location, ST_MakePoint($1, $2)::geography, $3)
-       AND status::text = ANY($4::text[])
+       AND status::text = $4
        ${typeClause}
-       ${fromClause}
-       ${toClause}
        LIMIT 500`,
 			...paramValues,
 		);
@@ -328,25 +328,53 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		const complaints = await prisma.complaint.findMany({
 			where: { id: { in: ids } },
 			include: {
+				captures: { include: { attachments: true } },
 				votes: { select: { vote_type: true } },
-				_count: { select: { captures: true, resolutions: true } },
+				_count: { select: { resolutions: true } },
 			},
 		});
 
-		return complaints.map((c) => ({
-			id: c.id,
-			type: c.type as MapComplaintItem["type"],
-			status: c.status as MapComplaintItem["status"],
-			event_group_id: c.event_group_id,
-			location: null,
-			vote_counts: {
-				resolved: c.votes.filter((v) => v.vote_type === "RESOLVED").length,
-				not_resolved: c.votes.filter((v) => v.vote_type === "NOT_RESOLVED").length,
-			},
-			resolution_count: c._count.resolutions,
-			capture_count: c._count.captures,
-			created_at: c.created_at,
-		})) satisfies MapComplaintItem[];
+		return complaints.map((c) => {
+			const firstGeo = c.captures[0]?.geospatial as {
+				location?: { coords?: { latitude?: number; longitude?: number } };
+			} | null;
+			const coords = firstGeo?.location?.coords;
+
+			return {
+				id: c.id,
+				type: c.type as MapComplaintItem["type"],
+				status: c.status as MapComplaintItem["status"],
+				complaint_method: c.complaint_method as MapComplaintItem["complaint_method"],
+				event_group_id: c.event_group_id,
+				location:
+					coords?.latitude != null && coords?.longitude != null
+						? { lat: coords.latitude, lon: coords.longitude }
+						: null,
+				captures: c.captures.map((cap) => ({
+					id: cap.id,
+					date: cap.date,
+					observations: cap.observations,
+					geospatial: geospatialReadSchema.parse(cap.geospatial),
+					attachments: cap.attachments.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						path: a.path,
+						base64: a.base64,
+						metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+						type: a.type as "PHOTO" | "VIDEO",
+						created_at: a.created_at,
+					})),
+					created_at: cap.created_at,
+				})),
+				vote_counts: {
+					resolved: c.votes.filter((v) => v.vote_type === "RESOLVED").length,
+					not_resolved: c.votes.filter((v) => v.vote_type === "NOT_RESOLVED").length,
+				},
+				resolution_count: c._count.resolutions,
+				created_at: c.created_at,
+			};
+		}) satisfies MapComplaintItem[];
 	}
 
 	async findPublicComplaintById(complaintId: string): Promise<PublicComplaint | null> {
