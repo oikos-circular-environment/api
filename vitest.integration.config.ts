@@ -10,6 +10,7 @@ export default defineConfig({
   test: {
     root: './',
     globalSetup: './src/test/integration-setup.ts',
+    setupFiles: ['./src/test/integration-env.ts'],
     include: ['src/**/*.integration.spec.ts'],
     fileParallelism: false,
   },

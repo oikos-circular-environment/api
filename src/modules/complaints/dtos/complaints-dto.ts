@@ -91,7 +91,10 @@ export const geospatialManualSchema = z.object({
 
 export type GeospatialManual = z.infer<typeof geospatialManualSchema>;
 
-export const geospatialReadSchema = z.union([geospatialSchema, geospatialManualSchema]);
+export const geospatialReadSchema = z.union([
+	geospatialSchema,
+	geospatialManualSchema,
+]);
 
 export type GeospatialRead = z.infer<typeof geospatialReadSchema>;
 
@@ -227,7 +230,10 @@ export const resolverProfileSchema = z.object({
 	avatar_url: z.string().nullable(),
 });
 
-export const resolverSchema = z.union([resolverCompanySchema, resolverProfileSchema]);
+export const resolverSchema = z.union([
+	resolverCompanySchema,
+	resolverProfileSchema,
+]);
 export type Resolver = z.infer<typeof resolverSchema>;
 
 export const publicResolutionSchema = z.object({
@@ -249,7 +255,10 @@ export const publicComplaintSchema = z.object({
 	event_group_id: z.string().nullable(),
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
 	captures: z.array(complaintCaptureSchema),
-	vote_counts: z.object({ resolved: z.number().int(), not_resolved: z.number().int() }),
+	vote_counts: z.object({
+		resolved: z.number().int(),
+		not_resolved: z.number().int(),
+	}),
 	resolutions: z.array(publicResolutionSchema),
 	created_at: z.date(),
 });
@@ -262,7 +271,10 @@ export const mapComplaintItemSchema = z.object({
 	status: complaintStatusSchema,
 	event_group_id: z.string().nullable(),
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
-	vote_counts: z.object({ resolved: z.number().int(), not_resolved: z.number().int() }),
+	vote_counts: z.object({
+		resolved: z.number().int(),
+		not_resolved: z.number().int(),
+	}),
 	resolution_count: z.number().int().nonnegative(),
 	capture_count: z.number().int().nonnegative(),
 	created_at: z.date(),
@@ -275,8 +287,8 @@ export const getMapComplaintsQuerySchema = z.object({
 	radius: z.coerce.number().int().positive().max(50000).default(1000),
 	type: complaintTypeSchema.optional(),
 	status: z.array(complaintStatusSchema).optional(),
-	from: z.string().datetime().optional(),
-	to: z.string().datetime().optional(),
+	from: z.iso.datetime().optional(),
+	to: z.iso.datetime().optional(),
 });
 export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;
 

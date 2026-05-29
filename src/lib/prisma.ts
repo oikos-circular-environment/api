@@ -11,7 +11,17 @@ const pool = new pg.Pool({
 	connectionTimeoutMillis: 5_000,
 });
 
-const adapter = new PrismaPg(pool);
+const testSchema = process.env.DATABASE_SCHEMA;
+if (testSchema) {
+	pool.on("connect", (client) => {
+		void client.query(`SET search_path TO "${testSchema}", public`);
+	});
+}
+
+const adapter = new PrismaPg(
+	pool,
+	testSchema ? { schema: testSchema } : undefined,
+);
 const prisma = new PrismaClient({ adapter });
 
 export { prisma };
