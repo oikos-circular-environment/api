@@ -458,6 +458,24 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		} satisfies PublicComplaint;
 	}
 
+	async findVoteByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<ComplaintVote | null> {
+		const vote = await prisma.complaintVote.findUnique({
+			where: { complaint_id_user_id: { complaint_id: complaintId, user_id: userId } },
+		});
+		if (!vote) return null;
+		return {
+			id: vote.id,
+			complaint_id: vote.complaint_id,
+			user_id: vote.user_id,
+			vote_type: vote.vote_type as ComplaintVoteType,
+			created_at: vote.created_at,
+			updated_at: vote.updated_at,
+		};
+	}
+
 	async voteOnComplaint(
 		userId: string,
 		complaintId: string,

@@ -339,6 +339,16 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		} satisfies PublicComplaint;
 	}
 
+	async findVoteByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<ComplaintVote | null> {
+		const vote = this.votes.find(
+			(v) => v.complaint_id === complaintId && v.user_id === userId,
+		);
+		return vote ? { ...vote } : null;
+	}
+
 	async voteOnComplaint(
 		userId: string,
 		complaintId: string,

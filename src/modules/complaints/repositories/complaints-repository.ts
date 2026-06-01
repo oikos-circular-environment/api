@@ -63,6 +63,11 @@ export interface ComplaintsRepository {
 	findPublicComplaintById(complaintId: string): Promise<PublicComplaint | null>;
 
 	// Votes
+	findVoteByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<ComplaintVote | null>;
+
 	voteOnComplaint(
 		userId: string,
 		complaintId: string,

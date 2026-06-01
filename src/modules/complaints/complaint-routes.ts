@@ -29,6 +29,7 @@ import { CreateComplaintUseCase } from "./use-cases/create-complaint-use-case.js
 import { GetComplaintUseCase } from "./use-cases/get-complaint-use-case.js";
 import { GetComplaintsDashboardUseCase } from "./use-cases/get-complaints-dashboard-use-case.js";
 import { GetComplaintsUseCase } from "./use-cases/get-complaints-use-case.js";
+import { GetComplaintVoteUseCase } from "./use-cases/get-complaint-vote-use-case.js";
 import { GetMapComplaintsUseCase } from "./use-cases/get-map-complaints-use-case.js";
 import { GetPublicComplaintUseCase } from "./use-cases/get-public-complaint-use-case.js";
 import { ResolveComplaintUseCase } from "./use-cases/resolve-complaint-use-case.js";
@@ -37,6 +38,7 @@ import { UpdateComplaintUseCase } from "./use-cases/update-complaint-use-case.js
 import { VoteComplaintUseCase } from "./use-cases/vote-complaint-use-case.js";
 
 const COMPLAINTS_TAG = "Complaints";
+const COMPLAINTS_VOTES_TAG = "Complaints / Votes";
 const COMPLAINTS_ATTACHMENTS_TAG = "Complaints / Attachments";
 const COMPLAINTS_DASHBOARD_TAG = "Complaints / Dashboard";
 
@@ -82,6 +84,9 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		complaintsRepository,
 	);
 	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(
+		complaintsRepository,
+	);
+	const getComplaintVoteUseCase = new GetComplaintVoteUseCase(
 		complaintsRepository,
 	);
 
@@ -330,11 +335,36 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 	);
 
+	typedApp.get(
+		"/complaints/:id/votes",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_VOTES_TAG],
+				summary: "Get my vote on a complaint",
+				description:
+					"Returns the authenticated user's current vote on the given complaint, or null if they have not voted.",
+				params: z.object({ id: z.uuid() }),
+				response: {
+					200: z.object({ vote: complaintVoteSchema.nullable() }),
+					401: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			const vote = await getComplaintVoteUseCase.execute({
+				userId,
+				complaintId: request.params.id,
+			});
+			return reply.send({ vote });
+		},
+	);
+
 	typedApp.post(
 		"/complaints/:id/votes",
 		{
 			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
+				tags: [COMPLAINTS_VOTES_TAG],
 				summary: "Vote on complaint",
 				params: z.object({ id: z.uuid() }),
 				body: submitVoteSchema,
@@ -361,7 +391,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		"/complaints/:id/votes",
 		{
 			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
+				tags: [COMPLAINTS_VOTES_TAG],
 				summary: "Remove vote from complaint",
 				params: z.object({ id: z.uuid() }),
 				response: {
