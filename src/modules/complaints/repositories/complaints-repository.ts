@@ -56,8 +56,6 @@ export interface ComplaintsRepository {
 		data: SaveComplaintAttachment,
 	): Promise<Complaint | null>;
 
-	setEventGroupId(complaintId: string, eventGroupId: string): Promise<void>;
-
 	getDashboardByUserId(userId: string): Promise<ComplaintResume>;
 
 	findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]>;

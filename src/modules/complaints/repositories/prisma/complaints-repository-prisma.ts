@@ -36,7 +36,6 @@ type PrismaComplaintPayload = {
 	status: ComplaintStatus;
 	type: Complaint["type"];
 	complaint_method: ComplaintMethod;
-	event_group_id: string | null;
 	created_at: Date;
 	captures: Array<{
 		id: string;
@@ -67,7 +66,6 @@ function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 		type: payload.type,
 		status: payload.status,
 		complaint_method: payload.complaint_method,
-		event_group_id: payload.event_group_id,
 		captures: payload.captures.map(
 			(capture): ComplaintCapture => ({
 				id: capture.id,
@@ -296,13 +294,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		return this.findByUserAndComplaintId(userId, capture.complaint_id);
 	}
 
-	async setEventGroupId(complaintId: string, eventGroupId: string) {
-		await prisma.complaint.update({
-			where: { id: complaintId },
-			data: { event_group_id: eventGroupId },
-		});
-	}
-
 	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
 		const { lat, lon, radius, type, status } = query;
 		const statusValue = status ?? "OPEN";
@@ -345,7 +336,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				type: c.type as MapComplaintItem["type"],
 				status: c.status as MapComplaintItem["status"],
 				complaint_method: c.complaint_method as MapComplaintItem["complaint_method"],
-				event_group_id: c.event_group_id,
 				location:
 					coords?.latitude != null && coords?.longitude != null
 						? { lat: coords.latitude, lon: coords.longitude }
@@ -409,7 +399,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			type: complaint.type as PublicComplaint["type"],
 			status: complaint.status as PublicComplaint["status"],
 			complaint_method: complaint.complaint_method as PublicComplaint["complaint_method"],
-			event_group_id: complaint.event_group_id,
 			location: null,
 			captures: complaint.captures.map(
 				(c): ComplaintCapture => ({

@@ -28,7 +28,6 @@ type ComplaintEntity = {
 	status: ComplaintStatus;
 	type: ComplaintType;
 	complaint_method: ComplaintMethod;
-	event_group_id: string | null;
 	created_at: Date;
 };
 
@@ -142,7 +141,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			status: "OPEN",
 			type: data.type,
 			complaint_method: method,
-			event_group_id: null,
 			created_at: new Date(),
 		};
 
@@ -242,14 +240,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return this.mapComplaint(complaint);
 	}
 
-	async setEventGroupId(complaintId: string, eventGroupId: string) {
-		const complaint = this.complaints.find((c) => c.id === complaintId);
-
-		if (complaint) {
-			complaint.event_group_id = eventGroupId;
-		}
-	}
-
 	async getDashboardByUserId(userId: string) {
 		const userComplaints = this.complaints.filter(
 			(item) => item.user_id === userId,
@@ -299,7 +289,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 				type: c.type,
 				status: c.status,
 				complaint_method: c.complaint_method,
-				event_group_id: c.event_group_id,
 				location:
 					coords?.latitude != null && coords?.longitude != null
 						? { lat: coords.latitude, lon: coords.longitude }
@@ -334,7 +323,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			type: complaint.type,
 			status: complaint.status,
 			complaint_method: complaint.complaint_method,
-			event_group_id: complaint.event_group_id,
 			location: null,
 			captures: complaintCaptures.map((c) => this.mapCapture(c)),
 			vote_counts: { resolved: 0, not_resolved: 0 },
@@ -465,7 +453,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			type: complaint.type,
 			status: complaint.status,
 			complaint_method: complaint.complaint_method,
-			event_group_id: complaint.event_group_id,
 			captures: complaintCaptures.map((c) => this.mapCapture(c)),
 			vote_counts: {
 				resolved: 0,

@@ -3,9 +3,8 @@ import { env } from "./env/index.js";
 
 // Registra workers BullMQ apenas se REDIS_URL estiver configurado
 if (process.env.REDIS_URL) {
-	const { createGroupComplaintsWorker, createResolveByQuorumWorker } =
+	const { createResolveByQuorumWorker } =
 		await import("./modules/complaints/workers/index.js");
-	createGroupComplaintsWorker();
 	createResolveByQuorumWorker();
 }
 

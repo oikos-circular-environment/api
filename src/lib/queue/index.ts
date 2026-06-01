@@ -1,2 +1,2 @@
-export { complaintsGroupingQueue, complaintsQuorumQueue } from './queues.js';
-export type { ComplaintsGroupingJobData, ComplaintsQuorumJobData } from './jobs.js';
+export { complaintsQuorumQueue } from './queues.js';
+export type { ComplaintsQuorumJobData } from './jobs.js';

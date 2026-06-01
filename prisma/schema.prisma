@@ -202,7 +202,6 @@ model Complaint {
   status           ComplaintStatus @default(OPEN)
   type             ComplaintType
   complaint_method ComplaintMethod
-  event_group_id   String?
   location         Unsupported("geography(Point, 4326)")?
   created_at       DateTime        @default(now())
 

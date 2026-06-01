@@ -48,11 +48,9 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 
 	const createComplaintUseCase = new CreateComplaintUseCase(
 		complaintsRepository,
-		jobDispatcher,
 	);
 	const createComplaintManualUseCase = new CreateComplaintManualUseCase(
 		complaintsRepository,
-		jobDispatcher,
 	);
 	const getComplaintsUseCase = new GetComplaintsUseCase(complaintsRepository);
 	const getComplaintUseCase = new GetComplaintUseCase(complaintsRepository);

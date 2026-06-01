@@ -138,7 +138,6 @@ describe("get-map-complaints-use-case", () => {
 			type: "VACANT_LOT",
 			status: "OPEN",
 			complaint_method: "AUTOMATIC",
-			event_group_id: null,
 			location: { lat: -23.55, lon: -46.63 },
 			vote_counts: { resolved: 0, not_resolved: 0 },
 			resolution_count: 0,

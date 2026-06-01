@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
-import type { JobDispatcher } from "../providers/job-dispatcher.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 
 const geospatial: Geospatial = {
@@ -65,27 +64,4 @@ describe("create-complaint-use-case", () => {
 		expect(result.resolution_count).toBe(0);
 	});
 
-	it("dispatches grouping job after creation", async () => {
-		const complaintsRepository = new InMemoryComplaintsRepository();
-		let dispatchedId: string | null = null;
-		const dispatcher: JobDispatcher = {
-			dispatchGroupingJob: async (id) => {
-				dispatchedId = id;
-			},
-			dispatchQuorumJob: async () => {},
-		};
-		const sut = new CreateComplaintUseCase(complaintsRepository, dispatcher);
-
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-			data: {
-				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
-				observations: "Fumaca intensa",
-				geospatial,
-			},
-		});
-
-		expect(dispatchedId).toBe(result.id);
-	});
 });
