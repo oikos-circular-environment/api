@@ -127,6 +127,7 @@ export const complaintSchema = z.object({
 	type: complaintTypeSchema,
 	status: complaintStatusSchema,
 	complaint_method: complaintMethodSchema,
+	observations: z.string().nullable(),
 	captures: z.array(complaintCaptureSchema),
 	vote_counts: z.object({
 		resolved: z.number().int().nonnegative(),
@@ -269,6 +270,7 @@ export const publicComplaintSchema = z.object({
 	type: complaintTypeSchema,
 	status: complaintStatusSchema,
 	complaint_method: complaintMethodSchema,
+	observations: z.string().nullable(),
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
 	captures: z.array(complaintCaptureSchema),
 	vote_counts: z.object({
@@ -285,6 +287,7 @@ export const mapComplaintItemSchema = z.object({
 	type: complaintTypeSchema,
 	status: complaintStatusSchema,
 	complaint_method: complaintMethodSchema,
+	observations: z.string().nullable(),
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
 	captures: z.array(complaintCaptureSchema),
 	vote_counts: z.object({

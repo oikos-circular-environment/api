@@ -135,6 +135,28 @@ describe("POST /v1/complaints — criação automática", () => {
 		expect(body.complaint.id).toBeTruthy();
 	});
 
+	it("armazena observations na capture e deixa complaint.observations nulo para AUTOMATIC", async () => {
+		const { token } = await createUser();
+
+		const response = await app.inject({
+			method: "POST",
+			url: "/v1/complaints",
+			headers: { Authorization: `Bearer ${token}` },
+			payload: {
+				date: "2026-05-20T10:00:00.000Z",
+				type: "BURNING",
+				observations: "Fumaca visivel",
+				geospatial,
+			},
+		});
+
+		expect(response.statusCode).toBe(200);
+		const body = response.json<{ complaint: Record<string, unknown> }>();
+		expect(body.complaint.observations).toBeNull();
+		const captures = body.complaint.captures as Array<Record<string, unknown>>;
+		expect(captures[0]?.observations).toBe("Fumaca visivel");
+	});
+
 	it("persiste a capture com os dados geoespaciais corretos", async () => {
 		const { token } = await createUser();
 
@@ -231,6 +253,28 @@ describe("POST /v1/complaints/manual — criação manual", () => {
 		expect(body.complaint.status).toBe("OPEN");
 		expect(body.complaint.complaint_method).toBe("MANUAL");
 		expect(body.complaint.captures).toHaveLength(1);
+	});
+
+	it("armazena observations no complaint e deixa capture.observations nulo para MANUAL", async () => {
+		const { token } = await createUser();
+
+		const response = await app.inject({
+			method: "POST",
+			url: "/v1/complaints/manual",
+			headers: { Authorization: `Bearer ${token}` },
+			payload: {
+				date: "2026-05-20T10:00:00.000Z",
+				type: "IRREGULAR_DISPOSAL",
+				observations: "Descarte próximo ao rio",
+				geospatial: geospatialManual,
+			},
+		});
+
+		expect(response.statusCode).toBe(200);
+		const body = response.json<{ complaint: Record<string, unknown> }>();
+		expect(body.complaint.observations).toBe("Descarte próximo ao rio");
+		const captures = body.complaint.captures as Array<Record<string, unknown>>;
+		expect(captures[0]?.observations).toBeNull();
 	});
 
 	it("persiste heading como null na capture", async () => {

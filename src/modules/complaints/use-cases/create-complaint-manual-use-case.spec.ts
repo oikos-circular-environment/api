@@ -53,6 +53,42 @@ describe("create-complaint-manual-use-case", () => {
 		expect(result.captures).toHaveLength(1);
 	});
 
+	it("stores observations in complaint and sets capture.observations to null for MANUAL", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new CreateComplaintManualUseCase(complaintsRepository);
+
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			data: {
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				type: "IRREGULAR_DISPOSAL",
+				observations: "Descarte irregular na rua",
+				geospatial: geospatialManual,
+			},
+		});
+
+		expect(result.observations).toBe("Descarte irregular na rua");
+		expect(result.captures[0]?.observations).toBeNull();
+	});
+
+	it("sets both observations to null for MANUAL when observations is not provided", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new CreateComplaintManualUseCase(complaintsRepository);
+
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			data: {
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial: geospatialManual,
+			},
+		});
+
+		expect(result.observations).toBeNull();
+		expect(result.captures[0]?.observations).toBeNull();
+	});
+
 	it("stores null heading in the capture geospatial", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new CreateComplaintManualUseCase(complaintsRepository);

@@ -31,6 +31,7 @@ type ComplaintEntity = {
 	status: ComplaintStatus;
 	type: ComplaintType;
 	complaint_method: ComplaintMethod;
+	observations: string | null;
 	created_at: Date;
 };
 
@@ -143,6 +144,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			status: "OPEN",
 			type: data.type,
 			complaint_method: method,
+			observations: method === "MANUAL" ? (data.observations ?? null) : null,
 			created_at: new Date(),
 		};
 
@@ -150,7 +152,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			id: randomUUID(),
 			complaint_id: complaint.id,
 			date: data.date,
-			observations: data.observations ?? null,
+			observations: method === "AUTOMATIC" ? (data.observations ?? null) : null,
 			geospatial: data.geospatial,
 			created_at: new Date(),
 		};
@@ -172,12 +174,18 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 		if (!complaint) return null;
 
-		const latestCapture = this.captures
-			.filter((c) => c.complaint_id === complaintId)
-			.sort((a, b) => b.created_at.getTime() - a.created_at.getTime())[0];
+		if (data.observations !== undefined) {
+			if (complaint.complaint_method === "MANUAL") {
+				complaint.observations = data.observations ?? null;
+			} else {
+				const latestCapture = this.captures
+					.filter((c) => c.complaint_id === complaintId)
+					.sort((a, b) => b.created_at.getTime() - a.created_at.getTime())[0];
 
-		if (latestCapture && data.observations !== undefined) {
-			latestCapture.observations = data.observations ?? null;
+				if (latestCapture) {
+					latestCapture.observations = data.observations ?? null;
+				}
+			}
 		}
 
 		return this.mapComplaint(complaint);
@@ -294,6 +302,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 				type: c.type,
 				status: c.status,
 				complaint_method: c.complaint_method,
+				observations: c.observations,
 				location:
 					coords?.latitude != null && coords?.longitude != null
 						? { lat: coords.latitude, lon: coords.longitude }
@@ -325,6 +334,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			type: complaint.type,
 			status: complaint.status,
 			complaint_method: complaint.complaint_method,
+			observations: complaint.observations,
 			location: null,
 			captures: complaintCaptures.map((c) => this.mapCapture(c)),
 			vote_counts: { resolved: 0, not_resolved: 0 },
@@ -526,6 +536,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			type: complaint.type,
 			status: complaint.status,
 			complaint_method: complaint.complaint_method,
+			observations: complaint.observations,
 			captures: complaintCaptures.map((c) => this.mapCapture(c)),
 			vote_counts: {
 				resolved: 0,

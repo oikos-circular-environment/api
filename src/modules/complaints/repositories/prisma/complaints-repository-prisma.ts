@@ -39,6 +39,7 @@ type PrismaComplaintPayload = {
 	status: ComplaintStatus;
 	type: Complaint["type"];
 	complaint_method: ComplaintMethod;
+	observations: string | null;
 	created_at: Date;
 	captures: Array<{
 		id: string;
@@ -69,6 +70,7 @@ function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 		type: payload.type,
 		status: payload.status,
 		complaint_method: payload.complaint_method,
+		observations: payload.observations,
 		captures: payload.captures.map(
 			(capture): ComplaintCapture => ({
 				id: capture.id,
@@ -183,10 +185,11 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				type: data.type,
 				complaint_method: method,
 				status: "OPEN",
+				observations: method === "MANUAL" ? (data.observations ?? null) : null,
 				captures: {
 					create: {
 						date: data.date,
-						observations: data.observations ?? null,
+						observations: method === "AUTOMATIC" ? (data.observations ?? null) : null,
 						geospatial: data.geospatial,
 					},
 				},
@@ -227,13 +230,21 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			return null;
 		}
 
-		const latestCapture = complaint.captures[0];
-
-		if (latestCapture && data.observations !== undefined) {
-			await prisma.complaintCapture.update({
-				where: { id: latestCapture.id },
-				data: { observations: data.observations },
-			});
+		if (data.observations !== undefined) {
+			if (complaint.complaint_method === "MANUAL") {
+				await prisma.complaint.update({
+					where: { id: complaintId },
+					data: { observations: data.observations },
+				});
+			} else {
+				const latestCapture = complaint.captures[0];
+				if (latestCapture) {
+					await prisma.complaintCapture.update({
+						where: { id: latestCapture.id },
+						data: { observations: data.observations },
+					});
+				}
+			}
 		}
 
 		return this.findByUserAndComplaintId(userId, complaintId);
@@ -339,6 +350,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				type: c.type as MapComplaintItem["type"],
 				status: c.status as MapComplaintItem["status"],
 				complaint_method: c.complaint_method as MapComplaintItem["complaint_method"],
+				observations: c.observations,
 				location:
 					coords?.latitude != null && coords?.longitude != null
 						? { lat: coords.latitude, lon: coords.longitude }
@@ -398,6 +410,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			type: complaint.type as PublicComplaint["type"],
 			status: complaint.status as PublicComplaint["status"],
 			complaint_method: complaint.complaint_method as PublicComplaint["complaint_method"],
+			observations: complaint.observations,
 			location: null,
 			captures: complaint.captures.map(
 				(c): ComplaintCapture => ({
