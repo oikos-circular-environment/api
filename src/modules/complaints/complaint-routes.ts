@@ -25,17 +25,17 @@ import {
 import { BullMQJobDispatcher } from "./providers/bullmq-job-dispatcher.js";
 import { PrismaCompanyOwnershipChecker } from "./providers/prisma-company-checker.js";
 import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-repository-prisma.js";
+import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
 import { CancelComplaintUseCase } from "./use-cases/cancel-complaint-use-case.js";
 import { CreateComplaintAttachmentUseCase } from "./use-cases/create-complaint-attachment-use-case.js";
 import { CreateComplaintManualUseCase } from "./use-cases/create-complaint-manual-use-case.js";
 import { CreateComplaintUseCase } from "./use-cases/create-complaint-use-case.js";
-import { GetComplaintUseCase } from "./use-cases/get-complaint-use-case.js";
-import { GetComplaintsDashboardUseCase } from "./use-cases/get-complaints-dashboard-use-case.js";
-import { GetComplaintsUseCase } from "./use-cases/get-complaints-use-case.js";
-import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
 import { DeleteResolutionAttachmentUseCase } from "./use-cases/delete-resolution-attachment-use-case.js";
 import { DeleteResolutionUseCase } from "./use-cases/delete-resolution-use-case.js";
+import { GetComplaintUseCase } from "./use-cases/get-complaint-use-case.js";
 import { GetComplaintVoteUseCase } from "./use-cases/get-complaint-vote-use-case.js";
+import { GetComplaintsDashboardUseCase } from "./use-cases/get-complaints-dashboard-use-case.js";
+import { GetComplaintsUseCase } from "./use-cases/get-complaints-use-case.js";
 import { GetMapComplaintsUseCase } from "./use-cases/get-map-complaints-use-case.js";
 import { GetPublicComplaintUseCase } from "./use-cases/get-public-complaint-use-case.js";
 import { GetResolutionsUseCase } from "./use-cases/get-resolutions-use-case.js";
@@ -45,6 +45,7 @@ import { UpdateComplaintUseCase } from "./use-cases/update-complaint-use-case.js
 import { VoteComplaintUseCase } from "./use-cases/vote-complaint-use-case.js";
 
 const COMPLAINTS_TAG = "Complaints";
+const COMPLAINTS_PUBLIC_TAG = "Complaints / Public";
 const COMPLAINTS_VOTES_TAG = "Complaints / Votes";
 const COMPLAINTS_RESOLUTIONS_TAG = "Complaints / Resolutions";
 const COMPLAINTS_ATTACHMENTS_TAG = "Complaints / Attachments";
@@ -81,15 +82,18 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		companyChecker,
 	);
 	const getResolutionsUseCase = new GetResolutionsUseCase(complaintsRepository);
-	const deleteResolutionUseCase = new DeleteResolutionUseCase(complaintsRepository);
+	const deleteResolutionUseCase = new DeleteResolutionUseCase(
+		complaintsRepository,
+	);
 	const addResolutionAttachmentUseCase = new AddResolutionAttachmentUseCase(
 		complaintsRepository,
 		storageProvider,
 	);
-	const deleteResolutionAttachmentUseCase = new DeleteResolutionAttachmentUseCase(
-		complaintsRepository,
-		storageProvider,
-	);
+	const deleteResolutionAttachmentUseCase =
+		new DeleteResolutionAttachmentUseCase(
+			complaintsRepository,
+			storageProvider,
+		);
 	const cancelComplaintUseCase = new CancelComplaintUseCase(
 		complaintsRepository,
 	);
@@ -175,7 +179,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		{
 			config: { public: true },
 			schema: {
-				tags: [COMPLAINTS_TAG],
+				tags: [COMPLAINTS_PUBLIC_TAG],
 				summary: "Get complaints on map",
 				querystring: getMapComplaintsQuerySchema,
 				response: {
@@ -193,7 +197,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		"/complaints/:id/public",
 		{
 			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
+				tags: [COMPLAINTS_PUBLIC_TAG],
 				summary: "Get public complaint detail",
 				params: z.object({ id: z.uuid() }),
 				response: {
@@ -272,7 +276,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
-				summary: "Create complaint",
+				summary: "Create automatic complaint",
 				description:
 					"Creates a complaint with raw geospatial data and no attachment.",
 				body: createComplaintSchema,
@@ -513,7 +517,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Delete my resolution",
-				description: "Deletes the authenticated user's resolution for this complaint.",
+				description:
+					"Deletes the authenticated user's resolution for this complaint.",
 				params: z.object({ id: z.uuid() }),
 				response: {
 					204: z.undefined(),
@@ -539,7 +544,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Upload resolution attachment",
-				description: "Uploads an image to the authenticated user's resolution for this complaint.",
+				description:
+					"Uploads an image to the authenticated user's resolution for this complaint.",
 				consumes: ["multipart/form-data"],
 				params: z.object({ id: z.uuid() }),
 				response: {
