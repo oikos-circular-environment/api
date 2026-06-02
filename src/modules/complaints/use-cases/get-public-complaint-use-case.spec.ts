@@ -91,19 +91,17 @@ describe("get-public-complaint-use-case", () => {
 			complaint_id: created.id,
 			resolver_user_id: USER_A,
 			description: "Cleaned up",
-			resolver: "City Hall",
-			rating: 4,
-			attachment_count: 2,
+			company_id: null,
 			created_at: new Date(),
+			updated_at: new Date(),
 		});
 
 		const result = await sut.execute({ complaintId: created.id });
 
 		expect(result.resolutions).toHaveLength(1);
 		const resolution = result.resolutions[0];
-		expect(resolution?.resolver_name).toBe("City Hall");
-		expect(resolution?.rating).toBe(4);
-		expect(resolution?.attachment_count).toBe(2);
+		expect(resolution?.description).toBe("Cleaned up");
+		expect(resolution?.attachments).toHaveLength(0);
 		expect(resolution?.resolver).toMatchObject({
 			type: "profile",
 			full_name: "Anonymous",

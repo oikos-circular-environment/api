@@ -11,7 +11,10 @@ import type {
 	GetMapComplaintsQuery,
 	MapComplaintItem,
 	PublicComplaint,
+	Resolution,
+	ResolutionAttachment,
 	SaveComplaintAttachment,
+	SaveResolutionAttachment,
 	SubmitResolution,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
@@ -77,6 +80,13 @@ export interface ComplaintsRepository {
 	removeVoteFromComplaint(userId: string, complaintId: string): Promise<void>;
 
 	// Resolutions
+	findResolutionsByComplaintId(complaintId: string): Promise<Resolution[]>;
+
+	findResolutionByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<{ id: string } | null>;
+
 	submitResolution(
 		userId: string,
 		complaintId: string,
@@ -89,8 +99,18 @@ export interface ComplaintsRepository {
 		data: SubmitResolution,
 	): Promise<void>;
 
-	findResolutionByUserAndComplaint(
+	deleteResolutionByUser(userId: string, complaintId: string): Promise<void>;
+
+	// Resolution attachments
+	addResolutionAttachment(
 		userId: string,
-		complaintId: string,
-	): Promise<{ id: string } | null>;
+		resolutionId: string,
+		data: SaveResolutionAttachment,
+	): Promise<ResolutionAttachment>;
+
+	deleteResolutionAttachment(
+		userId: string,
+		resolutionId: string,
+		attachmentId: string,
+	): Promise<void>;
 }

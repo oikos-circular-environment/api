@@ -11,8 +11,11 @@ import {
 	type GetMapComplaintsQuery,
 	type MapComplaintItem,
 	type PublicComplaint,
+	type Resolution,
+	type ResolutionAttachment,
 	type Resolver,
 	type SaveComplaintAttachment,
+	type SaveResolutionAttachment,
 	type SubmitResolution,
 	type UpdateComplaint,
 	geospatialReadSchema,
@@ -376,13 +379,9 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				resolutions: {
 					include: {
 						attachments: true,
+						company: { include: { avatar: true } },
 						resolver_user: {
 							include: {
-								companies: {
-									include: { avatar: true },
-									take: 1,
-									orderBy: { created_at: "asc" },
-								},
 								profile: { include: { profile_image: true } },
 							},
 						},
@@ -424,33 +423,34 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				not_resolved: complaint.votes.filter((v) => v.vote_type === "NOT_RESOLVED").length,
 			},
 			resolutions: complaint.resolutions.map((r) => {
-				const user = r.resolver_user;
-				const company = user.companies[0];
-				const resolver: Resolver = company
+				const resolver: Resolver = r.company
 					? {
 							type: "company",
-							corporate_name: company.corporate_name,
-							business_name: company.business_name ?? null,
-							description: company.description ?? null,
-							avatar_url: (company.avatar as { url?: string } | null)?.url ?? null,
+							corporate_name: r.company.corporate_name,
+							business_name: r.company.business_name ?? null,
+							description: r.company.description ?? null,
+							avatar_url: (r.company.avatar as { url?: string } | null)?.url ?? null,
 						}
 					: {
 							type: "profile",
-							full_name: (user.profile as { full_name?: string } | null)?.full_name ?? "Unknown",
-							display_name: (user.profile as { display_name?: string } | null)?.display_name ?? "Unknown",
+							full_name: (r.resolver_user.profile as { full_name?: string } | null)?.full_name ?? "Unknown",
+							display_name: (r.resolver_user.profile as { display_name?: string } | null)?.display_name ?? "Unknown",
 							avatar_url:
 								(
-									(user.profile as { profile_image?: { url?: string } | null } | null)
+									(r.resolver_user.profile as { profile_image?: { url?: string } | null } | null)
 										?.profile_image as { url?: string } | null
 								)?.url ?? null,
 						};
 				return {
 					id: r.id,
 					description: r.description,
-					resolver_name: r.resolver,
-					rating: r.rating,
 					resolver,
-					attachment_count: r.attachments.length,
+					attachments: r.attachments.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						created_at: a.created_at,
+					})),
 					created_at: r.created_at,
 				};
 			}),
@@ -502,6 +502,51 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		});
 	}
 
+	async findResolutionsByComplaintId(complaintId: string): Promise<Resolution[]> {
+		const resolutions = await prisma.complaintResolution.findMany({
+			where: { complaint_id: complaintId },
+			include: {
+				attachments: true,
+				company: { include: { avatar: true } },
+				resolver_user: { include: { profile: { include: { profile_image: true } } } },
+			},
+			orderBy: { created_at: "desc" },
+		});
+
+		return resolutions.map((r) => ({
+			id: r.id,
+			description: r.description,
+			company_id: r.company_id,
+			resolver_user_profile: {
+				type: "profile" as const,
+				full_name: (r.resolver_user.profile as { full_name?: string } | null)?.full_name ?? "Unknown",
+				display_name: (r.resolver_user.profile as { display_name?: string } | null)?.display_name ?? "Unknown",
+				avatar_url:
+					(
+						(r.resolver_user.profile as { profile_image?: { url?: string } | null } | null)
+							?.profile_image as { url?: string } | null
+					)?.url ?? null,
+			},
+			resolver_company: r.company
+				? {
+						type: "company" as const,
+						corporate_name: r.company.corporate_name,
+						business_name: r.company.business_name ?? null,
+						description: r.company.description ?? null,
+						avatar_url: (r.company.avatar as { url?: string } | null)?.url ?? null,
+					}
+				: null,
+			attachments: r.attachments.map((a) => ({
+				id: a.id,
+				url: a.url,
+				file_name: a.file_name,
+				created_at: a.created_at,
+			})),
+			created_at: r.created_at,
+			updated_at: r.updated_at,
+		}));
+	}
+
 	async submitResolution(
 		userId: string,
 		complaintId: string,
@@ -512,8 +557,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				complaint_id: complaintId,
 				resolver_user_id: userId,
 				description: data.description,
-				resolver: data.resolver,
-				rating: data.rating,
+				company_id: data.company_id ?? null,
 			},
 		});
 	}
@@ -525,7 +569,49 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	): Promise<void> {
 		await prisma.complaintResolution.updateMany({
 			where: { complaint_id: complaintId, resolver_user_id: userId },
-			data: { description: data.description, resolver: data.resolver, rating: data.rating },
+			data: { description: data.description, company_id: data.company_id ?? null },
+		});
+	}
+
+	async deleteResolutionByUser(userId: string, complaintId: string): Promise<void> {
+		await prisma.complaintResolution.deleteMany({
+			where: { complaint_id: complaintId, resolver_user_id: userId },
+		});
+	}
+
+	async addResolutionAttachment(
+		userId: string,
+		resolutionId: string,
+		data: SaveResolutionAttachment,
+	): Promise<ResolutionAttachment> {
+		const attachment = await prisma.complaintResolutionAttachment.create({
+			data: {
+				resolution_id: resolutionId,
+				url: data.url,
+				file_name: data.file_name,
+				path: data.path,
+				base64: data.base64,
+			},
+		});
+		return {
+			id: attachment.id,
+			url: attachment.url,
+			file_name: attachment.file_name,
+			created_at: attachment.created_at,
+		};
+	}
+
+	async deleteResolutionAttachment(
+		userId: string,
+		resolutionId: string,
+		attachmentId: string,
+	): Promise<void> {
+		await prisma.complaintResolutionAttachment.deleteMany({
+			where: {
+				id: attachmentId,
+				resolution_id: resolutionId,
+				resolution: { resolver_user_id: userId },
+			},
 		});
 	}
 

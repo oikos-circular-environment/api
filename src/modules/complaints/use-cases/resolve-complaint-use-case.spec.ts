@@ -42,8 +42,6 @@ const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 const resolution = {
 	description: "Problema resolvido pela prefeitura",
-	resolver: "Prefeitura de SP",
-	rating: 5,
 };
 
 describe("resolve-complaint-use-case", () => {

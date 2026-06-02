@@ -43,8 +43,6 @@ const RESOLVER_USER_ID = "22222222-2222-2222-2222-222222222222";
 
 const resolutionData = {
 	description: "Prefeitura recolheu o lixo",
-	resolver: "Prefeitura de SP",
-	rating: 4,
 };
 
 describe("submit-resolution-use-case", () => {
@@ -116,6 +114,48 @@ describe("submit-resolution-use-case", () => {
 			expect(thrownError.statusCode).toBe(404);
 			expect(thrownError.code).toBe("COMPLAINT_NOT_FOUND");
 		}
+	});
+
+	it("throws 403 when company_id does not belong to the user", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const companyChecker = { userOwnsCompany: async () => false };
+		const sut = new SubmitResolutionUseCase(complaintsRepository, companyChecker);
+
+		const complaint = await complaintsRepository.createForUser(
+			USER_ID,
+			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			"AUTOMATIC",
+		);
+
+		await expect(
+			sut.execute({
+				userId: RESOLVER_USER_ID,
+				complaintId: complaint.id,
+				data: { ...resolutionData, company_id: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff" },
+			}),
+		).rejects.toThrowError(expect.objectContaining({ code: "COMPANY_NOT_OWNED" }));
+	});
+
+	it("accepts company_id when it belongs to the user", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const COMPANY_ID = "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff";
+		const companyChecker = { userOwnsCompany: async () => true };
+		const sut = new SubmitResolutionUseCase(complaintsRepository, companyChecker);
+
+		const complaint = await complaintsRepository.createForUser(
+			USER_ID,
+			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			"AUTOMATIC",
+		);
+
+		await expect(
+			sut.execute({
+				userId: RESOLVER_USER_ID,
+				complaintId: complaint.id,
+				data: { ...resolutionData, company_id: COMPANY_ID },
+			}),
+		).resolves.not.toThrow();
+		expect(complaintsRepository.resolutions[0]?.company_id).toBe(COMPANY_ID);
 	});
 
 	it("throws 422 COMPLAINT_CLOSED when complaint is RESOLVED", async () => {

@@ -15,8 +15,11 @@ import type {
 	GetMapComplaintsQuery,
 	MapComplaintItem,
 	PublicComplaint,
+	Resolution,
+	ResolutionAttachment,
 	Resolver,
 	SaveComplaintAttachment,
+	SaveResolutionAttachment,
 	SubmitResolution,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
@@ -57,9 +60,18 @@ type ResolutionEntity = {
 	complaint_id: string;
 	resolver_user_id: string;
 	description: string;
-	resolver: string;
-	rating: number;
-	attachment_count: number;
+	company_id: string | null;
+	created_at: Date;
+	updated_at: Date;
+};
+
+type ResolutionAttachmentEntity = {
+	id: string;
+	resolution_id: string;
+	url: string;
+	file_name: string;
+	path: string;
+	base64: string;
 	created_at: Date;
 };
 
@@ -77,6 +89,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	public captures: CaptureEntity[] = [];
 	public attachments: AttachmentEntity[] = [];
 	public resolutions: ResolutionEntity[] = [];
+	public resolutionAttachments: ResolutionAttachmentEntity[] = [];
 	public votes: VoteEntity[] = [];
 
 	async findManyByUserId(
@@ -99,33 +112,22 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 	async findByUserAndComplaintId(userId: string, complaintId: string) {
 		const complaint = this.complaints.find(
-			(item) => item.user_id === userId && item.id === complaintId,
+			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		return this.mapComplaint(complaint);
 	}
 
-	async findCaptureByUserAndCaptureId(
-		userId: string,
-		captureId: string,
-	): Promise<ComplaintCapture | null> {
+	async findCaptureByUserAndCaptureId(userId: string, captureId: string) {
 		const capture = this.captures.find((c) => c.id === captureId);
-
-		if (!capture) {
-			return null;
-		}
+		if (!capture) return null;
 
 		const complaint = this.complaints.find(
 			(c) => c.id === capture.complaint_id && c.user_id === userId,
 		);
-
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		return this.mapCapture(capture);
 	}
@@ -165,22 +167,17 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		data: UpdateComplaint,
 	) {
 		const complaint = this.complaints.find(
-			(item) => item.user_id === userId && item.id === complaintId,
+			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
-		// Update observations on the most recent capture
-		const complainCaptures = this.captures
+		const latestCapture = this.captures
 			.filter((c) => c.complaint_id === complaintId)
-			.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
-
-		const latestCapture = complainCaptures[0];
+			.sort((a, b) => b.created_at.getTime() - a.created_at.getTime())[0];
 
 		if (latestCapture && data.observations !== undefined) {
-			latestCapture.observations = data.observations;
+			latestCapture.observations = data.observations ?? null;
 		}
 
 		return this.mapComplaint(complaint);
@@ -192,15 +189,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		status: ComplaintStatus,
 	) {
 		const complaint = this.complaints.find(
-			(item) => item.user_id === userId && item.id === complaintId,
+			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		complaint.status = status;
-
 		return this.mapComplaint(complaint);
 	}
 
@@ -210,18 +204,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		data: SaveComplaintAttachment,
 	) {
 		const capture = this.captures.find((c) => c.id === captureId);
-
-		if (!capture) {
-			return null;
-		}
+		if (!capture) return null;
 
 		const complaint = this.complaints.find(
 			(c) => c.id === capture.complaint_id && c.user_id === userId,
 		);
-
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		const attachment: AttachmentEntity = {
 			id: randomUUID(),
@@ -270,12 +258,29 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	}
 
 	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
-		const { type, status } = query;
+		const { lat, lon, radius, type, status } = query;
 		const statusValue = status ?? "OPEN";
+
+		const toRad = (deg: number) => (deg * Math.PI) / 180;
+		const haversine = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+			const R = 6371000;
+			const dLat = toRad(lat2 - lat1);
+			const dLon = toRad(lon2 - lon1);
+			const a =
+				Math.sin(dLat / 2) ** 2 +
+				Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+			return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		};
 
 		const filtered = this.complaints
 			.filter((c) => c.status === statusValue)
-			.filter((c) => !type || c.type === type);
+			.filter((c) => !type || c.type === type)
+			.filter((c) => {
+				const captures = this.captures.filter((cap) => cap.complaint_id === c.id);
+				const coords = captures[0]?.geospatial?.location?.coords;
+				if (!coords) return false;
+				return haversine(lat, lon, coords.latitude, coords.longitude) <= radius;
+			});
 
 		return filtered.slice(0, 500).map((c) => {
 			const captures = this.captures
@@ -303,10 +308,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 	async findPublicComplaintById(complaintId: string): Promise<PublicComplaint | null> {
 		const complaint = this.complaints.find((c) => c.id === complaintId);
-
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		const complaintCaptures = this.captures.filter((c) => c.complaint_id === complaint.id);
 		const complaintResolutions = this.resolutions.filter((r) => r.complaint_id === complaint.id);
@@ -329,10 +331,10 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			resolutions: complaintResolutions.map((r) => ({
 				id: r.id,
 				description: r.description,
-				resolver_name: r.resolver,
-				rating: r.rating,
 				resolver: anonymousResolver,
-				attachment_count: r.attachment_count,
+				attachments: this.resolutionAttachments
+					.filter((a) => a.resolution_id === r.id)
+					.map((a) => ({ id: a.id, url: a.url, file_name: a.file_name, created_at: a.created_at })),
 				created_at: r.created_at,
 			})),
 			created_at: complaint.created_at,
@@ -386,6 +388,37 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		}
 	}
 
+	async findResolutionsByComplaintId(complaintId: string): Promise<Resolution[]> {
+		const resolutions = this.resolutions.filter((r) => r.complaint_id === complaintId);
+		return resolutions.map((r) => ({
+			id: r.id,
+			description: r.description,
+			company_id: r.company_id,
+			resolver_user_profile: {
+				type: "profile" as const,
+				full_name: "Anonymous",
+				display_name: "Anonymous",
+				avatar_url: null,
+			},
+			resolver_company: null,
+			attachments: this.resolutionAttachments
+				.filter((a) => a.resolution_id === r.id)
+				.map((a) => ({ id: a.id, url: a.url, file_name: a.file_name, created_at: a.created_at })),
+			created_at: r.created_at,
+			updated_at: r.updated_at,
+		}));
+	}
+
+	async findResolutionByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const resolution = this.resolutions.find(
+			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
+		);
+		return resolution ? { id: resolution.id } : null;
+	}
+
 	async submitResolution(
 		userId: string,
 		complaintId: string,
@@ -396,10 +429,9 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			complaint_id: complaintId,
 			resolver_user_id: userId,
 			description: data.description,
-			resolver: data.resolver,
-			rating: data.rating,
-			attachment_count: 0,
+			company_id: data.company_id ?? null,
 			created_at: new Date(),
+			updated_at: new Date(),
 		};
 		this.resolutions.push(resolution);
 	}
@@ -414,19 +446,50 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		);
 		if (resolution) {
 			resolution.description = data.description;
-			resolution.resolver = data.resolver;
-			resolution.rating = data.rating;
+			resolution.company_id = data.company_id ?? null;
+			resolution.updated_at = new Date();
 		}
 	}
 
-	async findResolutionByUserAndComplaint(
-		userId: string,
-		complaintId: string,
-	): Promise<{ id: string } | null> {
-		const resolution = this.resolutions.find(
+	async deleteResolutionByUser(userId: string, complaintId: string): Promise<void> {
+		const index = this.resolutions.findIndex(
 			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
 		);
-		return resolution ? { id: resolution.id } : null;
+		if (index !== -1) {
+			const resolutionId = this.resolutions[index]!.id;
+			this.resolutions.splice(index, 1);
+			this.resolutionAttachments = this.resolutionAttachments.filter(
+				(a) => a.resolution_id !== resolutionId,
+			);
+		}
+	}
+
+	async addResolutionAttachment(
+		userId: string,
+		resolutionId: string,
+		data: SaveResolutionAttachment,
+	): Promise<ResolutionAttachment> {
+		const attachment: ResolutionAttachmentEntity = {
+			id: randomUUID(),
+			resolution_id: resolutionId,
+			url: data.url,
+			file_name: data.file_name,
+			path: data.path,
+			base64: data.base64,
+			created_at: new Date(),
+		};
+		this.resolutionAttachments.push(attachment);
+		return { id: attachment.id, url: attachment.url, file_name: attachment.file_name, created_at: attachment.created_at };
+	}
+
+	async deleteResolutionAttachment(
+		userId: string,
+		resolutionId: string,
+		attachmentId: string,
+	): Promise<void> {
+		this.resolutionAttachments = this.resolutionAttachments.filter(
+			(a) => !(a.id === attachmentId && a.resolution_id === resolutionId),
+		);
 	}
 
 	private mapCapture(capture: CaptureEntity): ComplaintCapture {

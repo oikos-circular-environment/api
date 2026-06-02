@@ -16,11 +16,14 @@ import {
 	getMapComplaintsQuerySchema,
 	mapComplaintItemSchema,
 	publicComplaintSchema,
+	resolutionAttachmentSchema,
+	resolutionSchema,
 	submitResolutionSchema,
 	submitVoteSchema,
 	updateComplaintSchema,
 } from "./dtos/complaints-dto.js";
 import { BullMQJobDispatcher } from "./providers/bullmq-job-dispatcher.js";
+import { PrismaCompanyOwnershipChecker } from "./providers/prisma-company-checker.js";
 import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-repository-prisma.js";
 import { CancelComplaintUseCase } from "./use-cases/cancel-complaint-use-case.js";
 import { CreateComplaintAttachmentUseCase } from "./use-cases/create-complaint-attachment-use-case.js";
@@ -29,9 +32,13 @@ import { CreateComplaintUseCase } from "./use-cases/create-complaint-use-case.js
 import { GetComplaintUseCase } from "./use-cases/get-complaint-use-case.js";
 import { GetComplaintsDashboardUseCase } from "./use-cases/get-complaints-dashboard-use-case.js";
 import { GetComplaintsUseCase } from "./use-cases/get-complaints-use-case.js";
+import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
+import { DeleteResolutionAttachmentUseCase } from "./use-cases/delete-resolution-attachment-use-case.js";
+import { DeleteResolutionUseCase } from "./use-cases/delete-resolution-use-case.js";
 import { GetComplaintVoteUseCase } from "./use-cases/get-complaint-vote-use-case.js";
 import { GetMapComplaintsUseCase } from "./use-cases/get-map-complaints-use-case.js";
 import { GetPublicComplaintUseCase } from "./use-cases/get-public-complaint-use-case.js";
+import { GetResolutionsUseCase } from "./use-cases/get-resolutions-use-case.js";
 import { ResolveComplaintUseCase } from "./use-cases/resolve-complaint-use-case.js";
 import { SubmitResolutionUseCase } from "./use-cases/submit-resolution-use-case.js";
 import { UpdateComplaintUseCase } from "./use-cases/update-complaint-use-case.js";
@@ -39,6 +46,7 @@ import { VoteComplaintUseCase } from "./use-cases/vote-complaint-use-case.js";
 
 const COMPLAINTS_TAG = "Complaints";
 const COMPLAINTS_VOTES_TAG = "Complaints / Votes";
+const COMPLAINTS_RESOLUTIONS_TAG = "Complaints / Resolutions";
 const COMPLAINTS_ATTACHMENTS_TAG = "Complaints / Attachments";
 const COMPLAINTS_DASHBOARD_TAG = "Complaints / Dashboard";
 
@@ -47,6 +55,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	const complaintsRepository = new PrismaComplaintsRepository();
 	const storageProvider = new SupabaseBucket();
 	const jobDispatcher = new BullMQJobDispatcher();
+	const companyChecker = new PrismaCompanyOwnershipChecker();
 
 	const createComplaintUseCase = new CreateComplaintUseCase(
 		complaintsRepository,
@@ -69,6 +78,17 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 	const submitResolutionUseCase = new SubmitResolutionUseCase(
 		complaintsRepository,
+		companyChecker,
+	);
+	const getResolutionsUseCase = new GetResolutionsUseCase(complaintsRepository);
+	const deleteResolutionUseCase = new DeleteResolutionUseCase(complaintsRepository);
+	const addResolutionAttachmentUseCase = new AddResolutionAttachmentUseCase(
+		complaintsRepository,
+		storageProvider,
+	);
+	const deleteResolutionAttachmentUseCase = new DeleteResolutionAttachmentUseCase(
+		complaintsRepository,
+		storageProvider,
 	);
 	const cancelComplaintUseCase = new CancelComplaintUseCase(
 		complaintsRepository,
@@ -91,6 +111,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 
 	typedApp.addHook("onRequest", async (request) => {
+		if ((request.routeOptions.config as { public?: boolean })?.public) return;
 		await verifyJwt(request);
 	});
 
@@ -152,15 +173,15 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	typedApp.get(
 		"/complaints/map",
 		{
-			schema: withBearerAuth({
+			config: { public: true },
+			schema: {
 				tags: [COMPLAINTS_TAG],
 				summary: "Get complaints on map",
 				querystring: getMapComplaintsQuerySchema,
 				response: {
 					200: z.object({ complaints: z.array(mapComplaintItemSchema) }),
-					401: appErrorSchema,
 				},
-			}),
+			},
 		},
 		async (request, reply) => {
 			const complaints = await getMapComplaintsUseCase.execute(request.query);
@@ -410,11 +431,33 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 	);
 
+	typedApp.get(
+		"/complaints/:id/resolutions",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_RESOLUTIONS_TAG],
+				summary: "List resolutions",
+				description: "Returns all resolutions submitted for a complaint.",
+				params: z.object({ id: z.uuid() }),
+				response: {
+					200: z.object({ resolutions: z.array(resolutionSchema) }),
+					401: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const resolutions = await getResolutionsUseCase.execute({
+				complaintId: request.params.id,
+			});
+			return reply.send({ resolutions });
+		},
+	);
+
 	typedApp.post(
 		"/complaints/:id/resolutions",
 		{
 			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
+				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Submit resolution",
 				params: z.object({ id: z.uuid() }),
 				body: submitResolutionSchema,
@@ -441,7 +484,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		"/complaints/:id/resolutions",
 		{
 			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
+				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Update resolution",
 				params: z.object({ id: z.uuid() }),
 				body: submitResolutionSchema,
@@ -459,6 +502,101 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				userId,
 				complaintId: request.params.id,
 				data: request.body,
+			});
+			return reply.status(204).send();
+		},
+	);
+
+	typedApp.delete(
+		"/complaints/:id/resolutions",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_RESOLUTIONS_TAG],
+				summary: "Delete my resolution",
+				description: "Deletes the authenticated user's resolution for this complaint.",
+				params: z.object({ id: z.uuid() }),
+				response: {
+					204: z.undefined(),
+					401: appErrorSchema,
+					404: appErrorSchema,
+					422: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			await deleteResolutionUseCase.execute({
+				userId,
+				complaintId: request.params.id,
+			});
+			return reply.status(204).send();
+		},
+	);
+
+	typedApp.post(
+		"/complaints/:id/resolutions/attachments",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_RESOLUTIONS_TAG],
+				summary: "Upload resolution attachment",
+				description: "Uploads an image to the authenticated user's resolution for this complaint.",
+				consumes: ["multipart/form-data"],
+				params: z.object({ id: z.uuid() }),
+				response: {
+					200: z.object({ attachment: resolutionAttachmentSchema }),
+					400: appErrorSchema,
+					401: appErrorSchema,
+					404: appErrorSchema,
+					500: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			const file = await request.file();
+
+			if (!file) {
+				throw new AppError(
+					"Resolution attachment file is required",
+					"RESOLUTION_ATTACHMENT_FILE_REQUIRED",
+					400,
+				);
+			}
+
+			const attachment = await addResolutionAttachmentUseCase.execute({
+				userId,
+				complaintId: request.params.id,
+				file: {
+					fileName: file.filename,
+					mimeType: file.mimetype,
+					content: await file.toBuffer(),
+				},
+			});
+
+			return reply.send({ attachment });
+		},
+	);
+
+	typedApp.delete(
+		"/complaints/:id/resolutions/attachments/:attachmentId",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_RESOLUTIONS_TAG],
+				summary: "Delete resolution attachment",
+				params: z.object({ id: z.uuid(), attachmentId: z.uuid() }),
+				response: {
+					204: z.undefined(),
+					401: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			await deleteResolutionAttachmentUseCase.execute({
+				userId,
+				complaintId: request.params.id,
+				attachmentId: request.params.attachmentId,
 			});
 			return reply.status(204).send();
 		},

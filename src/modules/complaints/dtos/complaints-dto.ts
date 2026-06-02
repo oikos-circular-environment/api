@@ -235,16 +235,34 @@ export const resolverSchema = z.union([
 ]);
 export type Resolver = z.infer<typeof resolverSchema>;
 
+export const resolutionAttachmentSchema = z.object({
+	id: z.string(),
+	url: z.string(),
+	file_name: z.string(),
+	created_at: z.date(),
+});
+export type ResolutionAttachment = z.infer<typeof resolutionAttachmentSchema>;
+
 export const publicResolutionSchema = z.object({
 	id: z.string(),
 	description: z.string(),
-	resolver_name: z.string(),
-	rating: z.number().int().min(1).max(5),
 	resolver: resolverSchema,
-	attachment_count: z.number().int().nonnegative(),
+	attachments: z.array(resolutionAttachmentSchema),
 	created_at: z.date(),
 });
 export type PublicResolution = z.infer<typeof publicResolutionSchema>;
+
+export const resolutionSchema = z.object({
+	id: z.string(),
+	description: z.string(),
+	company_id: z.string().nullable(),
+	resolver_user_profile: resolverProfileSchema,
+	resolver_company: resolverCompanySchema.nullable(),
+	attachments: z.array(resolutionAttachmentSchema),
+	created_at: z.date(),
+	updated_at: z.date(),
+});
+export type Resolution = z.infer<typeof resolutionSchema>;
 
 export const publicComplaintSchema = z.object({
 	id: z.string(),
@@ -304,7 +322,13 @@ export type SubmitVote = z.infer<typeof submitVoteSchema>;
 
 export const submitResolutionSchema = z.object({
 	description: z.string().min(1),
-	resolver: z.string().min(1),
-	rating: z.number().int().min(1).max(5),
+	company_id: z.string().uuid().optional(),
 });
 export type SubmitResolution = z.infer<typeof submitResolutionSchema>;
+
+export type SaveResolutionAttachment = {
+	url: string;
+	file_name: string;
+	path: string;
+	base64: string;
+};

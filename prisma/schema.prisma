@@ -89,6 +89,8 @@ model Company {
   avatar_id String?
   avatar    CompanyAvatar? @relation(fields: [avatar_id], references: [id])
 
+  resolutions ComplaintResolution[]
+
   @@map("companies")
 }
 
@@ -271,8 +273,6 @@ model ComplaintVote {
 model ComplaintResolution {
   id          String   @id @default(uuid())
   description String
-  resolver    String
-  rating      Int
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
 
@@ -281,6 +281,9 @@ model ComplaintResolution {
 
   resolver_user_id String
   resolver_user    User   @relation("ResolutionResolver", fields: [resolver_user_id], references: [id], onDelete: Cascade)
+
+  company_id String?
+  company    Company? @relation(fields: [company_id], references: [id], onDelete: SetNull)
 
   attachments ComplaintResolutionAttachment[]
 
