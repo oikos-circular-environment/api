@@ -1,9 +1,7 @@
 import { randomUUID } from "node:crypto";
 import type {
 	Complaint,
-	ComplaintCapture,
 	ComplaintCaptureMode,
-	ComplaintMethod,
 	ComplaintResume,
 	ComplaintStatus,
 	ComplaintType,
@@ -30,14 +28,6 @@ type ComplaintEntity = {
 	user_id: string;
 	status: ComplaintStatus;
 	type: ComplaintType;
-	complaint_method: ComplaintMethod;
-	observations: string | null;
-	created_at: Date;
-};
-
-type CaptureEntity = {
-	id: string;
-	complaint_id: string;
 	date: Date;
 	observations: string | null;
 	geospatial: Geospatial;
@@ -46,7 +36,7 @@ type CaptureEntity = {
 
 type AttachmentEntity = {
 	id: string;
-	capture_id: string;
+	complaint_id: string;
 	url: string;
 	file_name: string;
 	path: string;
@@ -87,7 +77,6 @@ type VoteEntity = {
 
 export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	public complaints: ComplaintEntity[] = [];
-	public captures: CaptureEntity[] = [];
 	public attachments: AttachmentEntity[] = [];
 	public resolutions: ResolutionEntity[] = [];
 	public resolutionAttachments: ResolutionAttachmentEntity[] = [];
@@ -121,44 +110,19 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return this.mapComplaint(complaint);
 	}
 
-	async findCaptureByUserAndCaptureId(userId: string, captureId: string) {
-		const capture = this.captures.find((c) => c.id === captureId);
-		if (!capture) return null;
-
-		const complaint = this.complaints.find(
-			(c) => c.id === capture.complaint_id && c.user_id === userId,
-		);
-		if (!complaint) return null;
-
-		return this.mapCapture(capture);
-	}
-
-	async createForUser(
-		userId: string,
-		data: CreateComplaint,
-		method: ComplaintMethod,
-	) {
+	async createForUser(userId: string, data: CreateComplaint) {
 		const complaint: ComplaintEntity = {
 			id: randomUUID(),
 			user_id: userId,
 			status: "OPEN",
 			type: data.type,
-			complaint_method: method,
-			observations: method === "MANUAL" ? (data.observations ?? null) : null,
-			created_at: new Date(),
-		};
-
-		const capture: CaptureEntity = {
-			id: randomUUID(),
-			complaint_id: complaint.id,
 			date: data.date,
-			observations: method === "AUTOMATIC" ? (data.observations ?? null) : null,
+			observations: data.observations ?? null,
 			geospatial: data.geospatial,
 			created_at: new Date(),
 		};
 
 		this.complaints.push(complaint);
-		this.captures.push(capture);
 
 		return this.mapComplaint(complaint);
 	}
@@ -174,19 +138,10 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 		if (!complaint) return null;
 
-		if (data.observations !== undefined) {
-			if (complaint.complaint_method === "MANUAL") {
-				complaint.observations = data.observations ?? null;
-			} else {
-				const latestCapture = this.captures
-					.filter((c) => c.complaint_id === complaintId)
-					.sort((a, b) => b.created_at.getTime() - a.created_at.getTime())[0];
-
-				if (latestCapture) {
-					latestCapture.observations = data.observations ?? null;
-				}
-			}
-		}
+		if (data.date !== undefined) complaint.date = data.date;
+		if (data.type !== undefined) complaint.type = data.type;
+		if (data.observations !== undefined) complaint.observations = data.observations ?? null;
+		if (data.geospatial !== undefined) complaint.geospatial = data.geospatial;
 
 		return this.mapComplaint(complaint);
 	}
@@ -206,22 +161,19 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return this.mapComplaint(complaint);
 	}
 
-	async attachByCaptureId(
+	async attachByComplaintId(
 		userId: string,
-		captureId: string,
+		complaintId: string,
 		data: SaveComplaintAttachment,
 	) {
-		const capture = this.captures.find((c) => c.id === captureId);
-		if (!capture) return null;
-
 		const complaint = this.complaints.find(
-			(c) => c.id === capture.complaint_id && c.user_id === userId,
+			(c) => c.id === complaintId && c.user_id === userId,
 		);
 		if (!complaint) return null;
 
 		const attachment: AttachmentEntity = {
 			id: randomUUID(),
-			capture_id: captureId,
+			complaint_id: complaintId,
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
@@ -284,30 +236,38 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			.filter((c) => c.status === statusValue)
 			.filter((c) => !type || c.type === type)
 			.filter((c) => {
-				const captures = this.captures.filter((cap) => cap.complaint_id === c.id);
-				const coords = captures[0]?.geospatial?.location?.coords;
+				const coords = c.geospatial?.location?.coords;
 				if (!coords) return false;
 				return haversine(lat, lon, coords.latitude, coords.longitude) <= radius;
 			});
 
 		return filtered.slice(0, 500).map((c) => {
-			const captures = this.captures
-				.filter((cap) => cap.complaint_id === c.id)
-				.map((cap) => this.mapCapture(cap));
+			const coords = c.geospatial.location.coords;
 			const resolutionCount = this.resolutions.filter((r) => r.complaint_id === c.id).length;
-			const coords = captures[0]?.geospatial?.location?.coords;
 
 			return {
 				id: c.id,
 				type: c.type,
 				status: c.status,
-				complaint_method: c.complaint_method,
+				date: c.date,
 				observations: c.observations,
+				geospatial: c.geospatial,
 				location:
-					coords?.latitude != null && coords?.longitude != null
+					coords.latitude != null && coords.longitude != null
 						? { lat: coords.latitude, lon: coords.longitude }
 						: null,
-				captures,
+				attachments: this.attachments
+					.filter((a) => a.complaint_id === c.id)
+					.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						path: a.path,
+						base64: a.base64,
+						metadata: a.metadata,
+						type: a.type,
+						created_at: a.created_at,
+					})),
 				vote_counts: { resolved: 0, not_resolved: 0 },
 				resolution_count: resolutionCount,
 				created_at: c.created_at,
@@ -319,7 +279,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		const complaint = this.complaints.find((c) => c.id === complaintId);
 		if (!complaint) return null;
 
-		const complaintCaptures = this.captures.filter((c) => c.complaint_id === complaint.id);
 		const complaintResolutions = this.resolutions.filter((r) => r.complaint_id === complaint.id);
 
 		const anonymousResolver: Resolver = {
@@ -329,14 +288,31 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			avatar_url: null,
 		};
 
+		const coords = complaint.geospatial.location.coords;
+
 		return {
 			id: complaint.id,
 			type: complaint.type,
 			status: complaint.status,
-			complaint_method: complaint.complaint_method,
+			date: complaint.date,
 			observations: complaint.observations,
-			location: null,
-			captures: complaintCaptures.map((c) => this.mapCapture(c)),
+			geospatial: complaint.geospatial,
+			location:
+				coords.latitude != null && coords.longitude != null
+					? { lat: coords.latitude, lon: coords.longitude }
+					: null,
+			attachments: this.attachments
+				.filter((a) => a.complaint_id === complaint.id)
+				.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					path: a.path,
+					base64: a.base64,
+					metadata: a.metadata,
+					type: a.type,
+					created_at: a.created_at,
+				})),
 			vote_counts: { resolved: 0, not_resolved: 0 },
 			resolutions: complaintResolutions.map((r) => ({
 				id: r.id,
@@ -393,9 +369,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		const index = this.votes.findIndex(
 			(v) => v.complaint_id === complaintId && v.user_id === userId,
 		);
-		if (index !== -1) {
-			this.votes.splice(index, 1);
-		}
+		if (index !== -1) this.votes.splice(index, 1);
 	}
 
 	async findResolutionsByComplaintId(complaintId: string): Promise<Resolution[]> {
@@ -502,46 +476,27 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		);
 	}
 
-	private mapCapture(capture: CaptureEntity): ComplaintCapture {
-		const captureAttachments = this.attachments.filter(
-			(a) => a.capture_id === capture.id,
-		);
-
-		return {
-			id: capture.id,
-			date: capture.date,
-			observations: capture.observations,
-			geospatial: capture.geospatial,
-			attachments: captureAttachments.map((a) => ({
-				id: a.id,
-				url: a.url,
-				file_name: a.file_name,
-				path: a.path,
-				base64: a.base64,
-				metadata: a.metadata,
-				type: a.type,
-				created_at: a.created_at,
-			})),
-			created_at: capture.created_at,
-		};
-	}
-
 	private mapComplaint(complaint: ComplaintEntity): Complaint {
-		const complaintCaptures = this.captures.filter(
-			(c) => c.complaint_id === complaint.id,
-		);
-
 		return {
 			id: complaint.id,
 			type: complaint.type,
 			status: complaint.status,
-			complaint_method: complaint.complaint_method,
+			date: complaint.date,
 			observations: complaint.observations,
-			captures: complaintCaptures.map((c) => this.mapCapture(c)),
-			vote_counts: {
-				resolved: 0,
-				not_resolved: 0,
-			},
+			geospatial: complaint.geospatial,
+			attachments: this.attachments
+				.filter((a) => a.complaint_id === complaint.id)
+				.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					path: a.path,
+					base64: a.base64,
+					metadata: a.metadata,
+					type: a.type,
+					created_at: a.created_at,
+				})),
+			vote_counts: { resolved: 0, not_resolved: 0 },
 			resolution_count: 0,
 			created_at: complaint.created_at,
 		};

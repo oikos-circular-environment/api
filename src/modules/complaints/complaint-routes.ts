@@ -10,7 +10,6 @@ import {
 	complaintSchema,
 	complaintsSchema,
 	complaintVoteSchema,
-	createComplaintManualSchema,
 	createComplaintSchema,
 	getComplaintsQuerySchema,
 	getMapComplaintsQuerySchema,
@@ -28,7 +27,6 @@ import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-rep
 import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
 import { CancelComplaintUseCase } from "./use-cases/cancel-complaint-use-case.js";
 import { CreateComplaintAttachmentUseCase } from "./use-cases/create-complaint-attachment-use-case.js";
-import { CreateComplaintManualUseCase } from "./use-cases/create-complaint-manual-use-case.js";
 import { CreateComplaintUseCase } from "./use-cases/create-complaint-use-case.js";
 import { DeleteResolutionAttachmentUseCase } from "./use-cases/delete-resolution-attachment-use-case.js";
 import { DeleteResolutionUseCase } from "./use-cases/delete-resolution-use-case.js";
@@ -58,17 +56,10 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	const jobDispatcher = new BullMQJobDispatcher();
 	const companyChecker = new PrismaCompanyOwnershipChecker();
 
-	const createComplaintUseCase = new CreateComplaintUseCase(
-		complaintsRepository,
-	);
-	const createComplaintManualUseCase = new CreateComplaintManualUseCase(
-		complaintsRepository,
-	);
+	const createComplaintUseCase = new CreateComplaintUseCase(complaintsRepository);
 	const getComplaintsUseCase = new GetComplaintsUseCase(complaintsRepository);
 	const getComplaintUseCase = new GetComplaintUseCase(complaintsRepository);
-	const updateComplaintUseCase = new UpdateComplaintUseCase(
-		complaintsRepository,
-	);
+	const updateComplaintUseCase = new UpdateComplaintUseCase(complaintsRepository);
 	const resolveComplaintUseCase = new ResolveComplaintUseCase(
 		complaintsRepository,
 		jobDispatcher,
@@ -82,37 +73,24 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		companyChecker,
 	);
 	const getResolutionsUseCase = new GetResolutionsUseCase(complaintsRepository);
-	const deleteResolutionUseCase = new DeleteResolutionUseCase(
-		complaintsRepository,
-	);
+	const deleteResolutionUseCase = new DeleteResolutionUseCase(complaintsRepository);
 	const addResolutionAttachmentUseCase = new AddResolutionAttachmentUseCase(
 		complaintsRepository,
 		storageProvider,
 	);
-	const deleteResolutionAttachmentUseCase =
-		new DeleteResolutionAttachmentUseCase(
-			complaintsRepository,
-			storageProvider,
-		);
-	const cancelComplaintUseCase = new CancelComplaintUseCase(
+	const deleteResolutionAttachmentUseCase = new DeleteResolutionAttachmentUseCase(
 		complaintsRepository,
+		storageProvider,
 	);
+	const cancelComplaintUseCase = new CancelComplaintUseCase(complaintsRepository);
 	const createComplaintAttachmentUseCase = new CreateComplaintAttachmentUseCase(
 		complaintsRepository,
 		storageProvider,
 	);
-	const getComplaintsDashboardUseCase = new GetComplaintsDashboardUseCase(
-		complaintsRepository,
-	);
-	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(
-		complaintsRepository,
-	);
-	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(
-		complaintsRepository,
-	);
-	const getComplaintVoteUseCase = new GetComplaintVoteUseCase(
-		complaintsRepository,
-	);
+	const getComplaintsDashboardUseCase = new GetComplaintsDashboardUseCase(complaintsRepository);
+	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(complaintsRepository);
+	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(complaintsRepository);
+	const getComplaintVoteUseCase = new GetComplaintVoteUseCase(complaintsRepository);
 
 	typedApp.addHook("onRequest", async (request) => {
 		if ((request.routeOptions.config as { public?: boolean })?.public) return;
@@ -169,7 +147,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		async (request, reply) => {
 			const userId = request.user.sub;
 			const dashboard = await getComplaintsDashboardUseCase.execute({ userId });
-
 			return reply.send({ dashboard });
 		},
 	);
@@ -221,11 +198,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Get complaint by id",
-				description:
-					"Returns the full complaint data for the authenticated user.",
-				params: z.object({
-					id: z.uuid(),
-				}),
+				description: "Returns the full complaint data for the authenticated user.",
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
@@ -239,34 +213,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				userId,
 				complaintId: request.params.id,
 			});
-
-			return reply.send({ complaint });
-		},
-	);
-
-	typedApp.post(
-		"/complaints/manual",
-		{
-			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
-				summary: "Create manual complaint",
-				description:
-					"Creates a complaint from existing media with address provided by the user.",
-				body: createComplaintManualSchema,
-				response: {
-					200: z.object({ complaint: complaintSchema }),
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const complaint = await createComplaintManualUseCase.execute({
-				userId,
-				data: request.body,
-			});
-
 			return reply.send({ complaint });
 		},
 	);
@@ -276,14 +222,13 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
-				summary: "Create automatic complaint",
+				summary: "Create complaint",
 				description:
-					"Creates a complaint with raw geospatial data and no attachment.",
+					"Creates a new complaint with geospatial data. Pass `heading: null` when the device heading is unavailable.",
 				body: createComplaintSchema,
 				response: {
 					200: z.object({ complaint: complaintSchema }),
 					401: appErrorSchema,
-					404: appErrorSchema,
 				},
 			}),
 		},
@@ -293,7 +238,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				userId,
 				data: request.body,
 			});
-
 			return reply.send({ complaint });
 		},
 	);
@@ -304,10 +248,9 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Update complaint",
-				description: "Updates only the basic complaint fields: observations.",
-				params: z.object({
-					id: z.uuid(),
-				}),
+				description:
+					"Updates complaint fields. Accepts any combination of `date`, `type`, `observations`, and `geospatial`.",
+				params: z.object({ id: z.uuid() }),
 				body: updateComplaintSchema,
 				response: {
 					200: z.object({ complaint: complaintSchema }),
@@ -323,7 +266,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				complaintId: request.params.id,
 				data: request.body,
 			});
-
 			return reply.send({ complaint });
 		},
 	);
@@ -336,9 +278,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				summary: "Resolve complaint",
 				description:
 					"Marks the authenticated user's complaint as resolved. Requires a resolution description.",
-				params: z.object({
-					id: z.uuid(),
-				}),
+				params: z.object({ id: z.uuid() }),
 				body: submitResolutionSchema,
 				response: {
 					200: z.object({ complaint: complaintSchema }),
@@ -355,7 +295,31 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				complaintId: request.params.id,
 				resolution: request.body,
 			});
+			return reply.send({ complaint });
+		},
+	);
 
+	typedApp.patch(
+		"/complaints/:id/canceled",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_TAG],
+				summary: "Cancel complaint",
+				description: "Marks the authenticated user's complaint as canceled.",
+				params: z.object({ id: z.uuid() }),
+				response: {
+					200: z.object({ complaint: complaintSchema }),
+					401: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			const complaint = await cancelComplaintUseCase.execute({
+				userId,
+				complaintId: request.params.id,
+			});
 			return reply.send({ complaint });
 		},
 	);
@@ -517,8 +481,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Delete my resolution",
-				description:
-					"Deletes the authenticated user's resolution for this complaint.",
+				description: "Deletes the authenticated user's resolution for this complaint.",
 				params: z.object({ id: z.uuid() }),
 				response: {
 					204: z.undefined(),
@@ -608,53 +571,21 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 	);
 
-	typedApp.patch(
-		"/complaints/:id/canceled",
-		{
-			schema: withBearerAuth({
-				tags: [COMPLAINTS_TAG],
-				summary: "Cancel complaint",
-				description: "Marks the authenticated user's complaint as canceled.",
-				params: z.object({
-					id: z.uuid(),
-				}),
-				response: {
-					200: z.object({ complaint: complaintSchema }),
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const userId = request.user.sub;
-			const complaint = await cancelComplaintUseCase.execute({
-				userId,
-				complaintId: request.params.id,
-			});
-
-			return reply.send({ complaint });
-		},
-	);
-
 	typedApp.post(
-		"/complaints/:id/captures/:captureId/attachments",
+		"/complaints/:id/attachments",
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_ATTACHMENTS_TAG],
-				summary: "Create complaint capture attachment",
+				summary: "Upload complaint attachment",
 				description:
-					"Uploads and attaches a file to an existing complaint capture.",
+					"Uploads and attaches a file to an existing complaint. Send one file per request.",
 				consumes: ["multipart/form-data"],
-				params: z.object({
-					id: z.uuid(),
-					captureId: z.uuid(),
-				}),
+				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
 					400: appErrorSchema,
 					401: appErrorSchema,
 					404: appErrorSchema,
-					409: appErrorSchema,
 					500: appErrorSchema,
 				},
 			}),
@@ -673,7 +604,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 
 			const complaint = await createComplaintAttachmentUseCase.execute({
 				userId,
-				capture_id: request.params.captureId,
+				complaintId: request.params.id,
 				file: {
 					fileName: file.filename,
 					mimeType: file.mimetype,

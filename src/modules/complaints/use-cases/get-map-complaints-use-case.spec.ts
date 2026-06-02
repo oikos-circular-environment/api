@@ -47,12 +47,10 @@ describe("get-map-complaints-use-case", () => {
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		// manually set one to RESOLVED
@@ -72,12 +70,10 @@ describe("get-map-complaints-use-case", () => {
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		const items = await sut.execute({
@@ -98,12 +94,10 @@ describe("get-map-complaints-use-case", () => {
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		const resolved = complaintsRepository.complaints[1];
@@ -120,14 +114,13 @@ describe("get-map-complaints-use-case", () => {
 		expect(items[0]?.status).toBe("RESOLVED");
 	});
 
-	it("returns items with correct MapComplaintItem shape including captures", async () => {
+	it("returns items with correct MapComplaintItem shape including attachments", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
@@ -137,13 +130,12 @@ describe("get-map-complaints-use-case", () => {
 		expect(item).toMatchObject({
 			type: "VACANT_LOT",
 			status: "OPEN",
-			complaint_method: "AUTOMATIC",
 			location: { lat: -23.55, lon: -46.63 },
 			vote_counts: { resolved: 0, not_resolved: 0 },
 			resolution_count: 0,
 		});
-		expect(item?.captures).toHaveLength(1);
-		expect(item?.captures[0]?.geospatial).toBeDefined();
+		expect(item?.attachments).toHaveLength(0);
+		expect(item?.geospatial).toBeDefined();
 		expect(item?.id).toBeDefined();
 		expect(item?.created_at).toBeInstanceOf(Date);
 	});
@@ -155,7 +147,6 @@ describe("get-map-complaints-use-case", () => {
 		await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });

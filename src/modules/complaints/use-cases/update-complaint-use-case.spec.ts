@@ -39,7 +39,7 @@ const geospatial: Geospatial = {
 };
 
 describe("update-complaint-use-case", () => {
-	it("updates complaint observations on latest capture", async () => {
+	it("updates complaint observations", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new UpdateComplaintUseCase(complaintsRepository);
 
@@ -51,20 +51,67 @@ describe("update-complaint-use-case", () => {
 				observations: "Inicial",
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
 			complaintId: created.id,
-			data: {
-				observations: "Atualizada",
-			},
+			data: { observations: "Atualizada" },
 		});
 
 		expect(result.id).toBe(created.id);
-		expect(result.type).toBe("BURNING");
-		expect(result.captures[0]?.observations).toBe("Atualizada");
+		expect(result.observations).toBe("Atualizada");
+	});
+
+	it("updates complaint type", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new UpdateComplaintUseCase(complaintsRepository);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+		);
+
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			complaintId: created.id,
+			data: { type: "DEFORESTATION" },
+		});
+
+		expect(result.type).toBe("DEFORESTATION");
+	});
+
+	it("updates complaint geospatial", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new UpdateComplaintUseCase(complaintsRepository);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+		);
+
+		const updatedGeospatial: Geospatial = {
+			...geospatial,
+			addresses: { ...geospatial.addresses, city: "Rio de Janeiro" },
+		};
+
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			complaintId: created.id,
+			data: { geospatial: updatedGeospatial },
+		});
+
+		expect(result.geospatial.addresses.city).toBe("Rio de Janeiro");
 	});
 
 	it("throws when complaint does not exist", async () => {
@@ -77,9 +124,7 @@ describe("update-complaint-use-case", () => {
 			await sut.execute({
 				userId: "11111111-1111-1111-1111-111111111111",
 				complaintId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
-				data: {
-					observations: "Nova observacao",
-				},
+				data: { observations: "Nova observacao" },
 			});
 		} catch (error) {
 			thrownError = error;

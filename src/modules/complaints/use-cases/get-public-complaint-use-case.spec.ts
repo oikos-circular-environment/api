@@ -48,7 +48,6 @@ describe("get-public-complaint-use-case", () => {
 		const created = await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "BURNING", observations: "some obs", geospatial },
-			"AUTOMATIC",
 		);
 
 		const result = await sut.execute({ complaintId: created.id });
@@ -56,9 +55,8 @@ describe("get-public-complaint-use-case", () => {
 		expect(result.id).toBe(created.id);
 		expect(result.type).toBe("BURNING");
 		expect(result.status).toBe("OPEN");
-		expect(result.complaint_method).toBe("AUTOMATIC");
-		expect(result.location).toBeNull();
-		expect(result.captures).toHaveLength(1);
+		expect(result.location).toEqual({ lat: -23.55, lon: -46.63 });
+		expect(result.attachments).toHaveLength(0);
 		expect(result.resolutions).toHaveLength(0);
 		expect(result.vote_counts).toEqual({ resolved: 0, not_resolved: 0 });
 	});
@@ -83,7 +81,6 @@ describe("get-public-complaint-use-case", () => {
 		const created = await complaintsRepository.createForUser(
 			USER_A,
 			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		complaintsRepository.resolutions.push({

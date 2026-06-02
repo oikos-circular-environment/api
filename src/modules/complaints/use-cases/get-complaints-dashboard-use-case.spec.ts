@@ -50,7 +50,6 @@ describe("get-complaints-dashboard-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const pendingComplaint = await complaintsRepository.createForUser(
@@ -61,7 +60,6 @@ describe("get-complaints-dashboard-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		await complaintsRepository.updateStatusByUserAndComplaintId(
@@ -84,7 +82,6 @@ describe("get-complaints-dashboard-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		await complaintsRepository.updateStatusByUserAndComplaintId(

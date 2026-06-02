@@ -52,7 +52,6 @@ describe("resolve-complaint-use-case", () => {
 		const created = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date("2026-04-20T10:00:00.000Z"), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		await sut.execute({ userId: USER_ID, complaintId: created.id, resolution });
@@ -95,7 +94,6 @@ describe("resolve-complaint-use-case", () => {
 		const created = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, created.id, "RESOLVED");
 
@@ -122,7 +120,6 @@ describe("resolve-complaint-use-case", () => {
 		const created = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		await sut.execute({ userId: USER_ID, complaintId: created.id, resolution });

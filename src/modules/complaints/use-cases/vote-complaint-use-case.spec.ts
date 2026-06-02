@@ -49,7 +49,6 @@ describe("vote-complaint-use-case", () => {
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		const vote = await sut.execute({
@@ -92,7 +91,6 @@ describe("vote-complaint-use-case", () => {
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, complaint.id, "RESOLVED");
 
@@ -117,7 +115,6 @@ describe("vote-complaint-use-case", () => {
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, complaint.id, "CANCELED");
 
@@ -142,7 +139,6 @@ describe("vote-complaint-use-case", () => {
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		await sut.execute({ userId: OTHER_USER_ID, complaintId: complaint.id, voteType: "RESOLVED" });
@@ -169,7 +165,6 @@ describe("vote-complaint-use-case", () => {
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial },
-			"AUTOMATIC",
 		);
 
 		await sut.execute({ userId: OTHER_USER_ID, complaintId: complaint.id, voteType: "RESOLVED" });

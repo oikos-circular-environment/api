@@ -1,8 +1,6 @@
 import { prisma } from "@/lib/prisma.js";
 import {
 	type Complaint,
-	type ComplaintCapture,
-	type ComplaintMethod,
 	type ComplaintStatus,
 	type ComplaintVote,
 	type ComplaintVoteType,
@@ -18,18 +16,12 @@ import {
 	type SaveResolutionAttachment,
 	type SubmitResolution,
 	type UpdateComplaint,
-	geospatialReadSchema,
+	geospatialSchema,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
-const captureInclude = {
-	attachments: true,
-} as const;
-
 const complaintInclude = {
-	captures: {
-		include: captureInclude,
-	},
+	attachments: true,
 	votes: true,
 	resolutions: true,
 } as const;
@@ -38,25 +30,19 @@ type PrismaComplaintPayload = {
 	id: string;
 	status: ComplaintStatus;
 	type: Complaint["type"];
-	complaint_method: ComplaintMethod;
+	date: Date;
 	observations: string | null;
+	geospatial: unknown;
 	created_at: Date;
-	captures: Array<{
+	attachments: Array<{
 		id: string;
-		date: Date;
-		observations: string | null;
-		geospatial: unknown;
+		url: string;
+		file_name: string;
+		path: string;
+		base64: string;
+		metadata: unknown;
+		type: "PHOTO" | "VIDEO";
 		created_at: Date;
-		attachments: Array<{
-			id: string;
-			url: string;
-			file_name: string;
-			path: string;
-			base64: string;
-			metadata: unknown;
-			type: "PHOTO" | "VIDEO";
-			created_at: Date;
-		}>;
 	}>;
 	votes: Array<{
 		vote_type: "RESOLVED" | "NOT_RESOLVED";
@@ -69,27 +55,19 @@ function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 		id: payload.id,
 		type: payload.type,
 		status: payload.status,
-		complaint_method: payload.complaint_method,
+		date: payload.date,
 		observations: payload.observations,
-		captures: payload.captures.map(
-			(capture): ComplaintCapture => ({
-				id: capture.id,
-				date: capture.date,
-				observations: capture.observations,
-				geospatial: geospatialReadSchema.parse(capture.geospatial),
-				attachments: capture.attachments.map((attachment) => ({
-					id: attachment.id,
-					url: attachment.url,
-					file_name: attachment.file_name,
-					path: attachment.path,
-					base64: attachment.base64,
-					metadata: (attachment.metadata as Record<string, unknown> | null) ?? null,
-					type: attachment.type,
-					created_at: attachment.created_at,
-				})),
-				created_at: capture.created_at,
-			}),
-		),
+		geospatial: geospatialSchema.parse(payload.geospatial),
+		attachments: payload.attachments.map((a) => ({
+			id: a.id,
+			url: a.url,
+			file_name: a.file_name,
+			path: a.path,
+			base64: a.base64,
+			metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+			type: a.type,
+			created_at: a.created_at,
+		})),
 		vote_counts: {
 			resolved: payload.votes.filter((v) => v.vote_type === "RESOLVED").length,
 			not_resolved: payload.votes.filter((v) => v.vote_type === "NOT_RESOLVED")
@@ -115,9 +93,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				...(filters?.type && { type: filters.type }),
 			},
 			include: complaintInclude,
-			orderBy: {
-				created_at: "desc",
-			},
+			orderBy: { created_at: "desc" },
 			take: limit + 1,
 		});
 
@@ -126,73 +102,24 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 
 	async findByUserAndComplaintId(userId: string, complaintId: string) {
 		const complaint = await prisma.complaint.findFirst({
-			where: {
-				id: complaintId,
-				user_id: userId,
-			},
+			where: { id: complaintId, user_id: userId },
 			include: complaintInclude,
 		});
 
-		if (!complaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		return mapComplaint(complaint as PrismaComplaintPayload);
 	}
 
-	async findCaptureByUserAndCaptureId(userId: string, captureId: string) {
-		const capture = await prisma.complaintCapture.findFirst({
-			where: {
-				id: captureId,
-				complaint: {
-					user_id: userId,
-				},
-			},
-			include: captureInclude,
-		});
-
-		if (!capture) {
-			return null;
-		}
-
-		return {
-			id: capture.id,
-			date: capture.date,
-			observations: capture.observations,
-			geospatial: geospatialReadSchema.parse(capture.geospatial),
-			attachments: capture.attachments.map((attachment) => ({
-				id: attachment.id,
-				url: attachment.url,
-				file_name: attachment.file_name,
-				path: attachment.path,
-				base64: attachment.base64,
-				metadata: (attachment.metadata as Record<string, unknown> | null) ?? null,
-				type: attachment.type as "PHOTO" | "VIDEO",
-				created_at: attachment.created_at,
-			})),
-			created_at: capture.created_at,
-		} satisfies ComplaintCapture;
-	}
-
-	async createForUser(
-		userId: string,
-		data: CreateComplaint,
-		method: ComplaintMethod,
-	) {
+	async createForUser(userId: string, data: CreateComplaint) {
 		const complaint = await prisma.complaint.create({
 			data: {
 				user_id: userId,
 				type: data.type,
-				complaint_method: method,
+				date: data.date,
 				status: "OPEN",
-				observations: method === "MANUAL" ? (data.observations ?? null) : null,
-				captures: {
-					create: {
-						date: data.date,
-						observations: method === "AUTOMATIC" ? (data.observations ?? null) : null,
-						geospatial: data.geospatial,
-					},
-				},
+				observations: data.observations ?? null,
+				geospatial: data.geospatial,
 			},
 			include: complaintInclude,
 		});
@@ -213,38 +140,33 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 		data: UpdateComplaint,
 	) {
-		const complaint = await prisma.complaint.findFirst({
-			where: {
-				id: complaintId,
-				user_id: userId,
-			},
-			include: {
-				captures: {
-					orderBy: { created_at: "desc" },
-					take: 1,
-				},
-			},
+		const exists = await prisma.complaint.findFirst({
+			where: { id: complaintId, user_id: userId },
+			select: { id: true },
 		});
 
-		if (!complaint) {
-			return null;
-		}
+		if (!exists) return null;
 
-		if (data.observations !== undefined) {
-			if (complaint.complaint_method === "MANUAL") {
-				await prisma.complaint.update({
-					where: { id: complaintId },
-					data: { observations: data.observations },
-				});
-			} else {
-				const latestCapture = complaint.captures[0];
-				if (latestCapture) {
-					await prisma.complaintCapture.update({
-						where: { id: latestCapture.id },
-						data: { observations: data.observations },
-					});
-				}
-			}
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		const updateData: Record<string, any> = {};
+		if (data.date !== undefined) updateData.date = data.date;
+		if (data.type !== undefined) updateData.type = data.type;
+		if (data.observations !== undefined) updateData.observations = data.observations;
+		if (data.geospatial !== undefined) updateData.geospatial = data.geospatial;
+
+		await prisma.complaint.update({
+			where: { id: complaintId },
+			data: updateData,
+		});
+
+		if (data.geospatial) {
+			const { latitude, longitude } = data.geospatial.location.coords;
+			await prisma.$executeRawUnsafe(
+				`UPDATE complaints SET location = ST_SetSRID(ST_MakePoint($1, $2), 4326)::geography WHERE id = $3`,
+				longitude,
+				latitude,
+				complaintId,
+			);
 		}
 
 		return this.findByUserAndComplaintId(userId, complaintId);
@@ -256,45 +178,30 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		status: ComplaintStatus,
 	) {
 		const updatedRows = await prisma.complaint.updateMany({
-			where: {
-				id: complaintId,
-				user_id: userId,
-			},
+			where: { id: complaintId, user_id: userId },
 			data: { status },
 		});
 
-		if (updatedRows.count === 0) {
-			return null;
-		}
+		if (updatedRows.count === 0) return null;
 
 		return this.findByUserAndComplaintId(userId, complaintId);
 	}
 
-	async attachByCaptureId(
+	async attachByComplaintId(
 		userId: string,
-		captureId: string,
+		complaintId: string,
 		data: SaveComplaintAttachment,
 	) {
-		const capture = await prisma.complaintCapture.findFirst({
-			where: {
-				id: captureId,
-				complaint: {
-					user_id: userId,
-				},
-			},
-			select: {
-				id: true,
-				complaint_id: true,
-			},
+		const complaint = await prisma.complaint.findFirst({
+			where: { id: complaintId, user_id: userId },
+			select: { id: true },
 		});
 
-		if (!capture) {
-			return null;
-		}
+		if (!complaint) return null;
 
 		await prisma.complaintAttachment.create({
 			data: {
-				capture_id: captureId,
+				complaint_id: complaintId,
 				url: data.url,
 				file_name: data.file_name,
 				path: data.path,
@@ -305,7 +212,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			},
 		});
 
-		return this.findByUserAndComplaintId(userId, capture.complaint_id);
+		return this.findByUserAndComplaintId(userId, complaintId);
 	}
 
 	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
@@ -333,44 +240,36 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		const complaints = await prisma.complaint.findMany({
 			where: { id: { in: ids } },
 			include: {
-				captures: { include: { attachments: true } },
+				attachments: true,
 				votes: { select: { vote_type: true } },
 				_count: { select: { resolutions: true } },
 			},
 		});
 
 		return complaints.map((c) => {
-			const firstGeo = c.captures[0]?.geospatial as {
-				location?: { coords?: { latitude?: number; longitude?: number } };
-			} | null;
-			const coords = firstGeo?.location?.coords;
+			const geo = geospatialSchema.parse(c.geospatial);
+			const coords = geo.location.coords;
 
 			return {
 				id: c.id,
 				type: c.type as MapComplaintItem["type"],
 				status: c.status as MapComplaintItem["status"],
-				complaint_method: c.complaint_method as MapComplaintItem["complaint_method"],
+				date: c.date,
 				observations: c.observations,
+				geospatial: geo,
 				location:
-					coords?.latitude != null && coords?.longitude != null
+					coords.latitude != null && coords.longitude != null
 						? { lat: coords.latitude, lon: coords.longitude }
 						: null,
-				captures: c.captures.map((cap) => ({
-					id: cap.id,
-					date: cap.date,
-					observations: cap.observations,
-					geospatial: geospatialReadSchema.parse(cap.geospatial),
-					attachments: cap.attachments.map((a) => ({
-						id: a.id,
-						url: a.url,
-						file_name: a.file_name,
-						path: a.path,
-						base64: a.base64,
-						metadata: (a.metadata as Record<string, unknown> | null) ?? null,
-						type: a.type as "PHOTO" | "VIDEO",
-						created_at: a.created_at,
-					})),
-					created_at: cap.created_at,
+				attachments: c.attachments.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					path: a.path,
+					base64: a.base64,
+					metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+					type: a.type as "PHOTO" | "VIDEO",
+					created_at: a.created_at,
 				})),
 				vote_counts: {
 					resolved: c.votes.filter((v) => v.vote_type === "RESOLVED").length,
@@ -386,7 +285,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		const complaint = await prisma.complaint.findUnique({
 			where: { id: complaintId },
 			include: {
-				captures: { include: { attachments: true } },
+				attachments: true,
 				votes: { select: { vote_type: true } },
 				resolutions: {
 					include: {
@@ -405,32 +304,30 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 
 		if (!complaint) return null;
 
+		const geo = geospatialSchema.parse(complaint.geospatial);
+		const coords = geo.location.coords;
+
 		return {
 			id: complaint.id,
 			type: complaint.type as PublicComplaint["type"],
 			status: complaint.status as PublicComplaint["status"],
-			complaint_method: complaint.complaint_method as PublicComplaint["complaint_method"],
+			date: complaint.date,
 			observations: complaint.observations,
-			location: null,
-			captures: complaint.captures.map(
-				(c): ComplaintCapture => ({
-					id: c.id,
-					date: c.date,
-					observations: c.observations,
-					geospatial: geospatialReadSchema.parse(c.geospatial),
-					attachments: c.attachments.map((a) => ({
-						id: a.id,
-						url: a.url,
-						file_name: a.file_name,
-						path: a.path,
-						base64: a.base64,
-						metadata: (a.metadata as Record<string, unknown> | null) ?? null,
-						type: a.type as "PHOTO" | "VIDEO",
-						created_at: a.created_at,
-					})),
-					created_at: c.created_at,
-				}),
-			),
+			geospatial: geo,
+			location:
+				coords.latitude != null && coords.longitude != null
+					? { lat: coords.latitude, lon: coords.longitude }
+					: null,
+			attachments: complaint.attachments.map((a) => ({
+				id: a.id,
+				url: a.url,
+				file_name: a.file_name,
+				path: a.path,
+				base64: a.base64,
+				metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+				type: a.type as "PHOTO" | "VIDEO",
+				created_at: a.created_at,
+			})),
 			vote_counts: {
 				resolved: complaint.votes.filter((v) => v.vote_type === "RESOLVED").length,
 				not_resolved: complaint.votes.filter((v) => v.vote_type === "NOT_RESOLVED").length,
@@ -642,12 +539,8 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	async getDashboardByUserId(userId: string) {
 		const groupedStatuses = await prisma.complaint.groupBy({
 			by: ["status"],
-			where: {
-				user_id: userId,
-			},
-			_count: {
-				status: true,
-			},
+			where: { user_id: userId },
+			_count: { status: true },
 		});
 
 		const byStatus = new Map<ComplaintStatus, number>();

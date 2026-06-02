@@ -1,7 +1,5 @@
 import type {
 	Complaint,
-	ComplaintCapture,
-	ComplaintMethod,
 	ComplaintResume,
 	ComplaintStatus,
 	ComplaintVote,
@@ -30,15 +28,9 @@ export interface ComplaintsRepository {
 		complaintId: string,
 	): Promise<Complaint | null>;
 
-	findCaptureByUserAndCaptureId(
-		userId: string,
-		captureId: string,
-	): Promise<ComplaintCapture | null>;
-
 	createForUser(
 		userId: string,
 		data: CreateComplaint,
-		method: ComplaintMethod,
 	): Promise<Complaint>;
 
 	updateByUserAndComplaintId(
@@ -53,9 +45,9 @@ export interface ComplaintsRepository {
 		status: ComplaintStatus,
 	): Promise<Complaint | null>;
 
-	attachByCaptureId(
+	attachByComplaintId(
 		userId: string,
-		captureId: string,
+		complaintId: string,
 		data: SaveComplaintAttachment,
 	): Promise<Complaint | null>;
 

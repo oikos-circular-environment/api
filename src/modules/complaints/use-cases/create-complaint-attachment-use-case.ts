@@ -15,7 +15,7 @@ type SupportedComplaintAttachmentMimeType =
 
 type CreateComplaintAttachmentUseCaseRequest = {
 	userId: string;
-	capture_id: string;
+	complaintId: string;
 	file: {
 		fileName: string;
 		mimeType: string;
@@ -31,17 +31,16 @@ export class CreateComplaintAttachmentUseCase {
 
 	async execute({
 		userId,
-		capture_id,
+		complaintId,
 		file,
 	}: CreateComplaintAttachmentUseCaseRequest): Promise<Complaint> {
-		const capture =
-			await this.complaintsRepository.findCaptureByUserAndCaptureId(
-				userId,
-				capture_id,
-			);
+		const complaint = await this.complaintsRepository.findByUserAndComplaintId(
+			userId,
+			complaintId,
+		);
 
-		if (!capture) {
-			throw new AppError("Capture not found", "CAPTURE_NOT_FOUND", 404);
+		if (!complaint) {
+			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
 		}
 
 		if (!(file.mimeType in COMPLAINT_ATTACHMENT_MIME_TYPES)) {
@@ -65,7 +64,7 @@ export class CreateComplaintAttachmentUseCase {
 				file.mimeType as SupportedComplaintAttachmentMimeType
 			];
 
-		const filePath = `complaints/${capture_id}.${extension}`;
+		const filePath = `complaints/${complaintId}/${Date.now()}.${extension}`;
 
 		const uploadResult = await this.storageProvider.uploadFile(
 			filePath,
@@ -82,18 +81,21 @@ export class CreateComplaintAttachmentUseCase {
 
 		const { url } = await this.storageProvider.getFileUrl(filePath);
 
-		const updatedComplaint =
-			await this.complaintsRepository.attachByCaptureId(userId, capture_id, {
+		const updatedComplaint = await this.complaintsRepository.attachByComplaintId(
+			userId,
+			complaintId,
+			{
 				url,
 				file_name: file.fileName,
 				path: filePath,
 				base64: file.content.toString("base64"),
 				type: "PHOTO",
 				metadata: null,
-			});
+			},
+		);
 
 		if (!updatedComplaint) {
-			throw new AppError("Capture not found", "CAPTURE_NOT_FOUND", 404);
+			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
 		}
 
 		return updatedComplaint;

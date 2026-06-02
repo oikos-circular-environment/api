@@ -18,6 +18,6 @@ export class CreateComplaintUseCase {
 		userId,
 		data,
 	}: CreateComplaintUseCaseRequest): Promise<Complaint> {
-		return this.complaintsRepository.createForUser(userId, data, "AUTOMATIC");
+		return this.complaintsRepository.createForUser(userId, data);
 	}
 }

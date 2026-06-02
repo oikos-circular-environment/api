@@ -53,7 +53,6 @@ describe("get-complaints-use-case", () => {
 				observations: "Lote com entulho",
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		await complaintsRepository.createForUser(
@@ -64,7 +63,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const { complaints } = await sut.execute({ userId: USER_A, limit: 20 });
@@ -100,7 +98,6 @@ describe("get-complaints-use-case", () => {
 					observations: null,
 					geospatial,
 				},
-				"AUTOMATIC",
 			);
 		}
 
@@ -130,7 +127,6 @@ describe("get-complaints-use-case", () => {
 					observations: null,
 					geospatial,
 				},
-				"AUTOMATIC",
 			);
 		}
 
@@ -160,7 +156,6 @@ describe("get-complaints-use-case", () => {
 					observations: null,
 					geospatial,
 				},
-				"AUTOMATIC",
 			);
 		}
 
@@ -201,7 +196,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
@@ -211,7 +205,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const { complaints } = await sut.execute({
@@ -236,7 +229,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(
 			USER_A,
@@ -252,7 +244,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const { complaints } = await sut.execute({
@@ -277,7 +268,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const c2 = await complaintsRepository.createForUser(
@@ -288,7 +278,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(
 			USER_A,
@@ -304,7 +293,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const { complaints } = await sut.execute({
@@ -330,7 +318,6 @@ describe("get-complaints-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const { complaints, next_cursor } = await sut.execute({

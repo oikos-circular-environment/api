@@ -51,7 +51,6 @@ describe("cancel-complaint-use-case", () => {
 				observations: null,
 				geospatial,
 			},
-			"AUTOMATIC",
 		);
 
 		const result = await sut.execute({

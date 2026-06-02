@@ -26,7 +26,8 @@ describe('applyQuorumResolution — fluxo de quórum', () => {
         user_id: ownerId,
         status: 'OPEN',
         type: 'BURNING',
-        complaint_method: 'AUTOMATIC',
+        date: new Date(),
+        geospatial: {},
       },
     });
     createdComplaintIds.push(c.id);

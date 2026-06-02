@@ -50,11 +50,6 @@ enum ComplaintStatus {
   CANCELED
 }
 
-enum ComplaintMethod {
-  AUTOMATIC
-  MANUAL
-}
-
 enum ComplaintVoteType {
   RESOLVED
   NOT_RESOLVED
