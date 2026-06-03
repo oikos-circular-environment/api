@@ -17,27 +17,14 @@ export const createCompanyInputSchema = z.object({
 	identity_type: identityTypeSchema,
 	company_type: companyTypeSchema,
 	status: z.boolean().default(true),
-	is_headquarters: z.boolean().default(false),
-	business_name: z.string().optional().nullable(),
+	business_name: z.string().min(1, "Business name is required"),
 	corporate_name: z.string().min(1, "Corporate name is required"),
-	accept_appointments: z.boolean().default(false),
 	email: z.email("Invalid email address").optional().nullable(),
 	phones: z.array(z.string().min(1, "Phone is required")),
 	started_activity_in: z.coerce.date(),
-	description: z.string().optional().nullable(),
 });
 
-export const createCompanySchema = createCompanyInputSchema.superRefine(
-	(data, ctx) => {
-		if (data.identity_type === "CPF" && !data.business_name) {
-			ctx.addIssue({
-				code: z.ZodIssueCode.custom,
-				message: "business_name is required for CPF identity type",
-				path: ["business_name"],
-			});
-		}
-	},
-);
+export const createCompanySchema = createCompanyInputSchema;
 
 export type CreateCompany = z.infer<typeof createCompanySchema>;
 
@@ -45,23 +32,12 @@ export const updateCompanyInputSchema = createCompanyInputSchema
 	.partial()
 	.omit({ user_id: true });
 
-export const updateCompanySchema = updateCompanyInputSchema.superRefine(
-	(data, ctx) => {
-		if (data.identity_type === "CPF" && !data.business_name) {
-			ctx.addIssue({
-				code: z.ZodIssueCode.custom,
-				message: "business_name is required for CPF identity type",
-				path: ["business_name"],
-			});
-		}
-	},
-);
+export const updateCompanySchema = updateCompanyInputSchema;
 
 export type UpdateCompany = z.infer<typeof updateCompanySchema>;
 
 export const companySchema = createCompanyInputSchema.extend({
 	id: z.string(),
-	description: z.string().nullable(),
 	avatar: z
 		.object({
 			id: z.string(),

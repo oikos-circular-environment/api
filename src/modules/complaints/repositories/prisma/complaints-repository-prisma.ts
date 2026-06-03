@@ -337,8 +337,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 					? {
 							type: "company",
 							corporate_name: r.company.corporate_name,
-							business_name: r.company.business_name ?? null,
-							description: r.company.description ?? null,
+							business_name: r.company.business_name,
 							avatar_url: (r.company.avatar as { url?: string } | null)?.url ?? null,
 						}
 					: {
@@ -441,8 +440,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				? {
 						type: "company" as const,
 						corporate_name: r.company.corporate_name,
-						business_name: r.company.business_name ?? null,
-						description: r.company.description ?? null,
+						business_name: r.company.business_name,
 						avatar_url: (r.company.avatar as { url?: string } | null)?.url ?? null,
 					}
 				: null,

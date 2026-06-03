@@ -14,14 +14,11 @@ describe("update-company-use-case", () => {
 			identity_type: "CPF",
 			company_type: "COMPANY",
 			status: true,
-			is_headquarters: false,
 			business_name: "Oikos Tech",
 			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
 			email: "contato@oikos.dev",
 			phones: ["5511999999999"],
 			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-			description: null,
 		});
 
 		const result = await sut.execute({
@@ -32,10 +29,8 @@ describe("update-company-use-case", () => {
 				identity_type: "CNPJ",
 				company_type: "ONG",
 				status: false,
-				is_headquarters: true,
 				business_name: "Oikos Solidaria",
 				corporate_name: "Oikos Solidaria SA",
-				accept_appointments: true,
 				email: "solidaria@oikos.dev",
 				phones: ["5511777777777", "5511666666666"],
 			},
@@ -45,10 +40,8 @@ describe("update-company-use-case", () => {
 		expect(result?.identity_type).toBe("CNPJ");
 		expect(result?.company_type).toBe("ONG");
 		expect(result?.status).toBe(false);
-		expect(result?.is_headquarters).toBe(true);
 		expect(result?.business_name).toBe("Oikos Solidaria");
 		expect(result?.corporate_name).toBe("Oikos Solidaria SA");
-		expect(result?.accept_appointments).toBe(true);
 		expect(result?.email).toBe("solidaria@oikos.dev");
 		expect(result?.phones).toStrictEqual(["5511777777777", "5511666666666"]);
 	});
@@ -90,14 +83,11 @@ describe("update-company-use-case", () => {
 			identity_type: "CPF",
 			company_type: "COMPANY",
 			status: true,
-			is_headquarters: false,
 			business_name: "Oikos Tech",
 			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
 			email: "contato@oikos.dev",
 			phones: ["5511999999999"],
 			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-			description: null,
 		});
 
 		let thrownError: unknown;

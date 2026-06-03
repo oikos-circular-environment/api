@@ -10,14 +10,11 @@ const baseCompany = {
 	identity_type: "CPF" as const,
 	company_type: "COMPANY" as const,
 	status: true,
-	is_headquarters: false,
 	business_name: "Oikos Tech",
 	corporate_name: "Oikos Tech LTDA",
-	accept_appointments: false,
 	email: "contato@oikos.dev",
 	phones: ["5511999999999"],
 	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-	description: null,
 };
 
 describe("get-company-address-use-case", () => {

@@ -13,14 +13,11 @@ describe("get-company-use-case", () => {
 			identity_type: "CPF",
 			company_type: "COMPANY",
 			status: true,
-			is_headquarters: true,
 			business_name: "Oikos Tech",
 			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: true,
 			email: "contato@oikos.dev",
 			phones: ["5511999999999"],
 			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-			description: null,
 		});
 
 		await companiesRepository.create({
@@ -29,14 +26,11 @@ describe("get-company-use-case", () => {
 			identity_type: "CNPJ",
 			company_type: "ONG",
 			status: true,
-			is_headquarters: false,
-			business_name: null,
+			business_name: "Nova Oikos",
 			corporate_name: "Nova Oikos SA",
-			accept_appointments: false,
 			email: null,
 			phones: ["5511777777777"],
 			started_activity_in: new Date("2025-01-01T00:00:00.000Z"),
-			description: null,
 		});
 
 		const result = await sut.execute({

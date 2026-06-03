@@ -180,8 +180,7 @@ export type PaginatedComplaints = z.infer<typeof paginatedComplaintsSchema>;
 export const resolverCompanySchema = z.object({
 	type: z.literal("company"),
 	corporate_name: z.string(),
-	business_name: z.string().nullable(),
-	description: z.string().nullable(),
+	business_name: z.string(),
 	avatar_url: z.string().nullable(),
 });
 

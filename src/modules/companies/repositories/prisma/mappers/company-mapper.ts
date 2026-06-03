@@ -7,14 +7,11 @@ export type PrismaCompany = {
 	identity_type: "CPF" | "CNPJ";
 	company_type: "ONG" | "COMPANY" | "GOVERNMENT" | "COLLECTOR";
 	status: boolean;
-	is_headquarters: boolean;
-	business_name: string | null;
+	business_name: string;
 	corporate_name: string;
-	accept_appointments: boolean;
 	email: string | null;
 	phones: string[];
 	started_activity_in: Date;
-	description: string | null;
 	created_at: Date;
 	updated_at: Date;
 	avatar: {
@@ -38,14 +35,11 @@ export function companyMapper(company: PrismaCompany): Company | null {
 		identity_type: company.identity_type,
 		company_type: company.company_type,
 		status: company.status,
-		is_headquarters: company.is_headquarters,
 		business_name: company.business_name,
 		corporate_name: company.corporate_name,
-		accept_appointments: company.accept_appointments,
 		email: company.email,
 		phones: company.phones,
 		started_activity_in: company.started_activity_in,
-		description: company.description,
 		avatar: company.avatar
 			? {
 					id: company.avatar.id,

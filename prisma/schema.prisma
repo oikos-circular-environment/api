@@ -66,14 +66,11 @@ model Company {
   identity_type       IdentityType
   company_type        CompanyType
   status              Boolean      @default(true)
-  is_headquarters     Boolean      @default(false)
-  business_name       String?
+  business_name       String
   corporate_name      String
-  accept_appointments Boolean      @default(false)
   email               String?
   phones              String[]
   started_activity_in DateTime
-  description         String?
   created_at          DateTime     @default(now())
   updated_at          DateTime     @updatedAt
 
