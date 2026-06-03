@@ -477,6 +477,16 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	}
 
 	private mapComplaint(complaint: ComplaintEntity): Complaint {
+		const resolvedVotes = this.votes.filter(
+			(v) => v.complaint_id === complaint.id && v.vote_type === "RESOLVED",
+		).length;
+		const notResolvedVotes = this.votes.filter(
+			(v) => v.complaint_id === complaint.id && v.vote_type === "NOT_RESOLVED",
+		).length;
+		const resolutionCount = this.resolutions.filter(
+			(r) => r.complaint_id === complaint.id,
+		).length;
+
 		return {
 			id: complaint.id,
 			type: complaint.type,
@@ -496,8 +506,8 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					type: a.type,
 					created_at: a.created_at,
 				})),
-			vote_counts: { resolved: 0, not_resolved: 0 },
-			resolution_count: 0,
+			vote_counts: { resolved: resolvedVotes, not_resolved: notResolvedVotes },
+			resolution_count: resolutionCount,
 			created_at: complaint.created_at,
 		};
 	}
