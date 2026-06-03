@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpsertCompanyAddressUseCase } from "./upsert-company-address-use-case.js";
 
 const baseCompany = {
@@ -36,12 +37,15 @@ describe("upsert-company-address-use-case", () => {
 	it("creates address when company does not have one", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyAddressUseCase(
 			companiesRepository,
 			addressesRepository,
+			validationRepository,
 		);
 
 		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
@@ -65,12 +69,15 @@ describe("upsert-company-address-use-case", () => {
 	it("updates existing address when company already has one", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyAddressUseCase(
 			companiesRepository,
 			addressesRepository,
+			validationRepository,
 		);
 
 		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
 
 		await addressesRepository.create({
 			...baseAddress,
@@ -95,12 +102,38 @@ describe("upsert-company-address-use-case", () => {
 		expect(addressesRepository.items.length).toBe(1);
 	});
 
-	it("throws when company does not exist", async () => {
+	it("sets address validation to true when address has lat and lng", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyAddressUseCase(
 			companiesRepository,
 			addressesRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: baseAddress,
+		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.address).toBe(true);
+	});
+
+	it("throws when company does not exist", async () => {
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const addressesRepository = new InMemoryAddressesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyAddressUseCase(
+			companiesRepository,
+			addressesRepository,
+			validationRepository,
 		);
 
 		let thrownError: unknown;

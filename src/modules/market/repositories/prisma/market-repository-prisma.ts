@@ -76,6 +76,8 @@ export class MarketRepositoryPrisma implements MarketRepository {
       JOIN addresses a ON a.id = c.address_id
       WHERE a.location IS NOT NULL
         AND ST_DWithin(a.location, ${origin}, ${radius})
+        AND c.status = true
+        AND c.is_company_valid = true
         ${textFilter}
         ${categoryFilter}
     `);
@@ -111,6 +113,8 @@ export class MarketRepositoryPrisma implements MarketRepository {
       JOIN addresses a ON a.id = c.address_id
       WHERE a.location IS NOT NULL
         AND ST_DWithin(a.location, ${origin}, ${radius})
+        AND c.status = true
+        AND c.is_company_valid = true
         ${textFilter}
         ${categoryFilter}
       ORDER BY distance_in_meters ASC

@@ -4,7 +4,9 @@ import type {
 	CompanyWasteInput,
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
 import type { WastesRepository } from "@/modules/companies/repositories/wastes-repository.js";
+import { isWastesValid } from "@/modules/companies/utils/company-validation-utils.js";
 
 type UpsertCompanyWastesUseCaseRequest = {
 	userId: string;
@@ -16,6 +18,7 @@ export class UpsertCompanyWastesUseCase {
 	constructor(
 		private readonly companiesRepository: CompaniesRepository,
 		private readonly wastesRepository: WastesRepository,
+		private readonly validationRepository: CompanyValidationRepository,
 	) {}
 
 	async execute({
@@ -34,7 +37,15 @@ export class UpsertCompanyWastesUseCase {
 
 		this.validateDuplicatedNames(data);
 
-		return this.wastesRepository.replaceMany(company.id, data);
+		const wastes = await this.wastesRepository.replaceMany(company.id, data);
+
+		await this.validationRepository.updateField(
+			company.id,
+			"wastes",
+			isWastesValid(wastes),
+		);
+
+		return wastes;
 	}
 
 	private validateDuplicatedNames(data: CompanyWasteInput[]): void {

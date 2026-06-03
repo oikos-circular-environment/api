@@ -44,6 +44,7 @@ export class InMemoryCompaniesRepository implements CompaniesRepository {
 			email: data.email ?? null,
 			phones: data.phones,
 			started_activity_in: data.started_activity_in,
+			is_company_valid: false,
 			avatar: null,
 			created_at: now,
 			updated_at: now,

@@ -191,7 +191,7 @@ export const resolverProfileSchema = z.object({
 	avatar_url: z.string().nullable(),
 });
 
-export const resolverSchema = z.union([
+export const resolverSchema = z.discriminatedUnion("type", [
 	resolverCompanySchema,
 	resolverProfileSchema,
 ]);

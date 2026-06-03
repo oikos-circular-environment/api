@@ -4,6 +4,8 @@ import type {
 	UpdateCompany,
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
+import { isGeneralRegistrationValid } from "@/modules/companies/utils/company-validation-utils.js";
 
 type UpdateCompanyUseCaseRequest = {
 	userId: string;
@@ -12,7 +14,10 @@ type UpdateCompanyUseCaseRequest = {
 };
 
 export class UpdateCompanyUseCase {
-	constructor(private readonly companiesRepository: CompaniesRepository) {}
+	constructor(
+		private readonly companiesRepository: CompaniesRepository,
+		private readonly validationRepository: CompanyValidationRepository,
+	) {}
 
 	async execute({
 		userId,
@@ -28,6 +33,19 @@ export class UpdateCompanyUseCase {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);
 		}
 
-		return this.companiesRepository.update(company.id, data);
+		// Compute validation from merged in-memory data before hitting the DB
+		const merged = { ...company, ...data };
+		const generalRegistration = isGeneralRegistrationValid(merged);
+
+		const [updated] = await Promise.all([
+			this.companiesRepository.update(company.id, data),
+			this.validationRepository.updateField(
+				company.id,
+				"general_registration",
+				generalRegistration,
+			),
+		]);
+
+		return updated;
 	}
 }

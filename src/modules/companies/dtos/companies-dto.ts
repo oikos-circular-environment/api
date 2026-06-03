@@ -20,7 +20,7 @@ export const createCompanyInputSchema = z.object({
 	business_name: z.string().min(1, "Business name is required"),
 	corporate_name: z.string().min(1, "Corporate name is required"),
 	email: z.email("Invalid email address").optional().nullable(),
-	phones: z.array(z.string().min(1, "Phone is required")),
+	phones: z.array(z.string().min(1, "Phone is required")).min(1, "At least one phone is required"),
 	started_activity_in: z.coerce.date(),
 });
 
@@ -38,6 +38,7 @@ export type UpdateCompany = z.infer<typeof updateCompanySchema>;
 
 export const companySchema = createCompanyInputSchema.extend({
 	id: z.string(),
+	is_company_valid: z.boolean(),
 	avatar: z
 		.object({
 			id: z.string(),
@@ -71,8 +72,8 @@ export const createCompanyAddressSchema = z.object({
 	state_ibge_id: z.number().int(),
 	state: z.string().min(1, "State is required"),
 	state_code: z.string().length(2, "State code must have 2 characters"),
-	latitude: z.number().optional().nullable(),
-	longitude: z.number().optional().nullable(),
+	latitude: z.number(),
+	longitude: z.number(),
 });
 
 export type CreateCompanyAddress = z.infer<typeof createCompanyAddressSchema>;
@@ -253,3 +254,61 @@ export const upsertCompanyServicesSchema = z.object({
 });
 
 export type UpsertCompanyServices = z.infer<typeof upsertCompanyServicesSchema>;
+
+// --- Validation types and schemas ---
+
+export type CompanyValidationField =
+	| "general_registration"
+	| "address"
+	| "business_hours"
+	| "wastes"
+	| "services";
+
+export const companyValidationSchema = z.object({
+	id: z.string(),
+	company_id: z.string(),
+	general_registration: z.boolean(),
+	address: z.boolean(),
+	business_hours: z.boolean(),
+	wastes: z.boolean(),
+	services: z.boolean(),
+});
+
+export type CompanyValidation = z.infer<typeof companyValidationSchema>;
+
+export const companyGeneralRegistrationValidationSchema = companySchema.pick({
+	identity: true,
+	identity_type: true,
+	company_type: true,
+	business_name: true,
+	corporate_name: true,
+	phones: true,
+	started_activity_in: true,
+});
+
+export const companyAddressValidationSchema = companyAddressSchema.extend({
+	latitude: z.number(),
+	longitude: z.number(),
+});
+
+export const companyBusinessHoursValidationSchema = z
+	.array(businessHourSchema)
+	.refine(
+		(hours) => hours.some((h) => h.is_open && h.time_slots.length > 0),
+		{ message: "At least one open day with a time slot is required" },
+	);
+
+export const companyWastesValidationSchema = z.array(companyWasteSchema).min(1);
+
+export const companyServicesValidationSchema = z.array(companyServiceSchema).min(1);
+
+// --- Company profile (full aggregate) ---
+
+export const companyProfileSchema = companySchema.extend({
+	address: companyAddressSchema.nullable(),
+	business_hours: companyBusinessHoursSchema,
+	wastes: companyWastesSchema,
+	services: companyServicesSchema,
+});
+
+export type CompanyProfile = z.infer<typeof companyProfileSchema>;

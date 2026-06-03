@@ -71,6 +71,7 @@ model Company {
   email               String?
   phones              String[]
   started_activity_in DateTime
+  is_company_valid    Boolean      @default(false)
   created_at          DateTime     @default(now())
   updated_at          DateTime     @updatedAt
 
@@ -86,9 +87,24 @@ model Company {
   avatar_id String?
   avatar    CompanyAvatar? @relation(fields: [avatar_id], references: [id])
 
+  validation  CompanyValidation?
   resolutions ComplaintResolution[]
 
   @@map("companies")
+}
+
+model CompanyValidation {
+  id                   String  @id @default(uuid())
+  general_registration Boolean @default(false)
+  address              Boolean @default(false)
+  business_hours       Boolean @default(false)
+  wastes               Boolean @default(false)
+  services             Boolean @default(false)
+
+  company_id String  @unique
+  company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@map("company_validations")
 }
 
 model CompanyAvatar {

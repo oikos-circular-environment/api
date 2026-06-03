@@ -4,7 +4,9 @@ import type {
 	CompanyServiceInput,
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
 import type { ServicesRepository } from "@/modules/companies/repositories/services-repository.js";
+import { isServicesValid } from "@/modules/companies/utils/company-validation-utils.js";
 
 type UpsertCompanyServicesUseCaseRequest = {
 	userId: string;
@@ -16,6 +18,7 @@ export class UpsertCompanyServicesUseCase {
 	constructor(
 		private readonly companiesRepository: CompaniesRepository,
 		private readonly servicesRepository: ServicesRepository,
+		private readonly validationRepository: CompanyValidationRepository,
 	) {}
 
 	async execute({
@@ -34,7 +37,15 @@ export class UpsertCompanyServicesUseCase {
 
 		this.validateDuplicatedNames(data);
 
-		return this.servicesRepository.replaceMany(company.id, data);
+		const services = await this.servicesRepository.replaceMany(company.id, data);
+
+		await this.validationRepository.updateField(
+			company.id,
+			"services",
+			isServicesValid(services),
+		);
+
+		return services;
 	}
 
 	private validateDuplicatedNames(data: CompanyServiceInput[]): void {

@@ -1,25 +1,30 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpdateCompanyUseCase } from "./update-company-use-case.js";
+
+const baseCompany = {
+	user_id: "11111111-1111-1111-1111-111111111111",
+	identity: "12345678900",
+	identity_type: "CPF" as const,
+	company_type: "COMPANY" as const,
+	status: true,
+	business_name: "Oikos Tech",
+	corporate_name: "Oikos Tech LTDA",
+	email: "contato@oikos.dev",
+	phones: ["5511999999999"],
+	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
+};
 
 describe("update-company-use-case", () => {
 	it("updates an existing company by userId and companyId", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository);
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
 
-		const created = await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const created = await companiesRepository.create(baseCompany);
+		await validationRepository.create(created.id, true);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
@@ -46,9 +51,29 @@ describe("update-company-use-case", () => {
 		expect(result?.phones).toStrictEqual(["5511777777777", "5511666666666"]);
 	});
 
+	it("keeps general_registration true after valid update", async () => {
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
+
+		const created = await companiesRepository.create(baseCompany);
+		await validationRepository.create(created.id, true);
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: created.id,
+			data: { business_name: "New Name" },
+		});
+
+		const validation = await validationRepository.findByCompanyId(created.id);
+
+		expect(validation?.general_registration).toBe(true);
+	});
+
 	it("throws when company does not exist", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository);
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
 
 		let thrownError: unknown;
 
@@ -75,20 +100,10 @@ describe("update-company-use-case", () => {
 
 	it("throws when company belongs to a different user", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository);
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
 
-		const created = await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const created = await companiesRepository.create(baseCompany);
 
 		let thrownError: unknown;
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
 import { UpsertCompanyWastesUseCase } from "./upsert-company-wastes-use-case.js";
 
@@ -21,12 +22,15 @@ describe("upsert-company-wastes-use-case", () => {
 	it("replaces company wastes and returns the saved list", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyWastesUseCase(
 			companiesRepository,
 			wastesRepository,
+			validationRepository,
 		);
 
 		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
@@ -97,12 +101,90 @@ describe("upsert-company-wastes-use-case", () => {
 		expect(wastesRepository.items.length).toBe(1);
 	});
 
-	it("throws when company does not exist", async () => {
+	it("sets wastes validation to true when at least one waste is saved", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyWastesUseCase(
 			companiesRepository,
 			wastesRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: [
+				{
+					name: "Paper",
+					description: null,
+					price: 10,
+					unit: "KG",
+					waste_type: "RECYCLABLE",
+					quantity: 10,
+					observations: null,
+					sub_items: null,
+				},
+			],
+		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.wastes).toBe(true);
+	});
+
+	it("sets wastes validation to false when replaced with empty array", async () => {
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const wastesRepository = new InMemoryWastesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyWastesUseCase(
+			companiesRepository,
+			wastesRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: [
+				{
+					name: "Paper",
+					description: null,
+					price: 10,
+					unit: "KG",
+					waste_type: "RECYCLABLE",
+					quantity: 10,
+					observations: null,
+					sub_items: null,
+				},
+			],
+		});
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: [],
+		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.wastes).toBe(false);
+	});
+
+	it("throws when company does not exist", async () => {
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const wastesRepository = new InMemoryWastesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyWastesUseCase(
+			companiesRepository,
+			wastesRepository,
+			validationRepository,
 		);
 
 		let thrownError: unknown;
@@ -129,9 +211,11 @@ describe("upsert-company-wastes-use-case", () => {
 	it("throws when payload has duplicated waste names", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyWastesUseCase(
 			companiesRepository,
 			wastesRepository,
+			validationRepository,
 		);
 
 		const company = await companiesRepository.create(baseCompany);

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-memory/in-memory-services-repository.js";
 import { UpsertCompanyServicesUseCase } from "./upsert-company-services-use-case.js";
 
@@ -21,12 +22,15 @@ describe("upsert-company-services-use-case", () => {
 	it("replaces company services and returns the saved list", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const servicesRepository = new InMemoryServicesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyServicesUseCase(
 			companiesRepository,
 			servicesRepository,
+			validationRepository,
 		);
 
 		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
@@ -97,12 +101,90 @@ describe("upsert-company-services-use-case", () => {
 		expect(servicesRepository.items.length).toBe(1);
 	});
 
-	it("throws when company does not exist", async () => {
+	it("sets services validation to true when at least one service is saved", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const servicesRepository = new InMemoryServicesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyServicesUseCase(
 			companiesRepository,
 			servicesRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: [
+				{
+					name: "Collection",
+					description: null,
+					price: 100,
+					unit: "UNIT",
+					waste_type: "GARBAGE",
+					quantity: 1,
+					observations: null,
+					sub_items: null,
+				},
+			],
+		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.services).toBe(true);
+	});
+
+	it("sets services validation to false when replaced with empty array", async () => {
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const servicesRepository = new InMemoryServicesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyServicesUseCase(
+			companiesRepository,
+			servicesRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: [
+				{
+					name: "Collection",
+					description: null,
+					price: 100,
+					unit: "UNIT",
+					waste_type: "GARBAGE",
+					quantity: 1,
+					observations: null,
+					sub_items: null,
+				},
+			],
+		});
+
+		await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			companyId: company.id,
+			data: [],
+		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.services).toBe(false);
+	});
+
+	it("throws when company does not exist", async () => {
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const servicesRepository = new InMemoryServicesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyServicesUseCase(
+			companiesRepository,
+			servicesRepository,
+			validationRepository,
 		);
 
 		let thrownError: unknown;
@@ -129,9 +211,11 @@ describe("upsert-company-services-use-case", () => {
 	it("throws when payload has duplicated service names", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const servicesRepository = new InMemoryServicesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyServicesUseCase(
 			companiesRepository,
 			servicesRepository,
+			validationRepository,
 		);
 
 		const company = await companiesRepository.create(baseCompany);

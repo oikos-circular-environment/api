@@ -5,6 +5,8 @@ import type {
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { AddressesRepository } from "@/modules/companies/repositories/address-repository.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
+import { isAddressValid } from "@/modules/companies/utils/company-validation-utils.js";
 
 type UpsertCompanyAddressUseCaseRequest = {
 	userId: string;
@@ -16,6 +18,7 @@ export class UpsertCompanyAddressUseCase {
 	constructor(
 		private readonly companiesRepository: CompaniesRepository,
 		private readonly addressesRepository: AddressesRepository,
+		private readonly validationRepository: CompanyValidationRepository,
 	) {}
 
 	async execute({
@@ -36,13 +39,26 @@ export class UpsertCompanyAddressUseCase {
 			company.id,
 		);
 
+		let address: CompanyAddress;
+
 		if (existingAddress) {
-			return (await this.addressesRepository.update(
+			address = (await this.addressesRepository.update(
 				existingAddress.id,
 				data,
 			)) as CompanyAddress;
+		} else {
+			address = await this.addressesRepository.create({
+				...data,
+				company_id: company.id,
+			});
 		}
 
-		return this.addressesRepository.create({ ...data, company_id: company.id });
+		await this.validationRepository.updateField(
+			company.id,
+			"address",
+			isAddressValid(address),
+		);
+
+		return address;
 	}
 }

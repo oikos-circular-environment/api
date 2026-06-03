@@ -8,6 +8,7 @@ import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	companyAddressSchema,
 	companyBusinessHoursSchema,
+	companyProfileSchema,
 	companySchema,
 	companyServicesSchema,
 	companyWastesSchema,
@@ -18,9 +19,11 @@ import {
 	upsertCompanyServicesSchema,
 	upsertCompanyWastesSchema,
 } from "./dtos/companies-dto.js";
+
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaBusinessHoursRepository } from "./repositories/prisma/business-hours-repository-prisma.js";
 import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repository-prisma.js";
+import { PrismaCompanyValidationRepository } from "./repositories/prisma/company-validation-repository-prisma.js";
 import { PrismaServicesRepository } from "./repositories/prisma/services-repository-prisma.js";
 import { PrismaWastesRepository } from "./repositories/prisma/wastes-repository-prisma.js";
 import { GetCompanyAddressUseCase } from "./use-cases/company-addresses/get-company-address-use-case.js";
@@ -33,6 +36,7 @@ import { GetCompanyWastesUseCase } from "./use-cases/company-wastes/get-company-
 import { UpsertCompanyWastesUseCase } from "./use-cases/company-wastes/upsert-company-wastes-use-case.js";
 import { CreateCompanyUseCase } from "./use-cases/create-company-use-case.js";
 import { GetCompanyUseCase } from "./use-cases/get-company-use-case.js";
+import { ToggleCompanyStatusUseCase } from "./use-cases/toggle-company-status-use-case.js";
 import { UpdateCompanyUseCase } from "./use-cases/update-company-use-case.js";
 import { UploadCompanyAvatarUseCase } from "./use-cases/upload-company-avatar-use-case.js";
 
@@ -49,11 +53,27 @@ export async function companyRoutes(app: FastifyInstance) {
 	const businessHoursRepository = new PrismaBusinessHoursRepository();
 	const wastesRepository = new PrismaWastesRepository();
 	const servicesRepository = new PrismaServicesRepository();
+	const validationRepository = new PrismaCompanyValidationRepository();
 	const storageProvider = new SupabaseBucket();
 
-	const createCompanyUseCase = new CreateCompanyUseCase(companiesRepository);
-	const getCompanyUseCase = new GetCompanyUseCase(companiesRepository);
-	const updateCompanyUseCase = new UpdateCompanyUseCase(companiesRepository);
+	const createCompanyUseCase = new CreateCompanyUseCase(
+		companiesRepository,
+		validationRepository,
+	);
+	const getCompanyUseCase = new GetCompanyUseCase(
+		companiesRepository,
+		addressesRepository,
+		businessHoursRepository,
+		wastesRepository,
+		servicesRepository,
+	);
+	const updateCompanyUseCase = new UpdateCompanyUseCase(
+		companiesRepository,
+		validationRepository,
+	);
+	const toggleCompanyStatusUseCase = new ToggleCompanyStatusUseCase(
+		companiesRepository,
+	);
 	const uploadCompanyAvatarUseCase = new UploadCompanyAvatarUseCase(
 		companiesRepository,
 		storageProvider,
@@ -61,6 +81,7 @@ export async function companyRoutes(app: FastifyInstance) {
 	const upsertCompanyAddressUseCase = new UpsertCompanyAddressUseCase(
 		companiesRepository,
 		addressesRepository,
+		validationRepository,
 	);
 	const getCompanyAddressUseCase = new GetCompanyAddressUseCase(
 		companiesRepository,
@@ -70,6 +91,7 @@ export async function companyRoutes(app: FastifyInstance) {
 		new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 	const getCompanyBusinessHoursUseCase = new GetCompanyBusinessHoursUseCase(
 		companiesRepository,
@@ -78,6 +100,7 @@ export async function companyRoutes(app: FastifyInstance) {
 	const upsertCompanyWastesUseCase = new UpsertCompanyWastesUseCase(
 		companiesRepository,
 		wastesRepository,
+		validationRepository,
 	);
 	const getCompanyWastesUseCase = new GetCompanyWastesUseCase(
 		companiesRepository,
@@ -86,6 +109,7 @@ export async function companyRoutes(app: FastifyInstance) {
 	const upsertCompanyServicesUseCase = new UpsertCompanyServicesUseCase(
 		companiesRepository,
 		servicesRepository,
+		validationRepository,
 	);
 	const getCompanyServicesUseCase = new GetCompanyServicesUseCase(
 		companiesRepository,
@@ -127,9 +151,10 @@ export async function companyRoutes(app: FastifyInstance) {
 			schema: withBearerAuth({
 				tags: [COMPANIES_TAG],
 				summary: "Get user companies",
-				description: "Returns all companies of the authenticated user.",
+				description:
+					"Returns all companies of the authenticated user with address, business hours, wastes and services.",
 				response: {
-					200: z.object({ companies: z.array(companySchema) }),
+					200: z.object({ companies: z.array(companyProfileSchema) }),
 					401: appErrorSchema,
 				},
 			}),
@@ -166,6 +191,37 @@ export async function companyRoutes(app: FastifyInstance) {
 				userId,
 				companyId,
 				data: request.body,
+			});
+
+			return reply.send({ company });
+		},
+	);
+
+	typedApp.patch(
+		"/companies/:id/status",
+		{
+			schema: withBearerAuth({
+				tags: [COMPANIES_TAG],
+				summary: "Toggle company status",
+				description: "Activates or deactivates a company for the authenticated user.",
+				params: z.object({ id: z.uuid() }),
+				body: z.object({ status: z.boolean() }),
+				response: {
+					200: z.object({ company: companySchema }),
+					401: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			const { id: companyId } = request.params;
+			const { status } = request.body;
+
+			const company = await toggleCompanyStatusUseCase.execute({
+				userId,
+				companyId,
+				status,
 			});
 
 			return reply.send({ company });

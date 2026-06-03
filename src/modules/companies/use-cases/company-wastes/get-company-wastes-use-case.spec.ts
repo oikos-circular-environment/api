@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
 import { GetCompanyWastesUseCase } from "./get-company-wastes-use-case.js";
 import { UpsertCompanyWastesUseCase } from "./upsert-company-wastes-use-case.js";
@@ -22,13 +23,16 @@ describe("get-company-wastes-use-case", () => {
 	it("returns the company wastes list", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const upsertUseCase = new UpsertCompanyWastesUseCase(
 			companiesRepository,
 			wastesRepository,
+			validationRepository,
 		);
 		const sut = new GetCompanyWastesUseCase(companiesRepository, wastesRepository);
 
 		const company = await companiesRepository.create(baseCompany);
+		await validationRepository.create(company.id, true);
 
 		await upsertUseCase.execute({
 			userId: "11111111-1111-1111-1111-111111111111",

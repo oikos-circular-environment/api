@@ -12,6 +12,7 @@ export type PrismaCompany = {
 	email: string | null;
 	phones: string[];
 	started_activity_in: Date;
+	is_company_valid: boolean;
 	created_at: Date;
 	updated_at: Date;
 	avatar: {
@@ -40,6 +41,7 @@ export function companyMapper(company: PrismaCompany): Company | null {
 		email: company.email,
 		phones: company.phones,
 		started_activity_in: company.started_activity_in,
+		is_company_valid: company.is_company_valid,
 		avatar: company.avatar
 			? {
 					id: company.avatar.id,
