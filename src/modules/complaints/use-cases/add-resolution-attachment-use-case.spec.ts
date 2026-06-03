@@ -123,4 +123,27 @@ describe("add-resolution-attachment-use-case", () => {
 			}),
 		).rejects.toThrowError(expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TOO_LARGE" }));
 	});
+
+	it("accepts video/mp4 and uses .mp4 extension in storage path", async () => {
+		const repo = new InMemoryComplaintsRepository();
+		const storage = new InMemoryStorageProvider();
+		const complaint = await new CreateComplaintUseCase(repo).execute({
+			userId: USER_A,
+			data: { date: new Date(), type: "BURNING", observations: null, geospatial },
+		});
+		await new SubmitResolutionUseCase(repo).execute({
+			userId: USER_B,
+			complaintId: complaint.id,
+			data: { description: "Resolvido" },
+		});
+		const sut = new AddResolutionAttachmentUseCase(repo, storage);
+
+		const result = await sut.execute({
+			userId: USER_B,
+			complaintId: complaint.id,
+			file: { fileName: "video.mp4", mimeType: "video/mp4", content: Buffer.from("video-data") },
+		});
+
+		expect(result.url).toMatch(/\.mp4$/);
+	});
 });

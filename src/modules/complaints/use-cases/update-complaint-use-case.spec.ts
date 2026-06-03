@@ -114,6 +114,30 @@ describe("update-complaint-use-case", () => {
 		expect(result.geospatial.addresses.city).toBe("Rio de Janeiro");
 	});
 
+	it("updates complaint date", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new UpdateComplaintUseCase(complaintsRepository);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				type: "BURNING",
+				observations: null,
+				geospatial,
+			},
+		);
+
+		const newDate = new Date("2026-05-01T08:00:00.000Z");
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			complaintId: created.id,
+			data: { date: newDate },
+		});
+
+		expect(result.date).toEqual(newDate);
+	});
+
 	it("throws when complaint does not exist", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new UpdateComplaintUseCase(complaintsRepository);

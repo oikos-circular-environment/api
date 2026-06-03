@@ -188,7 +188,7 @@ describe("create-complaint-attachment-use-case", () => {
 
 		if (thrownError instanceof AppError) {
 			expect(thrownError.message).toBe(
-				"Complaint attachment type is invalid. Allowed types: jpeg and png",
+				"Complaint attachment type is invalid. Allowed types: jpeg, png, mp4, mov, webm",
 			);
 			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_TYPE_INVALID");
 			expect(thrownError.statusCode).toBe(400);
@@ -301,5 +301,51 @@ describe("create-complaint-attachment-use-case", () => {
 			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_UPLOAD_FAILED");
 			expect(thrownError.statusCode).toBe(500);
 		}
+	});
+
+	it("accepts video/mp4 and sets type to VIDEO", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const storageProvider = new InMemoryStorageProvider();
+		const sut = new CreateComplaintAttachmentUseCase(
+			complaintsRepository,
+			storageProvider,
+		);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+		);
+
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			complaintId: created.id,
+			file: { fileName: "video.mp4", mimeType: "video/mp4", content: Buffer.from("video-data") },
+		});
+
+		expect(result.attachments[0]?.type).toBe("VIDEO");
+		expect(result.attachments[0]?.url).toMatch(/\.mp4$/);
+	});
+
+	it("accepts video/quicktime and sets type to VIDEO", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const storageProvider = new InMemoryStorageProvider();
+		const sut = new CreateComplaintAttachmentUseCase(
+			complaintsRepository,
+			storageProvider,
+		);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+		);
+
+		const result = await sut.execute({
+			userId: "11111111-1111-1111-1111-111111111111",
+			complaintId: created.id,
+			file: { fileName: "clip.mov", mimeType: "video/quicktime", content: Buffer.from("video-data") },
+		});
+
+		expect(result.attachments[0]?.type).toBe("VIDEO");
+		expect(result.attachments[0]?.url).toMatch(/\.mov$/);
 	});
 });

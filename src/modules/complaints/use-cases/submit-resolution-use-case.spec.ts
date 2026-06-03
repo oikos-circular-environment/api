@@ -177,4 +177,19 @@ describe("submit-resolution-use-case", () => {
 			expect(thrownError.code).toBe("COMPLAINT_CLOSED");
 		}
 	});
+
+	it("throws 422 COMPLAINT_CLOSED when complaint is CANCELED", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new SubmitResolutionUseCase(complaintsRepository);
+
+		const complaint = await complaintsRepository.createForUser(
+			USER_ID,
+			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+		);
+		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, complaint.id, "CANCELED");
+
+		await expect(
+			sut.execute({ userId: RESOLVER_USER_ID, complaintId: complaint.id, data: resolutionData }),
+		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }));
+	});
 });

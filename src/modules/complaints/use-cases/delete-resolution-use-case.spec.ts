@@ -78,6 +78,25 @@ describe("delete-resolution-use-case", () => {
 		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED" }));
 	});
 
+	it("throws 422 when complaint is CANCELED", async () => {
+		const repo = new InMemoryComplaintsRepository();
+		const complaint = await new CreateComplaintUseCase(repo).execute({
+			userId: USER_A,
+			data: { date: new Date(), type: "BURNING", observations: null, geospatial },
+		});
+		await new SubmitResolutionUseCase(repo).execute({
+			userId: USER_B,
+			complaintId: complaint.id,
+			data: { description: "Resolvido" },
+		});
+		await repo.updateStatusByUserAndComplaintId(USER_A, complaint.id, "CANCELED");
+		const sut = new DeleteResolutionUseCase(repo);
+
+		await expect(
+			sut.execute({ userId: USER_B, complaintId: complaint.id }),
+		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED" }));
+	});
+
 	it("cascades deletion to resolution attachments", async () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({

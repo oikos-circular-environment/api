@@ -111,6 +111,21 @@ describe("resolve-complaint-use-case", () => {
 		}
 	});
 
+	it("throws 422 COMPLAINT_CLOSED when complaint is CANCELED", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new ResolveComplaintUseCase(complaintsRepository);
+
+		const created = await complaintsRepository.createForUser(
+			USER_ID,
+			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+		);
+		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, created.id, "CANCELED");
+
+		await expect(
+			sut.execute({ userId: USER_ID, complaintId: created.id, resolution }),
+		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }));
+	});
+
 	it("calls job dispatcher with the complaint id", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const dispatchQuorumJob = vi.fn().mockResolvedValue(undefined);

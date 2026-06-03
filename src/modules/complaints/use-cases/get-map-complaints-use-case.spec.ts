@@ -140,6 +140,30 @@ describe("get-map-complaints-use-case", () => {
 		expect(item?.created_at).toBeInstanceOf(Date);
 	});
 
+	it("does not return complaints outside the radius", async () => {
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		// complaint far away (~440 km from São Paulo)
+		const farGeospatial: Geospatial = {
+			...geospatial,
+			location: {
+				coords: { ...geospatial.location.coords, latitude: -19.92, longitude: -43.94 },
+				timestamp: 1711111111111,
+			},
+		};
+		await complaintsRepository.createForUser(USER_A, {
+			date: new Date(),
+			type: "BURNING",
+			observations: null,
+			geospatial: farGeospatial,
+		});
+
+		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
+
+		expect(items).toHaveLength(0);
+	});
+
 	it("location is derived from capture coordinates", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);

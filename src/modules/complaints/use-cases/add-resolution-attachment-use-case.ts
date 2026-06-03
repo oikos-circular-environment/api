@@ -6,8 +6,11 @@ import type { ComplaintsRepository } from "@/modules/complaints/repositories/com
 const MAX_SIZE_BYTES = 10 * 1024 * 1024;
 
 const ALLOWED_MIME_TYPES = {
-	"image/jpeg": "jpeg",
-	"image/png": "png",
+	"image/jpeg": { ext: "jpeg", type: "PHOTO" as const },
+	"image/png": { ext: "png", type: "PHOTO" as const },
+	"video/mp4": { ext: "mp4", type: "VIDEO" as const },
+	"video/quicktime": { ext: "mov", type: "VIDEO" as const },
+	"video/webm": { ext: "webm", type: "VIDEO" as const },
 } as const;
 
 type AllowedMimeType = keyof typeof ALLOWED_MIME_TYPES;
@@ -36,7 +39,7 @@ export class AddResolutionAttachmentUseCase {
 
 		if (!(file.mimeType in ALLOWED_MIME_TYPES)) {
 			throw new AppError(
-				"Attachment type is invalid. Allowed types: jpeg and png",
+				"Attachment type is invalid. Allowed types: jpeg, png, mp4, mov, webm",
 				"RESOLUTION_ATTACHMENT_TYPE_INVALID",
 				400,
 			);
@@ -50,8 +53,8 @@ export class AddResolutionAttachmentUseCase {
 			);
 		}
 
-		const extension = ALLOWED_MIME_TYPES[file.mimeType as AllowedMimeType];
-		const filePath = `complaint-resolutions/${resolution.id}/${Date.now()}.${extension}`;
+		const { ext } = ALLOWED_MIME_TYPES[file.mimeType as AllowedMimeType];
+		const filePath = `complaint-resolutions/${resolution.id}/${Date.now()}.${ext}`;
 
 		const uploadResult = await this.storageProvider.uploadFile(filePath, file.content);
 

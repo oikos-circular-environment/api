@@ -6,8 +6,11 @@ import type { ComplaintsRepository } from "@/modules/complaints/repositories/com
 const COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
 
 const COMPLAINT_ATTACHMENT_MIME_TYPES = {
-	"image/jpeg": "jpeg",
-	"image/png": "png",
+	"image/jpeg": { ext: "jpeg", type: "PHOTO" as const },
+	"image/png": { ext: "png", type: "PHOTO" as const },
+	"video/mp4": { ext: "mp4", type: "VIDEO" as const },
+	"video/quicktime": { ext: "mov", type: "VIDEO" as const },
+	"video/webm": { ext: "webm", type: "VIDEO" as const },
 } as const;
 
 type SupportedComplaintAttachmentMimeType =
@@ -45,7 +48,7 @@ export class CreateComplaintAttachmentUseCase {
 
 		if (!(file.mimeType in COMPLAINT_ATTACHMENT_MIME_TYPES)) {
 			throw new AppError(
-				"Complaint attachment type is invalid. Allowed types: jpeg and png",
+				"Complaint attachment type is invalid. Allowed types: jpeg, png, mp4, mov, webm",
 				"COMPLAINT_ATTACHMENT_TYPE_INVALID",
 				400,
 			);
@@ -59,12 +62,12 @@ export class CreateComplaintAttachmentUseCase {
 			);
 		}
 
-		const extension =
+		const { ext, type } =
 			COMPLAINT_ATTACHMENT_MIME_TYPES[
 				file.mimeType as SupportedComplaintAttachmentMimeType
 			];
 
-		const filePath = `complaints/${complaintId}/${Date.now()}.${extension}`;
+		const filePath = `complaints/${complaintId}/${Date.now()}.${ext}`;
 
 		const uploadResult = await this.storageProvider.uploadFile(
 			filePath,
@@ -89,7 +92,7 @@ export class CreateComplaintAttachmentUseCase {
 				file_name: file.fileName,
 				path: filePath,
 				base64: file.content.toString("base64"),
-				type: "PHOTO",
+				type,
 				metadata: null,
 			},
 		);
