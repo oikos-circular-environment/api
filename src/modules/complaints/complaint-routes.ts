@@ -27,6 +27,7 @@ import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-rep
 import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
 import { CancelComplaintUseCase } from "./use-cases/cancel-complaint-use-case.js";
 import { CreateComplaintAttachmentUseCase } from "./use-cases/create-complaint-attachment-use-case.js";
+import { DeleteComplaintAttachmentUseCase } from "./use-cases/delete-complaint-attachment-use-case.js";
 import { CreateComplaintUseCase } from "./use-cases/create-complaint-use-case.js";
 import { DeleteResolutionAttachmentUseCase } from "./use-cases/delete-resolution-attachment-use-case.js";
 import { DeleteResolutionUseCase } from "./use-cases/delete-resolution-use-case.js";
@@ -84,6 +85,10 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 	const cancelComplaintUseCase = new CancelComplaintUseCase(complaintsRepository);
 	const createComplaintAttachmentUseCase = new CreateComplaintAttachmentUseCase(
+		complaintsRepository,
+		storageProvider,
+	);
+	const deleteComplaintAttachmentUseCase = new DeleteComplaintAttachmentUseCase(
 		complaintsRepository,
 		storageProvider,
 	);
@@ -563,6 +568,32 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		async (request, reply) => {
 			const userId = request.user.sub;
 			await deleteResolutionAttachmentUseCase.execute({
+				userId,
+				complaintId: request.params.id,
+				attachmentId: request.params.attachmentId,
+			});
+			return reply.status(204).send();
+		},
+	);
+
+	typedApp.delete(
+		"/complaints/:id/attachments/:attachmentId",
+		{
+			schema: withBearerAuth({
+				tags: [COMPLAINTS_ATTACHMENTS_TAG],
+				summary: "Delete complaint attachment",
+				description: "Deletes an attachment from the authenticated user's complaint.",
+				params: z.object({ id: z.uuid(), attachmentId: z.uuid() }),
+				response: {
+					204: z.undefined(),
+					401: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			await deleteComplaintAttachmentUseCase.execute({
 				userId,
 				complaintId: request.params.id,
 				attachmentId: request.params.attachmentId,

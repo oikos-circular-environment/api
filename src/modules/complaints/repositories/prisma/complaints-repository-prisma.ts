@@ -511,6 +511,20 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		};
 	}
 
+	async deleteComplaintAttachment(
+		userId: string,
+		complaintId: string,
+		attachmentId: string,
+	): Promise<void> {
+		await prisma.complaintAttachment.deleteMany({
+			where: {
+				id: attachmentId,
+				complaint_id: complaintId,
+				complaint: { user_id: userId },
+			},
+		});
+	}
+
 	async deleteResolutionAttachment(
 		userId: string,
 		resolutionId: string,

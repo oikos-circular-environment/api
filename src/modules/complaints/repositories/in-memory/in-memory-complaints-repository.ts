@@ -466,6 +466,20 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return { id: attachment.id, url: attachment.url, file_name: attachment.file_name, created_at: attachment.created_at };
 	}
 
+	async deleteComplaintAttachment(
+		userId: string,
+		complaintId: string,
+		attachmentId: string,
+	): Promise<void> {
+		const complaint = this.complaints.find(
+			(c) => c.id === complaintId && c.user_id === userId,
+		);
+		if (!complaint) return;
+		this.attachments = this.attachments.filter(
+			(a) => !(a.id === attachmentId && a.complaint_id === complaintId),
+		);
+	}
+
 	async deleteResolutionAttachment(
 		userId: string,
 		resolutionId: string,

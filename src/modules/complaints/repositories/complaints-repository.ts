@@ -93,6 +93,12 @@ export interface ComplaintsRepository {
 
 	deleteResolutionByUser(userId: string, complaintId: string): Promise<void>;
 
+	deleteComplaintAttachment(
+		userId: string,
+		complaintId: string,
+		attachmentId: string,
+	): Promise<void>;
+
 	// Resolution attachments
 	addResolutionAttachment(
 		userId: string,

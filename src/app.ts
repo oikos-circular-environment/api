@@ -81,7 +81,7 @@ app.register(fastifyCookie);
 app.register(fastifyMultipart, {
 	limits: {
 		files: 1,
-		fileSize: 10 * 1024 * 1024,
+		fileSize: 48 * 1024 * 1024,
 	},
 });
 
