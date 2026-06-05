@@ -1,4 +1,3 @@
-import { AppError } from "@/modules/common/errors/app-error.js";
 import type {
 	CreateAddress,
 	CreateProfile,
@@ -25,14 +24,6 @@ export class UpsertProfileUseCase {
 		data,
 	}: UpsertProfileUseCaseRequest): Promise<Profile> {
 		const { address: addressData, ...profileData } = data;
-
-		const profileWithCpf = await this.profilesRepository.findByCpf(
-			profileData.cpf,
-		);
-
-		if (profileWithCpf && profileWithCpf.user_id !== userId) {
-			throw new AppError("CPF already in use", "CPF_ALREADY_IN_USE", 409);
-		}
 
 		const profile = await this.profilesRepository.upsert({
 			...profileData,

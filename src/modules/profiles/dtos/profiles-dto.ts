@@ -28,9 +28,7 @@ export const createProfileSchema = z.object({
 	user_id: z.uuid(),
 	full_name: z.string().min(1, "Full name is required"),
 	display_name: z.string().min(1, "Display name is required"),
-	cpf: z.string().min(1, "CPF is required"),
 	phone: z.string().min(1, "Phone is required"),
-	is_collector: z.boolean().default(false),
 });
 
 export type CreateProfile = z.infer<typeof createProfileSchema>;

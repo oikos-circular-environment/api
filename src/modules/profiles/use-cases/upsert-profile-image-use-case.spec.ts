@@ -18,9 +18,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		const imageContent = Buffer.from("jpeg-image-content");
@@ -57,9 +55,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		const oldImagePath = "profiles/11111111-1111-1111-1111-111111111111.jpeg";
@@ -103,9 +99,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		const imagePath = "profiles/11111111-1111-1111-1111-111111111111.jpeg";
@@ -175,9 +169,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		let thrownError: unknown;
@@ -218,9 +210,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		let thrownError: unknown;
@@ -282,9 +272,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		let thrownError: unknown;
@@ -329,9 +317,7 @@ describe("upsert-profile-image-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		let thrownError: unknown;

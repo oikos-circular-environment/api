@@ -17,9 +17,7 @@ describe("get-profile-address-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		await addressesRepository.create({
@@ -59,9 +57,7 @@ describe("get-profile-address-use-case", () => {
 			user_id: "11111111-1111-1111-1111-111111111111",
 			full_name: "John Doe",
 			display_name: "john",
-			cpf: "12345678900",
 			phone: "5511999999999",
-			is_collector: false,
 		});
 
 		const result = await sut.execute({
