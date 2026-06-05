@@ -21,12 +21,14 @@
 		"migrate:dev": "prisma migrate dev",
 		"migrate:generate": "prisma generate",
 		"seed": "tsx prisma/seeds/recycling-companies.ts",
-		"seed:fetch": "tsx scripts/fetch-recycling-places.ts"
+		"seed:fetch": "tsx scripts/fetch-recycling-places.ts",
+		"minio:console": "xdg-open http://localhost:9001"
 	},
 	"prisma": {
 		"seed": "tsx prisma/seeds/recycling-companies.ts"
 	},
 	"dependencies": {
+		"@aws-sdk/client-s3": "^3.1062.0",
 		"@fastify/cookie": "^11.0.2",
 		"@fastify/cors": "^11.2.0",
 		"@fastify/jwt": "^10.0.0",

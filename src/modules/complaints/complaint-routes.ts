@@ -3,7 +3,7 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import { SupabaseBucket } from "../common/providers/storage/supabase/supabase-bucket.js";
+import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	complaintResumeSchema,
@@ -27,8 +27,8 @@ import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-rep
 import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
 import { CancelComplaintUseCase } from "./use-cases/cancel-complaint-use-case.js";
 import { CreateComplaintAttachmentUseCase } from "./use-cases/create-complaint-attachment-use-case.js";
-import { DeleteComplaintAttachmentUseCase } from "./use-cases/delete-complaint-attachment-use-case.js";
 import { CreateComplaintUseCase } from "./use-cases/create-complaint-use-case.js";
+import { DeleteComplaintAttachmentUseCase } from "./use-cases/delete-complaint-attachment-use-case.js";
 import { DeleteResolutionAttachmentUseCase } from "./use-cases/delete-resolution-attachment-use-case.js";
 import { DeleteResolutionUseCase } from "./use-cases/delete-resolution-use-case.js";
 import { GetComplaintUseCase } from "./use-cases/get-complaint-use-case.js";
@@ -53,14 +53,18 @@ const COMPLAINTS_DASHBOARD_TAG = "Complaints / Dashboard";
 export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const complaintsRepository = new PrismaComplaintsRepository();
-	const storageProvider = new SupabaseBucket();
+	const storageProvider = makeStorageProvider();
 	const jobDispatcher = new BullMQJobDispatcher();
 	const companyChecker = new PrismaCompanyOwnershipChecker();
 
-	const createComplaintUseCase = new CreateComplaintUseCase(complaintsRepository);
+	const createComplaintUseCase = new CreateComplaintUseCase(
+		complaintsRepository,
+	);
 	const getComplaintsUseCase = new GetComplaintsUseCase(complaintsRepository);
 	const getComplaintUseCase = new GetComplaintUseCase(complaintsRepository);
-	const updateComplaintUseCase = new UpdateComplaintUseCase(complaintsRepository);
+	const updateComplaintUseCase = new UpdateComplaintUseCase(
+		complaintsRepository,
+	);
 	const resolveComplaintUseCase = new ResolveComplaintUseCase(
 		complaintsRepository,
 		jobDispatcher,
@@ -74,16 +78,21 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		companyChecker,
 	);
 	const getResolutionsUseCase = new GetResolutionsUseCase(complaintsRepository);
-	const deleteResolutionUseCase = new DeleteResolutionUseCase(complaintsRepository);
+	const deleteResolutionUseCase = new DeleteResolutionUseCase(
+		complaintsRepository,
+	);
 	const addResolutionAttachmentUseCase = new AddResolutionAttachmentUseCase(
 		complaintsRepository,
 		storageProvider,
 	);
-	const deleteResolutionAttachmentUseCase = new DeleteResolutionAttachmentUseCase(
+	const deleteResolutionAttachmentUseCase =
+		new DeleteResolutionAttachmentUseCase(
+			complaintsRepository,
+			storageProvider,
+		);
+	const cancelComplaintUseCase = new CancelComplaintUseCase(
 		complaintsRepository,
-		storageProvider,
 	);
-	const cancelComplaintUseCase = new CancelComplaintUseCase(complaintsRepository);
 	const createComplaintAttachmentUseCase = new CreateComplaintAttachmentUseCase(
 		complaintsRepository,
 		storageProvider,
@@ -92,10 +101,18 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		complaintsRepository,
 		storageProvider,
 	);
-	const getComplaintsDashboardUseCase = new GetComplaintsDashboardUseCase(complaintsRepository);
-	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(complaintsRepository);
-	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(complaintsRepository);
-	const getComplaintVoteUseCase = new GetComplaintVoteUseCase(complaintsRepository);
+	const getComplaintsDashboardUseCase = new GetComplaintsDashboardUseCase(
+		complaintsRepository,
+	);
+	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(
+		complaintsRepository,
+	);
+	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(
+		complaintsRepository,
+	);
+	const getComplaintVoteUseCase = new GetComplaintVoteUseCase(
+		complaintsRepository,
+	);
 
 	typedApp.addHook("onRequest", async (request) => {
 		if ((request.routeOptions.config as { public?: boolean })?.public) return;
@@ -203,7 +220,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_TAG],
 				summary: "Get complaint by id",
-				description: "Returns the full complaint data for the authenticated user.",
+				description:
+					"Returns the full complaint data for the authenticated user.",
 				params: z.object({ id: z.uuid() }),
 				response: {
 					200: z.object({ complaint: complaintSchema }),
@@ -486,7 +504,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Delete my resolution",
-				description: "Deletes the authenticated user's resolution for this complaint.",
+				description:
+					"Deletes the authenticated user's resolution for this complaint.",
 				params: z.object({ id: z.uuid() }),
 				response: {
 					204: z.undefined(),
@@ -582,7 +601,8 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_ATTACHMENTS_TAG],
 				summary: "Delete complaint attachment",
-				description: "Deletes an attachment from the authenticated user's complaint.",
+				description:
+					"Deletes an attachment from the authenticated user's complaint.",
 				params: z.object({ id: z.uuid(), attachmentId: z.uuid() }),
 				response: {
 					204: z.undefined(),

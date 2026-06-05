@@ -3,7 +3,7 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import { SupabaseBucket } from "../common/providers/storage/supabase/supabase-bucket.js";
+import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	addressSchema,
@@ -27,7 +27,7 @@ export async function profileRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const profilesRepository = new PrismaProfilesRepository();
 	const addressesRepository = new PrismaAddressesRepository();
-	const storageProvider = new SupabaseBucket();
+	const storageProvider = makeStorageProvider();
 
 	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,

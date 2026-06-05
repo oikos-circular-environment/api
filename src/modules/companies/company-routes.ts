@@ -3,7 +3,7 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import { SupabaseBucket } from "../common/providers/storage/supabase/supabase-bucket.js";
+import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	companyAddressSchema,
@@ -54,7 +54,7 @@ export async function companyRoutes(app: FastifyInstance) {
 	const wastesRepository = new PrismaWastesRepository();
 	const servicesRepository = new PrismaServicesRepository();
 	const validationRepository = new PrismaCompanyValidationRepository();
-	const storageProvider = new SupabaseBucket();
+	const storageProvider = makeStorageProvider();
 
 	const createCompanyUseCase = new CreateCompanyUseCase(
 		companiesRepository,

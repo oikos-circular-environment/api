@@ -18,6 +18,7 @@ import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { marketRoutes } from "./modules/market/market-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
+import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
 
 export const app = Fastify({
@@ -138,3 +139,7 @@ app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });
 app.register(complaintRoutes, { prefix: "/v1" });
 app.register(marketRoutes, { prefix: "/v1" });
+
+if (env.STORAGE_PROVIDER === "minio") {
+	app.register(storageRoutes);
+}

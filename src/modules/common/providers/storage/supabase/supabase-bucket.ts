@@ -17,7 +17,7 @@ export class SupabaseBucket implements StorageProvider {
 	): Promise<StorageFile | null> {
 		try {
 			const { data, error } = await supabase.storage
-				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET)
+				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET!)
 				.upload(filePath, fileContent, {
 					upsert: true,
 				});
@@ -39,7 +39,7 @@ export class SupabaseBucket implements StorageProvider {
 	async deleteFile(filePath: string): Promise<void> {
 		try {
 			await supabase.storage
-				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET)
+				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET!)
 				.remove([filePath]);
 		} catch (error) {
 			if (error instanceof StorageApiError) {
@@ -51,7 +51,7 @@ export class SupabaseBucket implements StorageProvider {
 	async getFileUrl(filePath: string): Promise<{ url: string }> {
 		try {
 			const bucket = supabase.storage
-				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET)
+				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET!)
 				.getPublicUrl(filePath);
 			return { url: bucket.data.publicUrl };
 		} catch (error) {
@@ -65,7 +65,7 @@ export class SupabaseBucket implements StorageProvider {
 	async checkFileExists(filePath: string): Promise<boolean> {
 		try {
 			const bucket = await supabase.storage
-				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET)
+				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET!)
 				.exists(filePath);
 			return bucket.data;
 		} catch (error) {
@@ -79,7 +79,7 @@ export class SupabaseBucket implements StorageProvider {
 	async convertFileToBase64(filePath: string): Promise<string> {
 		try {
 			const file = await supabase.storage
-				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET)
+				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET!)
 				.download(filePath);
 			const arrayBuffer = await file.data!.arrayBuffer();
 			const buffer = Buffer.from(arrayBuffer);
