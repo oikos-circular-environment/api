@@ -11,6 +11,7 @@ import {
 	companyProfileSchema,
 	companySchema,
 	companyServicesSchema,
+	companyValidationSchema,
 	companyWastesSchema,
 	createCompanyInputSchema,
 	updateCompanyInputSchema,
@@ -32,6 +33,7 @@ import { GetCompanyBusinessHoursUseCase } from "./use-cases/company-business-hou
 import { UpsertCompanyBusinessHoursUseCase } from "./use-cases/company-business-hours/upsert-company-business-hours-use-case.js";
 import { GetCompanyServicesUseCase } from "./use-cases/company-services/get-company-services-use-case.js";
 import { UpsertCompanyServicesUseCase } from "./use-cases/company-services/upsert-company-services-use-case.js";
+import { GetCompanyValidationUseCase } from "./use-cases/company-validations/get-company-validation-use-case.js";
 import { GetCompanyWastesUseCase } from "./use-cases/company-wastes/get-company-wastes-use-case.js";
 import { UpsertCompanyWastesUseCase } from "./use-cases/company-wastes/upsert-company-wastes-use-case.js";
 import { CreateCompanyUseCase } from "./use-cases/create-company-use-case.js";
@@ -45,6 +47,7 @@ const COMPANIES_ADDRESSES_TAG = "Companies / Addresses";
 const COMPANIES_BUSINESS_HOURS_TAG = "Companies / Business Hours";
 const COMPANIES_WASTES_TAG = "Companies / Wastes";
 const COMPANIES_SERVICES_TAG = "Companies / Services";
+const COMPANIES_VALIDATIONS_TAG = "Companies / Validations";
 
 export async function companyRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
@@ -114,6 +117,10 @@ export async function companyRoutes(app: FastifyInstance) {
 	const getCompanyServicesUseCase = new GetCompanyServicesUseCase(
 		companiesRepository,
 		servicesRepository,
+	);
+	const getCompanyValidationUseCase = new GetCompanyValidationUseCase(
+		companiesRepository,
+		validationRepository,
 	);
 
 	typedApp.addHook("onRequest", async (request) => {
@@ -203,7 +210,8 @@ export async function companyRoutes(app: FastifyInstance) {
 			schema: withBearerAuth({
 				tags: [COMPANIES_TAG],
 				summary: "Toggle company status",
-				description: "Activates or deactivates a company for the authenticated user.",
+				description:
+					"Activates or deactivates a company for the authenticated user.",
 				params: z.object({ id: z.uuid() }),
 				body: z.object({ status: z.boolean() }),
 				response: {
@@ -474,6 +482,34 @@ export async function companyRoutes(app: FastifyInstance) {
 			});
 
 			return reply.send({ address });
+		},
+	);
+
+	typedApp.get(
+		"/companies/:id/validations",
+		{
+			schema: withBearerAuth({
+				tags: [COMPANIES_VALIDATIONS_TAG],
+				summary: "Get company validations",
+				description:
+					"Returns the validation status for each section of the specified company.",
+				params: z.object({ id: z.uuid() }),
+				response: {
+					200: z.object({ validation: companyValidationSchema.nullable() }),
+					401: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const userId = request.user.sub;
+			const { id: companyId } = request.params;
+			const validation = await getCompanyValidationUseCase.execute({
+				userId,
+				companyId,
+			});
+
+			return reply.send({ validation });
 		},
 	);
 
