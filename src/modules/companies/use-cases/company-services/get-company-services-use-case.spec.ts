@@ -1,10 +1,14 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-memory/in-memory-services-repository.js";
+import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories/in-memory/in-memory-waste-categories-repository.js";
 import { GetCompanyServicesUseCase } from "./get-company-services-use-case.js";
 import { UpsertCompanyServicesUseCase } from "./upsert-company-services-use-case.js";
+
+const CATEGORY_ID = randomUUID();
 
 const baseCompany = {
 	user_id: "11111111-1111-1111-1111-111111111111",
@@ -24,10 +28,24 @@ describe("get-company-services-use-case", () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const servicesRepository = new InMemoryServicesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
+		const wasteCategoriesRepository = new InMemoryWasteCategoriesRepository();
+		wasteCategoriesRepository.items = [
+			{
+				id: CATEGORY_ID,
+				name: "Papel / Papelão",
+				description: null,
+				observations: null,
+				hazard_levels: ["LOW"],
+				created_at: new Date(),
+				updated_at: new Date(),
+				subcategories: [],
+			},
+		];
 		const upsertUseCase = new UpsertCompanyServicesUseCase(
 			companiesRepository,
 			servicesRepository,
 			validationRepository,
+			wasteCategoriesRepository,
 		);
 		const sut = new GetCompanyServicesUseCase(
 			companiesRepository,
@@ -46,10 +64,9 @@ describe("get-company-services-use-case", () => {
 					description: "Waste collection",
 					price: 250,
 					unit: "UNIT",
-					waste_type: "GARBAGE",
+					waste_category_id: CATEGORY_ID,
 					quantity: 2,
 					observations: "Includes transport",
-					sub_items: ["bins"],
 				},
 			],
 		});
@@ -62,7 +79,7 @@ describe("get-company-services-use-case", () => {
 		expect(result).toHaveLength(1);
 		expect(result[0].name).toBe("Collection");
 		expect(result[0].quantity).toBe(2);
-		expect(result[0].sub_items).toStrictEqual(["bins"]);
+		expect(result[0].waste_category_id).toBe(CATEGORY_ID);
 	});
 
 	it("returns an empty array when the company has no services", async () => {

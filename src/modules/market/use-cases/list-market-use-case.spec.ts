@@ -6,6 +6,12 @@ import { ListMarketUseCase } from "./list-market-use-case.js";
 // Ponto de referência — centro de Rondonópolis
 const ORIGIN = { lat: -16.4707, lon: -54.6375 };
 
+const STUB_CATEGORY = {
+	id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+	name: "Papel / Papelão",
+	hazard_levels: ["LOW" as const],
+};
+
 // Empresa 1 — Bio Ecologica (~3.3km do centro)
 // Tem wastes, sem services
 const makeCompany = (
@@ -39,10 +45,10 @@ const makeCompany = (
 			description: "Jornais, revistas, caixas",
 			price: 0.5,
 			unit: "KG",
-			waste_type: "RECYCLABLE",
+			waste_category_id: STUB_CATEGORY.id,
+			waste_category: STUB_CATEGORY,
 			quantity: 0,
 			observations: null,
-			sub_items: ["jornal", "papelão"],
 		},
 		{
 			id: "waste-2",
@@ -50,10 +56,10 @@ const makeCompany = (
 			description: "PET, PEAD, PVC",
 			price: 0.8,
 			unit: "KG",
-			waste_type: "RECYCLABLE",
+			waste_category_id: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+			waste_category: { id: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb", name: "Plástico", hazard_levels: ["LOW" as const] },
 			quantity: 0,
 			observations: null,
-			sub_items: ["PET", "PEAD"],
 		},
 	],
 	business_hours: [
@@ -177,10 +183,10 @@ describe("ListMarketUseCase", () => {
 					description: "Coleta de resíduos na porta",
 					price: 50,
 					unit: "KG",
-					waste_type: "RECYCLABLE",
+					waste_category_id: STUB_CATEGORY.id,
+					waste_category: STUB_CATEGORY,
 					quantity: 0,
 					observations: null,
-					sub_items: [],
 				},
 			],
 			wastes: [],
@@ -219,10 +225,10 @@ describe("ListMarketUseCase", () => {
 					description: null,
 					price: 50,
 					unit: "KG",
-					waste_type: "RECYCLABLE",
+					waste_category_id: STUB_CATEGORY.id,
+					waste_category: STUB_CATEGORY,
 					quantity: 0,
 					observations: null,
-					sub_items: [],
 				},
 			],
 			wastes: [],
@@ -356,10 +362,10 @@ describe("ListMarketUseCase", () => {
 					description: "Jornais, revistas, caixas",
 					price: 0.5,
 					unit: "KG",
-					waste_type: "RECYCLABLE",
+					waste_category_id: STUB_CATEGORY.id,
+					waste_category: STUB_CATEGORY,
 					quantity: 0,
 					observations: null,
-					sub_items: ["jornal"],
 				},
 			],
 		});

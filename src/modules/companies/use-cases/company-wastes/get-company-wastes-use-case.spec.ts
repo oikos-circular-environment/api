@@ -1,10 +1,14 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
+import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories/in-memory/in-memory-waste-categories-repository.js";
 import { GetCompanyWastesUseCase } from "./get-company-wastes-use-case.js";
 import { UpsertCompanyWastesUseCase } from "./upsert-company-wastes-use-case.js";
+
+const CATEGORY_ID = randomUUID();
 
 const baseCompany = {
 	user_id: "11111111-1111-1111-1111-111111111111",
@@ -24,12 +28,29 @@ describe("get-company-wastes-use-case", () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
+		const wasteCategoriesRepository = new InMemoryWasteCategoriesRepository();
+		wasteCategoriesRepository.items = [
+			{
+				id: CATEGORY_ID,
+				name: "Papel / Papelão",
+				description: null,
+				observations: null,
+				hazard_levels: ["LOW"],
+				created_at: new Date(),
+				updated_at: new Date(),
+				subcategories: [],
+			},
+		];
 		const upsertUseCase = new UpsertCompanyWastesUseCase(
 			companiesRepository,
 			wastesRepository,
 			validationRepository,
+			wasteCategoriesRepository,
 		);
-		const sut = new GetCompanyWastesUseCase(companiesRepository, wastesRepository);
+		const sut = new GetCompanyWastesUseCase(
+			companiesRepository,
+			wastesRepository,
+		);
 
 		const company = await companiesRepository.create(baseCompany);
 		await validationRepository.create(company.id, true);
@@ -43,10 +64,9 @@ describe("get-company-wastes-use-case", () => {
 					description: "Paper waste",
 					price: 12.5,
 					unit: "KG",
-					waste_type: "RECYCLABLE",
+					waste_category_id: CATEGORY_ID,
 					quantity: 100,
 					observations: null,
-					sub_items: ["cardboard"],
 				},
 			],
 		});
@@ -58,13 +78,16 @@ describe("get-company-wastes-use-case", () => {
 
 		expect(result).toHaveLength(1);
 		expect(result[0].name).toBe("Paper");
-		expect(result[0].sub_items).toStrictEqual(["cardboard"]);
+		expect(result[0].waste_category_id).toBe(CATEGORY_ID);
 	});
 
 	it("returns an empty array when the company has no wastes", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
-		const sut = new GetCompanyWastesUseCase(companiesRepository, wastesRepository);
+		const sut = new GetCompanyWastesUseCase(
+			companiesRepository,
+			wastesRepository,
+		);
 
 		const company = await companiesRepository.create(baseCompany);
 
@@ -79,7 +102,10 @@ describe("get-company-wastes-use-case", () => {
 	it("throws when company does not exist", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
-		const sut = new GetCompanyWastesUseCase(companiesRepository, wastesRepository);
+		const sut = new GetCompanyWastesUseCase(
+			companiesRepository,
+			wastesRepository,
+		);
 
 		let thrownError: unknown;
 

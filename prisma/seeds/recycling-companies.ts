@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "../../src/generated/prisma/client.js";
+import { seedWasteCategories } from "./waste-categories.seed.js";
 
 const DATA_PATH = resolve("prisma/seeds/recycling-companies.json");
 
@@ -38,17 +39,6 @@ interface Address {
 	longitude: number | null;
 }
 
-interface Waste {
-	name: string;
-	description: string | null;
-	price: string;
-	unit: string;
-	waste_type: string;
-	quantity: string;
-	observations: string | null;
-	sub_items: string[];
-}
-
 interface CompanySeed {
 	corporate_name: string;
 	business_name: string | null;
@@ -64,7 +54,7 @@ interface CompanySeed {
 	started_activity_in: string;
 	address: Address;
 	business_hours: BusinessHour[];
-	wastes: Waste[];
+	wastes: unknown[];
 }
 
 interface SeedFile {
@@ -75,6 +65,8 @@ interface SeedFile {
 // ─── seed ─────────────────────────────────────────────────────────────────────
 
 async function seed() {
+	await seedWasteCategories(prisma);
+
 	if (!existsSync(DATA_PATH)) {
 		console.error(`Arquivo de dados não encontrado: ${DATA_PATH}`);
 		console.error(
@@ -190,21 +182,8 @@ async function seed() {
 					});
 				}
 
-				for (const waste of data.wastes) {
-					await tx.companyWaste.create({
-						data: {
-							company_id: company.id,
-							name: waste.name,
-							description: waste.description,
-							price: waste.price,
-							unit: waste.unit as "KG",
-							waste_type: waste.waste_type as "RECYCLABLE" | "GARBAGE",
-							quantity: waste.quantity,
-							observations: waste.observations,
-							sub_items: waste.sub_items,
-						},
-					});
-				}
+				// Company wastes are not seeded from JSON — waste_type/sub_items removed.
+				// Use the app or a dedicated waste seed to associate company wastes.
 			});
 
 			process.stdout.write(" ✓\n");

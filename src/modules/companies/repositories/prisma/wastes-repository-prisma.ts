@@ -3,53 +3,93 @@ import type {
 	CompanyWaste,
 	CompanyWasteInput,
 } from "@/modules/companies/dtos/companies-dto.js";
+import type { WasteCategory } from "@/modules/wastes/dtos/wastes-dto.js";
 import type { WastesRepository } from "../wastes-repository.js";
 
-function normalizeSubItems(subItems: string[] | null | undefined) {
-	if (!subItems || subItems.length === 0) {
-		return [];
-	}
+const include = {
+	waste_category: {
+		include: {
+			subcategories: {
+				orderBy: { created_at: "asc" as const },
+			},
+		},
+	},
+};
 
-	return subItems;
+function mapCategory(raw: {
+	id: string;
+	name: string;
+	description: string | null;
+	observations: string | null;
+	hazard_levels: string[];
+	created_at: Date;
+	updated_at: Date;
+	subcategories: {
+		id: string;
+		name: string;
+		description: string | null;
+		observations: string | null;
+		hazard_level: string;
+		type: string;
+		created_at: Date;
+		category_id: string;
+	}[];
+}): WasteCategory {
+	return {
+		id: raw.id,
+		name: raw.name,
+		description: raw.description,
+		observations: raw.observations,
+		hazard_levels: raw.hazard_levels as WasteCategory["hazard_levels"],
+		created_at: raw.created_at,
+		updated_at: raw.updated_at,
+		subcategories: raw.subcategories.map((s) => ({
+			id: s.id,
+			name: s.name,
+			description: s.description,
+			observations: s.observations,
+			hazard_level: s.hazard_level as WasteCategory["subcategories"][number]["hazard_level"],
+			type: s.type as WasteCategory["subcategories"][number]["type"],
+			created_at: s.created_at,
+			category_id: s.category_id,
+		})),
+	};
 }
 
-function mapWaste(waste: {
+function mapWaste(raw: {
 	id: string;
 	name: string;
 	description: string | null;
 	price: { toNumber: () => number } | number;
 	unit: string;
-	waste_type: string;
 	quantity: { toNumber: () => number } | number;
 	observations: string | null;
-	sub_items: string[];
 	created_at: Date;
 	updated_at: Date;
+	waste_category_id: string;
+	waste_category: Parameters<typeof mapCategory>[0];
 }): CompanyWaste {
 	return {
-		id: waste.id,
-		name: waste.name,
-		description: waste.description,
-		price: Number(waste.price),
-		unit: waste.unit as CompanyWaste["unit"],
-		waste_type: waste.waste_type as CompanyWaste["waste_type"],
-		quantity: Number(waste.quantity),
-		observations: waste.observations,
-		sub_items: waste.sub_items.length === 0 ? null : waste.sub_items,
-		created_at: waste.created_at,
-		updated_at: waste.updated_at,
+		id: raw.id,
+		name: raw.name,
+		description: raw.description,
+		price: Number(raw.price),
+		unit: raw.unit as CompanyWaste["unit"],
+		quantity: Number(raw.quantity),
+		observations: raw.observations,
+		waste_category_id: raw.waste_category_id,
+		waste_category: mapCategory(raw.waste_category),
+		created_at: raw.created_at,
+		updated_at: raw.updated_at,
 	};
 }
 
 export class PrismaWastesRepository implements WastesRepository {
 	async findByCompanyId(companyId: string) {
 		const wastes = await prisma.companyWaste.findMany({
-			where: {
-				company_id: companyId,
-			},
-			orderBy: {
-				created_at: "asc",
-			},
+			where: { company_id: companyId },
+			include,
+			orderBy: { created_at: "asc" },
 		});
 
 		return wastes.map(mapWaste);
@@ -58,9 +98,7 @@ export class PrismaWastesRepository implements WastesRepository {
 	async replaceMany(companyId: string, data: CompanyWasteInput[]) {
 		await prisma.$transaction(async (transaction) => {
 			await transaction.companyWaste.deleteMany({
-				where: {
-					company_id: companyId,
-				},
+				where: { company_id: companyId },
 			});
 
 			if (data.length > 0) {
@@ -71,10 +109,9 @@ export class PrismaWastesRepository implements WastesRepository {
 						description: item.description,
 						price: item.price,
 						unit: item.unit,
-						waste_type: item.waste_type,
 						quantity: item.quantity,
 						observations: item.observations,
-						sub_items: normalizeSubItems(item.sub_items),
+						waste_category_id: item.waste_category_id,
 					})),
 				});
 			}

@@ -1,4 +1,7 @@
 import z from "zod";
+import {
+	wasteCategorySchema,
+} from "@/modules/wastes/dtos/wastes-dto.js";
 
 export const identityTypeSchema = z.enum(["CPF", "CNPJ"]);
 export type IdentityType = z.infer<typeof identityTypeSchema>;
@@ -198,28 +201,23 @@ export const measurementSchema = z.enum([
 
 export type Measurement = z.infer<typeof measurementSchema>;
 
-export const wasteTypeSchema = z.enum(["RECYCLABLE", "GARBAGE"]);
-
-export type WasteType = z.infer<typeof wasteTypeSchema>;
-
-const companyItemBaseSchema = z.object({
+const companyItemBaseInputSchema = z.object({
 	name: z.string().min(1, "Name is required"),
 	description: z.string().optional().nullable(),
 	price: z.number().nonnegative("Price must be non-negative"),
 	unit: measurementSchema,
-	waste_type: wasteTypeSchema,
+	waste_category_id: z.string().uuid("waste_category_id must be a valid UUID"),
 	quantity: z.number().positive("Quantity must be greater than zero"),
 	observations: z.string().optional().nullable(),
-	sub_items: z.array(z.string().min(1)).optional().nullable(),
 });
 
-export const companyWasteInputSchema = companyItemBaseSchema;
+export const companyWasteInputSchema = companyItemBaseInputSchema;
 
 export type CompanyWasteInput = z.infer<typeof companyWasteInputSchema>;
 
-export const companyWasteSchema = companyItemBaseSchema.extend({
+export const companyWasteSchema = companyItemBaseInputSchema.extend({
 	id: z.string(),
-	sub_items: z.array(z.string()).nullable(),
+	waste_category: wasteCategorySchema,
 	created_at: z.date(),
 	updated_at: z.date(),
 });
@@ -234,13 +232,13 @@ export const upsertCompanyWastesSchema = z.object({
 
 export type UpsertCompanyWastes = z.infer<typeof upsertCompanyWastesSchema>;
 
-export const companyServiceInputSchema = companyItemBaseSchema;
+export const companyServiceInputSchema = companyItemBaseInputSchema;
 
 export type CompanyServiceInput = z.infer<typeof companyServiceInputSchema>;
 
 export const companyServiceSchema = companyServiceInputSchema.extend({
 	id: z.string(),
-	sub_items: z.array(z.string()).nullable(),
+	waste_category: wasteCategorySchema,
 	created_at: z.date(),
 	updated_at: z.date(),
 });
@@ -298,9 +296,19 @@ export const companyBusinessHoursValidationSchema = z
 		{ message: "At least one open day with a time slot is required" },
 	);
 
-export const companyWastesValidationSchema = z.array(companyWasteSchema).min(1);
+export const companyWastesValidationSchema = z
+	.array(companyWasteSchema)
+	.min(1)
+	.refine((items) => items.every((i) => z.string().uuid().safeParse(i.waste_category_id).success), {
+		message: "All wastes must have a valid waste_category_id",
+	});
 
-export const companyServicesValidationSchema = z.array(companyServiceSchema).min(1);
+export const companyServicesValidationSchema = z
+	.array(companyServiceSchema)
+	.min(1)
+	.refine((items) => items.every((i) => z.string().uuid().safeParse(i.waste_category_id).success), {
+		message: "All services must have a valid waste_category_id",
+	});
 
 // --- Company profile (full aggregate) ---
 

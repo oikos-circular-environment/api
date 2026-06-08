@@ -7,6 +7,7 @@ import type { CompaniesRepository } from "@/modules/companies/repositories/compa
 import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
 import type { ServicesRepository } from "@/modules/companies/repositories/services-repository.js";
 import { isServicesValid } from "@/modules/companies/utils/company-validation-utils.js";
+import type { WasteCategoriesRepository } from "@/modules/wastes/repositories/waste-categories-repository.js";
 
 type UpsertCompanyServicesUseCaseRequest = {
 	userId: string;
@@ -19,6 +20,7 @@ export class UpsertCompanyServicesUseCase {
 		private readonly companiesRepository: CompaniesRepository,
 		private readonly servicesRepository: ServicesRepository,
 		private readonly validationRepository: CompanyValidationRepository,
+		private readonly wasteCategoriesRepository: WasteCategoriesRepository,
 	) {}
 
 	async execute({
@@ -36,6 +38,7 @@ export class UpsertCompanyServicesUseCase {
 		}
 
 		this.validateDuplicatedNames(data);
+		await this.validateCategories(data);
 
 		const services = await this.servicesRepository.replaceMany(company.id, data);
 
@@ -58,5 +61,23 @@ export class UpsertCompanyServicesUseCase {
 				400,
 			);
 		}
+	}
+
+	private async validateCategories(data: CompanyServiceInput[]): Promise<void> {
+		const uniqueIds = [...new Set(data.map((item) => item.waste_category_id))];
+
+		await Promise.all(
+			uniqueIds.map(async (id) => {
+				const category = await this.wasteCategoriesRepository.findById(id);
+
+				if (!category) {
+					throw new AppError(
+						`Waste category not found: ${id}`,
+						"WASTE_CATEGORY_NOT_FOUND",
+						422,
+					);
+				}
+			}),
+		);
 	}
 }

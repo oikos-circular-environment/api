@@ -4,8 +4,8 @@ import {
 	companyTypeSchema,
 	dayOfWeekSchema,
 	measurementSchema,
-	wasteTypeSchema,
 } from "@/modules/companies/dtos/companies-dto.js";
+import { hazardLevelSchema } from "@/modules/wastes/dtos/wastes-dto.js";
 
 export const getMarketQuerySchema = z.object({
 	lat: z.coerce.number(),
@@ -35,16 +35,22 @@ const marketAddressSchema = z.object({
 
 export type MarketAddress = z.infer<typeof marketAddressSchema>;
 
+const marketWasteCategorySchema = z.object({
+	id: z.string(),
+	name: z.string(),
+	hazard_levels: z.array(hazardLevelSchema),
+});
+
 const marketItemSchema = z.object({
 	id: z.string(),
 	name: z.string(),
 	description: z.string().nullable(),
 	price: z.number(),
 	unit: measurementSchema,
-	waste_type: wasteTypeSchema,
+	waste_category_id: z.string(),
+	waste_category: marketWasteCategorySchema,
 	quantity: z.number(),
 	observations: z.string().nullable(),
-	sub_items: z.array(z.string()).nullable(),
 });
 
 export type MarketItem = z.infer<typeof marketItemSchema>;

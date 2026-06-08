@@ -72,10 +72,9 @@ describe("get-company-use-case", () => {
 				description: null,
 				price: 10,
 				unit: "KG",
-				waste_type: "RECYCLABLE",
+				waste_category_id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
 				quantity: 100,
 				observations: null,
-				sub_items: null,
 			},
 		]);
 

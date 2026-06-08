@@ -172,21 +172,53 @@ model BusinessHourTimeSlot {
   @@map("business_hour_time_slots")
 }
 
+model WasteCategory {
+  id            String        @id @default(uuid())
+  name          String
+  description   String?
+  observations  String?
+  hazard_levels HazardLevel[]
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @updatedAt
+
+  subcategories    WasteSubcategory[]
+  company_wastes   CompanyWaste[]
+  company_services CompanyService[]
+
+  @@map("waste_categories")
+}
+
+model WasteSubcategory {
+  id           String          @id @default(uuid())
+  name         String
+  description  String?
+  observations String?
+  hazard_level HazardLevel
+  type         SubcategoryType @default(INCLUDE)
+  created_at   DateTime        @default(now())
+
+  category_id String
+  category    WasteCategory @relation(fields: [category_id], references: [id], onDelete: Cascade)
+
+  @@map("waste_subcategories")
+}
+
 model CompanyWaste {
   id           String      @id @default(uuid())
   name         String
   description  String?
   price        Decimal     @db.Decimal(12, 2)
   unit         Measurement
-  waste_type   WasteType
   quantity     Decimal     @db.Decimal(12, 2)
   observations String?
-  sub_items    String[]
   created_at   DateTime    @default(now())
   updated_at   DateTime    @updatedAt
 
   company_id String
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  waste_category_id String
+  waste_category    WasteCategory @relation(fields: [waste_category_id], references: [id], onDelete: Restrict)
 
   @@map("company_wastes")
 }
@@ -197,15 +229,16 @@ model CompanyService {
   description  String?
   price        Decimal     @db.Decimal(12, 2)
   unit         Measurement
-  waste_type   WasteType
   quantity     Decimal     @db.Decimal(12, 2)
   observations String?
-  sub_items    String[]
   created_at   DateTime    @default(now())
   updated_at   DateTime    @updatedAt
 
   company_id String
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  waste_category_id String
+  waste_category    WasteCategory @relation(fields: [waste_category_id], references: [id], onDelete: Restrict)
 
   @@map("company_services")
 }

@@ -27,6 +27,7 @@ import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repos
 import { PrismaCompanyValidationRepository } from "./repositories/prisma/company-validation-repository-prisma.js";
 import { PrismaServicesRepository } from "./repositories/prisma/services-repository-prisma.js";
 import { PrismaWastesRepository } from "./repositories/prisma/wastes-repository-prisma.js";
+import { PrismaWasteCategoriesRepository } from "../wastes/repositories/prisma/waste-categories-repository-prisma.js";
 import { GetCompanyAddressUseCase } from "./use-cases/company-addresses/get-company-address-use-case.js";
 import { UpsertCompanyAddressUseCase } from "./use-cases/company-addresses/upsert-company-address-use-case.js";
 import { GetCompanyBusinessHoursUseCase } from "./use-cases/company-business-hours/get-company-business-hours-use-case.js";
@@ -57,6 +58,7 @@ export async function companyRoutes(app: FastifyInstance) {
 	const wastesRepository = new PrismaWastesRepository();
 	const servicesRepository = new PrismaServicesRepository();
 	const validationRepository = new PrismaCompanyValidationRepository();
+	const wasteCategoriesRepository = new PrismaWasteCategoriesRepository();
 	const storageProvider = makeStorageProvider();
 
 	const createCompanyUseCase = new CreateCompanyUseCase(
@@ -104,6 +106,7 @@ export async function companyRoutes(app: FastifyInstance) {
 		companiesRepository,
 		wastesRepository,
 		validationRepository,
+		wasteCategoriesRepository,
 	);
 	const getCompanyWastesUseCase = new GetCompanyWastesUseCase(
 		companiesRepository,
@@ -113,6 +116,7 @@ export async function companyRoutes(app: FastifyInstance) {
 		companiesRepository,
 		servicesRepository,
 		validationRepository,
+		wasteCategoriesRepository,
 	);
 	const getCompanyServicesUseCase = new GetCompanyServicesUseCase(
 		companiesRepository,

@@ -137,22 +137,33 @@ describe("isBusinessHoursValid", () => {
 	});
 });
 
+const STUB_CATEGORY = {
+	id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+	name: "Papel / Papelão",
+	description: null,
+	observations: null,
+	hazard_levels: ["LOW" as const],
+	created_at: new Date("2024-01-01"),
+	updated_at: new Date("2024-01-01"),
+	subcategories: [],
+};
+
 describe("isWastesValid", () => {
 	const baseWaste: CompanyWaste = {
 		id: "w1",
-		name: "Paper",
+		name: "Papel",
 		description: null,
 		price: 10,
 		unit: "KG",
-		waste_type: "RECYCLABLE",
+		waste_category_id: STUB_CATEGORY.id,
+		waste_category: STUB_CATEGORY,
 		quantity: 1,
 		observations: null,
-		sub_items: null,
 		created_at: new Date(),
 		updated_at: new Date(),
 	};
 
-	it("returns true when at least one waste exists", () => {
+	it("returns true when at least one waste with valid category exists", () => {
 		expect(isWastesValid([baseWaste])).toBe(true);
 	});
 
@@ -164,19 +175,19 @@ describe("isWastesValid", () => {
 describe("isServicesValid", () => {
 	const baseService: CompanyService = {
 		id: "s1",
-		name: "Collection",
+		name: "Coleta",
 		description: null,
 		price: 100,
 		unit: "UNIT",
-		waste_type: "GARBAGE",
+		waste_category_id: STUB_CATEGORY.id,
+		waste_category: STUB_CATEGORY,
 		quantity: 1,
 		observations: null,
-		sub_items: null,
 		created_at: new Date(),
 		updated_at: new Date(),
 	};
 
-	it("returns true when at least one service exists", () => {
+	it("returns true when at least one service with valid category exists", () => {
 		expect(isServicesValid([baseService])).toBe(true);
 	});
 

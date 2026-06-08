@@ -7,7 +7,7 @@ function haversineDistance(
 	lat2: number,
 	lon2: number,
 ): number {
-	const R = 6371000; // raio da Terra em metros
+	const R = 6371000;
 	const toRad = (deg: number) => (deg * Math.PI) / 180;
 	const dLat = toRad(lat2 - lat1);
 	const dLon = toRad(lon2 - lon1);
@@ -54,19 +54,11 @@ export class InMemoryMarketRepository implements MarketRepository {
 				const inBusinessName =
 					company.business_name !== null &&
 					company.business_name.toLowerCase().includes(lowerQ);
-				const inServices = company.services.some(
-					(service) =>
-						service.name.toLowerCase().includes(lowerQ) ||
-						(service.sub_items ?? []).some((sub) =>
-							sub.toLowerCase().includes(lowerQ),
-						),
+				const inServices = company.services.some((service) =>
+					service.name.toLowerCase().includes(lowerQ),
 				);
-				const inWastes = company.wastes.some(
-					(waste) =>
-						waste.name.toLowerCase().includes(lowerQ) ||
-						(waste.sub_items ?? []).some((sub) =>
-							sub.toLowerCase().includes(lowerQ),
-						),
+				const inWastes = company.wastes.some((waste) =>
+					waste.name.toLowerCase().includes(lowerQ),
 				);
 				return inBusinessName || inServices || inWastes;
 			});

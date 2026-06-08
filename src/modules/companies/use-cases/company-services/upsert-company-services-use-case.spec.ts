@@ -1,9 +1,28 @@
-import { describe, expect, it } from "vitest";
+import { randomUUID } from "node:crypto";
+import { beforeEach, describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-memory/in-memory-services-repository.js";
+import type { WasteCategory } from "@/modules/wastes/dtos/wastes-dto.js";
+import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories/in-memory/in-memory-waste-categories-repository.js";
 import { UpsertCompanyServicesUseCase } from "./upsert-company-services-use-case.js";
+
+const CATEGORY_ID = randomUUID();
+const OTHER_CATEGORY_ID = randomUUID();
+
+function makeCategory(id: string, name: string): WasteCategory {
+	return {
+		id,
+		name,
+		description: null,
+		observations: null,
+		hazard_levels: ["LOW"],
+		created_at: new Date("2024-01-01"),
+		updated_at: new Date("2024-01-01"),
+		subcategories: [],
+	};
+}
 
 const baseCompany = {
 	user_id: "11111111-1111-1111-1111-111111111111",
@@ -19,16 +38,33 @@ const baseCompany = {
 };
 
 describe("upsert-company-services-use-case", () => {
-	it("replaces company services and returns the saved list", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const servicesRepository = new InMemoryServicesRepository();
-		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpsertCompanyServicesUseCase(
+	let companiesRepository: InMemoryCompaniesRepository;
+	let servicesRepository: InMemoryServicesRepository;
+	let validationRepository: InMemoryCompanyValidationRepository;
+	let wasteCategoriesRepository: InMemoryWasteCategoriesRepository;
+	let sut: UpsertCompanyServicesUseCase;
+
+	beforeEach(() => {
+		companiesRepository = new InMemoryCompaniesRepository();
+		servicesRepository = new InMemoryServicesRepository();
+		validationRepository = new InMemoryCompanyValidationRepository();
+		wasteCategoriesRepository = new InMemoryWasteCategoriesRepository();
+		const cat1 = makeCategory(CATEGORY_ID, "Plástico");
+		const cat2 = makeCategory(OTHER_CATEGORY_ID, "Metal / Alumínio");
+		wasteCategoriesRepository.items = [cat1, cat2];
+		servicesRepository.categoryMap = new Map([
+			[CATEGORY_ID, cat1],
+			[OTHER_CATEGORY_ID, cat2],
+		]);
+		sut = new UpsertCompanyServicesUseCase(
 			companiesRepository,
 			servicesRepository,
 			validationRepository,
+			wasteCategoriesRepository,
 		);
+	});
 
+	it("replaces company services and returns the saved list", async () => {
 		const company = await companiesRepository.create(baseCompany);
 		await validationRepository.create(company.id, true);
 
@@ -37,45 +73,32 @@ describe("upsert-company-services-use-case", () => {
 			companyId: company.id,
 			data: [
 				{
-					name: "Collection",
-					description: "Waste collection",
+					name: "Coleta de plástico",
+					description: "Coleta de embalagens plásticas",
 					price: 250,
 					unit: "UNIT",
-					waste_type: "GARBAGE",
+					waste_category_id: CATEGORY_ID,
 					quantity: 2.5,
-					observations: "Includes transport",
-					sub_items: ["bins"],
+					observations: "Inclui transporte",
 				},
 				{
-					name: "Sorting",
+					name: "Coleta de metal",
 					description: null,
 					price: 150.75,
 					unit: "KG",
-					waste_type: "RECYCLABLE",
+					waste_category_id: OTHER_CATEGORY_ID,
 					quantity: 1,
 					observations: null,
-					sub_items: null,
 				},
 			],
 		});
 
 		expect(result).toHaveLength(2);
-		expect(result[0].name).toBe("Collection");
-		expect(result[0].description).toBe("Waste collection");
-		expect(result[0].price).toBe(250);
-		expect(result[0].unit).toBe("UNIT");
-		expect(result[0].waste_type).toBe("GARBAGE");
-		expect(result[0].quantity).toBe(2.5);
-		expect(result[0].observations).toBe("Includes transport");
-		expect(result[0].sub_items).toStrictEqual(["bins"]);
-		expect(result[1].name).toBe("Sorting");
-		expect(result[1].description).toBeNull();
-		expect(result[1].price).toBe(150.75);
-		expect(result[1].unit).toBe("KG");
-		expect(result[1].waste_type).toBe("RECYCLABLE");
-		expect(result[1].quantity).toBe(1);
-		expect(result[1].observations).toBeNull();
-		expect(result[1].sub_items).toBeNull();
+		expect(result[0].name).toBe("Coleta de plástico");
+		expect(result[0].waste_category_id).toBe(CATEGORY_ID);
+		expect(result[0].waste_category.name).toBe("Plástico");
+		expect(result[1].name).toBe("Coleta de metal");
+		expect(result[1].waste_category_id).toBe(OTHER_CATEGORY_ID);
 		expect(servicesRepository.items.length).toBe(2);
 
 		const updated = await sut.execute({
@@ -83,34 +106,23 @@ describe("upsert-company-services-use-case", () => {
 			companyId: company.id,
 			data: [
 				{
-					name: "Consulting",
-					description: "Advisory service",
+					name: "Triagem",
+					description: "Serviço de triagem",
 					price: 99.9,
 					unit: "UNIT",
-					waste_type: "GARBAGE",
+					waste_category_id: CATEGORY_ID,
 					quantity: 3,
 					observations: null,
-					sub_items: ["planning"],
 				},
 			],
 		});
 
 		expect(updated).toHaveLength(1);
-		expect(updated[0].name).toBe("Consulting");
-		expect(updated[0].quantity).toBe(3);
+		expect(updated[0].name).toBe("Triagem");
 		expect(servicesRepository.items.length).toBe(1);
 	});
 
 	it("sets services validation to true when at least one service is saved", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const servicesRepository = new InMemoryServicesRepository();
-		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpsertCompanyServicesUseCase(
-			companiesRepository,
-			servicesRepository,
-			validationRepository,
-		);
-
 		const company = await companiesRepository.create(baseCompany);
 		await validationRepository.create(company.id, true);
 
@@ -119,14 +131,13 @@ describe("upsert-company-services-use-case", () => {
 			companyId: company.id,
 			data: [
 				{
-					name: "Collection",
+					name: "Coleta",
 					description: null,
 					price: 100,
 					unit: "UNIT",
-					waste_type: "GARBAGE",
+					waste_category_id: CATEGORY_ID,
 					quantity: 1,
 					observations: null,
-					sub_items: null,
 				},
 			],
 		});
@@ -137,15 +148,6 @@ describe("upsert-company-services-use-case", () => {
 	});
 
 	it("sets services validation to false when replaced with empty array", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const servicesRepository = new InMemoryServicesRepository();
-		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpsertCompanyServicesUseCase(
-			companiesRepository,
-			servicesRepository,
-			validationRepository,
-		);
-
 		const company = await companiesRepository.create(baseCompany);
 		await validationRepository.create(company.id, true);
 
@@ -154,14 +156,13 @@ describe("upsert-company-services-use-case", () => {
 			companyId: company.id,
 			data: [
 				{
-					name: "Collection",
+					name: "Coleta",
 					description: null,
 					price: 100,
 					unit: "UNIT",
-					waste_type: "GARBAGE",
+					waste_category_id: CATEGORY_ID,
 					quantity: 1,
 					observations: null,
-					sub_items: null,
 				},
 			],
 		});
@@ -178,15 +179,6 @@ describe("upsert-company-services-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const servicesRepository = new InMemoryServicesRepository();
-		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpsertCompanyServicesUseCase(
-			companiesRepository,
-			servicesRepository,
-			validationRepository,
-		);
-
 		let thrownError: unknown;
 
 		try {
@@ -209,15 +201,6 @@ describe("upsert-company-services-use-case", () => {
 	});
 
 	it("throws when payload has duplicated service names", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const servicesRepository = new InMemoryServicesRepository();
-		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpsertCompanyServicesUseCase(
-			companiesRepository,
-			servicesRepository,
-			validationRepository,
-		);
-
 		const company = await companiesRepository.create(baseCompany);
 
 		let thrownError: unknown;
@@ -228,24 +211,22 @@ describe("upsert-company-services-use-case", () => {
 				companyId: company.id,
 				data: [
 					{
-						name: "Collection",
+						name: "Coleta",
 						description: null,
 						price: 100,
 						unit: "UNIT",
-						waste_type: "GARBAGE",
+						waste_category_id: CATEGORY_ID,
 						quantity: 1,
 						observations: null,
-						sub_items: null,
 					},
 					{
-						name: "Collection",
-						description: "duplicate",
+						name: "Coleta",
+						description: "duplicado",
 						price: 120,
 						unit: "UNIT",
-						waste_type: "RECYCLABLE",
+						waste_category_id: OTHER_CATEGORY_ID,
 						quantity: 2,
 						observations: null,
-						sub_items: null,
 					},
 				],
 			});
@@ -259,6 +240,39 @@ describe("upsert-company-services-use-case", () => {
 			expect(thrownError.message).toBe("Duplicated name in payload");
 			expect(thrownError.code).toBe("DUPLICATED_ITEM_NAME");
 			expect(thrownError.statusCode).toBe(400);
+		}
+	});
+
+	it("throws when waste_category_id does not exist", async () => {
+		const company = await companiesRepository.create(baseCompany);
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: "11111111-1111-1111-1111-111111111111",
+				companyId: company.id,
+				data: [
+					{
+						name: "Coleta",
+						description: null,
+						price: 100,
+						unit: "UNIT",
+						waste_category_id: "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+						quantity: 1,
+						observations: null,
+					},
+				],
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.code).toBe("WASTE_CATEGORY_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(422);
 		}
 	});
 });

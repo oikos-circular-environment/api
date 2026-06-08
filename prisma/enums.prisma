@@ -30,9 +30,16 @@ enum Measurement {
   ML
 }
 
-enum WasteType {
-  RECYCLABLE
-  GARBAGE
+enum HazardLevel {
+  LOW
+  MEDIUM
+  HIGH
+  VERY_HIGH
+}
+
+enum SubcategoryType {
+  INCLUDE
+  EXCLUDE
 }
 
 enum ComplaintType {
