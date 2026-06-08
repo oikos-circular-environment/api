@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
 import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
@@ -8,8 +9,6 @@ import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in
 import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-memory/in-memory-services-repository.js";
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
 import { GetCompanyUseCase } from "./get-company-use-case.js";
-
-const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 function makeSut() {
 	const companiesRepository = new InMemoryCompaniesRepository();
@@ -37,11 +36,12 @@ function makeSut() {
 
 describe("get-company-use-case", () => {
 	it("returns all companies for a user with related data", async () => {
+		const userId = randomUUID();
 		const { sut, companiesRepository, addressesRepository, wastesRepository } =
 			makeSut();
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		const address = await addressesRepository.create({
@@ -53,12 +53,12 @@ describe("get-company-use-case", () => {
 		await wastesRepository.replaceMany(company.id, [wasteInput]);
 
 		const secondInput = makeCompanyInput({
-			user_id: USER_ID,
+			user_id: userId,
 			corporate_name: "Nova Oikos SA",
 		});
 		await companiesRepository.create(secondInput);
 
-		const result = await sut.execute({ userId: USER_ID });
+		const result = await sut.execute({ userId });
 
 		expect(result).toHaveLength(2);
 		expect(result[0].address?.city).toBe(address.city);
@@ -72,11 +72,12 @@ describe("get-company-use-case", () => {
 	});
 
 	it("returns empty arrays for related data when company has none", async () => {
+		const userId = randomUUID();
 		const { sut, companiesRepository } = makeSut();
 
-		await companiesRepository.create(makeCompanyInput({ user_id: USER_ID }));
+		await companiesRepository.create(makeCompanyInput({ user_id: userId }));
 
-		const result = await sut.execute({ userId: USER_ID });
+		const result = await sut.execute({ userId });
 
 		expect(result).toHaveLength(1);
 		expect(result[0].address).toBeNull();
@@ -86,9 +87,10 @@ describe("get-company-use-case", () => {
 	});
 
 	it("returns empty array when user has no companies", async () => {
+		const userId = randomUUID();
 		const { sut } = makeSut();
 
-		const result = await sut.execute({ userId: USER_ID });
+		const result = await sut.execute({ userId });
 
 		expect(result).toStrictEqual([]);
 	});

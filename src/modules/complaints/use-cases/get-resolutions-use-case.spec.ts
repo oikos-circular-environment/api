@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
@@ -5,14 +6,12 @@ import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { GetResolutionsUseCase } from "./get-resolutions-use-case.js";
 import { SubmitResolutionUseCase } from "./submit-resolution-use-case.js";
 
-const USER_A = "11111111-1111-1111-1111-111111111111";
-const USER_B = "22222222-2222-2222-2222-222222222222";
-
 describe("get-resolutions-use-case", () => {
 	it("returns empty list when no resolutions exist", async () => {
+		const userAId = randomUUID();
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
-			userId: USER_A,
+			userId: userAId,
 			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		});
 		const sut = new GetResolutionsUseCase(repo);
@@ -23,14 +22,16 @@ describe("get-resolutions-use-case", () => {
 	});
 
 	it("returns all resolutions for a complaint from multiple users", async () => {
+		const userAId = randomUUID();
+		const userBId = randomUUID();
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
-			userId: USER_A,
+			userId: userAId,
 			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		});
 		const submitUseCase = new SubmitResolutionUseCase(repo);
-		await submitUseCase.execute({ userId: USER_A, complaintId: complaint.id, data: { description: "Resolvido A" } });
-		await submitUseCase.execute({ userId: USER_B, complaintId: complaint.id, data: { description: "Resolvido B" } });
+		await submitUseCase.execute({ userId: userAId, complaintId: complaint.id, data: { description: "Resolvido A" } });
+		await submitUseCase.execute({ userId: userBId, complaintId: complaint.id, data: { description: "Resolvido B" } });
 		const sut = new GetResolutionsUseCase(repo);
 
 		const result = await sut.execute({ complaintId: complaint.id });
@@ -42,18 +43,19 @@ describe("get-resolutions-use-case", () => {
 	});
 
 	it("each resolution includes its attachments", async () => {
+		const userAId = randomUUID();
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
-			userId: USER_A,
+			userId: userAId,
 			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		});
 		await new SubmitResolutionUseCase(repo).execute({
-			userId: USER_A,
+			userId: userAId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
 		});
-		const resolution = await repo.findResolutionByUserAndComplaint(USER_A, complaint.id);
-		await repo.addResolutionAttachment(USER_A, resolution!.id, {
+		const resolution = await repo.findResolutionByUserAndComplaint(userAId, complaint.id);
+		await repo.addResolutionAttachment(userAId, resolution!.id, {
 			url: "https://example.com/img.jpg",
 			file_name: "img.jpg",
 			path: "resolutions/img.jpg",

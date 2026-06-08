@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
@@ -5,10 +6,9 @@ import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositorie
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { GetCompanyBusinessHoursUseCase } from "./get-company-business-hours-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-
 describe("get-company-business-hours-use-case", () => {
 	it("returns sunday to saturday even when no data exists", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const sut = new GetCompanyBusinessHoursUseCase(
@@ -17,11 +17,11 @@ describe("get-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 		});
 
@@ -32,6 +32,7 @@ describe("get-company-business-hours-use-case", () => {
 	});
 
 	it("keeps existing business hours and fills missing days", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const sut = new GetCompanyBusinessHoursUseCase(
@@ -40,7 +41,7 @@ describe("get-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		await businessHoursRepository.upsertMany(company.id, [
@@ -52,7 +53,7 @@ describe("get-company-business-hours-use-case", () => {
 		]);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 		});
 
@@ -65,6 +66,7 @@ describe("get-company-business-hours-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const sut = new GetCompanyBusinessHoursUseCase(
@@ -76,8 +78,8 @@ describe("get-company-business-hours-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				companyId: randomUUID(),
 			});
 		} catch (error) {
 			thrownError = error;

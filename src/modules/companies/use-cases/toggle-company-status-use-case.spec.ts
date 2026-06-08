@@ -1,23 +1,22 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { ToggleCompanyStatusUseCase } from "./toggle-company-status-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-const ANOTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
-
 describe("toggle-company-status-use-case", () => {
 	it("deactivates an active company", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID, status: true }),
+			makeCompanyInput({ user_id: userId, status: true }),
 		);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: created.id,
 			status: false,
 		});
@@ -27,15 +26,16 @@ describe("toggle-company-status-use-case", () => {
 	});
 
 	it("activates an inactive company", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID, status: false }),
+			makeCompanyInput({ user_id: userId, status: false }),
 		);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: created.id,
 			status: true,
 		});
@@ -44,6 +44,7 @@ describe("toggle-company-status-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
@@ -51,8 +52,8 @@ describe("toggle-company-status-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				companyId: randomUUID(),
 				status: false,
 			});
 		} catch (error) {
@@ -69,18 +70,20 @@ describe("toggle-company-status-use-case", () => {
 	});
 
 	it("throws when company belongs to a different user", async () => {
+		const userId = randomUUID();
+		const anotherUserId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: ANOTHER_USER_ID,
+				userId: anotherUserId,
 				companyId: created.id,
 				status: false,
 			});
@@ -97,14 +100,15 @@ describe("toggle-company-status-use-case", () => {
 	});
 
 	it("does not change other company fields when toggling status", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
-		const input = makeCompanyInput({ user_id: USER_ID });
+		const input = makeCompanyInput({ user_id: userId });
 		const created = await companiesRepository.create(input);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: created.id,
 			status: false,
 		});

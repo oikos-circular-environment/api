@@ -1,13 +1,13 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { CreateCompanyUseCase } from "./create-company-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-
 describe("create-company-use-case", () => {
 	it("creates a company for the user", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new CreateCompanyUseCase(
@@ -15,11 +15,11 @@ describe("create-company-use-case", () => {
 			validationRepository,
 		);
 
-		const input = makeCompanyInput({ user_id: USER_ID });
+		const input = makeCompanyInput({ user_id: userId });
 
-		const result = await sut.execute({ userId: USER_ID, data: input });
+		const result = await sut.execute({ userId, data: input });
 
-		expect(result.user_id).toBe(USER_ID);
+		expect(result.user_id).toBe(userId);
 		expect(result.identity).toBe(input.identity);
 		expect(result.identity_type).toBe(input.identity_type);
 		expect(result.company_type).toBe(input.company_type);
@@ -32,6 +32,7 @@ describe("create-company-use-case", () => {
 	});
 
 	it("allows the same user to create multiple companies with different identities", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new CreateCompanyUseCase(
@@ -39,23 +40,24 @@ describe("create-company-use-case", () => {
 			validationRepository,
 		);
 
-		const input1 = makeCompanyInput({ user_id: USER_ID });
+		const input1 = makeCompanyInput({ user_id: userId });
 		const input2 = makeCompanyInput({
-			user_id: USER_ID,
+			user_id: userId,
 			identity_type: "CNPJ",
 			company_type: "ONG",
 		});
 
-		await sut.execute({ userId: USER_ID, data: input1 });
-		await sut.execute({ userId: USER_ID, data: input2 });
+		await sut.execute({ userId, data: input1 });
+		await sut.execute({ userId, data: input2 });
 
 		expect(companiesRepository.items.length).toBe(2);
-		expect(companiesRepository.items.every((c) => c.user_id === USER_ID)).toBe(
+		expect(companiesRepository.items.every((c) => c.user_id === userId)).toBe(
 			true,
 		);
 	});
 
 	it("creates CompanyValidation with general_registration true and others false", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new CreateCompanyUseCase(
@@ -64,8 +66,8 @@ describe("create-company-use-case", () => {
 		);
 
 		const company = await sut.execute({
-			userId: USER_ID,
-			data: makeCompanyInput({ user_id: USER_ID }),
+			userId,
+			data: makeCompanyInput({ user_id: userId }),
 		});
 
 		const validation = await validationRepository.findByCompanyId(company.id);
@@ -79,6 +81,7 @@ describe("create-company-use-case", () => {
 	});
 
 	it("sets is_company_valid to false on a freshly created company", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new CreateCompanyUseCase(
@@ -87,8 +90,8 @@ describe("create-company-use-case", () => {
 		);
 
 		const company = await sut.execute({
-			userId: USER_ID,
-			data: makeCompanyInput({ user_id: USER_ID }),
+			userId,
+			data: makeCompanyInput({ user_id: userId }),
 		});
 
 		expect(company.is_company_valid).toBe(false);

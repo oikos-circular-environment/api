@@ -1,10 +1,9 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it, vi } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { ResolveComplaintUseCase } from "./resolve-complaint-use-case.js";
-
-const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 const resolution = {
 	description: "Problema resolvido pela prefeitura",
@@ -12,15 +11,16 @@ const resolution = {
 
 describe("resolve-complaint-use-case", () => {
 	it("registers resolution and vote when resolving a complaint", async () => {
+		const userId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
 		const created = await complaintsRepository.createForUser(
-			USER_ID,
+			userId,
 			{ date: new Date("2026-04-20T10:00:00.000Z"), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 
-		await sut.execute({ userId: USER_ID, complaintId: created.id, resolution });
+		await sut.execute({ userId, complaintId: created.id, resolution });
 
 		expect(complaintsRepository.resolutions).toHaveLength(1);
 		expect(complaintsRepository.resolutions[0].description).toBe(resolution.description);
@@ -29,6 +29,7 @@ describe("resolve-complaint-use-case", () => {
 	});
 
 	it("throws when complaint does not exist", async () => {
+		const userId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
@@ -36,8 +37,8 @@ describe("resolve-complaint-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				complaintId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				complaintId: randomUUID(),
 				resolution,
 			});
 		} catch (error) {
@@ -54,18 +55,19 @@ describe("resolve-complaint-use-case", () => {
 	});
 
 	it("throws 422 COMPLAINT_CLOSED when complaint is already RESOLVED", async () => {
+		const userId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
 		const created = await complaintsRepository.createForUser(
-			USER_ID,
+			userId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
-		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, created.id, "RESOLVED");
+		await complaintsRepository.updateStatusByUserAndComplaintId(userId, created.id, "RESOLVED");
 
 		let thrownError: unknown;
 		try {
-			await sut.execute({ userId: USER_ID, complaintId: created.id, resolution });
+			await sut.execute({ userId, complaintId: created.id, resolution });
 		} catch (error) {
 			thrownError = error;
 		}
@@ -78,32 +80,34 @@ describe("resolve-complaint-use-case", () => {
 	});
 
 	it("throws 422 COMPLAINT_CLOSED when complaint is CANCELED", async () => {
+		const userId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
 		const created = await complaintsRepository.createForUser(
-			USER_ID,
+			userId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
-		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, created.id, "CANCELED");
+		await complaintsRepository.updateStatusByUserAndComplaintId(userId, created.id, "CANCELED");
 
 		await expect(
-			sut.execute({ userId: USER_ID, complaintId: created.id, resolution }),
+			sut.execute({ userId, complaintId: created.id, resolution }),
 		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }));
 	});
 
 	it("calls job dispatcher with the complaint id", async () => {
+		const userId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const dispatchQuorumJob = vi.fn().mockResolvedValue(undefined);
 		const jobDispatcher = { dispatchGroupingJob: vi.fn(), dispatchQuorumJob };
 		const sut = new ResolveComplaintUseCase(complaintsRepository, jobDispatcher);
 
 		const created = await complaintsRepository.createForUser(
-			USER_ID,
+			userId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 
-		await sut.execute({ userId: USER_ID, complaintId: created.id, resolution });
+		await sut.execute({ userId, complaintId: created.id, resolution });
 
 		expect(dispatchQuorumJob).toHaveBeenCalledWith(created.id);
 	});

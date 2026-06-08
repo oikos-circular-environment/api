@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
@@ -6,10 +7,9 @@ import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpsertCompanyBusinessHoursUseCase } from "./upsert-company-business-hours-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-
 describe("upsert-company-business-hours-use-case", () => {
 	it("upserts partial payload and persists sunday to saturday", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -20,12 +20,12 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [
 				{
@@ -60,6 +60,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("keeps existing day values when payload does not include the day", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -70,12 +71,12 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [
 				{
@@ -87,7 +88,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		});
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [
 				{
@@ -107,6 +108,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("sets business_hours validation to true when at least one open day has a slot", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -117,12 +119,12 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [
 				{
@@ -139,6 +141,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("sets business_hours validation to false when all days are closed", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -149,12 +152,12 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [{ day_of_week: "MONDAY", is_open: false, time_slots: [] }],
 		});
@@ -165,6 +168,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when time_slots is empty and is_open is true", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -175,14 +179,14 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
+				userId,
 				companyId: company.id,
 				data: [{ day_of_week: "SUNDAY", is_open: true, time_slots: [] }],
 			});
@@ -199,6 +203,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("accepts closed day with empty time_slots", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -209,12 +214,12 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [{ day_of_week: "SUNDAY", is_open: false, time_slots: [] }],
 		});
@@ -225,6 +230,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when day_of_week is duplicated", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -235,14 +241,14 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
+				userId,
 				companyId: company.id,
 				data: [
 					{
@@ -266,6 +272,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -279,8 +286,8 @@ describe("upsert-company-business-hours-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				companyId: randomUUID(),
 				data: [
 					{
 						day_of_week: "MONDAY",
@@ -302,6 +309,7 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when start_time is greater than or equal to end_time", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -312,14 +320,14 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
+				userId,
 				companyId: company.id,
 				data: [
 					{

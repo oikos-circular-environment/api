@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
@@ -5,11 +6,9 @@ import { makeCompanyInput } from "@/modules/companies/factories/make-company.js"
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { UploadCompanyAvatarUseCase } from "./upload-company-avatar-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-const ANOTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
-
 describe("upload-company-avatar-use-case", () => {
 	it("uploads avatar successfully", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new UploadCompanyAvatarUseCase(
@@ -18,11 +17,11 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: created.id,
 			file: {
 				fileName: "avatar.jpg",
@@ -42,6 +41,7 @@ describe("upload-company-avatar-use-case", () => {
 	});
 
 	it("throws when company does not exist for user", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new UploadCompanyAvatarUseCase(
@@ -53,8 +53,8 @@ describe("upload-company-avatar-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				companyId: randomUUID(),
 				file: {
 					fileName: "avatar.jpg",
 					mimeType: "image/jpeg",
@@ -75,6 +75,8 @@ describe("upload-company-avatar-use-case", () => {
 	});
 
 	it("throws when company belongs to a different user", async () => {
+		const userId = randomUUID();
+		const anotherUserId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new UploadCompanyAvatarUseCase(
@@ -83,14 +85,14 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: ANOTHER_USER_ID,
+				userId: anotherUserId,
 				companyId: created.id,
 				file: {
 					fileName: "avatar.jpg",
@@ -112,6 +114,7 @@ describe("upload-company-avatar-use-case", () => {
 	});
 
 	it("throws when mime type is invalid", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new UploadCompanyAvatarUseCase(
@@ -120,14 +123,14 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
+				userId,
 				companyId: created.id,
 				file: {
 					fileName: "avatar.gif",
@@ -151,6 +154,7 @@ describe("upload-company-avatar-use-case", () => {
 	});
 
 	it("throws when file exceeds 5MB", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new UploadCompanyAvatarUseCase(
@@ -159,14 +163,14 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
+				userId,
 				companyId: created.id,
 				file: {
 					fileName: "avatar.png",

@@ -1,10 +1,9 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { GetMapComplaintsUseCase } from "./get-map-complaints-use-case.js";
-
-const USER_A = "11111111-1111-1111-1111-111111111111";
 
 // Sao Paulo coordinates used for radius-based assertions
 const spCoords = { latitude: -23.55, longitude: -46.63 };
@@ -24,15 +23,16 @@ function makeSpGeospatial(overrides?: Partial<Geospatial>): Geospatial {
 
 describe("get-map-complaints-use-case", () => {
 	it("returns OPEN complaints by default when no status filter is provided", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
 		);
 
@@ -47,15 +47,16 @@ describe("get-map-complaints-use-case", () => {
 	});
 
 	it("returns complaints matching the given type filter", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
 		);
 
@@ -71,15 +72,16 @@ describe("get-map-complaints-use-case", () => {
 	});
 
 	it("filters by single status", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
 		);
 
@@ -98,11 +100,12 @@ describe("get-map-complaints-use-case", () => {
 	});
 
 	it("returns items with correct MapComplaintItem shape including attachments", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial: makeSpGeospatial() },
 		);
 
@@ -124,6 +127,7 @@ describe("get-map-complaints-use-case", () => {
 	});
 
 	it("does not return complaints outside the radius", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
@@ -138,7 +142,7 @@ describe("get-map-complaints-use-case", () => {
 				timestamp: Date.now(),
 			},
 		});
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date(),
 			type: "BURNING",
 			observations: null,
@@ -151,11 +155,12 @@ describe("get-map-complaints-use-case", () => {
 	});
 
 	it("location is derived from capture coordinates", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 

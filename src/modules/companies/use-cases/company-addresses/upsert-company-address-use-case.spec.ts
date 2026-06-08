@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
@@ -7,10 +8,9 @@ import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpsertCompanyAddressUseCase } from "./upsert-company-address-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-
 describe("upsert-company-address-use-case", () => {
 	it("creates address when company does not have one", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -21,14 +21,14 @@ describe("upsert-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		const addressData = makeAddressInput();
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: addressData,
 		});
@@ -47,6 +47,7 @@ describe("upsert-company-address-use-case", () => {
 	});
 
 	it("updates existing address when company already has one", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -57,7 +58,7 @@ describe("upsert-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -68,7 +69,7 @@ describe("upsert-company-address-use-case", () => {
 		});
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: {
 				...addressData,
@@ -86,6 +87,7 @@ describe("upsert-company-address-use-case", () => {
 	});
 
 	it("sets address validation to true when address has lat and lng", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -96,12 +98,12 @@ describe("upsert-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: makeAddressInput(),
 		});
@@ -112,6 +114,7 @@ describe("upsert-company-address-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
@@ -125,8 +128,8 @@ describe("upsert-company-address-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				companyId: randomUUID(),
 				data: makeAddressInput(),
 			});
 		} catch (error) {

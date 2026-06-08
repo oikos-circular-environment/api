@@ -10,17 +10,16 @@ import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories
 import { GetCompanyWastesUseCase } from "./get-company-wastes-use-case.js";
 import { UpsertCompanyWastesUseCase } from "./upsert-company-wastes-use-case.js";
 
-const USER_ID = "11111111-1111-1111-1111-111111111111";
-
 describe("get-company-wastes-use-case", () => {
 	it("returns the company wastes list", async () => {
+		const userId = randomUUID();
+		const categoryId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
 		const wasteCategoriesRepository = new InMemoryWasteCategoriesRepository();
 
-		const CATEGORY_ID = randomUUID();
-		const category = makeWasteCategory({ id: CATEGORY_ID });
+		const category = makeWasteCategory({ id: categoryId });
 		wasteCategoriesRepository.items = [category];
 
 		const upsertUseCase = new UpsertCompanyWastesUseCase(
@@ -35,12 +34,12 @@ describe("get-company-wastes-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		await upsertUseCase.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 			data: [
 				{
@@ -48,7 +47,7 @@ describe("get-company-wastes-use-case", () => {
 					description: "Paper waste",
 					price: 12.5,
 					unit: "KG",
-					waste_category_id: CATEGORY_ID,
+					waste_category_id: categoryId,
 					quantity: 100,
 					observations: null,
 				},
@@ -56,16 +55,17 @@ describe("get-company-wastes-use-case", () => {
 		});
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 		});
 
 		expect(result).toHaveLength(1);
 		expect(result[0].name).toBe("Paper");
-		expect(result[0].waste_category_id).toBe(CATEGORY_ID);
+		expect(result[0].waste_category_id).toBe(categoryId);
 	});
 
 	it("returns an empty array when the company has no wastes", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
 		const sut = new GetCompanyWastesUseCase(
@@ -74,11 +74,11 @@ describe("get-company-wastes-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: USER_ID }),
+			makeCompanyInput({ user_id: userId }),
 		);
 
 		const result = await sut.execute({
-			userId: USER_ID,
+			userId,
 			companyId: company.id,
 		});
 
@@ -86,6 +86,7 @@ describe("get-company-wastes-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const wastesRepository = new InMemoryWastesRepository();
 		const sut = new GetCompanyWastesUseCase(
@@ -97,8 +98,8 @@ describe("get-company-wastes-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: USER_ID,
-				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
+				userId,
+				companyId: randomUUID(),
 			});
 		} catch (error) {
 			thrownError = error;

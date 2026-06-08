@@ -1,18 +1,18 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { GetComplaintsUseCase } from "./get-complaints-use-case.js";
 
-const USER_A = "11111111-1111-1111-1111-111111111111";
-const USER_B = "22222222-2222-2222-2222-222222222222";
-
 describe("get-complaints-use-case", () => {
 	it("lists complaints from a specific user", async () => {
+		const userAId = randomUUID();
+		const userBId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "VACANT_LOT",
@@ -22,7 +22,7 @@ describe("get-complaints-use-case", () => {
 		);
 
 		await complaintsRepository.createForUser(
-			USER_B,
+			userBId,
 			{
 				date: new Date("2026-04-21T10:00:00.000Z"),
 				type: "DEFORESTATION",
@@ -31,7 +31,7 @@ describe("get-complaints-use-case", () => {
 			},
 		);
 
-		const { complaints } = await sut.execute({ userId: USER_A, limit: 20 });
+		const { complaints } = await sut.execute({ userId: userAId, limit: 20 });
 
 		expect(complaints.length).toBe(1);
 		expect(complaints[0]?.type).toBe("VACANT_LOT");
@@ -39,11 +39,12 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("returns empty list when user has no complaints", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 20,
 		});
 
@@ -52,12 +53,13 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("returns first page with next_cursor when there are more items", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
 			await complaintsRepository.createForUser(
-				USER_A,
+				userAId,
 				{
 					date: new Date("2026-04-01T10:00:00.000Z"),
 					type: "BURNING",
@@ -72,7 +74,7 @@ describe("get-complaints-use-case", () => {
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 3,
 		});
 
@@ -81,12 +83,13 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("returns last page with next_cursor null", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 3; i++) {
 			await complaintsRepository.createForUser(
-				USER_A,
+				userAId,
 				{
 					date: new Date("2026-04-01T10:00:00.000Z"),
 					type: "BURNING",
@@ -101,7 +104,7 @@ describe("get-complaints-use-case", () => {
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 3,
 		});
 
@@ -110,12 +113,13 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("second page returns remaining items using cursor", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
 			await complaintsRepository.createForUser(
-				USER_A,
+				userAId,
 				{
 					date: new Date("2026-04-01T10:00:00.000Z"),
 					type: "BURNING",
@@ -130,12 +134,12 @@ describe("get-complaints-use-case", () => {
 			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
-		const firstPage = await sut.execute({ userId: USER_A, limit: 3 });
+		const firstPage = await sut.execute({ userId: userAId, limit: 3 });
 		expect(firstPage.complaints.length).toBe(3);
 		expect(firstPage.next_cursor).not.toBeNull();
 
 		const secondPage = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 3,
 			cursor: new Date(firstPage.next_cursor!),
 		});
@@ -151,11 +155,12 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("filters by type", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-01T10:00:00.000Z"),
 				type: "BURNING",
@@ -164,7 +169,7 @@ describe("get-complaints-use-case", () => {
 			},
 		);
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-02T10:00:00.000Z"),
 				type: "DEFORESTATION",
@@ -174,7 +179,7 @@ describe("get-complaints-use-case", () => {
 		);
 
 		const { complaints } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			filters: { type: "BURNING" },
 			limit: 20,
 		});
@@ -184,11 +189,12 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("filters by status", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		const c1 = await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-01T10:00:00.000Z"),
 				type: "BURNING",
@@ -197,13 +203,13 @@ describe("get-complaints-use-case", () => {
 			},
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(
-			USER_A,
+			userAId,
 			c1.id,
 			"RESOLVED",
 		);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-02T10:00:00.000Z"),
 				type: "DEFORESTATION",
@@ -213,7 +219,7 @@ describe("get-complaints-use-case", () => {
 		);
 
 		const { complaints } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			filters: { status: "OPEN" },
 			limit: 20,
 		});
@@ -223,11 +229,12 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("filters by type and status combined", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-01T10:00:00.000Z"),
 				type: "BURNING",
@@ -237,7 +244,7 @@ describe("get-complaints-use-case", () => {
 		);
 
 		const c2 = await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-02T10:00:00.000Z"),
 				type: "BURNING",
@@ -246,13 +253,13 @@ describe("get-complaints-use-case", () => {
 			},
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(
-			USER_A,
+			userAId,
 			c2.id,
 			"RESOLVED",
 		);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-03T10:00:00.000Z"),
 				type: "DEFORESTATION",
@@ -262,7 +269,7 @@ describe("get-complaints-use-case", () => {
 		);
 
 		const { complaints } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			filters: { type: "BURNING", status: "OPEN" },
 			limit: 20,
 		});
@@ -273,11 +280,12 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("returns empty list when filter has no match", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		await complaintsRepository.createForUser(
-			USER_A,
+			userAId,
 			{
 				date: new Date("2026-04-01T10:00:00.000Z"),
 				type: "BURNING",
@@ -287,7 +295,7 @@ describe("get-complaints-use-case", () => {
 		);
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			filters: { type: "DEFORESTATION" },
 			limit: 20,
 		});
