@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
-import { makeCompanyWasteInput } from "@/modules/companies/factories/make-company-item.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyWaste } from "@/modules/companies/factories/make-company-waste.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
@@ -41,18 +41,18 @@ describe("get-company-use-case", () => {
 			makeSut();
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		const address = await addressesRepository.create({
 			company_id: company.id,
-			...makeAddressInput({ city: "Sao Paulo" }),
+			...makeCompanyAddress({ city: "Sao Paulo" }),
 		});
 
-		const wasteInput = makeCompanyWasteInput();
+		const wasteInput = makeCompanyWaste();
 		await wastesRepository.replaceMany(company.id, [wasteInput]);
 
-		const secondInput = makeCompanyInput({
+		const secondInput = makeCompany({
 			user_id: userId,
 			corporate_name: "Nova Oikos SA",
 		});
@@ -75,7 +75,7 @@ describe("get-company-use-case", () => {
 		const userId = randomUUID();
 		const { sut, companiesRepository } = makeSut();
 
-		await companiesRepository.create(makeCompanyInput({ user_id: userId }));
+		await companiesRepository.create(makeCompany({ user_id: userId }));
 
 		const result = await sut.execute({ userId });
 

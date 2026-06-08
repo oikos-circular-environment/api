@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { CreateCompanyUseCase } from "./create-company-use-case.js";
@@ -15,7 +15,7 @@ describe("create-company-use-case", () => {
 			validationRepository,
 		);
 
-		const input = makeCompanyInput({ user_id: userId });
+		const input = makeCompany({ user_id: userId });
 
 		const result = await sut.execute({ userId, data: input });
 
@@ -40,8 +40,8 @@ describe("create-company-use-case", () => {
 			validationRepository,
 		);
 
-		const input1 = makeCompanyInput({ user_id: userId });
-		const input2 = makeCompanyInput({
+		const input1 = makeCompany({ user_id: userId });
+		const input2 = makeCompany({
 			user_id: userId,
 			identity_type: "CNPJ",
 			company_type: "ONG",
@@ -67,7 +67,7 @@ describe("create-company-use-case", () => {
 
 		const company = await sut.execute({
 			userId,
-			data: makeCompanyInput({ user_id: userId }),
+			data: makeCompany({ user_id: userId }),
 		});
 
 		const validation = await validationRepository.findByCompanyId(company.id);
@@ -91,7 +91,7 @@ describe("create-company-use-case", () => {
 
 		const company = await sut.execute({
 			userId,
-			data: makeCompanyInput({ user_id: userId }),
+			data: makeCompany({ user_id: userId }),
 		});
 
 		expect(company.is_company_valid).toBe(false);

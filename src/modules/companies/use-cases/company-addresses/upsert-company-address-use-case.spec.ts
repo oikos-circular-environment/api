@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
@@ -21,11 +21,11 @@ describe("upsert-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
-		const addressData = makeAddressInput();
+		const addressData = makeCompanyAddress();
 
 		const result = await sut.execute({
 			userId,
@@ -58,11 +58,11 @@ describe("upsert-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
-		const addressData = makeAddressInput();
+		const addressData = makeCompanyAddress();
 		await addressesRepository.create({
 			company_id: company.id,
 			...addressData,
@@ -98,14 +98,14 @@ describe("upsert-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
 			userId,
 			companyId: company.id,
-			data: makeAddressInput(),
+			data: makeCompanyAddress(),
 		});
 
 		const validation = await validationRepository.findByCompanyId(company.id);
@@ -130,7 +130,7 @@ describe("upsert-company-address-use-case", () => {
 			await sut.execute({
 				userId,
 				companyId: randomUUID(),
-				data: makeAddressInput(),
+				data: makeCompanyAddress(),
 			});
 		} catch (error) {
 			thrownError = error;

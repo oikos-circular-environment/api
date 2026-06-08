@@ -12,8 +12,8 @@ export const createAddressSchema = z.object({
 	state_ibge_id: z.number().int(),
 	state: z.string().min(1, "State is required"),
 	state_code: z.string().length(2, "State code must have 2 characters"),
-	latitude: z.number().optional().nullable(),
-	longitude: z.number().optional().nullable(),
+	latitude: z.number(),
+	longitude: z.number(),
 });
 
 export type CreateAddress = z.infer<typeof createAddressSchema>;
@@ -65,8 +65,8 @@ export const addressSchema = z.object({
 	state_ibge_id: z.number(),
 	state: z.string(),
 	state_code: z.string(),
-	latitude: z.number().nullable(),
-	longitude: z.number().nullable(),
+	latitude: z.number(),
+	longitude: z.number(),
 	created_at: z.date(),
 	updated_at: z.date(),
 });

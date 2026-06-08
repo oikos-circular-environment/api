@@ -1,11 +1,9 @@
 import { describe, expect, it } from "vitest";
-import type { CompanyValidation } from "@/modules/companies/dtos/companies-dto.js";
-import { makeCompanyAddress } from "@/modules/companies/factories/make-address.js";
+import type { CompanyValidation, DayOfWeek } from "@/modules/companies/dtos/companies-dto.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
-import {
-	makeCompanyService,
-	makeCompanyWaste,
-} from "@/modules/companies/factories/make-company-item.js";
+import { makeCompanyService } from "@/modules/companies/factories/make-company-service.js";
+import { makeCompanyWaste } from "@/modules/companies/factories/make-company-waste.js";
 import {
 	computeIsCompanyValid,
 	isAddressValid,
@@ -61,14 +59,6 @@ describe("isAddressValid", () => {
 	it("returns false when address is null", () => {
 		expect(isAddressValid(null)).toBe(false);
 	});
-
-	it("returns false when latitude is null", () => {
-		expect(isAddressValid(makeCompanyAddress({ latitude: null }))).toBe(false);
-	});
-
-	it("returns false when longitude is null", () => {
-		expect(isAddressValid(makeCompanyAddress({ longitude: null }))).toBe(false);
-	});
 });
 
 describe("isBusinessHoursValid", () => {
@@ -85,7 +75,7 @@ describe("isBusinessHoursValid", () => {
 		slots: { start_time: string; end_time: string }[],
 	) => ({
 		id: day,
-		day_of_week: day as const,
+		day_of_week: day as DayOfWeek,
 		is_open,
 		time_slots: slots.map((s, i) => ({ id: `${day}-${i}`, ...s })),
 	});

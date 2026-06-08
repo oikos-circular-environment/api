@@ -1,13 +1,10 @@
+import { randomUUID } from "node:crypto";
 import { faker } from "@faker-js/faker";
-import type {
-	CompanyAddress,
-	UpsertCompanyAddress,
-} from "@/modules/companies/dtos/companies-dto.js";
+import type { CompanyAddress } from "@/modules/companies/dtos/companies-dto.js";
 
-export function makeAddressInput(
-	overrides?: Partial<UpsertCompanyAddress>,
-): UpsertCompanyAddress {
+export function makeCompanyAddress(overrides?: Partial<CompanyAddress>): CompanyAddress {
 	return {
+		id: randomUUID(),
 		zip_code: faker.string.numeric(8),
 		street: faker.location.street(),
 		number: faker.location.buildingNumber(),
@@ -20,18 +17,8 @@ export function makeAddressInput(
 		state_code: faker.location.state({ abbreviated: true }).slice(0, 2).toUpperCase(),
 		latitude: faker.location.latitude(),
 		longitude: faker.location.longitude(),
-		...overrides,
-	};
-}
-
-export function makeCompanyAddress(
-	overrides?: Partial<CompanyAddress>,
-): CompanyAddress {
-	return {
-		id: faker.string.uuid(),
-		...makeAddressInput(),
-		created_at: faker.date.past(),
-		updated_at: faker.date.past(),
+		created_at: new Date(),
+		updated_at: new Date(),
 		...overrides,
 	};
 }

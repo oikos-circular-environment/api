@@ -16,8 +16,8 @@ export type PrismaAddressWithRelations = {
 	state_ibge_id: number;
 	state: string;
 	state_code: string;
-	latitude: number | null;
-	longitude: number | null;
+	latitude: number;
+	longitude: number;
 	created_at: Date;
 	updated_at: Date;
 };

@@ -97,8 +97,6 @@ describe("upsert-profile-use-case", () => {
 		const address = makeAddressInput({
 			street: "Rua A",
 			complement: null,
-			latitude: null,
-			longitude: null,
 		});
 
 		const result = await sut.execute({
@@ -126,7 +124,7 @@ describe("upsert-profile-use-case", () => {
 
 		const profile = await profilesRepository.create(input);
 
-		const initialAddress = makeAddressInput({ complement: null, latitude: null, longitude: null });
+		const initialAddress = makeAddressInput({ complement: null });
 
 		await addressesRepository.create({ profile_id: profile.id, ...initialAddress });
 
@@ -172,8 +170,6 @@ describe("upsert-profile-use-case", () => {
 		const existingAddress = makeAddressInput({
 			street: "Rua A",
 			complement: null,
-			latitude: null,
-			longitude: null,
 		});
 
 		await addressesRepository.create({ profile_id: profile.id, ...existingAddress });

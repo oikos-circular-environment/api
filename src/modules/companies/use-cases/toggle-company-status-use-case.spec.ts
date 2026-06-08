@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { ToggleCompanyStatusUseCase } from "./toggle-company-status-use-case.js";
 
@@ -12,7 +12,7 @@ describe("toggle-company-status-use-case", () => {
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId, status: true }),
+			makeCompany({ user_id: userId, status: true }),
 		);
 
 		const result = await sut.execute({
@@ -31,7 +31,7 @@ describe("toggle-company-status-use-case", () => {
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId, status: false }),
+			makeCompany({ user_id: userId, status: false }),
 		);
 
 		const result = await sut.execute({
@@ -76,7 +76,7 @@ describe("toggle-company-status-use-case", () => {
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
@@ -104,7 +104,7 @@ describe("toggle-company-status-use-case", () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
-		const input = makeCompanyInput({ user_id: userId });
+		const input = makeCompany({ user_id: userId });
 		const created = await companiesRepository.create(input);
 
 		const result = await sut.execute({

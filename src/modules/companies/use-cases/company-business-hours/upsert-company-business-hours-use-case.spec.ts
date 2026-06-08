@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
@@ -20,7 +20,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -71,7 +71,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -119,7 +119,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -152,7 +152,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -179,7 +179,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
@@ -214,7 +214,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -241,7 +241,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
@@ -320,7 +320,7 @@ describe("upsert-company-business-hours-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;

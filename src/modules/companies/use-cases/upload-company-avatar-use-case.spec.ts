@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { UploadCompanyAvatarUseCase } from "./upload-company-avatar-use-case.js";
 
@@ -17,7 +17,7 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		const result = await sut.execute({
@@ -85,7 +85,7 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
@@ -123,7 +123,7 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
@@ -163,7 +163,7 @@ describe("upload-company-avatar-use-case", () => {
 		);
 
 		const created = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;

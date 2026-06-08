@@ -7,7 +7,7 @@ import type {
 	CompanyWaste,
 } from "@/modules/companies/dtos/companies-dto.js";
 import {
-	companyAddressValidationSchema,
+	companyAddressSchema,
 	companyBusinessHoursValidationSchema,
 	companyGeneralRegistrationValidationSchema,
 	companyServicesValidationSchema,
@@ -20,7 +20,7 @@ export function isGeneralRegistrationValid(data: Company): boolean {
 
 export function isAddressValid(data: CompanyAddress | null): boolean {
 	if (!data) return false;
-	return companyAddressValidationSchema.safeParse(data).success;
+	return companyAddressSchema.safeParse(data).success;
 }
 
 export function isBusinessHoursValid(data: BusinessHour[]): boolean {

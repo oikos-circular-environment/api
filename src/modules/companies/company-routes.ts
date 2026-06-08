@@ -5,6 +5,7 @@ import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
+import { PrismaWasteCategoriesRepository } from "../wastes/repositories/prisma/waste-categories-repository-prisma.js";
 import {
 	companyAddressSchema,
 	companyBusinessHoursSchema,
@@ -13,21 +14,19 @@ import {
 	companyServicesSchema,
 	companyValidationSchema,
 	companyWastesSchema,
-	createCompanyInputSchema,
-	updateCompanyInputSchema,
+	createCompanySchema,
+	updateCompanySchema,
 	upsertCompanyAddressSchema,
 	upsertCompanyBusinessHoursSchema,
 	upsertCompanyServicesSchema,
 	upsertCompanyWastesSchema,
 } from "./dtos/companies-dto.js";
-
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaBusinessHoursRepository } from "./repositories/prisma/business-hours-repository-prisma.js";
 import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repository-prisma.js";
 import { PrismaCompanyValidationRepository } from "./repositories/prisma/company-validation-repository-prisma.js";
 import { PrismaServicesRepository } from "./repositories/prisma/services-repository-prisma.js";
 import { PrismaWastesRepository } from "./repositories/prisma/wastes-repository-prisma.js";
-import { PrismaWasteCategoriesRepository } from "../wastes/repositories/prisma/waste-categories-repository-prisma.js";
 import { GetCompanyAddressUseCase } from "./use-cases/company-addresses/get-company-address-use-case.js";
 import { UpsertCompanyAddressUseCase } from "./use-cases/company-addresses/upsert-company-address-use-case.js";
 import { GetCompanyBusinessHoursUseCase } from "./use-cases/company-business-hours/get-company-business-hours-use-case.js";
@@ -138,7 +137,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_TAG],
 				summary: "Create user company",
 				description: "Creates a company for the authenticated user.",
-				body: createCompanyInputSchema.omit({ user_id: true }),
+				body: createCompanySchema.omit({ user_id: true }),
 				response: {
 					200: z.object({ company: companySchema }),
 					401: appErrorSchema,
@@ -187,7 +186,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				description:
 					"Updates only company data for the authenticated user. Related entities are not handled by this route.",
 				params: z.object({ id: z.uuid() }),
-				body: updateCompanyInputSchema,
+				body: updateCompanySchema,
 				response: {
 					200: z.object({ company: companySchema.nullable() }),
 					401: appErrorSchema,

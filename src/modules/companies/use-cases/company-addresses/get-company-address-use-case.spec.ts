@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { GetCompanyAddressUseCase } from "./get-company-address-use-case.js";
@@ -18,12 +18,12 @@ describe("get-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		const address = await addressesRepository.create({
 			company_id: company.id,
-			...makeAddressInput(),
+			...makeCompanyAddress(),
 		});
 
 		const result = await sut.execute({
@@ -44,7 +44,7 @@ describe("get-company-address-use-case", () => {
 		);
 
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		const result = await sut.execute({

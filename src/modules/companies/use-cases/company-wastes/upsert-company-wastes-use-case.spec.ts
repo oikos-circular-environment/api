@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { beforeEach, describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
@@ -47,7 +47,7 @@ describe("upsert-company-wastes-use-case", () => {
 
 	it("replaces company wastes and returns the saved list", async () => {
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -107,7 +107,7 @@ describe("upsert-company-wastes-use-case", () => {
 
 	it("sets wastes validation to true when at least one waste is saved", async () => {
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -134,7 +134,7 @@ describe("upsert-company-wastes-use-case", () => {
 
 	it("sets wastes validation to false when replaced with empty array", async () => {
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 		await validationRepository.create(company.id, true);
 
@@ -185,7 +185,7 @@ describe("upsert-company-wastes-use-case", () => {
 
 	it("throws when payload has duplicated waste names", async () => {
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;
@@ -230,7 +230,7 @@ describe("upsert-company-wastes-use-case", () => {
 
 	it("throws when waste_category_id does not exist", async () => {
 		const company = await companiesRepository.create(
-			makeCompanyInput({ user_id: userId }),
+			makeCompany({ user_id: userId }),
 		);
 
 		let thrownError: unknown;

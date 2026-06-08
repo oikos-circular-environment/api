@@ -1,14 +1,11 @@
+import { randomUUID } from "node:crypto";
 import { faker } from "@faker-js/faker";
-import type {
-	Company,
-	CreateCompany,
-} from "@/modules/companies/dtos/companies-dto.js";
+import type { Company } from "@/modules/companies/dtos/companies-dto.js";
 
-export function makeCompanyInput(
-	overrides?: Partial<CreateCompany>,
-): CreateCompany {
+export function makeCompany(overrides?: Partial<Company>): Company {
 	return {
-		user_id: faker.string.uuid(),
+		id: randomUUID(),
+		user_id: randomUUID(),
 		identity: faker.string.numeric(11),
 		identity_type: "CPF",
 		company_type: "COMPANY",
@@ -18,19 +15,10 @@ export function makeCompanyInput(
 		email: faker.internet.email(),
 		phones: [faker.string.numeric(11)],
 		started_activity_in: faker.date.past({ years: 5 }),
-		...overrides,
-	};
-}
-
-export function makeCompany(overrides?: Partial<Company>): Company {
-	const input = makeCompanyInput();
-	return {
-		...input,
-		id: faker.string.uuid(),
 		is_company_valid: false,
 		avatar: null,
-		created_at: faker.date.past(),
-		updated_at: faker.date.past(),
+		created_at: new Date(),
+		updated_at: new Date(),
 		...overrides,
 	};
 }

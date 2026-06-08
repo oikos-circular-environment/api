@@ -131,8 +131,8 @@ model Address {
   state         String
   state_code    String
 
-  latitude  Float?
-  longitude Float?
+  latitude  Float
+  longitude Float
   location  Unsupported("geography(Point, 4326)")?
 
   created_at DateTime @default(now())
