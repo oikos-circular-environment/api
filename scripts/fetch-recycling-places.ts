@@ -217,7 +217,7 @@ function parseBusinessHours(hours?: GoogleOpeningHours) {
 	for (const period of hours.periods) {
 		if (!byDay.has(period.open.day)) byDay.set(period.open.day, []);
 		if (period.close) {
-			byDay.get(period.open.day)!.push({
+			byDay.get(period.open.day)?.push({
 				start_time: formatTime(period.open.hour, period.open.minute),
 				end_time: formatTime(period.close.hour, period.close.minute),
 			});

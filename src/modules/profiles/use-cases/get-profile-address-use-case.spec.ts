@@ -1,7 +1,10 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeAddress, makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
+import {
+	makeAddress,
+	makeProfileInput,
+} from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { GetProfileAddressUseCase } from "./get-profile-address-use-case.js";
@@ -24,7 +27,10 @@ describe("get-profile-address-use-case", () => {
 			state_code: "SP",
 		});
 
-		await addressesRepository.create({ profile_id: profile.id, ...addressInput });
+		await addressesRepository.create({
+			profile_id: profile.id,
+			...addressInput,
+		});
 
 		const result = await sut.execute({ userId: profileInput.user_id });
 

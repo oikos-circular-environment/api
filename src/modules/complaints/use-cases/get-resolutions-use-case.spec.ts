@@ -12,7 +12,12 @@ describe("get-resolutions-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		const sut = new GetResolutionsUseCase(repo);
 
@@ -27,11 +32,24 @@ describe("get-resolutions-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		const submitUseCase = new SubmitResolutionUseCase(repo);
-		await submitUseCase.execute({ userId: userAId, complaintId: complaint.id, data: { description: "Resolvido A" } });
-		await submitUseCase.execute({ userId: userBId, complaintId: complaint.id, data: { description: "Resolvido B" } });
+		await submitUseCase.execute({
+			userId: userAId,
+			complaintId: complaint.id,
+			data: { description: "Resolvido A" },
+		});
+		await submitUseCase.execute({
+			userId: userBId,
+			complaintId: complaint.id,
+			data: { description: "Resolvido B" },
+		});
 		const sut = new GetResolutionsUseCase(repo);
 
 		const result = await sut.execute({ complaintId: complaint.id });
@@ -47,15 +65,23 @@ describe("get-resolutions-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userAId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
 		});
-		const resolution = await repo.findResolutionByUserAndComplaint(userAId, complaint.id);
-		await repo.addResolutionAttachment(userAId, resolution!.id, {
+		const resolution = await repo.findResolutionByUserAndComplaint(
+			userAId,
+			complaint.id,
+		);
+		await repo.addResolutionAttachment(userAId, resolution?.id, {
 			url: "https://example.com/img.jpg",
 			file_name: "img.jpg",
 			path: "resolutions/img.jpg",

@@ -1,7 +1,10 @@
 import { compare } from "bcryptjs";
 import { describe, expect, it } from "vitest";
 import { UserAlreadyExistsError } from "@/modules/users/errors/user-already-exists-error.js";
-import { makeUser, TEST_PASSWORD } from "@/modules/users/factories/make-user.js";
+import {
+	makeUser,
+	TEST_PASSWORD,
+} from "@/modules/users/factories/make-user.js";
 import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { RegisterUserUseCase } from "./register-user-use-case.js";
 

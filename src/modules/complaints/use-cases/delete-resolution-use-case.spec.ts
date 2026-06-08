@@ -14,7 +14,12 @@ describe("delete-resolution-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
@@ -44,13 +49,20 @@ describe("delete-resolution-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		const sut = new DeleteResolutionUseCase(repo);
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrowError(expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }));
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }),
+		);
 	});
 
 	it("throws 422 when complaint is RESOLVED", async () => {
@@ -59,19 +71,30 @@ describe("delete-resolution-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
 		});
-		await repo.updateStatusByUserAndComplaintId(userAId, complaint.id, "RESOLVED");
+		await repo.updateStatusByUserAndComplaintId(
+			userAId,
+			complaint.id,
+			"RESOLVED",
+		);
 		const sut = new DeleteResolutionUseCase(repo);
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED" }));
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "COMPLAINT_CLOSED" }),
+		);
 	});
 
 	it("throws 422 when complaint is CANCELED", async () => {
@@ -80,19 +103,30 @@ describe("delete-resolution-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
 		});
-		await repo.updateStatusByUserAndComplaintId(userAId, complaint.id, "CANCELED");
+		await repo.updateStatusByUserAndComplaintId(
+			userAId,
+			complaint.id,
+			"CANCELED",
+		);
 		const sut = new DeleteResolutionUseCase(repo);
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED" }));
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "COMPLAINT_CLOSED" }),
+		);
 	});
 
 	it("cascades deletion to resolution attachments", async () => {
@@ -101,16 +135,27 @@ describe("delete-resolution-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
 		});
-		const resolution = await repo.findResolutionByUserAndComplaint(userBId, complaint.id);
-		await repo.addResolutionAttachment(userBId, resolution!.id, {
-			url: "https://img.com/a.jpg", file_name: "a.jpg", path: "p/a.jpg", base64: "b64",
+		const resolution = await repo.findResolutionByUserAndComplaint(
+			userBId,
+			complaint.id,
+		);
+		await repo.addResolutionAttachment(userBId, resolution?.id, {
+			url: "https://img.com/a.jpg",
+			file_name: "a.jpg",
+			path: "p/a.jpg",
+			base64: "b64",
 		});
 		const sut = new DeleteResolutionUseCase(repo);
 

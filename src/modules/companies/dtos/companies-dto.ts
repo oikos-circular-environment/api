@@ -1,7 +1,5 @@
 import z from "zod";
-import {
-	wasteCategorySchema,
-} from "@/modules/wastes/dtos/wastes-dto.js";
+import { wasteCategorySchema } from "@/modules/wastes/dtos/wastes-dto.js";
 
 export const identityTypeSchema = z.enum(["CPF", "CNPJ"]);
 export type IdentityType = z.infer<typeof identityTypeSchema>;
@@ -26,7 +24,9 @@ export const companySchema = z.object({
 	business_name: z.string().min(1, "Business name is required"),
 	corporate_name: z.string().min(1, "Corporate name is required"),
 	email: z.email("Invalid email address").optional().nullable(),
-	phones: z.array(z.string().min(1, "Phone is required")).min(1, "At least one phone is required"),
+	phones: z
+		.array(z.string().min(1, "Phone is required"))
+		.min(1, "At least one phone is required"),
 	started_activity_in: z.coerce.date(),
 	is_company_valid: z.boolean(),
 	avatar: z
@@ -88,8 +88,7 @@ export const upsertCompanyAddressSchema = createCompanyAddressSchema.omit({
 });
 export type UpsertCompanyAddress = z.infer<typeof upsertCompanyAddressSchema>;
 
-export const updateCompanyAddressSchema =
-	upsertCompanyAddressSchema.partial();
+export const updateCompanyAddressSchema = upsertCompanyAddressSchema.partial();
 export type UpdateCompanyAddress = z.infer<typeof updateCompanyAddressSchema>;
 
 // --- Business Hours ---
@@ -185,9 +184,7 @@ export const companyWasteSchema = z.object({
 	description: z.string().optional().nullable(),
 	price: z.number().nonnegative("Price must be non-negative"),
 	unit: measurementSchema,
-	waste_category_id: z
-		.string()
-		.uuid("waste_category_id must be a valid UUID"),
+	waste_category_id: z.string().uuid("waste_category_id must be a valid UUID"),
 	waste_category: wasteCategorySchema,
 	quantity: z.number().positive("Quantity must be greater than zero"),
 	observations: z.string().optional().nullable(),
@@ -219,9 +216,7 @@ export const companyServiceSchema = z.object({
 	description: z.string().optional().nullable(),
 	price: z.number().nonnegative("Price must be non-negative"),
 	unit: measurementSchema,
-	waste_category_id: z
-		.string()
-		.uuid("waste_category_id must be a valid UUID"),
+	waste_category_id: z.string().uuid("waste_category_id must be a valid UUID"),
 	waste_category: wasteCategorySchema,
 	quantity: z.number().positive("Quantity must be greater than zero"),
 	observations: z.string().optional().nullable(),
@@ -277,18 +272,17 @@ export const companyGeneralRegistrationValidationSchema = companySchema.pick({
 
 export const companyBusinessHoursValidationSchema = z
 	.array(businessHourSchema)
-	.refine(
-		(hours) => hours.some((h) => h.is_open && h.time_slots.length > 0),
-		{ message: "At least one open day with a time slot is required" },
-	);
+	.refine((hours) => hours.some((h) => h.is_open && h.time_slots.length > 0), {
+		message: "At least one open day with a time slot is required",
+	});
 
 export const companyWastesValidationSchema = z
 	.array(companyWasteSchema)
 	.min(1)
 	.refine(
 		(items) =>
-			items.every((i) =>
-				z.string().uuid().safeParse(i.waste_category_id).success,
+			items.every(
+				(i) => z.string().uuid().safeParse(i.waste_category_id).success,
 			),
 		{
 			message: "All wastes must have a valid waste_category_id",
@@ -300,8 +294,8 @@ export const companyServicesValidationSchema = z
 	.min(1)
 	.refine(
 		(items) =>
-			items.every((i) =>
-				z.string().uuid().safeParse(i.waste_category_id).success,
+			items.every(
+				(i) => z.string().uuid().safeParse(i.waste_category_id).success,
 			),
 		{
 			message: "All services must have a valid waste_category_id",

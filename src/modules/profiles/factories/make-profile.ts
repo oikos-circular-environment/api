@@ -1,8 +1,13 @@
 import { randomUUID } from "node:crypto";
 import { faker } from "@faker-js/faker";
-import type { Address, CreateProfile } from "@/modules/profiles/dtos/profiles-dto.js";
+import type {
+	Address,
+	CreateProfile,
+} from "@/modules/profiles/dtos/profiles-dto.js";
 
-export function makeProfileInput(overrides?: Partial<CreateProfile>): CreateProfile {
+export function makeProfileInput(
+	overrides?: Partial<CreateProfile>,
+): CreateProfile {
 	return {
 		user_id: faker.string.uuid(),
 		full_name: faker.person.fullName(),
@@ -26,7 +31,10 @@ export function makeAddress(overrides?: Partial<Address>): Address {
 		city: faker.location.city(),
 		state_ibge_id: faker.number.int({ min: 10, max: 53 }),
 		state: faker.location.state(),
-		state_code: faker.location.state({ abbreviated: true }).slice(0, 2).toUpperCase(),
+		state_code: faker.location
+			.state({ abbreviated: true })
+			.slice(0, 2)
+			.toUpperCase(),
 		latitude: faker.location.latitude(),
 		longitude: faker.location.longitude(),
 		created_at: now,

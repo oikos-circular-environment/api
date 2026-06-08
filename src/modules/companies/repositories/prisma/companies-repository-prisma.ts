@@ -61,11 +61,13 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 	}
 
 	async update(id: string, data: UpdateCompany) {
-		const company = await prisma.company.update({
-			where: { id },
-			data,
-			include: { avatar: true },
-		}).catch(() => null);
+		const company = await prisma.company
+			.update({
+				where: { id },
+				data,
+				include: { avatar: true },
+			})
+			.catch(() => null);
 
 		return companyMapper(company);
 	}
@@ -74,21 +76,23 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 		companyId: string,
 		data: { url: string; file_name: string; path: string },
 	) {
-		const company = await prisma.$transaction(async (tx) => {
-			const avatar = await tx.companyAvatar.create({
-				data: {
-					url: data.url,
-					file_name: data.file_name,
-					path: data.path,
-				},
-			});
+		const company = await prisma
+			.$transaction(async (tx) => {
+				const avatar = await tx.companyAvatar.create({
+					data: {
+						url: data.url,
+						file_name: data.file_name,
+						path: data.path,
+					},
+				});
 
-			return tx.company.update({
-				where: { id: companyId },
-				data: { avatar_id: avatar.id },
-				include: { avatar: true },
-			});
-		}).catch(() => null);
+				return tx.company.update({
+					where: { id: companyId },
+					data: { avatar_id: avatar.id },
+					include: { avatar: true },
+				});
+			})
+			.catch(() => null);
 
 		return companyMapper(company);
 	}

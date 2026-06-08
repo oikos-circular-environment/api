@@ -81,7 +81,7 @@ export class SupabaseBucket implements StorageProvider {
 			const file = await supabase.storage
 				.from(env.SUPABASE_OIKOS_PROFILES_BUCKET!)
 				.download(filePath);
-			const arrayBuffer = await file.data!.arrayBuffer();
+			const arrayBuffer = await file.data?.arrayBuffer();
 			const buffer = Buffer.from(arrayBuffer);
 			return buffer.toString("base64");
 		} catch (error) {

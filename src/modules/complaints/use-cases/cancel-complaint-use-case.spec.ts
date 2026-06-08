@@ -13,7 +13,7 @@ describe("cancel-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "VACANT_LOT",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -35,7 +35,7 @@ describe("cancel-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "VACANT_LOT",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -61,7 +61,9 @@ describe("cancel-complaint-use-case", () => {
 		expect(thrownError instanceof AppError).toBe(true);
 
 		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Complaint with votes cannot be canceled");
+			expect(thrownError.message).toBe(
+				"Complaint with votes cannot be canceled",
+			);
 			expect(thrownError.code).toBe("COMPLAINT_HAS_VOTES");
 			expect(thrownError.statusCode).toBe(422);
 		}
@@ -75,7 +77,7 @@ describe("cancel-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "VACANT_LOT",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -101,7 +103,9 @@ describe("cancel-complaint-use-case", () => {
 		expect(thrownError instanceof AppError).toBe(true);
 
 		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Complaint with resolutions cannot be canceled");
+			expect(thrownError.message).toBe(
+				"Complaint with resolutions cannot be canceled",
+			);
 			expect(thrownError.code).toBe("COMPLAINT_HAS_RESOLUTIONS");
 			expect(thrownError.statusCode).toBe(422);
 		}

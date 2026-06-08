@@ -30,7 +30,9 @@ describe("delete-profile-image-use-case", () => {
 		const result = await sut.execute({ userId: input.user_id });
 
 		expect(result).toBeUndefined();
-		expect((await profilesRepository.findById(profile.id))?.profile_image).toBe(null);
+		expect((await profilesRepository.findById(profile.id))?.profile_image).toBe(
+			null,
+		);
 		expect(await storageProvider.checkFileExists(filePath)).toBe(false);
 	});
 

@@ -6,10 +6,18 @@ import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { GetComplaintVoteUseCase } from "./get-complaint-vote-use-case.js";
 import { VoteComplaintUseCase } from "./vote-complaint-use-case.js";
 
-async function makeComplaint(repo: InMemoryComplaintsRepository, userId: string) {
+async function makeComplaint(
+	repo: InMemoryComplaintsRepository,
+	userId: string,
+) {
 	return new CreateComplaintUseCase(repo).execute({
 		userId,
-		data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+		data: {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		},
 	});
 }
 
@@ -21,7 +29,10 @@ describe("get-complaint-vote-use-case", () => {
 		const complaint = await makeComplaint(repo, userId);
 		const sut = new GetComplaintVoteUseCase(repo);
 
-		const result = await sut.execute({ userId: otherUserId, complaintId: complaint.id });
+		const result = await sut.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+		});
 
 		expect(result).toBeNull();
 	});
@@ -31,10 +42,17 @@ describe("get-complaint-vote-use-case", () => {
 		const otherUserId = randomUUID();
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await makeComplaint(repo, userId);
-		await new VoteComplaintUseCase(repo).execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
+		await new VoteComplaintUseCase(repo).execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+			voteType: "RESOLVED",
+		});
 		const sut = new GetComplaintVoteUseCase(repo);
 
-		const result = await sut.execute({ userId: otherUserId, complaintId: complaint.id });
+		const result = await sut.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+		});
 
 		expect(result).not.toBeNull();
 		expect(result?.vote_type).toBe("RESOLVED");
@@ -48,11 +66,22 @@ describe("get-complaint-vote-use-case", () => {
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await makeComplaint(repo, userId);
 		const voteUseCase = new VoteComplaintUseCase(repo);
-		await voteUseCase.execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
-		await voteUseCase.execute({ userId: otherUserId, complaintId: complaint.id, voteType: "NOT_RESOLVED" });
+		await voteUseCase.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+			voteType: "RESOLVED",
+		});
+		await voteUseCase.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+			voteType: "NOT_RESOLVED",
+		});
 		const sut = new GetComplaintVoteUseCase(repo);
 
-		const result = await sut.execute({ userId: otherUserId, complaintId: complaint.id });
+		const result = await sut.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+		});
 
 		expect(result?.vote_type).toBe("NOT_RESOLVED");
 	});
@@ -62,11 +91,18 @@ describe("get-complaint-vote-use-case", () => {
 		const otherUserId = randomUUID();
 		const repo = new InMemoryComplaintsRepository();
 		const complaint = await makeComplaint(repo, userId);
-		await new VoteComplaintUseCase(repo).execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
+		await new VoteComplaintUseCase(repo).execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+			voteType: "RESOLVED",
+		});
 		await repo.removeVoteFromComplaint(otherUserId, complaint.id);
 		const sut = new GetComplaintVoteUseCase(repo);
 
-		const result = await sut.execute({ userId: otherUserId, complaintId: complaint.id });
+		const result = await sut.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+		});
 
 		expect(result).toBeNull();
 	});

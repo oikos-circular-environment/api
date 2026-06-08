@@ -18,7 +18,9 @@ export class GetCompanyUseCase {
 		private readonly servicesRepository: ServicesRepository,
 	) {}
 
-	async execute({ userId }: GetCompaniesUseCaseRequest): Promise<CompanyProfile[]> {
+	async execute({
+		userId,
+	}: GetCompaniesUseCaseRequest): Promise<CompanyProfile[]> {
 		const companies = await this.companiesRepository.findByUserId(userId);
 
 		return Promise.all(

@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { makeAddress, makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
+import {
+	makeAddress,
+	makeProfileInput,
+} from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
@@ -8,7 +11,10 @@ describe("upsert-profile-use-case", () => {
 	it("creates a profile when user does not have one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+		);
 
 		const input = makeProfileInput();
 
@@ -30,7 +36,10 @@ describe("upsert-profile-use-case", () => {
 	it("updates an existing profile when user already has one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+		);
 
 		const initial = makeProfileInput();
 
@@ -56,7 +65,10 @@ describe("upsert-profile-use-case", () => {
 	it("creates address when profile is created with address data", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+		);
 
 		const input = makeProfileInput();
 		const address = makeAddress({
@@ -88,7 +100,10 @@ describe("upsert-profile-use-case", () => {
 	it("creates address when existing profile has no address", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+		);
 
 		const input = makeProfileInput();
 
@@ -118,7 +133,10 @@ describe("upsert-profile-use-case", () => {
 	it("updates existing address when profile already has one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+		);
 
 		const input = makeProfileInput();
 
@@ -126,7 +144,10 @@ describe("upsert-profile-use-case", () => {
 
 		const initialAddress = makeAddress({ complement: null });
 
-		await addressesRepository.create({ profile_id: profile.id, ...initialAddress });
+		await addressesRepository.create({
+			profile_id: profile.id,
+			...initialAddress,
+		});
 
 		const result = await sut.execute({
 			userId: input.user_id,
@@ -161,7 +182,10 @@ describe("upsert-profile-use-case", () => {
 	it("does not affect existing address when no address data is provided", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+		);
 
 		const input = makeProfileInput();
 
@@ -172,7 +196,10 @@ describe("upsert-profile-use-case", () => {
 			complement: null,
 		});
 
-		await addressesRepository.create({ profile_id: profile.id, ...existingAddress });
+		await addressesRepository.create({
+			profile_id: profile.id,
+			...existingAddress,
+		});
 
 		const updated = makeProfileInput({ user_id: input.user_id });
 

@@ -10,7 +10,10 @@ export class InMemoryCompanyValidationRepository
 {
 	public items: CompanyValidation[] = [];
 
-	async create(companyId: string, generalRegistration: boolean): Promise<CompanyValidation> {
+	async create(
+		companyId: string,
+		generalRegistration: boolean,
+	): Promise<CompanyValidation> {
 		const record: CompanyValidation = {
 			id: randomUUID(),
 			company_id: companyId,

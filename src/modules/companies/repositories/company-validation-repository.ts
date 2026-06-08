@@ -4,7 +4,10 @@ import type {
 } from "@/modules/companies/dtos/companies-dto.js";
 
 export interface CompanyValidationRepository {
-	create(companyId: string, generalRegistration: boolean): Promise<CompanyValidation>;
+	create(
+		companyId: string,
+		generalRegistration: boolean,
+	): Promise<CompanyValidation>;
 	updateField(
 		companyId: string,
 		field: CompanyValidationField,

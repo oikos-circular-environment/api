@@ -28,10 +28,7 @@ export interface ComplaintsRepository {
 		complaintId: string,
 	): Promise<Complaint | null>;
 
-	createForUser(
-		userId: string,
-		data: CreateComplaint,
-	): Promise<Complaint>;
+	createForUser(userId: string, data: CreateComplaint): Promise<Complaint>;
 
 	updateByUserAndComplaintId(
 		userId: string,

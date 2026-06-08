@@ -1,9 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
-import {
-	makeComplaint,
-	makeGeospatial,
-} from "@/modules/complaints/factories/make-complaint.js";
+import { WASTE_CATEGORIES_SEED } from "@/modules/wastes/data/waste-categories-seed.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 
 describe("create-complaint-use-case", () => {
@@ -16,7 +14,7 @@ describe("create-complaint-use-case", () => {
 			userId: "11111111-1111-1111-1111-111111111111",
 			data: {
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: "Fumaca intensa",
 				geospatial: geo,
 			},
@@ -24,7 +22,6 @@ describe("create-complaint-use-case", () => {
 
 		expect(result.id.length > 0).toBe(true);
 		expect(result.status).toBe("OPEN");
-		expect(result.type).toBe("BURNING");
 		expect(result.date).toEqual(new Date("2026-04-20T10:00:00.000Z"));
 		expect(result.observations).toBe("Fumaca intensa");
 		expect(result.geospatial).toStrictEqual(geo);
@@ -41,7 +38,7 @@ describe("create-complaint-use-case", () => {
 			userId: "11111111-1111-1111-1111-111111111111",
 			data: {
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "IRREGULAR_DISPOSAL",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: "Descarte irregular",
 				geospatial: makeGeospatial({ heading: null }),
 			},
@@ -57,7 +54,12 @@ describe("create-complaint-use-case", () => {
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
-			data: makeComplaint({ type: "DEFORESTATION", observations: null }),
+			data: {
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 
 		expect(result.observations).toBeNull();

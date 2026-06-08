@@ -1,3 +1,3 @@
 export type ComplaintsQuorumJobData = {
-  complaintId: string;
+	complaintId: string;
 };

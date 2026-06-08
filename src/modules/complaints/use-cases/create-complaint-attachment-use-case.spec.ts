@@ -19,7 +19,7 @@ describe("create-complaint-attachment-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -54,7 +54,7 @@ describe("create-complaint-attachment-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -128,7 +128,7 @@ describe("create-complaint-attachment-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -173,7 +173,7 @@ describe("create-complaint-attachment-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -238,7 +238,7 @@ describe("create-complaint-attachment-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -279,13 +279,22 @@ describe("create-complaint-attachment-use-case", () => {
 
 		const created = await complaintsRepository.createForUser(
 			"11111111-1111-1111-1111-111111111111",
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			{
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
 			complaintId: created.id,
-			file: { fileName: "video.mp4", mimeType: "video/mp4", content: Buffer.from("video-data") },
+			file: {
+				fileName: "video.mp4",
+				mimeType: "video/mp4",
+				content: Buffer.from("video-data"),
+			},
 		});
 
 		expect(result.attachments[0]?.type).toBe("VIDEO");
@@ -302,13 +311,22 @@ describe("create-complaint-attachment-use-case", () => {
 
 		const created = await complaintsRepository.createForUser(
 			"11111111-1111-1111-1111-111111111111",
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			{
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		);
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
 			complaintId: created.id,
-			file: { fileName: "clip.mov", mimeType: "video/quicktime", content: Buffer.from("video-data") },
+			file: {
+				fileName: "clip.mov",
+				mimeType: "video/quicktime",
+				content: Buffer.from("video-data"),
+			},
 		});
 
 		expect(result.attachments[0]?.type).toBe("VIDEO");

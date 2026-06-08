@@ -15,21 +15,29 @@ export class DeleteResolutionAttachmentUseCase {
 	) {}
 
 	async execute({ userId, complaintId, attachmentId }: Request): Promise<void> {
-		const resolution = await this.complaintsRepository.findResolutionByUserAndComplaint(
-			userId,
-			complaintId,
-		);
+		const resolution =
+			await this.complaintsRepository.findResolutionByUserAndComplaint(
+				userId,
+				complaintId,
+			);
 
 		if (!resolution) {
 			throw new AppError("Resolution not found", "RESOLUTION_NOT_FOUND", 404);
 		}
 
-		const resolutions = await this.complaintsRepository.findResolutionsByComplaintId(complaintId);
+		const resolutions =
+			await this.complaintsRepository.findResolutionsByComplaintId(complaintId);
 		const userResolution = resolutions.find((r) => r.id === resolution.id);
-		const attachment = userResolution?.attachments.find((a) => a.id === attachmentId);
+		const attachment = userResolution?.attachments.find(
+			(a) => a.id === attachmentId,
+		);
 
 		if (!attachment) {
-			throw new AppError("Attachment not found", "RESOLUTION_ATTACHMENT_NOT_FOUND", 404);
+			throw new AppError(
+				"Attachment not found",
+				"RESOLUTION_ATTACHMENT_NOT_FOUND",
+				404,
+			);
 		}
 
 		await this.storageProvider.deleteFile(

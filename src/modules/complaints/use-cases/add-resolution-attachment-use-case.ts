@@ -27,11 +27,16 @@ export class AddResolutionAttachmentUseCase {
 		private readonly storageProvider: StorageProvider,
 	) {}
 
-	async execute({ userId, complaintId, file }: Request): Promise<ResolutionAttachment> {
-		const resolution = await this.complaintsRepository.findResolutionByUserAndComplaint(
-			userId,
-			complaintId,
-		);
+	async execute({
+		userId,
+		complaintId,
+		file,
+	}: Request): Promise<ResolutionAttachment> {
+		const resolution =
+			await this.complaintsRepository.findResolutionByUserAndComplaint(
+				userId,
+				complaintId,
+			);
 
 		if (!resolution) {
 			throw new AppError("Resolution not found", "RESOLUTION_NOT_FOUND", 404);
@@ -56,7 +61,10 @@ export class AddResolutionAttachmentUseCase {
 		const { ext } = ALLOWED_MIME_TYPES[file.mimeType as AllowedMimeType];
 		const filePath = `complaint-resolutions/${resolution.id}/${Date.now()}.${ext}`;
 
-		const uploadResult = await this.storageProvider.uploadFile(filePath, file.content);
+		const uploadResult = await this.storageProvider.uploadFile(
+			filePath,
+			file.content,
+		);
 
 		if (!uploadResult) {
 			throw new AppError(
@@ -68,11 +76,15 @@ export class AddResolutionAttachmentUseCase {
 
 		const { url } = await this.storageProvider.getFileUrl(filePath);
 
-		return this.complaintsRepository.addResolutionAttachment(userId, resolution.id, {
-			url,
-			file_name: file.fileName,
-			path: filePath,
-			base64: file.content.toString("base64"),
-		});
+		return this.complaintsRepository.addResolutionAttachment(
+			userId,
+			resolution.id,
+			{
+				url,
+				file_name: file.fileName,
+				path: filePath,
+				base64: file.content.toString("base64"),
+			},
+		);
 	}
 }

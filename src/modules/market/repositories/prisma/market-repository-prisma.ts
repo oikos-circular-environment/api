@@ -155,7 +155,8 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					waste_category: {
 						id: s.waste_category.id,
 						name: s.waste_category.name,
-						hazard_levels: s.waste_category.hazard_levels as MarketCompany["services"][number]["waste_category"]["hazard_levels"],
+						hazard_levels: s.waste_category
+							.hazard_levels as MarketCompany["services"][number]["waste_category"]["hazard_levels"],
 					},
 					quantity: Number(s.quantity),
 					observations: s.observations,
@@ -173,7 +174,8 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					waste_category: {
 						id: w.waste_category.id,
 						name: w.waste_category.name,
-						hazard_levels: w.waste_category.hazard_levels as MarketCompany["wastes"][number]["waste_category"]["hazard_levels"],
+						hazard_levels: w.waste_category
+							.hazard_levels as MarketCompany["wastes"][number]["waste_category"]["hazard_levels"],
 					},
 					quantity: Number(w.quantity),
 					observations: w.observations,

@@ -29,7 +29,10 @@ export function makeGeospatial(overrides?: Partial<Geospatial>): Geospatial {
 			district: faker.location.county(),
 			streetNumber: faker.location.buildingNumber(),
 			street: faker.location.street(),
-			region: faker.location.state({ abbreviated: true }).slice(0, 2).toUpperCase(),
+			region: faker.location
+				.state({ abbreviated: true })
+				.slice(0, 2)
+				.toUpperCase(),
 			subregion: null,
 			country: "Brasil",
 			postalCode: faker.string.numeric(8),
@@ -42,17 +45,15 @@ export function makeGeospatial(overrides?: Partial<Geospatial>): Geospatial {
 	};
 }
 
-export function makeComplaint(
-	overrides?: Partial<Complaint>,
-): Complaint {
+export function makeComplaint(overrides?: Partial<Complaint>): Complaint {
 	return {
 		id: randomUUID(),
-		type: "BURNING",
 		status: "OPEN",
 		date: faker.date.recent(),
 		observations: faker.lorem.sentence(),
 		geospatial: makeGeospatial(),
 		attachments: [],
+		categories: [],
 		vote_counts: { resolved: 0, not_resolved: 0 },
 		resolution_count: 0,
 		created_at: new Date(),

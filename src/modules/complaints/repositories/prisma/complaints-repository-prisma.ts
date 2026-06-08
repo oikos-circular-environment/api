@@ -24,12 +24,16 @@ const complaintInclude = {
 	attachments: true,
 	votes: true,
 	resolutions: true,
+	waste_categories: {
+		include: {
+			waste_category: { select: { id: true, name: true, hazard_levels: true } },
+		},
+	},
 } as const;
 
 type PrismaComplaintPayload = {
 	id: string;
 	status: ComplaintStatus;
-	type: Complaint["type"];
 	date: Date;
 	observations: string | null;
 	geospatial: unknown;
@@ -48,12 +52,18 @@ type PrismaComplaintPayload = {
 		vote_type: "RESOLVED" | "NOT_RESOLVED";
 	}>;
 	resolutions: Array<unknown>;
+	waste_categories: Array<{
+		waste_category: {
+			id: string;
+			name: string;
+			hazard_levels: Array<"LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH">;
+		};
+	}>;
 };
 
 function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 	return {
 		id: payload.id,
-		type: payload.type,
 		status: payload.status,
 		date: payload.date,
 		observations: payload.observations,
@@ -67,6 +77,11 @@ function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 			metadata: (a.metadata as Record<string, unknown> | null) ?? null,
 			type: a.type,
 			created_at: a.created_at,
+		})),
+		categories: payload.waste_categories.map((wc) => ({
+			id: wc.waste_category.id,
+			name: wc.waste_category.name,
+			hazard_levels: wc.waste_category.hazard_levels,
 		})),
 		vote_counts: {
 			resolved: payload.votes.filter((v) => v.vote_type === "RESOLVED").length,
@@ -90,14 +105,15 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				user_id: userId,
 				...(filters?.status && { status: filters.status }),
 				...(cursor && { created_at: { lt: cursor } }),
-				...(filters?.type && { type: filters.type }),
 			},
 			include: complaintInclude,
 			orderBy: { created_at: "desc" },
 			take: limit + 1,
 		});
 
-		return complaints.map((item) => mapComplaint(item as PrismaComplaintPayload));
+		return complaints.map((item) =>
+			mapComplaint(item as PrismaComplaintPayload),
+		);
 	}
 
 	async findByUserAndComplaintId(userId: string, complaintId: string) {
@@ -115,11 +131,15 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		const complaint = await prisma.complaint.create({
 			data: {
 				user_id: userId,
-				type: data.type,
 				date: data.date,
 				status: "OPEN",
 				observations: data.observations ?? null,
 				geospatial: data.geospatial,
+				waste_categories: {
+					create: data.waste_category_ids.map((id) => ({
+						waste_category_id: id,
+					})),
+				},
 			},
 			include: complaintInclude,
 		});
@@ -150,9 +170,21 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const updateData: Record<string, any> = {};
 		if (data.date !== undefined) updateData.date = data.date;
-		if (data.type !== undefined) updateData.type = data.type;
-		if (data.observations !== undefined) updateData.observations = data.observations;
+		if (data.observations !== undefined)
+			updateData.observations = data.observations;
 		if (data.geospatial !== undefined) updateData.geospatial = data.geospatial;
+
+		if (data.waste_category_ids !== undefined) {
+			await prisma.complaintWasteCategory.deleteMany({
+				where: { complaint_id: complaintId },
+			});
+			await prisma.complaintWasteCategory.createMany({
+				data: data.waste_category_ids.map((id) => ({
+					complaint_id: complaintId,
+					waste_category_id: id,
+				})),
+			});
+		}
 
 		await prisma.complaint.update({
 			where: { id: complaintId },
@@ -215,23 +247,21 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		return this.findByUserAndComplaintId(userId, complaintId);
 	}
 
-	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
-		const { lat, lon, radius, type, status } = query;
+	async findMapComplaints(
+		query: GetMapComplaintsQuery,
+	): Promise<MapComplaintItem[]> {
+		const { lat, lon, radius, status } = query;
 		const statusValue = status ?? "OPEN";
-
-		const paramValues: unknown[] = [lon, lat, radius, statusValue];
-		let paramIndex = 5;
-
-		const typeClause = type ? `AND type::text = $${paramIndex++}` : "";
-		if (type) paramValues.push(type);
 
 		const rows = await prisma.$queryRawUnsafe<Array<{ id: string }>>(
 			`SELECT id FROM complaints
        WHERE ST_DWithin(location, ST_MakePoint($1, $2)::geography, $3)
        AND status::text = $4
-       ${typeClause}
        LIMIT 500`,
-			...paramValues,
+			lon,
+			lat,
+			radius,
+			statusValue,
 		);
 
 		if (rows.length === 0) return [];
@@ -243,6 +273,13 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				attachments: true,
 				votes: { select: { vote_type: true } },
 				_count: { select: { resolutions: true } },
+				waste_categories: {
+					include: {
+						waste_category: {
+							select: { id: true, name: true, hazard_levels: true },
+						},
+					},
+				},
 			},
 		});
 
@@ -252,7 +289,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 
 			return {
 				id: c.id,
-				type: c.type as MapComplaintItem["type"],
 				status: c.status as MapComplaintItem["status"],
 				date: c.date,
 				observations: c.observations,
@@ -271,9 +307,26 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 					type: a.type as "PHOTO" | "VIDEO",
 					created_at: a.created_at,
 				})),
+				categories:
+					(
+						c as unknown as {
+							waste_categories?: Array<{
+								waste_category: {
+									id: string;
+									name: string;
+									hazard_levels: Array<"LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH">;
+								};
+							}>;
+						}
+					).waste_categories?.map((wc) => ({
+						id: wc.waste_category.id,
+						name: wc.waste_category.name,
+						hazard_levels: wc.waste_category.hazard_levels,
+					})) ?? [],
 				vote_counts: {
 					resolved: c.votes.filter((v) => v.vote_type === "RESOLVED").length,
-					not_resolved: c.votes.filter((v) => v.vote_type === "NOT_RESOLVED").length,
+					not_resolved: c.votes.filter((v) => v.vote_type === "NOT_RESOLVED")
+						.length,
 				},
 				resolution_count: c._count.resolutions,
 				created_at: c.created_at,
@@ -281,12 +334,21 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		}) satisfies MapComplaintItem[];
 	}
 
-	async findPublicComplaintById(complaintId: string): Promise<PublicComplaint | null> {
+	async findPublicComplaintById(
+		complaintId: string,
+	): Promise<PublicComplaint | null> {
 		const complaint = await prisma.complaint.findUnique({
 			where: { id: complaintId },
 			include: {
 				attachments: true,
 				votes: { select: { vote_type: true } },
+				waste_categories: {
+					include: {
+						waste_category: {
+							select: { id: true, name: true, hazard_levels: true },
+						},
+					},
+				},
 				resolutions: {
 					include: {
 						attachments: true,
@@ -309,7 +371,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 
 		return {
 			id: complaint.id,
-			type: complaint.type as PublicComplaint["type"],
 			status: complaint.status as PublicComplaint["status"],
 			date: complaint.date,
 			observations: complaint.observations,
@@ -328,9 +389,28 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				type: a.type as "PHOTO" | "VIDEO",
 				created_at: a.created_at,
 			})),
+			categories:
+				(
+					complaint as unknown as {
+						waste_categories?: Array<{
+							waste_category: {
+								id: string;
+								name: string;
+								hazard_levels: Array<"LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH">;
+							};
+						}>;
+					}
+				).waste_categories?.map((wc) => ({
+					id: wc.waste_category.id,
+					name: wc.waste_category.name,
+					hazard_levels: wc.waste_category.hazard_levels,
+				})) ?? [],
 			vote_counts: {
-				resolved: complaint.votes.filter((v) => v.vote_type === "RESOLVED").length,
-				not_resolved: complaint.votes.filter((v) => v.vote_type === "NOT_RESOLVED").length,
+				resolved: complaint.votes.filter((v) => v.vote_type === "RESOLVED")
+					.length,
+				not_resolved: complaint.votes.filter(
+					(v) => v.vote_type === "NOT_RESOLVED",
+				).length,
 			},
 			resolutions: complaint.resolutions.map((r) => {
 				const resolver: Resolver = r.company
@@ -338,16 +418,24 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 							type: "company",
 							corporate_name: r.company.corporate_name,
 							business_name: r.company.business_name,
-							avatar_url: (r.company.avatar as { url?: string } | null)?.url ?? null,
+							avatar_url:
+								(r.company.avatar as { url?: string } | null)?.url ?? null,
 						}
 					: {
 							type: "profile",
-							full_name: (r.resolver_user.profile as { full_name?: string } | null)?.full_name ?? "Unknown",
-							display_name: (r.resolver_user.profile as { display_name?: string } | null)?.display_name ?? "Unknown",
+							full_name:
+								(r.resolver_user.profile as { full_name?: string } | null)
+									?.full_name ?? "Unknown",
+							display_name:
+								(r.resolver_user.profile as { display_name?: string } | null)
+									?.display_name ?? "Unknown",
 							avatar_url:
 								(
-									(r.resolver_user.profile as { profile_image?: { url?: string } | null } | null)
-										?.profile_image as { url?: string } | null
+									(
+										r.resolver_user.profile as {
+											profile_image?: { url?: string } | null;
+										} | null
+									)?.profile_image as { url?: string } | null
 								)?.url ?? null,
 						};
 				return {
@@ -372,7 +460,9 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 	): Promise<ComplaintVote | null> {
 		const vote = await prisma.complaintVote.findUnique({
-			where: { complaint_id_user_id: { complaint_id: complaintId, user_id: userId } },
+			where: {
+				complaint_id_user_id: { complaint_id: complaintId, user_id: userId },
+			},
 		});
 		if (!vote) return null;
 		return {
@@ -391,8 +481,14 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		voteType: ComplaintVoteType,
 	): Promise<ComplaintVote> {
 		const vote = await prisma.complaintVote.upsert({
-			where: { complaint_id_user_id: { complaint_id: complaintId, user_id: userId } },
-			create: { complaint_id: complaintId, user_id: userId, vote_type: voteType },
+			where: {
+				complaint_id_user_id: { complaint_id: complaintId, user_id: userId },
+			},
+			create: {
+				complaint_id: complaintId,
+				user_id: userId,
+				vote_type: voteType,
+			},
 			update: { vote_type: voteType },
 		});
 		return {
@@ -405,19 +501,26 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		};
 	}
 
-	async removeVoteFromComplaint(userId: string, complaintId: string): Promise<void> {
+	async removeVoteFromComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
 		await prisma.complaintVote.deleteMany({
 			where: { complaint_id: complaintId, user_id: userId },
 		});
 	}
 
-	async findResolutionsByComplaintId(complaintId: string): Promise<Resolution[]> {
+	async findResolutionsByComplaintId(
+		complaintId: string,
+	): Promise<Resolution[]> {
 		const resolutions = await prisma.complaintResolution.findMany({
 			where: { complaint_id: complaintId },
 			include: {
 				attachments: true,
 				company: { include: { avatar: true } },
-				resolver_user: { include: { profile: { include: { profile_image: true } } } },
+				resolver_user: {
+					include: { profile: { include: { profile_image: true } } },
+				},
 			},
 			orderBy: { created_at: "desc" },
 		});
@@ -428,12 +531,19 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			company_id: r.company_id,
 			resolver_user_profile: {
 				type: "profile" as const,
-				full_name: (r.resolver_user.profile as { full_name?: string } | null)?.full_name ?? "Unknown",
-				display_name: (r.resolver_user.profile as { display_name?: string } | null)?.display_name ?? "Unknown",
+				full_name:
+					(r.resolver_user.profile as { full_name?: string } | null)
+						?.full_name ?? "Unknown",
+				display_name:
+					(r.resolver_user.profile as { display_name?: string } | null)
+						?.display_name ?? "Unknown",
 				avatar_url:
 					(
-						(r.resolver_user.profile as { profile_image?: { url?: string } | null } | null)
-							?.profile_image as { url?: string } | null
+						(
+							r.resolver_user.profile as {
+								profile_image?: { url?: string } | null;
+							} | null
+						)?.profile_image as { url?: string } | null
 					)?.url ?? null,
 			},
 			resolver_company: r.company
@@ -441,7 +551,8 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 						type: "company" as const,
 						corporate_name: r.company.corporate_name,
 						business_name: r.company.business_name,
-						avatar_url: (r.company.avatar as { url?: string } | null)?.url ?? null,
+						avatar_url:
+							(r.company.avatar as { url?: string } | null)?.url ?? null,
 					}
 				: null,
 			attachments: r.attachments.map((a) => ({
@@ -477,18 +588,24 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	): Promise<void> {
 		await prisma.complaintResolution.updateMany({
 			where: { complaint_id: complaintId, resolver_user_id: userId },
-			data: { description: data.description, company_id: data.company_id ?? null },
+			data: {
+				description: data.description,
+				company_id: data.company_id ?? null,
+			},
 		});
 	}
 
-	async deleteResolutionByUser(userId: string, complaintId: string): Promise<void> {
+	async deleteResolutionByUser(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
 		await prisma.complaintResolution.deleteMany({
 			where: { complaint_id: complaintId, resolver_user_id: userId },
 		});
 	}
 
 	async addResolutionAttachment(
-		userId: string,
+		_userId: string,
 		resolutionId: string,
 		data: SaveResolutionAttachment,
 	): Promise<ResolutionAttachment> {
@@ -562,18 +679,14 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		}
 
 		const open = byStatus.get("OPEN") ?? 0;
-		const pending = byStatus.get("IN_PROGRESS") ?? 0;
 		const resolved = byStatus.get("RESOLVED") ?? 0;
 		const canceled = byStatus.get("CANCELED") ?? 0;
-		const rejected = byStatus.get("REJECTED") ?? 0;
 
 		return {
-			total: open + pending + resolved + canceled + rejected,
+			total: open + resolved + canceled,
 			open,
-			pending,
 			resolved,
 			canceled,
-			rejected,
 		};
 	}
 }

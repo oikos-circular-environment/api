@@ -1,21 +1,6 @@
 import z from "zod";
 
-export const complaintTypeSchema = z.enum([
-	"IRREGULAR_DISPOSAL",
-	"DEFORESTATION",
-	"BURNING",
-	"VACANT_LOT",
-]);
-
-export type ComplaintType = z.infer<typeof complaintTypeSchema>;
-
-export const complaintStatusSchema = z.enum([
-	"OPEN",
-	"IN_PROGRESS",
-	"RESOLVED",
-	"REJECTED",
-	"CANCELED",
-]);
+export const complaintStatusSchema = z.enum(["OPEN", "RESOLVED", "CANCELED"]);
 
 export type ComplaintStatus = z.infer<typeof complaintStatusSchema>;
 
@@ -85,14 +70,22 @@ export const complaintAttachmentSchema = z.object({
 
 export type ComplaintAttachment = z.infer<typeof complaintAttachmentSchema>;
 
+export const complaintCategorySchema = z.object({
+	id: z.string(),
+	name: z.string(),
+	hazard_levels: z.array(z.enum(["LOW", "MEDIUM", "HIGH", "VERY_HIGH"])),
+});
+
+export type ComplaintCategory = z.infer<typeof complaintCategorySchema>;
+
 export const complaintSchema = z.object({
 	id: z.string(),
-	type: complaintTypeSchema,
 	status: complaintStatusSchema,
 	date: z.date(),
 	observations: z.string().nullable(),
 	geospatial: geospatialSchema,
 	attachments: z.array(complaintAttachmentSchema),
+	categories: z.array(complaintCategorySchema),
 	vote_counts: z.object({
 		resolved: z.number().int().nonnegative(),
 		not_resolved: z.number().int().nonnegative(),
@@ -108,32 +101,36 @@ export const complaintsSchema = z.array(complaintSchema);
 export const complaintResumeSchema = z.object({
 	total: z.number().int().nonnegative(),
 	open: z.number().int().nonnegative(),
-	pending: z.number().int().nonnegative(),
 	resolved: z.number().int().nonnegative(),
 	canceled: z.number().int().nonnegative(),
-	rejected: z.number().int().nonnegative(),
 });
 
 export type ComplaintResume = z.infer<typeof complaintResumeSchema>;
 
-export const createComplaintSchema = complaintSchema.pick({
-	type: true,
-}).extend({
+export const createComplaintSchema = z.object({
 	date: z.coerce.date(),
 	observations: z.string().optional().nullable(),
 	geospatial: geospatialSchema,
+	waste_category_ids: z
+		.array(z.string())
+		.min(1, "At least one waste category is required"),
 });
 
 export type CreateComplaint = z.infer<typeof createComplaintSchema>;
 
-export const updateComplaintSchema = createComplaintSchema
-	.partial()
+export const updateComplaintSchema = z
+	.object({
+		date: z.coerce.date().optional(),
+		observations: z.string().optional().nullable(),
+		geospatial: geospatialSchema.optional(),
+		waste_category_ids: z.array(z.string()).min(1).optional(),
+	})
 	.refine(
 		(data) =>
 			data.date !== undefined ||
-			data.type !== undefined ||
 			data.observations !== undefined ||
-			data.geospatial !== undefined,
+			data.geospatial !== undefined ||
+			data.waste_category_ids !== undefined,
 		{ message: "At least one field must be provided" },
 	);
 
@@ -153,7 +150,6 @@ export type SaveComplaintAttachment = z.infer<
 >;
 
 export const getComplaintsFiltersSchema = z.object({
-	type: complaintTypeSchema.optional(),
 	status: complaintStatusSchema.optional(),
 });
 
@@ -224,13 +220,13 @@ export type Resolution = z.infer<typeof resolutionSchema>;
 
 export const publicComplaintSchema = z.object({
 	id: z.string(),
-	type: complaintTypeSchema,
 	status: complaintStatusSchema,
 	date: z.date(),
 	observations: z.string().nullable(),
 	geospatial: geospatialSchema,
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
 	attachments: z.array(complaintAttachmentSchema),
+	categories: z.array(complaintCategorySchema),
 	vote_counts: z.object({
 		resolved: z.number().int(),
 		not_resolved: z.number().int(),
@@ -242,13 +238,13 @@ export type PublicComplaint = z.infer<typeof publicComplaintSchema>;
 
 export const mapComplaintItemSchema = z.object({
 	id: z.string(),
-	type: complaintTypeSchema,
 	status: complaintStatusSchema,
 	date: z.date(),
 	observations: z.string().nullable(),
 	geospatial: geospatialSchema,
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
 	attachments: z.array(complaintAttachmentSchema),
+	categories: z.array(complaintCategorySchema),
 	vote_counts: z.object({
 		resolved: z.number().int(),
 		not_resolved: z.number().int(),
@@ -262,7 +258,6 @@ export const getMapComplaintsQuerySchema = z.object({
 	lat: z.coerce.number(),
 	lon: z.coerce.number(),
 	radius: z.coerce.number().int().positive().max(50000).default(1000),
-	type: complaintTypeSchema.optional(),
 	status: complaintStatusSchema.optional(),
 });
 export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;

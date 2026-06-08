@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import type { CompanyValidation, DayOfWeek } from "@/modules/companies/dtos/companies-dto.js";
+import type {
+	CompanyValidation,
+	DayOfWeek,
+} from "@/modules/companies/dtos/companies-dto.js";
 import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { makeCompanyService } from "@/modules/companies/factories/make-company-service.js";

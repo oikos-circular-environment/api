@@ -5,7 +5,11 @@ import type { ComplaintsRepository } from "@/modules/complaints/repositories/com
 export class GetPublicComplaintUseCase {
 	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
 
-	async execute({ complaintId }: { complaintId: string }): Promise<PublicComplaint> {
+	async execute({
+		complaintId,
+	}: {
+		complaintId: string;
+	}): Promise<PublicComplaint> {
 		const complaint =
 			await this.complaintsRepository.findPublicComplaintById(complaintId);
 

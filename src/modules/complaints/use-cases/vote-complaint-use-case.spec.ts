@@ -12,10 +12,12 @@ describe("vote-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new VoteComplaintUseCase(complaintsRepository);
 
-		const complaint = await complaintsRepository.createForUser(
-			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
-		);
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		const vote = await sut.execute({
 			userId: otherUserId,
@@ -57,15 +59,25 @@ describe("vote-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new VoteComplaintUseCase(complaintsRepository);
 
-		const complaint = await complaintsRepository.createForUser(
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+		await complaintsRepository.updateStatusByUserAndComplaintId(
 			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			complaint.id,
+			"RESOLVED",
 		);
-		await complaintsRepository.updateStatusByUserAndComplaintId(userId, complaint.id, "RESOLVED");
 
 		let thrownError: unknown;
 		try {
-			await sut.execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
+			await sut.execute({
+				userId: otherUserId,
+				complaintId: complaint.id,
+				voteType: "RESOLVED",
+			});
 		} catch (error) {
 			thrownError = error;
 		}
@@ -83,15 +95,25 @@ describe("vote-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new VoteComplaintUseCase(complaintsRepository);
 
-		const complaint = await complaintsRepository.createForUser(
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+		await complaintsRepository.updateStatusByUserAndComplaintId(
 			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			complaint.id,
+			"CANCELED",
 		);
-		await complaintsRepository.updateStatusByUserAndComplaintId(userId, complaint.id, "CANCELED");
 
 		let thrownError: unknown;
 		try {
-			await sut.execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
+			await sut.execute({
+				userId: otherUserId,
+				complaintId: complaint.id,
+				voteType: "RESOLVED",
+			});
 		} catch (error) {
 			thrownError = error;
 		}
@@ -109,12 +131,18 @@ describe("vote-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new VoteComplaintUseCase(complaintsRepository);
 
-		const complaint = await complaintsRepository.createForUser(
-			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
-		);
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
-		await sut.execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
+		await sut.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+			voteType: "RESOLVED",
+		});
 		const secondVote = await sut.execute({
 			userId: otherUserId,
 			complaintId: complaint.id,
@@ -137,12 +165,18 @@ describe("vote-complaint-use-case", () => {
 		const jobDispatcher = { dispatchGroupingJob: vi.fn(), dispatchQuorumJob };
 		const sut = new VoteComplaintUseCase(complaintsRepository, jobDispatcher);
 
-		const complaint = await complaintsRepository.createForUser(
-			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
-		);
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
-		await sut.execute({ userId: otherUserId, complaintId: complaint.id, voteType: "RESOLVED" });
+		await sut.execute({
+			userId: otherUserId,
+			complaintId: complaint.id,
+			voteType: "RESOLVED",
+		});
 
 		expect(dispatchQuorumJob).toHaveBeenCalledWith(complaint.id);
 	});

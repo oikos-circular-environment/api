@@ -16,7 +16,8 @@ export class SubmitResolutionUseCase {
 	) {}
 
 	async execute({ userId, complaintId, data }: Request): Promise<void> {
-		const complaint = await this.complaintsRepository.findPublicComplaintById(complaintId);
+		const complaint =
+			await this.complaintsRepository.findPublicComplaintById(complaintId);
 
 		if (!complaint) {
 			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
@@ -27,21 +28,37 @@ export class SubmitResolutionUseCase {
 		}
 
 		if (data.company_id && this.companyChecker) {
-			const owns = await this.companyChecker.userOwnsCompany(userId, data.company_id);
+			const owns = await this.companyChecker.userOwnsCompany(
+				userId,
+				data.company_id,
+			);
 			if (!owns) {
-				throw new AppError("Company does not belong to the user", "COMPANY_NOT_OWNED", 403);
+				throw new AppError(
+					"Company does not belong to the user",
+					"COMPANY_NOT_OWNED",
+					403,
+				);
 			}
 		}
 
-		const existing = await this.complaintsRepository.findResolutionByUserAndComplaint(
-			userId,
-			complaintId,
-		);
+		const existing =
+			await this.complaintsRepository.findResolutionByUserAndComplaint(
+				userId,
+				complaintId,
+			);
 
 		if (existing) {
-			await this.complaintsRepository.updateResolution(userId, complaintId, data);
+			await this.complaintsRepository.updateResolution(
+				userId,
+				complaintId,
+				data,
+			);
 		} else {
-			await this.complaintsRepository.submitResolution(userId, complaintId, data);
+			await this.complaintsRepository.submitResolution(
+				userId,
+				complaintId,
+				data,
+			);
 		}
 	}
 }

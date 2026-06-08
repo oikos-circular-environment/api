@@ -15,15 +15,19 @@ describe("resolve-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
-		const created = await complaintsRepository.createForUser(
-			userId,
-			{ date: new Date("2026-04-20T10:00:00.000Z"), type: "BURNING", observations: null, geospatial: makeGeospatial() },
-		);
+		const created = await complaintsRepository.createForUser(userId, {
+			date: new Date("2026-04-20T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		await sut.execute({ userId, complaintId: created.id, resolution });
 
 		expect(complaintsRepository.resolutions).toHaveLength(1);
-		expect(complaintsRepository.resolutions[0].description).toBe(resolution.description);
+		expect(complaintsRepository.resolutions[0].description).toBe(
+			resolution.description,
+		);
 		expect(complaintsRepository.votes).toHaveLength(1);
 		expect(complaintsRepository.votes[0].vote_type).toBe("RESOLVED");
 	});
@@ -59,11 +63,17 @@ describe("resolve-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
-		const created = await complaintsRepository.createForUser(
+		const created = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+		await complaintsRepository.updateStatusByUserAndComplaintId(
 			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			created.id,
+			"RESOLVED",
 		);
-		await complaintsRepository.updateStatusByUserAndComplaintId(userId, created.id, "RESOLVED");
 
 		let thrownError: unknown;
 		try {
@@ -84,15 +94,23 @@ describe("resolve-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(complaintsRepository);
 
-		const created = await complaintsRepository.createForUser(
+		const created = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+		await complaintsRepository.updateStatusByUserAndComplaintId(
 			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			created.id,
+			"CANCELED",
 		);
-		await complaintsRepository.updateStatusByUserAndComplaintId(userId, created.id, "CANCELED");
 
 		await expect(
 			sut.execute({ userId, complaintId: created.id, resolution }),
-		).rejects.toThrowError(expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }));
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
+		);
 	});
 
 	it("calls job dispatcher with the complaint id", async () => {
@@ -100,12 +118,17 @@ describe("resolve-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const dispatchQuorumJob = vi.fn().mockResolvedValue(undefined);
 		const jobDispatcher = { dispatchGroupingJob: vi.fn(), dispatchQuorumJob };
-		const sut = new ResolveComplaintUseCase(complaintsRepository, jobDispatcher);
-
-		const created = await complaintsRepository.createForUser(
-			userId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+		const sut = new ResolveComplaintUseCase(
+			complaintsRepository,
+			jobDispatcher,
 		);
+
+		const created = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		await sut.execute({ userId, complaintId: created.id, resolution });
 

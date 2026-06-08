@@ -126,7 +126,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				tags: [COMPLAINTS_TAG],
 				summary: "List complaints",
 				description:
-					"Returns a paginated list of complaints for the authenticated user. Use `cursor` (the `next_cursor` from the previous response) for infinite scroll. Filter by `type` and/or `status` as needed.",
+					"Returns a paginated list of complaints for the authenticated user. Use `cursor` (the `next_cursor` from the previous response) for infinite scroll. Filter by `status` as needed.",
 				querystring: getComplaintsQuerySchema,
 				response: {
 					200: z.object({
@@ -139,11 +139,11 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			const { type, status, cursor, limit } = request.query;
+			const { status, cursor, limit } = request.query;
 
 			const result = await getComplaintsUseCase.execute({
 				userId,
-				filters: { type, status },
+				filters: { status },
 				cursor: cursor ? new Date(cursor) : undefined,
 				limit,
 			});
@@ -272,7 +272,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				tags: [COMPLAINTS_TAG],
 				summary: "Update complaint",
 				description:
-					"Updates complaint fields. Accepts any combination of `date`, `type`, `observations`, and `geospatial`.",
+					"Updates complaint fields. Accepts any combination of `date`, `observations`, `geospatial`, and `waste_category_ids`.",
 				params: z.object({ id: z.uuid() }),
 				body: updateComplaintSchema,
 				response: {

@@ -40,7 +40,10 @@ export class UpsertCompanyServicesUseCase {
 		this.validateDuplicatedNames(data);
 		await this.validateCategories(data);
 
-		const services = await this.servicesRepository.replaceMany(company.id, data);
+		const services = await this.servicesRepository.replaceMany(
+			company.id,
+			data,
+		);
 
 		await this.validationRepository.updateField(
 			company.id,

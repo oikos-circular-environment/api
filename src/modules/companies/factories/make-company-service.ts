@@ -3,7 +3,9 @@ import { faker } from "@faker-js/faker";
 import type { CompanyService } from "@/modules/companies/dtos/companies-dto.js";
 import { makeWasteCategory } from "@/modules/wastes/factories/make-waste-category.js";
 
-export function makeCompanyService(overrides?: Partial<CompanyService>): CompanyService {
+export function makeCompanyService(
+	overrides?: Partial<CompanyService>,
+): CompanyService {
 	const category = makeWasteCategory();
 	return {
 		id: randomUUID(),

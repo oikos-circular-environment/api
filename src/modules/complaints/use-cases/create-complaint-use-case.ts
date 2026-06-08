@@ -10,9 +10,7 @@ type CreateComplaintUseCaseRequest = {
 };
 
 export class CreateComplaintUseCase {
-	constructor(
-		private readonly complaintsRepository: ComplaintsRepository,
-	) {}
+	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
 
 	async execute({
 		userId,

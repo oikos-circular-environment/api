@@ -48,7 +48,8 @@ function mapCategory(raw: {
 			name: s.name,
 			description: s.description,
 			observations: s.observations,
-			hazard_level: s.hazard_level as WasteCategory["subcategories"][number]["hazard_level"],
+			hazard_level:
+				s.hazard_level as WasteCategory["subcategories"][number]["hazard_level"],
 			type: s.type as WasteCategory["subcategories"][number]["type"],
 			created_at: s.created_at,
 			category_id: s.category_id,

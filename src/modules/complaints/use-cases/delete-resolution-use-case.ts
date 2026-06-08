@@ -7,7 +7,8 @@ export class DeleteResolutionUseCase {
 	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
 
 	async execute({ userId, complaintId }: Request): Promise<void> {
-		const complaint = await this.complaintsRepository.findPublicComplaintById(complaintId);
+		const complaint =
+			await this.complaintsRepository.findPublicComplaintById(complaintId);
 
 		if (!complaint) {
 			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
@@ -17,10 +18,11 @@ export class DeleteResolutionUseCase {
 			throw new AppError("Complaint is closed", "COMPLAINT_CLOSED", 422);
 		}
 
-		const resolution = await this.complaintsRepository.findResolutionByUserAndComplaint(
-			userId,
-			complaintId,
-		);
+		const resolution =
+			await this.complaintsRepository.findResolutionByUserAndComplaint(
+				userId,
+				complaintId,
+			);
 
 		if (!resolution) {
 			throw new AppError("Resolution not found", "RESOLUTION_NOT_FOUND", 404);

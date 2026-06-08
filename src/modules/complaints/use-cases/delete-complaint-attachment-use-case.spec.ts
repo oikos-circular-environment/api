@@ -26,7 +26,12 @@ describe("delete-complaint-attachment-use-case", () => {
 
 		const created = await complaintsRepository.createForUser(
 			"11111111-1111-1111-1111-111111111111",
-			{ date: new Date("2026-04-20T10:00:00.000Z"), type: "VACANT_LOT", observations: null, geospatial: makeGeospatial() },
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		);
 
 		await complaintsRepository.attachByComplaintId(
@@ -46,7 +51,7 @@ describe("delete-complaint-attachment-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			created.id,
 		);
-		const attachmentId = withAttachment!.attachments[0]!.id;
+		const attachmentId = withAttachment?.attachments[0]?.id;
 
 		await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
@@ -54,13 +59,15 @@ describe("delete-complaint-attachment-use-case", () => {
 			attachmentId,
 		});
 
-		expect(storageProvider.deleteFile).toHaveBeenCalledWith("complaints/abc/photo.jpg");
+		expect(storageProvider.deleteFile).toHaveBeenCalledWith(
+			"complaints/abc/photo.jpg",
+		);
 
 		const updated = await complaintsRepository.findByUserAndComplaintId(
 			"11111111-1111-1111-1111-111111111111",
 			created.id,
 		);
-		expect(updated!.attachments).toHaveLength(0);
+		expect(updated?.attachments).toHaveLength(0);
 	});
 
 	it("throws when complaint does not exist", async () => {
@@ -102,7 +109,12 @@ describe("delete-complaint-attachment-use-case", () => {
 
 		const created = await complaintsRepository.createForUser(
 			"11111111-1111-1111-1111-111111111111",
-			{ date: new Date("2026-04-20T10:00:00.000Z"), type: "VACANT_LOT", observations: null, geospatial: makeGeospatial() },
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		);
 
 		let thrownError: unknown;

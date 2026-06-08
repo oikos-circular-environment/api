@@ -11,30 +11,23 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "VACANT_LOT",
-				observations: "Lote com entulho",
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-20T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: "Lote com entulho",
+			geospatial: makeGeospatial(),
+		});
 
-		await complaintsRepository.createForUser(
-			userBId,
-			{
-				date: new Date("2026-04-21T10:00:00.000Z"),
-				type: "DEFORESTATION",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userBId, {
+			date: new Date("2026-04-21T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		const { complaints } = await sut.execute({ userId: userAId, limit: 20 });
 
 		expect(complaints.length).toBe(1);
-		expect(complaints[0]?.type).toBe("VACANT_LOT");
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
@@ -58,15 +51,12 @@ describe("get-complaints-use-case", () => {
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
-			await complaintsRepository.createForUser(
-				userAId,
-				{
-					date: new Date("2026-04-01T10:00:00.000Z"),
-					type: "BURNING",
-					observations: null,
-					geospatial: makeGeospatial(),
-				},
-			);
+			await complaintsRepository.createForUser(userAId, {
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			});
 		}
 
 		complaintsRepository.complaints.forEach((c, i) => {
@@ -88,15 +78,12 @@ describe("get-complaints-use-case", () => {
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 3; i++) {
-			await complaintsRepository.createForUser(
-				userAId,
-				{
-					date: new Date("2026-04-01T10:00:00.000Z"),
-					type: "BURNING",
-					observations: null,
-					geospatial: makeGeospatial(),
-				},
-			);
+			await complaintsRepository.createForUser(userAId, {
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			});
 		}
 
 		complaintsRepository.complaints.forEach((c, i) => {
@@ -118,15 +105,12 @@ describe("get-complaints-use-case", () => {
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
-			await complaintsRepository.createForUser(
-				userAId,
-				{
-					date: new Date("2026-04-01T10:00:00.000Z"),
-					type: "BURNING",
-					observations: null,
-					geospatial: makeGeospatial(),
-				},
-			);
+			await complaintsRepository.createForUser(userAId, {
+				date: new Date("2026-04-01T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			});
 		}
 
 		// garante created_at distintos e ordenados de forma decrescente
@@ -154,38 +138,30 @@ describe("get-complaints-use-case", () => {
 		expect(new Set(allIds).size).toBe(5);
 	});
 
-	it("filters by type", async () => {
+	it("lists all complaints for user", async () => {
 		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-02T10:00:00.000Z"),
-				type: "DEFORESTATION",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-01T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-02T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		const { complaints } = await sut.execute({
 			userId: userAId,
-			filters: { type: "BURNING" },
 			limit: 20,
 		});
 
-		expect(complaints.length).toBe(1);
-		expect(complaints[0]?.type).toBe("BURNING");
+		expect(complaints.length).toBe(2);
 	});
 
 	it("filters by status", async () => {
@@ -193,30 +169,24 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		const c1 = await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		const c1 = await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-01T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 		await complaintsRepository.updateStatusByUserAndComplaintId(
 			userAId,
 			c1.id,
 			"RESOLVED",
 		);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-02T10:00:00.000Z"),
-				type: "DEFORESTATION",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-02T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		const { complaints } = await sut.execute({
 			userId: userAId,
@@ -228,54 +198,44 @@ describe("get-complaints-use-case", () => {
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
-	it("filters by type and status combined", async () => {
+	it("filters by status", async () => {
 		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-01T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
-		const c2 = await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-02T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		const c2 = await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-02T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 		await complaintsRepository.updateStatusByUserAndComplaintId(
 			userAId,
 			c2.id,
 			"RESOLVED",
 		);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-03T10:00:00.000Z"),
-				type: "DEFORESTATION",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-03T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		const { complaints } = await sut.execute({
 			userId: userAId,
-			filters: { type: "BURNING", status: "OPEN" },
+			filters: { status: "OPEN" },
 			limit: 20,
 		});
 
-		expect(complaints.length).toBe(1);
-		expect(complaints[0]?.type).toBe("BURNING");
+		expect(complaints.length).toBe(2);
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
@@ -284,19 +244,16 @@ describe("get-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{
-				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
-				observations: null,
-				geospatial: makeGeospatial(),
-			},
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-01T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		const { complaints, next_cursor } = await sut.execute({
 			userId: userAId,
-			filters: { type: "DEFORESTATION" },
+			filters: { status: "RESOLVED" },
 			limit: 20,
 		});
 

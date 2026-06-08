@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { WASTE_CATEGORIES_SEED } from "@/modules/wastes/data/waste-categories-seed.js";
 import { UpdateComplaintUseCase } from "./update-complaint-use-case.js";
 
 describe("update-complaint-use-case", () => {
@@ -13,7 +14,7 @@ describe("update-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: "Inicial",
 				geospatial: makeGeospatial(),
 			},
@@ -29,7 +30,7 @@ describe("update-complaint-use-case", () => {
 		expect(result.observations).toBe("Atualizada");
 	});
 
-	it("updates complaint type", async () => {
+	it("updates complaint waste categories", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new UpdateComplaintUseCase(complaintsRepository);
 
@@ -37,7 +38,7 @@ describe("update-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -46,10 +47,10 @@ describe("update-complaint-use-case", () => {
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
 			complaintId: created.id,
-			data: { type: "DEFORESTATION" },
+			data: { waste_category_ids: [WASTE_CATEGORIES_SEED[1].id] },
 		});
 
-		expect(result.type).toBe("DEFORESTATION");
+		expect(result.id).toBe(created.id);
 	});
 
 	it("updates complaint geospatial", async () => {
@@ -61,7 +62,7 @@ describe("update-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: null,
 				geospatial: geo,
 			},
@@ -88,7 +89,7 @@ describe("update-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -112,7 +113,7 @@ describe("update-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -139,7 +140,9 @@ describe("update-complaint-use-case", () => {
 		expect(thrownError instanceof AppError).toBe(true);
 
 		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Complaint with votes cannot be updated");
+			expect(thrownError.message).toBe(
+				"Complaint with votes cannot be updated",
+			);
 			expect(thrownError.code).toBe("COMPLAINT_HAS_VOTES");
 			expect(thrownError.statusCode).toBe(422);
 		}
@@ -153,7 +156,7 @@ describe("update-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 				observations: null,
 				geospatial: makeGeospatial(),
 			},
@@ -180,7 +183,9 @@ describe("update-complaint-use-case", () => {
 		expect(thrownError instanceof AppError).toBe(true);
 
 		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Complaint with resolutions cannot be updated");
+			expect(thrownError.message).toBe(
+				"Complaint with resolutions cannot be updated",
+			);
 			expect(thrownError.code).toBe("COMPLAINT_HAS_RESOLUTIONS");
 			expect(thrownError.statusCode).toBe(422);
 		}

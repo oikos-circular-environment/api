@@ -184,6 +184,7 @@ model WasteCategory {
   subcategories    WasteSubcategory[]
   company_wastes   CompanyWaste[]
   company_services CompanyService[]
+  complaints       ComplaintWasteCategory[]
 
   @@map("waste_categories")
 }
@@ -246,7 +247,6 @@ model CompanyService {
 model Complaint {
   id           String          @id @default(uuid())
   status       ComplaintStatus @default(OPEN)
-  type         ComplaintType
   date         DateTime
   observations String?
   geospatial   Json
@@ -256,11 +256,23 @@ model Complaint {
   user_id String
   user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
-  attachments ComplaintAttachment[]
-  votes       ComplaintVote[]
-  resolutions ComplaintResolution[]
+  attachments    ComplaintAttachment[]
+  votes          ComplaintVote[]
+  resolutions    ComplaintResolution[]
+  waste_categories ComplaintWasteCategory[]
 
   @@map("complaints")
+}
+
+model ComplaintWasteCategory {
+  complaint_id      String
+  waste_category_id String
+
+  complaint      Complaint     @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+  waste_category WasteCategory @relation(fields: [waste_category_id], references: [id], onDelete: Restrict)
+
+  @@id([complaint_id, waste_category_id])
+  @@map("complaint_waste_categories")
 }
 
 enum ComplaintCaptureMode {

@@ -117,7 +117,7 @@ async function seed() {
 					time_slots: [...bh.time_slots],
 				});
 			} else {
-				groupedHours.get(bh.day_of_week)!.time_slots.push(...bh.time_slots);
+				groupedHours.get(bh.day_of_week)?.time_slots.push(...bh.time_slots);
 			}
 		}
 

@@ -9,7 +9,13 @@ type Request = {
 export class GetComplaintVoteUseCase {
 	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
 
-	async execute({ userId, complaintId }: Request): Promise<ComplaintVote | null> {
-		return this.complaintsRepository.findVoteByUserAndComplaint(userId, complaintId);
+	async execute({
+		userId,
+		complaintId,
+	}: Request): Promise<ComplaintVote | null> {
+		return this.complaintsRepository.findVoteByUserAndComplaint(
+			userId,
+			complaintId,
+		);
 	}
 }

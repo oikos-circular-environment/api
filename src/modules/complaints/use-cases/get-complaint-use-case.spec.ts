@@ -13,7 +13,7 @@ describe("get-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "IRREGULAR_DISPOSAL",
+				waste_category_ids: ["waste-category-id"],
 				observations: "Descarte de pneus",
 				geospatial: makeGeospatial(),
 			},
@@ -25,7 +25,6 @@ describe("get-complaint-use-case", () => {
 		});
 
 		expect(result.id).toBe(created.id);
-		expect(result.type).toBe("IRREGULAR_DISPOSAL");
 		expect(result.observations).toBe("Descarte de pneus");
 		expect(result.attachments).toHaveLength(0);
 	});

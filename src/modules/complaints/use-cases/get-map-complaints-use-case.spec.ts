@@ -1,8 +1,9 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
-import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { WASTE_CATEGORIES_SEED } from "@/modules/wastes/data/waste-categories-seed.js";
 import { GetMapComplaintsUseCase } from "./get-map-complaints-use-case.js";
 
 // Sao Paulo coordinates used for radius-based assertions
@@ -27,14 +28,18 @@ describe("get-map-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
-		);
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
 
 		// manually set one to RESOLVED
 		const resolved = complaintsRepository.complaints[1];
@@ -46,44 +51,23 @@ describe("get-map-complaints-use-case", () => {
 		expect(items[0]?.status).toBe("OPEN");
 	});
 
-	it("returns complaints matching the given type filter", async () => {
-		const userAId = randomUUID();
-		const complaintsRepository = new InMemoryComplaintsRepository();
-		const sut = new GetMapComplaintsUseCase(complaintsRepository);
-
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
-		);
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
-		);
-
-		const items = await sut.execute({
-			lat: -23.55,
-			lon: -46.63,
-			radius: 1000,
-			type: "BURNING",
-		});
-
-		expect(items.length).toBe(1);
-		expect(items[0]?.type).toBe("BURNING");
-	});
-
 	it("filters by single status", async () => {
 		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
-		);
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
 
 		const resolved = complaintsRepository.complaints[1];
 		if (resolved) resolved.status = "RESOLVED";
@@ -104,17 +88,18 @@ describe("get-map-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial: makeSpGeospatial() },
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
 
 		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
 
 		expect(items.length).toBe(1);
 		const item = items[0];
 		expect(item).toMatchObject({
-			type: "VACANT_LOT",
 			status: "OPEN",
 			location: { lat: -23.55, lon: -46.63 },
 			vote_counts: { resolved: 0, not_resolved: 0 },
@@ -144,7 +129,7 @@ describe("get-map-complaints-use-case", () => {
 		});
 		await complaintsRepository.createForUser(userAId, {
 			date: new Date(),
-			type: "BURNING",
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
 			observations: null,
 			geospatial: farGeospatial,
 		});
@@ -159,10 +144,12 @@ describe("get-map-complaints-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
-		);
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
 
 		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
 

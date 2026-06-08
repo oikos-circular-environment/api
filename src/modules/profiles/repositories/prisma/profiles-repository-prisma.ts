@@ -45,7 +45,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 				user_id: data.user_id,
 				full_name: data.full_name,
 				display_name: data.display_name,
-					phone: data.phone,
+				phone: data.phone,
 			},
 			include: {
 				address: true,

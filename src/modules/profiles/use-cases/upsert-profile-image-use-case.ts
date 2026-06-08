@@ -58,7 +58,10 @@ export class UpsertProfileImageUseCase {
 
 		const filePath = `profiles/${userId}.${extension}`;
 
-		if (profile.profile_image?.path && profile.profile_image.path !== filePath) {
+		if (
+			profile.profile_image?.path &&
+			profile.profile_image.path !== filePath
+		) {
 			await this.storageProvider.deleteFile(profile.profile_image.path);
 		}
 

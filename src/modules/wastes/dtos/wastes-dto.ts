@@ -1,10 +1,10 @@
-import z from 'zod'
+import z from "zod";
 
-export const hazardLevelSchema = z.enum(['LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH'])
-export type HazardLevel = z.infer<typeof hazardLevelSchema>
+export const hazardLevelSchema = z.enum(["LOW", "MEDIUM", "HIGH", "VERY_HIGH"]);
+export type HazardLevel = z.infer<typeof hazardLevelSchema>;
 
-export const subcategoryTypeSchema = z.enum(['INCLUDE', 'EXCLUDE'])
-export type SubcategoryType = z.infer<typeof subcategoryTypeSchema>
+export const subcategoryTypeSchema = z.enum(["INCLUDE", "EXCLUDE"]);
+export type SubcategoryType = z.infer<typeof subcategoryTypeSchema>;
 
 export const wasteSubcategorySchema = z.object({
 	id: z.string(),
@@ -15,9 +15,9 @@ export const wasteSubcategorySchema = z.object({
 	type: subcategoryTypeSchema,
 	created_at: z.date(),
 	category_id: z.string(),
-})
+});
 
-export type WasteSubcategory = z.infer<typeof wasteSubcategorySchema>
+export type WasteSubcategory = z.infer<typeof wasteSubcategorySchema>;
 
 export const wasteCategorySchema = z.object({
 	id: z.string(),
@@ -28,12 +28,12 @@ export const wasteCategorySchema = z.object({
 	created_at: z.date(),
 	updated_at: z.date(),
 	subcategories: z.array(wasteSubcategorySchema),
-})
+});
 
-export type WasteCategory = z.infer<typeof wasteCategorySchema>
+export type WasteCategory = z.infer<typeof wasteCategorySchema>;
 
 export const wasteCategorySummarySchema = wasteCategorySchema.omit({
 	subcategories: true,
-})
+});
 
-export type WasteCategorySummary = z.infer<typeof wasteCategorySummarySchema>
+export type WasteCategorySummary = z.infer<typeof wasteCategorySummarySchema>;

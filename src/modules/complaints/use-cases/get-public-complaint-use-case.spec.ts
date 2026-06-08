@@ -27,15 +27,16 @@ describe("get-public-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetPublicComplaintUseCase(complaintsRepository);
 
-		const created = await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "BURNING", observations: "some obs", geospatial: spGeospatial },
-		);
+		const created = await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: "some obs",
+			geospatial: spGeospatial,
+		});
 
 		const result = await sut.execute({ complaintId: created.id });
 
 		expect(result.id).toBe(created.id);
-		expect(result.type).toBe("BURNING");
 		expect(result.status).toBe("OPEN");
 		expect(result.location).toEqual({ lat: -23.55, lon: -46.63 });
 		expect(result.attachments).toHaveLength(0);
@@ -62,10 +63,12 @@ describe("get-public-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetPublicComplaintUseCase(complaintsRepository);
 
-		const created = await complaintsRepository.createForUser(
-			userAId,
-			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial: makeGeospatial() },
-		);
+		const created = await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
 
 		complaintsRepository.resolutions.push({
 			id: "res-1",

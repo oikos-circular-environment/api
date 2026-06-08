@@ -42,18 +42,9 @@ enum SubcategoryType {
   EXCLUDE
 }
 
-enum ComplaintType {
-  IRREGULAR_DISPOSAL
-  DEFORESTATION
-  BURNING
-  VACANT_LOT
-}
-
 enum ComplaintStatus {
   OPEN
-  IN_PROGRESS
   RESOLVED
-  REJECTED
   CANCELED
 }
 

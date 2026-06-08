@@ -52,7 +52,7 @@ export class PrismaAddressesRepository implements AddressesRepository {
 				UPDATE "addresses"
 				SET "location" = ST_SetSRID(ST_Point(${data.longitude}, ${data.latitude}), 4326)
 				WHERE "id" = ${createdAddress.id}
-			`
+			`;
 
 			await transaction.profile.update({
 				where: {
@@ -92,7 +92,7 @@ export class PrismaAddressesRepository implements AddressesRepository {
 				UPDATE "addresses"
 				SET "location" = ST_SetSRID(ST_Point(${data.longitude}, ${data.latitude}), 4326)
 				WHERE "id" = ${id}
-			`
+			`;
 		}
 
 		return updatedAddress;

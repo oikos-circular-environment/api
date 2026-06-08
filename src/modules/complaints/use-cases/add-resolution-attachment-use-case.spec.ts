@@ -21,7 +21,12 @@ describe("add-resolution-attachment-use-case", () => {
 		const storage = new InMemoryStorageProvider();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
@@ -30,7 +35,11 @@ describe("add-resolution-attachment-use-case", () => {
 		});
 		const sut = new AddResolutionAttachmentUseCase(repo, storage);
 
-		const result = await sut.execute({ userId: userBId, complaintId: complaint.id, file: validFile });
+		const result = await sut.execute({
+			userId: userBId,
+			complaintId: complaint.id,
+			file: validFile,
+		});
 
 		expect(result.id).toBeDefined();
 		expect(result.url).toBeDefined();
@@ -45,7 +54,12 @@ describe("add-resolution-attachment-use-case", () => {
 		const storage = new InMemoryStorageProvider();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
@@ -54,8 +68,16 @@ describe("add-resolution-attachment-use-case", () => {
 		});
 		const sut = new AddResolutionAttachmentUseCase(repo, storage);
 
-		await sut.execute({ userId: userBId, complaintId: complaint.id, file: { ...validFile, fileName: "a.jpg" } });
-		await sut.execute({ userId: userBId, complaintId: complaint.id, file: { ...validFile, fileName: "b.jpg" } });
+		await sut.execute({
+			userId: userBId,
+			complaintId: complaint.id,
+			file: { ...validFile, fileName: "a.jpg" },
+		});
+		await sut.execute({
+			userId: userBId,
+			complaintId: complaint.id,
+			file: { ...validFile, fileName: "b.jpg" },
+		});
 
 		expect(repo.resolutionAttachments).toHaveLength(2);
 	});
@@ -67,13 +89,24 @@ describe("add-resolution-attachment-use-case", () => {
 		const storage = new InMemoryStorageProvider();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		const sut = new AddResolutionAttachmentUseCase(repo, storage);
 
 		await expect(
-			sut.execute({ userId: userBId, complaintId: complaint.id, file: validFile }),
-		).rejects.toThrowError(expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }));
+			sut.execute({
+				userId: userBId,
+				complaintId: complaint.id,
+				file: validFile,
+			}),
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }),
+		);
 	});
 
 	it("throws 400 for unsupported mime type", async () => {
@@ -83,7 +116,12 @@ describe("add-resolution-attachment-use-case", () => {
 		const storage = new InMemoryStorageProvider();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
@@ -93,8 +131,14 @@ describe("add-resolution-attachment-use-case", () => {
 		const sut = new AddResolutionAttachmentUseCase(repo, storage);
 
 		await expect(
-			sut.execute({ userId: userBId, complaintId: complaint.id, file: { ...validFile, mimeType: "image/gif" } }),
-		).rejects.toThrowError(expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TYPE_INVALID" }));
+			sut.execute({
+				userId: userBId,
+				complaintId: complaint.id,
+				file: { ...validFile, mimeType: "image/gif" },
+			}),
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TYPE_INVALID" }),
+		);
 	});
 
 	it("throws 400 when file exceeds 10MB", async () => {
@@ -104,7 +148,12 @@ describe("add-resolution-attachment-use-case", () => {
 		const storage = new InMemoryStorageProvider();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
@@ -119,7 +168,9 @@ describe("add-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				file: { ...validFile, content: Buffer.alloc(11 * 1024 * 1024) },
 			}),
-		).rejects.toThrowError(expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TOO_LARGE" }));
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TOO_LARGE" }),
+		);
 	});
 
 	it("accepts video/mp4 and uses .mp4 extension in storage path", async () => {
@@ -129,7 +180,12 @@ describe("add-resolution-attachment-use-case", () => {
 		const storage = new InMemoryStorageProvider();
 		const complaint = await new CreateComplaintUseCase(repo).execute({
 			userId: userAId,
-			data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
 		});
 		await new SubmitResolutionUseCase(repo).execute({
 			userId: userBId,
@@ -141,7 +197,11 @@ describe("add-resolution-attachment-use-case", () => {
 		const result = await sut.execute({
 			userId: userBId,
 			complaintId: complaint.id,
-			file: { fileName: "video.mp4", mimeType: "video/mp4", content: Buffer.from("video-data") },
+			file: {
+				fileName: "video.mp4",
+				mimeType: "video/mp4",
+				content: Buffer.from("video-data"),
+			},
 		});
 
 		expect(result.url).toMatch(/\.mp4$/);

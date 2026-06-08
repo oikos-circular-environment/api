@@ -1,1 +1,1 @@
-export { createResolveByQuorumWorker } from './resolve-by-quorum-worker.js';
+export { createResolveByQuorumWorker } from "./resolve-by-quorum-worker.js";

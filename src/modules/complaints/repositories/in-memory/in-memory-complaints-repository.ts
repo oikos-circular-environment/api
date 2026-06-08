@@ -1,10 +1,10 @@
 import { randomUUID } from "node:crypto";
 import type {
 	Complaint,
+	ComplaintCategory,
 	ComplaintCaptureMode,
 	ComplaintResume,
 	ComplaintStatus,
-	ComplaintType,
 	ComplaintVote,
 	ComplaintVoteType,
 	CreateComplaint,
@@ -27,10 +27,10 @@ type ComplaintEntity = {
 	id: string;
 	user_id: string;
 	status: ComplaintStatus;
-	type: ComplaintType;
 	date: Date;
 	observations: string | null;
 	geospatial: Geospatial;
+	categories: ComplaintCategory[];
 	created_at: Date;
 };
 
@@ -92,7 +92,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			.filter((item) => item.user_id === userId)
 			.filter((item) => !filters?.status || item.status === filters.status)
 			.filter((item) => !cursor || item.created_at < cursor)
-			.filter((item) => !filters?.type || item.type === filters.type)
 			.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
 
 		return userComplaints
@@ -115,10 +114,14 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			id: randomUUID(),
 			user_id: userId,
 			status: "OPEN",
-			type: data.type,
 			date: data.date,
 			observations: data.observations ?? null,
 			geospatial: data.geospatial,
+			categories: data.waste_category_ids.map((id) => ({
+				id,
+				name: id,
+				hazard_levels: [],
+			})),
 			created_at: new Date(),
 		};
 
@@ -139,9 +142,16 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		if (!complaint) return null;
 
 		if (data.date !== undefined) complaint.date = data.date;
-		if (data.type !== undefined) complaint.type = data.type;
-		if (data.observations !== undefined) complaint.observations = data.observations ?? null;
+		if (data.observations !== undefined)
+			complaint.observations = data.observations ?? null;
 		if (data.geospatial !== undefined) complaint.geospatial = data.geospatial;
+		if (data.waste_category_ids !== undefined) {
+			complaint.categories = data.waste_category_ids.map((id) => ({
+				id,
+				name: id,
+				hazard_levels: [],
+			}));
+		}
 
 		return this.mapComplaint(complaint);
 	}
@@ -194,35 +204,34 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		);
 
 		const open = userComplaints.filter((item) => item.status === "OPEN").length;
-		const pending = userComplaints.filter(
-			(item) => item.status === "IN_PROGRESS",
-		).length;
 		const resolved = userComplaints.filter(
 			(item) => item.status === "RESOLVED",
 		).length;
 		const canceled = userComplaints.filter(
 			(item) => item.status === "CANCELED",
 		).length;
-		const rejected = userComplaints.filter(
-			(item) => item.status === "REJECTED",
-		).length;
 
 		return {
 			total: userComplaints.length,
 			open,
-			pending,
 			resolved,
 			canceled,
-			rejected,
 		} satisfies ComplaintResume;
 	}
 
-	async findMapComplaints(query: GetMapComplaintsQuery): Promise<MapComplaintItem[]> {
-		const { lat, lon, radius, type, status } = query;
+	async findMapComplaints(
+		query: GetMapComplaintsQuery,
+	): Promise<MapComplaintItem[]> {
+		const { lat, lon, radius, status } = query;
 		const statusValue = status ?? "OPEN";
 
 		const toRad = (deg: number) => (deg * Math.PI) / 180;
-		const haversine = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+		const haversine = (
+			lat1: number,
+			lon1: number,
+			lat2: number,
+			lon2: number,
+		) => {
 			const R = 6371000;
 			const dLat = toRad(lat2 - lat1);
 			const dLon = toRad(lon2 - lon1);
@@ -234,7 +243,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 		const filtered = this.complaints
 			.filter((c) => c.status === statusValue)
-			.filter((c) => !type || c.type === type)
 			.filter((c) => {
 				const coords = c.geospatial?.location?.coords;
 				if (!coords) return false;
@@ -243,11 +251,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 		return filtered.slice(0, 500).map((c) => {
 			const coords = c.geospatial.location.coords;
-			const resolutionCount = this.resolutions.filter((r) => r.complaint_id === c.id).length;
+			const resolutionCount = this.resolutions.filter(
+				(r) => r.complaint_id === c.id,
+			).length;
 
 			return {
 				id: c.id,
-				type: c.type,
 				status: c.status,
 				date: c.date,
 				observations: c.observations,
@@ -268,6 +277,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 						type: a.type,
 						created_at: a.created_at,
 					})),
+				categories: c.categories,
 				vote_counts: { resolved: 0, not_resolved: 0 },
 				resolution_count: resolutionCount,
 				created_at: c.created_at,
@@ -275,11 +285,15 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		});
 	}
 
-	async findPublicComplaintById(complaintId: string): Promise<PublicComplaint | null> {
+	async findPublicComplaintById(
+		complaintId: string,
+	): Promise<PublicComplaint | null> {
 		const complaint = this.complaints.find((c) => c.id === complaintId);
 		if (!complaint) return null;
 
-		const complaintResolutions = this.resolutions.filter((r) => r.complaint_id === complaint.id);
+		const complaintResolutions = this.resolutions.filter(
+			(r) => r.complaint_id === complaint.id,
+		);
 
 		const anonymousResolver: Resolver = {
 			type: "profile",
@@ -292,7 +306,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 		return {
 			id: complaint.id,
-			type: complaint.type,
 			status: complaint.status,
 			date: complaint.date,
 			observations: complaint.observations,
@@ -313,6 +326,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					type: a.type,
 					created_at: a.created_at,
 				})),
+			categories: complaint.categories,
 			vote_counts: { resolved: 0, not_resolved: 0 },
 			resolutions: complaintResolutions.map((r) => ({
 				id: r.id,
@@ -320,7 +334,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 				resolver: anonymousResolver,
 				attachments: this.resolutionAttachments
 					.filter((a) => a.resolution_id === r.id)
-					.map((a) => ({ id: a.id, url: a.url, file_name: a.file_name, created_at: a.created_at })),
+					.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						created_at: a.created_at,
+					})),
 				created_at: r.created_at,
 			})),
 			created_at: complaint.created_at,
@@ -365,15 +384,22 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return { ...vote };
 	}
 
-	async removeVoteFromComplaint(userId: string, complaintId: string): Promise<void> {
+	async removeVoteFromComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
 		const index = this.votes.findIndex(
 			(v) => v.complaint_id === complaintId && v.user_id === userId,
 		);
 		if (index !== -1) this.votes.splice(index, 1);
 	}
 
-	async findResolutionsByComplaintId(complaintId: string): Promise<Resolution[]> {
-		const resolutions = this.resolutions.filter((r) => r.complaint_id === complaintId);
+	async findResolutionsByComplaintId(
+		complaintId: string,
+	): Promise<Resolution[]> {
+		const resolutions = this.resolutions.filter(
+			(r) => r.complaint_id === complaintId,
+		);
 		return resolutions.map((r) => ({
 			id: r.id,
 			description: r.description,
@@ -387,7 +413,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			resolver_company: null,
 			attachments: this.resolutionAttachments
 				.filter((a) => a.resolution_id === r.id)
-				.map((a) => ({ id: a.id, url: a.url, file_name: a.file_name, created_at: a.created_at })),
+				.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					created_at: a.created_at,
+				})),
 			created_at: r.created_at,
 			updated_at: r.updated_at,
 		}));
@@ -435,12 +466,15 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		}
 	}
 
-	async deleteResolutionByUser(userId: string, complaintId: string): Promise<void> {
+	async deleteResolutionByUser(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
 		const index = this.resolutions.findIndex(
 			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
 		);
 		if (index !== -1) {
-			const resolutionId = this.resolutions[index]!.id;
+			const resolutionId = this.resolutions[index]?.id;
 			this.resolutions.splice(index, 1);
 			this.resolutionAttachments = this.resolutionAttachments.filter(
 				(a) => a.resolution_id !== resolutionId,
@@ -449,7 +483,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	}
 
 	async addResolutionAttachment(
-		userId: string,
+		_userId: string,
 		resolutionId: string,
 		data: SaveResolutionAttachment,
 	): Promise<ResolutionAttachment> {
@@ -463,7 +497,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			created_at: new Date(),
 		};
 		this.resolutionAttachments.push(attachment);
-		return { id: attachment.id, url: attachment.url, file_name: attachment.file_name, created_at: attachment.created_at };
+		return {
+			id: attachment.id,
+			url: attachment.url,
+			file_name: attachment.file_name,
+			created_at: attachment.created_at,
+		};
 	}
 
 	async deleteComplaintAttachment(
@@ -481,7 +520,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	}
 
 	async deleteResolutionAttachment(
-		userId: string,
+		_userId: string,
 		resolutionId: string,
 		attachmentId: string,
 	): Promise<void> {
@@ -503,7 +542,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 		return {
 			id: complaint.id,
-			type: complaint.type,
 			status: complaint.status,
 			date: complaint.date,
 			observations: complaint.observations,
@@ -520,6 +558,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					type: a.type,
 					created_at: a.created_at,
 				})),
+			categories: complaint.categories,
 			vote_counts: { resolved: resolvedVotes, not_resolved: notResolvedVotes },
 			resolution_count: resolutionCount,
 			created_at: complaint.created_at,

@@ -1,7 +1,10 @@
 import { hash } from "bcryptjs";
 import { describe, expect, it } from "vitest";
 import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
-import { makeAuthUser, TEST_PASSWORD } from "@/modules/auth/factories/make-auth-user.js";
+import {
+	makeAuthUser,
+	TEST_PASSWORD,
+} from "@/modules/auth/factories/make-auth-user.js";
 import { InMemoryAuthRepository } from "@/modules/auth/repositories/in-memory/in-memory-auth-repository.js";
 import { AuthenticateUserUseCase } from "./authenticate-user-use-case.js";
 
