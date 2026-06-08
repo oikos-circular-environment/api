@@ -418,8 +418,8 @@
 
 ## Resumo Executivo — Tabela de Referência Rápida
 
-| Categoria | Periculosidade | Reciclável no Oikos? | LGR Principal |
-|-----------|---------------|---------------------|---------------|
+| Categoria | Periculosidade | Reciclável? | LGR Principal |
+|-----------|---------------|-------------|---------------|
 | Papel / Papelão | 🟢 BAIXA | SIM | `15 01 01 00` |
 | Plástico (embalagem limpa) | 🟢 BAIXA | SIM | `15 01 02 00` |
 | Metal / Alumínio | 🟢 BAIXA | SIM | `15 01 04 00` |
