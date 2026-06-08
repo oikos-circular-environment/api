@@ -1,33 +1,29 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpdateCompanyUseCase } from "./update-company-use-case.js";
 
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
+const ANOTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
 
 describe("update-company-use-case", () => {
 	it("updates an existing company by userId and companyId", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
+		const sut = new UpdateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(created.id, true);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: created.id,
 			data: {
 				identity: "99888777000166",
@@ -54,13 +50,18 @@ describe("update-company-use-case", () => {
 	it("keeps general_registration true after valid update", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
+		const sut = new UpdateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(created.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: created.id,
 			data: { business_name: "New Name" },
 		});
@@ -73,17 +74,18 @@ describe("update-company-use-case", () => {
 	it("throws when company does not exist", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
+		const sut = new UpdateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
-				data: {
-					corporate_name: "Updated Company",
-				},
+				data: { corporate_name: "Updated Company" },
 			});
 		} catch (error) {
 			thrownError = error;
@@ -101,19 +103,22 @@ describe("update-company-use-case", () => {
 	it("throws when company belongs to a different user", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
-		const sut = new UpdateCompanyUseCase(companiesRepository, validationRepository);
+		const sut = new UpdateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "22222222-2222-2222-2222-222222222222",
+				userId: ANOTHER_USER_ID,
 				companyId: created.id,
-				data: {
-					corporate_name: "Hacked Company",
-				},
+				data: { corporate_name: "Hacked Company" },
 			});
 		} catch (error) {
 			thrownError = error;

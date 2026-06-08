@@ -1,27 +1,16 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-memory/in-memory-services-repository.js";
+import { makeWasteCategory } from "@/modules/wastes/factories/make-waste-category.js";
 import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories/in-memory/in-memory-waste-categories-repository.js";
 import { GetCompanyServicesUseCase } from "./get-company-services-use-case.js";
 import { UpsertCompanyServicesUseCase } from "./upsert-company-services-use-case.js";
 
-const CATEGORY_ID = randomUUID();
-
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 describe("get-company-services-use-case", () => {
 	it("returns the company services list", async () => {
@@ -29,18 +18,11 @@ describe("get-company-services-use-case", () => {
 		const servicesRepository = new InMemoryServicesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
 		const wasteCategoriesRepository = new InMemoryWasteCategoriesRepository();
-		wasteCategoriesRepository.items = [
-			{
-				id: CATEGORY_ID,
-				name: "Papel / Papelão",
-				description: null,
-				observations: null,
-				hazard_levels: ["LOW"],
-				created_at: new Date(),
-				updated_at: new Date(),
-				subcategories: [],
-			},
-		];
+
+		const CATEGORY_ID = randomUUID();
+		const category = makeWasteCategory({ id: CATEGORY_ID });
+		wasteCategoriesRepository.items = [category];
+
 		const upsertUseCase = new UpsertCompanyServicesUseCase(
 			companiesRepository,
 			servicesRepository,
@@ -52,11 +34,13 @@ describe("get-company-services-use-case", () => {
 			servicesRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		await upsertUseCase.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
@@ -72,7 +56,7 @@ describe("get-company-services-use-case", () => {
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 		});
 
@@ -90,10 +74,12 @@ describe("get-company-services-use-case", () => {
 			servicesRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 		});
 
@@ -112,7 +98,7 @@ describe("get-company-services-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 			});
 		} catch (error) {

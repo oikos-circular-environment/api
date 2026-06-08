@@ -1,5 +1,8 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import type { MarketCompany } from "../dtos/market-dto.js";
+import {
+	makeMarketCompany,
+	makeMarketItem,
+} from "@/modules/market/factories/make-market-company.js";
 import { InMemoryMarketRepository } from "../repositories/in-memory/in-memory-market-repository.js";
 import { ListMarketUseCase } from "./list-market-use-case.js";
 
@@ -12,67 +15,49 @@ const STUB_CATEGORY = {
 	hazard_levels: ["LOW" as const],
 };
 
-// Empresa 1 — Bio Ecologica (~3.3km do centro)
-// Tem wastes, sem services
-const makeCompany = (
-	overrides: Partial<MarketCompany> = {},
-): MarketCompany => ({
-	id: "company-1",
-	business_name: "Bio Ecologica",
-	corporate_name: "Bio Ecologica LTDA",
-	company_type: "COMPANY",
-	accept_appointments: false,
-	status: true,
-	address: {
-		id: "addr-1",
-		zip_code: "78745-710",
-		street: "R. L",
-		number: "554",
-		complement: null,
-		district: "Distrito Industrial",
-		city: "Rondonópolis",
-		state: "Mato Grosso",
-		state_code: "MT",
-		latitude: -16.4757009,
-		longitude: -54.6684927,
-	},
-	phones: ["(66) 99999-0001"],
-	services: [],
-	wastes: [
-		{
-			id: "waste-1",
-			name: "Papel e Papelão",
-			description: "Jornais, revistas, caixas",
-			price: 0.5,
-			unit: "KG",
-			waste_category_id: STUB_CATEGORY.id,
-			waste_category: STUB_CATEGORY,
-			quantity: 0,
-			observations: null,
-		},
-		{
-			id: "waste-2",
-			name: "Plástico",
-			description: "PET, PEAD, PVC",
-			price: 0.8,
-			unit: "KG",
-			waste_category_id: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
-			waste_category: { id: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb", name: "Plástico", hazard_levels: ["LOW" as const] },
-			quantity: 0,
-			observations: null,
-		},
-	],
-	business_hours: [
-		{
-			id: "bh-1",
-			day_of_week: "MONDAY",
-			is_open: true,
-			time_slots: [{ id: "ts-1", start_time: "07:00", end_time: "17:00" }],
-		},
-	],
-	distance_in_meters: 0, // será sobrescrito pelo repositório
-	...overrides,
-});
+const PLASTICO_CATEGORY = {
+	id: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+	name: "Plástico",
+	hazard_levels: ["LOW" as const],
+};
+
+// Empresa padrão — Bio Ecologica (~3.3km do centro), tem wastes, sem services
+const makeDefaultCompany = (overrides = {}) =>
+	makeMarketCompany({
+		id: "company-1",
+		business_name: "Bio Ecologica",
+		corporate_name: "Bio Ecologica LTDA",
+		phones: ["(66) 99999-0001"],
+		wastes: [
+			makeMarketItem({
+				id: "waste-1",
+				name: "Papel e Papelão",
+				description: "Jornais, revistas, caixas",
+				price: 0.5,
+				waste_category_id: STUB_CATEGORY.id,
+				waste_category: STUB_CATEGORY,
+				quantity: 0,
+			}),
+			makeMarketItem({
+				id: "waste-2",
+				name: "Plástico",
+				description: "PET, PEAD, PVC",
+				price: 0.8,
+				waste_category_id: PLASTICO_CATEGORY.id,
+				waste_category: PLASTICO_CATEGORY,
+				quantity: 0,
+			}),
+		],
+		business_hours: [
+			{
+				id: "bh-1",
+				day_of_week: "MONDAY" as const,
+				is_open: true,
+				time_slots: [{ id: "ts-1", start_time: "07:00", end_time: "17:00" }],
+			},
+		],
+		...overrides,
+	});
 
 describe("ListMarketUseCase", () => {
 	let repo: InMemoryMarketRepository;
@@ -84,21 +69,20 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve listar empresas dentro do raio", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].id).toBe("company-1");
 	});
 
 	it("não deve listar empresas fora do raio", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 1000 });
 		expect(result.companies).toHaveLength(0);
 	});
 
 	it("deve ordenar por distância crescente", async () => {
-		// Empresa A mais perto (~500m do centro)
-		const companyA = makeCompany({
+		const companyA = makeMarketCompany({
 			id: "company-a",
 			business_name: "Empresa A",
 			address: {
@@ -111,29 +95,14 @@ describe("ListMarketUseCase", () => {
 				city: "Rondonópolis",
 				state: "Mato Grosso",
 				state_code: "MT",
-				// ~500m do centro
 				latitude: -16.4707 + 0.0045,
 				longitude: -54.6375,
 			},
 		});
 
-		// Empresa B mais longe (~3.3km do centro)
-		const companyB = makeCompany({
+		const companyB = makeMarketCompany({
 			id: "company-b",
 			business_name: "Empresa B",
-			address: {
-				id: "addr-b",
-				zip_code: "78745-710",
-				street: "R. L",
-				number: "554",
-				complement: null,
-				district: "Distrito Industrial",
-				city: "Rondonópolis",
-				state: "Mato Grosso",
-				state_code: "MT",
-				latitude: -16.4757009,
-				longitude: -54.6684927,
-			},
 		});
 
 		repo.companies = [companyB, companyA];
@@ -143,14 +112,14 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve filtrar por texto em business_name", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000, q: "Bio" });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].business_name).toBe("Bio Ecologica");
 	});
 
 	it("não deve retornar empresa que não bate com texto em business_name", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({
 			...ORIGIN,
 			radius: 5000,
@@ -160,7 +129,7 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve filtrar por texto em nome de resíduo (wastes)", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({
 			...ORIGIN,
 			radius: 5000,
@@ -173,21 +142,19 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve filtrar por texto em nome de serviço (services)", async () => {
-		const companyWithService = makeCompany({
+		const companyWithService = makeMarketCompany({
 			id: "company-service",
 			business_name: "Empresa de Serviços",
 			services: [
-				{
+				makeMarketItem({
 					id: "service-1",
 					name: "Coleta domiciliar",
 					description: "Coleta de resíduos na porta",
 					price: 50,
-					unit: "KG",
 					waste_category_id: STUB_CATEGORY.id,
 					waste_category: STUB_CATEGORY,
 					quantity: 0,
-					observations: null,
-				},
+				}),
 			],
 			wastes: [],
 		});
@@ -198,8 +165,8 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve filtrar por categoria waste — retorna apenas com wastes", async () => {
-		const companyWithWastes = makeCompany({ id: "company-waste" });
-		const companyWithoutWastes = makeCompany({
+		const companyWithWastes = makeDefaultCompany({ id: "company-waste" });
+		const companyWithoutWastes = makeMarketCompany({
 			id: "company-no-waste",
 			business_name: "Empresa Sem Resíduos",
 			wastes: [],
@@ -215,25 +182,23 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve filtrar por categoria services — retorna apenas com services", async () => {
-		const companyWithServices = makeCompany({
+		const companyWithServices = makeMarketCompany({
 			id: "company-services",
 			business_name: "Empresa de Serviços",
 			services: [
-				{
+				makeMarketItem({
 					id: "service-1",
 					name: "Coleta domiciliar",
 					description: null,
 					price: 50,
-					unit: "KG",
 					waste_category_id: STUB_CATEGORY.id,
 					waste_category: STUB_CATEGORY,
 					quantity: 0,
-					observations: null,
-				},
+				}),
 			],
 			wastes: [],
 		});
-		const companyWithoutServices = makeCompany({
+		const companyWithoutServices = makeDefaultCompany({
 			id: "company-no-services",
 			business_name: "Empresa Sem Serviços",
 		});
@@ -248,7 +213,7 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve retornar distance_in_meters correto para Bio Ecologica", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		const distance = result.companies[0].distance_in_meters;
@@ -257,7 +222,7 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve retornar business_hours preenchido", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		const businessHours = result.companies[0].business_hours;
@@ -267,7 +232,7 @@ describe("ListMarketUseCase", () => {
 
 	it("deve retornar next_cursor na primeira página quando há mais resultados", async () => {
 		repo.companies = Array.from({ length: 5 }, (_, i) =>
-			makeCompany({
+			makeMarketCompany({
 				id: `company-${i + 1}`,
 				business_name: `Empresa ${i + 1}`,
 			}),
@@ -278,7 +243,7 @@ describe("ListMarketUseCase", () => {
 
 	it("deve retornar next_cursor null na última página", async () => {
 		repo.companies = Array.from({ length: 3 }, (_, i) =>
-			makeCompany({
+			makeMarketCompany({
 				id: `company-${i + 1}`,
 				business_name: `Empresa ${i + 1}`,
 			}),
@@ -289,7 +254,7 @@ describe("ListMarketUseCase", () => {
 
 	it("deve navegar corretamente entre páginas com cursor", async () => {
 		repo.companies = Array.from({ length: 4 }, (_, i) =>
-			makeCompany({
+			makeMarketCompany({
 				id: `company-${i + 1}`,
 				business_name: `Empresa ${i + 1}`,
 			}),
@@ -317,7 +282,7 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve excluir silenciosamente empresa sem endereço (lat/lon null)", async () => {
-		const companyWithoutLatLon = makeCompany({
+		const companyWithoutLatLon = makeMarketCompany({
 			id: "company-no-coords",
 			address: {
 				id: "addr-null",
@@ -340,33 +305,31 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve retornar lista vazia quando nenhuma empresa no raio", async () => {
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 100 });
 		expect(result.companies).toStrictEqual([]);
 		expect(result.next_cursor).toBeNull();
 	});
 
 	it("deve combinar filtros de texto e categoria", async () => {
-		const companyWithPlastico = makeCompany({
+		const companyWithPlastico = makeDefaultCompany({
 			id: "company-plastico",
 			business_name: "Reciclagem Total",
 		});
 
-		const companyWithoutPlastico = makeCompany({
+		const companyWithoutPlastico = makeMarketCompany({
 			id: "company-papel",
 			business_name: "Papel Certo",
 			wastes: [
-				{
+				makeMarketItem({
 					id: "waste-only-papel",
 					name: "Papel e Papelão",
 					description: "Jornais, revistas, caixas",
 					price: 0.5,
-					unit: "KG",
 					waste_category_id: STUB_CATEGORY.id,
 					waste_category: STUB_CATEGORY,
 					quantity: 0,
-					observations: null,
-				},
+				}),
 			],
 		});
 
@@ -383,7 +346,7 @@ describe("ListMarketUseCase", () => {
 
 	it("deve retornar phones da empresa", async () => {
 		repo.companies = [
-			makeCompany({ phones: ["(66) 99999-0001", "(66) 3411-0002"] }),
+			makeDefaultCompany({ phones: ["(66) 99999-0001", "(66) 3411-0002"] }),
 		];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
@@ -394,7 +357,7 @@ describe("ListMarketUseCase", () => {
 	});
 
 	it("deve retornar phones vazio quando empresa não tem telefone", async () => {
-		repo.companies = [makeCompany({ phones: [] })];
+		repo.companies = [makeDefaultCompany({ phones: [] })];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].phones).toEqual([]);
@@ -402,7 +365,7 @@ describe("ListMarketUseCase", () => {
 
 	it("deve aplicar radius padrão de 1000m quando não informado", async () => {
 		// Bio Ecologica está a ~3.3km do centro — fora do raio padrão de 1000m
-		repo.companies = [makeCompany()];
+		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN });
 		expect(result.companies).toHaveLength(0);
 	});

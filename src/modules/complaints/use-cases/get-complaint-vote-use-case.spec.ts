@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { GetComplaintVoteUseCase } from "./get-complaint-vote-use-case.js";
 import { VoteComplaintUseCase } from "./vote-complaint-use-case.js";
@@ -8,23 +8,10 @@ import { VoteComplaintUseCase } from "./vote-complaint-use-case.js";
 const USER_ID = "11111111-1111-1111-1111-111111111111";
 const OTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
 
-const geospatial: Geospatial = {
-	heading: { trueHeading: 0, magHeading: 0, accuracy: 1 },
-	location: {
-		coords: { latitude: -23.55, longitude: -46.63, altitude: null, accuracy: null, altitudeAccuracy: null, heading: null, speed: null },
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "São Paulo", district: "Centro", street: "Rua A", streetNumber: "1",
-		postalCode: "01000-000", region: "SP", country: "Brasil", name: null,
-		isoCountryCode: "BR", subregion: null, timezone: null,
-	},
-};
-
 async function makeComplaint(repo: InMemoryComplaintsRepository) {
 	return new CreateComplaintUseCase(repo).execute({
 		userId: USER_ID,
-		data: { date: new Date(), type: "BURNING", observations: null, geospatial },
+		data: { date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 	});
 }
 

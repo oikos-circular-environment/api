@@ -1,12 +1,11 @@
 import { describe, expect, it } from "vitest";
-import type {
-	BusinessHour,
-	Company,
-	CompanyAddress,
-	CompanyService,
-	CompanyWaste,
-	CompanyValidation,
-} from "@/modules/companies/dtos/companies-dto.js";
+import type { CompanyValidation } from "@/modules/companies/dtos/companies-dto.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-address.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import {
+	makeCompanyService,
+	makeCompanyWaste,
+} from "@/modules/companies/factories/make-company-item.js";
 import {
 	computeIsCompanyValid,
 	isAddressValid,
@@ -15,42 +14,6 @@ import {
 	isServicesValid,
 	isWastesValid,
 } from "./company-validation-utils.js";
-
-const baseCompany: Company = {
-	id: "1",
-	user_id: "u1",
-	identity: "12345678900",
-	identity_type: "CPF",
-	company_type: "COMPANY",
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: null,
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01"),
-	is_company_valid: false,
-	avatar: null,
-	created_at: new Date(),
-	updated_at: new Date(),
-};
-
-const baseAddress: CompanyAddress = {
-	id: "a1",
-	zip_code: "12345678",
-	street: "Main St",
-	number: "100",
-	complement: null,
-	district: "Center",
-	city_ibge_id: 3550308,
-	city: "Sao Paulo",
-	state_ibge_id: 35,
-	state: "Sao Paulo",
-	state_code: "SP",
-	latitude: -23.5505,
-	longitude: -46.6333,
-	created_at: new Date(),
-	updated_at: new Date(),
-};
 
 const baseValidation: CompanyValidation = {
 	id: "v1",
@@ -64,29 +27,35 @@ const baseValidation: CompanyValidation = {
 
 describe("isGeneralRegistrationValid", () => {
 	it("returns true for a complete company", () => {
-		expect(isGeneralRegistrationValid(baseCompany)).toBe(true);
+		expect(isGeneralRegistrationValid(makeCompany())).toBe(true);
 	});
 
 	it("returns false when phones is empty", () => {
-		expect(isGeneralRegistrationValid({ ...baseCompany, phones: [] })).toBe(false);
+		expect(isGeneralRegistrationValid(makeCompany({ phones: [] }))).toBe(false);
 	});
 
 	it("returns false when business_name is empty", () => {
-		expect(isGeneralRegistrationValid({ ...baseCompany, business_name: "" })).toBe(false);
+		expect(isGeneralRegistrationValid(makeCompany({ business_name: "" }))).toBe(
+			false,
+		);
 	});
 
 	it("returns false when corporate_name is empty", () => {
-		expect(isGeneralRegistrationValid({ ...baseCompany, corporate_name: "" })).toBe(false);
+		expect(
+			isGeneralRegistrationValid(makeCompany({ corporate_name: "" })),
+		).toBe(false);
 	});
 
 	it("returns false when identity is empty", () => {
-		expect(isGeneralRegistrationValid({ ...baseCompany, identity: "" })).toBe(false);
+		expect(isGeneralRegistrationValid(makeCompany({ identity: "" }))).toBe(
+			false,
+		);
 	});
 });
 
 describe("isAddressValid", () => {
 	it("returns true for a complete address with lat/lng", () => {
-		expect(isAddressValid(baseAddress)).toBe(true);
+		expect(isAddressValid(makeCompanyAddress())).toBe(true);
 	});
 
 	it("returns false when address is null", () => {
@@ -94,22 +63,29 @@ describe("isAddressValid", () => {
 	});
 
 	it("returns false when latitude is null", () => {
-		expect(isAddressValid({ ...baseAddress, latitude: null })).toBe(false);
+		expect(isAddressValid(makeCompanyAddress({ latitude: null }))).toBe(false);
 	});
 
 	it("returns false when longitude is null", () => {
-		expect(isAddressValid({ ...baseAddress, longitude: null })).toBe(false);
+		expect(isAddressValid(makeCompanyAddress({ longitude: null }))).toBe(false);
 	});
 });
 
 describe("isBusinessHoursValid", () => {
 	const makeHour = (
-		day: BusinessHour["day_of_week"],
+		day:
+			| "SUNDAY"
+			| "MONDAY"
+			| "TUESDAY"
+			| "WEDNESDAY"
+			| "THURSDAY"
+			| "FRIDAY"
+			| "SATURDAY",
 		is_open: boolean,
 		slots: { start_time: string; end_time: string }[],
-	): BusinessHour => ({
+	) => ({
 		id: day,
-		day_of_week: day,
+		day_of_week: day as const,
 		is_open,
 		time_slots: slots.map((s, i) => ({ id: `${day}-${i}`, ...s })),
 	});
@@ -137,34 +113,9 @@ describe("isBusinessHoursValid", () => {
 	});
 });
 
-const STUB_CATEGORY = {
-	id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
-	name: "Papel / Papelão",
-	description: null,
-	observations: null,
-	hazard_levels: ["LOW" as const],
-	created_at: new Date("2024-01-01"),
-	updated_at: new Date("2024-01-01"),
-	subcategories: [],
-};
-
 describe("isWastesValid", () => {
-	const baseWaste: CompanyWaste = {
-		id: "w1",
-		name: "Papel",
-		description: null,
-		price: 10,
-		unit: "KG",
-		waste_category_id: STUB_CATEGORY.id,
-		waste_category: STUB_CATEGORY,
-		quantity: 1,
-		observations: null,
-		created_at: new Date(),
-		updated_at: new Date(),
-	};
-
 	it("returns true when at least one waste with valid category exists", () => {
-		expect(isWastesValid([baseWaste])).toBe(true);
+		expect(isWastesValid([makeCompanyWaste()])).toBe(true);
 	});
 
 	it("returns false when array is empty", () => {
@@ -173,22 +124,8 @@ describe("isWastesValid", () => {
 });
 
 describe("isServicesValid", () => {
-	const baseService: CompanyService = {
-		id: "s1",
-		name: "Coleta",
-		description: null,
-		price: 100,
-		unit: "UNIT",
-		waste_category_id: STUB_CATEGORY.id,
-		waste_category: STUB_CATEGORY,
-		quantity: 1,
-		observations: null,
-		created_at: new Date(),
-		updated_at: new Date(),
-	};
-
 	it("returns true when at least one service with valid category exists", () => {
-		expect(isServicesValid([baseService])).toBe(true);
+		expect(isServicesValid([makeCompanyService()])).toBe(true);
 	});
 
 	it("returns false when array is empty", () => {
@@ -198,30 +135,72 @@ describe("isServicesValid", () => {
 
 describe("computeIsCompanyValid", () => {
 	it("returns true when all fields are valid and wastes is true", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, wastes: true, services: false })).toBe(true);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				wastes: true,
+				services: false,
+			}),
+		).toBe(true);
 	});
 
 	it("returns true when all fields are valid and services is true", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, wastes: false, services: true })).toBe(true);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				wastes: false,
+				services: true,
+			}),
+		).toBe(true);
 	});
 
 	it("returns true when all fields are valid and both wastes and services are true", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, wastes: true, services: true })).toBe(true);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				wastes: true,
+				services: true,
+			}),
+		).toBe(true);
 	});
 
 	it("returns false when wastes and services are both false", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, wastes: false, services: false })).toBe(false);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				wastes: false,
+				services: false,
+			}),
+		).toBe(false);
 	});
 
 	it("returns false when general_registration is false", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, general_registration: false, wastes: true })).toBe(false);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				general_registration: false,
+				wastes: true,
+			}),
+		).toBe(false);
 	});
 
 	it("returns false when address is false", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, address: false, wastes: true })).toBe(false);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				address: false,
+				wastes: true,
+			}),
+		).toBe(false);
 	});
 
 	it("returns false when business_hours is false", () => {
-		expect(computeIsCompanyValid({ ...baseValidation, business_hours: false, wastes: true })).toBe(false);
+		expect(
+			computeIsCompanyValid({
+				...baseValidation,
+				business_hours: false,
+				wastes: true,
+			}),
+		).toBe(false);
 	});
 });

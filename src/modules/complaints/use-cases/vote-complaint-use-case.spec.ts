@@ -1,42 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { VoteComplaintUseCase } from "./vote-complaint-use-case.js";
-
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
-	location: {
-		coords: {
-			latitude: -23.55,
-			longitude: -46.63,
-			altitude: null,
-			accuracy: null,
-			altitudeAccuracy: null,
-			heading: null,
-			speed: null,
-		},
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
 
 const USER_ID = "11111111-1111-1111-1111-111111111111";
 const OTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
@@ -48,7 +14,7 @@ describe("vote-complaint-use-case", () => {
 
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 
 		const vote = await sut.execute({
@@ -90,7 +56,7 @@ describe("vote-complaint-use-case", () => {
 
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, complaint.id, "RESOLVED");
 
@@ -114,7 +80,7 @@ describe("vote-complaint-use-case", () => {
 
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 		await complaintsRepository.updateStatusByUserAndComplaintId(USER_ID, complaint.id, "CANCELED");
 
@@ -138,7 +104,7 @@ describe("vote-complaint-use-case", () => {
 
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 
 		await sut.execute({ userId: OTHER_USER_ID, complaintId: complaint.id, voteType: "RESOLVED" });
@@ -164,7 +130,7 @@ describe("vote-complaint-use-case", () => {
 
 		const complaint = await complaintsRepository.createForUser(
 			USER_ID,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeGeospatial() },
 		);
 
 		await sut.execute({ userId: OTHER_USER_ID, complaintId: complaint.id, voteType: "RESOLVED" });

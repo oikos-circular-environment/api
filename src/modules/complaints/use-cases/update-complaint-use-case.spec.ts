@@ -1,42 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { UpdateComplaintUseCase } from "./update-complaint-use-case.js";
-
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
-	location: {
-		coords: {
-			latitude: -23.55,
-			longitude: -46.63,
-			altitude: null,
-			accuracy: null,
-			altitudeAccuracy: null,
-			heading: null,
-			speed: null,
-		},
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
 
 describe("update-complaint-use-case", () => {
 	it("updates complaint observations", async () => {
@@ -49,7 +15,7 @@ describe("update-complaint-use-case", () => {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: "Inicial",
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -73,7 +39,7 @@ describe("update-complaint-use-case", () => {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -90,20 +56,20 @@ describe("update-complaint-use-case", () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new UpdateComplaintUseCase(complaintsRepository);
 
+		const geo = makeGeospatial();
 		const created = await complaintsRepository.createForUser(
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: null,
-				geospatial,
+				geospatial: geo,
 			},
 		);
 
-		const updatedGeospatial: Geospatial = {
-			...geospatial,
-			addresses: { ...geospatial.addresses, city: "Rio de Janeiro" },
-		};
+		const updatedGeospatial = makeGeospatial({
+			addresses: { ...geo.addresses, city: "Rio de Janeiro" },
+		});
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
@@ -124,7 +90,7 @@ describe("update-complaint-use-case", () => {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -148,7 +114,7 @@ describe("update-complaint-use-case", () => {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -189,7 +155,7 @@ describe("update-complaint-use-case", () => {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 

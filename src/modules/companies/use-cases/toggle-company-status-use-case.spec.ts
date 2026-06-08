@@ -1,30 +1,23 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { ToggleCompanyStatusUseCase } from "./toggle-company-status-use-case.js";
 
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
+const ANOTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
 
 describe("toggle-company-status-use-case", () => {
 	it("deactivates an active company", async () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID, status: true }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: created.id,
 			status: false,
 		});
@@ -37,13 +30,12 @@ describe("toggle-company-status-use-case", () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
-		const created = await companiesRepository.create({
-			...baseCompany,
-			status: false,
-		});
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID, status: false }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: created.id,
 			status: true,
 		});
@@ -59,7 +51,7 @@ describe("toggle-company-status-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 				status: false,
 			});
@@ -80,13 +72,15 @@ describe("toggle-company-status-use-case", () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "22222222-2222-2222-2222-222222222222",
+				userId: ANOTHER_USER_ID,
 				companyId: created.id,
 				status: false,
 			});
@@ -106,16 +100,17 @@ describe("toggle-company-status-use-case", () => {
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
 
-		const created = await companiesRepository.create(baseCompany);
+		const input = makeCompanyInput({ user_id: USER_ID });
+		const created = await companiesRepository.create(input);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: created.id,
 			status: false,
 		});
 
-		expect(result.business_name).toBe("Oikos Tech");
-		expect(result.identity).toBe("12345678900");
-		expect(result.phones).toStrictEqual(["5511999999999"]);
+		expect(result.business_name).toBe(created.business_name);
+		expect(result.identity).toBe(created.identity);
+		expect(result.phones).toStrictEqual(created.phones);
 	});
 });

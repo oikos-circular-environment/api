@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { makeAddressInput, makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
@@ -9,17 +10,19 @@ describe("upsert-profile-use-case", () => {
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
+		const input = makeProfileInput();
+
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-					phone: "5511999999999",
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
 			},
 		});
 
-		expect(result.user_id).toBe("11111111-1111-1111-1111-111111111111");
-		expect(result.full_name).toBe("John Doe");
+		expect(result.user_id).toBe(input.user_id);
+		expect(result.full_name).toBe(input.full_name);
 		expect(result.id.length > 0).toBe(true);
 		expect(profilesRepository.items.length).toBe(1);
 	});
@@ -29,25 +32,24 @@ describe("upsert-profile-use-case", () => {
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			phone: "5511999999999",
-		});
+		const initial = makeProfileInput();
+
+		await profilesRepository.create(initial);
+
+		const updated = makeProfileInput({ user_id: initial.user_id });
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: initial.user_id,
 			data: {
-				full_name: "John Updated",
-				display_name: "john-updated",
-					phone: "5511777777777",
+				full_name: updated.full_name,
+				display_name: updated.display_name,
+				phone: updated.phone,
 			},
 		});
 
-		expect(result.full_name).toBe("John Updated");
-		expect(result.display_name).toBe("john-updated");
-		expect(result.phone).toBe("5511777777777");
+		expect(result.full_name).toBe(updated.full_name);
+		expect(result.display_name).toBe(updated.display_name);
+		expect(result.phone).toBe(updated.phone);
 		expect(profilesRepository.items.length).toBe(1);
 	});
 
@@ -56,26 +58,21 @@ describe("upsert-profile-use-case", () => {
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
+		const input = makeProfileInput();
+		const address = makeAddressInput({
+			street: "Rua A",
+			zip_code: "01001000",
+			city: "Sao Paulo",
+			state_code: "SP",
+		});
+
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-					phone: "5511999999999",
-				address: {
-					zip_code: "01001000",
-					street: "Rua A",
-					number: "100",
-					complement: "Casa",
-					district: "Centro",
-					city_ibge_id: 3550308,
-					city: "Sao Paulo",
-					state_ibge_id: 35,
-					state: "Sao Paulo",
-					state_code: "SP",
-					latitude: -23.5,
-					longitude: -46.6,
-				},
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
+				address,
 			},
 		});
 
@@ -93,33 +90,24 @@ describe("upsert-profile-use-case", () => {
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			phone: "5511999999999",
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
+
+		const address = makeAddressInput({
+			street: "Rua A",
+			complement: null,
+			latitude: null,
+			longitude: null,
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-					phone: "5511999999999",
-				address: {
-					zip_code: "01001000",
-					street: "Rua A",
-					number: "100",
-					complement: null,
-					district: "Centro",
-					city_ibge_id: 3550308,
-					city: "Sao Paulo",
-					state_ibge_id: 35,
-					state: "Sao Paulo",
-					state_code: "SP",
-					latitude: null,
-					longitude: null,
-				},
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
+				address,
 			},
 		});
 
@@ -134,35 +122,20 @@ describe("upsert-profile-use-case", () => {
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			phone: "5511999999999",
-		});
+		const input = makeProfileInput();
 
-		await addressesRepository.create({
-			profile_id: profile.id,
-			zip_code: "01001000",
-			street: "Rua A",
-			number: "100",
-			complement: null,
-			district: "Centro",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: null,
-			longitude: null,
-		});
+		const profile = await profilesRepository.create(input);
+
+		const initialAddress = makeAddressInput({ complement: null, latitude: null, longitude: null });
+
+		await addressesRepository.create({ profile_id: profile.id, ...initialAddress });
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-					phone: "5511999999999",
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
 				address: {
 					zip_code: "01310000",
 					street: "Rua B",
@@ -192,35 +165,27 @@ describe("upsert-profile-use-case", () => {
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			phone: "5511999999999",
-		});
+		const input = makeProfileInput();
 
-		await addressesRepository.create({
-			profile_id: profile.id,
-			zip_code: "01001000",
+		const profile = await profilesRepository.create(input);
+
+		const existingAddress = makeAddressInput({
 			street: "Rua A",
-			number: "100",
 			complement: null,
-			district: "Centro",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
 			latitude: null,
 			longitude: null,
 		});
 
+		await addressesRepository.create({ profile_id: profile.id, ...existingAddress });
+
+		const updated = makeProfileInput({ user_id: input.user_id });
+
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Updated",
-				display_name: "john-updated",
-					phone: "5511000000000",
+				full_name: updated.full_name,
+				display_name: updated.display_name,
+				phone: updated.phone,
 			},
 		});
 

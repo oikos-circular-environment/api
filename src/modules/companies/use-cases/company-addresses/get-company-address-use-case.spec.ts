@@ -1,21 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { GetCompanyAddressUseCase } from "./get-company-address-use-case.js";
 
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 describe("get-company-address-use-case", () => {
 	it("returns company address when it exists", async () => {
@@ -26,26 +17,17 @@ describe("get-company-address-use-case", () => {
 			addressesRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		const address = await addressesRepository.create({
 			company_id: company.id,
-			zip_code: "12345678",
-			street: "Main Street",
-			number: "100",
-			complement: "Suite 2",
-			district: "Center",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: -23.5505,
-			longitude: -46.6333,
+			...makeAddressInput(),
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 		});
 
@@ -60,10 +42,12 @@ describe("get-company-address-use-case", () => {
 			addressesRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 		});
 
@@ -82,7 +66,7 @@ describe("get-company-address-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 			});
 		} catch (error) {

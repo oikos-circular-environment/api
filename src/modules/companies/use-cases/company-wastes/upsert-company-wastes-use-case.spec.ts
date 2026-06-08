@@ -1,41 +1,17 @@
 import { randomUUID } from "node:crypto";
 import { beforeEach, describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
-import type { WasteCategory } from "@/modules/wastes/dtos/wastes-dto.js";
+import { makeWasteCategory } from "@/modules/wastes/factories/make-waste-category.js";
 import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories/in-memory/in-memory-waste-categories-repository.js";
 import { UpsertCompanyWastesUseCase } from "./upsert-company-wastes-use-case.js";
 
+const USER_ID = "11111111-1111-1111-1111-111111111111";
 const CATEGORY_ID = randomUUID();
 const OTHER_CATEGORY_ID = randomUUID();
-
-function makeCategory(id: string, name: string): WasteCategory {
-	return {
-		id,
-		name,
-		description: null,
-		observations: null,
-		hazard_levels: ["LOW"],
-		created_at: new Date("2024-01-01"),
-		updated_at: new Date("2024-01-01"),
-		subcategories: [],
-	};
-}
-
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
 
 describe("upsert-company-wastes-use-case", () => {
 	let companiesRepository: InMemoryCompaniesRepository;
@@ -49,8 +25,11 @@ describe("upsert-company-wastes-use-case", () => {
 		wastesRepository = new InMemoryWastesRepository();
 		validationRepository = new InMemoryCompanyValidationRepository();
 		wasteCategoriesRepository = new InMemoryWasteCategoriesRepository();
-		const cat1 = makeCategory(CATEGORY_ID, "Papel / Papelão");
-		const cat2 = makeCategory(OTHER_CATEGORY_ID, "Plástico");
+		const cat1 = makeWasteCategory({
+			id: CATEGORY_ID,
+			name: "Papel / Papelão",
+		});
+		const cat2 = makeWasteCategory({ id: OTHER_CATEGORY_ID, name: "Plástico" });
 		wasteCategoriesRepository.items = [cat1, cat2];
 		wastesRepository.categoryMap = new Map([
 			[CATEGORY_ID, cat1],
@@ -65,11 +44,13 @@ describe("upsert-company-wastes-use-case", () => {
 	});
 
 	it("replaces company wastes and returns the saved list", async () => {
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
@@ -102,7 +83,7 @@ describe("upsert-company-wastes-use-case", () => {
 		expect(wastesRepository.items.length).toBe(2);
 
 		const updated = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
@@ -123,11 +104,13 @@ describe("upsert-company-wastes-use-case", () => {
 	});
 
 	it("sets wastes validation to true when at least one waste is saved", async () => {
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
@@ -148,11 +131,13 @@ describe("upsert-company-wastes-use-case", () => {
 	});
 
 	it("sets wastes validation to false when replaced with empty array", async () => {
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
@@ -167,11 +152,7 @@ describe("upsert-company-wastes-use-case", () => {
 			],
 		});
 
-		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-			companyId: company.id,
-			data: [],
-		});
+		await sut.execute({ userId: USER_ID, companyId: company.id, data: [] });
 
 		const validation = await validationRepository.findByCompanyId(company.id);
 
@@ -183,7 +164,7 @@ describe("upsert-company-wastes-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 				data: [],
 			});
@@ -201,13 +182,15 @@ describe("upsert-company-wastes-use-case", () => {
 	});
 
 	it("throws when payload has duplicated waste names", async () => {
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: company.id,
 				data: [
 					{
@@ -244,13 +227,15 @@ describe("upsert-company-wastes-use-case", () => {
 	});
 
 	it("throws when waste_category_id does not exist", async () => {
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: company.id,
 				data: [
 					{

@@ -1,15 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { GetPublicComplaintUseCase } from "./get-public-complaint-use-case.js";
 
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
+const USER_A = "11111111-1111-1111-1111-111111111111";
+
+// Fixed SP coordinates for location assertions
+const spGeospatial = makeGeospatial({
 	location: {
 		coords: {
 			latitude: -23.55,
@@ -22,23 +20,7 @@ const geospatial: Geospatial = {
 		},
 		timestamp: 1711111111111,
 	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
-
-const USER_A = "11111111-1111-1111-1111-111111111111";
+});
 
 describe("get-public-complaint-use-case", () => {
 	it("returns the public complaint when it exists", async () => {
@@ -47,7 +29,7 @@ describe("get-public-complaint-use-case", () => {
 
 		const created = await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "BURNING", observations: "some obs", geospatial },
+			{ date: new Date(), type: "BURNING", observations: "some obs", geospatial: spGeospatial },
 		);
 
 		const result = await sut.execute({ complaintId: created.id });
@@ -80,7 +62,7 @@ describe("get-public-complaint-use-case", () => {
 
 		const created = await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial },
+			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial: makeGeospatial() },
 		);
 
 		complaintsRepository.resolutions.push({

@@ -1,4 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { makeAddressInput } from "@/modules/companies/factories/make-address.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyWasteInput } from "@/modules/companies/factories/make-company-item.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
@@ -6,18 +9,7 @@ import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-
 import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
 import { GetCompanyUseCase } from "./get-company-use-case.js";
 
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 function makeSut() {
 	const companiesRepository = new InMemoryCompaniesRepository();
@@ -48,57 +40,30 @@ describe("get-company-use-case", () => {
 		const { sut, companiesRepository, addressesRepository, wastesRepository } =
 			makeSut();
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
-		await addressesRepository.create({
+		const address = await addressesRepository.create({
 			company_id: company.id,
-			zip_code: "12345678",
-			street: "Main Street",
-			number: "100",
-			complement: null,
-			district: "Center",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: -23.5505,
-			longitude: -46.6333,
+			...makeAddressInput({ city: "Sao Paulo" }),
 		});
 
-		await wastesRepository.replaceMany(company.id, [
-			{
-				name: "Paper",
-				description: null,
-				price: 10,
-				unit: "KG",
-				waste_category_id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
-				quantity: 100,
-				observations: null,
-			},
-		]);
+		const wasteInput = makeCompanyWasteInput();
+		await wastesRepository.replaceMany(company.id, [wasteInput]);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "99888777000166",
-			identity_type: "CNPJ",
-			company_type: "ONG",
-			status: true,
-			business_name: "Nova Oikos",
+		const secondInput = makeCompanyInput({
+			user_id: USER_ID,
 			corporate_name: "Nova Oikos SA",
-			email: null,
-			phones: ["5511777777777"],
-			started_activity_in: new Date("2025-01-01T00:00:00.000Z"),
 		});
+		await companiesRepository.create(secondInput);
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const result = await sut.execute({ userId: USER_ID });
 
 		expect(result).toHaveLength(2);
-		expect(result[0].address?.city).toBe("Sao Paulo");
+		expect(result[0].address?.city).toBe(address.city);
 		expect(result[0].wastes).toHaveLength(1);
-		expect(result[0].wastes[0].name).toBe("Paper");
+		expect(result[0].wastes[0].name).toBe(wasteInput.name);
 		expect(result[0].services).toStrictEqual([]);
 		expect(result[0].business_hours).toStrictEqual([]);
 		expect(result[1].corporate_name).toBe("Nova Oikos SA");
@@ -109,11 +74,9 @@ describe("get-company-use-case", () => {
 	it("returns empty arrays for related data when company has none", async () => {
 		const { sut, companiesRepository } = makeSut();
 
-		await companiesRepository.create(baseCompany);
+		await companiesRepository.create(makeCompanyInput({ user_id: USER_ID }));
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const result = await sut.execute({ userId: USER_ID });
 
 		expect(result).toHaveLength(1);
 		expect(result[0].address).toBeNull();
@@ -125,9 +88,7 @@ describe("get-company-use-case", () => {
 	it("returns empty array when user has no companies", async () => {
 		const { sut } = makeSut();
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const result = await sut.execute({ userId: USER_ID });
 
 		expect(result).toStrictEqual([]);
 	});

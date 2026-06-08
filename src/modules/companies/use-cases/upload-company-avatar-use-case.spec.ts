@@ -1,22 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { UploadCompanyAvatarUseCase } from "./upload-company-avatar-use-case.js";
 
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
+const ANOTHER_USER_ID = "22222222-2222-2222-2222-222222222222";
 
 describe("upload-company-avatar-use-case", () => {
 	it("uploads avatar successfully", async () => {
@@ -27,10 +17,12 @@ describe("upload-company-avatar-use-case", () => {
 			storageProvider,
 		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: created.id,
 			file: {
 				fileName: "avatar.jpg",
@@ -61,7 +53,7 @@ describe("upload-company-avatar-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 				file: {
 					fileName: "avatar.jpg",
@@ -90,13 +82,15 @@ describe("upload-company-avatar-use-case", () => {
 			storageProvider,
 		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "22222222-2222-2222-2222-222222222222",
+				userId: ANOTHER_USER_ID,
 				companyId: created.id,
 				file: {
 					fileName: "avatar.jpg",
@@ -125,13 +119,15 @@ describe("upload-company-avatar-use-case", () => {
 			storageProvider,
 		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: created.id,
 				file: {
 					fileName: "avatar.gif",
@@ -162,13 +158,15 @@ describe("upload-company-avatar-use-case", () => {
 			storageProvider,
 		);
 
-		const created = await companiesRepository.create(baseCompany);
+		const created = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: created.id,
 				file: {
 					fileName: "avatar.png",

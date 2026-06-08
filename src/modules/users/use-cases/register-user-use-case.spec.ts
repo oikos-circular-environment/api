@@ -1,6 +1,7 @@
 import { compare } from "bcryptjs";
 import { describe, expect, it } from "vitest";
 import { UserAlreadyExistsError } from "@/modules/users/errors/user-already-exists-error.js";
+import { makeUserInput, TEST_PASSWORD } from "@/modules/users/factories/make-user.js";
 import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { RegisterUserUseCase } from "./register-user-use-case.js";
 
@@ -9,15 +10,14 @@ describe("register-user-use-case", () => {
 		const usersRepository = new InMemoryUsersRepository();
 		const sut = new RegisterUserUseCase(usersRepository);
 
-		const result = await sut.execute({
-			email: "john@example.com",
-			password: "123456",
-		});
+		const input = makeUserInput();
 
-		expect(result.email).toBe("john@example.com");
-		expect(result.password).not.toBe("123456");
+		const result = await sut.execute(input);
 
-		const passwordMatches = await compare("123456", result.password);
+		expect(result.email).toBe(input.email);
+		expect(result.password).not.toBe(TEST_PASSWORD);
+
+		const passwordMatches = await compare(TEST_PASSWORD, result.password);
 
 		expect(passwordMatches).toBe(true);
 	});
@@ -26,18 +26,14 @@ describe("register-user-use-case", () => {
 		const usersRepository = new InMemoryUsersRepository();
 		const sut = new RegisterUserUseCase(usersRepository);
 
-		await sut.execute({
-			email: "john@example.com",
-			password: "123456",
-		});
+		const input = makeUserInput();
+
+		await sut.execute(input);
 
 		let thrownError: unknown;
 
 		try {
-			await sut.execute({
-				email: "john@example.com",
-				password: "123456",
-			});
+			await sut.execute(input);
 		} catch (error) {
 			thrownError = error;
 		}

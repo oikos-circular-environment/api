@@ -1,43 +1,26 @@
 import { describe, expect, it } from "vitest";
 import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { GetMapComplaintsUseCase } from "./get-map-complaints-use-case.js";
 
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
-	location: {
-		coords: {
-			latitude: -23.55,
-			longitude: -46.63,
-			altitude: null,
-			accuracy: null,
-			altitudeAccuracy: null,
-			heading: null,
-			speed: null,
-		},
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
-
 const USER_A = "11111111-1111-1111-1111-111111111111";
+
+// Sao Paulo coordinates used for radius-based assertions
+const spCoords = { latitude: -23.55, longitude: -46.63 };
+
+function makeSpGeospatial(overrides?: Partial<Geospatial>): Geospatial {
+	return makeGeospatial({
+		location: {
+			coords: {
+				...makeGeospatial().location.coords,
+				...spCoords,
+			},
+			timestamp: Date.now(),
+		},
+		...overrides,
+	});
+}
 
 describe("get-map-complaints-use-case", () => {
 	it("returns OPEN complaints by default when no status filter is provided", async () => {
@@ -46,11 +29,11 @@ describe("get-map-complaints-use-case", () => {
 
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
+			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
 		);
 
 		// manually set one to RESOLVED
@@ -69,11 +52,11 @@ describe("get-map-complaints-use-case", () => {
 
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
+			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
 		);
 
 		const items = await sut.execute({
@@ -93,11 +76,11 @@ describe("get-map-complaints-use-case", () => {
 
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial },
+			{ date: new Date(), type: "DEFORESTATION", observations: null, geospatial: makeSpGeospatial() },
 		);
 
 		const resolved = complaintsRepository.complaints[1];
@@ -120,7 +103,7 @@ describe("get-map-complaints-use-case", () => {
 
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial },
+			{ date: new Date(), type: "VACANT_LOT", observations: null, geospatial: makeSpGeospatial() },
 		);
 
 		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
@@ -145,13 +128,16 @@ describe("get-map-complaints-use-case", () => {
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
 
 		// complaint far away (~440 km from São Paulo)
-		const farGeospatial: Geospatial = {
-			...geospatial,
+		const farGeospatial = makeGeospatial({
 			location: {
-				coords: { ...geospatial.location.coords, latitude: -19.92, longitude: -43.94 },
-				timestamp: 1711111111111,
+				coords: {
+					...makeGeospatial().location.coords,
+					latitude: -19.92,
+					longitude: -43.94,
+				},
+				timestamp: Date.now(),
 			},
-		};
+		});
 		await complaintsRepository.createForUser(USER_A, {
 			date: new Date(),
 			type: "BURNING",
@@ -170,7 +156,7 @@ describe("get-map-complaints-use-case", () => {
 
 		await complaintsRepository.createForUser(
 			USER_A,
-			{ date: new Date(), type: "BURNING", observations: null, geospatial },
+			{ date: new Date(), type: "BURNING", observations: null, geospatial: makeSpGeospatial() },
 		);
 
 		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });

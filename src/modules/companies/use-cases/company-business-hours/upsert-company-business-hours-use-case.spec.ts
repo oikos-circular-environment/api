@@ -1,22 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompanyInput } from "@/modules/companies/factories/make-company.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpsertCompanyBusinessHoursUseCase } from "./upsert-company-business-hours-use-case.js";
 
-const baseCompany = {
-	user_id: "11111111-1111-1111-1111-111111111111",
-	identity: "12345678900",
-	identity_type: "CPF" as const,
-	company_type: "COMPANY" as const,
-	status: true,
-	business_name: "Oikos Tech",
-	corporate_name: "Oikos Tech LTDA",
-	email: "contato@oikos.dev",
-	phones: ["5511999999999"],
-	started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-};
+const USER_ID = "11111111-1111-1111-1111-111111111111";
 
 describe("upsert-company-business-hours-use-case", () => {
 	it("upserts partial payload and persists sunday to saturday", async () => {
@@ -29,32 +19,24 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
 					day_of_week: "MONDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "07:00",
-							end_time: "11:00",
-						},
-					],
+					time_slots: [{ start_time: "07:00", end_time: "11:00" }],
 				},
 				{
 					day_of_week: "FRIDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "08:00",
-							end_time: "17:00",
-						},
-					],
+					time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 				},
 			],
 		});
@@ -87,39 +69,31 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
 					day_of_week: "MONDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "07:00",
-							end_time: "11:00",
-						},
-					],
+					time_slots: [{ start_time: "07:00", end_time: "11:00" }],
 				},
 			],
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
 					day_of_week: "FRIDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "08:00",
-							end_time: "17:00",
-						},
-					],
+					time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 				},
 			],
 		});
@@ -142,11 +116,13 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
 			data: [
 				{
@@ -172,19 +148,15 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
-			data: [
-				{
-					day_of_week: "MONDAY",
-					is_open: false,
-					time_slots: [],
-				},
-			],
+			data: [{ day_of_week: "MONDAY", is_open: false, time_slots: [] }],
 		});
 
 		const validation = await validationRepository.findByCompanyId(company.id);
@@ -202,21 +174,17 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: company.id,
-				data: [
-					{
-						day_of_week: "SUNDAY",
-						is_open: true,
-						time_slots: [],
-					},
-				],
+				data: [{ day_of_week: "SUNDAY", is_open: true, time_slots: [] }],
 			});
 		} catch (error) {
 			thrownError = error;
@@ -240,19 +208,15 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: USER_ID,
 			companyId: company.id,
-			data: [
-				{
-					day_of_week: "SUNDAY",
-					is_open: false,
-					time_slots: [],
-				},
-			],
+			data: [{ day_of_week: "SUNDAY", is_open: false, time_slots: [] }],
 		});
 
 		expect(result[0].day_of_week).toBe("SUNDAY");
@@ -270,30 +234,23 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: company.id,
 				data: [
 					{
 						day_of_week: "MONDAY",
 						is_open: true,
-						time_slots: [
-							{
-								start_time: "08:00",
-								end_time: "17:00",
-							},
-						],
+						time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 					},
-					{
-						day_of_week: "MONDAY",
-						is_open: false,
-						time_slots: [],
-					},
+					{ day_of_week: "MONDAY", is_open: false, time_slots: [] },
 				],
 			});
 		} catch (error) {
@@ -322,18 +279,13 @@ describe("upsert-company-business-hours-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: "b4d2f0f6-cf62-4ec2-853f-7b96f50763ff",
 				data: [
 					{
 						day_of_week: "MONDAY",
 						is_open: true,
-						time_slots: [
-							{
-								start_time: "08:00",
-								end_time: "17:00",
-							},
-						],
+						time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 					},
 				],
 			});
@@ -359,24 +311,21 @@ describe("upsert-company-business-hours-use-case", () => {
 			validationRepository,
 		);
 
-		const company = await companiesRepository.create(baseCompany);
+		const company = await companiesRepository.create(
+			makeCompanyInput({ user_id: USER_ID }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: USER_ID,
 				companyId: company.id,
 				data: [
 					{
 						day_of_week: "MONDAY",
 						is_open: true,
-						time_slots: [
-							{
-								start_time: "18:00",
-								end_time: "08:00",
-							},
-						],
+						time_slots: [{ start_time: "18:00", end_time: "08:00" }],
 					},
 				],
 			});

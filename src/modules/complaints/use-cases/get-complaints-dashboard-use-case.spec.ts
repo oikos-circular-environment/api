@@ -1,41 +1,7 @@
 import { describe, expect, it } from "vitest";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { GetComplaintsDashboardUseCase } from "./get-complaints-dashboard-use-case.js";
-
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
-	location: {
-		coords: {
-			latitude: -23.55,
-			longitude: -46.63,
-			altitude: null,
-			accuracy: null,
-			altitudeAccuracy: null,
-			heading: null,
-			speed: null,
-		},
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
 
 describe("get-complaints-dashboard-use-case", () => {
 	it("returns summary grouped by status", async () => {
@@ -48,7 +14,7 @@ describe("get-complaints-dashboard-use-case", () => {
 				date: new Date("2026-04-20T10:00:00.000Z"),
 				type: "BURNING",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -58,7 +24,7 @@ describe("get-complaints-dashboard-use-case", () => {
 				date: new Date("2026-04-21T10:00:00.000Z"),
 				type: "VACANT_LOT",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -80,7 +46,7 @@ describe("get-complaints-dashboard-use-case", () => {
 				date: new Date("2026-04-22T10:00:00.000Z"),
 				type: "DEFORESTATION",
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
