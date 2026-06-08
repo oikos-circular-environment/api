@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
-import { makeUserCredentials } from "@/modules/auth/factories/make-user-credentials.js";
+import { makeAuthUser } from "@/modules/auth/factories/make-auth-user.js";
 import { InMemoryAuthRepository } from "@/modules/auth/repositories/in-memory/in-memory-auth-repository.js";
 import { RefreshTokenUseCase } from "./refresh-token-use-case.js";
 
@@ -10,7 +10,7 @@ describe("refresh-token-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new RefreshTokenUseCase(authRepository);
 
-		const credentials = makeUserCredentials();
+		const credentials = makeAuthUser();
 
 		const createdUser = await authRepository.create({
 			email: credentials.email,

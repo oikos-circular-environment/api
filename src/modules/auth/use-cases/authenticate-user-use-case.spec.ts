@@ -1,7 +1,7 @@
 import { hash } from "bcryptjs";
 import { describe, expect, it } from "vitest";
 import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
-import { makeUserCredentials, TEST_PASSWORD } from "@/modules/auth/factories/make-user-credentials.js";
+import { makeAuthUser, TEST_PASSWORD } from "@/modules/auth/factories/make-auth-user.js";
 import { InMemoryAuthRepository } from "@/modules/auth/repositories/in-memory/in-memory-auth-repository.js";
 import { AuthenticateUserUseCase } from "./authenticate-user-use-case.js";
 
@@ -10,7 +10,7 @@ describe("authenticate-user-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new AuthenticateUserUseCase(authRepository);
 
-		const credentials = makeUserCredentials();
+		const credentials = makeAuthUser();
 		const passwordHash = await hash(TEST_PASSWORD, 6);
 
 		const createdUser = await authRepository.create({
@@ -33,7 +33,7 @@ describe("authenticate-user-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new AuthenticateUserUseCase(authRepository);
 
-		const credentials = makeUserCredentials();
+		const credentials = makeAuthUser();
 
 		let thrownError: unknown;
 
@@ -59,7 +59,7 @@ describe("authenticate-user-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new AuthenticateUserUseCase(authRepository);
 
-		const credentials = makeUserCredentials();
+		const credentials = makeAuthUser();
 		const passwordHash = await hash(TEST_PASSWORD, 6);
 
 		await authRepository.create({

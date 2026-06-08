@@ -1,8 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import {
-	makeMarketCompany,
-	makeMarketItem,
-} from "@/modules/market/factories/make-market-company.js";
+import { makeMarketCompany } from "@/modules/market/factories/make-market-company.js";
+import { makeMarketItem } from "@/modules/market/factories/make-market-item.js";
 import { InMemoryMarketRepository } from "../repositories/in-memory/in-memory-market-repository.js";
 import { ListMarketUseCase } from "./list-market-use-case.js";
 
@@ -201,6 +199,7 @@ describe("ListMarketUseCase", () => {
 		const companyWithoutServices = makeDefaultCompany({
 			id: "company-no-services",
 			business_name: "Empresa Sem Serviços",
+			services: [],
 		});
 		repo.companies = [companyWithServices, companyWithoutServices];
 		const result = await sut.execute({
@@ -320,6 +319,7 @@ describe("ListMarketUseCase", () => {
 		const companyWithoutPlastico = makeMarketCompany({
 			id: "company-papel",
 			business_name: "Papel Certo",
+			services: [],
 			wastes: [
 				makeMarketItem({
 					id: "waste-only-papel",

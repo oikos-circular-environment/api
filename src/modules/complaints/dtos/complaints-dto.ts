@@ -116,22 +116,18 @@ export const complaintResumeSchema = z.object({
 
 export type ComplaintResume = z.infer<typeof complaintResumeSchema>;
 
-export const createComplaintSchema = z.object({
+export const createComplaintSchema = complaintSchema.pick({
+	type: true,
+}).extend({
 	date: z.coerce.date(),
-	type: complaintTypeSchema,
 	observations: z.string().optional().nullable(),
 	geospatial: geospatialSchema,
 });
 
 export type CreateComplaint = z.infer<typeof createComplaintSchema>;
 
-export const updateComplaintSchema = z
-	.object({
-		date: z.coerce.date().optional(),
-		type: complaintTypeSchema.optional(),
-		observations: z.string().optional().nullable(),
-		geospatial: geospatialSchema.optional(),
-	})
+export const updateComplaintSchema = createComplaintSchema
+	.partial()
 	.refine(
 		(data) =>
 			data.date !== undefined ||
@@ -281,8 +277,8 @@ export const complaintVoteSchema = z.object({
 });
 export type ComplaintVote = z.infer<typeof complaintVoteSchema>;
 
-export const submitVoteSchema = z.object({
-	vote_type: complaintVoteTypeSchema,
+export const submitVoteSchema = complaintVoteSchema.pick({
+	vote_type: true,
 });
 export type SubmitVote = z.infer<typeof submitVoteSchema>;
 

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import {
-	makeCreateComplaint,
+	makeComplaint,
 	makeGeospatial,
 } from "@/modules/complaints/factories/make-complaint.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
@@ -57,7 +57,7 @@ describe("create-complaint-use-case", () => {
 
 		const result = await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
-			data: makeCreateComplaint({ type: "DEFORESTATION", observations: null }),
+			data: makeComplaint({ type: "DEFORESTATION", observations: null }),
 		});
 
 		expect(result.observations).toBeNull();

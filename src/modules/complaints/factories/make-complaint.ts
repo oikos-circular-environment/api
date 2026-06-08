@@ -1,6 +1,7 @@
+import { randomUUID } from "node:crypto";
 import { faker } from "@faker-js/faker";
 import type {
-	CreateComplaint,
+	Complaint,
 	Geospatial,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 
@@ -41,14 +42,20 @@ export function makeGeospatial(overrides?: Partial<Geospatial>): Geospatial {
 	};
 }
 
-export function makeCreateComplaint(
-	overrides?: Partial<CreateComplaint>,
-): CreateComplaint {
+export function makeComplaint(
+	overrides?: Partial<Complaint>,
+): Complaint {
 	return {
-		date: faker.date.recent(),
+		id: randomUUID(),
 		type: "BURNING",
+		status: "OPEN",
+		date: faker.date.recent(),
 		observations: faker.lorem.sentence(),
 		geospatial: makeGeospatial(),
+		attachments: [],
+		vote_counts: { resolved: 0, not_resolved: 0 },
+		resolution_count: 0,
+		created_at: new Date(),
 		...overrides,
 	};
 }

@@ -1,5 +1,6 @@
+import { randomUUID } from "node:crypto";
 import { faker } from "@faker-js/faker";
-import type { CreateAddress, CreateProfile } from "@/modules/profiles/dtos/profiles-dto.js";
+import type { Address, CreateProfile } from "@/modules/profiles/dtos/profiles-dto.js";
 
 export function makeProfileInput(overrides?: Partial<CreateProfile>): CreateProfile {
 	return {
@@ -11,8 +12,11 @@ export function makeProfileInput(overrides?: Partial<CreateProfile>): CreateProf
 	};
 }
 
-export function makeAddressInput(overrides?: Partial<Omit<CreateAddress, "profile_id">>): Omit<CreateAddress, "profile_id"> {
+export function makeAddress(overrides?: Partial<Address>): Address {
+	const now = new Date();
+
 	return {
+		id: randomUUID(),
 		zip_code: faker.string.numeric(8),
 		street: faker.location.street(),
 		number: faker.location.buildingNumber(),
@@ -25,6 +29,8 @@ export function makeAddressInput(overrides?: Partial<Omit<CreateAddress, "profil
 		state_code: faker.location.state({ abbreviated: true }).slice(0, 2).toUpperCase(),
 		latitude: faker.location.latitude(),
 		longitude: faker.location.longitude(),
+		created_at: now,
+		updated_at: now,
 		...overrides,
 	};
 }

@@ -1,29 +1,10 @@
 import { faker } from "@faker-js/faker";
-import type { MarketCompany, MarketItem } from "@/modules/market/dtos/market-dto.js";
+import type { MarketCompany } from "@/modules/market/dtos/market-dto.js";
+import { makeMarketItem } from "./make-market-item.js";
 
 // Coordenadas padrão próximas ao centro de Rondonópolis (~3.3km do ponto de referência usado nos testes)
 const DEFAULT_LAT = -16.4757009;
 const DEFAULT_LON = -54.6684927;
-
-export function makeMarketItem(overrides?: Partial<MarketItem>): MarketItem {
-	const categoryId = faker.string.uuid();
-	return {
-		id: faker.string.uuid(),
-		name: faker.commerce.productName(),
-		description: null,
-		price: faker.number.float({ min: 0.5, max: 100, fractionDigits: 2 }),
-		unit: "KG",
-		waste_category_id: categoryId,
-		waste_category: {
-			id: categoryId,
-			name: faker.word.words(2),
-			hazard_levels: ["LOW"],
-		},
-		quantity: faker.number.float({ min: 1, max: 1000, fractionDigits: 1 }),
-		observations: null,
-		...overrides,
-	};
-}
 
 export function makeMarketCompany(
 	overrides?: Partial<MarketCompany>,
@@ -49,9 +30,22 @@ export function makeMarketCompany(
 			longitude: DEFAULT_LON,
 		},
 		phones: [faker.string.numeric(11)],
-		services: [],
-		wastes: [],
-		business_hours: [],
+		services: [makeMarketItem()],
+		wastes: [makeMarketItem()],
+		business_hours: [
+			{
+				id: faker.string.uuid(),
+				day_of_week: "MONDAY",
+				is_open: true,
+				time_slots: [
+					{
+						id: faker.string.uuid(),
+						start_time: "07:00",
+						end_time: "17:00",
+					},
+				],
+			},
+		],
 		distance_in_meters: 0,
 		...overrides,
 	};

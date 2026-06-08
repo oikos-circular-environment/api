@@ -57,10 +57,6 @@ export const updateCompanySchema = createCompanySchema
 	.partial();
 export type UpdateCompany = z.infer<typeof updateCompanySchema>;
 
-// Aliases for backward compat
-export const createCompanyInputSchema = createCompanySchema;
-export const updateCompanyInputSchema = updateCompanySchema;
-
 // --- Company Address ---
 
 export const companyAddressSchema = z.object({

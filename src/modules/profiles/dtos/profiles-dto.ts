@@ -1,20 +1,38 @@
 import z from "zod";
 
-export const createAddressSchema = z.object({
-	profile_id: z.uuid(),
-	zip_code: z.string().min(1, "Zip code is required"),
-	street: z.string().min(1, "Street is required"),
-	number: z.string().min(1, "Number is required"),
-	complement: z.string().optional().nullable(),
-	district: z.string().min(1, "District is required"),
-	city_ibge_id: z.number().int(),
-	city: z.string().min(1, "City is required"),
-	state_ibge_id: z.number().int(),
-	state: z.string().min(1, "State is required"),
-	state_code: z.string().length(2, "State code must have 2 characters"),
+export const addressSchema = z.object({
+	id: z.string(),
+	zip_code: z.string(),
+	street: z.string(),
+	number: z.string(),
+	complement: z.string().nullable(),
+	district: z.string(),
+	city_ibge_id: z.number(),
+	city: z.string(),
+	state_ibge_id: z.number(),
+	state: z.string(),
+	state_code: z.string(),
 	latitude: z.number(),
 	longitude: z.number(),
+	created_at: z.date(),
+	updated_at: z.date(),
 });
+
+export type Address = z.infer<typeof addressSchema>;
+
+export const createAddressSchema = addressSchema
+	.omit({ id: true, created_at: true, updated_at: true })
+	.extend({
+		profile_id: z.uuid(),
+		zip_code: z.string().min(1, "Zip code is required"),
+		street: z.string().min(1, "Street is required"),
+		number: z.string().min(1, "Number is required"),
+		complement: z.string().optional().nullable(),
+		district: z.string().min(1, "District is required"),
+		city: z.string().min(1, "City is required"),
+		state: z.string().min(1, "State is required"),
+		state_code: z.string().length(2, "State code must have 2 characters"),
+	});
 
 export type CreateAddress = z.infer<typeof createAddressSchema>;
 
@@ -52,26 +70,6 @@ export const uploadProfileImageSchema = z.object({
 export type UploadProfileImage = z.infer<typeof uploadProfileImageSchema>;
 
 export type SaveProfileImage = z.infer<typeof saveProfileImageSchema>;
-
-export const addressSchema = z.object({
-	id: z.string(),
-	zip_code: z.string(),
-	street: z.string(),
-	number: z.string(),
-	complement: z.string().nullable(),
-	district: z.string(),
-	city_ibge_id: z.number(),
-	city: z.string(),
-	state_ibge_id: z.number(),
-	state: z.string(),
-	state_code: z.string(),
-	latitude: z.number(),
-	longitude: z.number(),
-	created_at: z.date(),
-	updated_at: z.date(),
-});
-
-export type Address = z.infer<typeof addressSchema>;
 
 export const profileImageSchema = z.object({
 	id: z.string(),

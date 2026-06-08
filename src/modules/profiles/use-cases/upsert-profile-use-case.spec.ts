@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { makeAddressInput, makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
+import { makeAddress, makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
@@ -59,7 +59,7 @@ describe("upsert-profile-use-case", () => {
 		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
 
 		const input = makeProfileInput();
-		const address = makeAddressInput({
+		const address = makeAddress({
 			street: "Rua A",
 			zip_code: "01001000",
 			city: "Sao Paulo",
@@ -94,7 +94,7 @@ describe("upsert-profile-use-case", () => {
 
 		await profilesRepository.create(input);
 
-		const address = makeAddressInput({
+		const address = makeAddress({
 			street: "Rua A",
 			complement: null,
 		});
@@ -124,7 +124,7 @@ describe("upsert-profile-use-case", () => {
 
 		const profile = await profilesRepository.create(input);
 
-		const initialAddress = makeAddressInput({ complement: null });
+		const initialAddress = makeAddress({ complement: null });
 
 		await addressesRepository.create({ profile_id: profile.id, ...initialAddress });
 
@@ -167,7 +167,7 @@ describe("upsert-profile-use-case", () => {
 
 		const profile = await profilesRepository.create(input);
 
-		const existingAddress = makeAddressInput({
+		const existingAddress = makeAddress({
 			street: "Rua A",
 			complement: null,
 		});

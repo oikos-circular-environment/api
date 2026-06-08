@@ -1,8 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import {
-	makeWasteCategory,
-	makeWasteSubcategory,
-} from "@/modules/wastes/factories/make-waste-category.js";
+import { makeWasteCategory } from "@/modules/wastes/factories/make-waste-category.js";
+import { makeWasteSubcategory } from "@/modules/wastes/factories/make-waste-subcategory.js";
 import { InMemoryWasteCategoriesRepository } from "@/modules/wastes/repositories/in-memory/in-memory-waste-categories-repository.js";
 import { ListWasteCategoriesUseCase } from "./list-waste-categories-use-case.js";
 
