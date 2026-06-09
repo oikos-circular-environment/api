@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { GetComplaintVoteUseCase } from "./get-complaint-vote-use-case.js";
 import { VoteComplaintUseCase } from "./vote-complaint-use-case.js";

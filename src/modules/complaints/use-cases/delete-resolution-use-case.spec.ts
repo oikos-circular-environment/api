@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { DeleteResolutionUseCase } from "./delete-resolution-use-case.js";
 import { SubmitResolutionUseCase } from "./submit-resolution-use-case.js";
@@ -151,7 +151,7 @@ describe("delete-resolution-use-case", () => {
 			userBId,
 			complaint.id,
 		);
-		await repo.addResolutionAttachment(userBId, resolution?.id, {
+		await repo.addResolutionAttachment(userBId, resolution?.id!, {
 			url: "https://img.com/a.jpg",
 			file_name: "a.jpg",
 			path: "p/a.jpg",

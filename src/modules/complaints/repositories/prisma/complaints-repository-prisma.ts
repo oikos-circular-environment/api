@@ -7,6 +7,7 @@ import {
 	type CreateComplaint,
 	type GetComplaintsFilters,
 	type GetMapComplaintsQuery,
+	geospatialSchema,
 	type MapComplaintItem,
 	type PublicComplaint,
 	type Resolution,
@@ -16,7 +17,6 @@ import {
 	type SaveResolutionAttachment,
 	type SubmitResolution,
 	type UpdateComplaint,
-	geospatialSchema,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 

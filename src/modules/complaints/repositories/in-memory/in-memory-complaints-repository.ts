@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import type {
 	Complaint,
-	ComplaintCategory,
 	ComplaintCaptureMode,
+	ComplaintCategory,
 	ComplaintResume,
 	ComplaintStatus,
 	ComplaintVote,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { GetComplaintsDashboardUseCase } from "./get-complaints-dashboard-use-case.js";
 
 describe("get-complaints-dashboard-use-case", () => {

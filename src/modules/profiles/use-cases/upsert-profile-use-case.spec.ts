@@ -8,10 +8,7 @@ import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-m
 import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
 
-function createUser(
-	usersRepository: InMemoryUsersRepository,
-	userId: string,
-) {
+function createUser(usersRepository: InMemoryUsersRepository, userId: string) {
 	usersRepository.items.push({
 		id: userId,
 		email: "test@example.com",

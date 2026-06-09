@@ -51,8 +51,9 @@ export class InMemoryMarketRepository implements MarketRepository {
 		if (q !== undefined) {
 			const lowerQ = q.toLowerCase();
 			filtered = filtered.filter((company) => {
-				const inBusinessName =
-					company.business_name?.toLowerCase().includes(lowerQ);
+				const inBusinessName = company.business_name
+					?.toLowerCase()
+					.includes(lowerQ);
 				const inServices = company.services.some((service) =>
 					service.name.toLowerCase().includes(lowerQ),
 				);

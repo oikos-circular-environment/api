@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { GetCompanyAddressUseCase } from "./get-company-address-use-case.js";

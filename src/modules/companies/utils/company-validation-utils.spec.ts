@@ -3,8 +3,8 @@ import type {
 	CompanyValidation,
 	DayOfWeek,
 } from "@/modules/companies/dtos/companies-dto.js";
-import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompanyService } from "@/modules/companies/factories/make-company-service.js";
 import { makeCompanyWaste } from "@/modules/companies/factories/make-company-waste.js";
 import {

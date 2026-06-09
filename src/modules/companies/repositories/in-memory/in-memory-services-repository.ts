@@ -1,9 +1,9 @@
 import { randomUUID } from "node:crypto";
+import type { WasteCategory } from "@/modules/wastes/dtos/wastes-dto.js";
 import type {
 	CompanyService,
 	CompanyServiceInput,
 } from "../../dtos/companies-dto.js";
-import type { WasteCategory } from "@/modules/wastes/dtos/wastes-dto.js";
 import type { ServicesRepository } from "../services-repository.js";
 
 type StoredService = CompanyService & { company_id: string };

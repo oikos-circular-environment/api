@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { WASTE_CATEGORIES_SEED } from "@/modules/wastes/data/waste-categories-seed.js";
 import { UpdateComplaintUseCase } from "./update-complaint-use-case.js";
 

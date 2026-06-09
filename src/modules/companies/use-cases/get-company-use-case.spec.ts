@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { makeCompanyWaste } from "@/modules/companies/factories/make-company-waste.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";

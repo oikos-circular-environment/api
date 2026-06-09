@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
-import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { CreateComplaintAttachmentUseCase } from "./create-complaint-attachment-use-case.js";
 
 describe("create-complaint-attachment-use-case", () => {
