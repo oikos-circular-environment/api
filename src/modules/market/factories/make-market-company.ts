@@ -14,7 +14,6 @@ export function makeMarketCompany(
 		business_name: faker.company.name(),
 		corporate_name: `${faker.company.name()} LTDA`,
 		company_type: "COMPANY",
-		accept_appointments: false,
 		status: true,
 		address: {
 			id: faker.string.uuid(),

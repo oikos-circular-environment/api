@@ -79,7 +79,6 @@ export const marketCompanySchema = z.object({
 	business_name: z.string().nullable(),
 	corporate_name: z.string(),
 	company_type: companyTypeSchema,
-	accept_appointments: z.boolean(),
 	status: z.boolean(),
 	phones: z.array(z.string()),
 	address: marketAddressSchema,

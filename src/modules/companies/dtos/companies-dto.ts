@@ -166,6 +166,7 @@ export const companyBusinessHoursSchema = z.array(businessHourSchema);
 // --- Measurement ---
 
 export const measurementSchema = z.enum([
+	"DAY",
 	"KG",
 	"L",
 	"UNIT",
