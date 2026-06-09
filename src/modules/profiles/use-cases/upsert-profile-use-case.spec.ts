@@ -5,18 +5,35 @@ import {
 } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
+import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
+
+function createUser(
+	usersRepository: InMemoryUsersRepository,
+	userId: string,
+) {
+	usersRepository.items.push({
+		id: userId,
+		email: "test@example.com",
+		password: "hashed-password",
+		created_at: new Date(),
+	});
+}
 
 describe("upsert-profile-use-case", () => {
 	it("creates a profile when user does not have one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
+			usersRepository,
 		);
 
 		const input = makeProfileInput();
+
+		createUser(usersRepository, input.user_id);
 
 		const result = await sut.execute({
 			userId: input.user_id,
@@ -36,13 +53,16 @@ describe("upsert-profile-use-case", () => {
 	it("updates an existing profile when user already has one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
+			usersRepository,
 		);
 
 		const initial = makeProfileInput();
 
+		createUser(usersRepository, initial.user_id);
 		await profilesRepository.create(initial);
 
 		const updated = makeProfileInput({ user_id: initial.user_id });
@@ -65,9 +85,11 @@ describe("upsert-profile-use-case", () => {
 	it("creates address when profile is created with address data", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
+			usersRepository,
 		);
 
 		const input = makeProfileInput();
@@ -77,6 +99,8 @@ describe("upsert-profile-use-case", () => {
 			city: "Sao Paulo",
 			state_code: "SP",
 		});
+
+		createUser(usersRepository, input.user_id);
 
 		const result = await sut.execute({
 			userId: input.user_id,
@@ -100,13 +124,16 @@ describe("upsert-profile-use-case", () => {
 	it("creates address when existing profile has no address", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
+			usersRepository,
 		);
 
 		const input = makeProfileInput();
 
+		createUser(usersRepository, input.user_id);
 		await profilesRepository.create(input);
 
 		const address = makeAddress({
@@ -133,13 +160,16 @@ describe("upsert-profile-use-case", () => {
 	it("updates existing address when profile already has one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
+			usersRepository,
 		);
 
 		const input = makeProfileInput();
 
+		createUser(usersRepository, input.user_id);
 		const profile = await profilesRepository.create(input);
 
 		const initialAddress = makeAddress({ complement: null });
@@ -182,13 +212,16 @@ describe("upsert-profile-use-case", () => {
 	it("does not affect existing address when no address data is provided", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
+			usersRepository,
 		);
 
 		const input = makeProfileInput();
 
+		createUser(usersRepository, input.user_id);
 		const profile = await profilesRepository.create(input);
 
 		const existingAddress = makeAddress({

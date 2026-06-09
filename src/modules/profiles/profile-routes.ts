@@ -14,6 +14,7 @@ import {
 } from "./dtos/profiles-dto.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaProfilesRepository } from "./repositories/prisma/profiles-repository-prisma.js";
+import { PrismaUsersRepository } from "@/modules/users/repositories/prisma/users-repository-prisma.js";
 import { DeleteProfileImageUseCase } from "./use-cases/delete-profile-image-use-case.js";
 import { GetProfileAddressUseCase } from "./use-cases/get-profile-address-use-case.js";
 import { GetProfileUseCase } from "./use-cases/get-profile-use-case.js";
@@ -28,10 +29,12 @@ export async function profileRoutes(app: FastifyInstance) {
 	const profilesRepository = new PrismaProfilesRepository();
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = makeStorageProvider();
+	const usersRepository = new PrismaUsersRepository();
 
 	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,
 		addressesRepository,
+		usersRepository,
 	);
 	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
 	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
@@ -70,6 +73,7 @@ export async function profileRoutes(app: FastifyInstance) {
 						profile: profileSchema,
 					}),
 					401: appErrorSchema,
+					404: appErrorSchema,
 					409: appErrorSchema,
 				},
 			}),
