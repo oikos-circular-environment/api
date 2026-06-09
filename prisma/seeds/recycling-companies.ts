@@ -1,15 +1,9 @@
-import "dotenv/config";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
-import { PrismaClient } from "../../src/generated/prisma/client.js";
-import { seedWasteCategories } from "./waste-categories.seed.js";
+import type { PrismaClient } from "../../src/generated/prisma/client.js";
 
 const DATA_PATH = resolve("prisma/seeds/recycling-companies.json");
-
-const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
-const prisma = new PrismaClient({ adapter });
 
 // ─── tipos do JSON gerado pelo script de fetch ────────────────────────────────
 
@@ -46,11 +40,8 @@ interface CompanySeed {
 	identity_type: string;
 	company_type: string;
 	status: boolean;
-	is_headquarters: boolean;
-	accept_appointments: boolean;
 	email: string | null;
 	phones: string[];
-	website: string | null;
 	started_activity_in: string;
 	address: Address;
 	business_hours: BusinessHour[];
@@ -64,9 +55,7 @@ interface SeedFile {
 
 // ─── seed ─────────────────────────────────────────────────────────────────────
 
-async function seed() {
-	await seedWasteCategories(prisma);
-
+export async function seedRecyclingCompanies(prisma: PrismaClient) {
 	if (!existsSync(DATA_PATH)) {
 		console.error(`Arquivo de dados não encontrado: ${DATA_PATH}`);
 		console.error(
@@ -147,7 +136,7 @@ async function seed() {
 				const company = await tx.company.create({
 					data: {
 						corporate_name: data.corporate_name,
-						business_name: data.business_name,
+						business_name: data.business_name ?? data.corporate_name,
 						identity: data.identity,
 						identity_type: data.identity_type as "CNPJ" | "CPF",
 						company_type: data.company_type as
@@ -156,8 +145,6 @@ async function seed() {
 							| "GOVERNMENT"
 							| "COLLECTOR",
 						status: data.status,
-						is_headquarters: data.is_headquarters,
-						accept_appointments: data.accept_appointments,
 						email: data.email,
 						phones: data.phones,
 						started_activity_in: new Date(data.started_activity_in),
@@ -194,10 +181,3 @@ async function seed() {
 
 	console.log("\nSeed concluído.");
 }
-
-seed()
-	.catch((err) => {
-		console.error(err);
-		process.exit(1);
-	})
-	.finally(() => prisma.$disconnect());
