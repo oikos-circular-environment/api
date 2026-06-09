@@ -313,7 +313,7 @@
 
 ---
 
-### 15. CONSTRUÇÃO CIVIL (RCD) 🟢/🔴
+### 15. Construção Civil e Demolição (RCD) 🟢/🔴
 
 **Descrição:** Resíduos de construção e demolição. A maioria é RNP (Categoria A/B da CONAMA 307/2002) — concreto, cerâmica, gesso, madeira não tratada. Materiais com amianto ou biocidas são RP de alto risco e exigem coleta especializada obrigatória.
 

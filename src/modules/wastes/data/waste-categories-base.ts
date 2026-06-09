@@ -687,12 +687,12 @@ export const CATEGORIES: WasteCategoryInput[] = [
 				name: "Embalagens com matrizes sólidas perigosas (amianto)",
 				hazard_level: "VERY_HIGH",
 				type: "EXCLUDE",
-				observations: "Construção Civil (RCD)",
+				observations: "Construção Civil e Demolição (RCD)",
 			},
 		],
 	},
 	{
-		name: "Construção Civil (RCD)",
+		name: "Construção Civil e Demolição (RCD)",
 		description:
 			"Resíduos de construção e demolição. A maioria é de baixo risco (concreto, cerâmica, gesso). Amianto e madeira tratada com biocidas são exceções de alto risco.",
 		observations:

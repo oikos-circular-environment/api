@@ -368,7 +368,7 @@ export const WASTE_CATEGORIES_SEED: WasteCategoryInput[] = [
     ],
   },
   {
-    name: 'Construção Civil (RCD)',
+    name: 'Construção Civil e Demolição (RCD)',
     description: 'Resíduos de construção e demolição. A maioria é de baixo risco (concreto, cerâmica, gesso). Amianto e madeira tratada com biocidas são exceções de alto risco.',
     observations: 'Material limpo de construção civil é reciclável. Inspecionar visualmente todo material de demolição antes de aceitar. Amianto = coleta especializada obrigatória — proibida coleta comum.',
     hazard_levels: ['LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH'],
