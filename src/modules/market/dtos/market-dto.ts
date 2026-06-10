@@ -3,6 +3,7 @@ import z from "zod";
 import {
 	companyTypeSchema,
 	dayOfWeekSchema,
+	identityTypeSchema,
 	measurementSchema,
 } from "@/modules/companies/dtos/companies-dto.js";
 import { hazardLevelSchema } from "@/modules/wastes/dtos/wastes-dto.js";
@@ -29,8 +30,8 @@ const marketAddressSchema = z.object({
 	city: z.string(),
 	state: z.string(),
 	state_code: z.string(),
-	latitude: z.number().nullable(),
-	longitude: z.number().nullable(),
+	latitude: z.number(),
+	longitude: z.number(),
 });
 
 export type MarketAddress = z.infer<typeof marketAddressSchema>;
@@ -74,9 +75,9 @@ const marketBusinessHourSchema = z.object({
 
 export type MarketBusinessHour = z.infer<typeof marketBusinessHourSchema>;
 
-export const marketCompanySchema = z.object({
+const marketCompanyBaseSchema = z.object({
 	id: z.string(),
-	business_name: z.string().nullable(),
+	business_name: z.string(),
 	corporate_name: z.string(),
 	company_type: companyTypeSchema,
 	status: z.boolean(),
@@ -86,6 +87,20 @@ export const marketCompanySchema = z.object({
 	wastes: z.array(marketItemSchema),
 	business_hours: z.array(marketBusinessHourSchema),
 	distance_in_meters: z.number(),
+});
+
+// Dado bruto vindo dos repositórios — identity sempre presente
+export const marketCompanyRecordSchema = marketCompanyBaseSchema.extend({
+	identity: z.string(),
+	identity_type: identityTypeSchema,
+});
+
+export type MarketCompanyRecord = z.infer<typeof marketCompanyRecordSchema>;
+
+// Resposta da API — identity exposto apenas para CNPJ (LGPD: CPF nunca é retornado)
+export const marketCompanySchema = marketCompanyBaseSchema.extend({
+	identity: z.string().nullable(),
+	identity_type: z.literal("CNPJ").nullable(),
 });
 
 export type MarketCompany = z.infer<typeof marketCompanySchema>;

@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import type { MarketCompany } from "@/modules/market/dtos/market-dto.js";
+import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 import { makeMarketItem } from "./make-market-item.js";
 
 // Coordenadas padrão próximas ao centro de Rondonópolis (~3.3km do ponto de referência usado nos testes)
@@ -7,12 +7,14 @@ const DEFAULT_LAT = -16.4757009;
 const DEFAULT_LON = -54.6684927;
 
 export function makeMarketCompany(
-	overrides?: Partial<MarketCompany>,
-): MarketCompany {
+	overrides?: Partial<MarketCompanyRecord>,
+): MarketCompanyRecord {
 	return {
 		id: faker.string.uuid(),
 		business_name: faker.company.name(),
 		corporate_name: `${faker.company.name()} LTDA`,
+		identity: faker.string.numeric(14),
+		identity_type: "CNPJ",
 		company_type: "COMPANY",
 		status: true,
 		address: {

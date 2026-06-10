@@ -1,4 +1,4 @@
-import type { MarketCompany } from "@/modules/market/dtos/market-dto.js";
+import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 import type { MarketRepository } from "@/modules/market/repositories/market-repository.js";
 
 function haversineDistance(
@@ -18,7 +18,7 @@ function haversineDistance(
 }
 
 export class InMemoryMarketRepository implements MarketRepository {
-	public companies: MarketCompany[] = [];
+	public companies: MarketCompanyRecord[] = [];
 
 	async findMany(params: {
 		lat: number;
@@ -28,22 +28,17 @@ export class InMemoryMarketRepository implements MarketRepository {
 		category?: "services" | "waste";
 		offset: number;
 		limit: number;
-	}): Promise<{ companies: MarketCompany[]; total: number }> {
+	}): Promise<{ companies: MarketCompanyRecord[]; total: number }> {
 		const { lat, lon, radius, q, category, offset, limit } = params;
 
 		let filtered = this.companies
-			.filter(
-				(company) =>
-					company.address.latitude !== null &&
-					company.address.longitude !== null,
-			)
 			.map((company) => ({
 				...company,
 				distance_in_meters: haversineDistance(
 					lat,
 					lon,
-					company.address.latitude as number,
-					company.address.longitude as number,
+					company.address.latitude,
+					company.address.longitude,
 				),
 			}))
 			.filter((company) => company.distance_in_meters <= radius);
@@ -52,7 +47,7 @@ export class InMemoryMarketRepository implements MarketRepository {
 			const lowerQ = q.toLowerCase();
 			filtered = filtered.filter((company) => {
 				const inBusinessName = company.business_name
-					?.toLowerCase()
+					.toLowerCase()
 					.includes(lowerQ);
 				const inServices = company.services.some((service) =>
 					service.name.toLowerCase().includes(lowerQ),

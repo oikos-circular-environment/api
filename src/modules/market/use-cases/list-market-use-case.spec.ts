@@ -281,29 +281,6 @@ describe("ListMarketUseCase", () => {
 		expect(hasIntersection).toBe(false);
 	});
 
-	it("deve excluir silenciosamente empresa sem endereço (lat/lon null)", async () => {
-		const companyWithoutLatLon = makeMarketCompany({
-			id: "company-no-coords",
-			address: {
-				id: "addr-null",
-				zip_code: "78700-000",
-				street: "R. Sem Coords",
-				number: "1",
-				complement: null,
-				district: "Centro",
-				city: "Rondonópolis",
-				state: "Mato Grosso",
-				state_code: "MT",
-				latitude: null,
-				longitude: null,
-			},
-		});
-		repo.companies = [companyWithoutLatLon];
-		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
-		expect(result.companies).toHaveLength(0);
-		expect(result.next_cursor).toBeNull();
-	});
-
 	it("deve retornar lista vazia quando nenhuma empresa no raio", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 100 });
@@ -362,6 +339,47 @@ describe("ListMarketUseCase", () => {
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].phones).toEqual([]);
+	});
+
+	it("deve retornar business_name preenchido", async () => {
+		repo.companies = [makeDefaultCompany()];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].business_name).toBe("Bio Ecologica");
+	});
+
+	it("deve retornar latitude e longitude do endereço", async () => {
+		repo.companies = [makeDefaultCompany()];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].address.latitude).toEqual(expect.any(Number));
+		expect(result.companies[0].address.longitude).toEqual(expect.any(Number));
+	});
+
+	it("deve retornar identity e identity_type quando identity_type for CNPJ", async () => {
+		repo.companies = [
+			makeDefaultCompany({
+				identity: "12345678000190",
+				identity_type: "CNPJ" as const,
+			}),
+		];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].identity).toBe("12345678000190");
+		expect(result.companies[0].identity_type).toBe("CNPJ");
+	});
+
+	it("não deve retornar identity quando identity_type for CPF (LGPD)", async () => {
+		repo.companies = [
+			makeDefaultCompany({
+				identity: "12345678901",
+				identity_type: "CPF" as const,
+			}),
+		];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].identity).toBeNull();
+		expect(result.companies[0].identity_type).toBeNull();
 	});
 
 	it("deve aplicar radius padrão de 1000m quando não informado", async () => {

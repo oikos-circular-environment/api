@@ -1,12 +1,14 @@
 import { Prisma } from "@/generated/prisma/client.js";
 import { prisma } from "@/lib/prisma.js";
-import type { MarketCompany } from "@/modules/market/dtos/market-dto.js";
+import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 import type { MarketRepository } from "@/modules/market/repositories/market-repository.js";
 
 type RawCompanyRow = {
 	id: string;
-	business_name: string | null;
+	business_name: string;
 	corporate_name: string;
+	identity: string;
+	identity_type: string;
 	company_type: string;
 	status: boolean;
 	phones: string[];
@@ -19,8 +21,8 @@ type RawCompanyRow = {
 	city: string;
 	state: string;
 	state_code: string;
-	latitude: number | null;
-	longitude: number | null;
+	latitude: number;
+	longitude: number;
 	distance_in_meters: number;
 };
 
@@ -37,7 +39,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 		category?: "services" | "waste";
 		offset: number;
 		limit: number;
-	}): Promise<{ companies: MarketCompany[]; total: number }> {
+	}): Promise<{ companies: MarketCompanyRecord[]; total: number }> {
 		const { lat, lon, radius, q, category, offset, limit } = params;
 
 		const origin = Prisma.sql`ST_SetSRID(ST_Point(${lon}, ${lat}), 4326)`;
@@ -86,6 +88,8 @@ export class MarketRepositoryPrisma implements MarketRepository {
         c.id,
         c.business_name,
         c.corporate_name,
+        c.identity,
+        c.identity_type,
         c.company_type,
         c.status,
         c.phones,
@@ -140,7 +144,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 			}),
 		]);
 
-		const companies: MarketCompany[] = rows.map((row) => {
+		const companies: MarketCompanyRecord[] = rows.map((row) => {
 			const services = allServices
 				.filter((s) => s.company_id === row.id)
 				.map((s) => ({
@@ -148,13 +152,13 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					name: s.name,
 					description: s.description,
 					price: Number(s.price),
-					unit: s.unit as MarketCompany["services"][number]["unit"],
+					unit: s.unit as MarketCompanyRecord["services"][number]["unit"],
 					waste_category_id: s.waste_category_id,
 					waste_category: {
 						id: s.waste_category.id,
 						name: s.waste_category.name,
 						hazard_levels: s.waste_category
-							.hazard_levels as MarketCompany["services"][number]["waste_category"]["hazard_levels"],
+							.hazard_levels as MarketCompanyRecord["services"][number]["waste_category"]["hazard_levels"],
 					},
 					quantity: Number(s.quantity),
 					observations: s.observations,
@@ -167,13 +171,13 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					name: w.name,
 					description: w.description,
 					price: Number(w.price),
-					unit: w.unit as MarketCompany["wastes"][number]["unit"],
+					unit: w.unit as MarketCompanyRecord["wastes"][number]["unit"],
 					waste_category_id: w.waste_category_id,
 					waste_category: {
 						id: w.waste_category.id,
 						name: w.waste_category.name,
 						hazard_levels: w.waste_category
-							.hazard_levels as MarketCompany["wastes"][number]["waste_category"]["hazard_levels"],
+							.hazard_levels as MarketCompanyRecord["wastes"][number]["waste_category"]["hazard_levels"],
 					},
 					quantity: Number(w.quantity),
 					observations: w.observations,
@@ -184,7 +188,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 				.map((bh) => ({
 					id: bh.id,
 					day_of_week:
-						bh.day_of_week as MarketCompany["business_hours"][number]["day_of_week"],
+						bh.day_of_week as MarketCompanyRecord["business_hours"][number]["day_of_week"],
 					is_open: bh.is_open,
 					time_slots: bh.time_slots.map((ts) => ({
 						id: ts.id,
@@ -197,7 +201,10 @@ export class MarketRepositoryPrisma implements MarketRepository {
 				id: row.id,
 				business_name: row.business_name,
 				corporate_name: row.corporate_name,
-				company_type: row.company_type as MarketCompany["company_type"],
+				identity: row.identity,
+				identity_type:
+					row.identity_type as MarketCompanyRecord["identity_type"],
+				company_type: row.company_type as MarketCompanyRecord["company_type"],
 				status: row.status,
 				phones: row.phones,
 				address: {

@@ -19,7 +19,7 @@ export class ListMarketUseCase {
 
 		const offset = cursor ? parseInt(atob(cursor), 10) : 0;
 
-		const { companies, total } = await this.repo.findMany({
+		const { companies: records, total } = await this.repo.findMany({
 			lat,
 			lon,
 			radius,
@@ -28,6 +28,15 @@ export class ListMarketUseCase {
 			offset,
 			limit,
 		});
+
+		// LGPD: identity só é exposto para CNPJ — CPF de pessoa física nunca é retornado
+		const companies: MarketCompany[] = records.map(
+			({ identity, identity_type, ...rest }) => ({
+				...rest,
+				identity: identity_type === "CNPJ" ? identity : null,
+				identity_type: identity_type === "CNPJ" ? identity_type : null,
+			}),
+		);
 
 		const next_cursor =
 			offset + limit < total ? btoa(String(offset + limit)) : null;
