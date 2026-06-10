@@ -165,7 +165,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!complaint) return null;
+		if (!complaint) throw new Error(`Complaint ${complaintId} not found`);
 
 		complaint.status = status;
 		return this.mapComplaint(complaint);

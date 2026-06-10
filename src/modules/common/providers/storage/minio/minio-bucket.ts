@@ -5,7 +5,7 @@ import {
 	PutObjectCommand,
 	S3Client,
 } from "@aws-sdk/client-s3";
-import { env } from "@/env/index.js";
+import { env, getMinioConfig } from "@/env/index.js";
 import type { StorageFile, StorageProvider } from "../storage.js";
 
 export class MinioBucket implements StorageProvider {
@@ -13,16 +13,17 @@ export class MinioBucket implements StorageProvider {
 	private bucket: string;
 
 	constructor() {
+		const minio = getMinioConfig();
 		this.client = new S3Client({
-			endpoint: `http://${env.MINIO_ENDPOINT}:${env.MINIO_PORT}`,
+			endpoint: `http://${minio.endpoint}:${minio.port}`,
 			region: "us-east-1",
 			credentials: {
-				accessKeyId: env.MINIO_ACCESS_KEY!,
-				secretAccessKey: env.MINIO_SECRET_KEY!,
+				accessKeyId: minio.accessKey,
+				secretAccessKey: minio.secretKey,
 			},
 			forcePathStyle: true,
 		});
-		this.bucket = env.MINIO_BUCKET;
+		this.bucket = minio.bucket;
 	}
 
 	async uploadFile(

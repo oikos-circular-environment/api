@@ -42,13 +42,10 @@ export class CancelComplaintUseCase {
 			);
 		}
 
-		const canceled =
-			await this.complaintsRepository.updateStatusByUserAndComplaintId(
-				userId,
-				complaintId,
-				"CANCELED",
-			);
-
-		return canceled!;
+		return this.complaintsRepository.updateStatusByUserAndComplaintId(
+			userId,
+			complaintId,
+			"CANCELED",
+		);
 	}
 }

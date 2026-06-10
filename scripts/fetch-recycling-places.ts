@@ -18,6 +18,7 @@ import "dotenv/config";
 const OUT_PATH = resolve("prisma/seeds/recycling-companies.json");
 
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
+if (!API_KEY) throw new Error("GOOGLE_PLACES_API_KEY env var is required");
 const BASE_URL = "https://places.googleapis.com/v1";
 
 const RONDONOPOLIS_BOUNDS = {
@@ -122,7 +123,7 @@ async function textSearch(
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
-			"X-Goog-Api-Key": API_KEY!,
+			"X-Goog-Api-Key": API_KEY,
 			"X-Goog-FieldMask": TEXT_SEARCH_FIELD_MASK,
 		},
 		body: JSON.stringify(body),
@@ -158,7 +159,7 @@ const DETAIL_FIELD_MASK = [
 async function placeDetails(placeId: string): Promise<GooglePlace> {
 	const res = await fetch(`${BASE_URL}/places/${placeId}?languageCode=pt-BR`, {
 		headers: {
-			"X-Goog-Api-Key": API_KEY!,
+			"X-Goog-Api-Key": API_KEY,
 			"X-Goog-FieldMask": DETAIL_FIELD_MASK,
 		},
 	});

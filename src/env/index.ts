@@ -84,3 +84,48 @@ if (_env.success === false) {
 }
 
 export const env = _env.data;
+
+export function getMinioConfig(): {
+	endpoint: string;
+	port: number;
+	accessKey: string;
+	secretKey: string;
+	bucket: string;
+} {
+	const { MINIO_ENDPOINT, MINIO_ACCESS_KEY, MINIO_SECRET_KEY } = env;
+	if (!MINIO_ENDPOINT || !MINIO_ACCESS_KEY || !MINIO_SECRET_KEY) {
+		throw new Error("Minio config unavailable. Ensure STORAGE_PROVIDER=minio");
+	}
+	return {
+		endpoint: MINIO_ENDPOINT,
+		port: env.MINIO_PORT,
+		accessKey: MINIO_ACCESS_KEY,
+		secretKey: MINIO_SECRET_KEY,
+		bucket: env.MINIO_BUCKET,
+	};
+}
+
+export function getSupabaseConfig(): {
+	url: string;
+	secretKey: string;
+	publishableKey: string | undefined;
+	bucket: string;
+} {
+	const { SUPABASE_URL, SUPABASE_SECRET_KEY, SUPABASE_OIKOS_PROFILES_BUCKET } =
+		env;
+	if (
+		!SUPABASE_URL ||
+		!SUPABASE_SECRET_KEY ||
+		!SUPABASE_OIKOS_PROFILES_BUCKET
+	) {
+		throw new Error(
+			"Supabase config unavailable. Ensure STORAGE_PROVIDER=supabase",
+		);
+	}
+	return {
+		url: SUPABASE_URL,
+		secretKey: SUPABASE_SECRET_KEY,
+		publishableKey: env.SUPABASE_PUBLISHABLE_KEY,
+		bucket: SUPABASE_OIKOS_PROFILES_BUCKET,
+	};
+}

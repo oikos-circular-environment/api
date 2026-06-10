@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { assert, describe, expect, it, vi } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
@@ -52,11 +52,12 @@ describe("delete-complaint-attachment-use-case", () => {
 			created.id,
 		);
 		const attachmentId = withAttachment?.attachments[0]?.id;
+		assert(attachmentId !== undefined);
 
 		await sut.execute({
 			userId: "11111111-1111-1111-1111-111111111111",
 			complaintId: created.id,
-			attachmentId: attachmentId!,
+			attachmentId,
 		});
 
 		expect(storageProvider.deleteFile).toHaveBeenCalledWith(

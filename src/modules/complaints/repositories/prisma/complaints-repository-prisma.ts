@@ -209,14 +209,15 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 		status: ComplaintStatus,
 	) {
-		const updatedRows = await prisma.complaint.updateMany({
+		await prisma.complaint.updateMany({
 			where: { id: complaintId, user_id: userId },
 			data: { status },
 		});
 
-		if (updatedRows.count === 0) return null;
-
-		return this.findByUserAndComplaintId(userId, complaintId);
+		const updated = await this.findByUserAndComplaintId(userId, complaintId);
+		if (!updated)
+			throw new Error(`Complaint ${complaintId} not found after status update`);
+		return updated;
 	}
 
 	async attachByComplaintId(

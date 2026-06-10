@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { describe, expect, it } from "vitest";
+import { assert, describe, expect, it } from "vitest";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
@@ -81,7 +81,8 @@ describe("get-resolutions-use-case", () => {
 			userAId,
 			complaint.id,
 		);
-		await repo.addResolutionAttachment(userAId, resolution?.id!, {
+		assert(resolution !== null);
+		await repo.addResolutionAttachment(userAId, resolution.id, {
 			url: "https://example.com/img.jpg",
 			file_name: "img.jpg",
 			path: "resolutions/img.jpg",

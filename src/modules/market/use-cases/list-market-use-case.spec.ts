@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { assert, beforeEach, describe, expect, it } from "vitest";
 import { makeMarketCompany } from "@/modules/market/factories/make-market-company.js";
 import { makeMarketItem } from "@/modules/market/factories/make-market-item.js";
 import { InMemoryMarketRepository } from "../repositories/in-memory/in-memory-market-repository.js";
@@ -262,12 +262,13 @@ describe("ListMarketUseCase", () => {
 		const page1 = await sut.execute({ ...ORIGIN, radius: 5000, limit: 2 });
 		expect(page1.companies).toHaveLength(2);
 		expect(page1.next_cursor).not.toBeNull();
+		assert(page1.next_cursor !== null);
 
 		const page2 = await sut.execute({
 			...ORIGIN,
 			radius: 5000,
 			limit: 2,
-			cursor: page1.next_cursor!,
+			cursor: page1.next_cursor,
 		});
 		expect(page2.companies).toHaveLength(2);
 

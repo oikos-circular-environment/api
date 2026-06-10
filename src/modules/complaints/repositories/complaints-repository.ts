@@ -40,7 +40,7 @@ export interface ComplaintsRepository {
 		userId: string,
 		complaintId: string,
 		status: ComplaintStatus,
-	): Promise<Complaint | null>;
+	): Promise<Complaint>;
 
 	attachByComplaintId(
 		userId: string,

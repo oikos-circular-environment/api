@@ -1,13 +1,14 @@
 import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import type { FastifyInstance } from "fastify";
-import { env } from "@/env/index.js";
+import { getMinioConfig } from "@/env/index.js";
 
+const minio = getMinioConfig();
 const client = new S3Client({
-	endpoint: `http://${env.MINIO_ENDPOINT}:${env.MINIO_PORT}`,
+	endpoint: `http://${minio.endpoint}:${minio.port}`,
 	region: "us-east-1",
 	credentials: {
-		accessKeyId: env.MINIO_ACCESS_KEY!,
-		secretAccessKey: env.MINIO_SECRET_KEY!,
+		accessKeyId: minio.accessKey,
+		secretAccessKey: minio.secretKey,
 	},
 	forcePathStyle: true,
 });
@@ -19,7 +20,7 @@ export async function storageRoutes(app: FastifyInstance) {
 		try {
 			const response = await client.send(
 				new GetObjectCommand({
-					Bucket: env.MINIO_BUCKET,
+					Bucket: minio.bucket,
 					Key: filePath,
 				}),
 			);

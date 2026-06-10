@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { describe, expect, it } from "vitest";
+import { assert, describe, expect, it } from "vitest";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { GetComplaintsUseCase } from "./get-complaints-use-case.js";
@@ -122,10 +122,11 @@ describe("get-complaints-use-case", () => {
 		expect(firstPage.complaints.length).toBe(3);
 		expect(firstPage.next_cursor).not.toBeNull();
 
+		assert(firstPage.next_cursor !== null);
 		const secondPage = await sut.execute({
 			userId: userAId,
 			limit: 3,
-			cursor: new Date(firstPage.next_cursor!),
+			cursor: new Date(firstPage.next_cursor),
 		});
 
 		expect(secondPage.complaints.length).toBe(2);

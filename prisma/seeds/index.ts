@@ -1,10 +1,11 @@
 import "dotenv/config";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { env } from "../../src/env/index.js";
 import { PrismaClient } from "../../src/generated/prisma/client.js";
 import { seedRecyclingCompanies } from "./recycling-companies.js";
 import { seedWasteCategories } from "./waste-categories.seed.js";
 
-const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
+const adapter = new PrismaPg({ connectionString: env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
 
 async function seed() {
