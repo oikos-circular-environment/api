@@ -1,102 +1,40 @@
 import z from "zod";
+import {
+	complaintAttachmentSchema,
+	complaintCaptureModeSchema,
+	complaintCategorySchema,
+	complaintStatusSchema,
+	complaintsSchema,
+	complaintVoteSchema,
+	geospatialSchema,
+	resolutionAttachmentSchema,
+} from "../entities/complaint-entity.js";
 
-export const complaintStatusSchema = z.enum(["OPEN", "RESOLVED", "CANCELED"]);
-
-export type ComplaintStatus = z.infer<typeof complaintStatusSchema>;
-
-export const complaintCaptureModeSchema = z.enum(["PHOTO", "VIDEO"]);
-
-export type ComplaintCaptureMode = z.infer<typeof complaintCaptureModeSchema>;
-
-export const complaintVoteTypeSchema = z.enum(["RESOLVED", "NOT_RESOLVED"]);
-
-export type ComplaintVoteType = z.infer<typeof complaintVoteTypeSchema>;
-
-const headingSchema = z.object({
-	trueHeading: z.number(),
-	magHeading: z.number(),
-	accuracy: z.number(),
-});
-
-const locationCoordsSchema = z.object({
-	latitude: z.number(),
-	longitude: z.number(),
-	altitude: z.number().nullable(),
-	accuracy: z.number().nullable(),
-	altitudeAccuracy: z.number().nullable(),
-	heading: z.number().nullable(),
-	speed: z.number().nullable(),
-});
-
-const locationSchema = z.object({
-	coords: locationCoordsSchema,
-	timestamp: z.number(),
-	mocked: z.boolean().optional(),
-});
-
-const addressesSchema = z.object({
-	city: z.string().nullable(),
-	district: z.string().nullable(),
-	streetNumber: z.string().nullable(),
-	street: z.string().nullable(),
-	region: z.string().nullable(),
-	subregion: z.string().nullable(),
-	country: z.string().nullable(),
-	postalCode: z.string().nullable(),
-	name: z.string().nullable(),
-	isoCountryCode: z.string().nullable(),
-	timezone: z.string().nullable(),
-	formattedAddress: z.string().nullish(),
-});
-
-export const geospatialSchema = z.object({
-	heading: headingSchema.nullable(),
-	location: locationSchema,
-	addresses: addressesSchema,
-});
-
-export type Geospatial = z.infer<typeof geospatialSchema>;
-
-export const complaintAttachmentSchema = z.object({
-	id: z.string(),
-	url: z.string(),
-	file_name: z.string(),
-	path: z.string(),
-	base64: z.string(),
-	metadata: z.record(z.string(), z.unknown()).nullable(),
-	type: complaintCaptureModeSchema,
-	created_at: z.date(),
-});
-
-export type ComplaintAttachment = z.infer<typeof complaintAttachmentSchema>;
-
-export const complaintCategorySchema = z.object({
-	id: z.string(),
-	name: z.string(),
-	hazard_levels: z.array(z.enum(["LOW", "MEDIUM", "HIGH", "VERY_HIGH"])),
-});
-
-export type ComplaintCategory = z.infer<typeof complaintCategorySchema>;
-
-export const complaintSchema = z.object({
-	id: z.string(),
-	status: complaintStatusSchema,
-	date: z.date(),
-	observations: z.string().nullable(),
-	geospatial: geospatialSchema,
-	attachments: z.array(complaintAttachmentSchema),
-	categories: z.array(complaintCategorySchema),
-	vote_counts: z.object({
-		resolved: z.number().int().nonnegative(),
-		not_resolved: z.number().int().nonnegative(),
-	}),
-	resolution_count: z.number().int().nonnegative(),
-	created_at: z.date(),
-});
-
-export type Complaint = z.infer<typeof complaintSchema>;
-
-export const complaintsSchema = z.array(complaintSchema);
+export type {
+	Complaint,
+	ComplaintAttachment,
+	ComplaintCaptureMode,
+	ComplaintCategory,
+	ComplaintStatus,
+	ComplaintVote,
+	ComplaintVoteType,
+	Geospatial,
+	Resolution,
+	ResolutionAttachment,
+} from "../entities/complaint-entity.js";
+export {
+	complaintAttachmentSchema,
+	complaintCaptureModeSchema,
+	complaintCategorySchema,
+	complaintSchema,
+	complaintStatusSchema,
+	complaintsSchema,
+	complaintVoteSchema,
+	complaintVoteTypeSchema,
+	geospatialSchema,
+	resolutionAttachmentSchema,
+	resolutionSchema,
+} from "../entities/complaint-entity.js";
 
 export const complaintResumeSchema = z.object({
 	total: z.number().int().nonnegative(),
@@ -104,7 +42,6 @@ export const complaintResumeSchema = z.object({
 	resolved: z.number().int().nonnegative(),
 	canceled: z.number().int().nonnegative(),
 });
-
 export type ComplaintResume = z.infer<typeof complaintResumeSchema>;
 
 export const createComplaintSchema = z.object({
@@ -115,7 +52,6 @@ export const createComplaintSchema = z.object({
 		.array(z.string())
 		.min(1, "At least one waste category is required"),
 });
-
 export type CreateComplaint = z.infer<typeof createComplaintSchema>;
 
 export const updateComplaintSchema = z
@@ -133,7 +69,6 @@ export const updateComplaintSchema = z
 			data.waste_category_ids !== undefined,
 		{ message: "At least one field must be provided" },
 	);
-
 export type UpdateComplaint = z.infer<typeof updateComplaintSchema>;
 
 export const saveComplaintAttachmentSchema = z.object({
@@ -144,7 +79,6 @@ export const saveComplaintAttachmentSchema = z.object({
 	metadata: z.record(z.string(), z.unknown()).nullable().optional(),
 	type: complaintCaptureModeSchema,
 });
-
 export type SaveComplaintAttachment = z.infer<
 	typeof saveComplaintAttachmentSchema
 >;
@@ -152,21 +86,18 @@ export type SaveComplaintAttachment = z.infer<
 export const getComplaintsFiltersSchema = z.object({
 	status: complaintStatusSchema.optional(),
 });
-
 export type GetComplaintsFilters = z.infer<typeof getComplaintsFiltersSchema>;
 
 export const getComplaintsQuerySchema = getComplaintsFiltersSchema.extend({
 	cursor: z.string().datetime().optional(),
 	limit: z.coerce.number().int().min(1).max(100).default(20),
 });
-
 export type GetComplaintsQuery = z.infer<typeof getComplaintsQuerySchema>;
 
 export const paginatedComplaintsSchema = z.object({
 	complaints: complaintsSchema,
 	next_cursor: z.string().datetime().nullable(),
 });
-
 export type PaginatedComplaints = z.infer<typeof paginatedComplaintsSchema>;
 
 export const resolverCompanySchema = z.object({
@@ -189,14 +120,6 @@ export const resolverSchema = z.discriminatedUnion("type", [
 ]);
 export type Resolver = z.infer<typeof resolverSchema>;
 
-export const resolutionAttachmentSchema = z.object({
-	id: z.string(),
-	url: z.string(),
-	file_name: z.string(),
-	created_at: z.date(),
-});
-export type ResolutionAttachment = z.infer<typeof resolutionAttachmentSchema>;
-
 export const publicResolutionSchema = z.object({
 	id: z.string(),
 	description: z.string(),
@@ -205,18 +128,6 @@ export const publicResolutionSchema = z.object({
 	created_at: z.date(),
 });
 export type PublicResolution = z.infer<typeof publicResolutionSchema>;
-
-export const resolutionSchema = z.object({
-	id: z.string(),
-	description: z.string(),
-	company_id: z.string().nullable(),
-	resolver_user_profile: resolverProfileSchema,
-	resolver_company: resolverCompanySchema.nullable(),
-	attachments: z.array(resolutionAttachmentSchema),
-	created_at: z.date(),
-	updated_at: z.date(),
-});
-export type Resolution = z.infer<typeof resolutionSchema>;
 
 export const publicComplaintSchema = z.object({
 	id: z.string(),
@@ -262,16 +173,6 @@ export const getMapComplaintsQuerySchema = z.object({
 });
 export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;
 
-export const complaintVoteSchema = z.object({
-	id: z.string(),
-	complaint_id: z.string(),
-	user_id: z.string(),
-	vote_type: complaintVoteTypeSchema,
-	created_at: z.date(),
-	updated_at: z.date(),
-});
-export type ComplaintVote = z.infer<typeof complaintVoteSchema>;
-
 export const submitVoteSchema = complaintVoteSchema.pick({
 	vote_type: true,
 });
@@ -279,7 +180,7 @@ export type SubmitVote = z.infer<typeof submitVoteSchema>;
 
 export const submitResolutionSchema = z.object({
 	description: z.string().min(1),
-	company_id: z.string().uuid().optional(),
+	company_id: z.uuid().optional(),
 });
 export type SubmitResolution = z.infer<typeof submitResolutionSchema>;
 
