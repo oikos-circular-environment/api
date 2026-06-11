@@ -388,4 +388,23 @@ describe("ListMarketUseCase", () => {
 		const result = await sut.execute({ ...ORIGIN });
 		expect(result.companies).toHaveLength(0);
 	});
+
+	it("deve retornar avatar como null quando empresa não tem imagem", async () => {
+		repo.companies = [makeDefaultCompany()];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0]).toHaveProperty("avatar");
+		expect(result.companies[0].avatar).toBeNull();
+	});
+
+	it("deve retornar avatar preenchido quando empresa tem imagem", async () => {
+		repo.companies = [
+			makeDefaultCompany({
+				avatar: "https://example.com/avatar.jpg",
+			}),
+		];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].avatar).toBe("https://example.com/avatar.jpg");
+	});
 });

@@ -24,6 +24,7 @@ type RawCompanyRow = {
 	latitude: number;
 	longitude: number;
 	distance_in_meters: number;
+	avatar: string | null;
 };
 
 type RawCountRow = {
@@ -104,9 +105,11 @@ export class MarketRepositoryPrisma implements MarketRepository {
         a.state_code,
         a.latitude,
         a.longitude,
+        ca.url AS avatar,
         ST_Distance(a.location, ${origin}) AS distance_in_meters
       FROM companies c
       JOIN addresses a ON a.id = c.address_id
+      LEFT JOIN company_avatars ca ON ca.id = c.avatar_id
       WHERE a.location IS NOT NULL
         AND ST_DWithin(a.location, ${origin}, ${radius})
         AND c.status = true
@@ -220,6 +223,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					latitude: row.latitude,
 					longitude: row.longitude,
 				},
+				avatar: row.avatar,
 				services,
 				wastes,
 				business_hours: businessHours,

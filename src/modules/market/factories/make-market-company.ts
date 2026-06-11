@@ -30,6 +30,7 @@ export function makeMarketCompany(
 			latitude: DEFAULT_LAT,
 			longitude: DEFAULT_LON,
 		},
+		avatar: null,
 		phones: [faker.string.numeric(11)],
 		services: [makeMarketItem()],
 		wastes: [makeMarketItem()],

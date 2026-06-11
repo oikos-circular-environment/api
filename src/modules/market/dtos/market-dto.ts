@@ -83,6 +83,7 @@ const marketCompanyBaseSchema = z.object({
 	status: z.boolean(),
 	phones: z.array(z.string()),
 	address: marketAddressSchema,
+	avatar: z.string().nullable(),
 	services: z.array(marketItemSchema),
 	wastes: z.array(marketItemSchema),
 	business_hours: z.array(marketBusinessHourSchema),
