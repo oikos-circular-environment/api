@@ -46,13 +46,13 @@ export const uploadProfileImageSchema = z.object({
 });
 export type UploadProfileImage = z.infer<typeof uploadProfileImageSchema>;
 
+export type {
+	Address,
+	Profile,
+	ProfileImage,
+} from "../entities/profile-entity.js";
 export {
 	addressSchema,
 	profileImageSchema,
 	profileSchema,
-} from "../entities/profile-entity.js";
-export type {
-	Address,
-	ProfileImage,
-	Profile,
 } from "../entities/profile-entity.js";

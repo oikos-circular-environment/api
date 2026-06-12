@@ -62,7 +62,6 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 2.5,
-					observations: "Inclui transporte",
 				},
 				{
 					name: "Coleta de metal",
@@ -71,7 +70,7 @@ describe("upsert-company-services-use-case", () => {
 					unit: "KG",
 					waste_category_id: otherCategoryId,
 					quantity: 1,
-					observations: null,
+
 				},
 			],
 		});
@@ -95,7 +94,7 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 3,
-					observations: null,
+
 				},
 			],
 		});
@@ -122,7 +121,7 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 1,
-					observations: null,
+
 				},
 			],
 		});
@@ -149,7 +148,7 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 1,
-					observations: null,
+
 				},
 			],
 		});
@@ -202,7 +201,7 @@ describe("upsert-company-services-use-case", () => {
 						unit: "UNIT",
 						waste_category_id: categoryId,
 						quantity: 1,
-						observations: null,
+	
 					},
 					{
 						name: "Coleta",
@@ -211,7 +210,7 @@ describe("upsert-company-services-use-case", () => {
 						unit: "UNIT",
 						waste_category_id: otherCategoryId,
 						quantity: 2,
-						observations: null,
+	
 					},
 				],
 			});
@@ -247,7 +246,7 @@ describe("upsert-company-services-use-case", () => {
 						unit: "UNIT",
 						waste_category_id: randomUUID(),
 						quantity: 1,
-						observations: null,
+	
 					},
 				],
 			});

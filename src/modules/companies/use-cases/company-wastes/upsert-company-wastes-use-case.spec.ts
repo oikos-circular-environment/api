@@ -62,7 +62,6 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 100,
-					observations: "Limpo e seco",
 				},
 				{
 					name: "Plástico",
@@ -71,7 +70,6 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: otherCategoryId,
 					quantity: 50,
-					observations: null,
 				},
 			],
 		});
@@ -95,7 +93,6 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 30,
-					observations: null,
 				},
 			],
 		});
@@ -122,7 +119,7 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 10,
-					observations: null,
+
 				},
 			],
 		});
@@ -149,7 +146,7 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 10,
-					observations: null,
+
 				},
 			],
 		});
@@ -202,7 +199,7 @@ describe("upsert-company-wastes-use-case", () => {
 						unit: "KG",
 						waste_category_id: categoryId,
 						quantity: 10,
-						observations: null,
+	
 					},
 					{
 						name: "Papel",
@@ -211,7 +208,7 @@ describe("upsert-company-wastes-use-case", () => {
 						unit: "KG",
 						waste_category_id: otherCategoryId,
 						quantity: 5,
-						observations: null,
+	
 					},
 				],
 			});
@@ -247,7 +244,7 @@ describe("upsert-company-wastes-use-case", () => {
 						unit: "KG",
 						waste_category_id: randomUUID(),
 						quantity: 10,
-						observations: null,
+	
 					},
 				],
 			});

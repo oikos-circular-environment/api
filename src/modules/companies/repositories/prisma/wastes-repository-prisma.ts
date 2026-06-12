@@ -64,7 +64,6 @@ function mapWaste(raw: {
 	price: { toNumber: () => number } | number;
 	unit: string;
 	quantity: { toNumber: () => number } | number;
-	observations: string | null;
 	created_at: Date;
 	updated_at: Date;
 	waste_category_id: string;
@@ -77,7 +76,6 @@ function mapWaste(raw: {
 		price: Number(raw.price),
 		unit: raw.unit as CompanyWaste["unit"],
 		quantity: Number(raw.quantity),
-		observations: raw.observations,
 		waste_category_id: raw.waste_category_id,
 		waste_category: mapCategory(raw.waste_category),
 		created_at: raw.created_at,
@@ -111,7 +109,6 @@ export class PrismaWastesRepository implements WastesRepository {
 						price: item.price,
 						unit: item.unit,
 						quantity: item.quantity,
-						observations: item.observations,
 						waste_category_id: item.waste_category_id,
 					})),
 				});

@@ -11,7 +11,6 @@ export const companyServiceSchema = z.object({
 	waste_category_id: z.uuid("waste_category_id must be a valid UUID"),
 	waste_category: wasteCategorySchema,
 	quantity: z.number().positive("Quantity must be greater than zero"),
-	observations: z.string().optional().nullable(),
 	created_at: z.date(),
 	updated_at: z.date(),
 });

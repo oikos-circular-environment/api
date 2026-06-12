@@ -43,7 +43,6 @@ export class InMemoryWastesRepository implements WastesRepository {
 			price: item.price,
 			unit: item.unit,
 			quantity: item.quantity,
-			observations: item.observations ?? null,
 			waste_category_id: item.waste_category_id,
 			waste_category: this.categoryMap.get(item.waste_category_id) ?? {
 				...STUB_CATEGORY,

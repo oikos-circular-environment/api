@@ -16,7 +16,6 @@ export function makeCompanyWaste(
 		waste_category_id: category.id,
 		waste_category: category,
 		quantity: faker.number.float({ min: 1, max: 1000, fractionDigits: 1 }),
-		observations: null,
 		created_at: new Date(),
 		updated_at: new Date(),
 		...overrides,
