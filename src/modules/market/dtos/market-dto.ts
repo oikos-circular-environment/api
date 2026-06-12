@@ -49,7 +49,6 @@ const marketItemSchema = companyWasteSchema
 	})
 	.extend({
 		description: z.string().nullable(),
-		observations: z.string().nullable(),
 		waste_category: marketWasteCategorySchema,
 	});
 export type MarketItem = z.infer<typeof marketItemSchema>;

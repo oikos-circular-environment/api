@@ -49,7 +49,6 @@ describe("get-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 2,
-					observations: "Includes transport",
 				},
 			],
 		});

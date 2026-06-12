@@ -16,7 +16,6 @@ export function makeMarketItem(overrides?: Partial<MarketItem>): MarketItem {
 			hazard_levels: ["LOW"],
 		},
 		quantity: faker.number.float({ min: 1, max: 1000, fractionDigits: 1 }),
-		observations: null,
 		...overrides,
 	};
 }

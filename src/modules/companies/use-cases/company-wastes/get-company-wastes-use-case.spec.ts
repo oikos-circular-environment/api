@@ -49,7 +49,6 @@ describe("get-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 100,
-					observations: null,
 				},
 			],
 		});

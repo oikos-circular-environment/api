@@ -164,7 +164,6 @@ export class MarketRepositoryPrisma implements MarketRepository {
 							.hazard_levels as MarketCompanyRecord["services"][number]["waste_category"]["hazard_levels"],
 					},
 					quantity: Number(s.quantity),
-					observations: s.observations,
 				}));
 
 			const wastes = allWastes
@@ -183,7 +182,6 @@ export class MarketRepositoryPrisma implements MarketRepository {
 							.hazard_levels as MarketCompanyRecord["wastes"][number]["waste_category"]["hazard_levels"],
 					},
 					quantity: Number(w.quantity),
-					observations: w.observations,
 				}));
 
 			const businessHours = allBusinessHours
