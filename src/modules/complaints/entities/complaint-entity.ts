@@ -103,6 +103,7 @@ export const resolutionSchema = z.object({
 	id: z.string(),
 	description: z.string(),
 	company_id: z.string().nullable(),
+	is_owner: z.boolean(),
 	resolver_user_profile: z.object({
 		type: z.literal("profile"),
 		full_name: z.string(),

@@ -35,7 +35,7 @@ describe("submit-resolution-use-case", () => {
 		);
 	});
 
-	it("updates existing resolution instead of creating a duplicate", async () => {
+	it("throws 422 when submitting a personal resolution that already exists", async () => {
 		const userId = randomUUID();
 		const resolverUserId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
@@ -54,18 +54,78 @@ describe("submit-resolution-use-case", () => {
 			data: resolutionData,
 		});
 
+		await expect(
+			sut.execute({
+				userId: resolverUserId,
+				complaintId: complaint.id,
+				data: { ...resolutionData, description: "Segunda tentativa" },
+			}),
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
+		);
+
+		expect(complaintsRepository.resolutions).toHaveLength(1);
+	});
+
+	it("allows multiple resolutions from the same user for different companies", async () => {
+		const userId = randomUUID();
+		const resolverUserId = randomUUID();
+		const companyAId = randomUUID();
+		const companyBId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const companyChecker = { userOwnsCompany: async () => true };
+		const sut = new SubmitResolutionUseCase(complaintsRepository, companyChecker);
+
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+
 		await sut.execute({
 			userId: resolverUserId,
 			complaintId: complaint.id,
-			data: {
-				...resolutionData,
-				description: "Atualizado: problema resolvido",
-			},
+			data: { ...resolutionData, company_id: companyAId },
+		});
+		await sut.execute({
+			userId: resolverUserId,
+			complaintId: complaint.id,
+			data: { ...resolutionData, company_id: companyBId },
 		});
 
-		expect(complaintsRepository.resolutions).toHaveLength(1);
-		expect(complaintsRepository.resolutions[0].description).toBe(
-			"Atualizado: problema resolvido",
+		expect(complaintsRepository.resolutions).toHaveLength(2);
+	});
+
+	it("throws 422 when submitting again with same user and same company", async () => {
+		const userId = randomUUID();
+		const resolverUserId = randomUUID();
+		const companyId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const companyChecker = { userOwnsCompany: async () => true };
+		const sut = new SubmitResolutionUseCase(complaintsRepository, companyChecker);
+
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+
+		await sut.execute({
+			userId: resolverUserId,
+			complaintId: complaint.id,
+			data: { ...resolutionData, company_id: companyId },
+		});
+
+		await expect(
+			sut.execute({
+				userId: resolverUserId,
+				complaintId: complaint.id,
+				data: { ...resolutionData, company_id: companyId },
+			}),
+		).rejects.toThrowError(
+			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
 		);
 	});
 

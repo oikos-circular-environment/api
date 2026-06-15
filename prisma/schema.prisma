@@ -328,7 +328,7 @@ model ComplaintResolution {
 
   attachments ComplaintResolutionAttachment[]
 
-  @@unique([complaint_id, resolver_user_id])
+  @@unique([complaint_id, resolver_user_id, company_id])
   @@map("complaint_resolutions")
 }
 

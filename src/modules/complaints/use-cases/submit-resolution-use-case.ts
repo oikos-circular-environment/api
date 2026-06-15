@@ -42,23 +42,20 @@ export class SubmitResolutionUseCase {
 		}
 
 		const existing =
-			await this.complaintsRepository.findResolutionByUserAndComplaint(
+			await this.complaintsRepository.findResolutionByUserCompanyAndComplaint(
 				userId,
+				data.company_id ?? null,
 				complaintId,
 			);
 
 		if (existing) {
-			await this.complaintsRepository.updateResolution(
-				userId,
-				complaintId,
-				data,
-			);
-		} else {
-			await this.complaintsRepository.submitResolution(
-				userId,
-				complaintId,
-				data,
+			throw new AppError(
+				"Resolution already exists for this user or company",
+				"RESOLUTION_ALREADY_EXISTS",
+				422,
 			);
 		}
+
+		await this.complaintsRepository.submitResolution(userId, complaintId, data);
 	}
 }

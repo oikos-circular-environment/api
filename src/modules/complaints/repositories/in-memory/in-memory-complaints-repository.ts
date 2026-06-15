@@ -406,6 +406,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 	async findResolutionsByComplaintId(
 		complaintId: string,
+		userId: string,
 	): Promise<Resolution[]> {
 		const resolutions = this.resolutions.filter(
 			(r) => r.complaint_id === complaintId,
@@ -414,6 +415,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			id: r.id,
 			description: r.description,
 			company_id: r.company_id,
+			is_owner: r.resolver_user_id === userId,
 			resolver_user_profile: {
 				type: "profile" as const,
 				full_name: "Anonymous",
@@ -442,6 +444,43 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
 		);
 		return resolution ? { id: resolution.id } : null;
+	}
+
+	async findResolutionByUserCompanyAndComplaint(
+		userId: string,
+		companyId: string | null,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const resolution = this.resolutions.find(
+			(r) =>
+				r.complaint_id === complaintId &&
+				r.resolver_user_id === userId &&
+				r.company_id === companyId,
+		);
+		return resolution ? { id: resolution.id } : null;
+	}
+
+	async findResolutionById(
+		resolutionId: string,
+	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null> {
+		const resolution = this.resolutions.find((r) => r.id === resolutionId);
+		if (!resolution) return null;
+		return {
+			id: resolution.id,
+			complaint_id: resolution.complaint_id,
+			resolver_user_id: resolution.resolver_user_id,
+		};
+	}
+
+	async updateResolutionById(
+		resolutionId: string,
+		description: string,
+	): Promise<void> {
+		const resolution = this.resolutions.find((r) => r.id === resolutionId);
+		if (resolution) {
+			resolution.description = description;
+			resolution.updated_at = new Date();
+		}
 	}
 
 	async submitResolution(

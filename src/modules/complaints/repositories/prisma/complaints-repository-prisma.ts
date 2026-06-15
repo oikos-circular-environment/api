@@ -536,6 +536,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 
 	async findResolutionsByComplaintId(
 		complaintId: string,
+		userId: string,
 	): Promise<Resolution[]> {
 		const resolutions = await prisma.complaintResolution.findMany({
 			where: { complaint_id: complaintId },
@@ -553,6 +554,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			id: r.id,
 			description: r.description,
 			company_id: r.company_id,
+			is_owner: r.resolver_user_id === userId,
 			resolver_user_profile: {
 				type: "profile" as const,
 				full_name:
@@ -687,6 +689,42 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			select: { id: true },
 		});
 		return res ?? null;
+	}
+
+	async findResolutionByUserCompanyAndComplaint(
+		userId: string,
+		companyId: string | null,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const res = await prisma.complaintResolution.findFirst({
+			where: {
+				complaint_id: complaintId,
+				resolver_user_id: userId,
+				company_id: companyId ?? null,
+			},
+			select: { id: true },
+		});
+		return res ?? null;
+	}
+
+	async findResolutionById(
+		resolutionId: string,
+	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null> {
+		const res = await prisma.complaintResolution.findUnique({
+			where: { id: resolutionId },
+			select: { id: true, complaint_id: true, resolver_user_id: true },
+		});
+		return res ?? null;
+	}
+
+	async updateResolutionById(
+		resolutionId: string,
+		description: string,
+	): Promise<void> {
+		await prisma.complaintResolution.update({
+			where: { id: resolutionId },
+			data: { description },
+		});
 	}
 
 	async getDashboardByUserId(userId: string) {

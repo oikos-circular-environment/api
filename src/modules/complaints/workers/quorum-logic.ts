@@ -1,9 +1,7 @@
 import { prisma } from "@/lib/prisma.js";
 
-export async function applyQuorumResolution(
-	complaintId: string,
-): Promise<boolean> {
-	const complaint = await prisma.complaint.findUnique({
+async function fetchComplaintVoteData(complaintId: string) {
+	return prisma.complaint.findUnique({
 		where: { id: complaintId },
 		select: {
 			id: true,
@@ -12,23 +10,45 @@ export async function applyQuorumResolution(
 			votes: { select: { user_id: true, vote_type: true } },
 		},
 	});
+}
 
-	if (!complaint || complaint.status !== "OPEN") return false;
-
-	let positiveWeight = 0;
-	let negativeWeight = 0;
-
-	for (const vote of complaint.votes) {
-		const weight = vote.user_id === complaint.user_id ? 2 : 1;
+function calculateWeights(
+	votes: { user_id: string; vote_type: string }[],
+	ownerId: string,
+) {
+	let positive = 0;
+	let negative = 0;
+	for (const vote of votes) {
+		const weight = vote.user_id === ownerId ? 2 : 1;
 		if (vote.vote_type === "RESOLVED") {
-			positiveWeight += weight;
+			positive += weight;
 		} else {
-			negativeWeight += weight;
+			negative += weight;
 		}
 	}
+	return { positive, negative };
+}
 
-	// Regra: positivos >= 5 + negativos
-	if (positiveWeight >= 5 + negativeWeight) {
+export async function checkQuorumMet(complaintId: string): Promise<boolean> {
+	const complaint = await fetchComplaintVoteData(complaintId);
+	if (!complaint || complaint.status !== "OPEN") return false;
+	const { positive, negative } = calculateWeights(
+		complaint.votes,
+		complaint.user_id,
+	);
+	return positive >= 5 + negative;
+}
+
+export async function applyQuorumResolution(
+	complaintId: string,
+): Promise<boolean> {
+	const complaint = await fetchComplaintVoteData(complaintId);
+	if (!complaint || complaint.status !== "OPEN") return false;
+	const { positive, negative } = calculateWeights(
+		complaint.votes,
+		complaint.user_id,
+	);
+	if (positive >= 5 + negative) {
 		await prisma.complaint.update({
 			where: { id: complaintId },
 			data: { status: "RESOLVED" },

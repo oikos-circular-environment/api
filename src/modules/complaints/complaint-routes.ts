@@ -39,6 +39,7 @@ import { GetResolutionsUseCase } from "./use-cases/get-resolutions-use-case.js";
 import { ResolveComplaintUseCase } from "./use-cases/resolve-complaint-use-case.js";
 import { SubmitResolutionUseCase } from "./use-cases/submit-resolution-use-case.js";
 import { UpdateComplaintUseCase } from "./use-cases/update-complaint-use-case.js";
+import { UpdateResolutionUseCase } from "./use-cases/update-resolution-use-case.js";
 import { VoteComplaintUseCase } from "./use-cases/vote-complaint-use-case.js";
 
 const COMPLAINTS_TAG = "Complaints";
@@ -75,6 +76,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		complaintsRepository,
 		companyChecker,
 	);
+	const updateResolutionUseCase = new UpdateResolutionUseCase(complaintsRepository);
 	const getResolutionsUseCase = new GetResolutionsUseCase(complaintsRepository);
 	const deleteResolutionUseCase = new DeleteResolutionUseCase(
 		complaintsRepository,
@@ -410,8 +412,10 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
+			const userId = request.user.sub;
 			const resolutions = await getResolutionsUseCase.execute({
 				complaintId: request.params.id,
+				userId,
 			});
 			return reply.send({ resolutions });
 		},
@@ -445,13 +449,13 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 
 	typedApp.patch(
-		"/complaints/:id/resolutions",
+		"/complaints/:id/resolutions/:resolutionId",
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Update resolution",
-				params: z.object({ id: z.uuid() }),
-				body: submitResolutionSchema,
+				params: z.object({ id: z.uuid(), resolutionId: z.uuid() }),
+				body: z.object({ description: z.string().min(1) }),
 				response: {
 					204: z.undefined(),
 					401: appErrorSchema,
@@ -462,10 +466,11 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const userId = request.user.sub;
-			await submitResolutionUseCase.execute({
+			await updateResolutionUseCase.execute({
 				userId,
 				complaintId: request.params.id,
-				data: request.body,
+				resolutionId: request.params.resolutionId,
+				description: request.body.description,
 			});
 			return reply.status(204).send();
 		},
