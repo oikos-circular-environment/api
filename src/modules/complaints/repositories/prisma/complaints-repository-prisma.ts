@@ -251,18 +251,41 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	async findMapComplaints(
 		query: GetMapComplaintsQuery,
 	): Promise<MapComplaintItem[]> {
-		const { lat, lon, radius, status } = query;
+		const { lat, lon, radius, status, waste_category_id, hazard_level } = query;
 		const statusValue = status ?? "OPEN";
 
+		const params: unknown[] = [lon, lat, radius, statusValue];
+		let paramIdx = 5;
+		const joins: string[] = [];
+		const conditions: string[] = [];
+
+		if (waste_category_id || hazard_level) {
+			joins.push(
+				"JOIN complaint_waste_categories cwc ON cwc.complaint_id = c.id",
+			);
+		}
+		if (hazard_level) {
+			joins.push("JOIN waste_categories wc ON wc.id = cwc.waste_category_id");
+			conditions.push(`$${paramIdx++}::"HazardLevel" = ANY(wc.hazard_levels)`);
+			params.push(hazard_level);
+		}
+		if (waste_category_id) {
+			conditions.push(`cwc.waste_category_id = $${paramIdx++}::uuid`);
+			params.push(waste_category_id);
+		}
+
+		const distinct = joins.length > 0 ? "DISTINCT" : "";
+		const joinClause = joins.join("\n       ");
+		const whereExtra = conditions.map((c) => `AND ${c}`).join("\n       ");
+
 		const rows = await prisma.$queryRawUnsafe<Array<{ id: string }>>(
-			`SELECT id FROM complaints
-       WHERE ST_DWithin(location, ST_MakePoint($1, $2)::geography, $3)
-       AND status::text = $4
+			`SELECT ${distinct} c.id FROM complaints c
+       ${joinClause}
+       WHERE ST_DWithin(c.location, ST_MakePoint($1, $2)::geography, $3)
+       AND c.status::text = $4
+       ${whereExtra}
        LIMIT 500`,
-			lon,
-			lat,
-			radius,
-			statusValue,
+			...params,
 		);
 
 		if (rows.length === 0) return [];

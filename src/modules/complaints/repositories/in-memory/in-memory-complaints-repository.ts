@@ -222,7 +222,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	async findMapComplaints(
 		query: GetMapComplaintsQuery,
 	): Promise<MapComplaintItem[]> {
-		const { lat, lon, radius, status } = query;
+		const { lat, lon, radius, status, waste_category_id, hazard_level } = query;
 		const statusValue = status ?? "OPEN";
 
 		const toRad = (deg: number) => (deg * Math.PI) / 180;
@@ -247,7 +247,17 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 				const coords = c.geospatial?.location?.coords;
 				if (!coords) return false;
 				return haversine(lat, lon, coords.latitude, coords.longitude) <= radius;
-			});
+			})
+			.filter(
+				(c) =>
+					!waste_category_id ||
+					c.categories.some((cat) => cat.id === waste_category_id),
+			)
+			.filter(
+				(c) =>
+					!hazard_level ||
+					c.categories.some((cat) => cat.hazard_levels.includes(hazard_level)),
+			);
 
 		return filtered.slice(0, 500).map((c) => {
 			const coords = c.geospatial.location.coords;

@@ -14,7 +14,6 @@ import {
 	getComplaintsQuerySchema,
 	getMapComplaintsQuerySchema,
 	mapComplaintItemSchema,
-	publicComplaintSchema,
 	resolutionAttachmentSchema,
 	resolutionSchema,
 	submitResolutionSchema,
@@ -36,7 +35,6 @@ import { GetComplaintVoteUseCase } from "./use-cases/get-complaint-vote-use-case
 import { GetComplaintsDashboardUseCase } from "./use-cases/get-complaints-dashboard-use-case.js";
 import { GetComplaintsUseCase } from "./use-cases/get-complaints-use-case.js";
 import { GetMapComplaintsUseCase } from "./use-cases/get-map-complaints-use-case.js";
-import { GetPublicComplaintUseCase } from "./use-cases/get-public-complaint-use-case.js";
 import { GetResolutionsUseCase } from "./use-cases/get-resolutions-use-case.js";
 import { ResolveComplaintUseCase } from "./use-cases/resolve-complaint-use-case.js";
 import { SubmitResolutionUseCase } from "./use-cases/submit-resolution-use-case.js";
@@ -105,9 +103,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		complaintsRepository,
 	);
 	const getMapComplaintsUseCase = new GetMapComplaintsUseCase(
-		complaintsRepository,
-	);
-	const getPublicComplaintUseCase = new GetPublicComplaintUseCase(
 		complaintsRepository,
 	);
 	const getComplaintVoteUseCase = new GetComplaintVoteUseCase(
@@ -189,28 +184,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		async (request, reply) => {
 			const complaints = await getMapComplaintsUseCase.execute(request.query);
 			return reply.send({ complaints });
-		},
-	);
-
-	typedApp.get(
-		"/complaints/:id/public",
-		{
-			schema: withBearerAuth({
-				tags: [COMPLAINTS_PUBLIC_TAG],
-				summary: "Get public complaint detail",
-				params: z.object({ id: z.uuid() }),
-				response: {
-					200: z.object({ complaint: publicComplaintSchema }),
-					401: appErrorSchema,
-					404: appErrorSchema,
-				},
-			}),
-		},
-		async (request, reply) => {
-			const complaint = await getPublicComplaintUseCase.execute({
-				complaintId: request.params.id,
-			});
-			return reply.send({ complaint });
 		},
 	);
 

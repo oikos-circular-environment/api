@@ -155,4 +155,67 @@ describe("get-map-complaints-use-case", () => {
 
 		expect(items[0]?.location).toEqual({ lat: -23.55, lon: -46.63 });
 	});
+
+	it("filters by waste_category_id", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[1].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			waste_category_id: WASTE_CATEGORIES_SEED[0].id,
+		});
+
+		expect(items).toHaveLength(1);
+		expect(items[0]?.categories[0]?.id).toBe(WASTE_CATEGORIES_SEED[0].id);
+	});
+
+	it("filters by hazard_level", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[1].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const highComplaint = complaintsRepository.complaints[0];
+		if (highComplaint?.categories[0]) {
+			highComplaint.categories[0].hazard_levels = ["HIGH"];
+		}
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			hazard_level: "HIGH",
+		});
+
+		expect(items).toHaveLength(1);
+		expect(items[0]?.categories[0]?.hazard_levels).toContain("HIGH");
+	});
 });

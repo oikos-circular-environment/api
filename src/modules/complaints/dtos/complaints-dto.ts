@@ -9,6 +9,7 @@ import {
 	geospatialSchema,
 	resolutionAttachmentSchema,
 } from "../entities/complaint-entity.js";
+import { hazardLevelSchema } from "@/modules/wastes/entities/waste-entity.js";
 
 export type {
 	Complaint,
@@ -169,7 +170,9 @@ export const getMapComplaintsQuerySchema = z.object({
 	lat: z.coerce.number(),
 	lon: z.coerce.number(),
 	radius: z.coerce.number().int().positive().max(50000).default(1000),
-	status: complaintStatusSchema.optional(),
+	status: z.enum(["OPEN", "RESOLVED"]).optional(),
+	waste_category_id: z.string().uuid().optional(),
+	hazard_level: hazardLevelSchema.optional(),
 });
 export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;
 
