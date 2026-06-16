@@ -126,3 +126,237 @@ O dono da denúncia pode acionar a resolução diretamente:
 3. Dispara a avaliação de quorum.
 
 Se o quorum for atingido, um job de 24h é agendado. A denúncia permanece `OPEN` até o término da janela.
+
+---
+
+## API Reference
+
+> Este documento é a fonte de verdade para implementação de testes E2E no frontend.
+> Um agente sem acesso ao código do backend pode usar esta seção para construir
+> todos os requests necessários para cobrir os fluxos de votação e resolução.
+
+### Autenticação
+
+Todos os endpoints abaixo exigem Bearer token JWT no header:
+
+```
+Authorization: Bearer <token>
+```
+
+**Formato de erro padrão:**
+
+```json
+{ "message": "string", "code": "SNAKE_UPPER_CASE", "statusCode": 400 }
+```
+
+---
+
+### Votação
+
+#### GET /v1/complaints/:id/votes
+
+Retorna o voto do usuário autenticado nesta denúncia, ou `null` se ainda não votou.
+
+**Response 200:**
+```json
+{
+  "vote": {
+    "id": "uuid",
+    "complaint_id": "uuid",
+    "user_id": "uuid",
+    "vote_type": "RESOLVED | NOT_RESOLVED",
+    "created_at": "ISO8601",
+    "updated_at": "ISO8601"
+  }
+}
+```
+*(O campo `vote` é `null` quando o usuário não possui voto registrado.)*
+
+---
+
+#### POST /v1/complaints/:id/votes
+
+Registra ou substitui o voto do usuário (upsert — um único voto por usuário por denúncia).
+
+**Body:**
+```json
+{ "vote_type": "RESOLVED | NOT_RESOLVED" }
+```
+
+**Response 200:**
+```json
+{
+  "vote": {
+    "id": "uuid",
+    "complaint_id": "uuid",
+    "user_id": "uuid",
+    "vote_type": "RESOLVED | NOT_RESOLVED",
+    "created_at": "ISO8601",
+    "updated_at": "ISO8601"
+  }
+}
+```
+
+| Status | Code | Condição |
+|--------|------|----------|
+| 404 | `COMPLAINT_NOT_FOUND` | Denúncia não existe |
+| 422 | `COMPLAINT_CLOSED` | Denúncia está `RESOLVED` ou `CANCELED` |
+
+---
+
+#### DELETE /v1/complaints/:id/votes
+
+Remove o voto do usuário autenticado.
+
+**Response:** `204 No Content`
+
+---
+
+### Resoluções
+
+#### GET /v1/complaints/:id/resolutions
+
+Lista todas as resoluções da denúncia. O campo `is_owner` é calculado no backend — `true` quando a resolução pertence ao usuário autenticado.
+
+**Response 200:**
+```json
+{
+  "resolutions": [
+    {
+      "id": "uuid",
+      "description": "string",
+      "company_id": "uuid | null",
+      "is_owner": true,
+      "resolver_user_profile": {
+        "type": "profile",
+        "full_name": "string",
+        "display_name": "string",
+        "avatar_url": "string | null"
+      },
+      "resolver_company": {
+        "type": "company",
+        "corporate_name": "string",
+        "business_name": "string",
+        "avatar_url": "string | null"
+      },
+      "attachments": [
+        { "id": "uuid", "url": "string", "file_name": "string", "created_at": "ISO8601" }
+      ],
+      "created_at": "ISO8601",
+      "updated_at": "ISO8601"
+    }
+  ]
+}
+```
+
+*(`resolver_company` é `null` quando a resolução é pessoal, sem empresa vinculada.)*
+
+---
+
+#### POST /v1/complaints/:id/resolutions
+
+Cria uma resolução. Unicidade definida pelo par **(usuário, empresa)**: um usuário pode ter múltiplas resoluções na mesma denúncia, uma por empresa diferente; mas não pode repetir o mesmo par.
+
+**Body:**
+```json
+{ "description": "string (min 1 char)", "company_id": "uuid (opcional)" }
+```
+
+**Response:** `204 No Content`
+
+| Status | Code | Condição |
+|--------|------|----------|
+| 403 | `COMPANY_NOT_OWNED` | `company_id` pertence a outro usuário |
+| 404 | `COMPLAINT_NOT_FOUND` | Denúncia não existe |
+| 422 | `COMPLAINT_CLOSED` | Denúncia está `RESOLVED` ou `CANCELED` |
+| 422 | `RESOLUTION_ALREADY_EXISTS` | Par (usuário, empresa) já tem resolução nesta denúncia |
+
+---
+
+#### PATCH /v1/complaints/:id/resolutions/:resolutionId
+
+Atualiza a `description` de uma resolução própria. Apenas o autor pode editar.
+
+**Body:**
+```json
+{ "description": "string (min 1 char)" }
+```
+
+**Response:** `204 No Content`
+
+| Status | Code | Condição |
+|--------|------|----------|
+| 404 | `COMPLAINT_NOT_FOUND` | Denúncia não existe |
+| 404 | `RESOLUTION_NOT_FOUND` | Resolução não existe ou pertence a outro usuário |
+| 422 | `COMPLAINT_CLOSED` | Denúncia está `RESOLVED` ou `CANCELED` |
+
+---
+
+#### DELETE /v1/complaints/:id/resolutions
+
+Remove todas as resoluções do usuário autenticado nesta denúncia.
+
+**Response:** `204 No Content`
+
+| Status | Code | Condição |
+|--------|------|----------|
+| 404 | `COMPLAINT_NOT_FOUND` | Denúncia não existe |
+| 404 | `RESOLUTION_NOT_FOUND` | Usuário não tem resolução nesta denúncia |
+| 422 | `COMPLAINT_CLOSED` | Denúncia está `RESOLVED` ou `CANCELED` |
+
+---
+
+### Fluxo do dono: PATCH /v1/complaints/:id/resolved
+
+Exclusivo para o **dono da denúncia**. Em um único request:
+1. Cria ou atualiza a resolução pessoal do dono (sem empresa)
+2. Registra automaticamente voto `RESOLVED` com peso 2
+3. Dispara avaliação de quorum via BullMQ
+
+**Body:**
+```json
+{ "description": "string (min 1 char)", "company_id": "uuid (opcional)" }
+```
+
+**Response 200:**
+```json
+{
+  "complaint": {
+    "id": "uuid",
+    "status": "OPEN | RESOLVED | CANCELED",
+    "date": "ISO8601",
+    "observations": "string | null",
+    "geospatial": { ... },
+    "attachments": [ ... ],
+    "categories": [ { "id": "uuid", "name": "string", "hazard_levels": ["LOW | MEDIUM | HIGH | VERY_HIGH"] } ],
+    "vote_counts": { "resolved": 0, "not_resolved": 0 },
+    "resolution_count": 0,
+    "created_at": "ISO8601"
+  }
+}
+```
+
+> **Atenção:** o campo `status` na response pode continuar `"OPEN"` mesmo após chamada bem-sucedida.
+> A mudança para `"RESOLVED"` só acontece após a janela de 24h de quorum ser confirmada pelo worker.
+
+| Status | Code | Condição |
+|--------|------|----------|
+| 404 | `COMPLAINT_NOT_FOUND` | Denúncia não existe |
+| 422 | `COMPLAINT_CLOSED` | Denúncia já está fechada |
+
+---
+
+### Cenários críticos para testes E2E no frontend
+
+| # | Cenário | Endpoint | Comportamento esperado |
+|---|---------|----------|----------------------|
+| 1 | Votação básica | POST /votes | `vote_type: "RESOLVED"` → 200 com objeto `vote` |
+| 2 | Upsert de voto | POST /votes (2×) | Segundo voto substitui o primeiro; GET retorna apenas 1 voto |
+| 3 | Remover voto | DELETE /votes | 204; GET /votes retorna `vote: null` |
+| 4 | Voto em denúncia fechada | POST /votes | 422 `COMPLAINT_CLOSED` para status `RESOLVED` ou `CANCELED` |
+| 5 | Resolução pessoal | POST /resolutions (sem company_id) | 204; GET lista a resolução com `is_owner: true` |
+| 6 | Duplicidade de resolução | POST /resolutions (2× sem company_id) | Segunda tentativa → 422 `RESOLUTION_ALREADY_EXISTS` |
+| 7 | Resolução com empresa própria | POST /resolutions com company_id válido | 204 |
+| 8 | Resolução com empresa de terceiro | POST /resolutions com company_id alheio | 403 `COMPANY_NOT_OWNED` |
+| 9 | Fluxo do dono | PATCH /resolved | 200; `status` pode ser `"OPEN"` (quorum 24h pendente) |
+| 10 | `is_owner` no GET resolutions | GET /resolutions | Resolução do requester tem `is_owner: true`; as demais `false` |
