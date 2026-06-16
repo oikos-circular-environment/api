@@ -8,7 +8,7 @@ import { ResolveComplaintUseCase } from "./resolve-complaint-use-case.js";
 
 const resolution = { description: "Problema resolvido pela prefeitura" };
 
-describe("ResolveComplaintUseCase — integração com banco", () => {
+describe("resolve-complaint-use-case", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
@@ -55,7 +55,7 @@ describe("ResolveComplaintUseCase — integração com banco", () => {
 		}
 	});
 
-	it("cria resolução e voto RESOLVED no banco", async () => {
+	it("persists resolution and RESOLVED vote in the database", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(repo);
 
@@ -79,7 +79,7 @@ describe("ResolveComplaintUseCase — integração com banco", () => {
 		expect(voteInDb?.vote_type).toBe("RESOLVED");
 	});
 
-	it("atualiza resolução existente em vez de criar duplicata", async () => {
+	it("updates existing resolution instead of creating a duplicate", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(repo);
 
@@ -100,7 +100,7 @@ describe("ResolveComplaintUseCase — integração com banco", () => {
 		expect(resolutions[0].description).toBe("Descrição atualizada");
 	});
 
-	it("lança 404 quando a denúncia não pertence ao usuário", async () => {
+	it("throws 404 when complaint does not belong to user", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(repo);
 
@@ -115,7 +115,7 @@ describe("ResolveComplaintUseCase — integração com banco", () => {
 		);
 	});
 
-	it("lança 422 COMPLAINT_CLOSED quando a denúncia está RESOLVED", async () => {
+	it("throws 422 COMPLAINT_CLOSED when complaint is RESOLVED", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(repo);
 
@@ -129,7 +129,7 @@ describe("ResolveComplaintUseCase — integração com banco", () => {
 		);
 	});
 
-	it("lança 422 COMPLAINT_CLOSED quando a denúncia está CANCELED", async () => {
+	it("throws 422 COMPLAINT_CLOSED when complaint is CANCELED", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new ResolveComplaintUseCase(repo);
 

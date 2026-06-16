@@ -26,7 +26,7 @@ const baseValidation: CompanyValidation = {
 	services: true,
 };
 
-describe("isGeneralRegistrationValid", () => {
+describe("is-general-registration-valid", () => {
 	it("returns true for a complete company", () => {
 		expect(isGeneralRegistrationValid(makeCompany())).toBe(true);
 	});
@@ -54,7 +54,7 @@ describe("isGeneralRegistrationValid", () => {
 	});
 });
 
-describe("isAddressValid", () => {
+describe("is-address-valid", () => {
 	it("returns true for a complete address with lat/lng", () => {
 		expect(isAddressValid(makeCompanyAddress())).toBe(true);
 	});
@@ -64,7 +64,7 @@ describe("isAddressValid", () => {
 	});
 });
 
-describe("isBusinessHoursValid", () => {
+describe("is-business-hours-valid", () => {
 	const makeHour = (
 		day:
 			| "SUNDAY"
@@ -106,7 +106,7 @@ describe("isBusinessHoursValid", () => {
 	});
 });
 
-describe("isWastesValid", () => {
+describe("is-wastes-valid", () => {
 	it("returns true when at least one waste with valid category exists", () => {
 		expect(isWastesValid([makeCompanyWaste()])).toBe(true);
 	});
@@ -116,7 +116,7 @@ describe("isWastesValid", () => {
 	});
 });
 
-describe("isServicesValid", () => {
+describe("is-services-valid", () => {
 	it("returns true when at least one service with valid category exists", () => {
 		expect(isServicesValid([makeCompanyService()])).toBe(true);
 	});
@@ -126,7 +126,7 @@ describe("isServicesValid", () => {
 	});
 });
 
-describe("computeIsCompanyValid", () => {
+describe("compute-is-company-valid", () => {
 	it("returns true when all fields are valid and wastes is true", () => {
 		expect(
 			computeIsCompanyValid({

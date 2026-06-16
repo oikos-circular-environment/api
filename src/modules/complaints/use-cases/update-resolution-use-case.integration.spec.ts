@@ -6,7 +6,7 @@ import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js
 import { PrismaComplaintsRepository } from "@/modules/complaints/repositories/prisma/complaints-repository-prisma.js";
 import { UpdateResolutionUseCase } from "./update-resolution-use-case.js";
 
-describe("UpdateResolutionUseCase — integração com banco", () => {
+describe("update-resolution-use-case", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
@@ -68,7 +68,7 @@ describe("UpdateResolutionUseCase — integração com banco", () => {
 		}
 	});
 
-	it("atualiza a descrição da resolução no banco", async () => {
+	it("updates resolution description in the database", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new UpdateResolutionUseCase(repo);
 
@@ -90,7 +90,7 @@ describe("UpdateResolutionUseCase — integração com banco", () => {
 		expect(inDb?.description).toBe("Descrição atualizada");
 	});
 
-	it("lança 404 quando a resolução pertence a outro usuário", async () => {
+	it("throws 404 when resolution belongs to another user", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new UpdateResolutionUseCase(repo);
 
@@ -117,7 +117,7 @@ describe("UpdateResolutionUseCase — integração com banco", () => {
 		expect(inDb?.description).toBe("Descrição original");
 	});
 
-	it("lança 422 COMPLAINT_CLOSED quando a denúncia está RESOLVED", async () => {
+	it("throws 422 when complaint is RESOLVED", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new UpdateResolutionUseCase(repo);
 
@@ -138,7 +138,7 @@ describe("UpdateResolutionUseCase — integração com banco", () => {
 		);
 	});
 
-	it("lança 422 COMPLAINT_CLOSED quando a denúncia está CANCELED", async () => {
+	it("throws 422 when complaint is CANCELED", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new UpdateResolutionUseCase(repo);
 

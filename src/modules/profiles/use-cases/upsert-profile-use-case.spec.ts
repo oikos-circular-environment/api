@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { AppError } from "@/modules/common/errors/app-error.js";
 import {
 	makeAddress,
 	makeProfileInput,
@@ -204,6 +205,42 @@ describe("upsert-profile-use-case", () => {
 		expect(result.address?.number).toBe("200");
 		expect(result.address?.complement).toBe("Apto 5");
 		expect(addressesRepository.items.length).toBe(1);
+	});
+
+	it("throws when user does not exist", async () => {
+		const profilesRepository = new InMemoryProfilesRepository();
+		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
+
+		const input = makeProfileInput();
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: input.user_id,
+				data: {
+					full_name: input.full_name,
+					display_name: input.display_name,
+					phone: input.phone,
+				},
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.message).toBe("User not found");
+			expect(thrownError.code).toBe("USER_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
+		}
 	});
 
 	it("does not affect existing address when no address data is provided", async () => {

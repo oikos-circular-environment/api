@@ -5,6 +5,12 @@ import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/
 import { WASTE_CATEGORIES_SEED } from "@/modules/wastes/data/waste-categories-seed.js";
 import { UpdateComplaintUseCase } from "./update-complaint-use-case.js";
 
+class UpdateReturnsNullRepository extends InMemoryComplaintsRepository {
+	async updateByUserAndComplaintId(): Promise<null> {
+		return null;
+	}
+}
+
 describe("update-complaint-use-case", () => {
 	it("updates complaint observations", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
@@ -211,6 +217,40 @@ describe("update-complaint-use-case", () => {
 
 		if (thrownError instanceof AppError) {
 			expect(thrownError.message).toBe("Complaint not found");
+			expect(thrownError.code).toBe("COMPLAINT_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
+		}
+	});
+
+	it("throws when update returns null", async () => {
+		const complaintsRepository = new UpdateReturnsNullRepository();
+		const sut = new UpdateComplaintUseCase(complaintsRepository);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
+		);
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: "11111111-1111-1111-1111-111111111111",
+				complaintId: created.id,
+				data: { observations: "Updated" },
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
 			expect(thrownError.code).toBe("COMPLAINT_NOT_FOUND");
 			expect(thrownError.statusCode).toBe(404);
 		}

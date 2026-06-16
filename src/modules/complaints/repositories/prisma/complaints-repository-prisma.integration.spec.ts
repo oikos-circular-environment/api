@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma.js";
 import { PrismaComplaintsRepository } from "./complaints-repository-prisma.js";
 
-describe("PrismaComplaintsRepository — findMapComplaints (PostGIS)", () => {
+describe("complaints-repository-prisma", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
@@ -60,10 +60,10 @@ describe("PrismaComplaintsRepository — findMapComplaints (PostGIS)", () => {
 
 	it("returns complaints within radius", async () => {
 		const repo = new PrismaComplaintsRepository();
-		// Centro: São Paulo (-23.5505, -46.6333)
-		const idNear1 = await insertComplaintWithLocation(-23.5505, -46.6333); // dentro (0m)
-		const idNear2 = await insertComplaintWithLocation(-23.551, -46.634); // dentro (~90m)
-		const idFar = await insertComplaintWithLocation(-23.6, -46.7); // fora (>7km)
+		// center: São Paulo (-23.5505, -46.6333)
+		const idNear1 = await insertComplaintWithLocation(-23.5505, -46.6333); // inside (0m)
+		const idNear2 = await insertComplaintWithLocation(-23.551, -46.634); // inside (~90m)
+		const idFar = await insertComplaintWithLocation(-23.6, -46.7); // outside (>7km)
 
 		const result = await repo.findMapComplaints({
 			lat: -23.5505,

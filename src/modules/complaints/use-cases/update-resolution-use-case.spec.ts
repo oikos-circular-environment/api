@@ -36,7 +36,7 @@ async function setup() {
 }
 
 describe("update-resolution-use-case", () => {
-	it("atualiza a descrição da resolução do próprio usuário", async () => {
+	it("updates the resolver's own resolution description", async () => {
 		const { repo, resolverId, complaint, resolutionId } = await setup();
 		const sut = new UpdateResolutionUseCase(repo);
 
@@ -51,7 +51,7 @@ describe("update-resolution-use-case", () => {
 		expect(updated?.description).toBe("Descrição atualizada");
 	});
 
-	it("lança 404 quando a resolução não existe", async () => {
+	it("throws 404 when resolution does not exist", async () => {
 		const { repo, resolverId, complaint } = await setup();
 		const sut = new UpdateResolutionUseCase(repo);
 
@@ -67,7 +67,7 @@ describe("update-resolution-use-case", () => {
 		);
 	});
 
-	it("lança 404 quando a resolução pertence a outro usuário", async () => {
+	it("throws 404 when resolution belongs to another user", async () => {
 		const { repo, complaint, resolutionId } = await setup();
 		const sut = new UpdateResolutionUseCase(repo);
 		const otherUserId = randomUUID();
@@ -84,7 +84,7 @@ describe("update-resolution-use-case", () => {
 		);
 	});
 
-	it("lança 404 quando a denúncia não existe", async () => {
+	it("throws 404 when complaint does not exist", async () => {
 		const { repo, resolverId, resolutionId } = await setup();
 		const sut = new UpdateResolutionUseCase(repo);
 
@@ -100,7 +100,7 @@ describe("update-resolution-use-case", () => {
 		);
 	});
 
-	it("lança 422 quando a denúncia está RESOLVED", async () => {
+	it("throws 422 when complaint is RESOLVED", async () => {
 		const { repo, ownerId, resolverId, complaint, resolutionId } = await setup();
 		const sut = new UpdateResolutionUseCase(repo);
 		await repo.updateStatusByUserAndComplaintId(ownerId, complaint.id, "RESOLVED");
@@ -117,7 +117,7 @@ describe("update-resolution-use-case", () => {
 		);
 	});
 
-	it("lança 422 quando a denúncia está CANCELED", async () => {
+	it("throws 422 when complaint is CANCELED", async () => {
 		const { repo, ownerId, resolverId, complaint, resolutionId } = await setup();
 		const sut = new UpdateResolutionUseCase(repo);
 		await repo.updateStatusByUserAndComplaintId(ownerId, complaint.id, "CANCELED");

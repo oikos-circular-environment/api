@@ -113,7 +113,7 @@ describe("get-complaints-use-case", () => {
 			});
 		}
 
-		// garante created_at distintos e ordenados de forma decrescente
+		// ensures distinct created_at values sorted descending
 		complaintsRepository.complaints.forEach((c, i) => {
 			c.created_at = new Date(2026, 3, 20 - i);
 		});
@@ -165,7 +165,7 @@ describe("get-complaints-use-case", () => {
 		expect(complaints.length).toBe(2);
 	});
 
-	it("filters by status", async () => {
+	it("filters by OPEN status — excludes resolved", async () => {
 		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
@@ -199,7 +199,7 @@ describe("get-complaints-use-case", () => {
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
-	it("filters by status", async () => {
+	it("filters by OPEN status — returns multiple matches", async () => {
 		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
@@ -256,6 +256,27 @@ describe("get-complaints-use-case", () => {
 			userId: userAId,
 			filters: { status: "RESOLVED" },
 			limit: 20,
+		});
+
+		expect(complaints).toStrictEqual([]);
+		expect(next_cursor).toBeNull();
+	});
+
+	it("returns null next_cursor when limit is 0 and rows exist", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-01T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+
+		const { complaints, next_cursor } = await sut.execute({
+			userId: userAId,
+			limit: 0,
 		});
 
 		expect(complaints).toStrictEqual([]);

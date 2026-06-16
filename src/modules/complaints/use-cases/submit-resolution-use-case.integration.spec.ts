@@ -8,7 +8,7 @@ import { SubmitResolutionUseCase } from "./submit-resolution-use-case.js";
 
 const resolutionData = { description: "Prefeitura recolheu o lixo" };
 
-describe("SubmitResolutionUseCase — integração com banco", () => {
+describe("submit-resolution-use-case", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
@@ -55,7 +55,7 @@ describe("SubmitResolutionUseCase — integração com banco", () => {
 		}
 	});
 
-	it("cria resolução no banco ao submeter pela primeira vez", async () => {
+	it("persists resolution on first submission", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new SubmitResolutionUseCase(repo);
 
@@ -72,7 +72,7 @@ describe("SubmitResolutionUseCase — integração com banco", () => {
 		expect(inDb?.description).toBe(resolutionData.description);
 	});
 
-	it("lança 422 RESOLUTION_ALREADY_EXISTS ao submeter resolução pessoal já existente", async () => {
+	it("throws 422 RESOLUTION_ALREADY_EXISTS when personal resolution already exists", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new SubmitResolutionUseCase(repo);
 
@@ -94,7 +94,7 @@ describe("SubmitResolutionUseCase — integração com banco", () => {
 		expect(resolutions).toHaveLength(1);
 	});
 
-	it("dois usuários distintos podem submeter resoluções pessoais na mesma denúncia", async () => {
+	it("allows two distinct users to submit resolutions on the same complaint", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new SubmitResolutionUseCase(repo);
 
@@ -112,7 +112,7 @@ describe("SubmitResolutionUseCase — integração com banco", () => {
 		expect(resolutions).toHaveLength(2);
 	});
 
-	it("lança 404 quando a denúncia não existe", async () => {
+	it("throws 404 when complaint does not exist", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new SubmitResolutionUseCase(repo);
 		const resolverId = await createUser();
@@ -128,7 +128,7 @@ describe("SubmitResolutionUseCase — integração com banco", () => {
 		);
 	});
 
-	it("lança 422 COMPLAINT_CLOSED quando a denúncia está RESOLVED", async () => {
+	it("throws 422 when complaint is RESOLVED", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new SubmitResolutionUseCase(repo);
 
@@ -143,7 +143,7 @@ describe("SubmitResolutionUseCase — integração com banco", () => {
 		);
 	});
 
-	it("lança 422 COMPLAINT_CLOSED quando a denúncia está CANCELED", async () => {
+	it("throws 422 when complaint is CANCELED", async () => {
 		const repo = new PrismaComplaintsRepository();
 		const sut = new SubmitResolutionUseCase(repo);
 

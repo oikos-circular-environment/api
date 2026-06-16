@@ -4,7 +4,7 @@ import { makeMarketItem } from "@/modules/market/factories/make-market-item.js";
 import { InMemoryMarketRepository } from "../repositories/in-memory/in-memory-market-repository.js";
 import { ListMarketUseCase } from "./list-market-use-case.js";
 
-// Ponto de referência — centro de Rondonópolis
+// reference point — Rondonópolis city center
 const ORIGIN = { lat: -16.4707, lon: -54.6375 };
 
 const STUB_CATEGORY = {
@@ -19,7 +19,7 @@ const PLASTICO_CATEGORY = {
 	hazard_levels: ["LOW" as const],
 };
 
-// Empresa padrão — Bio Ecologica (~3.3km do centro), tem wastes, sem services
+// default company — Bio Ecologica (~3.3km from center), has wastes, no services
 const makeDefaultCompany = (overrides = {}) =>
 	makeMarketCompany({
 		id: "company-1",
@@ -57,7 +57,7 @@ const makeDefaultCompany = (overrides = {}) =>
 		...overrides,
 	});
 
-describe("ListMarketUseCase", () => {
+describe("list-market-use-case", () => {
 	let repo: InMemoryMarketRepository;
 	let sut: ListMarketUseCase;
 
@@ -66,20 +66,20 @@ describe("ListMarketUseCase", () => {
 		sut = new ListMarketUseCase(repo);
 	});
 
-	it("deve listar empresas dentro do raio", async () => {
+	it("lists companies within radius", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].id).toBe("company-1");
 	});
 
-	it("não deve listar empresas fora do raio", async () => {
+	it("excludes companies outside radius", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 1000 });
 		expect(result.companies).toHaveLength(0);
 	});
 
-	it("deve ordenar por distância crescente", async () => {
+	it("sorts by distance ascending", async () => {
 		const companyA = makeMarketCompany({
 			id: "company-a",
 			business_name: "Empresa A",
@@ -109,14 +109,14 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].id).toBe("company-a");
 	});
 
-	it("deve filtrar por texto em business_name", async () => {
+	it("filters by business_name text", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000, q: "Bio" });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].business_name).toBe("Bio Ecologica");
 	});
 
-	it("não deve retornar empresa que não bate com texto em business_name", async () => {
+	it("excludes companies that don't match business_name text", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({
 			...ORIGIN,
@@ -126,7 +126,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies).toHaveLength(0);
 	});
 
-	it("deve filtrar por texto em nome de resíduo (wastes)", async () => {
+	it("filters by waste name", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({
 			...ORIGIN,
@@ -139,7 +139,7 @@ describe("ListMarketUseCase", () => {
 		);
 	});
 
-	it("deve filtrar por texto em nome de serviço (services)", async () => {
+	it("filters by service name", async () => {
 		const companyWithService = makeMarketCompany({
 			id: "company-service",
 			business_name: "Empresa de Serviços",
@@ -162,7 +162,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].id).toBe("company-service");
 	});
 
-	it("deve filtrar por categoria waste — retorna apenas com wastes", async () => {
+	it("filters by waste category", async () => {
 		const companyWithWastes = makeDefaultCompany({ id: "company-waste" });
 		const companyWithoutWastes = makeMarketCompany({
 			id: "company-no-waste",
@@ -179,7 +179,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].id).toBe("company-waste");
 	});
 
-	it("deve filtrar por categoria services — retorna apenas com services", async () => {
+	it("filters by services category", async () => {
 		const companyWithServices = makeMarketCompany({
 			id: "company-services",
 			business_name: "Empresa de Serviços",
@@ -211,7 +211,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].id).toBe("company-services");
 	});
 
-	it("deve retornar distance_in_meters correto para Bio Ecologica", async () => {
+	it("returns correct distance_in_meters for Bio Ecologica", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
@@ -220,7 +220,7 @@ describe("ListMarketUseCase", () => {
 		expect(distance).toBeLessThan(3700);
 	});
 
-	it("deve retornar business_hours preenchido", async () => {
+	it("returns business_hours populated", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
@@ -229,7 +229,7 @@ describe("ListMarketUseCase", () => {
 		expect(businessHours[0].time_slots.length).toBeGreaterThanOrEqual(1);
 	});
 
-	it("deve retornar next_cursor na primeira página quando há mais resultados", async () => {
+	it("returns next_cursor on first page when more results exist", async () => {
 		repo.companies = Array.from({ length: 5 }, (_, i) =>
 			makeMarketCompany({
 				id: `company-${i + 1}`,
@@ -240,7 +240,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.next_cursor).not.toBeNull();
 	});
 
-	it("deve retornar next_cursor null na última página", async () => {
+	it("returns null next_cursor on last page", async () => {
 		repo.companies = Array.from({ length: 3 }, (_, i) =>
 			makeMarketCompany({
 				id: `company-${i + 1}`,
@@ -251,7 +251,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.next_cursor).toBeNull();
 	});
 
-	it("deve navegar corretamente entre páginas com cursor", async () => {
+	it("paginates correctly with cursor", async () => {
 		repo.companies = Array.from({ length: 4 }, (_, i) =>
 			makeMarketCompany({
 				id: `company-${i + 1}`,
@@ -281,14 +281,14 @@ describe("ListMarketUseCase", () => {
 		expect(hasIntersection).toBe(false);
 	});
 
-	it("deve retornar lista vazia quando nenhuma empresa no raio", async () => {
+	it("returns empty list when no companies in radius", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 100 });
 		expect(result.companies).toStrictEqual([]);
 		expect(result.next_cursor).toBeNull();
 	});
 
-	it("deve combinar filtros de texto e categoria", async () => {
+	it("combines text and category filters", async () => {
 		const companyWithPlastico = makeDefaultCompany({
 			id: "company-plastico",
 			business_name: "Reciclagem Total",
@@ -322,7 +322,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].id).toBe("company-plastico");
 	});
 
-	it("deve retornar phones da empresa", async () => {
+	it("returns company phones", async () => {
 		repo.companies = [
 			makeDefaultCompany({ phones: ["(66) 99999-0001", "(66) 3411-0002"] }),
 		];
@@ -334,21 +334,21 @@ describe("ListMarketUseCase", () => {
 		]);
 	});
 
-	it("deve retornar phones vazio quando empresa não tem telefone", async () => {
+	it("returns empty phones when company has none", async () => {
 		repo.companies = [makeDefaultCompany({ phones: [] })];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].phones).toEqual([]);
 	});
 
-	it("deve retornar business_name preenchido", async () => {
+	it("returns business_name", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
 		expect(result.companies[0].business_name).toBe("Bio Ecologica");
 	});
 
-	it("deve retornar latitude e longitude do endereço", async () => {
+	it("returns address latitude and longitude", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
@@ -356,7 +356,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].address.longitude).toEqual(expect.any(Number));
 	});
 
-	it("deve retornar identity e identity_type quando identity_type for CNPJ", async () => {
+	it("returns identity and identity_type for CNPJ", async () => {
 		repo.companies = [
 			makeDefaultCompany({
 				identity: "12345678000190",
@@ -369,7 +369,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].identity_type).toBe("CNPJ");
 	});
 
-	it("não deve retornar identity quando identity_type for CPF (LGPD)", async () => {
+	it("hides identity when identity_type is CPF (LGPD)", async () => {
 		repo.companies = [
 			makeDefaultCompany({
 				identity: "12345678901",
@@ -382,14 +382,14 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].identity_type).toBeNull();
 	});
 
-	it("deve aplicar radius padrão de 1000m quando não informado", async () => {
-		// Bio Ecologica está a ~3.3km do centro — fora do raio padrão de 1000m
+	it("defaults radius to 1000m when not provided", async () => {
+		// Bio Ecologica is ~3.3km from center — outside the default 1000m radius
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN });
 		expect(result.companies).toHaveLength(0);
 	});
 
-	it("deve retornar avatar como null quando empresa não tem imagem", async () => {
+	it("returns null avatar when company has no image", async () => {
 		repo.companies = [makeDefaultCompany()];
 		const result = await sut.execute({ ...ORIGIN, radius: 5000 });
 		expect(result.companies).toHaveLength(1);
@@ -397,7 +397,7 @@ describe("ListMarketUseCase", () => {
 		expect(result.companies[0].avatar).toBeNull();
 	});
 
-	it("deve retornar avatar preenchido quando empresa tem imagem", async () => {
+	it("returns avatar url when company has one", async () => {
 		repo.companies = [
 			makeDefaultCompany({
 				avatar: "https://example.com/avatar.jpg",

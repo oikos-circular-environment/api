@@ -5,6 +5,12 @@ import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { ToggleCompanyStatusUseCase } from "./toggle-company-status-use-case.js";
 
+class UpdateReturnsNullRepository extends InMemoryCompaniesRepository {
+	async update(): Promise<null> {
+		return null;
+	}
+}
+
 describe("toggle-company-status-use-case", () => {
 	it("deactivates an active company", async () => {
 		const userId = randomUUID();
@@ -87,6 +93,31 @@ describe("toggle-company-status-use-case", () => {
 				companyId: created.id,
 				status: false,
 			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.code).toBe("COMPANY_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
+		}
+	});
+
+	it("throws when update returns null", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new UpdateReturnsNullRepository();
+		const sut = new ToggleCompanyStatusUseCase(companiesRepository);
+
+		const created = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({ userId, companyId: created.id, status: false });
 		} catch (error) {
 			thrownError = error;
 		}

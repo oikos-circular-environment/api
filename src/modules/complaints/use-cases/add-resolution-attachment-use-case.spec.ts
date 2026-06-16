@@ -1,11 +1,28 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
+import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { AddResolutionAttachmentUseCase } from "./add-resolution-attachment-use-case.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { SubmitResolutionUseCase } from "./submit-resolution-use-case.js";
+
+class UploadFailStorageProvider implements StorageProvider {
+	async uploadFile() {
+		return null;
+	}
+	async deleteFile() {}
+	async getFileUrl() {
+		return { url: "https://in-memory.storage/fallback.jpeg" };
+	}
+	async checkFileExists() {
+		return false;
+	}
+	async convertFileToBase64() {
+		return "";
+	}
+}
 
 const validFile = {
 	fileName: "photo.jpg",
@@ -170,6 +187,41 @@ describe("add-resolution-attachment-use-case", () => {
 			}),
 		).rejects.toThrowError(
 			expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TOO_LARGE" }),
+		);
+	});
+
+	it("throws when upload fails", async () => {
+		const userAId = randomUUID();
+		const userBId = randomUUID();
+		const repo = new InMemoryComplaintsRepository();
+		const storage = new UploadFailStorageProvider();
+		const complaint = await new CreateComplaintUseCase(repo).execute({
+			userId: userAId,
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
+		});
+		await new SubmitResolutionUseCase(repo).execute({
+			userId: userBId,
+			complaintId: complaint.id,
+			data: { description: "Resolvido" },
+		});
+		const sut = new AddResolutionAttachmentUseCase(repo, storage);
+
+		await expect(
+			sut.execute({
+				userId: userBId,
+				complaintId: complaint.id,
+				file: validFile,
+			}),
+		).rejects.toThrowError(
+			expect.objectContaining({
+				code: "RESOLUTION_ATTACHMENT_UPLOAD_FAILED",
+				statusCode: 500,
+			}),
 		);
 	});
 

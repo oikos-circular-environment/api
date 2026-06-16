@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma.js";
 import { applyQuorumResolution, checkQuorumMet } from "./quorum-logic.js";
 
-describe("applyQuorumResolution — fluxo de quórum", () => {
+describe("quorum-logic", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
@@ -67,11 +67,11 @@ describe("applyQuorumResolution — fluxo de quórum", () => {
 		const voter2 = await createUser();
 		const voter3 = await createUser();
 
-		await addVote(complaint.id, ownerId, "RESOLVED"); // peso 2
-		await addVote(complaint.id, voter1, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter2, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter3, "RESOLVED"); // peso 1
-		// Total positivo = 5, negativo = 0 → 5 >= 5 + 0 ✓
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter2, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter3, "RESOLVED"); // weight 1
+		// positive = 5, negative = 0 → 5 >= 5 + 0 ✓
 
 		const resolved = await applyQuorumResolution(complaint.id);
 
@@ -88,9 +88,9 @@ describe("applyQuorumResolution — fluxo de quórum", () => {
 
 		const voter1 = await createUser();
 
-		await addVote(complaint.id, ownerId, "RESOLVED"); // peso 2
-		await addVote(complaint.id, voter1, "RESOLVED"); // peso 1
-		// Total positivo = 3, negativo = 0 → 3 < 5 ✗
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		// positive = 3, negative = 0 → 3 < 5 ✗
 
 		const resolved = await applyQuorumResolution(complaint.id);
 
@@ -110,12 +110,12 @@ describe("applyQuorumResolution — fluxo de quórum", () => {
 		const voter3 = await createUser();
 		const voter4 = await createUser();
 
-		await addVote(complaint.id, ownerId, "RESOLVED"); // peso 2
-		await addVote(complaint.id, voter1, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter2, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter3, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter4, "NOT_RESOLVED"); // peso 1 negativo
-		// Total positivo = 5, negativo = 1 → 5 < 5 + 1 = 6 ✗
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter2, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter3, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter4, "NOT_RESOLVED"); // weight 1 negative
+		// positive = 5, negative = 1 → 5 < 5 + 1 = 6 ✗
 
 		const resolved = await applyQuorumResolution(complaint.id);
 
@@ -136,7 +136,7 @@ describe("applyQuorumResolution — fluxo de quórum", () => {
 	});
 });
 
-describe("checkQuorumMet — verifica quórum sem alterar status", () => {
+describe("check-quorum-met", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
@@ -191,41 +191,41 @@ describe("checkQuorumMet — verifica quórum sem alterar status", () => {
 		}
 	});
 
-	it("retorna true quando quórum é atingido e mantém status OPEN", async () => {
+	it("returns true when quorum is met and status remains OPEN", async () => {
 		const ownerId = await createUser();
 		const complaint = await createComplaint(ownerId);
 		const voter1 = await createUser();
 		const voter2 = await createUser();
 		const voter3 = await createUser();
 
-		await addVote(complaint.id, ownerId, "RESOLVED"); // peso 2
-		await addVote(complaint.id, voter1, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter2, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter3, "RESOLVED"); // peso 1
-		// Total positivo = 5, negativo = 0 → 5 >= 5 ✓
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter2, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter3, "RESOLVED"); // weight 1
+		// positive = 5, negative = 0 → 5 >= 5 ✓
 
 		const met = await checkQuorumMet(complaint.id);
 
 		expect(met).toBe(true);
 		const inDb = await prisma.complaint.findUnique({ where: { id: complaint.id } });
-		expect(inDb?.status).toBe("OPEN"); // não alterou o status
+		expect(inDb?.status).toBe("OPEN"); // status was not changed
 	});
 
-	it("retorna false quando quórum não é atingido", async () => {
+	it("returns false when quorum is not met", async () => {
 		const ownerId = await createUser();
 		const complaint = await createComplaint(ownerId);
 		const voter1 = await createUser();
 
-		await addVote(complaint.id, ownerId, "RESOLVED"); // peso 2
-		await addVote(complaint.id, voter1, "RESOLVED"); // peso 1
-		// Total positivo = 3 → 3 < 5 ✗
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		// positive = 3 → 3 < 5 ✗
 
 		const met = await checkQuorumMet(complaint.id);
 
 		expect(met).toBe(false);
 	});
 
-	it("retorna false quando voto negativo quebra o quórum", async () => {
+	it("returns false when a negative vote breaks quorum", async () => {
 		const ownerId = await createUser();
 		const complaint = await createComplaint(ownerId);
 		const voter1 = await createUser();
@@ -233,11 +233,11 @@ describe("checkQuorumMet — verifica quórum sem alterar status", () => {
 		const voter3 = await createUser();
 		const voter4 = await createUser();
 
-		await addVote(complaint.id, ownerId, "RESOLVED"); // peso 2
-		await addVote(complaint.id, voter1, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter2, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter3, "RESOLVED"); // peso 1
-		await addVote(complaint.id, voter4, "NOT_RESOLVED"); // peso 1 negativo
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter2, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter3, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter4, "NOT_RESOLVED"); // weight 1 negative
 		// 5 < 5 + 1 = 6 ✗
 
 		const met = await checkQuorumMet(complaint.id);
@@ -245,7 +245,7 @@ describe("checkQuorumMet — verifica quórum sem alterar status", () => {
 		expect(met).toBe(false);
 	});
 
-	it("retorna false quando denúncia já está RESOLVED", async () => {
+	it("returns false when complaint is already RESOLVED", async () => {
 		const ownerId = await createUser();
 		const complaint = await createComplaint(ownerId);
 		await prisma.complaint.update({

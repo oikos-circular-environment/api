@@ -6,6 +6,12 @@ import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { CreateComplaintAttachmentUseCase } from "./create-complaint-attachment-use-case.js";
 
+class AttachReturnsNullRepository extends InMemoryComplaintsRepository {
+	async attachByComplaintId(): Promise<null> {
+		return null;
+	}
+}
+
 describe("create-complaint-attachment-use-case", () => {
 	it("attaches image to complaint", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
@@ -266,6 +272,49 @@ describe("create-complaint-attachment-use-case", () => {
 			expect(thrownError.message).toBe("Failed to upload complaint attachment");
 			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_UPLOAD_FAILED");
 			expect(thrownError.statusCode).toBe(500);
+		}
+	});
+
+	it("throws when attach returns null after upload succeeds", async () => {
+		const complaintsRepository = new AttachReturnsNullRepository();
+		const storageProvider = new InMemoryStorageProvider();
+		const sut = new CreateComplaintAttachmentUseCase(
+			complaintsRepository,
+			storageProvider,
+		);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
+		);
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: "11111111-1111-1111-1111-111111111111",
+				complaintId: created.id,
+				file: {
+					fileName: "attachment.jpeg",
+					mimeType: "image/jpeg",
+					content: Buffer.from("jpeg-image-content"),
+				},
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.message).toBe("Complaint not found");
+			expect(thrownError.code).toBe("COMPLAINT_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
 		}
 	});
 
