@@ -3,12 +3,18 @@ import type {
 	CompanyValidation,
 	CompanyValidationField,
 } from "@/modules/companies/dtos/companies-dto.js";
+import { computeIsCompanyValid } from "@/modules/companies/utils/company-validation-utils.js";
 import type { CompanyValidationRepository } from "../company-validation-repository.js";
+import type { InMemoryCompaniesRepository } from "./in-memory-companies-repositories.js";
 
 export class InMemoryCompanyValidationRepository
 	implements CompanyValidationRepository
 {
 	public items: CompanyValidation[] = [];
+
+	constructor(
+		private readonly companiesRepository?: InMemoryCompaniesRepository,
+	) {}
 
 	async create(
 		companyId: string,
@@ -36,8 +42,18 @@ export class InMemoryCompanyValidationRepository
 	): Promise<void> {
 		const record = this.items.find((item) => item.company_id === companyId);
 
-		if (record) {
-			record[field] = value;
+		if (!record) return;
+
+		record[field] = value;
+
+		if (this.companiesRepository) {
+			const company = this.companiesRepository.items.find(
+				(c) => c.id === companyId,
+			);
+
+			if (company) {
+				company.is_company_valid = computeIsCompanyValid(record);
+			}
 		}
 	}
 

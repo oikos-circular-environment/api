@@ -46,6 +46,31 @@ describe("update-company-use-case", () => {
 		expect(result?.phones).toStrictEqual(["5511777777777", "5511666666666"]);
 	});
 
+	it("sets general_registration to false when required field is cleared", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpdateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
+
+		const created = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+		await validationRepository.create(created.id, true);
+
+		await sut.execute({
+			userId,
+			companyId: created.id,
+			data: { business_name: "" },
+		});
+
+		const validation = await validationRepository.findByCompanyId(created.id);
+
+		expect(validation?.general_registration).toBe(false);
+	});
+
 	it("keeps general_registration true after valid update", async () => {
 		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();

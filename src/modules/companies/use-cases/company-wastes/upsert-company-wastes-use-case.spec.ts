@@ -119,7 +119,6 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 10,
-
 				},
 			],
 		});
@@ -146,7 +145,6 @@ describe("upsert-company-wastes-use-case", () => {
 					unit: "KG",
 					waste_category_id: categoryId,
 					quantity: 10,
-
 				},
 			],
 		});
@@ -199,7 +197,6 @@ describe("upsert-company-wastes-use-case", () => {
 						unit: "KG",
 						waste_category_id: categoryId,
 						quantity: 10,
-	
 					},
 					{
 						name: "Papel",
@@ -208,7 +205,6 @@ describe("upsert-company-wastes-use-case", () => {
 						unit: "KG",
 						waste_category_id: otherCategoryId,
 						quantity: 5,
-	
 					},
 				],
 			});
@@ -244,7 +240,6 @@ describe("upsert-company-wastes-use-case", () => {
 						unit: "KG",
 						waste_category_id: randomUUID(),
 						quantity: 10,
-	
 					},
 				],
 			});

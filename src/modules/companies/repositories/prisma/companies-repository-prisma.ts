@@ -78,6 +78,11 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 	) {
 		const company = await prisma
 			.$transaction(async (tx) => {
+				const existing = await tx.company.findUnique({
+					where: { id: companyId },
+					select: { avatar_id: true },
+				});
+
 				const avatar = await tx.companyAvatar.create({
 					data: {
 						url: data.url,
@@ -86,11 +91,19 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 					},
 				});
 
-				return tx.company.update({
+				const updated = await tx.company.update({
 					where: { id: companyId },
 					data: { avatar_id: avatar.id },
 					include: { avatar: true },
 				});
+
+				if (existing?.avatar_id) {
+					await tx.companyAvatar.delete({
+						where: { id: existing.avatar_id },
+					});
+				}
+
+				return updated;
 			})
 			.catch(() => null);
 

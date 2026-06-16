@@ -70,7 +70,6 @@ describe("upsert-company-services-use-case", () => {
 					unit: "KG",
 					waste_category_id: otherCategoryId,
 					quantity: 1,
-
 				},
 			],
 		});
@@ -94,7 +93,6 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 3,
-
 				},
 			],
 		});
@@ -121,7 +119,6 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 1,
-
 				},
 			],
 		});
@@ -148,7 +145,6 @@ describe("upsert-company-services-use-case", () => {
 					unit: "UNIT",
 					waste_category_id: categoryId,
 					quantity: 1,
-
 				},
 			],
 		});
@@ -201,7 +197,6 @@ describe("upsert-company-services-use-case", () => {
 						unit: "UNIT",
 						waste_category_id: categoryId,
 						quantity: 1,
-	
 					},
 					{
 						name: "Coleta",
@@ -210,7 +205,6 @@ describe("upsert-company-services-use-case", () => {
 						unit: "UNIT",
 						waste_category_id: otherCategoryId,
 						quantity: 2,
-	
 					},
 				],
 			});
@@ -246,7 +240,6 @@ describe("upsert-company-services-use-case", () => {
 						unit: "UNIT",
 						waste_category_id: randomUUID(),
 						quantity: 1,
-	
 					},
 				],
 			});

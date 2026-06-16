@@ -252,6 +252,50 @@ describe("upload-company-avatar-use-case", () => {
 		}
 	});
 
+	it("deletes old storage file when re-uploading with a different extension", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const storageProvider = new InMemoryStorageProvider();
+		const sut = new UploadCompanyAvatarUseCase(
+			companiesRepository,
+			storageProvider,
+		);
+
+		const created = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+
+		// First upload: JPEG
+		await sut.execute({
+			userId,
+			companyId: created.id,
+			file: {
+				fileName: "avatar.jpg",
+				mimeType: "image/jpeg",
+				content: Buffer.from("jpeg-content"),
+			},
+		});
+
+		const oldPath = `companies/${created.id}.jpeg`;
+		expect(await storageProvider.checkFileExists(oldPath)).toBe(true);
+
+		// Second upload: PNG — old JPEG should be removed
+		await sut.execute({
+			userId,
+			companyId: created.id,
+			file: {
+				fileName: "avatar.png",
+				mimeType: "image/png",
+				content: Buffer.from("png-content"),
+			},
+		});
+
+		expect(await storageProvider.checkFileExists(oldPath)).toBe(false);
+		expect(
+			await storageProvider.checkFileExists(`companies/${created.id}.png`),
+		).toBe(true);
+	});
+
 	it("throws when file exceeds 5MB", async () => {
 		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();

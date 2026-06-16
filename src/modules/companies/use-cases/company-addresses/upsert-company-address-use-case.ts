@@ -42,10 +42,16 @@ export class UpsertCompanyAddressUseCase {
 		let address: CompanyAddress;
 
 		if (existingAddress) {
-			address = (await this.addressesRepository.update(
+			const updated = await this.addressesRepository.update(
 				existingAddress.id,
 				data,
-			)) as CompanyAddress;
+			);
+
+			if (!updated) {
+				throw new AppError("Address not found", "ADDRESS_NOT_FOUND", 404);
+			}
+
+			address = updated;
 		} else {
 			address = await this.addressesRepository.create({
 				...data,

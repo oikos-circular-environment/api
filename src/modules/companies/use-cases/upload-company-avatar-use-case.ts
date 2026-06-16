@@ -64,6 +64,7 @@ export class UploadCompanyAvatarUseCase {
 			];
 
 		const filePath = `companies/${companyId}.${extension}`;
+		const oldAvatarPath = company.avatar?.path ?? null;
 
 		const uploadResult = await this.storageProvider.uploadFile(
 			filePath,
@@ -91,6 +92,12 @@ export class UploadCompanyAvatarUseCase {
 
 		if (!updatedCompany) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);
+		}
+
+		// Delete old storage file after the DB is successfully updated.
+		// Skip deletion when path is identical (same extension re-upload overwrites in place).
+		if (oldAvatarPath && oldAvatarPath !== filePath) {
+			await this.storageProvider.deleteFile(oldAvatarPath).catch(() => {});
 		}
 
 		return updatedCompany;

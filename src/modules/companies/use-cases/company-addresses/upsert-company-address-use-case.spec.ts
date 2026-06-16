@@ -144,4 +144,40 @@ describe("upsert-company-address-use-case", () => {
 			expect(thrownError.statusCode).toBe(404);
 		}
 	});
+
+	it("throws when company belongs to a different user", async () => {
+		const userId = randomUUID();
+		const anotherUserId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const addressesRepository = new InMemoryAddressesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyAddressUseCase(
+			companiesRepository,
+			addressesRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: anotherUserId,
+				companyId: company.id,
+				data: makeCompanyAddress(),
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.code).toBe("COMPANY_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
+		}
+	});
 });

@@ -139,7 +139,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				description: "Creates a company for the authenticated user.",
 				body: createCompanySchema.omit({ user_id: true }),
 				response: {
-					200: z.object({ company: companySchema }),
+					201: z.object({ company: companySchema }),
 					401: appErrorSchema,
 				},
 			}),
@@ -151,7 +151,7 @@ export async function companyRoutes(app: FastifyInstance) {
 				data: request.body,
 			});
 
-			return reply.send({ company });
+			return reply.status(201).send({ company });
 		},
 	);
 
