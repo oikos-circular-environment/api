@@ -2,6 +2,7 @@ import "dotenv/config";
 import { randomUUID } from "node:crypto";
 import { afterEach, describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { PrismaComplaintsRepository } from "./complaints-repository-prisma.js";
 
 describe("complaints-repository-prisma", () => {
@@ -27,13 +28,18 @@ describe("complaints-repository-prisma", () => {
 		const id = randomUUID();
 		const userId = await insertUser();
 
+		const geo = makeGeospatial();
+		geo.location.coords.latitude = lat;
+		geo.location.coords.longitude = lon;
+
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO complaints (id, user_id, status, geospatial, created_at, location)
-       VALUES ($1, $2, $3, '{}'::jsonb, NOW(),
-               ST_SetSRID(ST_MakePoint($4, $5), 4326)::geography)`,
+			`INSERT INTO complaints (id, user_id, status, date, geospatial, created_at, location)
+       VALUES ($1, $2, $3, NOW(), $4::jsonb, NOW(),
+               ST_SetSRID(ST_MakePoint($5, $6), 4326)::geography)`,
 			id,
 			userId,
 			status,
+			JSON.stringify(geo),
 			lon,
 			lat,
 		);
