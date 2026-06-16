@@ -32,13 +32,16 @@ export async function setup() {
 		await client.query(`CREATE SCHEMA "${testSchema}"`);
 		await client.end();
 
-		// search_path includes public so PostGIS types/functions remain accessible
-		const testDbUrl = `${LOCAL_DB_URL}?options=-c%20search_path%3D${testSchema}%2Cpublic`;
+		// ?schema= makes Prisma schema-qualify _prisma_migrations lookups (won't inherit from public).
+		// Migration SQL uses public.geography() and public.ST_*() so PostGIS types resolve without
+		// public in search_path (Prisma 7 does not include public when schema= is set).
+		const testDbUrl = `${LOCAL_DB_URL}?schema=${testSchema}`;
 
-		// Write .env.test.local so setupFiles (worker context) can load it via dotenv
+		// Write .env.test.local so setupFiles (worker context) can load it via dotenv.
+		// REDIS_URL uses DB 1 to prevent dev-server workers (DB 0) from stealing test queue jobs.
 		writeFileSync(
 			envTestLocalPath,
-			`DATABASE_URL=${LOCAL_DB_URL}\nDATABASE_SCHEMA=${testSchema}\n`,
+			`DATABASE_URL=${LOCAL_DB_URL}\nDATABASE_SCHEMA=${testSchema}\nREDIS_URL=redis://localhost:6379/1\n`,
 		);
 
 		execSync("npx prisma migrate deploy", {

@@ -38,7 +38,7 @@ DROP COLUMN "observations",
 ADD COLUMN     "complaint_method" "ComplaintMethod" NOT NULL,
 ADD COLUMN     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 ADD COLUMN     "event_group_id" TEXT,
-ADD COLUMN     "location" geography(Point, 4326),
+ADD COLUMN     "location" public.geography(Point, 4326),
 ADD COLUMN     "status" "ComplaintStatus" NOT NULL DEFAULT 'OPEN',
 ADD COLUMN     "user_id" TEXT NOT NULL;
 
