@@ -121,7 +121,7 @@ describe("add-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				file: validFile,
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }),
 		);
 	});
@@ -153,7 +153,7 @@ describe("add-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				file: { ...validFile, mimeType: "image/gif" },
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TYPE_INVALID" }),
 		);
 	});
@@ -185,7 +185,7 @@ describe("add-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				file: { ...validFile, content: Buffer.alloc(11 * 1024 * 1024) },
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_TOO_LARGE" }),
 		);
 	});
@@ -217,7 +217,7 @@ describe("add-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				file: validFile,
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({
 				code: "RESOLUTION_ATTACHMENT_UPLOAD_FAILED",
 				statusCode: 500,

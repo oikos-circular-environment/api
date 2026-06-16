@@ -62,7 +62,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId: randomUUID(),
 				description: "Nova descrição",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND", statusCode: 404 }),
 		);
 	});
@@ -79,7 +79,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Tentativa indevida",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND", statusCode: 404 }),
 		);
 	});
@@ -95,7 +95,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Nova descrição",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_NOT_FOUND", statusCode: 404 }),
 		);
 	});
@@ -112,9 +112,31 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Tentativa em denúncia fechada",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
+	});
+
+	it("allows the complaint creator to update their own resolution", async () => {
+		const { repo, ownerId, complaint } = await setup();
+		const sut = new UpdateResolutionUseCase(repo);
+
+		await new SubmitResolutionUseCase(repo).execute({
+			userId: ownerId,
+			complaintId: complaint.id,
+			data: { description: "Resolução do criador" },
+		});
+		const resolution = await repo.findResolutionByUserAndComplaint(ownerId, complaint.id);
+
+		await sut.execute({
+			userId: ownerId,
+			complaintId: complaint.id,
+			resolutionId: resolution!.id,
+			description: "Resolução do criador atualizada",
+		});
+
+		const updated = repo.resolutions.find((r) => r.id === resolution!.id);
+		expect(updated?.description).toBe("Resolução do criador atualizada");
 	});
 
 	it("throws 422 when complaint is CANCELED", async () => {
@@ -129,7 +151,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Tentativa em denúncia cancelada",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});

@@ -75,7 +75,7 @@ describe("delete-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				attachmentId: "any-id",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }),
 		);
 	});
@@ -107,7 +107,7 @@ describe("delete-resolution-attachment-use-case", () => {
 				complaintId: complaint.id,
 				attachmentId: "non-existent-attachment",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_ATTACHMENT_NOT_FOUND" }),
 		);
 	});

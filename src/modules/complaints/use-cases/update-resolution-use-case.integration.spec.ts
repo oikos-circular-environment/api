@@ -107,7 +107,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Tentativa indevida",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND", statusCode: 404 }),
 		);
 
@@ -133,7 +133,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Tentativa em denúncia fechada",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});
@@ -154,7 +154,7 @@ describe("update-resolution-use-case", () => {
 				resolutionId,
 				description: "Tentativa em denúncia cancelada",
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});

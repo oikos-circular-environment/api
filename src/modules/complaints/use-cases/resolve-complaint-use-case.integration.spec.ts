@@ -110,7 +110,7 @@ describe("resolve-complaint-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: otherUserId, complaintId, resolution }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_NOT_FOUND", statusCode: 404 }),
 		);
 	});
@@ -124,7 +124,7 @@ describe("resolve-complaint-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: ownerId, complaintId, resolution }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});
@@ -138,7 +138,7 @@ describe("resolve-complaint-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: ownerId, complaintId, resolution }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});

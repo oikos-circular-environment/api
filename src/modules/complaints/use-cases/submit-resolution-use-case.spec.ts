@@ -60,7 +60,7 @@ describe("submit-resolution-use-case", () => {
 				complaintId: complaint.id,
 				data: { ...resolutionData, description: "Segunda tentativa" },
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
 		);
 
@@ -124,7 +124,7 @@ describe("submit-resolution-use-case", () => {
 				complaintId: complaint.id,
 				data: { ...resolutionData, company_id: companyId },
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
 		);
 	});
@@ -175,7 +175,7 @@ describe("submit-resolution-use-case", () => {
 				complaintId: complaint.id,
 				data: { ...resolutionData, company_id: randomUUID() },
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPANY_NOT_OWNED" }),
 		);
 	});
@@ -244,6 +244,29 @@ describe("submit-resolution-use-case", () => {
 		}
 	});
 
+	it("allows the complaint creator to submit a resolution", async () => {
+		const userId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new SubmitResolutionUseCase(complaintsRepository);
+
+		const complaint = await complaintsRepository.createForUser(userId, {
+			date: new Date(),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+
+		await expect(
+			sut.execute({
+				userId,
+				complaintId: complaint.id,
+				data: resolutionData,
+			}),
+		).resolves.not.toThrow();
+
+		expect(complaintsRepository.resolutions).toHaveLength(1);
+	});
+
 	it("throws 422 COMPLAINT_CLOSED when complaint is CANCELED", async () => {
 		const userId = randomUUID();
 		const resolverUserId = randomUUID();
@@ -268,7 +291,7 @@ describe("submit-resolution-use-case", () => {
 				complaintId: complaint.id,
 				data: resolutionData,
 			}),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});

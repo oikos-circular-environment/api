@@ -40,7 +40,9 @@ describe("delete-resolution-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: userAId, complaintId: "non-existent-id" }),
-		).rejects.toThrow(AppError);
+		).rejects.toThrow(
+			expect.objectContaining({ code: "COMPLAINT_NOT_FOUND", statusCode: 404 }),
+		);
 	});
 
 	it("throws 404 when user has no resolution on the complaint", async () => {
@@ -60,7 +62,7 @@ describe("delete-resolution-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }),
 		);
 	});
@@ -92,7 +94,7 @@ describe("delete-resolution-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED" }),
 		);
 	});
@@ -124,9 +126,33 @@ describe("delete-resolution-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED" }),
 		);
+	});
+
+	it("allows the complaint creator to delete their own resolution", async () => {
+		const userAId = randomUUID();
+		const repo = new InMemoryComplaintsRepository();
+		const complaint = await new CreateComplaintUseCase(repo).execute({
+			userId: userAId,
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
+		});
+		await new SubmitResolutionUseCase(repo).execute({
+			userId: userAId,
+			complaintId: complaint.id,
+			data: { description: "Resolvido pelo próprio criador" },
+		});
+		const sut = new DeleteResolutionUseCase(repo);
+
+		await sut.execute({ userId: userAId, complaintId: complaint.id });
+
+		expect(repo.resolutions).toHaveLength(0);
 	});
 
 	it("cascades deletion to resolution attachments", async () => {

@@ -108,7 +108,7 @@ describe("resolve-complaint-use-case", () => {
 
 		await expect(
 			sut.execute({ userId, complaintId: created.id, resolution }),
-		).rejects.toThrowError(
+		).rejects.toThrow(
 			expect.objectContaining({ code: "COMPLAINT_CLOSED", statusCode: 422 }),
 		);
 	});
