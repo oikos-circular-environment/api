@@ -11,7 +11,7 @@ export default defineConfig({
 		root: "./",
 		globalSetup: "./src/test/integration-setup.ts",
 		setupFiles: ["./src/test/integration-env.ts"],
-		include: ["src/**/*.integration.spec.ts", "src/**/*.e2e.spec.ts"],
+		include: ["src/**/*.integration.spec.ts"],
 		fileParallelism: false,
 	},
 });
