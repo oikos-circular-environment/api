@@ -18,7 +18,9 @@ import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { marketRoutes } from "./modules/market/market-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
+import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
+import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
 
 export const app = Fastify({
 	logger: {
@@ -81,7 +83,7 @@ app.register(fastifyCookie);
 app.register(fastifyMultipart, {
 	limits: {
 		files: 1,
-		fileSize: 10 * 1024 * 1024,
+		fileSize: 48 * 1024 * 1024,
 	},
 });
 
@@ -138,3 +140,24 @@ app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });
 app.register(complaintRoutes, { prefix: "/v1" });
 app.register(marketRoutes, { prefix: "/v1" });
+app.register(wasteCategoriesRoutes, { prefix: "/v1" });
+
+if (env.STORAGE_PROVIDER === "minio") {
+	app.register(storageRoutes);
+}
+
+if (process.env.REDIS_URL) {
+	const { createBullBoard } = await import("@bull-board/api");
+	const { BullMQAdapter } = await import("@bull-board/api/bullMQAdapter");
+	const { FastifyAdapter } = await import("@bull-board/fastify");
+	const { complaintsQuorumQueue } = await import("@/lib/queue/queues.js");
+
+	const serverAdapter = new FastifyAdapter();
+	createBullBoard({
+		queues: [new BullMQAdapter(complaintsQuorumQueue)],
+		serverAdapter,
+	});
+
+	serverAdapter.setBasePath("/bullboard");
+	app.register(serverAdapter.registerPlugin(), { prefix: "/bullboard" });
+}

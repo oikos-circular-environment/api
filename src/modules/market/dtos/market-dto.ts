@@ -1,11 +1,13 @@
 import z from "zod";
-
+import { companyAddressSchema } from "@/modules/companies/entities/address-entity.js";
+import { businessHourTimeSlotSchema } from "@/modules/companies/entities/business-hour-entity.js";
+import { companyWasteSchema } from "@/modules/companies/entities/company-waste-entity.js";
 import {
 	companyTypeSchema,
 	dayOfWeekSchema,
-	measurementSchema,
-	wasteTypeSchema,
-} from "@/modules/companies/dtos/companies-dto.js";
+	identityTypeSchema,
+} from "@/modules/companies/entities/enums.js";
+import { wasteCategorySchema } from "@/modules/wastes/entities/waste-entity.js";
 
 export const getMarketQuerySchema = z.object({
 	lat: z.coerce.number(),
@@ -16,78 +18,78 @@ export const getMarketQuerySchema = z.object({
 	cursor: z.string().optional(),
 	limit: z.coerce.number().optional().default(20),
 });
-
 export type GetMarketQuery = z.infer<typeof getMarketQuerySchema>;
 
-const marketAddressSchema = z.object({
-	id: z.string(),
-	zip_code: z.string(),
-	street: z.string(),
-	number: z.string(),
-	complement: z.string().nullable(),
-	district: z.string(),
-	city: z.string(),
-	state: z.string(),
-	state_code: z.string(),
-	latitude: z.number().nullable(),
-	longitude: z.number().nullable(),
-});
-
+const marketAddressSchema = companyAddressSchema
+	.omit({
+		city_ibge_id: true,
+		state_ibge_id: true,
+		created_at: true,
+		updated_at: true,
+	})
+	.extend({
+		complement: z.string().nullable(),
+	});
 export type MarketAddress = z.infer<typeof marketAddressSchema>;
 
-const marketItemSchema = z.object({
-	id: z.string(),
-	name: z.string(),
-	description: z.string().nullable(),
-	price: z.number(),
-	unit: measurementSchema,
-	waste_type: wasteTypeSchema,
-	quantity: z.number(),
-	observations: z.string().nullable(),
-	sub_items: z.array(z.string()).nullable(),
+const marketWasteCategorySchema = wasteCategorySchema.pick({
+	id: true,
+	name: true,
+	hazard_levels: true,
 });
 
+const marketItemSchema = companyWasteSchema
+	.pick({
+		id: true,
+		name: true,
+		price: true,
+		unit: true,
+		waste_category_id: true,
+		quantity: true,
+	})
+	.extend({
+		description: z.string().nullable(),
+		waste_category: marketWasteCategorySchema,
+	});
 export type MarketItem = z.infer<typeof marketItemSchema>;
-
-const marketBusinessHourTimeSlotSchema = z.object({
-	id: z.string(),
-	start_time: z.string(),
-	end_time: z.string(),
-});
-
-export type MarketBusinessHourTimeSlot = z.infer<
-	typeof marketBusinessHourTimeSlotSchema
->;
 
 const marketBusinessHourSchema = z.object({
 	id: z.string(),
 	day_of_week: dayOfWeekSchema,
 	is_open: z.boolean(),
-	time_slots: z.array(marketBusinessHourTimeSlotSchema),
+	time_slots: z.array(businessHourTimeSlotSchema),
 });
-
 export type MarketBusinessHour = z.infer<typeof marketBusinessHourSchema>;
 
-export const marketCompanySchema = z.object({
+const marketCompanyBaseSchema = z.object({
 	id: z.string(),
-	business_name: z.string().nullable(),
+	business_name: z.string(),
 	corporate_name: z.string(),
 	company_type: companyTypeSchema,
-	accept_appointments: z.boolean(),
 	status: z.boolean(),
 	phones: z.array(z.string()),
 	address: marketAddressSchema,
+	avatar: z.string().nullable(),
 	services: z.array(marketItemSchema),
 	wastes: z.array(marketItemSchema),
 	business_hours: z.array(marketBusinessHourSchema),
 	distance_in_meters: z.number(),
 });
 
+export const marketCompanyRecordSchema = marketCompanyBaseSchema.extend({
+	identity: z.string(),
+	identity_type: identityTypeSchema,
+});
+export type MarketCompanyRecord = z.infer<typeof marketCompanyRecordSchema>;
+
+export const marketCompanySchema = marketCompanyBaseSchema.extend({
+	identity: z.string().nullable(),
+	identity_type: z.literal("CNPJ").nullable(),
+});
 export type MarketCompany = z.infer<typeof marketCompanySchema>;
 
 export const marketResponseSchema = z.object({
 	companies: z.array(marketCompanySchema),
 	next_cursor: z.string().nullable(),
 });
-
 export type MarketResponse = z.infer<typeof marketResponseSchema>;

@@ -1,42 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { GetComplaintUseCase } from "./get-complaint-use-case.js";
-
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
-	location: {
-		coords: {
-			latitude: -23.55,
-			longitude: -46.63,
-			altitude: null,
-			accuracy: null,
-			altitudeAccuracy: null,
-			heading: null,
-			speed: null,
-		},
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
 
 describe("get-complaint-use-case", () => {
 	it("returns complaint by id for user", async () => {
@@ -47,9 +13,9 @@ describe("get-complaint-use-case", () => {
 			"11111111-1111-1111-1111-111111111111",
 			{
 				date: new Date("2026-04-20T10:00:00.000Z"),
-				type: "IRREGULAR_DISPOSAL",
+				waste_category_ids: ["waste-category-id"],
 				observations: "Descarte de pneus",
-				geospatial,
+				geospatial: makeGeospatial(),
 			},
 		);
 
@@ -59,8 +25,8 @@ describe("get-complaint-use-case", () => {
 		});
 
 		expect(result.id).toBe(created.id);
-		expect(result.type).toBe("IRREGULAR_DISPOSAL");
 		expect(result.observations).toBe("Descarte de pneus");
+		expect(result.attachments).toHaveLength(0);
 	});
 
 	it("throws when complaint does not exist for user", async () => {

@@ -6,6 +6,7 @@ import type {
 } from "@/modules/profiles/dtos/profiles-dto.js";
 import type { AddressesRepository } from "@/modules/profiles/repositories/address-repository.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
+import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
 
 type UpsertProfileUseCaseRequest = {
 	userId: string;
@@ -18,21 +19,20 @@ export class UpsertProfileUseCase {
 	constructor(
 		private readonly profilesRepository: ProfilesRepository,
 		private readonly addressesRepository: AddressesRepository,
+		private readonly usersRepository: UsersRepository,
 	) {}
 
 	async execute({
 		userId,
 		data,
 	}: UpsertProfileUseCaseRequest): Promise<Profile> {
-		const { address: addressData, ...profileData } = data;
+		const user = await this.usersRepository.findById(userId);
 
-		const profileWithCpf = await this.profilesRepository.findByCpf(
-			profileData.cpf,
-		);
-
-		if (profileWithCpf && profileWithCpf.user_id !== userId) {
-			throw new AppError("CPF already in use", "CPF_ALREADY_IN_USE", 409);
+		if (!user) {
+			throw new AppError("User not found", "USER_NOT_FOUND", 404);
 		}
+
+		const { address: addressData, ...profileData } = data;
 
 		const profile = await this.profilesRepository.upsert({
 			...profileData,

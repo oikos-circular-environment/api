@@ -19,8 +19,10 @@ model User {
   created_at DateTime @default(now())
   profile    Profile?
 
-  company        Company?
-  userComplaints UserComplaint[]
+  companies  Company[]
+  complaints Complaint[]
+  votes      ComplaintVote[]
+  resolutions ComplaintResolution[] @relation("ResolutionResolver")
 
   @@map("users")
 }
@@ -29,9 +31,7 @@ model Profile {
   id           String   @id @default(uuid())
   full_name    String
   display_name String
-  cpf          String   @unique
   phone        String
-  is_collector Boolean  @default(false)
   created_at   DateTime @default(now())
   updated_at   DateTime @updatedAt
 
@@ -64,13 +64,12 @@ model Company {
   identity_type       IdentityType
   company_type        CompanyType
   status              Boolean      @default(true)
-  is_headquarters     Boolean      @default(false)
-  business_name       String?
+  business_name       String
   corporate_name      String
-  accept_appointments Boolean      @default(false)
   email               String?
   phones              String[]
   started_activity_in DateTime
+  is_company_valid    Boolean      @default(false)
   created_at          DateTime     @default(now())
   updated_at          DateTime     @updatedAt
 
@@ -79,10 +78,42 @@ model Company {
   business_hours CompanyBusinessHour[]
   wastes         CompanyWaste[]
   services       CompanyService[]
-  user_id        String                @unique
-  user           User                  @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  avatar_id String?
+  avatar    CompanyAvatar? @relation(fields: [avatar_id], references: [id])
+
+  validation  CompanyValidation?
+  resolutions ComplaintResolution[]
 
   @@map("companies")
+}
+
+model CompanyValidation {
+  id                   String  @id @default(uuid())
+  general_registration Boolean @default(false)
+  address              Boolean @default(false)
+  business_hours       Boolean @default(false)
+  wastes               Boolean @default(false)
+  services             Boolean @default(false)
+
+  company_id String  @unique
+  company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@map("company_validations")
+}
+
+model CompanyAvatar {
+  id         String    @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  created_at DateTime  @default(now())
+  companies  Company[]
+
+  @@map("company_avatars")
 }
 
 model Address {
@@ -100,8 +131,8 @@ model Address {
   state         String
   state_code    String
 
-  latitude  Float?
-  longitude Float?
+  latitude  Float
+  longitude Float
   location  Unsupported("geography(Point, 4326)")?
 
   created_at DateTime @default(now())
@@ -141,21 +172,53 @@ model BusinessHourTimeSlot {
   @@map("business_hour_time_slots")
 }
 
+model WasteCategory {
+  id            String        @id @default(uuid())
+  name          String
+  description   String?
+  observations  String?
+  hazard_levels HazardLevel[]
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @updatedAt
+
+  subcategories    WasteSubcategory[]
+  company_wastes   CompanyWaste[]
+  company_services CompanyService[]
+  complaints       ComplaintWasteCategory[]
+
+  @@map("waste_categories")
+}
+
+model WasteSubcategory {
+  id           String          @id @default(uuid())
+  name         String
+  description  String?
+  observations String?
+  hazard_level HazardLevel
+  type         SubcategoryType @default(INCLUDE)
+  created_at   DateTime        @default(now())
+
+  category_id String
+  category    WasteCategory @relation(fields: [category_id], references: [id], onDelete: Cascade)
+
+  @@map("waste_subcategories")
+}
+
 model CompanyWaste {
   id           String      @id @default(uuid())
   name         String
   description  String?
   price        Decimal     @db.Decimal(12, 2)
   unit         Measurement
-  waste_type   WasteType
   quantity     Decimal     @db.Decimal(12, 2)
-  observations String?
-  sub_items    String[]
   created_at   DateTime    @default(now())
   updated_at   DateTime    @updatedAt
 
   company_id String
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  waste_category_id String
+  waste_category    WasteCategory @relation(fields: [waste_category_id], references: [id], onDelete: Restrict)
 
   @@map("company_wastes")
 }
@@ -166,50 +229,48 @@ model CompanyService {
   description  String?
   price        Decimal     @db.Decimal(12, 2)
   unit         Measurement
-  waste_type   WasteType
   quantity     Decimal     @db.Decimal(12, 2)
-  observations String?
-  sub_items    String[]
   created_at   DateTime    @default(now())
   updated_at   DateTime    @updatedAt
 
   company_id String
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
 
+  waste_category_id String
+  waste_category    WasteCategory @relation(fields: [waste_category_id], references: [id], onDelete: Restrict)
+
   @@map("company_services")
 }
 
-model UserComplaint {
-  id     String          @id @default(uuid())
-  status ComplaintStatus @default(OPEN)
-
-  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  user_id String
-
-  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
-  complaint_id String
-
-  created_at DateTime @default(now())
-
-  @@map("user_complaints")
-}
-
 model Complaint {
-  id           String        @id @default(uuid())
+  id           String          @id @default(uuid())
+  status       ComplaintStatus @default(OPEN)
   date         DateTime
-  type         ComplaintType
   observations String?
+  geospatial   Json
+  location     Unsupported("geography(Point, 4326)")?
+  created_at   DateTime        @default(now())
 
-  /// Expected payload shape stored as raw JSON from expo-location.
-  /// The application should validate this structure before persisting it.
-  geospatial Json
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
-  userComplaints UserComplaint[]
-
-  attachment    ComplaintAttachment? @relation(fields: [attachment_id], references: [id])
-  attachment_id String?
+  attachments    ComplaintAttachment[]
+  votes          ComplaintVote[]
+  resolutions    ComplaintResolution[]
+  waste_categories ComplaintWasteCategory[]
 
   @@map("complaints")
+}
+
+model ComplaintWasteCategory {
+  complaint_id      String
+  waste_category_id String
+
+  complaint      Complaint     @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+  waste_category WasteCategory @relation(fields: [waste_category_id], references: [id], onDelete: Restrict)
+
+  @@id([complaint_id, waste_category_id])
+  @@map("complaint_waste_categories")
 }
 
 enum ComplaintCaptureMode {
@@ -223,10 +284,65 @@ model ComplaintAttachment {
   file_name  String
   path       String
   base64     String
+  metadata   Json?
   created_at DateTime @default(now())
 
-  type       ComplaintCaptureMode @default(PHOTO)
-  complaints Complaint[]
+  type         ComplaintCaptureMode @default(PHOTO)
+
+  complaint_id String
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
 
   @@map("complaint_attachments")
+}
+
+model ComplaintVote {
+  id         String            @id @default(uuid())
+  vote_type  ComplaintVoteType
+  created_at DateTime          @default(now())
+  updated_at DateTime          @updatedAt
+
+  complaint_id String
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([complaint_id, user_id])
+  @@map("complaint_votes")
+}
+
+model ComplaintResolution {
+  id          String   @id @default(uuid())
+  description String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  complaint_id String
+  complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
+
+  resolver_user_id String
+  resolver_user    User   @relation("ResolutionResolver", fields: [resolver_user_id], references: [id], onDelete: Cascade)
+
+  company_id String?
+  company    Company? @relation(fields: [company_id], references: [id], onDelete: SetNull)
+
+  attachments ComplaintResolutionAttachment[]
+
+  @@unique([complaint_id, resolver_user_id, company_id])
+  @@map("complaint_resolutions")
+}
+
+model ComplaintResolutionAttachment {
+  id         String   @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  base64     String
+  created_at DateTime @default(now())
+
+  type          ComplaintCaptureMode @default(PHOTO)
+  resolution_id String
+  resolution    ComplaintResolution @relation(fields: [resolution_id], references: [id], onDelete: Cascade)
+
+  @@map("complaint_resolution_attachments")
 }

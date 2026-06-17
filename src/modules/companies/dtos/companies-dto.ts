@@ -1,110 +1,62 @@
 import z from "zod";
+import { companyAddressSchema } from "../entities/address-entity.js";
+import {
+	businessHourSchema,
+	companyBusinessHoursSchema,
+} from "../entities/business-hour-entity.js";
+import { companySchema } from "../entities/company-entity.js";
+import {
+	companyServiceSchema,
+	companyServicesSchema,
+} from "../entities/company-service-entity.js";
+import {
+	companyWasteSchema,
+	companyWastesSchema,
+} from "../entities/company-waste-entity.js";
+import { dayOfWeekSchema } from "../entities/enums.js";
 
-export const identityTypeSchema = z.enum(["CPF", "CNPJ"]);
-export type IdentityType = z.infer<typeof identityTypeSchema>;
-
-export const companyTypeSchema = z.enum([
-	"ONG",
-	"COMPANY",
-	"GOVERNMENT",
-	"COLLECTOR",
-]);
-export type CompanyType = z.infer<typeof companyTypeSchema>;
-
-export const createCompanySchema = z.object({
-	user_id: z.string().uuid(),
-	identity: z.string().min(1, "Identity is required"),
-	identity_type: identityTypeSchema,
-	company_type: companyTypeSchema,
-	status: z.boolean().default(true),
-	is_headquarters: z.boolean().default(false),
-	business_name: z.string().optional().nullable(),
-	corporate_name: z.string().min(1, "Corporate name is required"),
-	accept_appointments: z.boolean().default(false),
-	email: z.email("Invalid email address").optional().nullable(),
-	phones: z.array(z.string().min(1, "Phone is required")),
-	started_activity_in: z.coerce.date(),
-});
-
-export type CreateCompany = z.infer<typeof createCompanySchema>;
-
-export const updateCompanySchema = createCompanySchema
-	.partial()
-	.omit({ user_id: true });
-
-export type UpdateCompany = z.infer<typeof updateCompanySchema>;
-
-export const companySchema = createCompanySchema.extend({
-	id: z.string(),
-	created_at: z.date(),
-	updated_at: z.date(),
-});
-
-export type Company = z.infer<typeof companySchema>;
-
-export const createCompanyAddressSchema = z.object({
-	company_id: z.string().uuid(),
-	zip_code: z.string().min(1, "Zip code is required"),
-	street: z.string().min(1, "Street is required"),
-	number: z.string().min(1, "Number is required"),
-	complement: z.string().optional().nullable(),
-	district: z.string().min(1, "District is required"),
-	city_ibge_id: z.number().int(),
-	city: z.string().min(1, "City is required"),
-	state_ibge_id: z.number().int(),
-	state: z.string().min(1, "State is required"),
-	state_code: z.string().length(2, "State code must have 2 characters"),
-	latitude: z.number().optional().nullable(),
-	longitude: z.number().optional().nullable(),
-});
-
-export type CreateCompanyAddress = z.infer<typeof createCompanyAddressSchema>;
-
-export const updateCompanyAddressSchema = createCompanyAddressSchema
-	.partial()
-	.omit({ company_id: true });
-
-export type UpdateCompanyAddress = z.infer<typeof updateCompanyAddressSchema>;
-
-export const upsertCompanyAddressSchema = createCompanyAddressSchema.omit({
-	company_id: true,
-});
-
-export type UpsertCompanyAddress = z.infer<typeof upsertCompanyAddressSchema>;
-
-export const companyAddressSchema = z.object({
-	id: z.string(),
-	zip_code: z.string(),
-	street: z.string(),
-	number: z.string(),
-	complement: z.string().nullable(),
-	district: z.string(),
-	city_ibge_id: z.number(),
-	city: z.string(),
-	state_ibge_id: z.number(),
-	state: z.string(),
-	state_code: z.string(),
-	latitude: z.number().nullable(),
-	longitude: z.number().nullable(),
-	created_at: z.date(),
-	updated_at: z.date(),
-});
-
-export type CompanyAddress = z.infer<typeof companyAddressSchema>;
+export type { CompanyAddress } from "../entities/address-entity.js";
+export { companyAddressSchema } from "../entities/address-entity.js";
+export type {
+	BusinessHour,
+	BusinessHourTimeSlot,
+} from "../entities/business-hour-entity.js";
+export {
+	businessHourSchema,
+	businessHourTimeSlotSchema,
+	companyBusinessHoursSchema,
+} from "../entities/business-hour-entity.js";
+export type { Company } from "../entities/company-entity.js";
+export { companySchema } from "../entities/company-entity.js";
+export type { CompanyService } from "../entities/company-service-entity.js";
+export {
+	companyServiceSchema,
+	companyServicesSchema,
+} from "../entities/company-service-entity.js";
+export type {
+	CompanyValidation,
+	CompanyValidationField,
+} from "../entities/company-validation-entity.js";
+export { companyValidationSchema } from "../entities/company-validation-entity.js";
+export type { CompanyWaste } from "../entities/company-waste-entity.js";
+export {
+	companyWasteSchema,
+	companyWastesSchema,
+} from "../entities/company-waste-entity.js";
+export type {
+	CompanyType,
+	DayOfWeek,
+	IdentityType,
+	Measurement,
+} from "../entities/enums.js";
+export {
+	companyTypeSchema,
+	dayOfWeekSchema,
+	identityTypeSchema,
+	measurementSchema,
+} from "../entities/enums.js";
 
 const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
-
-export const dayOfWeekSchema = z.enum([
-	"SUNDAY",
-	"MONDAY",
-	"TUESDAY",
-	"WEDNESDAY",
-	"THURSDAY",
-	"FRIDAY",
-	"SATURDAY",
-]);
-
-export type DayOfWeek = z.infer<typeof dayOfWeekSchema>;
 
 export const businessHourTimeSlotInputSchema = z.object({
 	start_time: z
@@ -112,7 +64,6 @@ export const businessHourTimeSlotInputSchema = z.object({
 		.regex(timePattern, "start_time must be in HH:mm format"),
 	end_time: z.string().regex(timePattern, "end_time must be in HH:mm format"),
 });
-
 export type BusinessHourTimeSlotInput = z.infer<
 	typeof businessHourTimeSlotInputSchema
 >;
@@ -122,7 +73,6 @@ export const businessHourUpsertInputSchema = z.object({
 	is_open: z.boolean(),
 	time_slots: z.array(businessHourTimeSlotInputSchema),
 });
-
 export type BusinessHourUpsertInput = z.infer<
 	typeof businessHourUpsertInputSchema
 >;
@@ -136,7 +86,6 @@ export const upsertCompanyBusinessHoursSchema = z
 			const uniqueDays = new Set(
 				data.business_hours.map((item) => item.day_of_week),
 			);
-
 			return uniqueDays.size === data.business_hours.length;
 		},
 		{
@@ -144,95 +93,105 @@ export const upsertCompanyBusinessHoursSchema = z
 			path: ["business_hours"],
 		},
 	);
-
 export type UpsertCompanyBusinessHours = z.infer<
 	typeof upsertCompanyBusinessHoursSchema
 >;
 
-export const businessHourTimeSlotSchema = z.object({
-	id: z.string(),
-	start_time: z.string(),
-	end_time: z.string(),
+export const createCompanySchema = companySchema.omit({
+	id: true,
+	is_company_valid: true,
+	avatar: true,
+	created_at: true,
+	updated_at: true,
 });
+export type CreateCompany = z.infer<typeof createCompanySchema>;
 
-export type BusinessHourTimeSlot = z.infer<typeof businessHourTimeSlotSchema>;
+export const updateCompanySchema = createCompanySchema
+	.omit({ user_id: true })
+	.partial();
+export type UpdateCompany = z.infer<typeof updateCompanySchema>;
 
-export const businessHourSchema = z.object({
-	id: z.string(),
-	day_of_week: dayOfWeekSchema,
-	is_open: z.boolean(),
-	time_slots: z.array(businessHourTimeSlotSchema),
+export const createCompanyAddressSchema = companyAddressSchema
+	.omit({ id: true, created_at: true, updated_at: true })
+	.extend({ company_id: z.uuid() });
+export type CreateCompanyAddress = z.infer<typeof createCompanyAddressSchema>;
+
+export const upsertCompanyAddressSchema = createCompanyAddressSchema.omit({
+	company_id: true,
 });
+export type UpsertCompanyAddress = z.infer<typeof upsertCompanyAddressSchema>;
 
-export type BusinessHour = z.infer<typeof businessHourSchema>;
+export const updateCompanyAddressSchema = upsertCompanyAddressSchema.partial();
+export type UpdateCompanyAddress = z.infer<typeof updateCompanyAddressSchema>;
 
-export const companyBusinessHoursSchema = z.array(businessHourSchema);
-
-export const measurementSchema = z.enum([
-	"KG",
-	"L",
-	"UNIT",
-	"M",
-	"M2",
-	"M3",
-	"ML",
-]);
-
-export type Measurement = z.infer<typeof measurementSchema>;
-
-export const wasteTypeSchema = z.enum(["RECYCLABLE", "GARBAGE"]);
-
-export type WasteType = z.infer<typeof wasteTypeSchema>;
-
-const companyItemBaseSchema = z.object({
-	name: z.string().min(1, "Name is required"),
-	description: z.string().optional().nullable(),
-	price: z.number().nonnegative("Price must be non-negative"),
-	unit: measurementSchema,
-	waste_type: wasteTypeSchema,
-	quantity: z.number().positive("Quantity must be greater than zero"),
-	observations: z.string().optional().nullable(),
-	sub_items: z.array(z.string().min(1)).optional().nullable(),
+export const companyWasteInputSchema = companyWasteSchema.omit({
+	id: true,
+	waste_category: true,
+	created_at: true,
+	updated_at: true,
 });
-
-export const companyWasteInputSchema = companyItemBaseSchema;
-
 export type CompanyWasteInput = z.infer<typeof companyWasteInputSchema>;
-
-export const companyWasteSchema = companyItemBaseSchema.extend({
-	id: z.string(),
-	sub_items: z.array(z.string()).nullable(),
-	created_at: z.date(),
-	updated_at: z.date(),
-});
-
-export type CompanyWaste = z.infer<typeof companyWasteSchema>;
-
-export const companyWastesSchema = z.array(companyWasteSchema);
 
 export const upsertCompanyWastesSchema = z.object({
 	wastes: z.array(companyWasteInputSchema),
 });
-
 export type UpsertCompanyWastes = z.infer<typeof upsertCompanyWastesSchema>;
 
-export const companyServiceInputSchema = companyItemBaseSchema;
-
-export type CompanyServiceInput = z.infer<typeof companyServiceInputSchema>;
-
-export const companyServiceSchema = companyServiceInputSchema.extend({
-	id: z.string(),
-	sub_items: z.array(z.string()).nullable(),
-	created_at: z.date(),
-	updated_at: z.date(),
+export const companyServiceInputSchema = companyServiceSchema.omit({
+	id: true,
+	waste_category: true,
+	created_at: true,
+	updated_at: true,
 });
-
-export type CompanyService = z.infer<typeof companyServiceSchema>;
-
-export const companyServicesSchema = z.array(companyServiceSchema);
+export type CompanyServiceInput = z.infer<typeof companyServiceInputSchema>;
 
 export const upsertCompanyServicesSchema = z.object({
 	services: z.array(companyServiceInputSchema),
 });
-
 export type UpsertCompanyServices = z.infer<typeof upsertCompanyServicesSchema>;
+
+export const companyGeneralRegistrationValidationSchema = companySchema.pick({
+	identity: true,
+	identity_type: true,
+	company_type: true,
+	business_name: true,
+	corporate_name: true,
+	phones: true,
+	started_activity_in: true,
+});
+
+export const companyBusinessHoursValidationSchema = z
+	.array(businessHourSchema)
+	.refine((hours) => hours.some((h) => h.is_open && h.time_slots.length > 0), {
+		message: "At least one open day with a time slot is required",
+	});
+
+export const companyWastesValidationSchema = z
+	.array(companyWasteSchema)
+	.min(1)
+	.refine(
+		(items) =>
+			items.every((i) => z.uuid().safeParse(i.waste_category_id).success),
+		{
+			message: "All wastes must have a valid waste_category_id",
+		},
+	);
+
+export const companyServicesValidationSchema = z
+	.array(companyServiceSchema)
+	.min(1)
+	.refine(
+		(items) =>
+			items.every((i) => z.uuid().safeParse(i.waste_category_id).success),
+		{
+			message: "All services must have a valid waste_category_id",
+		},
+	);
+
+export const companyProfileSchema = companySchema.extend({
+	address: companyAddressSchema.nullable(),
+	business_hours: companyBusinessHoursSchema,
+	wastes: companyWastesSchema,
+	services: companyServicesSchema,
+});
+export type CompanyProfile = z.infer<typeof companyProfileSchema>;

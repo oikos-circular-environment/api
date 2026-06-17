@@ -1,14 +1,15 @@
 import { Prisma } from "@/generated/prisma/client.js";
 import { prisma } from "@/lib/prisma.js";
-import type { MarketCompany } from "@/modules/market/dtos/market-dto.js";
+import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 import type { MarketRepository } from "@/modules/market/repositories/market-repository.js";
 
 type RawCompanyRow = {
 	id: string;
-	business_name: string | null;
+	business_name: string;
 	corporate_name: string;
+	identity: string;
+	identity_type: string;
 	company_type: string;
-	accept_appointments: boolean;
 	status: boolean;
 	phones: string[];
 	address_id: string;
@@ -20,9 +21,10 @@ type RawCompanyRow = {
 	city: string;
 	state: string;
 	state_code: string;
-	latitude: number | null;
-	longitude: number | null;
+	latitude: number;
+	longitude: number;
 	distance_in_meters: number;
+	avatar: string | null;
 };
 
 type RawCountRow = {
@@ -38,7 +40,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 		category?: "services" | "waste";
 		offset: number;
 		limit: number;
-	}): Promise<{ companies: MarketCompany[]; total: number }> {
+	}): Promise<{ companies: MarketCompanyRecord[]; total: number }> {
 		const { lat, lon, radius, q, category, offset, limit } = params;
 
 		const origin = Prisma.sql`ST_SetSRID(ST_Point(${lon}, ${lat}), 4326)`;
@@ -48,17 +50,11 @@ export class MarketRepositoryPrisma implements MarketRepository {
       c.business_name ILIKE ${`%${q}%`}
       OR EXISTS (
         SELECT 1 FROM company_services cs
-        WHERE cs.company_id = c.id AND (
-          cs.name ILIKE ${`%${q}%`}
-          OR EXISTS (SELECT 1 FROM unnest(cs.sub_items) AS sub WHERE sub ILIKE ${`%${q}%`})
-        )
+        WHERE cs.company_id = c.id AND cs.name ILIKE ${`%${q}%`}
       )
       OR EXISTS (
         SELECT 1 FROM company_wastes cw
-        WHERE cw.company_id = c.id AND (
-          cw.name ILIKE ${`%${q}%`}
-          OR EXISTS (SELECT 1 FROM unnest(cw.sub_items) AS sub WHERE sub ILIKE ${`%${q}%`})
-        )
+        WHERE cw.company_id = c.id AND cw.name ILIKE ${`%${q}%`}
       )
     )`
 			: Prisma.empty;
@@ -76,6 +72,8 @@ export class MarketRepositoryPrisma implements MarketRepository {
       JOIN addresses a ON a.id = c.address_id
       WHERE a.location IS NOT NULL
         AND ST_DWithin(a.location, ${origin}, ${radius})
+        AND c.status = true
+        AND c.is_company_valid = true
         ${textFilter}
         ${categoryFilter}
     `);
@@ -91,8 +89,9 @@ export class MarketRepositoryPrisma implements MarketRepository {
         c.id,
         c.business_name,
         c.corporate_name,
+        c.identity,
+        c.identity_type,
         c.company_type,
-        c.accept_appointments,
         c.status,
         c.phones,
         a.id AS address_id,
@@ -106,11 +105,15 @@ export class MarketRepositoryPrisma implements MarketRepository {
         a.state_code,
         a.latitude,
         a.longitude,
+        ca.url AS avatar,
         ST_Distance(a.location, ${origin}) AS distance_in_meters
       FROM companies c
       JOIN addresses a ON a.id = c.address_id
+      LEFT JOIN company_avatars ca ON ca.id = c.avatar_id
       WHERE a.location IS NOT NULL
         AND ST_DWithin(a.location, ${origin}, ${radius})
+        AND c.status = true
+        AND c.is_company_valid = true
         ${textFilter}
         ${categoryFilter}
       ORDER BY distance_in_meters ASC
@@ -123,12 +126,20 @@ export class MarketRepositoryPrisma implements MarketRepository {
 
 		const companyIds = rows.map((r) => r.id);
 
+		const wasteInclude = {
+			waste_category: {
+				select: { id: true, name: true, hazard_levels: true },
+			},
+		} as const;
+
 		const [allServices, allWastes, allBusinessHours] = await Promise.all([
 			prisma.companyService.findMany({
 				where: { company_id: { in: companyIds } },
+				include: wasteInclude,
 			}),
 			prisma.companyWaste.findMany({
 				where: { company_id: { in: companyIds } },
+				include: wasteInclude,
 			}),
 			prisma.companyBusinessHour.findMany({
 				where: { company_id: { in: companyIds } },
@@ -136,7 +147,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 			}),
 		]);
 
-		const companies: MarketCompany[] = rows.map((row) => {
+		const companies: MarketCompanyRecord[] = rows.map((row) => {
 			const services = allServices
 				.filter((s) => s.company_id === row.id)
 				.map((s) => ({
@@ -144,12 +155,15 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					name: s.name,
 					description: s.description,
 					price: Number(s.price),
-					unit: s.unit as MarketCompany["services"][number]["unit"],
-					waste_type:
-						s.waste_type as MarketCompany["services"][number]["waste_type"],
+					unit: s.unit as MarketCompanyRecord["services"][number]["unit"],
+					waste_category_id: s.waste_category_id,
+					waste_category: {
+						id: s.waste_category.id,
+						name: s.waste_category.name,
+						hazard_levels: s.waste_category
+							.hazard_levels as MarketCompanyRecord["services"][number]["waste_category"]["hazard_levels"],
+					},
 					quantity: Number(s.quantity),
-					observations: s.observations,
-					sub_items: s.sub_items.length === 0 ? null : s.sub_items,
 				}));
 
 			const wastes = allWastes
@@ -159,12 +173,15 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					name: w.name,
 					description: w.description,
 					price: Number(w.price),
-					unit: w.unit as MarketCompany["wastes"][number]["unit"],
-					waste_type:
-						w.waste_type as MarketCompany["wastes"][number]["waste_type"],
+					unit: w.unit as MarketCompanyRecord["wastes"][number]["unit"],
+					waste_category_id: w.waste_category_id,
+					waste_category: {
+						id: w.waste_category.id,
+						name: w.waste_category.name,
+						hazard_levels: w.waste_category
+							.hazard_levels as MarketCompanyRecord["wastes"][number]["waste_category"]["hazard_levels"],
+					},
 					quantity: Number(w.quantity),
-					observations: w.observations,
-					sub_items: w.sub_items.length === 0 ? null : w.sub_items,
 				}));
 
 			const businessHours = allBusinessHours
@@ -172,7 +189,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 				.map((bh) => ({
 					id: bh.id,
 					day_of_week:
-						bh.day_of_week as MarketCompany["business_hours"][number]["day_of_week"],
+						bh.day_of_week as MarketCompanyRecord["business_hours"][number]["day_of_week"],
 					is_open: bh.is_open,
 					time_slots: bh.time_slots.map((ts) => ({
 						id: ts.id,
@@ -185,8 +202,10 @@ export class MarketRepositoryPrisma implements MarketRepository {
 				id: row.id,
 				business_name: row.business_name,
 				corporate_name: row.corporate_name,
-				company_type: row.company_type as MarketCompany["company_type"],
-				accept_appointments: row.accept_appointments,
+				identity: row.identity,
+				identity_type:
+					row.identity_type as MarketCompanyRecord["identity_type"],
+				company_type: row.company_type as MarketCompanyRecord["company_type"],
 				status: row.status,
 				phones: row.phones,
 				address: {
@@ -202,6 +221,7 @@ export class MarketRepositoryPrisma implements MarketRepository {
 					latitude: row.latitude,
 					longitude: row.longitude,
 				},
+				avatar: row.avatar,
 				services,
 				wastes,
 				business_hours: businessHours,

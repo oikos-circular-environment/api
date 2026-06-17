@@ -1,0 +1,2 @@
+-- RenameIndex
+ALTER INDEX "complaint_resolutions_complaint_id_resolver_user_id_company_id_" RENAME TO "complaint_resolutions_complaint_id_resolver_user_id_company_key";

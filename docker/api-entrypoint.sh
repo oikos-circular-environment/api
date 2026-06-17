@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+echo "Running database migrations..."
+npx prisma migrate deploy
+echo "Starting development server..."
+exec npm run dev

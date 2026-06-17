@@ -1,38 +1,86 @@
 import { randomUUID } from "node:crypto";
 import type {
 	Complaint,
-	ComplaintAttachment,
+	ComplaintCaptureMode,
+	ComplaintCategory,
 	ComplaintResume,
 	ComplaintStatus,
+	ComplaintVote,
+	ComplaintVoteType,
 	CreateComplaint,
 	Geospatial,
 	GetComplaintsFilters,
+	GetMapComplaintsQuery,
+	MapComplaintItem,
+	PublicComplaint,
+	Resolution,
+	ResolutionAttachment,
+	Resolver,
 	SaveComplaintAttachment,
+	SaveResolutionAttachment,
+	SubmitResolution,
 	UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
 type ComplaintEntity = {
 	id: string;
+	user_id: string;
+	status: ComplaintStatus;
 	date: Date;
-	type: Complaint["type"];
 	observations: string | null;
 	geospatial: Geospatial;
-	attachment_id: string | null;
+	categories: ComplaintCategory[];
+	created_at: Date;
 };
 
-type UserComplaintEntity = {
+type AttachmentEntity = {
 	id: string;
-	user_id: string;
 	complaint_id: string;
-	status: ComplaintStatus;
+	url: string;
+	file_name: string;
+	path: string;
+	base64: string;
+	metadata: Record<string, unknown> | null;
+	type: ComplaintCaptureMode;
 	created_at: Date;
+};
+
+type ResolutionEntity = {
+	id: string;
+	complaint_id: string;
+	resolver_user_id: string;
+	description: string;
+	company_id: string | null;
+	created_at: Date;
+	updated_at: Date;
+};
+
+type ResolutionAttachmentEntity = {
+	id: string;
+	resolution_id: string;
+	url: string;
+	file_name: string;
+	path: string;
+	base64: string;
+	created_at: Date;
+};
+
+type VoteEntity = {
+	id: string;
+	complaint_id: string;
+	user_id: string;
+	vote_type: ComplaintVoteType;
+	created_at: Date;
+	updated_at: Date;
 };
 
 export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	public complaints: ComplaintEntity[] = [];
-	public attachments: ComplaintAttachment[] = [];
-	public userComplaints: UserComplaintEntity[] = [];
+	public attachments: AttachmentEntity[] = [];
+	public resolutions: ResolutionEntity[] = [];
+	public resolutionAttachments: ResolutionAttachmentEntity[] = [];
+	public votes: VoteEntity[] = [];
 
 	async findManyByUserId(
 		userId: string,
@@ -40,60 +88,46 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 	) {
 		const { filters, cursor, limit } = params;
 
-		const userComplaints = this.userComplaints
+		const userComplaints = this.complaints
 			.filter((item) => item.user_id === userId)
 			.filter((item) => !filters?.status || item.status === filters.status)
 			.filter((item) => !cursor || item.created_at < cursor)
 			.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
 
-		const mapped = userComplaints
-			.map((item) => this.mapUserComplaint(item))
-			.filter((item) => item !== null)
-			.filter((item) => !filters?.type || item.type === filters.type);
-
-		return mapped.slice(0, limit + 1);
+		return userComplaints
+			.slice(0, limit + 1)
+			.map((item) => this.mapComplaint(item));
 	}
 
 	async findByUserAndComplaintId(userId: string, complaintId: string) {
-		const userComplaint = this.userComplaints.find(
-			(item) => item.user_id === userId && item.complaint_id === complaintId,
+		const complaint = this.complaints.find(
+			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!userComplaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
-		return this.mapUserComplaint(userComplaint);
+		return this.mapComplaint(complaint);
 	}
 
 	async createForUser(userId: string, data: CreateComplaint) {
-		const complaint = {
-			id: randomUUID(),
-			date: data.date,
-			type: data.type,
-			observations: data.observations ?? null,
-			geospatial: data.geospatial,
-			attachment_id: null,
-		} satisfies ComplaintEntity;
-
-		const userComplaint = {
+		const complaint: ComplaintEntity = {
 			id: randomUUID(),
 			user_id: userId,
-			complaint_id: complaint.id,
 			status: "OPEN",
+			date: data.date,
+			observations: data.observations ?? null,
+			geospatial: data.geospatial,
+			categories: data.waste_category_ids.map((id) => ({
+				id,
+				name: id,
+				hazard_levels: [],
+			})),
 			created_at: new Date(),
-		} satisfies UserComplaintEntity;
+		};
 
 		this.complaints.push(complaint);
-		this.userComplaints.push(userComplaint);
 
-		const mappedComplaint = this.mapUserComplaint(userComplaint);
-
-		if (!mappedComplaint) {
-			throw new Error("Failed to create complaint");
-		}
-
-		return mappedComplaint;
+		return this.mapComplaint(complaint);
 	}
 
 	async updateByUserAndComplaintId(
@@ -101,29 +135,25 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 		data: UpdateComplaint,
 	) {
-		const userComplaint = this.userComplaints.find(
-			(item) => item.user_id === userId && item.complaint_id === complaintId,
+		const complaint = this.complaints.find(
+			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!userComplaint) {
-			return null;
+		if (!complaint) return null;
+
+		if (data.date !== undefined) complaint.date = data.date;
+		if (data.observations !== undefined)
+			complaint.observations = data.observations ?? null;
+		if (data.geospatial !== undefined) complaint.geospatial = data.geospatial;
+		if (data.waste_category_ids !== undefined) {
+			complaint.categories = data.waste_category_ids.map((id) => ({
+				id,
+				name: id,
+				hazard_levels: [],
+			}));
 		}
 
-		const complaint = this.complaints.find((item) => item.id === complaintId);
-
-		if (!complaint) {
-			return null;
-		}
-
-		if (data.type !== undefined) {
-			complaint.type = data.type;
-		}
-
-		if (data.observations !== undefined) {
-			complaint.observations = data.observations;
-		}
-
-		return this.mapUserComplaint(userComplaint);
+		return this.mapComplaint(complaint);
 	}
 
 	async updateStatusByUserAndComplaintId(
@@ -131,112 +161,457 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 		status: ComplaintStatus,
 	) {
-		const userComplaint = this.userComplaints.find(
-			(item) => item.user_id === userId && item.complaint_id === complaintId,
+		const complaint = this.complaints.find(
+			(item) => item.id === complaintId && item.user_id === userId,
 		);
 
-		if (!userComplaint) {
-			return null;
-		}
+		if (!complaint) throw new Error(`Complaint ${complaintId} not found`);
 
-		userComplaint.status = status;
-
-		return this.mapUserComplaint(userComplaint);
+		complaint.status = status;
+		return this.mapComplaint(complaint);
 	}
 
-	async attachByUserAndComplaintId(
+	async attachByComplaintId(
 		userId: string,
 		complaintId: string,
 		data: SaveComplaintAttachment,
 	) {
-		const userComplaint = this.userComplaints.find(
-			(item) => item.user_id === userId && item.complaint_id === complaintId,
+		const complaint = this.complaints.find(
+			(c) => c.id === complaintId && c.user_id === userId,
 		);
+		if (!complaint) return null;
 
-		if (!userComplaint) {
-			return null;
-		}
-
-		const complaint = this.complaints.find((item) => item.id === complaintId);
-
-		if (!complaint) {
-			return null;
-		}
-
-		if (complaint.attachment_id) {
-			return null;
-		}
-
-		const attachment = {
+		const attachment: AttachmentEntity = {
 			id: randomUUID(),
+			complaint_id: complaintId,
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
 			base64: data.base64,
+			metadata: data.metadata ?? null,
 			type: data.type,
 			created_at: new Date(),
-		} satisfies ComplaintAttachment;
+		};
 
 		this.attachments.push(attachment);
-		complaint.attachment_id = attachment.id;
 
-		return this.mapUserComplaint(userComplaint);
+		return this.mapComplaint(complaint);
 	}
 
 	async getDashboardByUserId(userId: string) {
-		const userComplaints = this.userComplaints.filter(
+		const userComplaints = this.complaints.filter(
 			(item) => item.user_id === userId,
 		);
 
 		const open = userComplaints.filter((item) => item.status === "OPEN").length;
-		const pending = userComplaints.filter(
-			(item) => item.status === "IN_PROGRESS",
-		).length;
 		const resolved = userComplaints.filter(
 			(item) => item.status === "RESOLVED",
 		).length;
 		const canceled = userComplaints.filter(
 			(item) => item.status === "CANCELED",
 		).length;
-		const rejected = userComplaints.filter(
-			(item) => item.status === "REJECTED",
-		).length;
 
 		return {
 			total: userComplaints.length,
 			open,
-			pending,
 			resolved,
 			canceled,
-			rejected,
 		} satisfies ComplaintResume;
 	}
 
-	private mapUserComplaint(
-		userComplaint: UserComplaintEntity,
-	): Complaint | null {
-		const complaint = this.complaints.find(
-			(item) => item.id === userComplaint.complaint_id,
+	async findMapComplaints(
+		query: GetMapComplaintsQuery,
+	): Promise<MapComplaintItem[]> {
+		const { lat, lon, radius, status, waste_category_id, hazard_level } = query;
+
+		const toRad = (deg: number) => (deg * Math.PI) / 180;
+		const haversine = (
+			lat1: number,
+			lon1: number,
+			lat2: number,
+			lon2: number,
+		) => {
+			const R = 6371000;
+			const dLat = toRad(lat2 - lat1);
+			const dLon = toRad(lon2 - lon1);
+			const a =
+				Math.sin(dLat / 2) ** 2 +
+				Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+			return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		};
+
+		const allowedStatuses = status === "ALL" ? ["OPEN", "RESOLVED"] : [status];
+
+		const filtered = this.complaints
+			.filter((c) => allowedStatuses.includes(c.status))
+			.filter((c) => {
+				const coords = c.geospatial?.location?.coords;
+				if (!coords) return false;
+				return haversine(lat, lon, coords.latitude, coords.longitude) <= radius;
+			})
+			.filter(
+				(c) =>
+					waste_category_id === "ALL" ||
+					c.categories.some((cat) => cat.id === waste_category_id),
+			)
+			.filter(
+				(c) =>
+					hazard_level === "ALL" ||
+					c.categories.some((cat) => cat.hazard_levels.includes(hazard_level)),
+			);
+
+		return filtered.slice(0, 500).map((c) => {
+			const coords = c.geospatial.location.coords;
+			const resolutionCount = this.resolutions.filter(
+				(r) => r.complaint_id === c.id,
+			).length;
+
+			return {
+				id: c.id,
+				status: c.status,
+				date: c.date,
+				observations: c.observations,
+				geospatial: c.geospatial,
+				location:
+					coords.latitude != null && coords.longitude != null
+						? { lat: coords.latitude, lon: coords.longitude }
+						: null,
+				attachments: this.attachments
+					.filter((a) => a.complaint_id === c.id)
+					.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						path: a.path,
+						base64: a.base64,
+						metadata: a.metadata,
+						type: a.type,
+						created_at: a.created_at,
+					})),
+				categories: c.categories,
+				vote_counts: { resolved: 0, not_resolved: 0 },
+				resolution_count: resolutionCount,
+				created_at: c.created_at,
+			} satisfies MapComplaintItem;
+		});
+	}
+
+	async findPublicComplaintById(
+		complaintId: string,
+	): Promise<PublicComplaint | null> {
+		const complaint = this.complaints.find((c) => c.id === complaintId);
+		if (!complaint) return null;
+
+		const complaintResolutions = this.resolutions.filter(
+			(r) => r.complaint_id === complaint.id,
 		);
 
-		if (!complaint) {
-			return null;
-		}
+		const anonymousResolver: Resolver = {
+			type: "profile",
+			full_name: "Anonymous",
+			display_name: "Anonymous",
+			avatar_url: null,
+		};
 
-		const attachment = complaint.attachment_id
-			? (this.attachments.find((item) => item.id === complaint.attachment_id) ??
-				null)
-			: null;
+		const coords = complaint.geospatial.location.coords;
 
 		return {
 			id: complaint.id,
+			status: complaint.status,
 			date: complaint.date,
-			type: complaint.type,
 			observations: complaint.observations,
 			geospatial: complaint.geospatial,
-			status: userComplaint.status,
-			attachment,
-			created_at: userComplaint.created_at,
+			location:
+				coords.latitude != null && coords.longitude != null
+					? { lat: coords.latitude, lon: coords.longitude }
+					: null,
+			attachments: this.attachments
+				.filter((a) => a.complaint_id === complaint.id)
+				.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					path: a.path,
+					base64: a.base64,
+					metadata: a.metadata,
+					type: a.type,
+					created_at: a.created_at,
+				})),
+			categories: complaint.categories,
+			vote_counts: { resolved: 0, not_resolved: 0 },
+			resolutions: complaintResolutions.map((r) => ({
+				id: r.id,
+				description: r.description,
+				resolver: anonymousResolver,
+				attachments: this.resolutionAttachments
+					.filter((a) => a.resolution_id === r.id)
+					.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						created_at: a.created_at,
+					})),
+				created_at: r.created_at,
+			})),
+			created_at: complaint.created_at,
+		} satisfies PublicComplaint;
+	}
+
+	async findVoteByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<ComplaintVote | null> {
+		const vote = this.votes.find(
+			(v) => v.complaint_id === complaintId && v.user_id === userId,
+		);
+		return vote ? { ...vote } : null;
+	}
+
+	async voteOnComplaint(
+		userId: string,
+		complaintId: string,
+		voteType: ComplaintVoteType,
+	): Promise<ComplaintVote> {
+		const existing = this.votes.find(
+			(v) => v.complaint_id === complaintId && v.user_id === userId,
+		);
+
+		if (existing) {
+			existing.vote_type = voteType;
+			existing.updated_at = new Date();
+			return { ...existing };
+		}
+
+		const vote: VoteEntity = {
+			id: randomUUID(),
+			complaint_id: complaintId,
+			user_id: userId,
+			vote_type: voteType,
+			created_at: new Date(),
+			updated_at: new Date(),
+		};
+
+		this.votes.push(vote);
+		return { ...vote };
+	}
+
+	async removeVoteFromComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
+		const index = this.votes.findIndex(
+			(v) => v.complaint_id === complaintId && v.user_id === userId,
+		);
+		if (index !== -1) this.votes.splice(index, 1);
+	}
+
+	async findResolutionsByComplaintId(
+		complaintId: string,
+		userId: string,
+	): Promise<Resolution[]> {
+		const resolutions = this.resolutions.filter(
+			(r) => r.complaint_id === complaintId,
+		);
+		return resolutions.map((r) => ({
+			id: r.id,
+			description: r.description,
+			company_id: r.company_id,
+			is_owner: r.resolver_user_id === userId,
+			resolver_user_profile: {
+				type: "profile" as const,
+				full_name: "Anonymous",
+				display_name: "Anonymous",
+				avatar_url: null,
+			},
+			resolver_company: null,
+			attachments: this.resolutionAttachments
+				.filter((a) => a.resolution_id === r.id)
+				.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					created_at: a.created_at,
+				})),
+			created_at: r.created_at,
+			updated_at: r.updated_at,
+		}));
+	}
+
+	async findResolutionByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const resolution = this.resolutions.find(
+			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
+		);
+		return resolution ? { id: resolution.id } : null;
+	}
+
+	async findResolutionByUserCompanyAndComplaint(
+		userId: string,
+		companyId: string | null,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const resolution = this.resolutions.find(
+			(r) =>
+				r.complaint_id === complaintId &&
+				r.resolver_user_id === userId &&
+				r.company_id === companyId,
+		);
+		return resolution ? { id: resolution.id } : null;
+	}
+
+	async findResolutionById(
+		resolutionId: string,
+	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null> {
+		const resolution = this.resolutions.find((r) => r.id === resolutionId);
+		if (!resolution) return null;
+		return {
+			id: resolution.id,
+			complaint_id: resolution.complaint_id,
+			resolver_user_id: resolution.resolver_user_id,
+		};
+	}
+
+	async updateResolutionById(
+		resolutionId: string,
+		description: string,
+	): Promise<void> {
+		const resolution = this.resolutions.find((r) => r.id === resolutionId);
+		if (resolution) {
+			resolution.description = description;
+			resolution.updated_at = new Date();
+		}
+	}
+
+	async submitResolution(
+		userId: string,
+		complaintId: string,
+		data: SubmitResolution,
+	): Promise<void> {
+		const resolution: ResolutionEntity = {
+			id: randomUUID(),
+			complaint_id: complaintId,
+			resolver_user_id: userId,
+			description: data.description,
+			company_id: data.company_id ?? null,
+			created_at: new Date(),
+			updated_at: new Date(),
+		};
+		this.resolutions.push(resolution);
+	}
+
+	async updateResolution(
+		userId: string,
+		complaintId: string,
+		data: SubmitResolution,
+	): Promise<void> {
+		const resolution = this.resolutions.find(
+			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
+		);
+		if (resolution) {
+			resolution.description = data.description;
+			resolution.company_id = data.company_id ?? null;
+			resolution.updated_at = new Date();
+		}
+	}
+
+	async deleteResolutionByUser(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
+		const index = this.resolutions.findIndex(
+			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
+		);
+		if (index !== -1) {
+			const resolutionId = this.resolutions[index]?.id;
+			this.resolutions.splice(index, 1);
+			this.resolutionAttachments = this.resolutionAttachments.filter(
+				(a) => a.resolution_id !== resolutionId,
+			);
+		}
+	}
+
+	async addResolutionAttachment(
+		_userId: string,
+		resolutionId: string,
+		data: SaveResolutionAttachment,
+	): Promise<ResolutionAttachment> {
+		const attachment: ResolutionAttachmentEntity = {
+			id: randomUUID(),
+			resolution_id: resolutionId,
+			url: data.url,
+			file_name: data.file_name,
+			path: data.path,
+			base64: data.base64,
+			created_at: new Date(),
+		};
+		this.resolutionAttachments.push(attachment);
+		return {
+			id: attachment.id,
+			url: attachment.url,
+			file_name: attachment.file_name,
+			created_at: attachment.created_at,
+		};
+	}
+
+	async deleteComplaintAttachment(
+		userId: string,
+		complaintId: string,
+		attachmentId: string,
+	): Promise<void> {
+		const complaint = this.complaints.find(
+			(c) => c.id === complaintId && c.user_id === userId,
+		);
+		if (!complaint) return;
+		this.attachments = this.attachments.filter(
+			(a) => !(a.id === attachmentId && a.complaint_id === complaintId),
+		);
+	}
+
+	async deleteResolutionAttachment(
+		_userId: string,
+		resolutionId: string,
+		attachmentId: string,
+	): Promise<void> {
+		this.resolutionAttachments = this.resolutionAttachments.filter(
+			(a) => !(a.id === attachmentId && a.resolution_id === resolutionId),
+		);
+	}
+
+	private mapComplaint(complaint: ComplaintEntity): Complaint {
+		const resolvedVotes = this.votes.filter(
+			(v) => v.complaint_id === complaint.id && v.vote_type === "RESOLVED",
+		).length;
+		const notResolvedVotes = this.votes.filter(
+			(v) => v.complaint_id === complaint.id && v.vote_type === "NOT_RESOLVED",
+		).length;
+		const resolutionCount = this.resolutions.filter(
+			(r) => r.complaint_id === complaint.id,
+		).length;
+
+		return {
+			id: complaint.id,
+			status: complaint.status,
+			date: complaint.date,
+			observations: complaint.observations,
+			geospatial: complaint.geospatial,
+			attachments: this.attachments
+				.filter((a) => a.complaint_id === complaint.id)
+				.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					path: a.path,
+					base64: a.base64,
+					metadata: a.metadata,
+					type: a.type,
+					created_at: a.created_at,
+				})),
+			categories: complaint.categories,
+			vote_counts: { resolved: resolvedVotes, not_resolved: notResolvedVotes },
+			resolution_count: resolutionCount,
+			created_at: complaint.created_at,
 		};
 	}
 }

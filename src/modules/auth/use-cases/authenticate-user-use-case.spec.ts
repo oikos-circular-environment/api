@@ -1,6 +1,10 @@
 import { hash } from "bcryptjs";
 import { describe, expect, it } from "vitest";
 import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
+import {
+	makeAuthUser,
+	TEST_PASSWORD,
+} from "@/modules/auth/factories/make-auth-user.js";
 import { InMemoryAuthRepository } from "@/modules/auth/repositories/in-memory/in-memory-auth-repository.js";
 import { AuthenticateUserUseCase } from "./authenticate-user-use-case.js";
 
@@ -9,21 +13,22 @@ describe("authenticate-user-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new AuthenticateUserUseCase(authRepository);
 
-		const passwordHash = await hash("123456", 6);
+		const credentials = makeAuthUser();
+		const passwordHash = await hash(TEST_PASSWORD, 6);
 
 		const createdUser = await authRepository.create({
-			email: "john@example.com",
+			email: credentials.email,
 			password: passwordHash,
 		});
 
 		const result = await sut.execute({
-			email: "john@example.com",
-			password: "123456",
+			email: credentials.email,
+			password: TEST_PASSWORD,
 		});
 
 		expect(result).toStrictEqual({
 			id: createdUser.id,
-			email: "john@example.com",
+			email: credentials.email,
 		});
 	});
 
@@ -31,12 +36,14 @@ describe("authenticate-user-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new AuthenticateUserUseCase(authRepository);
 
+		const credentials = makeAuthUser();
+
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				email: "john@example.com",
-				password: "123456",
+				email: credentials.email,
+				password: TEST_PASSWORD,
 			});
 		} catch (error) {
 			thrownError = error;
@@ -55,10 +62,11 @@ describe("authenticate-user-use-case", () => {
 		const authRepository = new InMemoryAuthRepository();
 		const sut = new AuthenticateUserUseCase(authRepository);
 
-		const passwordHash = await hash("123456", 6);
+		const credentials = makeAuthUser();
+		const passwordHash = await hash(TEST_PASSWORD, 6);
 
 		await authRepository.create({
-			email: "john@example.com",
+			email: credentials.email,
 			password: passwordHash,
 		});
 
@@ -66,8 +74,8 @@ describe("authenticate-user-use-case", () => {
 
 		try {
 			await sut.execute({
-				email: "john@example.com",
-				password: "654321",
+				email: credentials.email,
+				password: "wrong-password",
 			});
 		} catch (error) {
 			thrownError = error;

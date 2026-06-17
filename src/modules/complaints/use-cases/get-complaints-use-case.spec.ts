@@ -1,77 +1,43 @@
-import { describe, expect, it } from "vitest";
-import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
+import { randomUUID } from "node:crypto";
+import { assert, describe, expect, it } from "vitest";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
 import { GetComplaintsUseCase } from "./get-complaints-use-case.js";
 
-const geospatial: Geospatial = {
-	heading: {
-		trueHeading: 10,
-		magHeading: 11,
-		accuracy: 1,
-	},
-	location: {
-		coords: {
-			latitude: -23.55,
-			longitude: -46.63,
-			altitude: null,
-			accuracy: null,
-			altitudeAccuracy: null,
-			heading: null,
-			speed: null,
-		},
-		timestamp: 1711111111111,
-	},
-	addresses: {
-		city: "Sao Paulo",
-		district: "Centro",
-		streetNumber: "100",
-		street: "Rua A",
-		region: "SP",
-		subregion: null,
-		country: "Brasil",
-		postalCode: "01000-000",
-		name: null,
-		isoCountryCode: "BR",
-		timezone: "America/Sao_Paulo",
-		formattedAddress: "Rua A, 100 - Centro",
-	},
-};
-
-const USER_A = "11111111-1111-1111-1111-111111111111";
-const USER_B = "22222222-2222-2222-2222-222222222222";
-
 describe("get-complaints-use-case", () => {
 	it("lists complaints from a specific user", async () => {
+		const userAId = randomUUID();
+		const userBId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-20T10:00:00.000Z"),
-			type: "VACANT_LOT",
+			waste_category_ids: ["waste-category-id"],
 			observations: "Lote com entulho",
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
-		await complaintsRepository.createForUser(USER_B, {
+		await complaintsRepository.createForUser(userBId, {
 			date: new Date("2026-04-21T10:00:00.000Z"),
-			type: "DEFORESTATION",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
-		const { complaints } = await sut.execute({ userId: USER_A, limit: 20 });
+		const { complaints } = await sut.execute({ userId: userAId, limit: 20 });
 
 		expect(complaints.length).toBe(1);
-		expect(complaints[0]?.type).toBe("VACANT_LOT");
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
 	it("returns empty list when user has no complaints", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 20,
 		});
 
@@ -80,24 +46,25 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("returns first page with next_cursor when there are more items", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
-			await complaintsRepository.createForUser(USER_A, {
+			await complaintsRepository.createForUser(userAId, {
 				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			});
 		}
 
-		complaintsRepository.userComplaints.forEach((uc, i) => {
-			uc.created_at = new Date(2026, 3, 20 - i);
+		complaintsRepository.complaints.forEach((c, i) => {
+			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 3,
 		});
 
@@ -106,24 +73,25 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("returns last page with next_cursor null", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 3; i++) {
-			await complaintsRepository.createForUser(USER_A, {
+			await complaintsRepository.createForUser(userAId, {
 				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			});
 		}
 
-		complaintsRepository.userComplaints.forEach((uc, i) => {
-			uc.created_at = new Date(2026, 3, 20 - i);
+		complaintsRepository.complaints.forEach((c, i) => {
+			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 3,
 		});
 
@@ -132,31 +100,33 @@ describe("get-complaints-use-case", () => {
 	});
 
 	it("second page returns remaining items using cursor", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
 		for (let i = 0; i < 5; i++) {
-			await complaintsRepository.createForUser(USER_A, {
+			await complaintsRepository.createForUser(userAId, {
 				date: new Date("2026-04-01T10:00:00.000Z"),
-				type: "BURNING",
+				waste_category_ids: ["waste-category-id"],
 				observations: null,
-				geospatial,
+				geospatial: makeGeospatial(),
 			});
 		}
 
-		// garante created_at distintos e ordenados de forma decrescente
-		complaintsRepository.userComplaints.forEach((uc, i) => {
-			uc.created_at = new Date(2026, 3, 20 - i);
+		// ensures distinct created_at values sorted descending
+		complaintsRepository.complaints.forEach((c, i) => {
+			c.created_at = new Date(2026, 3, 20 - i);
 		});
 
-		const firstPage = await sut.execute({ userId: USER_A, limit: 3 });
+		const firstPage = await sut.execute({ userId: userAId, limit: 3 });
 		expect(firstPage.complaints.length).toBe(3);
 		expect(firstPage.next_cursor).not.toBeNull();
 
+		assert(firstPage.next_cursor !== null);
 		const secondPage = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			limit: 3,
-			cursor: new Date(firstPage.next_cursor!),
+			cursor: new Date(firstPage.next_cursor),
 		});
 
 		expect(secondPage.complaints.length).toBe(2);
@@ -169,58 +139,58 @@ describe("get-complaints-use-case", () => {
 		expect(new Set(allIds).size).toBe(5);
 	});
 
-	it("filters by type", async () => {
+	it("lists all complaints for user", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-02T10:00:00.000Z"),
-			type: "DEFORESTATION",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
 		const { complaints } = await sut.execute({
-			userId: USER_A,
-			filters: { type: "BURNING" },
+			userId: userAId,
 			limit: 20,
 		});
 
-		expect(complaints.length).toBe(1);
-		expect(complaints[0]?.type).toBe("BURNING");
+		expect(complaints.length).toBe(2);
 	});
 
-	it("filters by status", async () => {
+	it("filters by OPEN status — excludes resolved", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		const c1 = await complaintsRepository.createForUser(USER_A, {
+		const c1 = await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 		await complaintsRepository.updateStatusByUserAndComplaintId(
-			USER_A,
+			userAId,
 			c1.id,
 			"RESOLVED",
 		);
 
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-02T10:00:00.000Z"),
-			type: "DEFORESTATION",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
 		const { complaints } = await sut.execute({
-			userId: USER_A,
+			userId: userAId,
 			filters: { status: "OPEN" },
 			limit: 20,
 		});
@@ -229,62 +199,84 @@ describe("get-complaints-use-case", () => {
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
-	it("filters by type and status combined", async () => {
+	it("filters by OPEN status — returns multiple matches", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
-		const c2 = await complaintsRepository.createForUser(USER_A, {
+		const c2 = await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-02T10:00:00.000Z"),
-			type: "BURNING",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 		await complaintsRepository.updateStatusByUserAndComplaintId(
-			USER_A,
+			userAId,
 			c2.id,
 			"RESOLVED",
 		);
 
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-03T10:00:00.000Z"),
-			type: "DEFORESTATION",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
 		const { complaints } = await sut.execute({
-			userId: USER_A,
-			filters: { type: "BURNING", status: "OPEN" },
+			userId: userAId,
+			filters: { status: "OPEN" },
 			limit: 20,
 		});
 
-		expect(complaints.length).toBe(1);
-		expect(complaints[0]?.type).toBe("BURNING");
+		expect(complaints.length).toBe(2);
 		expect(complaints[0]?.status).toBe("OPEN");
 	});
 
 	it("returns empty list when filter has no match", async () => {
+		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetComplaintsUseCase(complaintsRepository);
 
-		await complaintsRepository.createForUser(USER_A, {
+		await complaintsRepository.createForUser(userAId, {
 			date: new Date("2026-04-01T10:00:00.000Z"),
-			type: "BURNING",
+			waste_category_ids: ["waste-category-id"],
 			observations: null,
-			geospatial,
+			geospatial: makeGeospatial(),
 		});
 
 		const { complaints, next_cursor } = await sut.execute({
-			userId: USER_A,
-			filters: { type: "DEFORESTATION" },
+			userId: userAId,
+			filters: { status: "RESOLVED" },
 			limit: 20,
+		});
+
+		expect(complaints).toStrictEqual([]);
+		expect(next_cursor).toBeNull();
+	});
+
+	it("returns null next_cursor when limit is 0 and rows exist", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date("2026-04-01T10:00:00.000Z"),
+			waste_category_ids: ["waste-category-id"],
+			observations: null,
+			geospatial: makeGeospatial(),
+		});
+
+		const { complaints, next_cursor } = await sut.execute({
+			userId: userAId,
+			limit: 0,
 		});
 
 		expect(complaints).toStrictEqual([]);

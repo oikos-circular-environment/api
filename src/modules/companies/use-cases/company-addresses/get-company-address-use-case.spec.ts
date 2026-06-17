@@ -1,11 +1,15 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
 import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { GetCompanyAddressUseCase } from "./get-company-address-use-case.js";
 
 describe("get-company-address-use-case", () => {
 	it("returns company address when it exists", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new GetCompanyAddressUseCase(
@@ -13,45 +17,25 @@ describe("get-company-address-use-case", () => {
 			addressesRepository,
 		);
 
-		const company = await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		const address = await addressesRepository.create({
 			company_id: company.id,
-			zip_code: "12345678",
-			street: "Main Street",
-			number: "100",
-			complement: "Suite 2",
-			district: "Center",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: -23.5505,
-			longitude: -46.6333,
+			...makeCompanyAddress(),
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 		});
 
 		expect(result).toStrictEqual(address);
 	});
 
 	it("returns null when company does not have an address", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new GetCompanyAddressUseCase(
@@ -59,29 +43,20 @@ describe("get-company-address-use-case", () => {
 			addressesRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 		});
 
 		expect(result).toBe(null);
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const sut = new GetCompanyAddressUseCase(
@@ -93,7 +68,8 @@ describe("get-company-address-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId,
+				companyId: randomUUID(),
 			});
 		} catch (error) {
 			thrownError = error;

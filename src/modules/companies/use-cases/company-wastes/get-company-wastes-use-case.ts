@@ -5,6 +5,7 @@ import type { WastesRepository } from "@/modules/companies/repositories/wastes-r
 
 type GetCompanyWastesUseCaseRequest = {
 	userId: string;
+	companyId: string;
 };
 
 export class GetCompanyWastesUseCase {
@@ -15,8 +16,12 @@ export class GetCompanyWastesUseCase {
 
 	async execute({
 		userId,
+		companyId,
 	}: GetCompanyWastesUseCaseRequest): Promise<CompanyWaste[]> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

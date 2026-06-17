@@ -1,65 +1,94 @@
 import { prisma } from "@/lib/prisma.js";
 import {
 	type Complaint,
-	type ComplaintAttachment,
-	type ComplaintResume,
 	type ComplaintStatus,
+	type ComplaintVote,
+	type ComplaintVoteType,
 	type CreateComplaint,
-	geospatialSchema,
 	type GetComplaintsFilters,
+	type GetMapComplaintsQuery,
+	geospatialSchema,
+	type MapComplaintItem,
+	type PublicComplaint,
+	type Resolution,
+	type ResolutionAttachment,
+	type Resolver,
 	type SaveComplaintAttachment,
+	type SaveResolutionAttachment,
+	type SubmitResolution,
 	type UpdateComplaint,
 } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
-type PrismaUserComplaintPayload = {
+const complaintInclude = {
+	attachments: true,
+	votes: true,
+	resolutions: true,
+	waste_categories: {
+		include: {
+			waste_category: { select: { id: true, name: true, hazard_levels: true } },
+		},
+	},
+} as const;
+
+type PrismaComplaintPayload = {
+	id: string;
 	status: ComplaintStatus;
+	date: Date;
+	observations: string | null;
+	geospatial: unknown;
 	created_at: Date;
-	complaint: {
+	attachments: Array<{
 		id: string;
-		date: Date;
-		type: Complaint["type"];
-		observations: string | null;
-		geospatial: unknown;
-		attachment: {
+		url: string;
+		file_name: string;
+		path: string;
+		base64: string;
+		metadata: unknown;
+		type: "PHOTO" | "VIDEO";
+		created_at: Date;
+	}>;
+	votes: Array<{
+		vote_type: "RESOLVED" | "NOT_RESOLVED";
+	}>;
+	resolutions: Array<unknown>;
+	waste_categories: Array<{
+		waste_category: {
 			id: string;
-			url: string;
-			file_name: string;
-			path: string;
-			base64: string;
-			type: ComplaintAttachment["type"];
-			created_at: Date;
-		} | null;
-	};
+			name: string;
+			hazard_levels: Array<"LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH">;
+		};
+	}>;
 };
 
-function mapAttachment(
-	attachment: PrismaUserComplaintPayload["complaint"]["attachment"],
-): ComplaintAttachment | null {
-	if (!attachment) {
-		return null;
-	}
-
+function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 	return {
-		id: attachment.id,
-		url: attachment.url,
-		file_name: attachment.file_name,
-		path: attachment.path,
-		base64: attachment.base64,
-		type: attachment.type,
-		created_at: attachment.created_at,
-	};
-}
-
-function mapComplaint(payload: PrismaUserComplaintPayload): Complaint {
-	return {
-		id: payload.complaint.id,
-		date: payload.complaint.date,
-		type: payload.complaint.type,
-		observations: payload.complaint.observations,
-		geospatial: geospatialSchema.parse(payload.complaint.geospatial),
+		id: payload.id,
 		status: payload.status,
-		attachment: mapAttachment(payload.complaint.attachment),
+		date: payload.date,
+		observations: payload.observations,
+		geospatial: geospatialSchema.parse(payload.geospatial),
+		attachments: payload.attachments.map((a) => ({
+			id: a.id,
+			url: a.url,
+			file_name: a.file_name,
+			path: a.path,
+			base64: a.base64,
+			metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+			type: a.type,
+			created_at: a.created_at,
+		})),
+		categories: payload.waste_categories.map((wc) => ({
+			id: wc.waste_category.id,
+			name: wc.waste_category.name,
+			hazard_levels: wc.waste_category.hazard_levels,
+		})),
+		vote_counts: {
+			resolved: payload.votes.filter((v) => v.vote_type === "RESOLVED").length,
+			not_resolved: payload.votes.filter((v) => v.vote_type === "NOT_RESOLVED")
+				.length,
+		},
+		resolution_count: payload.resolutions.length,
 		created_at: payload.created_at,
 	};
 }
@@ -71,81 +100,59 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 	) {
 		const { filters, cursor, limit } = params;
 
-		const userComplaints = await prisma.userComplaint.findMany({
+		const complaints = await prisma.complaint.findMany({
 			where: {
 				user_id: userId,
 				...(filters?.status && { status: filters.status }),
 				...(cursor && { created_at: { lt: cursor } }),
-				...(filters?.type && { complaint: { type: filters.type } }),
 			},
-			include: {
-				complaint: {
-					include: {
-						attachment: true,
-					},
-				},
-			},
-			orderBy: {
-				created_at: "desc",
-			},
+			include: complaintInclude,
+			orderBy: { created_at: "desc" },
 			take: limit + 1,
 		});
 
-		return userComplaints.map((item) => mapComplaint(item));
+		return complaints.map((item) =>
+			mapComplaint(item as PrismaComplaintPayload),
+		);
 	}
 
 	async findByUserAndComplaintId(userId: string, complaintId: string) {
-		const userComplaint = await prisma.userComplaint.findFirst({
-			where: {
-				user_id: userId,
-				complaint_id: complaintId,
-			},
-			include: {
-				complaint: {
-					include: {
-						attachment: true,
-					},
-				},
-			},
+		const complaint = await prisma.complaint.findFirst({
+			where: { id: complaintId, user_id: userId },
+			include: complaintInclude,
 		});
 
-		if (!userComplaint) {
-			return null;
-		}
+		if (!complaint) return null;
 
-		return mapComplaint(userComplaint);
+		return mapComplaint(complaint as PrismaComplaintPayload);
 	}
 
 	async createForUser(userId: string, data: CreateComplaint) {
-		const complaint = await prisma.$transaction(async (transaction) => {
-			const createdComplaint = await transaction.complaint.create({
-				data: {
-					date: data.date,
-					type: data.type,
-					observations: data.observations ?? null,
-					geospatial: data.geospatial,
+		const complaint = await prisma.complaint.create({
+			data: {
+				user_id: userId,
+				date: data.date,
+				status: "OPEN",
+				observations: data.observations ?? null,
+				geospatial: data.geospatial,
+				waste_categories: {
+					create: data.waste_category_ids.map((id) => ({
+						waste_category_id: id,
+					})),
 				},
-			});
-
-			const createdUserComplaint = await transaction.userComplaint.create({
-				data: {
-					user_id: userId,
-					complaint_id: createdComplaint.id,
-					status: "OPEN",
-				},
-				include: {
-					complaint: {
-						include: {
-							attachment: true,
-						},
-					},
-				},
-			});
-
-			return createdUserComplaint;
+			},
+			include: complaintInclude,
 		});
 
-		return mapComplaint(complaint);
+		const { latitude, longitude } = data.geospatial.location.coords;
+		await prisma.$executeRawUnsafe(
+			`UPDATE complaints SET location = ST_SetSRID(ST_MakePoint($1, $2), 4326)::geography WHERE id = $3`,
+			longitude,
+			latitude,
+			complaint.id,
+		);
+
+		return mapComplaint(complaint as PrismaComplaintPayload);
 	}
 
 	async updateByUserAndComplaintId(
@@ -153,26 +160,46 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 		data: UpdateComplaint,
 	) {
-		const userComplaint = await prisma.userComplaint.findFirst({
-			where: {
-				user_id: userId,
-				complaint_id: complaintId,
-			},
-			select: {
-				complaint_id: true,
-			},
+		const exists = await prisma.complaint.findFirst({
+			where: { id: complaintId, user_id: userId },
+			select: { id: true },
 		});
 
-		if (!userComplaint) {
-			return null;
+		if (!exists) return null;
+
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		const updateData: Record<string, any> = {};
+		if (data.date !== undefined) updateData.date = data.date;
+		if (data.observations !== undefined)
+			updateData.observations = data.observations;
+		if (data.geospatial !== undefined) updateData.geospatial = data.geospatial;
+
+		if (data.waste_category_ids !== undefined) {
+			await prisma.complaintWasteCategory.deleteMany({
+				where: { complaint_id: complaintId },
+			});
+			await prisma.complaintWasteCategory.createMany({
+				data: data.waste_category_ids.map((id) => ({
+					complaint_id: complaintId,
+					waste_category_id: id,
+				})),
+			});
 		}
 
 		await prisma.complaint.update({
-			where: {
-				id: complaintId,
-			},
-			data,
+			where: { id: complaintId },
+			data: updateData,
 		});
+
+		if (data.geospatial) {
+			const { latitude, longitude } = data.geospatial.location.coords;
+			await prisma.$executeRawUnsafe(
+				`UPDATE complaints SET location = ST_SetSRID(ST_MakePoint($1, $2), 4326)::geography WHERE id = $3`,
+				longitude,
+				latitude,
+				complaintId,
+			);
+		}
 
 		return this.findByUserAndComplaintId(userId, complaintId);
 	}
@@ -182,94 +209,538 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		complaintId: string,
 		status: ComplaintStatus,
 	) {
-		const updatedRows = await prisma.userComplaint.updateMany({
-			where: {
-				user_id: userId,
-				complaint_id: complaintId,
-			},
-			data: {
-				status,
-			},
+		await prisma.complaint.updateMany({
+			where: { id: complaintId, user_id: userId },
+			data: { status },
 		});
 
-		if (updatedRows.count === 0) {
-			return null;
-		}
-
-		return this.findByUserAndComplaintId(userId, complaintId);
+		const updated = await this.findByUserAndComplaintId(userId, complaintId);
+		if (!updated)
+			throw new Error(`Complaint ${complaintId} not found after status update`);
+		return updated;
 	}
 
-	async attachByUserAndComplaintId(
+	async attachByComplaintId(
 		userId: string,
 		complaintId: string,
 		data: SaveComplaintAttachment,
 	) {
-		const attachedComplaintId = await prisma.$transaction(
-			async (transaction) => {
-				const userComplaint = await transaction.userComplaint.findFirst({
-					where: {
-						user_id: userId,
-						complaint_id: complaintId,
-					},
-					select: {
-						complaint_id: true,
-					},
-				});
+		const complaint = await prisma.complaint.findFirst({
+			where: { id: complaintId, user_id: userId },
+			select: { id: true },
+		});
 
-				if (!userComplaint) {
-					return null;
-				}
+		if (!complaint) return null;
 
-				const attachment = await transaction.complaintAttachment.create({
-					data: {
-						url: data.url,
-						file_name: data.file_name,
-						path: data.path,
-						base64: data.base64,
-						type: data.type,
-					},
-				});
-
-				const updateResult = await transaction.complaint.updateMany({
-					where: {
-						id: complaintId,
-						attachment_id: null,
-					},
-					data: {
-						attachment_id: attachment.id,
-					},
-				});
-
-				if (updateResult.count === 0) {
-					await transaction.complaintAttachment.delete({
-						where: {
-							id: attachment.id,
-						},
-					});
-
-					return null;
-				}
-
-				return complaintId;
+		await prisma.complaintAttachment.create({
+			data: {
+				complaint_id: complaintId,
+				url: data.url,
+				file_name: data.file_name,
+				path: data.path,
+				base64: data.base64,
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
+				metadata: (data.metadata ?? undefined) as any,
+				type: data.type,
 			},
-		);
+		});
 
-		if (!attachedComplaintId) {
-			return null;
+		return this.findByUserAndComplaintId(userId, complaintId);
+	}
+
+	async findMapComplaints(
+		query: GetMapComplaintsQuery,
+	): Promise<MapComplaintItem[]> {
+		const { lat, lon, radius, status, waste_category_id, hazard_level } = query;
+
+		const params: unknown[] = [lon, lat, radius];
+		let paramIdx = 4;
+		const joins: string[] = [];
+		const conditions: string[] = [];
+
+		if (status !== "ALL") {
+			conditions.push(`c.status = $${paramIdx++}::"ComplaintStatus"`);
+			params.push(status);
+		} else {
+			conditions.push(`c.status IN ('OPEN', 'RESOLVED')`);
 		}
 
-		return this.findByUserAndComplaintId(userId, attachedComplaintId);
+		const needsCategoryJoin =
+			(waste_category_id && waste_category_id !== "ALL") ||
+			(hazard_level && hazard_level !== "ALL");
+
+		if (needsCategoryJoin) {
+			joins.push(
+				"JOIN complaint_waste_categories cwc ON cwc.complaint_id = c.id",
+			);
+		}
+		if (hazard_level && hazard_level !== "ALL") {
+			joins.push("JOIN waste_categories wc ON wc.id = cwc.waste_category_id");
+			conditions.push(`$${paramIdx++}::"HazardLevel" = ANY(wc.hazard_levels)`);
+			params.push(hazard_level);
+		}
+		if (waste_category_id && waste_category_id !== "ALL") {
+			conditions.push(`cwc.waste_category_id = $${paramIdx++}`);
+			params.push(waste_category_id);
+		}
+
+		const distinct = joins.length > 0 ? "DISTINCT" : "";
+		const joinClause = joins.join("\n       ");
+		const whereExtra = conditions.map((c) => `AND ${c}`).join("\n       ");
+
+		const rows = await prisma.$queryRawUnsafe<Array<{ id: string }>>(
+			`SELECT ${distinct} c.id FROM complaints c
+       ${joinClause}
+       WHERE ST_DWithin(c.location, ST_MakePoint($1, $2)::geography, $3)
+       ${whereExtra}
+       LIMIT 500`,
+			...params,
+		);
+
+		if (rows.length === 0) return [];
+
+		const ids = rows.map((r) => r.id);
+		const complaints = await prisma.complaint.findMany({
+			where: { id: { in: ids } },
+			include: {
+				attachments: true,
+				votes: { select: { vote_type: true } },
+				_count: { select: { resolutions: true } },
+				waste_categories: {
+					include: {
+						waste_category: {
+							select: { id: true, name: true, hazard_levels: true },
+						},
+					},
+				},
+			},
+		});
+
+		return complaints.map((c) => {
+			const geo = geospatialSchema.parse(c.geospatial);
+			const coords = geo.location.coords;
+
+			return {
+				id: c.id,
+				status: c.status as MapComplaintItem["status"],
+				date: c.date,
+				observations: c.observations,
+				geospatial: geo,
+				location:
+					coords.latitude != null && coords.longitude != null
+						? { lat: coords.latitude, lon: coords.longitude }
+						: null,
+				attachments: c.attachments.map((a) => ({
+					id: a.id,
+					url: a.url,
+					file_name: a.file_name,
+					path: a.path,
+					base64: a.base64,
+					metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+					type: a.type as "PHOTO" | "VIDEO",
+					created_at: a.created_at,
+				})),
+				categories:
+					(
+						c as unknown as {
+							waste_categories?: Array<{
+								waste_category: {
+									id: string;
+									name: string;
+									hazard_levels: Array<"LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH">;
+								};
+							}>;
+						}
+					).waste_categories?.map((wc) => ({
+						id: wc.waste_category.id,
+						name: wc.waste_category.name,
+						hazard_levels: wc.waste_category.hazard_levels,
+					})) ?? [],
+				vote_counts: {
+					resolved: c.votes.filter((v) => v.vote_type === "RESOLVED").length,
+					not_resolved: c.votes.filter((v) => v.vote_type === "NOT_RESOLVED")
+						.length,
+				},
+				resolution_count: c._count.resolutions,
+				created_at: c.created_at,
+			};
+		}) satisfies MapComplaintItem[];
+	}
+
+	async findPublicComplaintById(
+		complaintId: string,
+	): Promise<PublicComplaint | null> {
+		const complaint = await prisma.complaint.findUnique({
+			where: { id: complaintId },
+			include: {
+				attachments: true,
+				votes: { select: { vote_type: true } },
+				waste_categories: {
+					include: {
+						waste_category: {
+							select: { id: true, name: true, hazard_levels: true },
+						},
+					},
+				},
+				resolutions: {
+					include: {
+						attachments: true,
+						company: { include: { avatar: true } },
+						resolver_user: {
+							include: {
+								profile: { include: { profile_image: true } },
+							},
+						},
+					},
+					orderBy: { created_at: "desc" },
+				},
+			},
+		});
+
+		if (!complaint) return null;
+
+		const geo = geospatialSchema.parse(complaint.geospatial);
+		const coords = geo.location.coords;
+
+		return {
+			id: complaint.id,
+			status: complaint.status as PublicComplaint["status"],
+			date: complaint.date,
+			observations: complaint.observations,
+			geospatial: geo,
+			location:
+				coords.latitude != null && coords.longitude != null
+					? { lat: coords.latitude, lon: coords.longitude }
+					: null,
+			attachments: complaint.attachments.map((a) => ({
+				id: a.id,
+				url: a.url,
+				file_name: a.file_name,
+				path: a.path,
+				base64: a.base64,
+				metadata: (a.metadata as Record<string, unknown> | null) ?? null,
+				type: a.type as "PHOTO" | "VIDEO",
+				created_at: a.created_at,
+			})),
+			categories:
+				(
+					complaint as unknown as {
+						waste_categories?: Array<{
+							waste_category: {
+								id: string;
+								name: string;
+								hazard_levels: Array<"LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH">;
+							};
+						}>;
+					}
+				).waste_categories?.map((wc) => ({
+					id: wc.waste_category.id,
+					name: wc.waste_category.name,
+					hazard_levels: wc.waste_category.hazard_levels,
+				})) ?? [],
+			vote_counts: {
+				resolved: complaint.votes.filter((v) => v.vote_type === "RESOLVED")
+					.length,
+				not_resolved: complaint.votes.filter(
+					(v) => v.vote_type === "NOT_RESOLVED",
+				).length,
+			},
+			resolutions: complaint.resolutions.map((r) => {
+				const resolver: Resolver = r.company
+					? {
+							type: "company",
+							corporate_name: r.company.corporate_name,
+							business_name: r.company.business_name,
+							avatar_url:
+								(r.company.avatar as { url?: string } | null)?.url ?? null,
+						}
+					: {
+							type: "profile",
+							full_name:
+								(r.resolver_user.profile as { full_name?: string } | null)
+									?.full_name ?? "Unknown",
+							display_name:
+								(r.resolver_user.profile as { display_name?: string } | null)
+									?.display_name ?? "Unknown",
+							avatar_url:
+								(
+									(
+										r.resolver_user.profile as {
+											profile_image?: { url?: string } | null;
+										} | null
+									)?.profile_image as { url?: string } | null
+								)?.url ?? null,
+						};
+				return {
+					id: r.id,
+					description: r.description,
+					resolver,
+					attachments: r.attachments.map((a) => ({
+						id: a.id,
+						url: a.url,
+						file_name: a.file_name,
+						created_at: a.created_at,
+					})),
+					created_at: r.created_at,
+				};
+			}),
+			created_at: complaint.created_at,
+		} satisfies PublicComplaint;
+	}
+
+	async findVoteByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<ComplaintVote | null> {
+		const vote = await prisma.complaintVote.findUnique({
+			where: {
+				complaint_id_user_id: { complaint_id: complaintId, user_id: userId },
+			},
+		});
+		if (!vote) return null;
+		return {
+			id: vote.id,
+			complaint_id: vote.complaint_id,
+			user_id: vote.user_id,
+			vote_type: vote.vote_type as ComplaintVoteType,
+			created_at: vote.created_at,
+			updated_at: vote.updated_at,
+		};
+	}
+
+	async voteOnComplaint(
+		userId: string,
+		complaintId: string,
+		voteType: ComplaintVoteType,
+	): Promise<ComplaintVote> {
+		const vote = await prisma.complaintVote.upsert({
+			where: {
+				complaint_id_user_id: { complaint_id: complaintId, user_id: userId },
+			},
+			create: {
+				complaint_id: complaintId,
+				user_id: userId,
+				vote_type: voteType,
+			},
+			update: { vote_type: voteType },
+		});
+		return {
+			id: vote.id,
+			complaint_id: vote.complaint_id,
+			user_id: vote.user_id,
+			vote_type: vote.vote_type as ComplaintVoteType,
+			created_at: vote.created_at,
+			updated_at: vote.updated_at,
+		};
+	}
+
+	async removeVoteFromComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
+		await prisma.complaintVote.deleteMany({
+			where: { complaint_id: complaintId, user_id: userId },
+		});
+	}
+
+	async findResolutionsByComplaintId(
+		complaintId: string,
+		userId: string,
+	): Promise<Resolution[]> {
+		const resolutions = await prisma.complaintResolution.findMany({
+			where: { complaint_id: complaintId },
+			include: {
+				attachments: true,
+				company: { include: { avatar: true } },
+				resolver_user: {
+					include: { profile: { include: { profile_image: true } } },
+				},
+			},
+			orderBy: { created_at: "desc" },
+		});
+
+		return resolutions.map((r) => ({
+			id: r.id,
+			description: r.description,
+			company_id: r.company_id,
+			is_owner: r.resolver_user_id === userId,
+			resolver_user_profile: {
+				type: "profile" as const,
+				full_name:
+					(r.resolver_user.profile as { full_name?: string } | null)
+						?.full_name ?? "Unknown",
+				display_name:
+					(r.resolver_user.profile as { display_name?: string } | null)
+						?.display_name ?? "Unknown",
+				avatar_url:
+					(
+						(
+							r.resolver_user.profile as {
+								profile_image?: { url?: string } | null;
+							} | null
+						)?.profile_image as { url?: string } | null
+					)?.url ?? null,
+			},
+			resolver_company: r.company
+				? {
+						type: "company" as const,
+						corporate_name: r.company.corporate_name,
+						business_name: r.company.business_name,
+						avatar_url:
+							(r.company.avatar as { url?: string } | null)?.url ?? null,
+					}
+				: null,
+			attachments: r.attachments.map((a) => ({
+				id: a.id,
+				url: a.url,
+				file_name: a.file_name,
+				created_at: a.created_at,
+			})),
+			created_at: r.created_at,
+			updated_at: r.updated_at,
+		}));
+	}
+
+	async submitResolution(
+		userId: string,
+		complaintId: string,
+		data: SubmitResolution,
+	): Promise<void> {
+		await prisma.complaintResolution.create({
+			data: {
+				complaint_id: complaintId,
+				resolver_user_id: userId,
+				description: data.description,
+				company_id: data.company_id ?? null,
+			},
+		});
+	}
+
+	async updateResolution(
+		userId: string,
+		complaintId: string,
+		data: SubmitResolution,
+	): Promise<void> {
+		await prisma.complaintResolution.updateMany({
+			where: { complaint_id: complaintId, resolver_user_id: userId },
+			data: {
+				description: data.description,
+				company_id: data.company_id ?? null,
+			},
+		});
+	}
+
+	async deleteResolutionByUser(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
+		await prisma.complaintResolution.deleteMany({
+			where: { complaint_id: complaintId, resolver_user_id: userId },
+		});
+	}
+
+	async addResolutionAttachment(
+		_userId: string,
+		resolutionId: string,
+		data: SaveResolutionAttachment,
+	): Promise<ResolutionAttachment> {
+		const attachment = await prisma.complaintResolutionAttachment.create({
+			data: {
+				resolution_id: resolutionId,
+				url: data.url,
+				file_name: data.file_name,
+				path: data.path,
+				base64: data.base64,
+			},
+		});
+		return {
+			id: attachment.id,
+			url: attachment.url,
+			file_name: attachment.file_name,
+			created_at: attachment.created_at,
+		};
+	}
+
+	async deleteComplaintAttachment(
+		userId: string,
+		complaintId: string,
+		attachmentId: string,
+	): Promise<void> {
+		await prisma.complaintAttachment.deleteMany({
+			where: {
+				id: attachmentId,
+				complaint_id: complaintId,
+				complaint: { user_id: userId },
+			},
+		});
+	}
+
+	async deleteResolutionAttachment(
+		userId: string,
+		resolutionId: string,
+		attachmentId: string,
+	): Promise<void> {
+		await prisma.complaintResolutionAttachment.deleteMany({
+			where: {
+				id: attachmentId,
+				resolution_id: resolutionId,
+				resolution: { resolver_user_id: userId },
+			},
+		});
+	}
+
+	async findResolutionByUserAndComplaint(
+		userId: string,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const res = await prisma.complaintResolution.findFirst({
+			where: { complaint_id: complaintId, resolver_user_id: userId },
+			select: { id: true },
+		});
+		return res ?? null;
+	}
+
+	async findResolutionByUserCompanyAndComplaint(
+		userId: string,
+		companyId: string | null,
+		complaintId: string,
+	): Promise<{ id: string } | null> {
+		const res = await prisma.complaintResolution.findFirst({
+			where: {
+				complaint_id: complaintId,
+				resolver_user_id: userId,
+				company_id: companyId ?? null,
+			},
+			select: { id: true },
+		});
+		return res ?? null;
+	}
+
+	async findResolutionById(
+		resolutionId: string,
+	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null> {
+		const res = await prisma.complaintResolution.findUnique({
+			where: { id: resolutionId },
+			select: { id: true, complaint_id: true, resolver_user_id: true },
+		});
+		return res ?? null;
+	}
+
+	async updateResolutionById(
+		resolutionId: string,
+		description: string,
+	): Promise<void> {
+		await prisma.complaintResolution.update({
+			where: { id: resolutionId },
+			data: { description },
+		});
 	}
 
 	async getDashboardByUserId(userId: string) {
-		const groupedStatuses = await prisma.userComplaint.groupBy({
+		const groupedStatuses = await prisma.complaint.groupBy({
 			by: ["status"],
-			where: {
-				user_id: userId,
-			},
-			_count: {
-				status: true,
-			},
+			where: { user_id: userId },
+			_count: { status: true },
 		});
 
 		const byStatus = new Map<ComplaintStatus, number>();
@@ -279,18 +750,14 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		}
 
 		const open = byStatus.get("OPEN") ?? 0;
-		const pending = byStatus.get("IN_PROGRESS") ?? 0;
 		const resolved = byStatus.get("RESOLVED") ?? 0;
 		const canceled = byStatus.get("CANCELED") ?? 0;
-		const rejected = byStatus.get("REJECTED") ?? 0;
 
 		return {
-			total: open + pending + resolved + canceled + rejected,
+			total: open + resolved + canceled,
 			open,
-			pending,
 			resolved,
 			canceled,
-			rejected,
-		} satisfies ComplaintResume;
+		};
 	}
 }

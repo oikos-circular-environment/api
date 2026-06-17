@@ -1,11 +1,14 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { GetCompanyBusinessHoursUseCase } from "./get-company-business-hours-use-case.js";
 
 describe("get-company-business-hours-use-case", () => {
 	it("returns sunday to saturday even when no data exists", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const sut = new GetCompanyBusinessHoursUseCase(
@@ -13,23 +16,13 @@ describe("get-company-business-hours-use-case", () => {
 			businessHoursRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 		});
 
 		expect(result.length).toBe(7);
@@ -39,6 +32,7 @@ describe("get-company-business-hours-use-case", () => {
 	});
 
 	it("keeps existing business hours and fills missing days", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const sut = new GetCompanyBusinessHoursUseCase(
@@ -46,36 +40,21 @@ describe("get-company-business-hours-use-case", () => {
 			businessHoursRepository,
 		);
 
-		const company = await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		await businessHoursRepository.upsertMany(company.id, [
 			{
 				day_of_week: "MONDAY",
 				is_open: true,
-				time_slots: [
-					{
-						start_time: "08:00",
-						end_time: "17:00",
-					},
-				],
+				time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 			},
 		]);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 		});
 
 		expect(result.length).toBe(7);
@@ -87,6 +66,7 @@ describe("get-company-business-hours-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
 		const sut = new GetCompanyBusinessHoursUseCase(
@@ -98,7 +78,8 @@ describe("get-company-business-hours-use-case", () => {
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId,
+				companyId: randomUUID(),
 			});
 		} catch (error) {
 			thrownError = error;
