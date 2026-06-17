@@ -3,7 +3,7 @@ import type {
 	Complaint,
 	SubmitResolution,
 } from "@/modules/complaints/dtos/complaints-dto.js";
-import type { JobDispatcher } from "@/modules/complaints/providers/job-dispatcher.js";
+import type { JobDispatcher } from "@/modules/complaints/providers/queue/job-dispatcher.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
 type ResolveComplaintUseCaseRequest = {
