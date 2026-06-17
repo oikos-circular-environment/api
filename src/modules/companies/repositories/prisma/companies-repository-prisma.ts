@@ -9,22 +9,29 @@ import { companyMapper } from "./mappers/company-mapper.js";
 export class PrismaCompaniesRepository implements CompaniesRepository {
 	async findById(id: string) {
 		const company = await prisma.company.findUnique({
-			where: {
-				id,
-			},
+			where: { id },
+			include: { avatar: true },
 		});
 
 		return companyMapper(company);
 	}
 
 	async findByUserId(userId: string) {
-		const company = await prisma.company.findUnique({
-			where: {
-				user_id: userId,
-			},
+		const companies = await prisma.company.findMany({
+			where: { user_id: userId },
+			include: { avatar: true },
 		});
 
-		return companyMapper(company);
+		return companies.map((c) => companyMapper(c)).filter((c) => c !== null);
+	}
+
+	async findByUserAndCompanyId(userId: string, companyId: string) {
+		const company = await prisma.company.findFirst({
+			where: { id: companyId, user_id: userId },
+			include: { avatar: true },
+		});
+
+		return companyMapper(company ?? null);
 	}
 
 	async create(data: CreateCompany) {
@@ -35,14 +42,13 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 				identity_type: data.identity_type,
 				company_type: data.company_type,
 				status: data.status,
-				is_headquarters: data.is_headquarters,
 				business_name: data.business_name,
 				corporate_name: data.corporate_name,
-				accept_appointments: data.accept_appointments,
 				email: data.email,
 				phones: data.phones,
 				started_activity_in: data.started_activity_in,
 			},
+			include: { avatar: true },
 		});
 
 		const mappedCompany = companyMapper(company);
@@ -55,22 +61,51 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 	}
 
 	async update(id: string, data: UpdateCompany) {
-		const currentCompany = await prisma.company.findUnique({
-			where: {
-				id,
-			},
-		});
+		const company = await prisma.company
+			.update({
+				where: { id },
+				data,
+				include: { avatar: true },
+			})
+			.catch(() => null);
 
-		if (!currentCompany) {
-			return null;
-		}
+		return companyMapper(company);
+	}
 
-		const company = await prisma.company.update({
-			where: {
-				id,
-			},
-			data,
-		});
+	async uploadAvatar(
+		companyId: string,
+		data: { url: string; file_name: string; path: string },
+	) {
+		const company = await prisma
+			.$transaction(async (tx) => {
+				const existing = await tx.company.findUnique({
+					where: { id: companyId },
+					select: { avatar_id: true },
+				});
+
+				const avatar = await tx.companyAvatar.create({
+					data: {
+						url: data.url,
+						file_name: data.file_name,
+						path: data.path,
+					},
+				});
+
+				const updated = await tx.company.update({
+					where: { id: companyId },
+					data: { avatar_id: avatar.id },
+					include: { avatar: true },
+				});
+
+				if (existing?.avatar_id) {
+					await tx.companyAvatar.delete({
+						where: { id: existing.avatar_id },
+					});
+				}
+
+				return updated;
+			})
+			.catch(() => null);
 
 		return companyMapper(company);
 	}

@@ -21,6 +21,7 @@ enum DayOfWeek {
 }
 
 enum Measurement {
+  DAY
   KG
   L
   UNIT
@@ -30,22 +31,25 @@ enum Measurement {
   ML
 }
 
-enum WasteType {
-  RECYCLABLE
-  GARBAGE
+enum HazardLevel {
+  LOW
+  MEDIUM
+  HIGH
+  VERY_HIGH
 }
 
-enum ComplaintType {
-  IRREGULAR_DISPOSAL
-  DEFORESTATION
-  BURNING
-  VACANT_LOT
+enum SubcategoryType {
+  INCLUDE
+  EXCLUDE
 }
 
 enum ComplaintStatus {
   OPEN
-  IN_PROGRESS
   RESOLVED
-  REJECTED
   CANCELED
+}
+
+enum ComplaintVoteType {
+  RESOLVED
+  NOT_RESOLVED
 }

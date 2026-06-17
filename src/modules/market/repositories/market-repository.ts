@@ -1,4 +1,4 @@
-import type { MarketCompany } from "@/modules/market/dtos/market-dto.js";
+import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 
 export interface MarketRepository {
 	findMany(params: {
@@ -9,5 +9,5 @@ export interface MarketRepository {
 		category?: "services" | "waste";
 		offset: number;
 		limit: number;
-	}): Promise<{ companies: MarketCompany[]; total: number }>;
+	}): Promise<{ companies: MarketCompanyRecord[]; total: number }>;
 }

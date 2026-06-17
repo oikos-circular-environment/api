@@ -1,29 +1,49 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import {
+	makeAddress,
+	makeProfileInput,
+} from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
+import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
+
+function createUser(usersRepository: InMemoryUsersRepository, userId: string) {
+	usersRepository.items.push({
+		id: userId,
+		email: "test@example.com",
+		password: "hashed-password",
+		created_at: new Date(),
+	});
+}
 
 describe("upsert-profile-use-case", () => {
 	it("creates a profile when user does not have one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
+
+		const input = makeProfileInput();
+
+		createUser(usersRepository, input.user_id);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-				cpf: "12345678900",
-				phone: "5511999999999",
-				is_collector: false,
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
 			},
 		});
 
-		expect(result.user_id).toBe("11111111-1111-1111-1111-111111111111");
-		expect(result.full_name).toBe("John Doe");
-		expect(result.cpf).toBe("12345678900");
+		expect(result.user_id).toBe(input.user_id);
+		expect(result.full_name).toBe(input.full_name);
 		expect(result.id.length > 0).toBe(true);
 		expect(profilesRepository.items.length).toBe(1);
 	});
@@ -31,182 +51,62 @@ describe("upsert-profile-use-case", () => {
 	it("updates an existing profile when user already has one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const initial = makeProfileInput();
+
+		createUser(usersRepository, initial.user_id);
+		await profilesRepository.create(initial);
+
+		const updated = makeProfileInput({ user_id: initial.user_id });
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: initial.user_id,
 			data: {
-				full_name: "John Updated",
-				display_name: "john-updated",
-				cpf: "12345678900",
-				phone: "5511777777777",
-				is_collector: true,
+				full_name: updated.full_name,
+				display_name: updated.display_name,
+				phone: updated.phone,
 			},
 		});
 
-		expect(result.full_name).toBe("John Updated");
-		expect(result.display_name).toBe("john-updated");
-		expect(result.phone).toBe("5511777777777");
-		expect(result.is_collector).toBe(true);
+		expect(result.full_name).toBe(updated.full_name);
+		expect(result.display_name).toBe(updated.display_name);
+		expect(result.phone).toBe(updated.phone);
 		expect(profilesRepository.items.length).toBe(1);
-	});
-
-	it("throws when CPF belongs to another user (no existing profile)", async () => {
-		const profilesRepository = new InMemoryProfilesRepository();
-		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
-
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
-
-		let thrownError: unknown;
-
-		try {
-			await sut.execute({
-				userId: "22222222-2222-2222-2222-222222222222",
-				data: {
-					full_name: "Jane Doe",
-					display_name: "jane",
-					cpf: "12345678900",
-					phone: "5511888888888",
-					is_collector: false,
-				},
-			});
-		} catch (error) {
-			thrownError = error;
-		}
-
-		expect(thrownError instanceof AppError).toBe(true);
-
-		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("CPF already in use");
-			expect(thrownError.code).toBe("CPF_ALREADY_IN_USE");
-			expect(thrownError.statusCode).toBe(409);
-		}
-
-		expect(profilesRepository.items.length).toBe(1);
-	});
-
-	it("throws when CPF belongs to another user (with existing profile)", async () => {
-		const profilesRepository = new InMemoryProfilesRepository();
-		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
-
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
-
-		await profilesRepository.create({
-			user_id: "22222222-2222-2222-2222-222222222222",
-			full_name: "Jane Doe",
-			display_name: "jane",
-			cpf: "99988877766",
-			phone: "5511888888888",
-			is_collector: false,
-		});
-
-		let thrownError: unknown;
-
-		try {
-			await sut.execute({
-				userId: "22222222-2222-2222-2222-222222222222",
-				data: {
-					full_name: "Jane Updated",
-					display_name: "jane-updated",
-					cpf: "12345678900",
-					phone: "5511888888888",
-					is_collector: false,
-				},
-			});
-		} catch (error) {
-			thrownError = error;
-		}
-
-		expect(thrownError instanceof AppError).toBe(true);
-
-		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("CPF already in use");
-			expect(thrownError.code).toBe("CPF_ALREADY_IN_USE");
-			expect(thrownError.statusCode).toBe(409);
-		}
-	});
-
-	it("allows keeping same CPF when updating own profile", async () => {
-		const profilesRepository = new InMemoryProfilesRepository();
-		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
-
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
-
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-			data: {
-				full_name: "John Doe",
-				display_name: "john",
-				cpf: "12345678900",
-				phone: "5511000000000",
-				is_collector: false,
-			},
-		});
-
-		expect(result.cpf).toBe("12345678900");
-		expect(result.phone).toBe("5511000000000");
 	});
 
 	it("creates address when profile is created with address data", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
+
+		const input = makeProfileInput();
+		const address = makeAddress({
+			street: "Rua A",
+			zip_code: "01001000",
+			city: "Sao Paulo",
+			state_code: "SP",
+		});
+
+		createUser(usersRepository, input.user_id);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-				cpf: "12345678900",
-				phone: "5511999999999",
-				is_collector: false,
-				address: {
-					zip_code: "01001000",
-					street: "Rua A",
-					number: "100",
-					complement: "Casa",
-					district: "Centro",
-					city_ibge_id: 3550308,
-					city: "Sao Paulo",
-					state_ibge_id: 35,
-					state: "Sao Paulo",
-					state_code: "SP",
-					latitude: -23.5,
-					longitude: -46.6,
-				},
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
+				address,
 			},
 		});
 
@@ -222,39 +122,30 @@ describe("upsert-profile-use-case", () => {
 	it("creates address when existing profile has no address", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
+		const input = makeProfileInput();
+
+		createUser(usersRepository, input.user_id);
+		await profilesRepository.create(input);
+
+		const address = makeAddress({
+			street: "Rua A",
+			complement: null,
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-				cpf: "12345678900",
-				phone: "5511999999999",
-				is_collector: false,
-				address: {
-					zip_code: "01001000",
-					street: "Rua A",
-					number: "100",
-					complement: null,
-					district: "Centro",
-					city_ibge_id: 3550308,
-					city: "Sao Paulo",
-					state_ibge_id: 35,
-					state: "Sao Paulo",
-					state_code: "SP",
-					latitude: null,
-					longitude: null,
-				},
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
+				address,
 			},
 		});
 
@@ -267,41 +158,31 @@ describe("upsert-profile-use-case", () => {
 	it("updates existing address when profile already has one", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		createUser(usersRepository, input.user_id);
+		const profile = await profilesRepository.create(input);
+
+		const initialAddress = makeAddress({ complement: null });
 
 		await addressesRepository.create({
 			profile_id: profile.id,
-			zip_code: "01001000",
-			street: "Rua A",
-			number: "100",
-			complement: null,
-			district: "Centro",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: null,
-			longitude: null,
+			...initialAddress,
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Doe",
-				display_name: "john",
-				cpf: "12345678900",
-				phone: "5511999999999",
-				is_collector: false,
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
 				address: {
 					zip_code: "01310000",
 					street: "Rua B",
@@ -326,44 +207,75 @@ describe("upsert-profile-use-case", () => {
 		expect(addressesRepository.items.length).toBe(1);
 	});
 
+	it("throws when user does not exist", async () => {
+		const profilesRepository = new InMemoryProfilesRepository();
+		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
+
+		const input = makeProfileInput();
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: input.user_id,
+				data: {
+					full_name: input.full_name,
+					display_name: input.display_name,
+					phone: input.phone,
+				},
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.message).toBe("User not found");
+			expect(thrownError.code).toBe("USER_NOT_FOUND");
+			expect(thrownError.statusCode).toBe(404);
+		}
+	});
+
 	it("does not affect existing address when no address data is provided", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
-		const sut = new UpsertProfileUseCase(profilesRepository, addressesRepository);
+		const usersRepository = new InMemoryUsersRepository();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
+		const input = makeProfileInput();
+
+		createUser(usersRepository, input.user_id);
+		const profile = await profilesRepository.create(input);
+
+		const existingAddress = makeAddress({
+			street: "Rua A",
+			complement: null,
 		});
 
 		await addressesRepository.create({
 			profile_id: profile.id,
-			zip_code: "01001000",
-			street: "Rua A",
-			number: "100",
-			complement: null,
-			district: "Centro",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: null,
-			longitude: null,
+			...existingAddress,
 		});
 
+		const updated = makeProfileInput({ user_id: input.user_id });
+
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			data: {
-				full_name: "John Updated",
-				display_name: "john-updated",
-				cpf: "12345678900",
-				phone: "5511000000000",
-				is_collector: false,
+				full_name: updated.full_name,
+				display_name: updated.display_name,
+				phone: updated.phone,
 			},
 		});
 

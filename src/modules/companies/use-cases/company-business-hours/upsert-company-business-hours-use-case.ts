@@ -5,6 +5,8 @@ import type {
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { BusinessHoursRepository } from "@/modules/companies/repositories/business-hours-repository.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
+import { isBusinessHoursValid } from "@/modules/companies/utils/company-validation-utils.js";
 
 const ORDERED_DAYS: BusinessHour["day_of_week"][] = [
 	"SUNDAY",
@@ -28,6 +30,7 @@ const DAY_ORDER: Record<BusinessHour["day_of_week"], number> = {
 
 type UpsertCompanyBusinessHoursUseCaseRequest = {
 	userId: string;
+	companyId: string;
 	data: BusinessHourUpsertInput[];
 };
 
@@ -35,13 +38,18 @@ export class UpsertCompanyBusinessHoursUseCase {
 	constructor(
 		private readonly companiesRepository: CompaniesRepository,
 		private readonly businessHoursRepository: BusinessHoursRepository,
+		private readonly validationRepository: CompanyValidationRepository,
 	) {}
 
 	async execute({
 		userId,
+		companyId,
 		data,
 	}: UpsertCompanyBusinessHoursUseCaseRequest): Promise<BusinessHour[]> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);
@@ -94,7 +102,15 @@ export class UpsertCompanyBusinessHoursUseCase {
 			normalizedData,
 		);
 
-		return this.sortBusinessHours(saved);
+		const result = this.sortBusinessHours(saved);
+
+		await this.validationRepository.updateField(
+			company.id,
+			"business_hours",
+			isBusinessHoursValid(result),
+		);
+
+		return result;
 	}
 
 	private validateIncomingDays(data: BusinessHourUpsertInput[]): void {

@@ -1,0 +1,62 @@
+import { randomUUID } from "node:crypto";
+import { faker } from "@faker-js/faker";
+import type {
+	Complaint,
+	Geospatial,
+} from "@/modules/complaints/dtos/complaints-dto.js";
+
+export function makeGeospatial(overrides?: Partial<Geospatial>): Geospatial {
+	return {
+		heading: {
+			trueHeading: faker.number.float({ min: 0, max: 360 }),
+			magHeading: faker.number.float({ min: 0, max: 360 }),
+			accuracy: faker.number.float({ min: 0, max: 5 }),
+		},
+		location: {
+			coords: {
+				latitude: faker.location.latitude(),
+				longitude: faker.location.longitude(),
+				altitude: null,
+				accuracy: null,
+				altitudeAccuracy: null,
+				heading: null,
+				speed: null,
+			},
+			timestamp: faker.date.recent().getTime(),
+		},
+		addresses: {
+			city: faker.location.city(),
+			district: faker.location.county(),
+			streetNumber: faker.location.buildingNumber(),
+			street: faker.location.street(),
+			region: faker.location
+				.state({ abbreviated: true })
+				.slice(0, 2)
+				.toUpperCase(),
+			subregion: null,
+			country: "Brasil",
+			postalCode: faker.string.numeric(8),
+			name: null,
+			isoCountryCode: "BR",
+			timezone: "America/Sao_Paulo",
+			formattedAddress: faker.location.streetAddress(),
+		},
+		...overrides,
+	};
+}
+
+export function makeComplaint(overrides?: Partial<Complaint>): Complaint {
+	return {
+		id: randomUUID(),
+		status: "OPEN",
+		date: faker.date.recent(),
+		observations: faker.lorem.sentence(),
+		geospatial: makeGeospatial(),
+		attachments: [],
+		categories: [],
+		vote_counts: { resolved: 0, not_resolved: 0 },
+		resolution_count: 0,
+		created_at: new Date(),
+		...overrides,
+	};
+}

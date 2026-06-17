@@ -41,8 +41,8 @@ export class InMemoryAddressesRepository implements AddressesRepository {
 			state_ibge_id: data.state_ibge_id,
 			state: data.state,
 			state_code: data.state_code,
-			latitude: data.latitude ?? null,
-			longitude: data.longitude ?? null,
+			latitude: data.latitude,
+			longitude: data.longitude,
 			created_at: now,
 			updated_at: now,
 		};

@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+import type { WasteCategory } from "@/modules/wastes/dtos/wastes-dto.js";
 import type {
 	CompanyWaste,
 	CompanyWasteInput,
@@ -7,16 +8,20 @@ import type { WastesRepository } from "../wastes-repository.js";
 
 type StoredWaste = CompanyWaste & { company_id: string };
 
-function normalizeSubItems(subItems: string[] | null | undefined) {
-	if (!subItems || subItems.length === 0) {
-		return null;
-	}
-
-	return subItems;
-}
+const STUB_CATEGORY: WasteCategory = {
+	id: "00000000-0000-0000-0000-000000000000",
+	name: "Stub Category",
+	description: null,
+	observations: null,
+	hazard_levels: ["LOW"],
+	created_at: new Date(0),
+	updated_at: new Date(0),
+	subcategories: [],
+};
 
 export class InMemoryWastesRepository implements WastesRepository {
 	public items: StoredWaste[] = [];
+	public categoryMap: Map<string, WasteCategory> = new Map();
 
 	async findByCompanyId(companyId: string) {
 		return this.items
@@ -34,13 +39,15 @@ export class InMemoryWastesRepository implements WastesRepository {
 		const storedItems = data.map((item, index) => ({
 			id: randomUUID(),
 			name: item.name,
-			description: item.description,
+			description: item.description ?? null,
 			price: item.price,
 			unit: item.unit,
-			waste_type: item.waste_type,
 			quantity: item.quantity,
-			observations: item.observations,
-			sub_items: normalizeSubItems(item.sub_items),
+			waste_category_id: item.waste_category_id,
+			waste_category: this.categoryMap.get(item.waste_category_id) ?? {
+				...STUB_CATEGORY,
+				id: item.waste_category_id,
+			},
 			created_at: new Date(now.getTime() + index),
 			updated_at: new Date(now.getTime() + index),
 			company_id: companyId,

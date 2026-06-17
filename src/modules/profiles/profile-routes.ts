@@ -1,9 +1,10 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
+import { PrismaUsersRepository } from "@/modules/users/repositories/prisma/users-repository-prisma.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import { SupabaseBucket } from "../common/providers/storage/supabase/supabase-bucket.js";
+import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	addressSchema,
@@ -27,11 +28,13 @@ export async function profileRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const profilesRepository = new PrismaProfilesRepository();
 	const addressesRepository = new PrismaAddressesRepository();
-	const storageProvider = new SupabaseBucket();
+	const storageProvider = makeStorageProvider();
+	const usersRepository = new PrismaUsersRepository();
 
 	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,
 		addressesRepository,
+		usersRepository,
 	);
 	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
 	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
@@ -70,6 +73,7 @@ export async function profileRoutes(app: FastifyInstance) {
 						profile: profileSchema,
 					}),
 					401: appErrorSchema,
+					404: appErrorSchema,
 					409: appErrorSchema,
 				},
 			}),

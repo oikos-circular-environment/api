@@ -1,5 +1,10 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import {
+	makeAddress,
+	makeProfileInput,
+} from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { GetProfileAddressUseCase } from "./get-profile-address-use-case.js";
@@ -13,34 +18,21 @@ describe("get-profile-address-use-case", () => {
 			addressesRepository,
 		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
+		const profileInput = makeProfileInput();
+		const profile = await profilesRepository.create(profileInput);
+
+		const addressInput = makeAddress({
+			street: "Rua A",
+			city: "Sao Paulo",
+			state_code: "SP",
 		});
 
 		await addressesRepository.create({
 			profile_id: profile.id,
-			zip_code: "01001000",
-			street: "Rua A",
-			number: "100",
-			complement: null,
-			district: "Centro",
-			city_ibge_id: 3550308,
-			city: "Sao Paulo",
-			state_ibge_id: 35,
-			state: "Sao Paulo",
-			state_code: "SP",
-			latitude: null,
-			longitude: null,
+			...addressInput,
 		});
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const result = await sut.execute({ userId: profileInput.user_id });
 
 		expect(result?.street).toBe("Rua A");
 		expect(result?.city).toBe("Sao Paulo");
@@ -55,18 +47,11 @@ describe("get-profile-address-use-case", () => {
 			addressesRepository,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const profileInput = makeProfileInput();
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		await profilesRepository.create(profileInput);
+
+		const result = await sut.execute({ userId: profileInput.user_id });
 
 		expect(result).toBe(null);
 	});
@@ -82,9 +67,7 @@ describe("get-profile-address-use-case", () => {
 		let thrownError: unknown;
 
 		try {
-			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-			});
+			await sut.execute({ userId: randomUUID() });
 		} catch (error) {
 			thrownError = error;
 		}

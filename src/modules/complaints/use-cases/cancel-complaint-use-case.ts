@@ -14,17 +14,38 @@ export class CancelComplaintUseCase {
 		userId,
 		complaintId,
 	}: CancelComplaintUseCaseRequest): Promise<Complaint> {
-		const complaint =
-			await this.complaintsRepository.updateStatusByUserAndComplaintId(
-				userId,
-				complaintId,
-				"CANCELED",
-			);
+		const complaint = await this.complaintsRepository.findByUserAndComplaintId(
+			userId,
+			complaintId,
+		);
 
 		if (!complaint) {
 			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
 		}
 
-		return complaint;
+		const totalVotes =
+			complaint.vote_counts.resolved + complaint.vote_counts.not_resolved;
+
+		if (totalVotes > 0) {
+			throw new AppError(
+				"Complaint with votes cannot be canceled",
+				"COMPLAINT_HAS_VOTES",
+				422,
+			);
+		}
+
+		if (complaint.resolution_count > 0) {
+			throw new AppError(
+				"Complaint with resolutions cannot be canceled",
+				"COMPLAINT_HAS_RESOLUTIONS",
+				422,
+			);
+		}
+
+		return this.complaintsRepository.updateStatusByUserAndComplaintId(
+			userId,
+			complaintId,
+			"CANCELED",
+		);
 	}
 }

@@ -1,6 +1,8 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
+import { makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { DeleteProfileImageUseCase } from "./delete-profile-image-use-case.js";
 
@@ -13,27 +15,19 @@ describe("delete-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+		const profile = await profilesRepository.create(input);
 
-		const filePath = "profiles/11111111-1111-1111-1111-111111111111.jpeg";
+		const filePath = `profiles/${input.user_id}.jpeg`;
 
 		await storageProvider.uploadFile(filePath, Buffer.from("image-content"));
 		await profilesRepository.saveProfileImage(profile.id, {
-			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
+			url: `https://in-memory.storage/${filePath}`,
 			file_name: "avatar.jpeg",
 			path: filePath,
 		});
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const result = await sut.execute({ userId: input.user_id });
 
 		expect(result).toBeUndefined();
 		expect((await profilesRepository.findById(profile.id))?.profile_image).toBe(
@@ -50,21 +44,14 @@ describe("delete-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
 
 		let thrownError: unknown;
 
 		try {
-			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-			});
+			await sut.execute({ userId: input.user_id });
 		} catch (error) {
 			thrownError = error;
 		}
@@ -91,9 +78,7 @@ describe("delete-profile-image-use-case", () => {
 		let thrownError: unknown;
 
 		try {
-			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-			});
+			await sut.execute({ userId: randomUUID() });
 		} catch (error) {
 			thrownError = error;
 		}
@@ -121,20 +106,14 @@ describe("delete-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+		const profile = await profilesRepository.create(input);
 
-		const filePath = "profiles/11111111-1111-1111-1111-111111111111.jpeg";
+		const filePath = `profiles/${input.user_id}.jpeg`;
 
 		await storageProvider.uploadFile(filePath, Buffer.from("image-content"));
 		await profilesRepository.saveProfileImage(profile.id, {
-			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
+			url: `https://in-memory.storage/${filePath}`,
 			file_name: "avatar.jpeg",
 			path: filePath,
 		});
@@ -142,9 +121,7 @@ describe("delete-profile-image-use-case", () => {
 		let thrownError: unknown;
 
 		try {
-			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-			});
+			await sut.execute({ userId: input.user_id });
 		} catch (error) {
 			thrownError = error;
 		}

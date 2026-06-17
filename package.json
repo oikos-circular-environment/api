@@ -7,7 +7,7 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"dev": "tsx watch --env-file=.env src/server.ts",
+		"dev": "concurrently \"tsx watch --env-file=.env src/server.ts\" \"tsc --noEmit --watch --preserveWatchOutput\"",
 		"build": "tsc",
 		"start": "node dist/server.js",
 		"format": "biome format --write --files-ignore-unknown=true .",
@@ -17,15 +17,21 @@
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage",
 		"test:ui": "vitest --ui",
+		"test:e2e": "vitest run --config vitest.e2e.config.ts",
+		"test:integration": "vitest run --config vitest.integration.config.ts",
 		"migrate:dev": "prisma migrate dev",
 		"migrate:generate": "prisma generate",
-		"seed": "tsx prisma/seeds/recycling-companies.ts",
-		"seed:fetch": "tsx scripts/fetch-recycling-places.ts"
+		"seed": "tsx prisma/seeds/index.ts",
+		"seed:fetch": "tsx scripts/fetch-recycling-places.ts",
+		"minio:console": "xdg-open http://localhost:9001"
 	},
 	"prisma": {
-		"seed": "tsx prisma/seeds/recycling-companies.ts"
+		"seed": "tsx prisma/seeds/index.ts"
 	},
 	"dependencies": {
+		"@aws-sdk/client-s3": "^3.1062.0",
+		"@bull-board/api": "^8.0.0",
+		"@bull-board/fastify": "^8.0.0",
 		"@fastify/cookie": "^11.0.2",
 		"@fastify/cors": "^11.2.0",
 		"@fastify/jwt": "^10.0.0",
@@ -37,18 +43,22 @@
 		"@scalar/fastify-api-reference": "^1.52.1",
 		"@supabase/supabase-js": "^2.104.0",
 		"bcryptjs": "^3.0.3",
+		"bullmq": "^5.77.6",
 		"fastify": "^5.8.5",
 		"fastify-type-provider-zod": "^6.1.0",
+		"ioredis": "^5.11.0",
 		"pg": "^8.20.0",
 		"superjson": "^2.2.6",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.12",
+		"@faker-js/faker": "^10.4.0",
 		"@types/node": "^25.6.0",
 		"@types/pg": "^8.20.0",
 		"@vitest/coverage-v8": "^4.1.4",
 		"@vitest/ui": "^4.1.4",
+		"concurrently": "^10.0.3",
 		"dotenv": "^17.4.2",
 		"lefthook": "^1.13.6",
 		"pino-pretty": "^13.1.3",

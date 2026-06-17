@@ -1,94 +1,99 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { CreateCompanyUseCase } from "./create-company-use-case.js";
 
 describe("create-company-use-case", () => {
-	it("creates a company when user does not have one", async () => {
+	it("creates a company for the user", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new CreateCompanyUseCase(companiesRepository);
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new CreateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-			data: {
-				identity: "12345678900",
-				identity_type: "CPF",
-				company_type: "COMPANY",
-				status: true,
-				is_headquarters: true,
-				business_name: "Oikos Tech",
-				corporate_name: "Oikos Tech LTDA",
-				accept_appointments: true,
-				email: "contato@oikos.dev",
-				phones: ["5511999999999", "5511888888888"],
-				started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-			},
-		});
+		const input = makeCompany({ user_id: userId });
 
-		expect(result.user_id).toBe("11111111-1111-1111-1111-111111111111");
-		expect(result.identity).toBe("12345678900");
-		expect(result.identity_type).toBe("CPF");
-		expect(result.company_type).toBe("COMPANY");
+		const result = await sut.execute({ userId, data: input });
+
+		expect(result.user_id).toBe(userId);
+		expect(result.identity).toBe(input.identity);
+		expect(result.identity_type).toBe(input.identity_type);
+		expect(result.company_type).toBe(input.company_type);
 		expect(result.status).toBe(true);
-		expect(result.is_headquarters).toBe(true);
-		expect(result.business_name).toBe("Oikos Tech");
-		expect(result.corporate_name).toBe("Oikos Tech LTDA");
-		expect(result.accept_appointments).toBe(true);
-		expect(result.email).toBe("contato@oikos.dev");
-		expect(result.phones).toStrictEqual(["5511999999999", "5511888888888"]);
+		expect(result.business_name).toBe(input.business_name);
+		expect(result.corporate_name).toBe(input.corporate_name);
+		expect(result.email).toBe(input.email);
+		expect(result.phones).toStrictEqual(input.phones);
 		expect(result.id.length > 0).toBe(true);
 	});
 
-	it("throws when company already exists for user", async () => {
+	it("allows the same user to create multiple companies with different identities", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new CreateCompanyUseCase(companiesRepository);
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new CreateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
+		const input1 = makeCompany({ user_id: userId });
+		const input2 = makeCompany({
+			user_id: userId,
+			identity_type: "CNPJ",
+			company_type: "ONG",
 		});
 
-		let thrownError: unknown;
+		await sut.execute({ userId, data: input1 });
+		await sut.execute({ userId, data: input2 });
 
-		try {
-			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-				data: {
-					identity: "99888777000166",
-					identity_type: "CNPJ",
-					company_type: "ONG",
-					status: true,
-					is_headquarters: true,
-					business_name: "Nova Oikos",
-					corporate_name: "Nova Oikos SA",
-					accept_appointments: true,
-					email: "nova@oikos.dev",
-					phones: ["5511777777777"],
-					started_activity_in: new Date("2025-01-01T00:00:00.000Z"),
-				},
-			});
-		} catch (error) {
-			thrownError = error;
-		}
+		expect(companiesRepository.items.length).toBe(2);
+		expect(companiesRepository.items.every((c) => c.user_id === userId)).toBe(
+			true,
+		);
+	});
 
-		expect(thrownError instanceof AppError).toBe(true);
+	it("creates CompanyValidation with general_registration true and others false", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new CreateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
 
-		if (thrownError instanceof AppError) {
-			expect(thrownError.message).toBe("Company already exists");
-			expect(thrownError.code).toBe("COMPANY_ALREADY_EXISTS");
-			expect(thrownError.statusCode).toBe(409);
-		}
+		const company = await sut.execute({
+			userId,
+			data: makeCompany({ user_id: userId }),
+		});
 
-		expect(companiesRepository.items.length).toBe(1);
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation).not.toBeNull();
+		expect(validation?.general_registration).toBe(true);
+		expect(validation?.address).toBe(false);
+		expect(validation?.business_hours).toBe(false);
+		expect(validation?.wastes).toBe(false);
+		expect(validation?.services).toBe(false);
+	});
+
+	it("sets is_company_valid to false on a freshly created company", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new CreateCompanyUseCase(
+			companiesRepository,
+			validationRepository,
+		);
+
+		const company = await sut.execute({
+			userId,
+			data: makeCompany({ user_id: userId }),
+		});
+
+		expect(company.is_company_valid).toBe(false);
 	});
 });

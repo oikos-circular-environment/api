@@ -3,7 +3,7 @@ CREATE EXTENSION IF NOT EXISTS postgis;
 
 -- Add location column to addresses
 ALTER TABLE "addresses"
-  ADD COLUMN "location" geography(Point, 4326);
+  ADD COLUMN "location" public.geography(Point, 4326);
 
 -- Spatial index for ST_DWithin performance
 CREATE INDEX "addresses_location_gist_idx"
@@ -11,5 +11,5 @@ CREATE INDEX "addresses_location_gist_idx"
 
 -- Backfill existing records that already have lat/lon
 UPDATE "addresses"
-SET "location" = ST_SetSRID(ST_Point("longitude", "latitude"), 4326)
+SET "location" = public.ST_SetSRID(public.ST_Point("longitude", "latitude"), 4326)
 WHERE "latitude" IS NOT NULL AND "longitude" IS NOT NULL;

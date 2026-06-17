@@ -16,8 +16,8 @@ export type PrismaAddressWithRelations = {
 	state_ibge_id: number;
 	state: string;
 	state_code: string;
-	latitude: number | null;
-	longitude: number | null;
+	latitude: number;
+	longitude: number;
 	created_at: Date;
 	updated_at: Date;
 };
@@ -27,9 +27,7 @@ export type PrismaProfileWithRelations = {
 	user_id: string;
 	full_name: string;
 	display_name: string;
-	cpf: string;
 	phone: string;
-	is_collector: boolean;
 	created_at: Date;
 	updated_at: Date;
 	address?: PrismaAddressWithRelations | null;
@@ -57,9 +55,7 @@ export function profileMapper(
 		user_id: profile.user_id,
 		full_name: profile.full_name,
 		display_name: profile.display_name,
-		cpf: profile.cpf,
 		phone: profile.phone,
-		is_collector: profile.is_collector,
 		created_at: profile.created_at,
 		updated_at: profile.updated_at,
 		address: address

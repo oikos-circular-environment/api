@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
+import { makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { UpsertProfileImageUseCase } from "./upsert-profile-image-use-case.js";
 
@@ -14,19 +15,14 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
 
 		const imageContent = Buffer.from("jpeg-image-content");
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			file: {
 				fileName: "avatar.jpeg",
 				mimeType: "image/jpeg",
@@ -34,15 +30,11 @@ describe("upsert-profile-image-use-case", () => {
 			},
 		});
 
-		expect(result.path).toBe(
-			"profiles/11111111-1111-1111-1111-111111111111.jpeg",
-		);
+		const expectedPath = `profiles/${input.user_id}.jpeg`;
+
+		expect(result.path).toBe(expectedPath);
 		expect(result.file_name).toBe("avatar.jpeg");
-		expect(
-			await storageProvider.checkFileExists(
-				"profiles/11111111-1111-1111-1111-111111111111.jpeg",
-			),
-		).toBe(true);
+		expect(await storageProvider.checkFileExists(expectedPath)).toBe(true);
 	});
 
 	it("deletes old file and uploads new one when extension changes", async () => {
@@ -53,26 +45,20 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+		const profile = await profilesRepository.create(input);
 
-		const oldImagePath = "profiles/11111111-1111-1111-1111-111111111111.jpeg";
+		const oldImagePath = `profiles/${input.user_id}.jpeg`;
 
 		await storageProvider.uploadFile(oldImagePath, Buffer.from("old-image"));
 		await profilesRepository.saveProfileImage(profile.id, {
-			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
+			url: `https://in-memory.storage/${oldImagePath}`,
 			file_name: "avatar.jpeg",
 			path: oldImagePath,
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			file: {
 				fileName: "avatar.png",
 				mimeType: "image/png",
@@ -80,15 +66,11 @@ describe("upsert-profile-image-use-case", () => {
 			},
 		});
 
-		expect(result.path).toBe(
-			"profiles/11111111-1111-1111-1111-111111111111.png",
-		);
+		const newPath = `profiles/${input.user_id}.png`;
+
+		expect(result.path).toBe(newPath);
 		expect(await storageProvider.checkFileExists(oldImagePath)).toBe(false);
-		expect(
-			await storageProvider.checkFileExists(
-				"profiles/11111111-1111-1111-1111-111111111111.png",
-			),
-		).toBe(true);
+		expect(await storageProvider.checkFileExists(newPath)).toBe(true);
 	});
 
 	it("deletes old file and uploads new one when same extension", async () => {
@@ -99,20 +81,14 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		const profile = await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+		const profile = await profilesRepository.create(input);
 
-		const imagePath = "profiles/11111111-1111-1111-1111-111111111111.jpeg";
+		const imagePath = `profiles/${input.user_id}.jpeg`;
 
 		await storageProvider.uploadFile(imagePath, Buffer.from("old-content"));
 		await profilesRepository.saveProfileImage(profile.id, {
-			url: "https://in-memory.storage/profiles/11111111-1111-1111-1111-111111111111.jpeg",
+			url: `https://in-memory.storage/${imagePath}`,
 			file_name: "avatar.jpeg",
 			path: imagePath,
 		});
@@ -120,7 +96,7 @@ describe("upsert-profile-image-use-case", () => {
 		const newContent = Buffer.from("new-content");
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId: input.user_id,
 			file: {
 				fileName: "new-avatar.jpeg",
 				mimeType: "image/jpeg",
@@ -139,11 +115,13 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
+		const input = makeProfileInput();
+
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: input.user_id,
 				file: {
 					fileName: "avatar.jpeg",
 					mimeType: "image/jpeg",
@@ -171,20 +149,15 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: input.user_id,
 				file: {
 					fileName: "avatar.gif",
 					mimeType: "image/gif",
@@ -214,20 +187,15 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: input.user_id,
 				file: {
 					fileName: "avatar.png",
 					mimeType: "image/png",
@@ -278,20 +246,15 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: input.user_id,
 				file: {
 					fileName: "avatar.jpeg",
 					mimeType: "image/jpeg",
@@ -325,20 +288,15 @@ describe("upsert-profile-image-use-case", () => {
 			storageProvider,
 		);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
+
+		await profilesRepository.create(input);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId: input.user_id,
 				file: {
 					fileName: "avatar.jpeg",
 					mimeType: "image/jpeg",

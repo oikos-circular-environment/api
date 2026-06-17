@@ -1,0 +1,264 @@
+import { randomUUID } from "node:crypto";
+import { describe, expect, it } from "vitest";
+import type { Geospatial } from "@/modules/complaints/dtos/complaints-dto.js";
+import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { WASTE_CATEGORIES_SEED } from "@/modules/wastes/data/waste-categories-seed.js";
+import { GetMapComplaintsUseCase } from "./get-map-complaints-use-case.js";
+
+// Sao Paulo coordinates used for radius-based assertions
+const spCoords = { latitude: -23.55, longitude: -46.63 };
+
+function makeSpGeospatial(overrides?: Partial<Geospatial>): Geospatial {
+	return makeGeospatial({
+		location: {
+			coords: {
+				...makeGeospatial().location.coords,
+				...spCoords,
+			},
+			timestamp: Date.now(),
+		},
+		...overrides,
+	});
+}
+
+describe("get-map-complaints-use-case", () => {
+	it("returns OPEN and RESOLVED complaints when status is ALL", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const resolved = complaintsRepository.complaints[1];
+		if (resolved) resolved.status = "RESOLVED";
+		const canceled = complaintsRepository.complaints[2];
+		if (canceled) canceled.status = "CANCELED";
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
+
+		expect(items.length).toBe(2);
+		const statuses = items.map((i) => i.status);
+		expect(statuses).toContain("OPEN");
+		expect(statuses).toContain("RESOLVED");
+	});
+
+	it("filters by single status", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const resolved = complaintsRepository.complaints[1];
+		if (resolved) resolved.status = "RESOLVED";
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "RESOLVED",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
+
+		expect(items.length).toBe(1);
+		expect(items[0]?.status).toBe("RESOLVED");
+	});
+
+	it("returns items with correct MapComplaintItem shape including attachments", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
+
+		expect(items.length).toBe(1);
+		const item = items[0];
+		expect(item).toMatchObject({
+			status: "OPEN",
+			location: { lat: -23.55, lon: -46.63 },
+			vote_counts: { resolved: 0, not_resolved: 0 },
+			resolution_count: 0,
+		});
+		expect(item?.attachments).toHaveLength(0);
+		expect(item?.geospatial).toBeDefined();
+		expect(item?.id).toBeDefined();
+		expect(item?.created_at).toBeInstanceOf(Date);
+	});
+
+	it("does not return complaints outside the radius", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		// complaint far away (~440 km from São Paulo)
+		const farGeospatial = makeGeospatial({
+			location: {
+				coords: {
+					...makeGeospatial().location.coords,
+					latitude: -19.92,
+					longitude: -43.94,
+				},
+				timestamp: Date.now(),
+			},
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: farGeospatial,
+		});
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
+
+		expect(items).toHaveLength(0);
+	});
+
+	it("location is derived from capture coordinates", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
+
+		expect(items[0]?.location).toEqual({ lat: -23.55, lon: -46.63 });
+	});
+
+	it("filters by waste_category_id", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[1].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: WASTE_CATEGORIES_SEED[0].id,
+			hazard_level: "ALL",
+		});
+
+		expect(items).toHaveLength(1);
+		expect(items[0]?.categories[0]?.id).toBe(WASTE_CATEGORIES_SEED[0].id);
+	});
+
+	it("filters by hazard_level", async () => {
+		const userAId = randomUUID();
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const sut = new GetMapComplaintsUseCase(complaintsRepository);
+
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[1].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
+
+		const highComplaint = complaintsRepository.complaints[0];
+		if (highComplaint?.categories[0]) {
+			highComplaint.categories[0].hazard_levels = ["HIGH"];
+		}
+
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "HIGH",
+		});
+
+		expect(items).toHaveLength(1);
+		expect(items[0]?.categories[0]?.hazard_levels).toContain("HIGH");
+	});
+});

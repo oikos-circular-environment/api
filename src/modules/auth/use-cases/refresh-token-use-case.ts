@@ -13,7 +13,9 @@ export type RefreshedUser = {
 export class RefreshTokenUseCase {
 	constructor(private readonly authRepository: AuthRepository) {}
 
-	async execute({ userId }: RefreshTokenUseCaseRequest): Promise<RefreshedUser> {
+	async execute({
+		userId,
+	}: RefreshTokenUseCaseRequest): Promise<RefreshedUser> {
 		const user = await this.authRepository.findById(userId);
 
 		if (!user) {

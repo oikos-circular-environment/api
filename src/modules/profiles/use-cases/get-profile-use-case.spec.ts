@@ -1,4 +1,6 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
+import { makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { GetProfileUseCase } from "./get-profile-use-case.js";
 
@@ -7,30 +9,21 @@ describe("get-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const sut = new GetProfileUseCase(profilesRepository);
 
-		await profilesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			full_name: "John Doe",
-			display_name: "john",
-			cpf: "12345678900",
-			phone: "5511999999999",
-			is_collector: false,
-		});
+		const input = makeProfileInput();
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		await profilesRepository.create(input);
 
-		expect(result?.user_id).toBe("11111111-1111-1111-1111-111111111111");
-		expect(result?.full_name).toBe("John Doe");
+		const result = await sut.execute({ userId: input.user_id });
+
+		expect(result?.user_id).toBe(input.user_id);
+		expect(result?.full_name).toBe(input.full_name);
 	});
 
 	it("returns null when profile does not exist", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const sut = new GetProfileUseCase(profilesRepository);
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const result = await sut.execute({ userId: randomUUID() });
 
 		expect(result).toBe(null);
 	});

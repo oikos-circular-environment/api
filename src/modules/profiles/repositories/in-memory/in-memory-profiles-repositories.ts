@@ -22,12 +22,6 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 		return profile ?? null;
 	}
 
-	async findByCpf(cpf: string) {
-		const profile = this.items.find((item) => item.cpf === cpf);
-
-		return profile ?? null;
-	}
-
 	async create(data: CreateProfile) {
 		const now = new Date();
 		const profile = {
@@ -35,9 +29,7 @@ export class InMemoryProfilesRepository implements ProfilesRepository {
 			user_id: data.user_id,
 			full_name: data.full_name,
 			display_name: data.display_name,
-			cpf: data.cpf,
 			phone: data.phone,
-			is_collector: data.is_collector,
 			created_at: now,
 			updated_at: now,
 			address: null,

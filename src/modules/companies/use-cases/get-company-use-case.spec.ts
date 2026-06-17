@@ -1,44 +1,97 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { makeCompanyAddress } from "@/modules/companies/factories/make-company-address.js";
+import { makeCompanyWaste } from "@/modules/companies/factories/make-company-waste.js";
+import { InMemoryAddressesRepository } from "@/modules/companies/repositories/in-memory/in-memory-addresses-repository.js";
+import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryServicesRepository } from "@/modules/companies/repositories/in-memory/in-memory-services-repository.js";
+import { InMemoryWastesRepository } from "@/modules/companies/repositories/in-memory/in-memory-wastes-repository.js";
 import { GetCompanyUseCase } from "./get-company-use-case.js";
 
+function makeSut() {
+	const companiesRepository = new InMemoryCompaniesRepository();
+	const addressesRepository = new InMemoryAddressesRepository();
+	const businessHoursRepository = new InMemoryBusinessHoursRepository();
+	const wastesRepository = new InMemoryWastesRepository();
+	const servicesRepository = new InMemoryServicesRepository();
+
+	const sut = new GetCompanyUseCase(
+		companiesRepository,
+		addressesRepository,
+		businessHoursRepository,
+		wastesRepository,
+		servicesRepository,
+	);
+
+	return {
+		sut,
+		companiesRepository,
+		addressesRepository,
+		wastesRepository,
+		servicesRepository,
+	};
+}
+
 describe("get-company-use-case", () => {
-	it("returns company when it exists", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new GetCompanyUseCase(companiesRepository);
+	it("returns all companies for a user with related data", async () => {
+		const userId = randomUUID();
+		const { sut, companiesRepository, addressesRepository, wastesRepository } =
+			makeSut();
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: true,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: true,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+
+		const address = await addressesRepository.create({
+			company_id: company.id,
+			...makeCompanyAddress({ city: "Sao Paulo" }),
 		});
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		const wasteInput = makeCompanyWaste();
+		await wastesRepository.replaceMany(company.id, [wasteInput]);
 
-		expect(result?.user_id).toBe("11111111-1111-1111-1111-111111111111");
-		expect(result?.identity).toBe("12345678900");
-		expect(result?.corporate_name).toBe("Oikos Tech LTDA");
+		const secondInput = makeCompany({
+			user_id: userId,
+			corporate_name: "Nova Oikos SA",
+		});
+		await companiesRepository.create(secondInput);
+
+		const result = await sut.execute({ userId });
+
+		expect(result).toHaveLength(2);
+		expect(result[0].address?.city).toBe(address.city);
+		expect(result[0].wastes).toHaveLength(1);
+		expect(result[0].wastes[0].name).toBe(wasteInput.name);
+		expect(result[0].services).toStrictEqual([]);
+		expect(result[0].business_hours).toStrictEqual([]);
+		expect(result[1].corporate_name).toBe("Nova Oikos SA");
+		expect(result[1].address).toBeNull();
+		expect(result[1].wastes).toStrictEqual([]);
 	});
 
-	it("returns null when company does not exist", async () => {
-		const companiesRepository = new InMemoryCompaniesRepository();
-		const sut = new GetCompanyUseCase(companiesRepository);
+	it("returns empty arrays for related data when company has none", async () => {
+		const userId = randomUUID();
+		const { sut, companiesRepository } = makeSut();
 
-		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-		});
+		await companiesRepository.create(makeCompany({ user_id: userId }));
 
-		expect(result).toBe(null);
+		const result = await sut.execute({ userId });
+
+		expect(result).toHaveLength(1);
+		expect(result[0].address).toBeNull();
+		expect(result[0].business_hours).toStrictEqual([]);
+		expect(result[0].wastes).toStrictEqual([]);
+		expect(result[0].services).toStrictEqual([]);
+	});
+
+	it("returns empty array when user has no companies", async () => {
+		const userId = randomUUID();
+		const { sut } = makeSut();
+
+		const result = await sut.execute({ userId });
+
+		expect(result).toStrictEqual([]);
 	});
 });

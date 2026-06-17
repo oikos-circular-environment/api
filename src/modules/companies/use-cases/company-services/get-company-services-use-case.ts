@@ -5,6 +5,7 @@ import type { ServicesRepository } from "@/modules/companies/repositories/servic
 
 type GetCompanyServicesUseCaseRequest = {
 	userId: string;
+	companyId: string;
 };
 
 export class GetCompanyServicesUseCase {
@@ -15,8 +16,12 @@ export class GetCompanyServicesUseCase {
 
 	async execute({
 		userId,
+		companyId,
 	}: GetCompanyServicesUseCaseRequest): Promise<CompanyService[]> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

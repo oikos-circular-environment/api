@@ -1,55 +1,42 @@
+import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryBusinessHoursRepository } from "@/modules/companies/repositories/in-memory/in-memory-business-hours-repository.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { UpsertCompanyBusinessHoursUseCase } from "./upsert-company-business-hours-use-case.js";
 
 describe("upsert-company-business-hours-use-case", () => {
 	it("upserts partial payload and persists sunday to saturday", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 			data: [
 				{
 					day_of_week: "MONDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "07:00",
-							end_time: "11:00",
-						},
-					],
+					time_slots: [{ start_time: "07:00", end_time: "11:00" }],
 				},
 				{
 					day_of_week: "FRIDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "08:00",
-							end_time: "17:00",
-						},
-					],
+					time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 				},
 			],
 		});
@@ -73,56 +60,41 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("keeps existing day values when payload does not include the day", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+		await validationRepository.create(company.id, true);
 
 		await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 			data: [
 				{
 					day_of_week: "MONDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "07:00",
-							end_time: "11:00",
-						},
-					],
+					time_slots: [{ start_time: "07:00", end_time: "11:00" }],
 				},
 			],
 		});
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
+			userId,
+			companyId: company.id,
 			data: [
 				{
 					day_of_week: "FRIDAY",
 					is_open: true,
-					time_slots: [
-						{
-							start_time: "08:00",
-							end_time: "17:00",
-						},
-					],
+					time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 				},
 			],
 		});
@@ -135,41 +107,88 @@ describe("upsert-company-business-hours-use-case", () => {
 		expect(result[5].time_slots.length).toBe(1);
 	});
 
-	it("throws when time_slots is empty and is_open is true", async () => {
+	it("sets business_hours validation to true when at least one open day has a slot", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId,
+			companyId: company.id,
+			data: [
+				{
+					day_of_week: "MONDAY",
+					is_open: true,
+					time_slots: [{ start_time: "08:00", end_time: "17:00" }],
+				},
+			],
 		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.business_hours).toBe(true);
+	});
+
+	it("sets business_hours validation to false when all days are closed", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyBusinessHoursUseCase(
+			companiesRepository,
+			businessHoursRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+		await validationRepository.create(company.id, true);
+
+		await sut.execute({
+			userId,
+			companyId: company.id,
+			data: [{ day_of_week: "MONDAY", is_open: false, time_slots: [] }],
+		});
+
+		const validation = await validationRepository.findByCompanyId(company.id);
+
+		expect(validation?.business_hours).toBe(false);
+	});
+
+	it("throws when time_slots is empty and is_open is true", async () => {
+		const userId = randomUUID();
+		const companiesRepository = new InMemoryCompaniesRepository();
+		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
+		const sut = new UpsertCompanyBusinessHoursUseCase(
+			companiesRepository,
+			businessHoursRepository,
+			validationRepository,
+		);
+
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
-				data: [
-					{
-						day_of_week: "SUNDAY",
-						is_open: true,
-						time_slots: [],
-					},
-				],
+				userId,
+				companyId: company.id,
+				data: [{ day_of_week: "SUNDAY", is_open: true, time_slots: [] }],
 			});
 		} catch (error) {
 			thrownError = error;
@@ -184,37 +203,25 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("accepts closed day with empty time_slots", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
+		await validationRepository.create(company.id, true);
 
 		const result = await sut.execute({
-			userId: "11111111-1111-1111-1111-111111111111",
-			data: [
-				{
-					day_of_week: "SUNDAY",
-					is_open: false,
-					time_slots: [],
-				},
-			],
+			userId,
+			companyId: company.id,
+			data: [{ day_of_week: "SUNDAY", is_open: false, time_slots: [] }],
 		});
 
 		expect(result[0].day_of_week).toBe("SUNDAY");
@@ -223,49 +230,33 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when day_of_week is duplicated", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId,
+				companyId: company.id,
 				data: [
 					{
 						day_of_week: "MONDAY",
 						is_open: true,
-						time_slots: [
-							{
-								start_time: "08:00",
-								end_time: "17:00",
-							},
-						],
+						time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 					},
-					{
-						day_of_week: "MONDAY",
-						is_open: false,
-						time_slots: [],
-					},
+					{ day_of_week: "MONDAY", is_open: false, time_slots: [] },
 				],
 			});
 		} catch (error) {
@@ -281,28 +272,27 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when company does not exist", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId,
+				companyId: randomUUID(),
 				data: [
 					{
 						day_of_week: "MONDAY",
 						is_open: true,
-						time_slots: [
-							{
-								start_time: "08:00",
-								end_time: "17:00",
-							},
-						],
+						time_slots: [{ start_time: "08:00", end_time: "17:00" }],
 					},
 				],
 			});
@@ -319,43 +309,31 @@ describe("upsert-company-business-hours-use-case", () => {
 	});
 
 	it("throws when start_time is greater than or equal to end_time", async () => {
+		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const businessHoursRepository = new InMemoryBusinessHoursRepository();
+		const validationRepository = new InMemoryCompanyValidationRepository();
 		const sut = new UpsertCompanyBusinessHoursUseCase(
 			companiesRepository,
 			businessHoursRepository,
+			validationRepository,
 		);
 
-		await companiesRepository.create({
-			user_id: "11111111-1111-1111-1111-111111111111",
-			identity: "12345678900",
-			identity_type: "CPF",
-			company_type: "COMPANY",
-			status: true,
-			is_headquarters: false,
-			business_name: "Oikos Tech",
-			corporate_name: "Oikos Tech LTDA",
-			accept_appointments: false,
-			email: "contato@oikos.dev",
-			phones: ["5511999999999"],
-			started_activity_in: new Date("2024-01-01T00:00:00.000Z"),
-		});
+		const company = await companiesRepository.create(
+			makeCompany({ user_id: userId }),
+		);
 
 		let thrownError: unknown;
 
 		try {
 			await sut.execute({
-				userId: "11111111-1111-1111-1111-111111111111",
+				userId,
+				companyId: company.id,
 				data: [
 					{
 						day_of_week: "MONDAY",
 						is_open: true,
-						time_slots: [
-							{
-								start_time: "18:00",
-								end_time: "08:00",
-							},
-						],
+						time_slots: [{ start_time: "18:00", end_time: "08:00" }],
 					},
 				],
 			});

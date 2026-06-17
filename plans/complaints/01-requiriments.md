@@ -5,7 +5,6 @@
 ### Escopo
 
 - **Dentro:** Denúncia Manual + Refactor do modelo de denúncias + Exposição Pública (mapa, votos, resolução)
-- **Fora:** Confiabilidade de perfis/empresas, fórum/comentários, plataforma web, selo pago
 
 ---
 

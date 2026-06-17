@@ -5,6 +5,7 @@ import type { CompaniesRepository } from "@/modules/companies/repositories/compa
 
 type GetCompanyAddressUseCaseRequest = {
 	userId: string;
+	companyId: string;
 };
 
 export class GetCompanyAddressUseCase {
@@ -15,8 +16,12 @@ export class GetCompanyAddressUseCase {
 
 	async execute({
 		userId,
+		companyId,
 	}: GetCompanyAddressUseCaseRequest): Promise<CompanyAddress | null> {
-		const company = await this.companiesRepository.findByUserId(userId);
+		const company = await this.companiesRepository.findByUserAndCompanyId(
+			userId,
+			companyId,
+		);
 
 		if (!company) {
 			throw new AppError("Company not found", "COMPANY_NOT_FOUND", 404);

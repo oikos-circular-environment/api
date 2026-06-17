@@ -1,9 +1,10 @@
-import { AppError } from "@/modules/common/errors/app-error.js";
 import type {
 	Company,
 	CreateCompany,
 } from "@/modules/companies/dtos/companies-dto.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
+import { isGeneralRegistrationValid } from "@/modules/companies/utils/company-validation-utils.js";
 
 type CreateCompanyUseCaseRequest = {
 	userId: string;
@@ -11,25 +12,25 @@ type CreateCompanyUseCaseRequest = {
 };
 
 export class CreateCompanyUseCase {
-	constructor(private readonly companiesRepository: CompaniesRepository) {}
+	constructor(
+		private readonly companiesRepository: CompaniesRepository,
+		private readonly validationRepository: CompanyValidationRepository,
+	) {}
 
 	async execute({
 		userId,
 		data,
 	}: CreateCompanyUseCaseRequest): Promise<Company> {
-		const existingCompany = await this.companiesRepository.findByUserId(userId);
-
-		if (existingCompany) {
-			throw new AppError(
-				"Company already exists",
-				"COMPANY_ALREADY_EXISTS",
-				409,
-			);
-		}
-
-		return this.companiesRepository.create({
+		const company = await this.companiesRepository.create({
 			...data,
 			user_id: userId,
 		});
+
+		await this.validationRepository.create(
+			company.id,
+			isGeneralRegistrationValid(company),
+		);
+
+		return company;
 	}
 }
