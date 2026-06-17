@@ -24,6 +24,7 @@ const envSchema = z
 		REDIS_URL: z.string(),
 
 		QUORUM_JOB_DELAY_MS: z.coerce.number().default(24 * 60 * 60 * 1000),
+		WORKER_CONCURRENCY: z.coerce.number().default(5),
 	})
 	.superRefine((data, ctx) => {
 		if (data.STORAGE_PROVIDER === "minio") {
