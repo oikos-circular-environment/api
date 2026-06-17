@@ -20,8 +20,8 @@ import {
 	submitVoteSchema,
 	updateComplaintSchema,
 } from "./dtos/complaints-dto.js";
-import { BullMQJobDispatcher } from "./providers/bullmq-job-dispatcher.js";
-import { PrismaCompanyOwnershipChecker } from "./providers/prisma-company-checker.js";
+import { PrismaCompanyOwnershipChecker } from "./providers/company-checker/prisma/prisma-company-checker.js";
+import { BullMQJobDispatcher } from "./providers/queue/bullmq/bullmq-job-dispatcher.js";
 import { PrismaComplaintsRepository } from "./repositories/prisma/complaints-repository-prisma.js";
 import { AddResolutionAttachmentUseCase } from "./use-cases/add-resolution-attachment-use-case.js";
 import { CancelComplaintUseCase } from "./use-cases/cancel-complaint-use-case.js";
