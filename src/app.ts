@@ -145,3 +145,19 @@ app.register(wasteCategoriesRoutes, { prefix: "/v1" });
 if (env.STORAGE_PROVIDER === "minio") {
 	app.register(storageRoutes);
 }
+
+if (process.env.REDIS_URL) {
+	const { createBullBoard } = await import("@bull-board/api");
+	const { BullMQAdapter } = await import("@bull-board/api/bullMQAdapter");
+	const { FastifyAdapter } = await import("@bull-board/fastify");
+	const { complaintsQuorumQueue } = await import("@/lib/queue/queues.js");
+
+	const serverAdapter = new FastifyAdapter();
+	createBullBoard({
+		queues: [new BullMQAdapter(complaintsQuorumQueue)],
+		serverAdapter,
+	});
+
+	serverAdapter.setBasePath("/bullboard");
+	app.register(serverAdapter.registerPlugin(), { prefix: "/bullboard" });
+}

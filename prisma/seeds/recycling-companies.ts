@@ -45,13 +45,76 @@ interface CompanySeed {
 	started_activity_in: string;
 	address: Address;
 	business_hours: BusinessHour[];
-	wastes: unknown[];
 }
 
 interface SeedFile {
 	_meta: { total: number; generated_at: string };
 	companies: CompanySeed[];
 }
+
+// ─── resíduos e serviços padrão para empresas de reciclagem ──────────────────
+
+const DEFAULT_WASTES = [
+	{
+		name: "Papel e Papelão",
+		description: "Jornais, revistas, caixas, embalagens de papel",
+		price: 0.5,
+		unit: "KG",
+		waste_category_name: "Papel / Papelão",
+		quantity: 500,
+	},
+	{
+		name: "Plástico",
+		description: "PET, PEAD, PVC e demais plásticos recicláveis",
+		price: 0.8,
+		unit: "KG",
+		waste_category_name: "Plástico",
+		quantity: 300,
+	},
+	{
+		name: "Metal e Alumínio",
+		description: "Latas de alumínio, ferro, aço e sucata metálica",
+		price: 2.5,
+		unit: "KG",
+		waste_category_name: "Metal / Alumínio",
+		quantity: 200,
+	},
+	{
+		name: "Vidro",
+		description: "Garrafas, potes e cacos de vidro",
+		price: 0.2,
+		unit: "KG",
+		waste_category_name: "Vidro",
+		quantity: 300,
+	},
+] as const;
+
+const DEFAULT_SERVICES = [
+	{
+		name: "Coleta de Papel e Papelão",
+		description: "Serviço de coleta e transporte de resíduos de papel",
+		price: 80.0,
+		unit: "UNIT",
+		waste_category_name: "Papel / Papelão",
+		quantity: 1,
+	},
+	{
+		name: "Coleta de Plástico",
+		description: "Serviço de coleta e transporte de resíduos plásticos",
+		price: 100.0,
+		unit: "UNIT",
+		waste_category_name: "Plástico",
+		quantity: 1,
+	},
+	{
+		name: "Coleta de Metal",
+		description: "Coleta de sucata metálica e alumínio",
+		price: 150.0,
+		unit: "UNIT",
+		waste_category_name: "Metal / Alumínio",
+		quantity: 1,
+	},
+] as const;
 
 // ─── seed ─────────────────────────────────────────────────────────────────────
 
@@ -72,6 +135,12 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 	);
 
 	const passwordHash = await bcrypt.hash("Seed@123456", 10);
+
+	// Carrega categorias de resíduos para resolver nomes em IDs
+	const wasteCategories = await prisma.wasteCategory.findMany({
+		select: { id: true, name: true },
+	});
+	const categoryByName = new Map(wasteCategories.map((c) => [c.name, c.id]));
 
 	for (let i = 0; i < companies.length; i++) {
 		const data = companies[i];
@@ -133,6 +202,14 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 					},
 				});
 
+				if (data.address.latitude != null && data.address.longitude != null) {
+					await tx.$executeRaw`
+						UPDATE "addresses"
+						SET "location" = ST_SetSRID(ST_Point(${data.address.longitude}, ${data.address.latitude}), 4326)
+						WHERE "id" = ${address.id}
+					`;
+				}
+
 				const company = await tx.company.create({
 					data: {
 						corporate_name: data.corporate_name,
@@ -148,6 +225,7 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 						email: data.email,
 						phones: data.phones,
 						started_activity_in: new Date(data.started_activity_in),
+						is_company_valid: true,
 						user_id: user.id,
 						address_id: address.id,
 					},
@@ -169,8 +247,48 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 					});
 				}
 
-				// Company wastes are not seeded from JSON — waste_type/sub_items removed.
-				// Use the app or a dedicated waste seed to associate company wastes.
+				for (const w of DEFAULT_WASTES) {
+					const categoryId = categoryByName.get(w.waste_category_name);
+					if (!categoryId) continue;
+					await tx.companyWaste.create({
+						data: {
+							company_id: company.id,
+							name: w.name,
+							description: w.description,
+							price: w.price,
+							unit: w.unit,
+							waste_category_id: categoryId,
+							quantity: w.quantity,
+						},
+					});
+				}
+
+				for (const s of DEFAULT_SERVICES) {
+					const categoryId = categoryByName.get(s.waste_category_name);
+					if (!categoryId) continue;
+					await tx.companyService.create({
+						data: {
+							company_id: company.id,
+							name: s.name,
+							description: s.description,
+							price: s.price,
+							unit: s.unit,
+							waste_category_id: categoryId,
+							quantity: s.quantity,
+						},
+					});
+				}
+
+				await tx.companyValidation.create({
+					data: {
+						company_id: company.id,
+						general_registration: true,
+						address: true,
+						business_hours: groupedHours.size > 0,
+						wastes: true,
+						services: true,
+					},
+				});
 			});
 
 			process.stdout.write(" ✓\n");

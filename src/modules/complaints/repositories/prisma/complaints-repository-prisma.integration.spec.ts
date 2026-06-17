@@ -8,6 +8,7 @@ import { PrismaComplaintsRepository } from "./complaints-repository-prisma.js";
 describe("complaints-repository-prisma", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
+	const createdWasteCategoryIds: string[] = [];
 
 	async function insertUser(): Promise<string> {
 		const userId = randomUUID();
@@ -48,12 +49,42 @@ describe("complaints-repository-prisma", () => {
 		return id;
 	}
 
+	async function createWasteCategory(hazardLevels: string[]): Promise<string> {
+		const id = randomUUID();
+		const category = await prisma.wasteCategory.create({
+			data: {
+				id,
+				name: `category-${id}`,
+				hazard_levels: hazardLevels as never[],
+			},
+		});
+		createdWasteCategoryIds.push(category.id);
+		return category.id;
+	}
+
+	async function linkComplaintToWasteCategory(
+		complaintId: string,
+		wasteCategoryId: string,
+	): Promise<void> {
+		await prisma.$executeRawUnsafe(
+			`INSERT INTO complaint_waste_categories (complaint_id, waste_category_id) VALUES ($1, $2)`,
+			complaintId,
+			wasteCategoryId,
+		);
+	}
+
 	afterEach(async () => {
 		if (createdComplaintIds.length > 0) {
 			await prisma.complaint.deleteMany({
 				where: { id: { in: createdComplaintIds } },
 			});
 			createdComplaintIds.length = 0;
+		}
+		if (createdWasteCategoryIds.length > 0) {
+			await prisma.wasteCategory.deleteMany({
+				where: { id: { in: createdWasteCategoryIds } },
+			});
+			createdWasteCategoryIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
 			await prisma.$executeRawUnsafe(
@@ -75,6 +106,9 @@ describe("complaints-repository-prisma", () => {
 			lat: -23.5505,
 			lon: -46.6333,
 			radius: 500,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
 		});
 		const resultIds = result.map((r) => r.id);
 
@@ -83,7 +117,28 @@ describe("complaints-repository-prisma", () => {
 		expect(resultIds).not.toContain(idFar);
 	});
 
-	it("excludes RESOLVED complaints by default", async () => {
+	it("status=ALL returns OPEN and RESOLVED but excludes CANCELED", async () => {
+		const repo = new PrismaComplaintsRepository();
+		const openId = await insertComplaintWithLocation(-23.5505, -46.6333, "OPEN");
+		const resolvedId = await insertComplaintWithLocation(-23.5506, -46.6334, "RESOLVED");
+		const canceledId = await insertComplaintWithLocation(-23.5507, -46.6335, "CANCELED");
+
+		const result = await repo.findMapComplaints({
+			lat: -23.5505,
+			lon: -46.6333,
+			radius: 500,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
+		const resultIds = result.map((r) => r.id);
+
+		expect(resultIds).toContain(openId);
+		expect(resultIds).toContain(resolvedId);
+		expect(resultIds).not.toContain(canceledId);
+	});
+
+	it("status=OPEN returns only OPEN complaints", async () => {
 		const repo = new PrismaComplaintsRepository();
 		await insertComplaintWithLocation(-23.5505, -46.6333, "OPEN");
 		await insertComplaintWithLocation(-23.5506, -46.6334, "RESOLVED");
@@ -92,6 +147,9 @@ describe("complaints-repository-prisma", () => {
 			lat: -23.5505,
 			lon: -46.6333,
 			radius: 500,
+			status: "OPEN",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
 		});
 
 		expect(result.every((c) => c.status === "OPEN")).toBe(true);
@@ -105,9 +163,81 @@ describe("complaints-repository-prisma", () => {
 			lat: -23.5505,
 			lon: -46.6333,
 			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
 		});
 
 		expect(Array.isArray(result)).toBe(true);
 		expect(result.length).toBeLessThanOrEqual(500);
+	});
+
+	it("filters by waste_category_id", async () => {
+		const repo = new PrismaComplaintsRepository();
+		const targetCategoryId = await createWasteCategory(["LOW"]);
+		const otherCategoryId = await createWasteCategory(["HIGH"]);
+		const matchingId = await insertComplaintWithLocation(-23.5505, -46.6333);
+		const otherComplaintId = await insertComplaintWithLocation(-23.5506, -46.6334);
+		await linkComplaintToWasteCategory(matchingId, targetCategoryId);
+		await linkComplaintToWasteCategory(otherComplaintId, otherCategoryId);
+
+		const result = await repo.findMapComplaints({
+			lat: -23.5505,
+			lon: -46.6333,
+			radius: 500,
+			status: "ALL",
+			waste_category_id: targetCategoryId,
+			hazard_level: "ALL",
+		});
+		const resultIds = result.map((r) => r.id);
+
+		expect(resultIds).toContain(matchingId);
+		expect(resultIds).not.toContain(otherComplaintId);
+	});
+
+	it("filters by hazard_level", async () => {
+		const repo = new PrismaComplaintsRepository();
+		const veryHighCategoryId = await createWasteCategory(["VERY_HIGH"]);
+		const lowCategoryId = await createWasteCategory(["LOW"]);
+		const matchingId = await insertComplaintWithLocation(-23.5505, -46.6333);
+		const excludedId = await insertComplaintWithLocation(-23.5506, -46.6334);
+		await linkComplaintToWasteCategory(matchingId, veryHighCategoryId);
+		await linkComplaintToWasteCategory(excludedId, lowCategoryId);
+
+		const result = await repo.findMapComplaints({
+			lat: -23.5505,
+			lon: -46.6333,
+			radius: 500,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "VERY_HIGH",
+		});
+		const resultIds = result.map((r) => r.id);
+
+		expect(resultIds).toContain(matchingId);
+		expect(resultIds).not.toContain(excludedId);
+	});
+
+	it("filters by waste_category_id and hazard_level combined", async () => {
+		const repo = new PrismaComplaintsRepository();
+		const matchingCategoryId = await createWasteCategory(["VERY_HIGH"]);
+		const wrongHazardCategoryId = await createWasteCategory(["LOW"]);
+		const matchingId = await insertComplaintWithLocation(-23.5505, -46.6333);
+		const wrongHazardId = await insertComplaintWithLocation(-23.5506, -46.6334);
+		await linkComplaintToWasteCategory(matchingId, matchingCategoryId);
+		await linkComplaintToWasteCategory(wrongHazardId, wrongHazardCategoryId);
+
+		const result = await repo.findMapComplaints({
+			lat: -23.5505,
+			lon: -46.6333,
+			radius: 500,
+			status: "ALL",
+			waste_category_id: matchingCategoryId,
+			hazard_level: "VERY_HIGH",
+		});
+		const resultIds = result.map((r) => r.id);
+
+		expect(resultIds).toContain(matchingId);
+		expect(resultIds).not.toContain(wrongHazardId);
 	});
 });

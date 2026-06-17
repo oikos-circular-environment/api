@@ -252,25 +252,35 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		query: GetMapComplaintsQuery,
 	): Promise<MapComplaintItem[]> {
 		const { lat, lon, radius, status, waste_category_id, hazard_level } = query;
-		const statusValue = status ?? "OPEN";
 
-		const params: unknown[] = [lon, lat, radius, statusValue];
-		let paramIdx = 5;
+		const params: unknown[] = [lon, lat, radius];
+		let paramIdx = 4;
 		const joins: string[] = [];
 		const conditions: string[] = [];
 
-		if (waste_category_id || hazard_level) {
+		if (status !== "ALL") {
+			conditions.push(`c.status = $${paramIdx++}::"ComplaintStatus"`);
+			params.push(status);
+		} else {
+			conditions.push(`c.status IN ('OPEN', 'RESOLVED')`);
+		}
+
+		const needsCategoryJoin =
+			(waste_category_id && waste_category_id !== "ALL") ||
+			(hazard_level && hazard_level !== "ALL");
+
+		if (needsCategoryJoin) {
 			joins.push(
 				"JOIN complaint_waste_categories cwc ON cwc.complaint_id = c.id",
 			);
 		}
-		if (hazard_level) {
+		if (hazard_level && hazard_level !== "ALL") {
 			joins.push("JOIN waste_categories wc ON wc.id = cwc.waste_category_id");
 			conditions.push(`$${paramIdx++}::"HazardLevel" = ANY(wc.hazard_levels)`);
 			params.push(hazard_level);
 		}
-		if (waste_category_id) {
-			conditions.push(`cwc.waste_category_id = $${paramIdx++}::uuid`);
+		if (waste_category_id && waste_category_id !== "ALL") {
+			conditions.push(`cwc.waste_category_id = $${paramIdx++}`);
 			params.push(waste_category_id);
 		}
 
@@ -282,7 +292,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			`SELECT ${distinct} c.id FROM complaints c
        ${joinClause}
        WHERE ST_DWithin(c.location, ST_MakePoint($1, $2)::geography, $3)
-       AND c.status::text = $4
        ${whereExtra}
        LIMIT 500`,
 			...params,

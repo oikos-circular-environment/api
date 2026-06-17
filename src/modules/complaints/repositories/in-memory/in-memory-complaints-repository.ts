@@ -223,7 +223,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		query: GetMapComplaintsQuery,
 	): Promise<MapComplaintItem[]> {
 		const { lat, lon, radius, status, waste_category_id, hazard_level } = query;
-		const statusValue = status ?? "OPEN";
 
 		const toRad = (deg: number) => (deg * Math.PI) / 180;
 		const haversine = (
@@ -241,8 +240,10 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 		};
 
+		const allowedStatuses = status === "ALL" ? ["OPEN", "RESOLVED"] : [status];
+
 		const filtered = this.complaints
-			.filter((c) => c.status === statusValue)
+			.filter((c) => allowedStatuses.includes(c.status))
 			.filter((c) => {
 				const coords = c.geospatial?.location?.coords;
 				if (!coords) return false;
@@ -250,12 +251,12 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			})
 			.filter(
 				(c) =>
-					!waste_category_id ||
+					waste_category_id === "ALL" ||
 					c.categories.some((cat) => cat.id === waste_category_id),
 			)
 			.filter(
 				(c) =>
-					!hazard_level ||
+					hazard_level === "ALL" ||
 					c.categories.some((cat) => cat.hazard_levels.includes(hazard_level)),
 			);
 

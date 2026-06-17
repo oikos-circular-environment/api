@@ -237,42 +237,63 @@ function defaultWastes() {
 		{
 			name: "Papel e Papelão",
 			description: "Jornais, revistas, caixas, embalagens de papel",
-			price: "0.50",
+			price: 0.5,
 			unit: "KG",
-			waste_type: "RECYCLABLE",
-			quantity: "0.00",
-			observations: null,
-			sub_items: ["jornal", "revista", "papelão", "papel branco"],
+			waste_category_name: "Papel / Papelão",
+			quantity: 500,
 		},
 		{
 			name: "Plástico",
 			description: "PET, PEAD, PVC e demais plásticos recicláveis",
-			price: "0.80",
+			price: 0.8,
 			unit: "KG",
-			waste_type: "RECYCLABLE",
-			quantity: "0.00",
-			observations: null,
-			sub_items: ["PET", "PEAD", "PVC", "PP", "PS"],
+			waste_category_name: "Plástico",
+			quantity: 300,
 		},
 		{
-			name: "Metal",
-			description: "Latas de alumínio, ferro, aço",
-			price: "2.50",
+			name: "Metal e Alumínio",
+			description: "Latas de alumínio, ferro, aço e sucata metálica",
+			price: 2.5,
 			unit: "KG",
-			waste_type: "RECYCLABLE",
-			quantity: "0.00",
-			observations: null,
-			sub_items: ["alumínio", "ferro", "aço", "cobre"],
+			waste_category_name: "Metal / Alumínio",
+			quantity: 200,
 		},
 		{
 			name: "Vidro",
 			description: "Garrafas, potes e cacos de vidro",
-			price: "0.20",
+			price: 0.2,
 			unit: "KG",
-			waste_type: "RECYCLABLE",
-			quantity: "0.00",
-			observations: null,
-			sub_items: ["garrafa", "pote", "vidro temperado"],
+			waste_category_name: "Vidro",
+			quantity: 300,
+		},
+	];
+}
+
+function defaultServices() {
+	return [
+		{
+			name: "Coleta de Papel e Papelão",
+			description: "Serviço de coleta e transporte de resíduos de papel",
+			price: 80.0,
+			unit: "UNIT",
+			waste_category_name: "Papel / Papelão",
+			quantity: 1,
+		},
+		{
+			name: "Coleta de Plástico",
+			description: "Serviço de coleta e transporte de resíduos plásticos",
+			price: 100.0,
+			unit: "UNIT",
+			waste_category_name: "Plástico",
+			quantity: 1,
+		},
+		{
+			name: "Coleta de Metal",
+			description: "Coleta de sucata metálica e alumínio",
+			price: 150.0,
+			unit: "UNIT",
+			waste_category_name: "Metal / Alumínio",
+			quantity: 1,
 		},
 	];
 }
@@ -294,8 +315,6 @@ function mapToSeed(place: GooglePlace, index: number) {
 		identity_type: "CNPJ",
 		company_type: "COMPANY",
 		status: place.businessStatus === "OPERATIONAL",
-		is_headquarters: false,
-		accept_appointments: false,
 		email: null,
 		phones: phone ? [phone] : [],
 		website: place.websiteUri ?? null,
@@ -305,7 +324,7 @@ function mapToSeed(place: GooglePlace, index: number) {
 			place.regularOpeningHours ?? place.currentOpeningHours,
 		),
 		wastes: defaultWastes(),
-		services: [],
+		services: defaultServices(),
 	};
 }
 

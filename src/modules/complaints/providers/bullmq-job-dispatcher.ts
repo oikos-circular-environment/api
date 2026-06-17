@@ -1,6 +1,6 @@
+import { env } from "@/env/index.js";
 import type { JobDispatcher } from "./job-dispatcher.js";
 
-const DELAY_24H = 24 * 60 * 60 * 1000;
 const quorumJobId = (complaintId: string) => `quorum-${complaintId}`;
 
 export class BullMQJobDispatcher implements JobDispatcher {
@@ -15,7 +15,7 @@ export class BullMQJobDispatcher implements JobDispatcher {
 			await complaintsQuorumQueue.add(
 				"resolve-by-quorum",
 				{ complaintId },
-				{ jobId, delay: DELAY_24H },
+				{ jobId, delay: env.QUORUM_JOB_DELAY_MS },
 			);
 		} else {
 			const existing = await complaintsQuorumQueue.getJob(jobId);

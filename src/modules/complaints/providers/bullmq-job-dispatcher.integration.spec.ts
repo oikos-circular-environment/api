@@ -1,11 +1,10 @@
 import "dotenv/config";
 import { randomUUID } from "node:crypto";
 import { afterEach, describe, expect, it } from "vitest";
+import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
 import { complaintsQuorumQueue } from "@/lib/queue/index.js";
 import { BullMQJobDispatcher } from "./bullmq-job-dispatcher.js";
-
-const DELAY_24H = 24 * 60 * 60 * 1000;
 
 describe("bullmq-job-dispatcher", () => {
 	const createdComplaintIds: string[] = [];
@@ -75,7 +74,7 @@ describe("bullmq-job-dispatcher", () => {
 
 		const job = await complaintsQuorumQueue.getJob(`quorum-${complaint.id}`);
 		expect(job).not.toBeNull();
-		expect(job?.opts.delay).toBe(DELAY_24H);
+		expect(job?.opts.delay).toBe(env.QUORUM_JOB_DELAY_MS);
 		expect(job?.data.complaintId).toBe(complaint.id);
 	});
 
@@ -92,7 +91,7 @@ describe("bullmq-job-dispatcher", () => {
 		await complaintsQuorumQueue.add(
 			"resolve-by-quorum",
 			{ complaintId: complaint.id },
-			{ jobId: `quorum-${complaint.id}`, delay: DELAY_24H },
+			{ jobId: `quorum-${complaint.id}`, delay: env.QUORUM_JOB_DELAY_MS },
 		);
 
 		const before = await complaintsQuorumQueue.getJob(`quorum-${complaint.id}`);

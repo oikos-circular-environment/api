@@ -23,7 +23,7 @@ function makeSpGeospatial(overrides?: Partial<Geospatial>): Geospatial {
 }
 
 describe("get-map-complaints-use-case", () => {
-	it("returns OPEN complaints by default when no status filter is provided", async () => {
+	it("returns OPEN and RESOLVED complaints when status is ALL", async () => {
 		const userAId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const sut = new GetMapComplaintsUseCase(complaintsRepository);
@@ -40,15 +40,31 @@ describe("get-map-complaints-use-case", () => {
 			observations: null,
 			geospatial: makeSpGeospatial(),
 		});
+		await complaintsRepository.createForUser(userAId, {
+			date: new Date(),
+			waste_category_ids: [WASTE_CATEGORIES_SEED[0].id],
+			observations: null,
+			geospatial: makeSpGeospatial(),
+		});
 
-		// manually set one to RESOLVED
 		const resolved = complaintsRepository.complaints[1];
 		if (resolved) resolved.status = "RESOLVED";
+		const canceled = complaintsRepository.complaints[2];
+		if (canceled) canceled.status = "CANCELED";
 
-		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
 
-		expect(items.length).toBe(1);
-		expect(items[0]?.status).toBe("OPEN");
+		expect(items.length).toBe(2);
+		const statuses = items.map((i) => i.status);
+		expect(statuses).toContain("OPEN");
+		expect(statuses).toContain("RESOLVED");
 	});
 
 	it("filters by single status", async () => {
@@ -77,6 +93,8 @@ describe("get-map-complaints-use-case", () => {
 			lon: -46.63,
 			radius: 1000,
 			status: "RESOLVED",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
 		});
 
 		expect(items.length).toBe(1);
@@ -95,7 +113,14 @@ describe("get-map-complaints-use-case", () => {
 			geospatial: makeSpGeospatial(),
 		});
 
-		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
 
 		expect(items.length).toBe(1);
 		const item = items[0];
@@ -134,7 +159,14 @@ describe("get-map-complaints-use-case", () => {
 			geospatial: farGeospatial,
 		});
 
-		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
 
 		expect(items).toHaveLength(0);
 	});
@@ -151,7 +183,14 @@ describe("get-map-complaints-use-case", () => {
 			geospatial: makeSpGeospatial(),
 		});
 
-		const items = await sut.execute({ lat: -23.55, lon: -46.63, radius: 1000 });
+		const items = await sut.execute({
+			lat: -23.55,
+			lon: -46.63,
+			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
+			hazard_level: "ALL",
+		});
 
 		expect(items[0]?.location).toEqual({ lat: -23.55, lon: -46.63 });
 	});
@@ -178,7 +217,9 @@ describe("get-map-complaints-use-case", () => {
 			lat: -23.55,
 			lon: -46.63,
 			radius: 1000,
+			status: "ALL",
 			waste_category_id: WASTE_CATEGORIES_SEED[0].id,
+			hazard_level: "ALL",
 		});
 
 		expect(items).toHaveLength(1);
@@ -212,6 +253,8 @@ describe("get-map-complaints-use-case", () => {
 			lat: -23.55,
 			lon: -46.63,
 			radius: 1000,
+			status: "ALL",
+			waste_category_id: "ALL",
 			hazard_level: "HIGH",
 		});
 

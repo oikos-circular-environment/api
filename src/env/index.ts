@@ -22,6 +22,8 @@ const envSchema = z
 		SUPABASE_OIKOS_PROFILES_BUCKET: z.string().optional(),
 
 		REDIS_URL: z.string(),
+
+		QUORUM_JOB_DELAY_MS: z.coerce.number().default(24 * 60 * 60 * 1000),
 	})
 	.superRefine((data, ctx) => {
 		if (data.STORAGE_PROVIDER === "minio") {
