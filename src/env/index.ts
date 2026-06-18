@@ -25,6 +25,9 @@ const envSchema = z
 
 		QUORUM_JOB_DELAY_MS: z.coerce.number().default(24 * 60 * 60 * 1000),
 		WORKER_CONCURRENCY: z.coerce.number().default(5),
+
+		GOOGLE_ACCOUNT_EMAIL: z.string().email().default("google@oikos.company"),
+		GOOGLE_ACCOUNT_PASSWORD: z.string().default("!Google2468*"),
 	})
 	.superRefine((data, ctx) => {
 		if (data.STORAGE_PROVIDER === "minio") {
