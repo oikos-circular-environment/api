@@ -18,6 +18,8 @@
 		"test:coverage": "vitest run --coverage",
 		"test:ui": "vitest --ui",
 		"test:e2e": "vitest run --config vitest.e2e.config.ts",
+		"test:infra:up": "docker compose -p oikos-test -f docker-compose.test.yml up -d --wait",
+		"test:infra:down": "docker compose -p oikos-test -f docker-compose.test.yml down -v",
 		"test:integration": "vitest run --config vitest.integration.config.ts",
 		"migrate:dev": "prisma migrate dev",
 		"migrate:generate": "prisma generate",
