@@ -9,7 +9,9 @@ describe("vote-complaint", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -73,7 +75,9 @@ describe("vote-complaint", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
-			headers: { authorization: `Bearer ${bearerToken(voter.id, voter.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+			},
 			payload: { vote_type: "RESOLVED" },
 		});
 
@@ -119,7 +123,9 @@ describe("vote-complaint", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${randomUUID()}/votes`,
-			headers: { authorization: `Bearer ${bearerToken(voter.id, voter.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+			},
 			payload: { vote_type: "RESOLVED" },
 		});
 
@@ -138,7 +144,9 @@ describe("vote-complaint", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
-			headers: { authorization: `Bearer ${bearerToken(voter.id, voter.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+			},
 			payload: { vote_type: "RESOLVED" },
 		});
 
@@ -158,7 +166,9 @@ describe("vote-complaint", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
-			headers: { authorization: `Bearer ${bearerToken(voter.id, voter.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+			},
 			payload: { vote_type: "NOT_RESOLVED" },
 		});
 
@@ -174,7 +184,9 @@ describe("vote-complaint", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
-			headers: { authorization: `Bearer ${bearerToken(voter.id, voter.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+			},
 			payload: { vote_type: "INVALID_VALUE" },
 		});
 
@@ -203,7 +215,9 @@ describe("vote-complaint", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/complaints/${complaintId}/votes`,
-			headers: { authorization: `Bearer ${bearerToken(owner.id, owner.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(owner.id, owner.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(200);

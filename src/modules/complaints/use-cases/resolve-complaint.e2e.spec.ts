@@ -9,7 +9,9 @@ describe("resolve-complaint", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(

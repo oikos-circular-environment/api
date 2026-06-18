@@ -61,7 +61,10 @@ describe("submit-resolution-use-case", () => {
 				data: { ...resolutionData, description: "Segunda tentativa" },
 			}),
 		).rejects.toThrow(
-			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
+			expect.objectContaining({
+				code: "RESOLUTION_ALREADY_EXISTS",
+				statusCode: 422,
+			}),
 		);
 
 		expect(complaintsRepository.resolutions).toHaveLength(1);
@@ -74,7 +77,10 @@ describe("submit-resolution-use-case", () => {
 		const companyBId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const companyChecker = { userOwnsCompany: async () => true };
-		const sut = new SubmitResolutionUseCase(complaintsRepository, companyChecker);
+		const sut = new SubmitResolutionUseCase(
+			complaintsRepository,
+			companyChecker,
+		);
 
 		const complaint = await complaintsRepository.createForUser(userId, {
 			date: new Date(),
@@ -103,7 +109,10 @@ describe("submit-resolution-use-case", () => {
 		const companyId = randomUUID();
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const companyChecker = { userOwnsCompany: async () => true };
-		const sut = new SubmitResolutionUseCase(complaintsRepository, companyChecker);
+		const sut = new SubmitResolutionUseCase(
+			complaintsRepository,
+			companyChecker,
+		);
 
 		const complaint = await complaintsRepository.createForUser(userId, {
 			date: new Date(),
@@ -125,7 +134,10 @@ describe("submit-resolution-use-case", () => {
 				data: { ...resolutionData, company_id: companyId },
 			}),
 		).rejects.toThrow(
-			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
+			expect.objectContaining({
+				code: "RESOLUTION_ALREADY_EXISTS",
+				statusCode: 422,
+			}),
 		);
 	});
 
@@ -175,9 +187,7 @@ describe("submit-resolution-use-case", () => {
 				complaintId: complaint.id,
 				data: { ...resolutionData, company_id: randomUUID() },
 			}),
-		).rejects.toThrow(
-			expect.objectContaining({ code: "COMPANY_NOT_OWNED" }),
-		);
+		).rejects.toThrow(expect.objectContaining({ code: "COMPANY_NOT_OWNED" }));
 	});
 
 	it("accepts company_id when it belongs to the user", async () => {

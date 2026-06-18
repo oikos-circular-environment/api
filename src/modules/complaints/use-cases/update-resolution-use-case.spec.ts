@@ -63,7 +63,10 @@ describe("update-resolution-use-case", () => {
 				description: "Nova descrição",
 			}),
 		).rejects.toThrow(
-			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND", statusCode: 404 }),
+			expect.objectContaining({
+				code: "RESOLUTION_NOT_FOUND",
+				statusCode: 404,
+			}),
 		);
 	});
 
@@ -80,7 +83,10 @@ describe("update-resolution-use-case", () => {
 				description: "Tentativa indevida",
 			}),
 		).rejects.toThrow(
-			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND", statusCode: 404 }),
+			expect.objectContaining({
+				code: "RESOLUTION_NOT_FOUND",
+				statusCode: 404,
+			}),
 		);
 	});
 
@@ -101,9 +107,14 @@ describe("update-resolution-use-case", () => {
 	});
 
 	it("throws 422 when complaint is RESOLVED", async () => {
-		const { repo, ownerId, resolverId, complaint, resolutionId } = await setup();
+		const { repo, ownerId, resolverId, complaint, resolutionId } =
+			await setup();
 		const sut = new UpdateResolutionUseCase(repo);
-		await repo.updateStatusByUserAndComplaintId(ownerId, complaint.id, "RESOLVED");
+		await repo.updateStatusByUserAndComplaintId(
+			ownerId,
+			complaint.id,
+			"RESOLVED",
+		);
 
 		await expect(
 			sut.execute({
@@ -126,7 +137,10 @@ describe("update-resolution-use-case", () => {
 			complaintId: complaint.id,
 			data: { description: "Resolução do criador" },
 		});
-		const resolution = await repo.findResolutionByUserAndComplaint(ownerId, complaint.id);
+		const resolution = await repo.findResolutionByUserAndComplaint(
+			ownerId,
+			complaint.id,
+		);
 
 		await sut.execute({
 			userId: ownerId,
@@ -140,9 +154,14 @@ describe("update-resolution-use-case", () => {
 	});
 
 	it("throws 422 when complaint is CANCELED", async () => {
-		const { repo, ownerId, resolverId, complaint, resolutionId } = await setup();
+		const { repo, ownerId, resolverId, complaint, resolutionId } =
+			await setup();
 		const sut = new UpdateResolutionUseCase(repo);
-		await repo.updateStatusByUserAndComplaintId(ownerId, complaint.id, "CANCELED");
+		await repo.updateStatusByUserAndComplaintId(
+			ownerId,
+			complaint.id,
+			"CANCELED",
+		);
 
 		await expect(
 			sut.execute({

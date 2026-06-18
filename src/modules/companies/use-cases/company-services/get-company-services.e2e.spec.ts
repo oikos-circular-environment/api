@@ -25,7 +25,11 @@ describe("get-company-services", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -64,7 +68,9 @@ describe("get-company-services", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdWasteCategoryIds.length > 0) {
@@ -84,7 +90,11 @@ describe("get-company-services", () => {
 
 	it("200 — returns { services: [] } when no services set", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "37037037037");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"37037037037",
+		);
 
 		const res = await app.inject({
 			method: "GET",
@@ -98,7 +108,11 @@ describe("get-company-services", () => {
 
 	it("200 — returns services after PUT", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "38038038038");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"38038038038",
+		);
 		const category = await createWasteCategory("Coleta especial");
 
 		await app.inject({
@@ -136,12 +150,18 @@ describe("get-company-services", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "39039039039");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"39039039039",
+		);
 
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/companies/${company.id}/services`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(404);
@@ -149,7 +169,11 @@ describe("get-company-services", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "40040040040");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"40040040040",
+		);
 
 		const res = await app.inject({
 			method: "GET",

@@ -24,7 +24,11 @@ describe("upsert-company-address", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -72,7 +76,9 @@ describe("upsert-company-address", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
@@ -86,7 +92,11 @@ describe("upsert-company-address", () => {
 
 	it("200 — creates address when none exists", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "40404040404");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"40404040404",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
@@ -104,7 +114,11 @@ describe("upsert-company-address", () => {
 
 	it("200 — updates existing address", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "50505050505");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"50505050505",
+		);
 
 		await app.inject({
 			method: "PUT",
@@ -127,7 +141,11 @@ describe("upsert-company-address", () => {
 
 	it("200 — after upsert with lat/lng, GET /validations returns address: true", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "60606060606");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"60606060606",
+		);
 
 		await app.inject({
 			method: "PUT",
@@ -149,12 +167,18 @@ describe("upsert-company-address", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "70707070707");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"70707070707",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/addresses`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 			payload: addressPayload(),
 		});
 
@@ -163,7 +187,11 @@ describe("upsert-company-address", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "80808080808");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"80808080808",
+		);
 
 		const res = await app.inject({
 			method: "PUT",

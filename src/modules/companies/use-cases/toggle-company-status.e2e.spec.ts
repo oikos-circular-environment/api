@@ -24,7 +24,11 @@ describe("toggle-company-status", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -55,7 +59,9 @@ describe("toggle-company-status", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
@@ -69,7 +75,11 @@ describe("toggle-company-status", () => {
 
 	it("200 — deactivates company (status: false)", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "55555555505");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"55555555505",
+		);
 
 		const res = await app.inject({
 			method: "PATCH",
@@ -84,7 +94,11 @@ describe("toggle-company-status", () => {
 
 	it("200 — activates company (status: true)", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "66666666606");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"66666666606",
+		);
 
 		await app.inject({
 			method: "PATCH",
@@ -107,12 +121,18 @@ describe("toggle-company-status", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "77777777707");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"77777777707",
+		);
 
 		const res = await app.inject({
 			method: "PATCH",
 			url: `/v1/companies/${company.id}/status`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 			payload: { status: false },
 		});
 
@@ -121,7 +141,11 @@ describe("toggle-company-status", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "88888888808");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"88888888808",
+		);
 
 		const res = await app.inject({
 			method: "PATCH",

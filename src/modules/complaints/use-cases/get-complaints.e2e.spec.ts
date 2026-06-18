@@ -9,7 +9,9 @@ describe("get-complaints", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -21,7 +23,10 @@ describe("get-complaints", () => {
 		return { id: userId, email: userEmail };
 	}
 
-	async function createComplaint(ownerId: string, status: "OPEN" | "RESOLVED" | "CANCELED" = "OPEN"): Promise<string> {
+	async function createComplaint(
+		ownerId: string,
+		status: "OPEN" | "RESOLVED" | "CANCELED" = "OPEN",
+	): Promise<string> {
 		const c = await prisma.complaint.create({
 			data: {
 				id: randomUUID(),
@@ -76,7 +81,9 @@ describe("get-complaints", () => {
 		expect(res.statusCode).toBe(200);
 		const body = res.json();
 		expect(body.complaints).toBeInstanceOf(Array);
-		expect(body.complaints.some((c: { id: string }) => c.id === complaintId)).toBe(true);
+		expect(
+			body.complaints.some((c: { id: string }) => c.id === complaintId),
+		).toBe(true);
 		expect(body).toHaveProperty("next_cursor");
 	});
 

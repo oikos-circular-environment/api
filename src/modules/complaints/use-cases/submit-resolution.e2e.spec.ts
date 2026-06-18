@@ -9,7 +9,9 @@ describe("submit-resolution", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -71,7 +73,9 @@ describe("submit-resolution", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 			payload: { description: "The problem was fixed by the city hall." },
 		});
 
@@ -120,7 +124,9 @@ describe("submit-resolution", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 			payload: { description: "Should not be allowed." },
 		});
 
@@ -134,7 +140,9 @@ describe("submit-resolution", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: `/v1/complaints/${randomUUID()}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 			payload: { description: "The issue was resolved." },
 		});
 

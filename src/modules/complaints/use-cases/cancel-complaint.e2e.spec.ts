@@ -9,7 +9,9 @@ describe("cancel-complaint", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -87,7 +89,9 @@ describe("cancel-complaint", () => {
 		const res = await app.inject({
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/canceled`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(404);

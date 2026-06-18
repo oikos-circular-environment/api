@@ -72,69 +72,65 @@ describe("resolve-by-quorum-worker", () => {
 		}
 	});
 
-	it(
-		"resolves complaint after job is processed with quorum met",
-		{ timeout: 35_000 },
-		async () => {
-			const ownerId = await createUser();
-			const complaint = await createComplaint(ownerId);
-			const voter1 = await createUser();
-			const voter2 = await createUser();
-			const voter3 = await createUser();
+	it("resolves complaint after job is processed with quorum met", {
+		timeout: 35_000,
+	}, async () => {
+		const ownerId = await createUser();
+		const complaint = await createComplaint(ownerId);
+		const voter1 = await createUser();
+		const voter2 = await createUser();
+		const voter3 = await createUser();
 
-			// positive = 5 (owner=2 + 3×1), negative = 0 → 5 >= 5 ✓
-			await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
-			await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
-			await addVote(complaint.id, voter2, "RESOLVED"); // weight 1
-			await addVote(complaint.id, voter3, "RESOLVED"); // weight 1
+		// positive = 5 (owner=2 + 3×1), negative = 0 → 5 >= 5 ✓
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter2, "RESOLVED"); // weight 1
+		await addVote(complaint.id, voter3, "RESOLVED"); // weight 1
 
-			// Register listener BEFORE adding job to avoid race between add and listener setup
-			const jobDone = new Promise<void>((resolve) => {
-				worker.once("completed", () => resolve());
-				worker.once("failed", () => resolve());
-			});
+		// Register listener BEFORE adding job to avoid race between add and listener setup
+		const jobDone = new Promise<void>((resolve) => {
+			worker.once("completed", () => resolve());
+			worker.once("failed", () => resolve());
+		});
 
-			await complaintsQuorumQueue.add("resolve-by-quorum", {
-				complaintId: complaint.id,
-			});
+		await complaintsQuorumQueue.add("resolve-by-quorum", {
+			complaintId: complaint.id,
+		});
 
-			await jobDone;
+		await jobDone;
 
-			const row = await prisma.complaint.findUnique({
-				where: { id: complaint.id },
-			});
-			expect(row?.status).toBe("RESOLVED");
-		},
-	);
+		const row = await prisma.complaint.findUnique({
+			where: { id: complaint.id },
+		});
+		expect(row?.status).toBe("RESOLVED");
+	});
 
-	it(
-		"leaves complaint OPEN when job is processed but quorum is not met",
-		{ timeout: 35_000 },
-		async () => {
-			const ownerId = await createUser();
-			const complaint = await createComplaint(ownerId);
-			const voter1 = await createUser();
+	it("leaves complaint OPEN when job is processed but quorum is not met", {
+		timeout: 35_000,
+	}, async () => {
+		const ownerId = await createUser();
+		const complaint = await createComplaint(ownerId);
+		const voter1 = await createUser();
 
-			// positive = 3 (owner=2 + 1×1), negative = 0 → 3 < 5 ✗
-			await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
-			await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
+		// positive = 3 (owner=2 + 1×1), negative = 0 → 3 < 5 ✗
+		await addVote(complaint.id, ownerId, "RESOLVED"); // weight 2
+		await addVote(complaint.id, voter1, "RESOLVED"); // weight 1
 
-			// Register listener BEFORE adding job
-			const jobDone = new Promise<void>((resolve) => {
-				worker.once("completed", () => resolve());
-				worker.once("failed", () => resolve());
-			});
+		// Register listener BEFORE adding job
+		const jobDone = new Promise<void>((resolve) => {
+			worker.once("completed", () => resolve());
+			worker.once("failed", () => resolve());
+		});
 
-			await complaintsQuorumQueue.add("resolve-by-quorum", {
-				complaintId: complaint.id,
-			});
+		await complaintsQuorumQueue.add("resolve-by-quorum", {
+			complaintId: complaint.id,
+		});
 
-			await jobDone;
+		await jobDone;
 
-			const row = await prisma.complaint.findUnique({
-				where: { id: complaint.id },
-			});
-			expect(row?.status).toBe("OPEN");
-		},
-	);
+		const row = await prisma.complaint.findUnique({
+			where: { id: complaint.id },
+		});
+		expect(row?.status).toBe("OPEN");
+	});
 });

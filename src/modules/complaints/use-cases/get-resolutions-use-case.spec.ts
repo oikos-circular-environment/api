@@ -21,7 +21,10 @@ describe("get-resolutions-use-case", () => {
 		});
 		const sut = new GetResolutionsUseCase(repo);
 
-		const result = await sut.execute({ complaintId: complaint.id, userId: userAId });
+		const result = await sut.execute({
+			complaintId: complaint.id,
+			userId: userAId,
+		});
 
 		expect(result).toHaveLength(0);
 	});
@@ -52,7 +55,10 @@ describe("get-resolutions-use-case", () => {
 		});
 		const sut = new GetResolutionsUseCase(repo);
 
-		const result = await sut.execute({ complaintId: complaint.id, userId: userAId });
+		const result = await sut.execute({
+			complaintId: complaint.id,
+			userId: userAId,
+		});
 
 		expect(result).toHaveLength(2);
 		expect(result.map((r) => r.description)).toEqual(
@@ -94,7 +100,10 @@ describe("get-resolutions-use-case", () => {
 		});
 		const sut = new GetResolutionsUseCase(repo);
 
-		const result = await sut.execute({ complaintId: complaint.id, userId: userAId });
+		const result = await sut.execute({
+			complaintId: complaint.id,
+			userId: userAId,
+		});
 
 		expect(result[0]?.attachments).toHaveLength(1);
 		expect(result[0]?.attachments[0]?.url).toBe("https://example.com/img.jpg");
