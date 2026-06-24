@@ -24,7 +24,11 @@ describe("upsert-company-business-hours", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -55,7 +59,9 @@ describe("upsert-company-business-hours", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
@@ -69,7 +75,11 @@ describe("upsert-company-business-hours", () => {
 
 	it("200 — partial upsert returns 7 normalized days (SUNDAY to SATURDAY)", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "11011011011");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"11011011011",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
@@ -89,7 +99,9 @@ describe("upsert-company-business-hours", () => {
 		expect(res.statusCode).toBe(200);
 		const body = res.json();
 		expect(body.business_hours).toHaveLength(7);
-		const days = body.business_hours.map((h: { day_of_week: string }) => h.day_of_week);
+		const days = body.business_hours.map(
+			(h: { day_of_week: string }) => h.day_of_week,
+		);
 		expect(days[0]).toBe("SUNDAY");
 		expect(days[6]).toBe("SATURDAY");
 		const monday = body.business_hours.find(
@@ -101,7 +113,11 @@ describe("upsert-company-business-hours", () => {
 
 	it("200 — second call preserves days not in payload", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "12012012012");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"12012012012",
+		);
 
 		await app.inject({
 			method: "PUT",
@@ -147,7 +163,11 @@ describe("upsert-company-business-hours", () => {
 
 	it("400 — duplicate day_of_week in payload", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "13013013013");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"13013013013",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
@@ -174,7 +194,11 @@ describe("upsert-company-business-hours", () => {
 
 	it("400 — is_open: true with empty time_slots", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "14014014014");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"14014014014",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
@@ -196,7 +220,11 @@ describe("upsert-company-business-hours", () => {
 
 	it("400 — start_time >= end_time", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "15015015015");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"15015015015",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
@@ -219,12 +247,18 @@ describe("upsert-company-business-hours", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "16016016016");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"16016016016",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 			payload: {
 				business_hours: [
 					{
@@ -241,7 +275,11 @@ describe("upsert-company-business-hours", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "17017017017");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"17017017017",
+		);
 
 		const res = await app.inject({
 			method: "PUT",

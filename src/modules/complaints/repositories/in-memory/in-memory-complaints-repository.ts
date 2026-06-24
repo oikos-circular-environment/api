@@ -463,7 +463,11 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 
 	async findResolutionById(
 		resolutionId: string,
-	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null> {
+	): Promise<{
+		id: string;
+		complaint_id: string;
+		resolver_user_id: string;
+	} | null> {
 		const resolution = this.resolutions.find((r) => r.id === resolutionId);
 		if (!resolution) return null;
 		return {

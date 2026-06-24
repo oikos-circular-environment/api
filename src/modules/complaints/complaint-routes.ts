@@ -76,7 +76,9 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		complaintsRepository,
 		companyChecker,
 	);
-	const updateResolutionUseCase = new UpdateResolutionUseCase(complaintsRepository);
+	const updateResolutionUseCase = new UpdateResolutionUseCase(
+		complaintsRepository,
+	);
 	const getResolutionsUseCase = new GetResolutionsUseCase(complaintsRepository);
 	const deleteResolutionUseCase = new DeleteResolutionUseCase(
 		complaintsRepository,

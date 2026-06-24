@@ -9,7 +9,9 @@ describe("delete-resolution", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -41,7 +43,11 @@ describe("delete-resolution", () => {
 		description = "Resolution description",
 	): Promise<string> {
 		const resolution = await prisma.complaintResolution.create({
-			data: { complaint_id: complaintId, resolver_user_id: resolverId, description },
+			data: {
+				complaint_id: complaintId,
+				resolver_user_id: resolverId,
+				description,
+			},
 		});
 		return resolution.id;
 	}
@@ -82,7 +88,9 @@ describe("delete-resolution", () => {
 		const res = await app.inject({
 			method: "DELETE",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(204);
@@ -102,7 +110,9 @@ describe("delete-resolution", () => {
 		const res = await app.inject({
 			method: "DELETE",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(owner.id, owner.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(owner.id, owner.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(404);
@@ -121,7 +131,9 @@ describe("delete-resolution", () => {
 		const res = await app.inject({
 			method: "DELETE",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(422);

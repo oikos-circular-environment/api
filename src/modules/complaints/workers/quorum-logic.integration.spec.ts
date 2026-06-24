@@ -207,7 +207,9 @@ describe("check-quorum-met", () => {
 		const met = await checkQuorumMet(complaint.id);
 
 		expect(met).toBe(true);
-		const inDb = await prisma.complaint.findUnique({ where: { id: complaint.id } });
+		const inDb = await prisma.complaint.findUnique({
+			where: { id: complaint.id },
+		});
 		expect(inDb?.status).toBe("OPEN"); // status was not changed
 	});
 

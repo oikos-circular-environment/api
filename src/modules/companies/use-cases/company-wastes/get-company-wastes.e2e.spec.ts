@@ -25,7 +25,11 @@ describe("get-company-wastes", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -64,7 +68,9 @@ describe("get-company-wastes", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdWasteCategoryIds.length > 0) {
@@ -84,7 +90,11 @@ describe("get-company-wastes", () => {
 
 	it("200 — returns { wastes: [] } when no wastes set", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "27027027027");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"27027027027",
+		);
 
 		const res = await app.inject({
 			method: "GET",
@@ -98,7 +108,11 @@ describe("get-company-wastes", () => {
 
 	it("200 — returns wastes with waste_category embedded after PUT", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "28028028028");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"28028028028",
+		);
 		const category = await createWasteCategory("Papel reciclável");
 
 		await app.inject({
@@ -136,12 +150,18 @@ describe("get-company-wastes", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "29029029029");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"29029029029",
+		);
 
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/companies/${company.id}/wastes`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(404);
@@ -149,7 +169,11 @@ describe("get-company-wastes", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "30030030030");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"30030030030",
+		);
 
 		const res = await app.inject({
 			method: "GET",

@@ -1,3 +1,4 @@
+import fastifyBasicAuth from "@fastify/basic-auth";
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
 import fastifyJwt from "@fastify/jwt";
@@ -96,6 +97,30 @@ app.register(fastifyRateLimit, {
 	keyGenerator: (request: FastifyRequest) => {
 		return request.ip;
 	},
+});
+
+app.register(fastifyBasicAuth, {
+	validate(username, password, _req, _reply, done) {
+		if (username === env.ADMIN_USERNAME && password === env.ADMIN_PASSWORD) {
+			done();
+		} else {
+			done(new Error("Unauthorized"));
+		}
+	},
+	authenticate: { realm: "oikos-admin" },
+});
+
+app.after(() => {
+	app.addHook("onRequest", (request, reply, done) => {
+		if (
+			request.url.startsWith("/docs") ||
+			request.url.startsWith("/bullboard")
+		) {
+			app.basicAuth(request, reply, done);
+		} else {
+			done();
+		}
+	});
 });
 
 app.register(ScalarApiReference, {

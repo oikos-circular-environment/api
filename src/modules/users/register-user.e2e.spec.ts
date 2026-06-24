@@ -17,7 +17,10 @@ describe("register-user", () => {
 	afterEach(async () => {
 		if (createdEmails.length > 0) {
 			for (const email of createdEmails) {
-				await prisma.$executeRawUnsafe(`DELETE FROM users WHERE email = $1`, email);
+				await prisma.$executeRawUnsafe(
+					`DELETE FROM users WHERE email = $1`,
+					email,
+				);
 			}
 			createdEmails.length = 0;
 		}

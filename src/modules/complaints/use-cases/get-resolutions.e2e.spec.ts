@@ -9,7 +9,9 @@ describe("get-resolutions", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -51,7 +53,11 @@ describe("get-resolutions", () => {
 		description = "Resolution description",
 	): Promise<string> {
 		const resolution = await prisma.complaintResolution.create({
-			data: { complaint_id: complaintId, resolver_user_id: resolverId, description },
+			data: {
+				complaint_id: complaintId,
+				resolver_user_id: resolverId,
+				description,
+			},
 		});
 		return resolution.id;
 	}
@@ -91,7 +97,9 @@ describe("get-resolutions", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(owner.id, owner.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(owner.id, owner.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(200);
@@ -107,7 +115,9 @@ describe("get-resolutions", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/complaints/${complaintId}/resolutions`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(200);

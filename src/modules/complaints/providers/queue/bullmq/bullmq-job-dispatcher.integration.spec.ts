@@ -23,7 +23,13 @@ describe("bullmq-job-dispatcher", () => {
 
 	async function createComplaint(ownerId: string, id = randomUUID()) {
 		const c = await prisma.complaint.create({
-			data: { id, user_id: ownerId, status: "OPEN", date: new Date(), geospatial: {} },
+			data: {
+				id,
+				user_id: ownerId,
+				status: "OPEN",
+				date: new Date(),
+				geospatial: {},
+			},
 		});
 		createdComplaintIds.push(c.id);
 		return c;
