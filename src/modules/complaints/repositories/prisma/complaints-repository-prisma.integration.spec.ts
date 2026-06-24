@@ -119,9 +119,21 @@ describe("complaints-repository-prisma", () => {
 
 	it("status=ALL returns OPEN and RESOLVED but excludes CANCELED", async () => {
 		const repo = new PrismaComplaintsRepository();
-		const openId = await insertComplaintWithLocation(-23.5505, -46.6333, "OPEN");
-		const resolvedId = await insertComplaintWithLocation(-23.5506, -46.6334, "RESOLVED");
-		const canceledId = await insertComplaintWithLocation(-23.5507, -46.6335, "CANCELED");
+		const openId = await insertComplaintWithLocation(
+			-23.5505,
+			-46.6333,
+			"OPEN",
+		);
+		const resolvedId = await insertComplaintWithLocation(
+			-23.5506,
+			-46.6334,
+			"RESOLVED",
+		);
+		const canceledId = await insertComplaintWithLocation(
+			-23.5507,
+			-46.6335,
+			"CANCELED",
+		);
 
 		const result = await repo.findMapComplaints({
 			lat: -23.5505,
@@ -177,7 +189,10 @@ describe("complaints-repository-prisma", () => {
 		const targetCategoryId = await createWasteCategory(["LOW"]);
 		const otherCategoryId = await createWasteCategory(["HIGH"]);
 		const matchingId = await insertComplaintWithLocation(-23.5505, -46.6333);
-		const otherComplaintId = await insertComplaintWithLocation(-23.5506, -46.6334);
+		const otherComplaintId = await insertComplaintWithLocation(
+			-23.5506,
+			-46.6334,
+		);
 		await linkComplaintToWasteCategory(matchingId, targetCategoryId);
 		await linkComplaintToWasteCategory(otherComplaintId, otherCategoryId);
 

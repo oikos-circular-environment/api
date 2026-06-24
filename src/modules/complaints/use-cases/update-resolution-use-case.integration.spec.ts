@@ -108,7 +108,10 @@ describe("update-resolution-use-case", () => {
 				description: "Tentativa indevida",
 			}),
 		).rejects.toThrow(
-			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND", statusCode: 404 }),
+			expect.objectContaining({
+				code: "RESOLUTION_NOT_FOUND",
+				statusCode: 404,
+			}),
 		);
 
 		const inDb = await prisma.complaintResolution.findUnique({

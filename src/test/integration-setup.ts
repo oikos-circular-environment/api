@@ -20,7 +20,10 @@ let testSchema: string;
 export async function setup() {
 	try {
 		const baseDbUrl = process.env.DATABASE_URL;
-		if (!baseDbUrl) throw new Error("DATABASE_URL is not set. Create .env.test or set the variable.");
+		if (!baseDbUrl)
+			throw new Error(
+				"DATABASE_URL is not set. Create .env.test or set the variable.",
+			);
 
 		testSchema = `test_${randomUUID().replace(/-/g, "").substring(0, 16)}`;
 

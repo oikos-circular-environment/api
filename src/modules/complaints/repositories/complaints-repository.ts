@@ -69,7 +69,10 @@ export interface ComplaintsRepository {
 	removeVoteFromComplaint(userId: string, complaintId: string): Promise<void>;
 
 	// Resolutions
-	findResolutionsByComplaintId(complaintId: string, userId: string): Promise<Resolution[]>;
+	findResolutionsByComplaintId(
+		complaintId: string,
+		userId: string,
+	): Promise<Resolution[]>;
 
 	findResolutionByUserAndComplaint(
 		userId: string,
@@ -84,9 +87,16 @@ export interface ComplaintsRepository {
 
 	findResolutionById(
 		resolutionId: string,
-	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null>;
+	): Promise<{
+		id: string;
+		complaint_id: string;
+		resolver_user_id: string;
+	} | null>;
 
-	updateResolutionById(resolutionId: string, description: string): Promise<void>;
+	updateResolutionById(
+		resolutionId: string,
+		description: string,
+	): Promise<void>;
 
 	submitResolution(
 		userId: string,

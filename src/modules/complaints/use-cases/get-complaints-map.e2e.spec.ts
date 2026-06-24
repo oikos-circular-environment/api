@@ -13,7 +13,9 @@ describe("get-complaints-map", () => {
 	const LAT = -23.5505;
 	const LON = -46.6333;
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -166,7 +168,11 @@ describe("get-complaints-map", () => {
 		const targetCategoryId = await createWasteCategory(["LOW"]);
 		const otherCategoryId = await createWasteCategory(["HIGH"]);
 		const matchingId = await insertComplaintWithLocation(user.id, LAT, LON);
-		const otherComplaintId = await insertComplaintWithLocation(user.id, LAT, LON);
+		const otherComplaintId = await insertComplaintWithLocation(
+			user.id,
+			LAT,
+			LON,
+		);
 		await linkComplaintToWasteCategory(matchingId, targetCategoryId);
 		await linkComplaintToWasteCategory(otherComplaintId, otherCategoryId);
 
@@ -223,8 +229,18 @@ describe("get-complaints-map", () => {
 	it("200 — status=ALL returns both OPEN and RESOLVED complaints", async () => {
 		const user = await createUser();
 		const openId = await insertComplaintWithLocation(user.id, LAT, LON, "OPEN");
-		const resolvedId = await insertComplaintWithLocation(user.id, LAT, LON, "RESOLVED");
-		const canceledId = await insertComplaintWithLocation(user.id, LAT, LON, "CANCELED");
+		const resolvedId = await insertComplaintWithLocation(
+			user.id,
+			LAT,
+			LON,
+			"RESOLVED",
+		);
+		const canceledId = await insertComplaintWithLocation(
+			user.id,
+			LAT,
+			LON,
+			"CANCELED",
+		);
 
 		const res = await app.inject({
 			method: "GET",
@@ -241,7 +257,12 @@ describe("get-complaints-map", () => {
 	it("200 — omitting status defaults to ALL (returns OPEN and RESOLVED)", async () => {
 		const user = await createUser();
 		const openId = await insertComplaintWithLocation(user.id, LAT, LON, "OPEN");
-		const resolvedId = await insertComplaintWithLocation(user.id, LAT, LON, "RESOLVED");
+		const resolvedId = await insertComplaintWithLocation(
+			user.id,
+			LAT,
+			LON,
+			"RESOLVED",
+		);
 
 		const res = await app.inject({
 			method: "GET",
@@ -257,7 +278,12 @@ describe("get-complaints-map", () => {
 	it("200 — status=OPEN returns only OPEN complaints", async () => {
 		const user = await createUser();
 		const openId = await insertComplaintWithLocation(user.id, LAT, LON, "OPEN");
-		const resolvedId = await insertComplaintWithLocation(user.id, LAT, LON, "RESOLVED");
+		const resolvedId = await insertComplaintWithLocation(
+			user.id,
+			LAT,
+			LON,
+			"RESOLVED",
+		);
 
 		const res = await app.inject({
 			method: "GET",

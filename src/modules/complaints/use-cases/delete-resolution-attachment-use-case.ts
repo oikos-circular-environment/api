@@ -26,7 +26,10 @@ export class DeleteResolutionAttachmentUseCase {
 		}
 
 		const resolutions =
-			await this.complaintsRepository.findResolutionsByComplaintId(complaintId, userId);
+			await this.complaintsRepository.findResolutionsByComplaintId(
+				complaintId,
+				userId,
+			);
 		const userResolution = resolutions.find((r) => r.id === resolution.id);
 		const attachment = userResolution?.attachments.find(
 			(a) => a.id === attachmentId,

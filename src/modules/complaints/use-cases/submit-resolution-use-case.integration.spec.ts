@@ -63,7 +63,11 @@ describe("submit-resolution-use-case", () => {
 		const resolverId = await createUser();
 		const complaintId = await createComplaint(ownerId);
 
-		await sut.execute({ userId: resolverId, complaintId, data: resolutionData });
+		await sut.execute({
+			userId: resolverId,
+			complaintId,
+			data: resolutionData,
+		});
 
 		const inDb = await prisma.complaintResolution.findFirst({
 			where: { complaint_id: complaintId, resolver_user_id: resolverId },
@@ -80,12 +84,23 @@ describe("submit-resolution-use-case", () => {
 		const resolverId = await createUser();
 		const complaintId = await createComplaint(ownerId);
 
-		await sut.execute({ userId: resolverId, complaintId, data: resolutionData });
+		await sut.execute({
+			userId: resolverId,
+			complaintId,
+			data: resolutionData,
+		});
 
 		await expect(
-			sut.execute({ userId: resolverId, complaintId, data: { description: "Segunda tentativa" } }),
+			sut.execute({
+				userId: resolverId,
+				complaintId,
+				data: { description: "Segunda tentativa" },
+			}),
 		).rejects.toThrow(
-			expect.objectContaining({ code: "RESOLUTION_ALREADY_EXISTS", statusCode: 422 }),
+			expect.objectContaining({
+				code: "RESOLUTION_ALREADY_EXISTS",
+				statusCode: 422,
+			}),
 		);
 
 		const resolutions = await prisma.complaintResolution.findMany({

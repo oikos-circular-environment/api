@@ -24,7 +24,16 @@ const envSchema = z
 		REDIS_URL: z.string(),
 
 		QUORUM_JOB_DELAY_MS: z.coerce.number().default(24 * 60 * 60 * 1000),
+		ACCOUNT_DELETION_DELAY_MS: z.coerce
+			.number()
+			.default(90 * 24 * 60 * 60 * 1000),
 		WORKER_CONCURRENCY: z.coerce.number().default(5),
+
+		GOOGLE_ACCOUNT_EMAIL: z.email(),
+		GOOGLE_ACCOUNT_PASSWORD: z.string(),
+
+		ADMIN_USERNAME: z.string(),
+		ADMIN_PASSWORD: z.string(),
 	})
 	.superRefine((data, ctx) => {
 		if (data.STORAGE_PROVIDER === "minio") {

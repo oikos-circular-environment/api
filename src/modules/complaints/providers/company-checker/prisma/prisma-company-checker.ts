@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma.js";
-import type { CompanyOwnershipChecker } from "./company-checker.js";
+import type { CompanyOwnershipChecker } from "../company-checker.js";
 
 export class PrismaCompanyOwnershipChecker implements CompanyOwnershipChecker {
 	async userOwnsCompany(userId: string, companyId: string): Promise<boolean> {

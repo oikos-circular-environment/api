@@ -74,7 +74,10 @@ describe("auth-login", () => {
 			const res = await app.inject({
 				method: "POST",
 				url: "/v1/auth/login",
-				payload: { email: "nonexistent@test.local", password: "test-password-123" },
+				payload: {
+					email: "nonexistent@test.local",
+					password: "test-password-123",
+				},
 			});
 
 			expect(res.statusCode).toBe(401);

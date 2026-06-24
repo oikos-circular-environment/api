@@ -718,7 +718,11 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 
 	async findResolutionById(
 		resolutionId: string,
-	): Promise<{ id: string; complaint_id: string; resolver_user_id: string } | null> {
+	): Promise<{
+		id: string;
+		complaint_id: string;
+		resolver_user_id: string;
+	} | null> {
 		const res = await prisma.complaintResolution.findUnique({
 			where: { id: resolutionId },
 			select: { id: true, complaint_id: true, resolver_user_id: true },

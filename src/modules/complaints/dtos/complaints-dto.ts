@@ -171,8 +171,12 @@ export const getMapComplaintsQuerySchema = z.object({
 	lon: z.coerce.number(),
 	radius: z.coerce.number().int().positive().max(50000).default(1000),
 	status: z.enum(["ALL", "OPEN", "RESOLVED"]).default("ALL"),
-	waste_category_id: z.union([z.literal("ALL"), z.string().uuid()]).default("ALL"),
-	hazard_level: z.enum(["ALL", "LOW", "MEDIUM", "HIGH", "VERY_HIGH"]).default("ALL"),
+	waste_category_id: z
+		.union([z.literal("ALL"), z.string().uuid()])
+		.default("ALL"),
+	hazard_level: z
+		.enum(["ALL", "LOW", "MEDIUM", "HIGH", "VERY_HIGH"])
+		.default("ALL"),
 });
 export type GetMapComplaintsQuery = z.infer<typeof getMapComplaintsQuerySchema>;
 

@@ -22,7 +22,10 @@ describe("auth-refresh", () => {
 		return { id, email: mail, password };
 	}
 
-	async function login(email: string, password: string): Promise<{ token: string; refreshToken: string }> {
+	async function login(
+		email: string,
+		password: string,
+	): Promise<{ token: string; refreshToken: string }> {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/auth/login",

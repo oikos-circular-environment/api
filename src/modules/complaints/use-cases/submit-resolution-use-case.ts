@@ -1,7 +1,7 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { SubmitResolution } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
-import type { CompanyOwnershipChecker } from "../providers/company-checker.js";
+import type { CompanyOwnershipChecker } from "../providers/company-checker/company-checker.js";
 
 type Request = {
 	userId: string;

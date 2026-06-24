@@ -25,7 +25,11 @@ describe("upsert-company-services", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -64,7 +68,9 @@ describe("upsert-company-services", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdWasteCategoryIds.length > 0) {
@@ -84,7 +90,11 @@ describe("upsert-company-services", () => {
 
 	it("200 — replaces services and returns list", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "31031031031");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"31031031031",
+		);
 		const category = await createWasteCategory("Coleta de Resíduos");
 
 		const res = await app.inject({
@@ -115,7 +125,11 @@ describe("upsert-company-services", () => {
 
 	it("200 — empties services with empty array", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "32032032032");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"32032032032",
+		);
 		const category = await createWasteCategory("Triagem");
 
 		await app.inject({
@@ -149,7 +163,11 @@ describe("upsert-company-services", () => {
 
 	it("400 — duplicate names in payload (DUPLICATED_ITEM_NAME)", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "33033033033");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"33033033033",
+		);
 		const category = await createWasteCategory("Logística");
 
 		const res = await app.inject({
@@ -184,7 +202,11 @@ describe("upsert-company-services", () => {
 
 	it("422 — non-existent waste_category_id (WASTE_CATEGORY_NOT_FOUND)", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "34034034034");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"34034034034",
+		);
 
 		const res = await app.inject({
 			method: "PUT",
@@ -211,13 +233,19 @@ describe("upsert-company-services", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "35035035035");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"35035035035",
+		);
 		const category = await createWasteCategory("Reciclagem");
 
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/services`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 			payload: {
 				services: [
 					{
@@ -237,7 +265,11 @@ describe("upsert-company-services", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "36036036036");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"36036036036",
+		);
 		const category = await createWasteCategory("Destinação");
 
 		const res = await app.inject({

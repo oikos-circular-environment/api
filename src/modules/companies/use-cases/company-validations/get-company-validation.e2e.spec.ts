@@ -24,7 +24,11 @@ describe("get-company-validation", () => {
 		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
-	async function createCompanyViaHttp(userId: string, email: string, identity: string) {
+	async function createCompanyViaHttp(
+		userId: string,
+		email: string,
+		identity: string,
+	) {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
@@ -55,7 +59,9 @@ describe("get-company-validation", () => {
 
 	afterEach(async () => {
 		if (createdCompanyIds.length > 0) {
-			await prisma.company.deleteMany({ where: { id: { in: createdCompanyIds } } });
+			await prisma.company.deleteMany({
+				where: { id: { in: createdCompanyIds } },
+			});
 			createdCompanyIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
@@ -69,7 +75,11 @@ describe("get-company-validation", () => {
 
 	it("200 — newly created company: general_registration true, others false", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "10101010101");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"10101010101",
+		);
 
 		const res = await app.inject({
 			method: "GET",
@@ -90,12 +100,18 @@ describe("get-company-validation", () => {
 	it("404 — company belongs to another user", async () => {
 		const owner = await createUser();
 		const other = await createUser();
-		const company = await createCompanyViaHttp(owner.id, owner.email, "20202020202");
+		const company = await createCompanyViaHttp(
+			owner.id,
+			owner.email,
+			"20202020202",
+		);
 
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/companies/${company.id}/validations`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(404);
@@ -103,7 +119,11 @@ describe("get-company-validation", () => {
 
 	it("401 — missing authorization token", async () => {
 		const user = await createUser();
-		const company = await createCompanyViaHttp(user.id, user.email, "30303030303");
+		const company = await createCompanyViaHttp(
+			user.id,
+			user.email,
+			"30303030303",
+		);
 
 		const res = await app.inject({
 			method: "GET",

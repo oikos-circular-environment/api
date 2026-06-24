@@ -7,6 +7,9 @@ export class GetResolutionsUseCase {
 	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
 
 	async execute({ complaintId, userId }: Request): Promise<Resolution[]> {
-		return this.complaintsRepository.findResolutionsByComplaintId(complaintId, userId);
+		return this.complaintsRepository.findResolutionsByComplaintId(
+			complaintId,
+			userId,
+		);
 	}
 }

@@ -94,9 +94,7 @@ describe("delete-resolution-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrow(
-			expect.objectContaining({ code: "COMPLAINT_CLOSED" }),
-		);
+		).rejects.toThrow(expect.objectContaining({ code: "COMPLAINT_CLOSED" }));
 	});
 
 	it("throws 422 when complaint is CANCELED", async () => {
@@ -126,9 +124,7 @@ describe("delete-resolution-use-case", () => {
 
 		await expect(
 			sut.execute({ userId: userBId, complaintId: complaint.id }),
-		).rejects.toThrow(
-			expect.objectContaining({ code: "COMPLAINT_CLOSED" }),
-		);
+		).rejects.toThrow(expect.objectContaining({ code: "COMPLAINT_CLOSED" }));
 	});
 
 	it("allows the complaint creator to delete their own resolution", async () => {

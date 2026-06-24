@@ -9,7 +9,9 @@ describe("update-resolution", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
 
-	async function createUser(email?: string): Promise<{ id: string; email: string }> {
+	async function createUser(
+		email?: string,
+	): Promise<{ id: string; email: string }> {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
@@ -41,7 +43,11 @@ describe("update-resolution", () => {
 		description = "Resolution description",
 	): Promise<string> {
 		const resolution = await prisma.complaintResolution.create({
-			data: { complaint_id: complaintId, resolver_user_id: resolverId, description },
+			data: {
+				complaint_id: complaintId,
+				resolver_user_id: resolverId,
+				description,
+			},
 		});
 		return resolution.id;
 	}
@@ -82,7 +88,9 @@ describe("update-resolution", () => {
 		const res = await app.inject({
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 			payload: { description: "Updated description." },
 		});
 
@@ -101,7 +109,9 @@ describe("update-resolution", () => {
 		const res = await app.inject({
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${randomUUID()}`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 			payload: { description: "Should not work." },
 		});
 
@@ -119,7 +129,9 @@ describe("update-resolution", () => {
 		const res = await app.inject({
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
-			headers: { authorization: `Bearer ${bearerToken(other.id, other.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+			},
 			payload: { description: "Should not work." },
 		});
 
@@ -139,7 +151,9 @@ describe("update-resolution", () => {
 		const res = await app.inject({
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
-			headers: { authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}` },
+			headers: {
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+			},
 			payload: { description: "Should not work." },
 		});
 
