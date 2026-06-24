@@ -7,6 +7,11 @@ if (process.env.REDIS_URL) {
 		"./modules/complaints/workers/index.js"
 	);
 	createResolveByQuorumWorker();
+
+	const { createAccountDeletionWorker } = await import(
+		"./modules/users/workers/index.js"
+	);
+	createAccountDeletionWorker();
 }
 
 app
