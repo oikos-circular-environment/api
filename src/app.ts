@@ -175,11 +175,16 @@ if (process.env.REDIS_URL) {
 	const { createBullBoard } = await import("@bull-board/api");
 	const { BullMQAdapter } = await import("@bull-board/api/bullMQAdapter");
 	const { FastifyAdapter } = await import("@bull-board/fastify");
-	const { complaintsQuorumQueue } = await import("@/lib/queue/queues.js");
+	const { complaintsQuorumQueue, accountDeletionQueue } = await import(
+		"@/lib/queue/queues.js"
+	);
 
 	const serverAdapter = new FastifyAdapter();
 	createBullBoard({
-		queues: [new BullMQAdapter(complaintsQuorumQueue)],
+		queues: [
+			new BullMQAdapter(complaintsQuorumQueue),
+			new BullMQAdapter(accountDeletionQueue),
+		],
 		serverAdapter,
 	});
 

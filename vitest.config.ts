@@ -9,7 +9,12 @@ export default defineConfig({
 	},
 	test: {
 		root: "./",
-		include: ["src/modules/**/use-cases/**/*.spec.ts"],
+		include: ["src/**/*.spec.ts"],
+		exclude: [
+			"src/**/*.e2e.spec.ts",
+			"src/**/*.integration.spec.ts",
+			"**/node_modules/**",
+		],
 		coverage: {
 			include: ["src/modules/**/use-cases/**"],
 		},

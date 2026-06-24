@@ -36,4 +36,26 @@ export class PrismaUsersRepository implements UsersRepository {
 
 		return users;
 	}
+
+	async markAsDeleted(userId: string, deletionJobId: string) {
+		const user = await prisma.user.update({
+			where: { id: userId },
+			data: { deleted_at: new Date(), deletion_job_id: deletionJobId },
+		});
+
+		return user;
+	}
+
+	async cancelDeletion(userId: string) {
+		const user = await prisma.user.update({
+			where: { id: userId },
+			data: { deleted_at: null, deletion_job_id: null },
+		});
+
+		return user;
+	}
+
+	async delete(userId: string) {
+		await prisma.user.delete({ where: { id: userId } });
+	}
 }

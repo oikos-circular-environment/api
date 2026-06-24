@@ -12,3 +12,11 @@ export const complaintsQuorumQueue = new Queue("complaints-quorum", {
 		backoff: { type: "exponential", delay: 1000 },
 	},
 });
+
+export const accountDeletionQueue = new Queue("account-deletion", {
+	connection: makeConnectionOptions(),
+	defaultJobOptions: {
+		attempts: 3,
+		backoff: { type: "exponential", delay: 1000 },
+	},
+});

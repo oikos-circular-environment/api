@@ -10,6 +10,8 @@ export function makeUser(overrides?: Partial<User>): User {
 		email: faker.internet.email(),
 		password: TEST_PASSWORD,
 		created_at: new Date(),
+		deleted_at: null,
+		deletion_job_id: null,
 		...overrides,
 	};
 }
