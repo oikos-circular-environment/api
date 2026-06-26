@@ -1,3 +1,4 @@
+import { trace } from "@opentelemetry/api";
 import fastifyBasicAuth from "@fastify/basic-auth";
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
@@ -116,6 +117,15 @@ app.after(() => {
 		}
 	});
 
+	app.addHook("onRequest", (request, _reply, done) => {
+		const span = trace.getActiveSpan();
+		if (span?.isRecording()) {
+			const { traceId, spanId } = span.spanContext();
+			request.log = request.log.child({ traceId, spanId });
+		}
+		done();
+	});
+
 	app.addHook("onResponse", (request, reply, done) => {
 		request.log.info({
 			method: request.method,
@@ -148,7 +158,7 @@ app.register(ScalarApiReference, {
 		},
 		servers: [
 			{
-				url: "https://api.oikos.dev",
+				url: "https://api.oikos.company",
 				description: "Production server",
 			},
 			{

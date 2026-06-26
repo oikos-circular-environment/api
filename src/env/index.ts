@@ -38,6 +38,13 @@ const envSchema = z
 
 		ADMIN_USERNAME: z.string(),
 		ADMIN_PASSWORD: z.string(),
+
+		// OpenTelemetry — quando definido e não vazio, activa o SDK (ver devops/observability/)
+		// String vazia equivale a não definido (permite desabilitar via OTEL_EXPORTER_OTLP_ENDPOINT=)
+		OTEL_EXPORTER_OTLP_ENDPOINT: z.preprocess(
+			(v) => (v === "" ? undefined : v),
+			z.string().url().optional(),
+		),
 	})
 	.superRefine((data, ctx) => {
 		if (data.STORAGE_PROVIDER === "minio") {

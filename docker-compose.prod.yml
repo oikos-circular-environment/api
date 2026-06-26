@@ -146,6 +146,9 @@ services:
         condition: service_healthy
       createbuckets:
         condition: service_completed_successfully
+    networks:
+      - default
+      - oikos_obs
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3333/health"]
       interval: 15s
@@ -158,3 +161,9 @@ volumes:
   postgresql_data:
   redis_data:
   minio_data:
+
+networks:
+  default: {}
+  oikos_obs:
+    external: true
+    name: oikos_obs

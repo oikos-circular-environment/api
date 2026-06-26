@@ -46,4 +46,4 @@ RUN mkdir -p logs
 
 EXPOSE 3333
 
-CMD ["sh", "-c", "node_modules/.bin/prisma migrate deploy && node dist/server.js"]
+CMD ["sh", "-c", "node_modules/.bin/prisma migrate deploy && node --import ./dist/lib/otel.js dist/server.js"]
