@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
-import { env } from "../../src/env/index.js";
-import type { PrismaClient } from "../../src/generated/prisma/client.js";
+import { env } from "@/env/index.js";
+import type { PrismaClient } from "@/generated/prisma/client.js";
 
 export async function seedGoogleAccount(prisma: PrismaClient) {
 	const email = env.GOOGLE_ACCOUNT_EMAIL;

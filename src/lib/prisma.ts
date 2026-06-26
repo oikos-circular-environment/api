@@ -3,6 +3,7 @@ import { PrismaPg } from "@prisma/adapter-pg";
 import pg from "pg";
 import { env } from "@/env/index.js";
 import { PrismaClient } from "@/generated/prisma/client.js";
+import { queryLogger } from "@/lib/logger.js";
 
 const pool = new pg.Pool({
 	connectionString: env.DATABASE_URL,
@@ -22,6 +23,21 @@ const adapter = new PrismaPg(
 	pool,
 	testSchema ? { schema: testSchema } : undefined,
 );
-const prisma = new PrismaClient({ adapter });
+
+const prisma = new PrismaClient({
+	adapter,
+	log: [{ emit: "event", level: "query" }],
+});
+
+if (env.PRISMA_QUERY_LOG && env.NODE_ENV !== "test") {
+	prisma.$on("query", (e) => {
+		queryLogger.info({
+			query: e.query,
+			params: e.params,
+			duration_ms: e.duration,
+			target: e.target,
+		});
+	});
+}
 
 export { prisma };

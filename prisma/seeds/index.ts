@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { env } from "../../src/env/index.js";
-import { PrismaClient } from "../../src/generated/prisma/client.js";
+import { env } from "@/env/index.js";
+import { PrismaClient } from "@/generated/prisma/client.js";
 import { seedGoogleAccount } from "./google-account.seed.js";
 import { seedRecyclingCompanies } from "./recycling-companies.js";
 import { seedUsers } from "./users.seed.js";

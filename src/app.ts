@@ -6,7 +6,7 @@ import fastifyMultipart from "@fastify/multipart";
 import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
 import ScalarApiReference from "@scalar/fastify-api-reference";
-import Fastify, { type FastifyRequest } from "fastify";
+import Fastify, { type FastifyBaseLogger, type FastifyRequest } from "fastify";
 import {
 	jsonSchemaTransform,
 	serializerCompiler,
@@ -14,6 +14,7 @@ import {
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env } from "@/env/index.js";
+import { serverLogger } from "@/lib/logger.js";
 import { authRoutes } from "./modules/auth/auth-routes.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
@@ -24,15 +25,8 @@ import { userRoutes } from "./modules/users/user-routes.js";
 import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
 
 export const app = Fastify({
-	logger: {
-		transport: {
-			target: "pino-pretty",
-			options: {
-				translateTime: "HH:MM:ss Z",
-				ignore: "pid,hostname",
-			},
-		},
-	},
+	loggerInstance: serverLogger as unknown as FastifyBaseLogger,
+	disableRequestLogging: true,
 	routerOptions: {
 		maxParamLength: 5000,
 	},
@@ -121,6 +115,17 @@ app.after(() => {
 			done();
 		}
 	});
+
+	app.addHook("onResponse", (request, reply, done) => {
+		request.log.info({
+			method: request.method,
+			url: request.url,
+			statusCode: reply.statusCode,
+			responseTime: Math.round(reply.elapsedTime),
+			requestId: request.id,
+		});
+		done();
+	});
 });
 
 app.register(ScalarApiReference, {
@@ -158,6 +163,8 @@ app.register(ScalarApiReference, {
 		],
 	},
 });
+
+app.get("/health", () => ({ status: "ok" }));
 
 app.register(authRoutes, { prefix: "/v1" });
 app.register(userRoutes, { prefix: "/v1" });

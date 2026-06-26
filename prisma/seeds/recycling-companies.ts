@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import bcrypt from "bcryptjs";
-import type { PrismaClient } from "../../src/generated/prisma/client.js";
+import type { PrismaClient } from "@/generated/prisma/client.js";
 
 const DATA_PATH = resolve("prisma/seeds/recycling-companies.json");
 
@@ -166,7 +166,6 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 		}
 
 		// Agrupa business_hours por dia para respeitar o unique constraint
-		// (necessário para JSONs gerados antes da correção do script de fetch)
 		const groupedHours = new Map<string, BusinessHour>();
 		for (const bh of data.business_hours) {
 			if (!groupedHours.has(bh.day_of_week)) {
@@ -197,8 +196,8 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 						state: data.address.state,
 						state_ibge_id: data.address.state_ibge_id,
 						state_code: data.address.state_code,
-						latitude: data.address.latitude,
-						longitude: data.address.longitude,
+						latitude: data.address.latitude ?? 0,
+						longitude: data.address.longitude ?? 0,
 					},
 				});
 

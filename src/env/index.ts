@@ -4,6 +4,10 @@ const envSchema = z
 	.object({
 		NODE_ENV: z.enum(["dev", "test", "production"]).default("dev"),
 		PORT: z.coerce.number().default(3333),
+		LOG_LEVEL: z
+			.enum(["trace", "debug", "info", "warn", "error", "fatal"])
+			.default("info"),
+		PRISMA_QUERY_LOG: z.coerce.boolean().default(false),
 		JWT_SECRET: z.string(),
 		DATABASE_URL: z.string(),
 
