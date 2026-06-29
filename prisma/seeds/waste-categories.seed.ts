@@ -1,5 +1,5 @@
-import type { PrismaClient } from "@/generated/prisma/client.js";
-import { CATEGORIES } from "@/modules/wastes/data/waste-categories-base.js";
+import type { PrismaClient } from "../../src/generated/prisma/client.js";
+import { CATEGORIES } from "../../src/modules/wastes/data/waste-categories-base.js";
 
 export async function seedWasteCategories(prisma: PrismaClient): Promise<void> {
 	console.log("Seeding waste categories...");

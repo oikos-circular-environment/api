@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import bcrypt from "bcryptjs";
-import type { PrismaClient } from "@/generated/prisma/client.js";
+import type { PrismaClient } from "../../src/generated/prisma/client.js";
 
 const DATA_PATH = resolve("prisma/seeds/recycling-companies.json");
 

@@ -17,6 +17,8 @@ name: oikos-prod
 services:
   postgresql:
     image: bitnami/postgresql:latest
+    ports:
+      - "5432:5432"
     env_file:
       - .env.prod
     environment:
