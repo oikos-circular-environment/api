@@ -6,7 +6,8 @@ WORKDIR /app
 RUN npm install -g npm@11
 
 COPY package*.json ./
-COPY prisma/ ./prisma/
+COPY prisma/*.prisma ./prisma/
+COPY prisma/migrations ./prisma/migrations
 COPY prisma.config.ts ./
 RUN npm ci --ignore-scripts
 
@@ -29,7 +30,7 @@ RUN npm ci --omit=dev --ignore-scripts
 COPY --from=builder /app/node_modules/prisma ./node_modules/prisma
 COPY --from=builder /app/node_modules/.bin/prisma ./node_modules/.bin/prisma
 
-# Aplicação compilada (inclui dist/seeds/ para execução manual via docker exec)
+# Aplicação compilada
 COPY --from=builder /app/dist ./dist
 
 # Schema, migrations e config do Prisma para migrate deploy em runtime
@@ -37,9 +38,6 @@ COPY --from=builder /app/prisma/schema.prisma ./prisma/schema.prisma
 COPY --from=builder /app/prisma/enums.prisma ./prisma/enums.prisma
 COPY --from=builder /app/prisma/migrations ./prisma/migrations
 COPY prisma.config.ts ./
-
-# JSON de dados para seeds (necessário se rodar: docker exec <container> node dist/seeds/index.js)
-COPY prisma/seeds/recycling-companies.json ./prisma/seeds/recycling-companies.json
 
 # Diretório de logs (montado como volume no compose)
 RUN mkdir -p logs
