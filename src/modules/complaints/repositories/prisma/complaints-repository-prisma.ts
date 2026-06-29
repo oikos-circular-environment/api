@@ -262,7 +262,8 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			conditions.push(`c.status = $${paramIdx++}::"ComplaintStatus"`);
 			params.push(status);
 		} else {
-			conditions.push(`c.status IN ('OPEN', 'RESOLVED')`);
+			conditions.push(`c.status = ANY($${paramIdx++}::text[])`);
+			params.push(["OPEN", "RESOLVED"]);
 		}
 
 		const needsCategoryJoin =

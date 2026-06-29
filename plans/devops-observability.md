@@ -49,9 +49,9 @@ A API não possuía nenhuma stack de observabilidade (sem OTel, sem Prometheus, 
 
 ### Infra Docker
 
-- **`docker-compose.prod.yml`** — API conectada às redes `default` (interna) e `oikos_obs` (OTel)
-- **`docker-compose.obs-override.yml`** — removido; conteúdo absorvido pelo prod
-- **`.env.prod.example`** — `OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol:4318` como padrão
+- **`docker-compose.prod.yml`** — API na rede `default`; promtail opcional via `--profile obs`
+- **`docker/promtail-config.yml`** — config do Promtail com `LOKI_URL` via env var
+- **`.env.prod.example`** — `OTEL_EXPORTER_OTLP_ENDPOINT` e `LOKI_URL` apontam para o servidor de obs
 
 ---
 
@@ -66,24 +66,35 @@ O Promtail depende dos arquivos (`tail`). Sem eles, o Loki fica sem dados. Os ar
 **Rotação de logs com `pino-roll`**
 `server.log` ativo + até 7 arquivos rotacionados (`server.1.log` … `server.7.log`). Rola diariamente ou ao atingir 20 MB. Promtail usa glob `server*.log` para capturar todos. Posições salvas em `/tmp/promtail-positions.yaml` — sem reenvio ou perda durante rotação.
 
-**Rede `oikos_obs` como external network**
-Criada uma vez com `docker network create oikos_obs`. Compartilhada pelo `docker-compose.prod.yml` (API) e `docker-compose.observability.yml` (OTel Collector). Permite hostname resolution `otelcol` dentro da API.
+**Sem rede Docker compartilhada entre API e obs stack**
+A API empurra OTLP diretamente para `OTEL_EXPORTER_OTLP_ENDPOINT` (URL HTTP externa). Em produção, aponta para o IP do servidor de obs. Sem dependência de rede Docker — as stacks são independentes.
 
 ---
 
 ## Startup
 
+### Servidor de API (produção)
 ```bash
-# 1. Env da obs stack
+# Preencher OTEL_EXPORTER_OTLP_ENDPOINT e LOKI_URL com o IP do servidor obs
+docker compose -f docker-compose.prod.yml up -d
+
+# Com coleta de logs (Promtail → Loki remoto):
+docker compose -f docker-compose.prod.yml --profile obs up -d
+```
+
+### Servidor de Observabilidade
+```bash
 cp devops/observability/.env.observability.example devops/observability/.env.observability
+docker compose -f devops/observability/docker-compose.observability.yml up -d
+```
 
-# 2. Rede compartilhada (apenas uma vez)
-docker network create oikos_obs
-
-# 3. Stack de observabilidade
+### Desenvolvimento local (ambas as stacks na mesma máquina)
+```bash
+# Obs stack primeiro
 docker compose -f devops/observability/docker-compose.observability.yml up -d
 
-# 4. API
+# API apontando para localhost
+# .env.prod: OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318
 docker compose -f docker-compose.prod.yml up -d
 ```
 

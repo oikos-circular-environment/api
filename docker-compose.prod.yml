@@ -150,13 +150,27 @@ services:
         condition: service_completed_successfully
     networks:
       - default
-      - oikos_obs
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3333/health"]
       interval: 15s
       timeout: 5s
       retries: 3
       start_period: 30s
+    restart: unless-stopped
+
+  promtail:
+    image: grafana/promtail:3.4.1
+    profiles: ["obs"]
+    volumes:
+      - ./docker/promtail-config.yml:/etc/promtail/config.yml:ro
+      - ./logs:/var/log/oikos:ro
+    command: -config.file=/etc/promtail/config.yml -config.expand-env=true
+    environment:
+      LOKI_URL: ${LOKI_URL}
+    deploy:
+      resources:
+        limits:
+          memory: 64M
     restart: unless-stopped
 
 volumes:
@@ -166,6 +180,3 @@ volumes:
 
 networks:
   default: {}
-  oikos_obs:
-    external: true
-    name: oikos_obs
