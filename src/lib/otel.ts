@@ -1,3 +1,4 @@
+import { FastifyOtelInstrumentation } from "@fastify/otel";
 import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
 import { OTLPMetricExporter } from "@opentelemetry/exporter-metrics-otlp-http";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
@@ -36,6 +37,7 @@ if (endpoint) {
 				"@opentelemetry/instrumentation-fs": { enabled: false },
 				"@opentelemetry/instrumentation-dns": { enabled: false },
 			}),
+			new FastifyOtelInstrumentation({ registerOnInitialization: true }),
 			new PrismaInstrumentation(),
 		],
 	});
