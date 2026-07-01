@@ -47,7 +47,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    restart: unless-stopped
+    restart: "no"
 
   redis:
     image: bitnami/redis:latest
@@ -72,7 +72,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    restart: unless-stopped
+    restart: "no"
 
   minio:
     image: minio/minio:latest
@@ -96,7 +96,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    restart: unless-stopped
+    restart: "no"
 
   createbuckets:
     image: minio/mc:latest
@@ -158,7 +158,7 @@ services:
       timeout: 5s
       retries: 3
       start_period: 30s
-    restart: unless-stopped
+    restart: "no"
 
   promtail:
     image: grafana/promtail:3.4.1
@@ -173,7 +173,7 @@ services:
       resources:
         limits:
           memory: 64M
-    restart: unless-stopped
+    restart: "no"
 
 volumes:
   postgresql_data:
