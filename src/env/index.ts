@@ -36,6 +36,9 @@ const envSchema = z
 		GOOGLE_ACCOUNT_EMAIL: z.email(),
 		GOOGLE_ACCOUNT_PASSWORD: z.string(),
 
+		APPLE_ACCOUNT_EMAIL: z.email(),
+		APPLE_ACCOUNT_PASSWORD: z.string(),
+
 		ADMIN_USERNAME: z.string(),
 		ADMIN_PASSWORD: z.string(),
 
