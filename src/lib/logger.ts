@@ -13,52 +13,56 @@ function otelMixin(): Record<string, string> {
 
 const isTest = env.NODE_ENV === "test";
 const isDev = env.NODE_ENV === "dev";
+const otlpEndpoint = env.OTEL_EXPORTER_OTLP_ENDPOINT;
+
+// Logs saem só por dois canais: console (pino-pretty, só em dev) e OTLP (só quando
+// OTEL_EXPORTER_OTLP_ENDPOINT está definido — mesmo guard do otel.ts). Sem fallback em
+// arquivo — em produção o Alloy sempre está no ar, então o endpoint sempre existe ali.
+function otlpTarget(loggerName: string, level: string): pino.TransportTargetOptions {
+	return {
+		target: "pino-opentelemetry-transport",
+		level,
+		options: {
+			loggerName,
+			serviceVersion: process.env.npm_package_version ?? "1.0.0",
+			resourceAttributes: {
+				"service.name": "oikos-api",
+				"deployment.environment.name": env.NODE_ENV,
+			},
+			logRecordProcessorOptions: {
+				recordProcessorType: "batch",
+				exporterOptions: {
+					protocol: "http/protobuf",
+					protobufExporterOptions: { url: `${otlpEndpoint}/v1/logs` },
+				},
+			},
+		},
+	};
+}
+
+const prettyTarget: pino.TransportTargetOptions = {
+	target: "pino-pretty",
+	options: { translateTime: "HH:MM:ss Z", ignore: "pid,hostname" },
+	level: env.LOG_LEVEL,
+};
+
+const serverTargets: pino.TransportTargetOptions[] = [
+	...(isDev ? [prettyTarget] : []),
+	...(otlpEndpoint ? [otlpTarget("oikos-api", env.LOG_LEVEL)] : []),
+];
 
 export const serverLogger: pino.Logger = isTest
 	? pino({ level: "silent" })
-	: pino(
-			{ level: env.LOG_LEVEL, mixin: otelMixin },
-			pino.transport({
-				targets: [
-					...(isDev
-						? [
-								{
-									target: "pino-pretty",
-									options: {
-										translateTime: "HH:MM:ss Z",
-										ignore: "pid,hostname",
-									},
-									level: env.LOG_LEVEL,
-								},
-							]
-						: []),
-					{
-						target: "pino-roll",
-						options: {
-							file: "logs/server.log",
-							frequency: "daily", // rola diariamente
-							size: "20m", // ou ao atingir 20 MB, o que vier primeiro
-							limit: { count: 7 }, // mantém server.log + server.1.log … server.7.log
-							mkdir: true,
-						},
-						level: env.LOG_LEVEL,
-					},
-				],
-			}),
-		);
+	: serverTargets.length > 0
+		? pino({ level: env.LOG_LEVEL, mixin: otelMixin }, pino.transport({ targets: serverTargets }))
+		: pino({ level: env.LOG_LEVEL, mixin: otelMixin }); // stdout puro — só se nem dev nem OTLP estiverem ativos
+
+const queryTargets: pino.TransportTargetOptions[] = otlpEndpoint
+	? [otlpTarget("oikos-api-queries", "info")]
+	: [];
 
 export const queryLogger: pino.Logger = isTest
 	? pino({ level: "silent" })
-	: pino(
-			{ level: "info", base: null, mixin: otelMixin },
-			pino.transport({
-				target: "pino-roll",
-				options: {
-					file: "logs/queries.log",
-					frequency: "daily",
-					size: "10m",
-					limit: { count: 3 }, // queries crescem menos; 3 dias é suficiente
-					mkdir: true,
-				},
-			}),
-		);
+	: queryTargets.length > 0
+		? pino({ level: "info", base: null, mixin: otelMixin }, pino.transport({ targets: queryTargets }))
+		: pino({ level: "silent" }); // sem OTLP configurado, sem console — mesmo comportamento de antes (nunca ia pro console)
