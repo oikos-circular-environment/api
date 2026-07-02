@@ -124,7 +124,7 @@ CREATE TABLE "addresses" (
     "state_code" TEXT NOT NULL,
     "latitude" DOUBLE PRECISION NOT NULL,
     "longitude" DOUBLE PRECISION NOT NULL,
-    "location" geography(Point, 4326),
+    "location" public.geography(Point, 4326),
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
 
@@ -221,7 +221,7 @@ CREATE TABLE "complaints" (
     "date" TIMESTAMP(3) NOT NULL,
     "observations" TEXT,
     "geospatial" JSONB NOT NULL,
-    "location" geography(Point, 4326),
+    "location" public.geography(Point, 4326),
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "user_id" TEXT NOT NULL,
 
