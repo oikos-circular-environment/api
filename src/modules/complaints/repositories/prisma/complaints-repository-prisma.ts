@@ -262,7 +262,9 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 			conditions.push(`c.status = $${paramIdx++}::"ComplaintStatus"`);
 			params.push(status);
 		} else {
-			conditions.push(`c.status IN ('OPEN', 'RESOLVED')`);
+			conditions.push(
+				`c.status IN ('OPEN'::"ComplaintStatus", 'RESOLVED'::"ComplaintStatus")`,
+			);
 		}
 
 		const needsCategoryJoin =
@@ -303,7 +305,15 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		const complaints = await prisma.complaint.findMany({
 			where: { id: { in: ids } },
 			include: {
-				attachments: true,
+				attachments: {
+					select: {
+						id: true,
+						url: true,
+						file_name: true,
+						type: true,
+						created_at: true,
+					},
+				},
 				votes: { select: { vote_type: true } },
 				_count: { select: { resolutions: true } },
 				waste_categories: {
@@ -334,9 +344,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 					id: a.id,
 					url: a.url,
 					file_name: a.file_name,
-					path: a.path,
-					base64: a.base64,
-					metadata: (a.metadata as Record<string, unknown> | null) ?? null,
 					type: a.type as "PHOTO" | "VIDEO",
 					created_at: a.created_at,
 				})),

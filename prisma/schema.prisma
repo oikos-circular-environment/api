@@ -261,6 +261,7 @@ model Complaint {
   resolutions    ComplaintResolution[]
   waste_categories ComplaintWasteCategory[]
 
+  @@index([user_id, created_at(sort: Desc)])
   @@map("complaints")
 }
 

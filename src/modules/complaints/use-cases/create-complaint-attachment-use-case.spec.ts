@@ -167,7 +167,7 @@ describe("create-complaint-attachment-use-case", () => {
 		}
 	});
 
-	it("throws when attachment exceeds 10MB", async () => {
+	it("throws when attachment exceeds 50MB", async () => {
 		const complaintsRepository = new InMemoryComplaintsRepository();
 		const storageProvider = new InMemoryStorageProvider();
 		const sut = new CreateComplaintAttachmentUseCase(
@@ -194,7 +194,7 @@ describe("create-complaint-attachment-use-case", () => {
 				file: {
 					fileName: "attachment.png",
 					mimeType: "image/png",
-					content: Buffer.alloc(10 * 1024 * 1024 + 1),
+					content: Buffer.alloc(50 * 1024 * 1024 + 1),
 				},
 			});
 		} catch (error) {
@@ -205,7 +205,7 @@ describe("create-complaint-attachment-use-case", () => {
 
 		if (thrownError instanceof AppError) {
 			expect(thrownError.message).toBe(
-				"Complaint attachment exceeds the maximum size of 10MB",
+				"Complaint attachment exceeds the maximum size of 50MB",
 			);
 			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_TOO_LARGE");
 			expect(thrownError.statusCode).toBe(400);

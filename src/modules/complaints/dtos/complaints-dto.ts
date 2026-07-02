@@ -148,6 +148,12 @@ export const publicComplaintSchema = z.object({
 });
 export type PublicComplaint = z.infer<typeof publicComplaintSchema>;
 
+const mapAttachmentSchema = complaintAttachmentSchema.omit({
+	base64: true,
+	path: true,
+	metadata: true,
+});
+
 export const mapComplaintItemSchema = z.object({
 	id: z.string(),
 	status: complaintStatusSchema,
@@ -155,7 +161,7 @@ export const mapComplaintItemSchema = z.object({
 	observations: z.string().nullable(),
 	geospatial: geospatialSchema,
 	location: z.object({ lat: z.number(), lon: z.number() }).nullable(),
-	attachments: z.array(complaintAttachmentSchema),
+	attachments: z.array(mapAttachmentSchema),
 	categories: z.array(complaintCategorySchema),
 	vote_counts: z.object({
 		resolved: z.number().int(),

@@ -15,6 +15,8 @@ function createUser(usersRepository: InMemoryUsersRepository, userId: string) {
 		email: "test@example.com",
 		password: "hashed-password",
 		created_at: new Date(),
+		deleted_at: null,
+		deletion_job_id: null,
 	});
 }
 

@@ -4,6 +4,10 @@ const envSchema = z
 	.object({
 		NODE_ENV: z.enum(["dev", "test", "production"]).default("dev"),
 		PORT: z.coerce.number().default(3333),
+		LOG_LEVEL: z
+			.enum(["trace", "debug", "info", "warn", "error", "fatal"])
+			.default("info"),
+		PRISMA_QUERY_LOG: z.coerce.boolean().default(false),
 		JWT_SECRET: z.string(),
 		DATABASE_URL: z.string(),
 
@@ -29,11 +33,24 @@ const envSchema = z
 			.default(90 * 24 * 60 * 60 * 1000),
 		WORKER_CONCURRENCY: z.coerce.number().default(5),
 
-		GOOGLE_ACCOUNT_EMAIL: z.email(),
-		GOOGLE_ACCOUNT_PASSWORD: z.string(),
+		// So usadas pelos seeds de conta de teste (prisma/seeds/google-account.seed.ts,
+		// apple-account.seed.ts) - opcionais pra API subir sem exigir credenciais de
+		// teste em producao, onde o seed roda manualmente e separado do deploy.
+		GOOGLE_ACCOUNT_EMAIL: z.email().optional(),
+		GOOGLE_ACCOUNT_PASSWORD: z.string().optional(),
+
+		APPLE_ACCOUNT_EMAIL: z.email().optional(),
+		APPLE_ACCOUNT_PASSWORD: z.string().optional(),
 
 		ADMIN_USERNAME: z.string(),
 		ADMIN_PASSWORD: z.string(),
+
+		// OpenTelemetry — quando definido e não vazio, activa o SDK (ver devops/observability/)
+		// String vazia equivale a não definido (permite desabilitar via OTEL_EXPORTER_OTLP_ENDPOINT=)
+		OTEL_EXPORTER_OTLP_ENDPOINT: z.preprocess(
+			(v) => (v === "" ? undefined : v),
+			z.string().url().optional(),
+		),
 	})
 	.superRefine((data, ctx) => {
 		if (data.STORAGE_PROVIDER === "minio") {

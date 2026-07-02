@@ -3,7 +3,7 @@ import type { StorageProvider } from "@/modules/common/providers/storage/storage
 import type { Complaint } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
-const COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
+const COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES = 50 * 1024 * 1024; // 50MB
 
 const COMPLAINT_ATTACHMENT_MIME_TYPES = {
 	"image/jpeg": { ext: "jpeg", type: "PHOTO" as const },
@@ -56,7 +56,7 @@ export class CreateComplaintAttachmentUseCase {
 
 		if (file.content.length > COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES) {
 			throw new AppError(
-				"Complaint attachment exceeds the maximum size of 10MB",
+				"Complaint attachment exceeds the maximum size of 50MB",
 				"COMPLAINT_ATTACHMENT_TOO_LARGE",
 				400,
 			);
