@@ -18,7 +18,10 @@ const otlpEndpoint = env.OTEL_EXPORTER_OTLP_ENDPOINT;
 // Logs saem só por dois canais: console (pino-pretty, só em dev) e OTLP (só quando
 // OTEL_EXPORTER_OTLP_ENDPOINT está definido — mesmo guard do otel.ts). Sem fallback em
 // arquivo — em produção o Alloy sempre está no ar, então o endpoint sempre existe ali.
-function otlpTarget(loggerName: string, level: string): pino.TransportTargetOptions {
+function otlpTarget(
+	loggerName: string,
+	level: string,
+): pino.TransportTargetOptions {
 	return {
 		target: "pino-opentelemetry-transport",
 		level,
@@ -54,7 +57,10 @@ const serverTargets: pino.TransportTargetOptions[] = [
 export const serverLogger: pino.Logger = isTest
 	? pino({ level: "silent" })
 	: serverTargets.length > 0
-		? pino({ level: env.LOG_LEVEL, mixin: otelMixin }, pino.transport({ targets: serverTargets }))
+		? pino(
+				{ level: env.LOG_LEVEL, mixin: otelMixin },
+				pino.transport({ targets: serverTargets }),
+			)
 		: pino({ level: env.LOG_LEVEL, mixin: otelMixin }); // stdout puro — só se nem dev nem OTLP estiverem ativos
 
 const queryTargets: pino.TransportTargetOptions[] = otlpEndpoint
@@ -64,5 +70,8 @@ const queryTargets: pino.TransportTargetOptions[] = otlpEndpoint
 export const queryLogger: pino.Logger = isTest
 	? pino({ level: "silent" })
 	: queryTargets.length > 0
-		? pino({ level: "info", base: null, mixin: otelMixin }, pino.transport({ targets: queryTargets }))
+		? pino(
+				{ level: "info", base: null, mixin: otelMixin },
+				pino.transport({ targets: queryTargets }),
+			)
 		: pino({ level: "silent" }); // sem OTLP configurado, sem console — mesmo comportamento de antes (nunca ia pro console)

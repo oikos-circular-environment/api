@@ -14,7 +14,9 @@ export class RequestAccountDeletionUseCase {
 		private readonly jobDispatcher: AccountDeletionJobDispatcher,
 	) {}
 
-	async execute({ userId }: RequestAccountDeletionUseCaseRequest): Promise<User> {
+	async execute({
+		userId,
+	}: RequestAccountDeletionUseCaseRequest): Promise<User> {
 		const user = await this.usersRepository.findById(userId);
 
 		if (!user) {

@@ -1,9 +1,9 @@
-import { config } from "dotenv";
 import { execSync } from "node:child_process";
 import { randomUUID } from "node:crypto";
 import { unlinkSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { config } from "dotenv";
 import pg from "pg";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));

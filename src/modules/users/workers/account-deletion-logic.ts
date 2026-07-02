@@ -1,9 +1,7 @@
 import { prisma } from "@/lib/prisma.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 
-export async function executeAccountDeletion(
-	userId: string,
-): Promise<boolean> {
+export async function executeAccountDeletion(userId: string): Promise<boolean> {
 	const user = await prisma.user.findUnique({ where: { id: userId } });
 
 	if (!user?.deleted_at) return false;

@@ -85,9 +85,7 @@ export interface ComplaintsRepository {
 		complaintId: string,
 	): Promise<{ id: string } | null>;
 
-	findResolutionById(
-		resolutionId: string,
-	): Promise<{
+	findResolutionById(resolutionId: string): Promise<{
 		id: string;
 		complaint_id: string;
 		resolver_user_id: string;

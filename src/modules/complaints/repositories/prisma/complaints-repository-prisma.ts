@@ -723,9 +723,7 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		return res ?? null;
 	}
 
-	async findResolutionById(
-		resolutionId: string,
-	): Promise<{
+	async findResolutionById(resolutionId: string): Promise<{
 		id: string;
 		complaint_id: string;
 		resolver_user_id: string;

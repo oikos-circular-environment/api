@@ -6,11 +6,11 @@ import type {
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
 import type { CompanyValidationRepository } from "@/modules/companies/repositories/company-validation-repository.js";
 import type { WastesRepository } from "@/modules/companies/repositories/wastes-repository.js";
+import { isWastesValid } from "@/modules/companies/utils/company-validation-utils.js";
 import {
 	validateCategories,
 	validateDuplicatedNames,
 } from "@/modules/companies/utils/validate-items.js";
-import { isWastesValid } from "@/modules/companies/utils/company-validation-utils.js";
 import type { WasteCategoriesRepository } from "@/modules/wastes/repositories/waste-categories-repository.js";
 
 type UpsertCompanyWastesUseCaseRequest = {

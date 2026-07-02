@@ -12,5 +12,5 @@ export const refreshBodySchema = z.object({
 });
 export type RefreshBodyInput = z.infer<typeof refreshBodySchema>;
 
-export { authUserSchema } from "../entities/auth-entity.js";
 export type { AuthUser } from "../entities/auth-entity.js";
+export { authUserSchema } from "../entities/auth-entity.js";

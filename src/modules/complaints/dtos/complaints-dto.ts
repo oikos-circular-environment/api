@@ -1,4 +1,5 @@
 import z from "zod";
+import { hazardLevelSchema } from "@/modules/wastes/entities/waste-entity.js";
 import {
 	complaintAttachmentSchema,
 	complaintCaptureModeSchema,
@@ -9,7 +10,6 @@ import {
 	geospatialSchema,
 	resolutionAttachmentSchema,
 } from "../entities/complaint-entity.js";
-import { hazardLevelSchema } from "@/modules/wastes/entities/waste-entity.js";
 
 export type {
 	Complaint,

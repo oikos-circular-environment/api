@@ -14,5 +14,5 @@ export const userResponseSchema = userSchema.omit({
 	deletion_job_id: true,
 });
 
-export { userSchema } from "../entities/user-entity.js";
 export type { User } from "../entities/user-entity.js";
+export { userSchema } from "../entities/user-entity.js";

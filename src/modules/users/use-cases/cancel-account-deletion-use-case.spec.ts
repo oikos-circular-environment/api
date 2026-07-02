@@ -54,8 +54,8 @@ describe("cancel-account-deletion-use-case", () => {
 		const user = makeUser();
 		usersRepository.items.push(user);
 
-		await expect(
-			sut.execute({ userId: user.id }),
-		).rejects.toBeInstanceOf(AccountNotScheduledForDeletionError);
+		await expect(sut.execute({ userId: user.id })).rejects.toBeInstanceOf(
+			AccountNotScheduledForDeletionError,
+		);
 	});
 });

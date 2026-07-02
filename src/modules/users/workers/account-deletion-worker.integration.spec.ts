@@ -176,103 +176,101 @@ describe("account-deletion-worker", () => {
 		createdUserIds.length = 0;
 	});
 
-	it(
-		"deletes user, cascaded data, orphaned records, and skips when guard fails",
-		{ timeout: 35_000 },
-		async () => {
-			// --- Setup: user with full data tree ---
-			const userId = await createUser({
-				deleted_at: new Date(),
-				deletion_job_id: `account-deletion-${randomUUID()}`,
-			});
+	it("deletes user, cascaded data, orphaned records, and skips when guard fails", {
+		timeout: 35_000,
+	}, async () => {
+		// --- Setup: user with full data tree ---
+		const userId = await createUser({
+			deleted_at: new Date(),
+			deletion_job_id: `account-deletion-${randomUUID()}`,
+		});
 
-			const profile = await createProfile(userId, {
-				withImage: true,
-				withAddress: true,
-			});
-			const company = await createCompany(userId, {
-				withAvatar: true,
-				withAddress: true,
-			});
-			await createComplaintWithAttachment(userId);
+		const profile = await createProfile(userId, {
+			withImage: true,
+			withAddress: true,
+		});
+		const company = await createCompany(userId, {
+			withAvatar: true,
+			withAddress: true,
+		});
+		await createComplaintWithAttachment(userId);
 
-			const profileImageId = profile.profile_image_id as string;
-			const profileAddressId = profile.address_id as string;
-			const companyAvatarId = company.avatar_id as string;
-			const companyAddressId = company.address_id as string;
+		const profileImageId = profile.profile_image_id as string;
+		const profileAddressId = profile.address_id as string;
+		const companyAvatarId = company.avatar_id as string;
+		const companyAddressId = company.address_id as string;
 
-			// --- Also setup: user without deleted_at (should be skipped) ---
-			const activeUserId = await createUser();
+		// --- Also setup: user without deleted_at (should be skipped) ---
+		const activeUserId = await createUser();
 
-			// --- Also setup: non-existent user ID (should be skipped) ---
-			const ghostUserId = randomUUID();
+		// --- Also setup: non-existent user ID (should be skipped) ---
+		const ghostUserId = randomUUID();
 
-			// --- Process all 3 jobs sequentially ---
-			const jobs = [
-				{ userId },
-				{ userId: ghostUserId },
-				{ userId: activeUserId },
-			];
+		// --- Process all 3 jobs sequentially ---
+		const jobs = [
+			{ userId },
+			{ userId: ghostUserId },
+			{ userId: activeUserId },
+		];
 
-			let completedCount = 0;
-			const allDone = new Promise<void>((resolve) => {
-				const handler = () => {
-					completedCount++;
-					if (completedCount >= jobs.length) {
-						worker.off("completed", handler);
-						worker.off("failed", handler);
-						resolve();
-					}
-				};
-				worker.on("completed", handler);
-				worker.on("failed", handler);
-			});
+		let completedCount = 0;
+		const allDone = new Promise<void>((resolve) => {
+			const handler = () => {
+				completedCount++;
+				if (completedCount >= jobs.length) {
+					worker.off("completed", handler);
+					worker.off("failed", handler);
+					resolve();
+				}
+			};
+			worker.on("completed", handler);
+			worker.on("failed", handler);
+		});
 
-			for (const data of jobs) {
-				await accountDeletionQueue.add("delete-account", data);
-			}
+		for (const data of jobs) {
+			await accountDeletionQueue.add("delete-account", data);
+		}
 
-			await allDone;
+		await allDone;
 
-			// --- Assert: deleted user is gone ---
-			const deletedUser = await prisma.user.findUnique({
-				where: { id: userId },
-			});
-			expect(deletedUser).toBeNull();
+		// --- Assert: deleted user is gone ---
+		const deletedUser = await prisma.user.findUnique({
+			where: { id: userId },
+		});
+		expect(deletedUser).toBeNull();
 
-			// --- Assert: orphaned records cleaned up ---
-			expect(
-				await prisma.profileImage.findUnique({
-					where: { id: profileImageId },
-				}),
-			).toBeNull();
+		// --- Assert: orphaned records cleaned up ---
+		expect(
+			await prisma.profileImage.findUnique({
+				where: { id: profileImageId },
+			}),
+		).toBeNull();
 
-			expect(
-				await prisma.companyAvatar.findUnique({
-					where: { id: companyAvatarId },
-				}),
-			).toBeNull();
+		expect(
+			await prisma.companyAvatar.findUnique({
+				where: { id: companyAvatarId },
+			}),
+		).toBeNull();
 
-			expect(
-				await prisma.address.findUnique({
-					where: { id: profileAddressId },
-				}),
-			).toBeNull();
+		expect(
+			await prisma.address.findUnique({
+				where: { id: profileAddressId },
+			}),
+		).toBeNull();
 
-			expect(
-				await prisma.address.findUnique({
-					where: { id: companyAddressId },
-				}),
-			).toBeNull();
+		expect(
+			await prisma.address.findUnique({
+				where: { id: companyAddressId },
+			}),
+		).toBeNull();
 
-			// --- Assert: active user still exists (deleted_at was null) ---
-			const activeUser = await prisma.user.findUnique({
-				where: { id: activeUserId },
-			});
-			expect(activeUser).not.toBeNull();
+		// --- Assert: active user still exists (deleted_at was null) ---
+		const activeUser = await prisma.user.findUnique({
+			where: { id: activeUserId },
+		});
+		expect(activeUser).not.toBeNull();
 
-			// Remove deleted user from tracking
-			createdUserIds.splice(createdUserIds.indexOf(userId), 1);
-		},
-	);
+		// Remove deleted user from tracking
+		createdUserIds.splice(createdUserIds.indexOf(userId), 1);
+	});
 });

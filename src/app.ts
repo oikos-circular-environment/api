@@ -1,4 +1,3 @@
-import { trace } from "@opentelemetry/api";
 import fastifyBasicAuth from "@fastify/basic-auth";
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
@@ -6,6 +5,7 @@ import fastifyJwt from "@fastify/jwt";
 import fastifyMultipart from "@fastify/multipart";
 import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
+import { trace } from "@opentelemetry/api";
 import ScalarApiReference from "@scalar/fastify-api-reference";
 import Fastify, { type FastifyBaseLogger, type FastifyRequest } from "fastify";
 import {

@@ -458,9 +458,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return resolution ? { id: resolution.id } : null;
 	}
 
-	async findResolutionById(
-		resolutionId: string,
-	): Promise<{
+	async findResolutionById(resolutionId: string): Promise<{
 		id: string;
 		complaint_id: string;
 		resolver_user_id: string;
