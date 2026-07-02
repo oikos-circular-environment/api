@@ -33,11 +33,14 @@ const envSchema = z
 			.default(90 * 24 * 60 * 60 * 1000),
 		WORKER_CONCURRENCY: z.coerce.number().default(5),
 
-		GOOGLE_ACCOUNT_EMAIL: z.email(),
-		GOOGLE_ACCOUNT_PASSWORD: z.string(),
+		// So usadas pelos seeds de conta de teste (prisma/seeds/google-account.seed.ts,
+		// apple-account.seed.ts) - opcionais pra API subir sem exigir credenciais de
+		// teste em producao, onde o seed roda manualmente e separado do deploy.
+		GOOGLE_ACCOUNT_EMAIL: z.email().optional(),
+		GOOGLE_ACCOUNT_PASSWORD: z.string().optional(),
 
-		APPLE_ACCOUNT_EMAIL: z.email(),
-		APPLE_ACCOUNT_PASSWORD: z.string(),
+		APPLE_ACCOUNT_EMAIL: z.email().optional(),
+		APPLE_ACCOUNT_PASSWORD: z.string().optional(),
 
 		ADMIN_USERNAME: z.string(),
 		ADMIN_PASSWORD: z.string(),

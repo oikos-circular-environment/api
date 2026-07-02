@@ -6,6 +6,13 @@ export async function seedAppleAccount(prisma: PrismaClient) {
 	const email = env.APPLE_ACCOUNT_EMAIL;
 	const password = env.APPLE_ACCOUNT_PASSWORD;
 
+	if (!email || !password) {
+		console.log(
+			"Skipping Apple validation account seed (APPLE_ACCOUNT_EMAIL/PASSWORD not set)",
+		);
+		return;
+	}
+
 	console.log("Seeding Apple validation account...");
 
 	const existing = await prisma.user.findUnique({ where: { email } });

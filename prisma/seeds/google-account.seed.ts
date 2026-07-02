@@ -6,6 +6,13 @@ export async function seedGoogleAccount(prisma: PrismaClient) {
 	const email = env.GOOGLE_ACCOUNT_EMAIL;
 	const password = env.GOOGLE_ACCOUNT_PASSWORD;
 
+	if (!email || !password) {
+		console.log(
+			"Skipping Google validation account seed (GOOGLE_ACCOUNT_EMAIL/PASSWORD not set)",
+		);
+		return;
+	}
+
 	console.log("Seeding Google validation account...");
 
 	const existing = await prisma.user.findUnique({ where: { email } });
