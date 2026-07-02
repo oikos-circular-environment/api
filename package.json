@@ -13,6 +13,7 @@
 		"format": "biome format --write --files-ignore-unknown=true .",
 		"lint": "biome lint --write --files-ignore-unknown=true .",
 		"prepare": "lefthook install",
+		"postinstall": "prisma generate",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage",
