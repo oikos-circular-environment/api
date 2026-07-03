@@ -3,6 +3,29 @@ import { prisma } from "@/lib/prisma.js";
 import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 import type { MarketRepository } from "@/modules/market/repositories/market-repository.js";
 
+type CachedWasteCategory = {
+	id: string;
+	name: string;
+	hazard_levels: string[];
+};
+
+let _wcCache: CachedWasteCategory[] | null = null;
+let _wcCacheAt = 0;
+const CACHE_TTL_MS = 5 * 60 * 1000;
+
+async function getCachedWasteCategories(): Promise<
+	Map<string, CachedWasteCategory>
+> {
+	if (!_wcCache || Date.now() - _wcCacheAt > CACHE_TTL_MS) {
+		_wcCache = await prisma.wasteCategory.findMany({
+			select: { id: true, name: true, hazard_levels: true },
+			orderBy: { name: "asc" },
+		});
+		_wcCacheAt = Date.now();
+	}
+	return new Map(_wcCache.map((wc) => [wc.id, wc]));
+}
+
 type RawCompanyRow = {
 	id: string;
 	business_name: string;
@@ -126,63 +149,63 @@ export class MarketRepositoryPrisma implements MarketRepository {
 
 		const companyIds = rows.map((r) => r.id);
 
-		const wasteInclude = {
-			waste_category: {
-				select: { id: true, name: true, hazard_levels: true },
-			},
-		} as const;
-
-		const [allServices, allWastes, allBusinessHours] = await Promise.all([
-			prisma.companyService.findMany({
-				where: { company_id: { in: companyIds } },
-				include: wasteInclude,
-			}),
-			prisma.companyWaste.findMany({
-				where: { company_id: { in: companyIds } },
-				include: wasteInclude,
-			}),
-			prisma.companyBusinessHour.findMany({
-				where: { company_id: { in: companyIds } },
-				include: { time_slots: true },
-			}),
-		]);
+		const [allServices, allWastes, allBusinessHours, wasteCategoryMap] =
+			await Promise.all([
+				prisma.companyService.findMany({
+					where: { company_id: { in: companyIds } },
+				}),
+				prisma.companyWaste.findMany({
+					where: { company_id: { in: companyIds } },
+				}),
+				prisma.companyBusinessHour.findMany({
+					where: { company_id: { in: companyIds } },
+					include: { time_slots: true },
+				}),
+				getCachedWasteCategories(),
+			]);
 
 		const companies: MarketCompanyRecord[] = rows.map((row) => {
 			const services = allServices
 				.filter((s) => s.company_id === row.id)
-				.map((s) => ({
-					id: s.id,
-					name: s.name,
-					description: s.description,
-					price: Number(s.price),
-					unit: s.unit as MarketCompanyRecord["services"][number]["unit"],
-					waste_category_id: s.waste_category_id,
-					waste_category: {
-						id: s.waste_category.id,
-						name: s.waste_category.name,
-						hazard_levels: s.waste_category
-							.hazard_levels as MarketCompanyRecord["services"][number]["waste_category"]["hazard_levels"],
-					},
-					quantity: Number(s.quantity),
-				}));
+				.map((s) => {
+					const wc = wasteCategoryMap.get(s.waste_category_id);
+					return {
+						id: s.id,
+						name: s.name,
+						description: s.description,
+						price: Number(s.price),
+						unit: s.unit as MarketCompanyRecord["services"][number]["unit"],
+						waste_category_id: s.waste_category_id,
+						waste_category: {
+							id: wc?.id ?? s.waste_category_id,
+							name: wc?.name ?? "",
+							hazard_levels: (wc?.hazard_levels ??
+								[]) as MarketCompanyRecord["services"][number]["waste_category"]["hazard_levels"],
+						},
+						quantity: Number(s.quantity),
+					};
+				});
 
 			const wastes = allWastes
 				.filter((w) => w.company_id === row.id)
-				.map((w) => ({
-					id: w.id,
-					name: w.name,
-					description: w.description,
-					price: Number(w.price),
-					unit: w.unit as MarketCompanyRecord["wastes"][number]["unit"],
-					waste_category_id: w.waste_category_id,
-					waste_category: {
-						id: w.waste_category.id,
-						name: w.waste_category.name,
-						hazard_levels: w.waste_category
-							.hazard_levels as MarketCompanyRecord["wastes"][number]["waste_category"]["hazard_levels"],
-					},
-					quantity: Number(w.quantity),
-				}));
+				.map((w) => {
+					const wc = wasteCategoryMap.get(w.waste_category_id);
+					return {
+						id: w.id,
+						name: w.name,
+						description: w.description,
+						price: Number(w.price),
+						unit: w.unit as MarketCompanyRecord["wastes"][number]["unit"],
+						waste_category_id: w.waste_category_id,
+						waste_category: {
+							id: wc?.id ?? w.waste_category_id,
+							name: wc?.name ?? "",
+							hazard_levels: (wc?.hazard_levels ??
+								[]) as MarketCompanyRecord["wastes"][number]["waste_category"]["hazard_levels"],
+						},
+						quantity: Number(w.quantity),
+					};
+				});
 
 			const businessHours = allBusinessHours
 				.filter((bh) => bh.company_id === row.id)

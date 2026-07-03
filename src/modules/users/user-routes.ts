@@ -45,8 +45,7 @@ export async function userRoutes(app: FastifyInstance) {
 	);
 
 	typedApp.register(async (authenticatedApp) => {
-		const typedAuth =
-			authenticatedApp.withTypeProvider<ZodTypeProvider>();
+		const typedAuth = authenticatedApp.withTypeProvider<ZodTypeProvider>();
 
 		typedAuth.addHook("onRequest", async (request) => {
 			await verifyJwt(request);
@@ -58,8 +57,7 @@ export async function userRoutes(app: FastifyInstance) {
 				schema: withBearerAuth({
 					tags: ["Users"],
 					summary: "Get authenticated user",
-					description:
-						"Returns the authenticated user's account information.",
+					description: "Returns the authenticated user's account information.",
 					response: {
 						200: z.object({ user: userResponseSchema }),
 						401: appErrorSchema,
@@ -127,8 +125,7 @@ export async function userRoutes(app: FastifyInstance) {
 				schema: withBearerAuth({
 					tags: ["Users"],
 					summary: "Cancel account deletion",
-					description:
-						"Cancels a previously scheduled account deletion.",
+					description: "Cancels a previously scheduled account deletion.",
 					response: {
 						200: z.object({
 							message: z.string(),

@@ -282,9 +282,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 						id: a.id,
 						url: a.url,
 						file_name: a.file_name,
-						path: a.path,
-						base64: a.base64,
-						metadata: a.metadata,
 						type: a.type,
 						created_at: a.created_at,
 					})),
@@ -461,9 +458,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return resolution ? { id: resolution.id } : null;
 	}
 
-	async findResolutionById(
-		resolutionId: string,
-	): Promise<{
+	async findResolutionById(resolutionId: string): Promise<{
 		id: string;
 		complaint_id: string;
 		resolver_user_id: string;

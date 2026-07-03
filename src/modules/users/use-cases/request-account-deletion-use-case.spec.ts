@@ -49,8 +49,8 @@ describe("request-account-deletion-use-case", () => {
 		const user = makeUser({ deleted_at: new Date(), deletion_job_id: "job-1" });
 		usersRepository.items.push(user);
 
-		await expect(
-			sut.execute({ userId: user.id }),
-		).rejects.toBeInstanceOf(AccountAlreadyScheduledForDeletionError);
+		await expect(sut.execute({ userId: user.id })).rejects.toBeInstanceOf(
+			AccountAlreadyScheduledForDeletionError,
+		);
 	});
 });

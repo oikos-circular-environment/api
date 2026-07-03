@@ -25,3 +25,13 @@ app
 			`API documentation available at http://localhost:${env.PORT}/docs`,
 		);
 	});
+
+// Graceful shutdown: fecha o Fastify antes de encerrar o processo,
+// dando ao SDK OTel (src/lib/otel.ts) tempo para fazer flush dos spans pendentes.
+const shutdown = async () => {
+	await app.close();
+	process.exit(0);
+};
+
+process.on("SIGTERM", shutdown);
+process.on("SIGINT", shutdown);

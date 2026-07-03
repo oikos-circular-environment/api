@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { getSupabaseConfig } from "@/env/index.js";
 
-const { url, secretKey } = getSupabaseConfig();
-
-export const supabase = createClient(url, secretKey);
+export function makeSupabaseClient() {
+	const { url, secretKey } = getSupabaseConfig();
+	return createClient(url, secretKey);
+}

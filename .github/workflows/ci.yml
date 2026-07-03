@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [development, production]
+  pull_request:
+    branches: [development, production]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Format, lint & unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Format & lint check
+        run: npx biome ci .
+      - name: Unit tests
+        run: npm test
+
+  integration:
+    name: Integration tests
+    runs-on: ubuntu-latest
+    needs: quality
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Start test infra
+        run: npm run test:infra:up
+      - name: Integration tests
+        run: npm run test:integration
+      - name: Stop test infra
+        if: always()
+        run: npm run test:infra:down
+
+  e2e:
+    name: E2E tests
+    runs-on: ubuntu-latest
+    needs: quality
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Start test infra
+        run: npm run test:infra:up
+      - name: E2E tests
+        run: npm run test:e2e
+      - name: Stop test infra
+        if: always()
+        run: npm run test:infra:down
+
+  tag-and-dispatch:
+    name: Tag SemVer & notify devops
+    runs-on: ubuntu-latest
+    needs: [quality, integration, e2e]
+    if: github.ref == 'refs/heads/production' && github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - name: Bump patch version and push tag
+        id: tag
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: patch
+          release_branches: production
+      - name: Notify devops (repository_dispatch)
+        run: |
+          curl -sS -f -X POST \
+            -H "Authorization: Bearer ${{ secrets.DEVOPS_DISPATCH_PAT }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/oikos-circular-environment/devops/dispatches \
+            -d "{\"event_type\":\"api-production\",\"client_payload\":{\"version\":\"${{ steps.tag.outputs.new_tag }}\",\"sha\":\"${{ github.sha }}\"}}"

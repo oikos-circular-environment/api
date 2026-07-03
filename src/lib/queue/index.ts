@@ -1,5 +1,5 @@
 export type {
-	ComplaintsQuorumJobData,
 	AccountDeletionJobData,
+	ComplaintsQuorumJobData,
 } from "./jobs.js";
-export { complaintsQuorumQueue, accountDeletionQueue } from "./queues.js";
+export { accountDeletionQueue, complaintsQuorumQueue } from "./queues.js";
