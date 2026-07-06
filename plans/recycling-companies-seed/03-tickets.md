@@ -21,3 +21,10 @@ Cada ticket é um arquivo próprio em `tickets/`, com checklist de execução. M
 | [T15](tickets/T15-fix-bug-consumidor-seed.md) | Fix do bug no consumidor de seed | ✅ Concluído |
 | [T16](tickets/T16-migracao-dataset-legado.md) | Migração do dataset legado | ✅ Concluído |
 | [T17](tickets/T17-teste-unitario-pipeline-completo.md) | Teste unitário de ponta a ponta (pipeline completo) | ✅ Concluído |
+| [T18](tickets/T18-provider-ibge-estados.md) | Provider IBGE estados (fetchUfs) | ✅ Concluído |
+| [T19](tickets/T19-modulo-prompts-clack.md) | Módulo de prompts interativos (Clack) | ✅ Concluído |
+| [T20](tickets/T20-refatoracao-use-case-fases.md) | Refatorar GenerateCitySeedUseCase em fases granulares | ✅ Concluído |
+| [T21](tickets/T21-cli-hibrido-listr2.md) | CLI reestruturado (flags híbridas + Listr2) | ✅ Concluído |
+| [T22](tickets/T22-documentacao-cli.md) | Documentação da CLI | ✅ Concluído |
+| [T23](tickets/T23-cache-outputdir-rename.md) | Correção do cache + flag de diretório de saída + rename do comando | ✅ Concluído |
+| [T24](tickets/T24-melhorias-consumidor-seed.md) | Melhorias no consumidor de seed (is_company_valid, validação Zod, dry-run) | ✅ Concluído |

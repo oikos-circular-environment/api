@@ -36,7 +36,7 @@
 |---|---|---|---|---|
 | T12 | Use-cases de resolução de cidade e busca de empresas + specs | `ResolveCityUseCase(municipioProvider, geocodingProvider)`; `FetchCityCompaniesUseCase(placesProvider, mapper)` — dedupe por `place.id` | `scripts/recycling-companies/use-cases/resolve-city-use-case.ts` (+spec)<br>`scripts/recycling-companies/use-cases/fetch-city-companies-use-case.ts` (+spec) | ✅ Concluído |
 | T13 | Use-case orquestrador + CLI/entry point (composition root) | `GenerateCitySeedUseCase(resolveCity, fetchCompanies, syntheticGenerator, writer)`; `cli.ts` (`node:util` `parseArgs`: `--city`, `--state`, `--target`, `--force`, repetível) instancia implementações concretas e injeta nos use-cases; `index.ts` entry point | `scripts/recycling-companies/use-cases/generate-city-seed-use-case.ts` (+spec)<br>`scripts/recycling-companies/cli.ts`<br>`scripts/recycling-companies/index.ts` | ✅ Concluído |
-| T14 | Substituição do script antigo + `package.json` | Remove `scripts/fetch-recycling-places.ts`; atualiza `"seed:fetch"` para o novo `index.ts` | `scripts/fetch-recycling-places.ts` (removido)<br>`package.json` | ✅ Concluído |
+| T14 | Substituição do script antigo + `package.json` | Remove `scripts/fetch-recycling-places.ts`; atualiza `"cli"` para o novo `index.ts` | `scripts/fetch-recycling-places.ts` (removido)<br>`package.json` | ✅ Concluído |
 
 ### Lote 5 — Consumidor e migração (depende só de T1 — pode rodar em paralelo aos Lotes 2-4)
 
@@ -50,6 +50,34 @@
 | # | Ticket | Escopo | Status |
 |---|---|---|---|
 | T17 | Teste unitário de ponta a ponta (pipeline completo) | `recycling-seed-pipeline.spec.ts` — compõe `GenerateCitySeedUseCase` com fakes de todos os providers e um `SeedFileWriter` fake (sem rede, sem disco); assert que todo `CompanySeed` gerado (real e sintético) passa nos schemas Zod de `companies-dto.ts`, que `company_type`/`identity_type` variam, e que nenhuma `identity` se repete. Nome sem sufixo `.e2e.` — não é e2e real (sem rede/banco), é um spec comum descoberto pelo `npm run test` normal | ✅ Concluído |
+
+### Lote 7 — CLI interativa com loading states (Clack + Listr2)
+
+Melhoria pós-entrega inicial: seleção dinâmica de cidade/estado (sem erro de digitação) e indicadores de progresso/erro no CLI.
+
+| # | Ticket | Escopo | Arquivos | Status |
+|---|---|---|---|---|
+| T18 | Provider IBGE estados (fetchUfs) | Adiciona `fetchUfs()` à interface `MunicipioProvider` e implementação em `IbgeMunicipioProvider` via `GET /localidades/estados` | `providers/municipio-provider.ts`<br>`providers/ibge-municipio-provider.ts` | ✅ Concluído |
+| T19 | Módulo de prompts interativos (Clack) | `promptState` (`select`), `promptCity` (`autocomplete`), `promptTarget` (`text`), `promptAddAnotherCity` (`confirm`), tratamento de cancelamento centralizado. `promptForce` genérico foi removido em T23, substituído por `promptOverwrite` pontual por cidade | `scripts/recycling-companies/cli/prompts.ts` | ✅ Concluído |
+| T20 | Refatorar `GenerateCitySeedUseCase` em fases granulares | Expõe `resolveCity`/`fetchRealCompanies`/`generateSynthetic`/`writeSeed` como métodos públicos; `execute()` vira atalho de conveniência, comportamento inalterado | `use-cases/generate-city-seed-use-case.ts` (+spec) | ✅ Concluído |
+| T21 | CLI reestruturado (flags híbridas + Listr2) | Cada flag omitida vira prompt (só com TTY); task list Listr2 de 4 etapas por cidade; isolamento de falha por cidade via try/catch no loop externo (não pela opção `exitOnError` do Listr2, que tem semântica diferente da esperada) | `scripts/recycling-companies/cli.ts` | ✅ Concluído |
+| T22 | Documentação da CLI | Comandos, flags, modo interativo, modo híbrido, tratamento de erros | `api/docs/recycling-seed-cli.md` | ✅ Concluído |
+
+### Lote 8 — Correção do cache + output-dir + rename
+
+Melhoria pós-Lote 7: a checagem "já existe" só rodava depois da busca cara no Google Places — corrigido para rodar antes. Adiciona `--output-dir` e renomeia o comando.
+
+| # | Ticket | Escopo | Arquivos | Status |
+|---|---|---|---|---|
+| T23 | Correção do cache + flag de diretório de saída + rename do comando | `SeedFileWriter.exists()` (checagem pura, antes da busca cara); `GenerateCitySeedUseCase.checkExisting()`; nova task Listr2 "Verificando se já existe" logo após "Resolvendo cidade"; `promptOverwrite` por cidade substitui o `promptForce` genérico; `--output-dir` (flag + prompt); `"seed:fetch"` → `"cli"` em `package.json` | `writers/seed-file-writer.ts`/`json-seed-file-writer.ts` (+spec)<br>`use-cases/generate-city-seed-use-case.ts` (+spec)<br>`cli/prompts.ts`<br>`cli.ts`<br>`package.json`<br>`docs/recycling-seed-cli.md` | ✅ Concluído |
+
+### Lote 9 — Melhorias no consumidor de seed
+
+Review do consumidor (`prisma/seeds/recycling-companies.ts`) encontrou um bug real (`is_company_valid` hardcoded) e lacunas de diagnóstico.
+
+| # | Ticket | Escopo | Arquivos | Status |
+|---|---|---|---|---|
+| T24 | Melhorias no consumidor de seed | `is_company_valid` calculado (não mais hardcoded); log de categoria não resolvida; validação Zod prévia (`companyGeneralRegistrationValidationSchema`/`upsertCompanyAddressSchema`/`upsertCompanyBusinessHoursSchema`); resumo final com contadores; `SEED_DRY_RUN=true`; `SEED_USER_PASSWORD` configurável | `prisma/seeds/recycling-companies.ts` | ✅ Concluído |
 
 ---
 
@@ -82,7 +110,13 @@ T1 ──→ T15 ──→ T16 ──→ T17
 - **T7 (categorias)**: usar exclusivamente os nomes de `CATEGORIES` em `src/modules/wastes/data/waste-categories-base.ts` — nunca inventar categoria nova, senão `waste_category_name` não resolve para nenhum `WasteCategory.id` em T15.
 - **T9 (mapper)**: regra de composição não-negociável — todo campo com valor real do Google vence; Faker só age quando o campo é `null`/ausente/vazio (nome, endereço e geolocalização nunca são fabricados quando há dado real).
 - **T12/T13 (use-cases)**: injeção via construtor, sem container de IoC — mesmo padrão de `CreateCompanyUseCase` recebendo repositórios. `cli.ts` é o composition root (equivalente a onde as rotas instanciam repositórios Prisma concretos na app principal).
-- **T14**: remover o script antigo só depois que T13 estiver funcionando ponta a ponta — evita período sem `seed:fetch` operante.
+- **T14**: remover o script antigo só depois que T13 estiver funcionando ponta a ponta — evita período sem `cli` operante.
 - **T15 (fix do consumidor)**: pode e deve ser implementado e testado independentemente do restante do pipeline (só depende do contrato de `CompanySeed` definido em T1) — não bloquear em T9-T14.
 - **T16 (migração)**: transformação é local, sem chamadas de rede — não repetir a busca no Google Places para Rondonópolis.
 - **T17**: é um teste automatizado (spec), não uma validação manual — usa fakes para todos os providers e para o writer, sem rede real e sem gravar arquivo em disco; a checagem contra os schemas Zod de `companies-dto.ts` é a mesma usada em T9/T10, mas aplicada ao pipeline composto inteiro.
+- **T19 (Clack)**: `Validate<T>` do `@clack/prompts` chama o callback com `value: T | undefined` (não só `T`) — o campo pode estar vazio antes de qualquer digitação. Descoberto pelo typecheck ao escrever `promptTarget`.
+- **T21 (Listr2 exitOnError)**: achado real durante teste manual — `exitOnError: false` numa lista de tasks **não** significa "não trave o processo"; significa "continue rodando as tasks seguintes mesmo se uma já falhou", causando erros em cascata (tasks tentando usar um `ctx` nunca preenchido) e o processo saindo com exit code `0` mesmo com tudo falhando. A opção certa é deixar `exitOnError` no default (`true`) por lista — isolamento entre cidades diferentes é responsabilidade do `try/catch` no loop externo de `cli.ts`, não do Listr2.
+- **T21 (TTY)**: prompts do Clack (`select`/`autocomplete`/`confirm`/`text`) bloqueiam esperando input — rodar isso num ambiente sem TTY (CI, pipe) trava o processo indefinidamente. `process.stdin.isTTY === true` é checado antes de qualquer prompt; sem TTY, usa defaults seguros para o que foi omitido em vez de tentar prompt.
+- **T23 (bug real de cache)**: a checagem "já existe" vivia dentro de `writeSeed`, a última etapa do pipeline — ou seja, "Resolvendo cidade" e "Buscando empresas reais no Google Places" (a etapa cara) sempre rodavam antes de descobrir que não havia nada a fazer. Medido com `time`: ~4.3s numa primeira geração real vs. ~1.0s numa reexecução sem `--force` depois da correção (só Geocoding+IBGE, sem tocar o Google Places).
+- **T23 (promptForce removido)**: manter um prompt genérico "sobrescrever?" no início da execução E um prompt por-cidade quando o arquivo já existe seria redundante (a mesma pergunta duas vezes). O prompt por-cidade é estritamente melhor — só aparece quando realmente relevante, com o nome da cidade e o path exatos.
+- **T24 (achado real)**: rodando a validação Zod nova contra um dataset real de 156 empresas (5 cidades, incluindo dados que o usuário gerou testando o CLI manualmente), 17 empresas do dataset legado migrado de Rondonópolis falharam por `phones: []` ou `business_hours: []` — dado que a versão anterior do consumidor aceitava silenciosamente como válido (o bug do `is_company_valid` hardcoded escondia exatamente esse problema). Confirma que as duas correções (T24) se reforçam: a validação prévia rejeita esses casos antes de chegar no banco, e o cálculo correto de `is_company_valid` cobre os casos que passam pela validação mas ainda assim têm `business_hours`/`wastes`+`services` vazios.

@@ -11,7 +11,7 @@ Pesquisa realizada em 2026-07-06 sobre o ecossistema atual de construção de CL
 - **ID Context7:** `/tj/commander.js`
 - **Snippets:** 175 | **Reputação:** High | **Benchmark:** 82.83
 - **Descrição:** Framework completo para CLIs com subcomandos, opções tipadas, help automático, validação.
-- **Ideal para:** CLIs multi-comando (ex: `seed:fetch --city X --state MT --target 40`)
+- **Ideal para:** CLIs multi-comando (ex: `cli --city X --state MT --target 40`)
 
 ```ts
 import { Command } from "commander";
@@ -19,7 +19,7 @@ import { Command } from "commander";
 const program = new Command();
 
 program
-  .name("seed:fetch")
+  .name("cli")
   .description("Gera empresas de reciclagem para uma cidade")
   .version("1.0.0")
   .requiredOption("--city <name>", "Nome da cidade")

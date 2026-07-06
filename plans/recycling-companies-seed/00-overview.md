@@ -42,11 +42,9 @@ Pasta dedicada com requests prontos (Google Places Text Search/Details, Google G
 
 ---
 
-## Melhoria futura: seleção interativa de estado/cidade
+## Seleção interativa de estado/cidade — implementado (Lote 7)
 
-Quando executado sem `--city`/`--state`, o CLI poderia entrar em modo interativo usando prompts como `@clack/prompts`. O usuário selecionaria o estado em uma lista (consumindo o endpoint `estados` do IBGE), depois a cidade via busca com autocomplete (consumindo `estados/{UF}/municipios` do IBGE), eliminando erros de digitação e chamadas desnecessárias à API Google Geocoding para nomes digitados errados. Também seria possível adicionar múltiplas cidades no mesmo ciclo, e os prompts de `--target` e `--force` seriam feitos interativamente.
-
-A API pública do IBGE (`servicodados.ibge.gov.br`, gratuita, sem chave) já expõe ambos os endpoints necessários — `estados` (lista de UFs) e `estados/{UF}/municipios` (lista de municípios) — sem necessidade de Brasil API como fallback.
+O que estava registrado abaixo como melhoria futura foi implementado no Lote 7 (`tickets/T18`–`T22`): quando `--city`/`--state` são omitidos (e há um terminal real), o CLI entra em modo interativo com `@clack/prompts` — `select` de estado (endpoint `estados` do IBGE) → `autocomplete` de cidade (endpoint `estados/{UF}/municipios`) → loop "adicionar outra cidade?" → prompts de `target`/`force`. Progresso e erros por etapa são mostrados via Listr2 (task list). Ver `01-technical-plan.md` para os detalhes de arquitetura e `02-execution-plan.md`/`tickets/T18`–`T22` para o que foi feito.
 
 ## Fora de escopo
 
@@ -55,11 +53,9 @@ A API pública do IBGE (`servicodados.ibge.gov.br`, gratuita, sem chave) já exp
 - Não inclui deduplicação de `identity` entre execuções separadas do processo (o `Set` de unicidade vive só durante uma execução; o backstop entre execuções é a constraint `@unique` do banco).
 - Não inclui a re-geração de variedade para o dataset já migrado de Rondonópolis (fica registrado como follow-up opcional).
 - Não inclui um servidor HTTP próprio (ideia de "serviço isolado consumível pela API principal" fica só como preparação arquitetural — interfaces/DI — não como entrega desta etapa).
-- **CLI/TUI improvements (pesquisa de ferramentas modernas):** o composition root atual usa `node:util` `parseArgs` (nativo, zero dependência), o que atende bem ao escopo atual. Como melhoria futura, registram-se as alternativas pesquisadas:
-  - **Commander.js** — framework completo com subcomandos, validação, help automático, substituindo `parseArgs` cru.
-  - **Clack (`@clack/prompts`)** — prompts interativos modernos (`text`, `select`, `multiselect`, `confirm`, `spinner`) para UX mais rica (ex.: selecionar cidade de uma lista, confirmar sobrescrita).
-  - **Ora (`oraPromise`)** — spinners elegantes para operações assíncronas (Google Places, IBGE), com wrapping automático de promises.
-  - **Listr2** — task lists com progresso visual para pipelines multi-etapa ("Resolvendo cidade → Buscando Google → Mapeando → Gerando sintéticas → Escrevendo JSON"), com suporte a subtasks, rollback e retry.
-  - **Ink + Ink UI** — TUI completa com React no terminal (Flexbox, HMR), útil se o CLI evoluir para um dashboard interativo em tempo real.
-  - **Enquirer / Inquirer.js** — bibliotecas clássicas de prompts, maior variedade de tipos de input (forms, survey, autocomplete).
-  - **Terminal Kit** — TUI não-React com screen buffer, mouse, progress bars, útil para interfaces mais elaboradas sem React.
+- **CLI/TUI improvements — parcialmente implementado no Lote 7:** `@clack/prompts` (seleção interativa) e `Listr2` (task list com progresso/erro por etapa) foram adotados — ver seção acima. `parseArgs` nativo continua sendo usado para parsing de flags (não foi substituído). Alternativas pesquisadas e **não** adotadas, registradas para referência futura:
+  - **Commander.js** — framework completo com subcomandos, validação, help automático, substituindo `parseArgs` cru. Não adotado: o CLI não tem subcomandos, `parseArgs` já atende.
+  - **Ora (`oraPromise`)** — spinners avulsos para promises. Não adotado: Listr2 já cobre a mesma necessidade com visão de lista de tasks.
+  - **Ink + Ink UI** — TUI completa com React no terminal, útil se o CLI evoluir para um dashboard interativo em tempo real. Fora de escopo por ora.
+  - **Enquirer / Inquirer.js** — alternativas ao Clack com mais tipos de prompt. Não adotado: Clack já cobre `select`/`autocomplete`/`text`/`confirm`.
+  - **Terminal Kit** — TUI não-React de baixo nível. Fora de escopo.

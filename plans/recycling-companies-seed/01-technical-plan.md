@@ -247,7 +247,7 @@ npx tsx scripts/recycling-companies/index.ts --city="Sinop" --state=MT --target=
 npx tsx scripts/recycling-companies/index.ts --city="Rondonópolis" --state=MT --force
 ```
 
-`package.json`: `"seed:fetch": "tsx scripts/recycling-companies/index.ts"` (mesmo nome, novo caminho).
+`package.json`: `"cli": "tsx scripts/recycling-companies/index.ts"` (mesmo nome, novo caminho).
 
 ### Arquivos `.http` (REST Client)
 
