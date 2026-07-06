@@ -2,8 +2,14 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import bcrypt from "bcryptjs";
 import type { PrismaClient } from "../../src/generated/prisma/client.js";
+import {
+	companyGeneralRegistrationValidationSchema,
+	upsertCompanyAddressSchema,
+	upsertCompanyBusinessHoursSchema,
+} from "../../src/modules/companies/dtos/companies-dto.js";
 
 const SEEDS_DIR = resolve("prisma/seeds/recycling-companies");
+const DEFAULT_SEED_PASSWORD = "Seed@123456";
 
 // ─── tipos do JSON gerado pelo script de fetch ────────────────────────────────
 
@@ -88,20 +94,60 @@ function loadAllCompanies(): CompanySeed[] {
 	return companies;
 }
 
+function groupBusinessHoursByDay(
+	businessHours: BusinessHour[],
+): Map<string, BusinessHour> {
+	const grouped = new Map<string, BusinessHour>();
+
+	for (const bh of businessHours) {
+		if (!grouped.has(bh.day_of_week)) {
+			grouped.set(bh.day_of_week, { ...bh, time_slots: [...bh.time_slots] });
+		} else {
+			grouped.get(bh.day_of_week)?.time_slots.push(...bh.time_slots);
+		}
+	}
+
+	return grouped;
+}
+
+/** Formata os primeiros issues de um ZodError numa linha curta para log. */
+function formatZodIssues(error: {
+	issues: { path: PropertyKey[]; message: string }[];
+}): string {
+	return error.issues
+		.slice(0, 3)
+		.map((issue) => `${issue.path.join(".")}: ${issue.message}`)
+		.join("; ");
+}
+
 // ─── seed ─────────────────────────────────────────────────────────────────────
 
 export async function seedRecyclingCompanies(prisma: PrismaClient) {
+	const dryRun = process.env.SEED_DRY_RUN === "true";
+	const seedPassword = process.env.SEED_USER_PASSWORD ?? DEFAULT_SEED_PASSWORD;
+
+	if (dryRun) {
+		console.log("[DRY RUN] Nenhuma escrita será feita no banco.\n");
+	}
+
 	console.log("Carregando arquivos de seed:");
 	const companies = loadAllCompanies();
 	console.log(`\nIniciando seed — ${companies.length} empresas no total\n`);
 
-	const passwordHash = await bcrypt.hash("Seed@123456", 10);
+	const passwordHash = await bcrypt.hash(seedPassword, 10);
 
 	// Carrega categorias de resíduos para resolver nomes em IDs
 	const wasteCategories = await prisma.wasteCategory.findMany({
 		select: { id: true, name: true },
 	});
 	const categoryByName = new Map(wasteCategories.map((c) => [c.name, c.id]));
+
+	const counters = {
+		created: 0,
+		skippedExisting: 0,
+		skippedInvalid: 0,
+		failed: 0,
+	};
 
 	for (let i = 0; i < companies.length; i++) {
 		const data = companies[i];
@@ -117,27 +163,67 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 			`  [${i + 1}/${companies.length}] ${data.corporate_name}`,
 		);
 
+		// Agrupa business_hours por dia para respeitar o unique constraint
+		const groupedHours = groupBusinessHoursByDay(data.business_hours);
+
+		// Validação prévia contra os schemas Zod — roda antes da checagem de
+		// idempotência (não vale a pena consultar o banco para dado inválido).
+		const generalRegistrationResult =
+			companyGeneralRegistrationValidationSchema.safeParse(data);
+		const addressResult = upsertCompanyAddressSchema.safeParse(data.address);
+		const businessHoursResult = upsertCompanyBusinessHoursSchema.safeParse({
+			business_hours: Array.from(groupedHours.values()),
+		});
+
+		if (
+			!generalRegistrationResult.success ||
+			!addressResult.success ||
+			!businessHoursResult.success
+		) {
+			const reason =
+				(!generalRegistrationResult.success &&
+					formatZodIssues(generalRegistrationResult.error)) ||
+				(!addressResult.success && formatZodIssues(addressResult.error)) ||
+				(!businessHoursResult.success &&
+					formatZodIssues(businessHoursResult.error)) ||
+				"motivo desconhecido";
+
+			process.stdout.write(` ✗ (dado inválido: ${reason})\n`);
+			counters.skippedInvalid++;
+			continue;
+		}
+
 		// Idempotência: pula empresa já inserida em execuções anteriores
 		const existing = await prisma.company.findUnique({
 			where: { identity: data.identity },
 		});
 		if (existing) {
 			process.stdout.write(" ↷ (já existe)\n");
+			counters.skippedExisting++;
 			continue;
 		}
 
-		// Agrupa business_hours por dia para respeitar o unique constraint
-		const groupedHours = new Map<string, BusinessHour>();
-		for (const bh of data.business_hours) {
-			if (!groupedHours.has(bh.day_of_week)) {
-				groupedHours.set(bh.day_of_week, {
-					...bh,
-					time_slots: [...bh.time_slots],
-				});
-			} else {
-				groupedHours.get(bh.day_of_week)?.time_slots.push(...bh.time_slots);
-			}
+		if (dryRun) {
+			process.stdout.write(" ✓ (dry run)\n");
+			counters.created++;
+			continue;
 		}
+
+		// Flags de validação — mesma fórmula de computeIsCompanyValid() em
+		// src/modules/companies/utils/company-validation-utils.ts. Mantidas
+		// inline (não importadas) para evitar um objeto CompanyValidation
+		// completo (exigiria id/company_id fictícios só para satisfazer o
+		// tipo) — as duas devem ser mantidas em sincronia manualmente.
+		const generalRegistrationValid = true;
+		const addressValid = true;
+		const businessHoursValid = groupedHours.size > 0;
+		const wastesValid = data.wastes.length > 0;
+		const servicesValid = data.services.length > 0;
+		const isCompanyValid =
+			generalRegistrationValid &&
+			addressValid &&
+			businessHoursValid &&
+			(wastesValid || servicesValid);
 
 		try {
 			await prisma.$transaction(async (tx) => {
@@ -185,7 +271,7 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 						email: data.email,
 						phones: data.phones,
 						started_activity_in: new Date(data.started_activity_in),
-						is_company_valid: true,
+						is_company_valid: isCompanyValid,
 						user_id: user.id,
 						address_id: address.id,
 					},
@@ -209,7 +295,12 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 
 				for (const w of data.wastes) {
 					const categoryId = categoryByName.get(w.waste_category_name);
-					if (!categoryId) continue;
+					if (!categoryId) {
+						console.warn(
+							`    ⚠ categoria "${w.waste_category_name}" não encontrada — resíduo "${w.name}" ignorado`,
+						);
+						continue;
+					}
 					await tx.companyWaste.create({
 						data: {
 							company_id: company.id,
@@ -233,7 +324,12 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 
 				for (const s of data.services) {
 					const categoryId = categoryByName.get(s.waste_category_name);
-					if (!categoryId) continue;
+					if (!categoryId) {
+						console.warn(
+							`    ⚠ categoria "${s.waste_category_name}" não encontrada — serviço "${s.name}" ignorado`,
+						);
+						continue;
+					}
 					await tx.companyService.create({
 						data: {
 							company_id: company.id,
@@ -258,20 +354,28 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 				await tx.companyValidation.create({
 					data: {
 						company_id: company.id,
-						general_registration: true,
-						address: true,
-						business_hours: groupedHours.size > 0,
-						wastes: data.wastes.length > 0,
-						services: data.services.length > 0,
+						general_registration: generalRegistrationValid,
+						address: addressValid,
+						business_hours: businessHoursValid,
+						wastes: wastesValid,
+						services: servicesValid,
 					},
 				});
 			});
 
 			process.stdout.write(" ✓\n");
+			counters.created++;
 		} catch (err) {
 			process.stdout.write(` ✗ (${(err as Error).message})\n`);
+			counters.failed++;
 		}
 	}
 
+	console.log(`\n${dryRun ? "[DRY RUN] " : ""}Resumo:`);
+	console.log(`  Criadas: ${counters.created}`);
+	console.log(`  Já existiam: ${counters.skippedExisting}`);
+	console.log(`  Inválidas (schema): ${counters.skippedInvalid}`);
+	console.log(`  Falharam (erro no banco): ${counters.failed}`);
+	console.log(`  Total processado: ${companies.length}`);
 	console.log("\nSeed concluído.");
 }
