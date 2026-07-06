@@ -82,6 +82,10 @@ const REAL_PLACES = [
 ];
 
 class FakeMunicipioProvider implements MunicipioProvider {
+	async fetchUfs() {
+		return [];
+	}
+
 	async fetchByUf(): Promise<IbgeMunicipio[]> {
 		return [MUNICIPIO];
 	}
@@ -109,6 +113,10 @@ class FakePlacesProvider implements PlacesProvider {
 class InMemorySeedFileWriter implements SeedFileWriter {
 	public companies: CompanySeed[] = [];
 	public meta?: Omit<SeedFileMeta, "total">;
+
+	exists() {
+		return { exists: false, path: "/in-memory/seed.json" };
+	}
 
 	write(
 		_ctx: CityContext,

@@ -2,9 +2,13 @@ import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import type { CityContext } from "../entities/city-context.js";
 import type { CompanySeed, SeedFileMeta } from "../entities/company-seed.js";
-import type { SeedFileWriter, WriteResult } from "./seed-file-writer.js";
+import type {
+	ExistsResult,
+	SeedFileWriter,
+	WriteResult,
+} from "./seed-file-writer.js";
 
-const SEEDS_DIR = resolve("prisma/seeds/recycling-companies");
+export const DEFAULT_SEEDS_DIR = resolve("prisma/seeds/recycling-companies");
 
 function normalizeSlugPart(value: string): string {
 	return value
@@ -21,27 +25,34 @@ export function citySlug(ctx: CityContext): string {
 }
 
 export class JsonSeedFileWriter implements SeedFileWriter {
+	constructor(private readonly outputDir: string = DEFAULT_SEEDS_DIR) {}
+
+	exists(ctx: CityContext): ExistsResult {
+		const path = resolve(this.outputDir, `${citySlug(ctx)}.json`);
+		return { exists: existsSync(path), path };
+	}
+
 	write(
 		ctx: CityContext,
 		companies: CompanySeed[],
 		meta: Omit<SeedFileMeta, "total">,
 		opts?: { force?: boolean },
 	): WriteResult {
-		const filePath = resolve(SEEDS_DIR, `${citySlug(ctx)}.json`);
+		const { exists, path } = this.exists(ctx);
 
-		if (existsSync(filePath) && !opts?.force) {
-			return { written: false, path: filePath };
+		if (exists && !opts?.force) {
+			return { written: false, path };
 		}
 
-		mkdirSync(dirname(filePath), { recursive: true });
+		mkdirSync(dirname(path), { recursive: true });
 
 		const output = {
 			_meta: { ...meta, total: companies.length },
 			companies,
 		};
 
-		writeFileSync(filePath, JSON.stringify(output, null, 2), "utf-8");
+		writeFileSync(path, JSON.stringify(output, null, 2), "utf-8");
 
-		return { written: true, path: filePath };
+		return { written: true, path };
 	}
 }

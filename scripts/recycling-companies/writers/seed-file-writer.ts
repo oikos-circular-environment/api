@@ -6,7 +6,15 @@ export interface WriteResult {
 	path: string;
 }
 
+export interface ExistsResult {
+	exists: boolean;
+	path: string;
+}
+
 export interface SeedFileWriter {
+	/** Checagem pura, sem side-effect — permite decidir antes de rodar o resto do pipeline. */
+	exists(ctx: CityContext): ExistsResult;
+
 	write(
 		ctx: CityContext,
 		companies: CompanySeed[],

@@ -43,6 +43,10 @@ const GEO: GeocodeResult = {
 };
 
 class FakeMunicipioProvider implements MunicipioProvider {
+	async fetchUfs() {
+		return [];
+	}
+
 	async fetchByUf(): Promise<IbgeMunicipio[]> {
 		return [MUNICIPIO];
 	}
@@ -74,6 +78,11 @@ class FakeSeedFileWriter implements SeedFileWriter {
 		companies: CompanySeed[];
 		meta: Omit<SeedFileMeta, "total">;
 	};
+	public existsResult = { exists: false, path: "/fake/path.json" };
+
+	exists() {
+		return this.existsResult;
+	}
 
 	write(
 		_ctx: CityContext,
@@ -150,5 +159,62 @@ describe("generate-city-seed-use-case", () => {
 
 		expect(result.realCount).toBe(3);
 		expect(result.syntheticCount).toBe(0);
+	});
+
+	describe("granular phase methods", () => {
+		it("resolveCity returns the CityContext for the given city/state", async () => {
+			const useCase = makeUseCase([], new FakeSeedFileWriter());
+
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			expect(ctx.city).toBe("Rondonópolis");
+			expect(ctx.stateCode).toBe("MT");
+			expect(ctx.center).toStrictEqual(GEO.center);
+		});
+
+		it("fetchRealCompanies returns companies mapped from the places provider", async () => {
+			const useCase = makeUseCase(["p1", "p2"], new FakeSeedFileWriter());
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			const real = await useCase.fetchRealCompanies(ctx);
+
+			expect(real).toHaveLength(2);
+			expect(real.every((c) => !c._source.synthetic)).toBe(true);
+		});
+
+		it("generateSynthetic returns exactly target minus realCount companies", async () => {
+			const useCase = makeUseCase([], new FakeSeedFileWriter());
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			expect(useCase.generateSynthetic(ctx, 2, 5)).toHaveLength(3);
+			expect(useCase.generateSynthetic(ctx, 5, 2)).toHaveLength(0);
+			expect(useCase.generateSynthetic(ctx, 0, undefined)).toHaveLength(0);
+		});
+
+		it("writeSeed delegates to the writer with the given companies and force option", async () => {
+			const writer = new FakeSeedFileWriter();
+			const useCase = makeUseCase([], writer);
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			const result = useCase.writeSeed(ctx, [], { force: true });
+
+			expect(result.written).toBe(true);
+			expect(writer.lastWrite?.companies).toStrictEqual([]);
+		});
+
+		it("checkExisting delegates to the writer's exists() without side effects", async () => {
+			const writer = new FakeSeedFileWriter();
+			writer.existsResult = {
+				exists: true,
+				path: "/fake/rondonopolis-mt.json",
+			};
+			const useCase = makeUseCase([], writer);
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			const result = useCase.checkExisting(ctx);
+
+			expect(result).toStrictEqual(writer.existsResult);
+			expect(writer.lastWrite).toBeUndefined();
+		});
 	});
 });

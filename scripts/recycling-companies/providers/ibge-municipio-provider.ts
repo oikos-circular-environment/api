@@ -17,6 +17,18 @@ function normalize(value: string): string {
  * lista completa de municípios da UF.
  */
 export class IbgeMunicipioProvider implements MunicipioProvider {
+	async fetchUfs(): Promise<IbgeUf[]> {
+		const res = await fetch(`${BASE_URL}/estados?orderBy=nome`);
+
+		if (!res.ok) {
+			throw new Error(
+				`IBGE estados falhou [${res.status}]: ${await res.text()}`,
+			);
+		}
+
+		return (await res.json()) as IbgeUf[];
+	}
+
 	async fetchByUf(stateCode: string): Promise<IbgeMunicipio[]> {
 		const res = await fetch(`${BASE_URL}/estados/${stateCode}/municipios`);
 

@@ -1,6 +1,11 @@
 import type { CityContext } from "../entities/city-context.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import type { SyntheticCompanyGenerator } from "../services/synthetic-company-generator.js";
-import type { SeedFileWriter } from "../writers/seed-file-writer.js";
+import type {
+	ExistsResult,
+	SeedFileWriter,
+	WriteResult,
+} from "../writers/seed-file-writer.js";
 import type { FetchCityCompaniesUseCase } from "./fetch-city-companies-use-case.js";
 import type { ResolveCityUseCase } from "./resolve-city-use-case.js";
 
@@ -29,6 +34,10 @@ export interface GenerateCitySeedResult {
  * Orquestrador de ponta a ponta para uma cidade: resolve contexto geográfico
  * → busca empresas reais → completa com sintéticas se `target` pedir mais →
  * grava o arquivo de seed.
+ *
+ * Cada fase é exposta como método público separado (além de `execute`, que
+ * as encadeia como conveniência) para permitir progresso granular por etapa
+ * — ex.: uma task list do Listr2 no CLI interativo.
  */
 export class GenerateCitySeedUseCase {
 	constructor(
@@ -38,25 +47,39 @@ export class GenerateCitySeedUseCase {
 		private readonly writer: SeedFileWriter,
 	) {}
 
-	async execute(
-		city: string,
-		stateCode: string,
-		opts: GenerateCitySeedOptions = {},
-	): Promise<GenerateCitySeedResult> {
-		const ctx = await this.resolveCityUseCase.execute(city, stateCode);
-		const real = await this.fetchCompaniesUseCase.execute(
-			ctx,
-			RECYCLING_SEARCH_QUERIES,
-		);
+	resolveCity(city: string, stateCode: string): Promise<CityContext> {
+		return this.resolveCityUseCase.execute(city, stateCode);
+	}
 
-		const missing = Math.max(0, (opts.target ?? 0) - real.length);
-		const synthetic = Array.from({ length: missing }, () =>
+	/**
+	 * Checagem pura, sem side-effect — chamar antes de `fetchRealCompanies`
+	 * evita gastar a busca cara no Google Places quando o seed já existe.
+	 */
+	checkExisting(ctx: CityContext): ExistsResult {
+		return this.writer.exists(ctx);
+	}
+
+	fetchRealCompanies(ctx: CityContext): Promise<CompanySeed[]> {
+		return this.fetchCompaniesUseCase.execute(ctx, RECYCLING_SEARCH_QUERIES);
+	}
+
+	generateSynthetic(
+		ctx: CityContext,
+		realCount: number,
+		target?: number,
+	): CompanySeed[] {
+		const missing = Math.max(0, (target ?? 0) - realCount);
+		return Array.from({ length: missing }, () =>
 			this.syntheticGenerator.generate(ctx),
 		);
+	}
 
-		const companies = [...real, ...synthetic];
-
-		const { written, path } = this.writer.write(
+	writeSeed(
+		ctx: CityContext,
+		companies: CompanySeed[],
+		opts: { force?: boolean } = {},
+	): WriteResult {
+		return this.writer.write(
 			ctx,
 			companies,
 			{
@@ -67,6 +90,21 @@ export class GenerateCitySeedUseCase {
 			},
 			{ force: opts.force },
 		);
+	}
+
+	async execute(
+		city: string,
+		stateCode: string,
+		opts: GenerateCitySeedOptions = {},
+	): Promise<GenerateCitySeedResult> {
+		const ctx = await this.resolveCity(city, stateCode);
+		const real = await this.fetchRealCompanies(ctx);
+		const synthetic = this.generateSynthetic(ctx, real.length, opts.target);
+		const companies = [...real, ...synthetic];
+
+		const { written, path } = this.writeSeed(ctx, companies, {
+			force: opts.force,
+		});
 
 		return {
 			ctx,

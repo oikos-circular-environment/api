@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { IbgeMunicipio } from "../entities/ibge-municipio.js";
+import type { IbgeMunicipio, IbgeUf } from "../entities/ibge-municipio.js";
 import type {
 	GeocodeResult,
 	GeocodingProvider,
@@ -19,6 +19,10 @@ function makeMunicipio(nome: string, id: number): IbgeMunicipio {
 
 class FakeMunicipioProvider implements MunicipioProvider {
 	constructor(private readonly municipios: IbgeMunicipio[]) {}
+
+	async fetchUfs(): Promise<IbgeUf[]> {
+		return [];
+	}
 
 	async fetchByUf(): Promise<IbgeMunicipio[]> {
 		return this.municipios;
