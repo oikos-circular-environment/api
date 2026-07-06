@@ -31,6 +31,7 @@
 		"migrate:generate": "prisma generate",
 		"seed": "tsx prisma/seeds/index.ts",
 		"seed:fetch": "tsx scripts/fetch-recycling-places.ts",
+		"seed:prod": "tsx scripts/seed-prod.ts",
 		"minio:console": "xdg-open http://localhost:9001"
 	},
 	"prisma": {

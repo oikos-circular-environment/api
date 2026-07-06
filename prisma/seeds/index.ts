@@ -13,9 +13,9 @@ const prisma = new PrismaClient({ adapter });
 
 async function seed() {
 	await seedWasteCategories(prisma);
-	await seedGoogleAccount(prisma);
-	await seedAppleAccount(prisma);
-	await seedUsers(prisma);
+	// await seedGoogleAccount(prisma);
+	// await seedAppleAccount(prisma);
+	// await seedUsers(prisma);
 	await seedRecyclingCompanies(prisma);
 }
 
