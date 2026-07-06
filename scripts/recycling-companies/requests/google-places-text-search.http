@@ -1,0 +1,23 @@
+### Chave lida de api/.env via symlink requests/.env -> ../../../.env
+### (não commitar valor real em nenhum lugar deste arquivo).
+@baseUrl = https://places.googleapis.com/v1
+
+### Text Search — mesmo field mask usado em providers/google-places-provider.ts
+### Bounds de exemplo: Poconé-MT (retornado por google-geocoding.http)
+POST {{baseUrl}}/places:searchText
+Content-Type: application/json
+X-Goog-Api-Key: {{$dotenv GOOGLE_PLACES_API_KEY}}
+X-Goog-FieldMask: places.id,places.displayName,places.formattedAddress,places.location,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.rating,places.regularOpeningHours,places.businessStatus,places.types
+
+{
+  "textQuery": "reciclagem",
+  "locationRestriction": {
+    "rectangle": {
+      "low": { "latitude": -16.2806331, "longitude": -57.0341514 },
+      "high": { "latitude": -15.9375775, "longitude": -56.6141789 }
+    }
+  },
+  "languageCode": "pt-BR",
+  "regionCode": "BR",
+  "pageSize": 20
+}

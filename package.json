@@ -30,7 +30,7 @@
 		"migrate:dev": "prisma migrate dev",
 		"migrate:generate": "prisma generate",
 		"seed": "tsx prisma/seeds/index.ts",
-		"seed:fetch": "tsx scripts/fetch-recycling-places.ts",
+		"seed:fetch": "tsx scripts/recycling-companies/index.ts",
 		"seed:prod": "tsx scripts/seed-prod.ts",
 		"minio:console": "xdg-open http://localhost:9001"
 	},
@@ -77,6 +77,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.12",
 		"@faker-js/faker": "^10.4.0",
+		"@googlemaps/google-maps-services-js": "^3.4.2",
 		"@types/node": "^25.6.0",
 		"@types/pg": "^8.20.0",
 		"@vitest/coverage-v8": "^4.1.4",
