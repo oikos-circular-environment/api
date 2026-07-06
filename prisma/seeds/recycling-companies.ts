@@ -1,9 +1,9 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import bcrypt from "bcryptjs";
 import type { PrismaClient } from "../../src/generated/prisma/client.js";
 
-const DATA_PATH = resolve("prisma/seeds/recycling-companies.json");
+const SEEDS_DIR = resolve("prisma/seeds/recycling-companies");
 
 // ─── tipos do JSON gerado pelo script de fetch ────────────────────────────────
 
@@ -33,6 +33,15 @@ interface Address {
 	longitude: number | null;
 }
 
+interface WasteOrServiceItem {
+	name: string;
+	description: string | null;
+	price: number;
+	unit: string;
+	waste_category_name: string;
+	quantity: number;
+}
+
 interface CompanySeed {
 	corporate_name: string;
 	business_name: string | null;
@@ -45,6 +54,8 @@ interface CompanySeed {
 	started_activity_in: string;
 	address: Address;
 	business_hours: BusinessHour[];
+	wastes: WasteOrServiceItem[];
+	services: WasteOrServiceItem[];
 }
 
 interface SeedFile {
@@ -52,87 +63,37 @@ interface SeedFile {
 	companies: CompanySeed[];
 }
 
-// ─── resíduos e serviços padrão para empresas de reciclagem ──────────────────
-
-const DEFAULT_WASTES = [
-	{
-		name: "Papel e Papelão",
-		description: "Jornais, revistas, caixas, embalagens de papel",
-		price: 0.5,
-		unit: "KG",
-		waste_category_name: "Papel / Papelão",
-		quantity: 500,
-	},
-	{
-		name: "Plástico",
-		description: "PET, PEAD, PVC e demais plásticos recicláveis",
-		price: 0.8,
-		unit: "KG",
-		waste_category_name: "Plástico",
-		quantity: 300,
-	},
-	{
-		name: "Metal e Alumínio",
-		description: "Latas de alumínio, ferro, aço e sucata metálica",
-		price: 2.5,
-		unit: "KG",
-		waste_category_name: "Metal / Alumínio",
-		quantity: 200,
-	},
-	{
-		name: "Vidro",
-		description: "Garrafas, potes e cacos de vidro",
-		price: 0.2,
-		unit: "KG",
-		waste_category_name: "Vidro",
-		quantity: 300,
-	},
-] as const;
-
-const DEFAULT_SERVICES = [
-	{
-		name: "Coleta de Papel e Papelão",
-		description: "Serviço de coleta e transporte de resíduos de papel",
-		price: 80.0,
-		unit: "UNIT",
-		waste_category_name: "Papel / Papelão",
-		quantity: 1,
-	},
-	{
-		name: "Coleta de Plástico",
-		description: "Serviço de coleta e transporte de resíduos plásticos",
-		price: 100.0,
-		unit: "UNIT",
-		waste_category_name: "Plástico",
-		quantity: 1,
-	},
-	{
-		name: "Coleta de Metal",
-		description: "Coleta de sucata metálica e alumínio",
-		price: 150.0,
-		unit: "UNIT",
-		waste_category_name: "Metal / Alumínio",
-		quantity: 1,
-	},
-] as const;
-
-// ─── seed ─────────────────────────────────────────────────────────────────────
-
-export async function seedRecyclingCompanies(prisma: PrismaClient) {
-	if (!existsSync(DATA_PATH)) {
-		console.error(`Arquivo de dados não encontrado: ${DATA_PATH}`);
+function loadAllCompanies(): CompanySeed[] {
+	if (!existsSync(SEEDS_DIR)) {
+		console.error(`Diretório de dados não encontrado: ${SEEDS_DIR}`);
 		console.error(
-			"Execute primeiro: npx tsx scripts/fetch-recycling-places.ts",
+			"Execute primeiro: npx tsx scripts/recycling-companies/index.ts --city=<cidade> --state=<uf>",
 		);
 		process.exit(1);
 	}
 
-	const { companies, _meta }: SeedFile = JSON.parse(
-		readFileSync(DATA_PATH, "utf-8"),
-	);
-	console.log(
-		`Iniciando seed — ${_meta.total} empresas (gerado em ${_meta.generated_at})\n`,
-	);
+	const files = readdirSync(SEEDS_DIR).filter((f) => f.endsWith(".json"));
+	const companies: CompanySeed[] = [];
+
+	for (const file of files) {
+		const { companies: fileCompanies, _meta }: SeedFile = JSON.parse(
+			readFileSync(resolve(SEEDS_DIR, file), "utf-8"),
+		);
+		console.log(
+			`  ${file}: ${_meta.total} empresas (gerado em ${_meta.generated_at})`,
+		);
+		companies.push(...fileCompanies);
+	}
+
+	return companies;
+}
+
+// ─── seed ─────────────────────────────────────────────────────────────────────
+
+export async function seedRecyclingCompanies(prisma: PrismaClient) {
+	console.log("Carregando arquivos de seed:");
+	const companies = loadAllCompanies();
+	console.log(`\nIniciando seed — ${companies.length} empresas no total\n`);
 
 	const passwordHash = await bcrypt.hash("Seed@123456", 10);
 
@@ -147,7 +108,7 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 		const slug = data.corporate_name
 			.toLowerCase()
 			.normalize("NFD")
-			.replace(/[̀-ͯ]/g, "")
+			.replace(/[\u0300-\u036f]/g, "")
 			.replace(/\s+/g, ".")
 			.replace(/[^a-z0-9.]/g, "");
 
@@ -246,7 +207,7 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 					});
 				}
 
-				for (const w of DEFAULT_WASTES) {
+				for (const w of data.wastes) {
 					const categoryId = categoryByName.get(w.waste_category_name);
 					if (!categoryId) continue;
 					await tx.companyWaste.create({
@@ -255,14 +216,22 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 							name: w.name,
 							description: w.description,
 							price: w.price,
-							unit: w.unit,
+							unit: w.unit as
+								| "KG"
+								| "UNIT"
+								| "DAY"
+								| "L"
+								| "M"
+								| "M2"
+								| "M3"
+								| "ML",
 							waste_category_id: categoryId,
 							quantity: w.quantity,
 						},
 					});
 				}
 
-				for (const s of DEFAULT_SERVICES) {
+				for (const s of data.services) {
 					const categoryId = categoryByName.get(s.waste_category_name);
 					if (!categoryId) continue;
 					await tx.companyService.create({
@@ -271,7 +240,15 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 							name: s.name,
 							description: s.description,
 							price: s.price,
-							unit: s.unit,
+							unit: s.unit as
+								| "KG"
+								| "UNIT"
+								| "DAY"
+								| "L"
+								| "M"
+								| "M2"
+								| "M3"
+								| "ML",
 							waste_category_id: categoryId,
 							quantity: s.quantity,
 						},
@@ -284,8 +261,8 @@ export async function seedRecyclingCompanies(prisma: PrismaClient) {
 						general_registration: true,
 						address: true,
 						business_hours: groupedHours.size > 0,
-						wastes: true,
-						services: true,
+						wastes: data.wastes.length > 0,
+						services: data.services.length > 0,
 					},
 				});
 			});
