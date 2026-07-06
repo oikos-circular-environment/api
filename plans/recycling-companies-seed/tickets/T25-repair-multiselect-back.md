@@ -20,6 +20,7 @@
 - [x] Sentinela `"← Voltar (escolher outro estado)"` como primeira opção da lista — se marcada, descarta a seleção e o chamador refaz o prompt de estado (Clack não tem navegação nativa "para trás")
 - [x] `promptAddAnotherCity` renomeado para `promptAddAnotherState` (semântica mudou: agora pergunta por outro **estado**, já que cidades do mesmo estado são todas marcadas de uma vez)
 - [x] `resolveCitiesInteractively` reestruturado como loop `while` com o novo fluxo
+- [x] **Ajuste pós-review do usuário**: o sentinela `"← Voltar"` misturado na lista de cidades confundia (marcá-lo parecia uma seleção igual a uma cidade real, sem deixar claro que descartava o resto). Trocado por: `required: false` + confirmar sem marcar nenhuma cidade = voltar. Também adicionado `promptConfirmSelection` — mostra a lista completa de cidades escolhidas (via `note()`) e pede confirmação antes de seguir para os prompts de target/output-dir; se recusada, `resolveCitiesInteractively` recomeça a seleção do zero.
 
 ## Verificação
 

@@ -4,6 +4,7 @@ import { Listr } from "listr2";
 import {
 	promptAddAnotherState,
 	promptCities,
+	promptConfirmSelection,
 	promptOutputDir,
 	promptOverwrite,
 	promptState,
@@ -86,30 +87,36 @@ function parseCliArgs(argv: string[]): {
 /**
  * Loop: escolhe um estado, marca uma ou mais cidades daquele estado
  * (multiselect com busca), e pergunta se quer cidades de outro estado
- * também. "← Voltar" na lista de cidades refaz a escolha de estado.
+ * também. Confirmar a lista de cidades sem marcar nenhuma refaz a escolha
+ * de estado. Ao final, mostra a lista completa e pede confirmação — se
+ * recusada, recomeça a seleção do zero.
  */
 async function resolveCitiesInteractively(
 	municipioProvider: IbgeMunicipioProvider,
 ): Promise<CityInput[]> {
 	const ufs = await municipioProvider.fetchUfs();
-	const cities: CityInput[] = [];
 
-	let keepGoing = true;
-	while (keepGoing) {
-		const uf = await promptState(ufs);
-		const municipios = await municipioProvider.fetchByUf(uf.sigla);
-		const result = await promptCities(municipios);
+	while (true) {
+		const cities: CityInput[] = [];
+		let keepGoing = true;
+		while (keepGoing) {
+			const uf = await promptState(ufs);
+			const municipios = await municipioProvider.fetchByUf(uf.sigla);
+			const result = await promptCities(municipios);
 
-		if (result.back) continue;
+			if (result.back) continue;
 
-		for (const municipio of result.municipios) {
-			cities.push({ city: municipio.nome, stateCode: uf.sigla });
+			for (const municipio of result.municipios) {
+				cities.push({ city: municipio.nome, stateCode: uf.sigla });
+			}
+
+			keepGoing = await promptAddAnotherState();
 		}
 
-		keepGoing = await promptAddAnotherState();
+		if (await promptConfirmSelection(cities)) {
+			return cities;
+		}
 	}
-
-	return cities;
 }
 
 interface CityPipelineCtx {

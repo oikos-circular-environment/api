@@ -3,12 +3,11 @@ import {
 	cancel,
 	confirm,
 	isCancel,
+	note,
 	select,
 	text,
 } from "@clack/prompts";
 import type { IbgeMunicipio, IbgeUf } from "../entities/ibge-municipio.js";
-
-const BACK_SENTINEL = "__back__";
 
 /** Encerra o processo de forma limpa quando o usuário cancela (Ctrl+C). */
 function handleCancel<T>(value: T | symbol): T {
@@ -43,10 +42,11 @@ export type PromptCitiesResult =
 
 /**
  * Multiselect com busca — deixa marcar várias cidades do mesmo estado de
- * uma vez, em vez de uma-por-vez com confirmação no final. A primeira
- * opção da lista é um sentinela "← Voltar": se marcada (mesmo junto de
- * outras), a seleção inteira é descartada e o chamador deve refazer o
- * prompt de estado — o Clack não tem navegação "para trás" nativa.
+ * uma vez, em vez de uma-por-vez com confirmação no final. Não há um item
+ * "← Voltar" misturado na lista (isso confundia: marcar aquele item parecia
+ * uma seleção igual às cidades, sem deixar claro que descartava o resto).
+ * Em vez disso, confirmar sem marcar nenhuma cidade (`required: false`,
+ * lista vazia) é o próprio "voltar" — refaz o prompt de estado.
  */
 export async function promptCities(
 	municipios: IbgeMunicipio[],
@@ -56,17 +56,14 @@ export async function promptCities(
 	const selected = handleCancel(
 		await autocompleteMultiselect({
 			message:
-				"Digite para buscar e marque uma ou mais cidades (espaço marca, enter confirma)",
+				"Digite para buscar e marque uma ou mais cidades (espaço marca, enter confirma; enter sem marcar nada volta para a escolha de estado)",
 			placeholder: "Nome da cidade...",
-			required: true,
-			options: [
-				{ value: BACK_SENTINEL, label: "← Voltar (escolher outro estado)" },
-				...municipios.map((m) => ({ value: String(m.id), label: m.nome })),
-			],
+			required: false,
+			options: municipios.map((m) => ({ value: String(m.id), label: m.nome })),
 		}),
 	);
 
-	if (selected.includes(BACK_SENTINEL)) {
+	if (selected.length === 0) {
 		return { back: true };
 	}
 
@@ -74,11 +71,22 @@ export async function promptCities(
 		.map((id) => byId.get(id))
 		.filter((m): m is IbgeMunicipio => m !== undefined);
 
-	if (chosen.length === 0) {
-		throw new Error("Nenhuma cidade selecionada");
-	}
-
 	return { back: false, municipios: chosen };
+}
+
+/** Mostra a lista final de cidades escolhidas e pede confirmação antes de gerar. */
+export async function promptConfirmSelection(
+	cities: { city: string; stateCode: string }[],
+): Promise<boolean> {
+	const list = cities.map((c) => `${c.city} (${c.stateCode})`).join("\n");
+	note(list, `${cities.length} cidade(s) selecionada(s)`);
+
+	return handleCancel(
+		await confirm({
+			message: "Confirma a geração para essas cidades?",
+			initialValue: true,
+		}),
+	);
 }
 
 export async function promptTarget(): Promise<number | undefined> {
