@@ -50,6 +50,6 @@ T2 ──┴──→ T7 ──────────────────�
 
 ## Notas de Implementação
 
-- **T4 (testes TDD)**: usar dados de `prisma/seeds/recycling-companies.json`. Bio Ecologica (lat: -16.4757009, lon: -54.6684927) é referência a ~3.3km do centro de Rondonópolis (lat: -16.4707, lon: -54.6375).
+- **T4 (testes TDD)**: usar dados de `prisma/seeds/recycling-companies/rondonopolis-mt.json`. Bio Ecologica (lat: -16.4757009, lon: -54.6684927) é referência a ~3.3km do centro de Rondonópolis (lat: -16.4707, lon: -54.6375).
 - **T9 (Prisma PostGIS)**: `$queryRaw` retorna `unknown[]` — necessário mapeamento manual para `MarketCompany[]`. Atenção à ordem `ST_Point(longitude, latitude)`.
 - **T2 (migration)**: executar `npx prisma migrate dev` ou `npx prisma migrate deploy` antes de testar T9. Requer PostgreSQL com PostGIS instalado.
