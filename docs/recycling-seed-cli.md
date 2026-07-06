@@ -45,12 +45,16 @@ npm run cli
 Fluxo de prompts:
 
 1. **Selecionar estado** — lista com as 27 UFs (busca em `GET /localidades/estados` do IBGE).
-2. **Buscar cidade** — busca com filtro (autocomplete) sobre a lista de municípios da UF escolhida (`GET /localidades/estados/{UF}/municipios`) — elimina erro de digitação, já que só é possível escolher uma cidade que exista de verdade na lista.
-3. **Adicionar outra cidade?** — confirmação; se sim, repete os passos 1–2; se não, segue.
-4. **Meta de empresas** — texto opcional (Enter pula, sem padding sintético).
+2. **Marcar cidades** — busca com filtro e seleção múltipla (`autocompleteMultiselect`) sobre a lista de municípios da UF escolhida (`GET /localidades/estados/{UF}/municipios`) — digite para filtrar, espaço para marcar quantas cidades quiser daquele estado, enter para confirmar. Elimina erro de digitação, já que só é possível marcar uma cidade que exista de verdade na lista. A primeira opção da lista é **"← Voltar (escolher outro estado)"** — se marcada, descarta a seleção e volta pro passo 1 (não há navegação "para trás" nativa nos prompts, então isso funciona como um item especial da lista).
+3. **Adicionar cidades de outro estado?** — confirmação; se sim, repete os passos 1–2 pra outro estado; se não, segue.
+4. **Meta de empresas** — texto opcional (Enter pula, sem padding sintético). Vale para todas as cidades selecionadas.
 5. **Diretório de saída** — texto opcional (Enter usa o default).
 
-Depois dos prompts, cada cidade roda como uma lista de etapas com indicador de progresso (Listr2): *Resolvendo cidade* → *Verificando se já existe* → *Buscando empresas reais no Google Places* → *Gerando empresas sintéticas* (só aparece se `target` pedir mais do que o real encontrado) → *Escrevendo arquivo de seed*.
+Depois dos prompts, cada cidade roda como uma lista de etapas com indicador de progresso (Listr2): *Resolvendo cidade* → *Verificando se já existe* → *Buscando empresas reais no Google Places* → *Gerando empresas sintéticas* (só aparece se `target` pedir mais do que o real encontrado) → *Validando e corrigindo dados gerados* → *Escrevendo arquivo de seed*.
+
+### Validação e correção automática (segunda onda)
+
+Antes de escrever o arquivo, cada empresa gerada (real ou sintética) passa por uma segunda checagem contra os mesmos schemas Zod usados pelo consumidor de seed (`companyGeneralRegistrationValidationSchema`, `upsertCompanyAddressSchema`, `upsertCompanyBusinessHoursSchema`). Em condições normais isso não encontra nada — o mapeamento de empresas reais (`CompanyGapFiller`) e o gerador de sintéticas já garantem telefone e horário de funcionamento preenchidos. Essa etapa existe como rede de segurança: se telefone ou horário vierem vazios por algum motivo, são preenchidos automaticamente (mesma lógica de geração sintética já usada no resto do pipeline); se a empresa continuar inválida mesmo assim (ex.: endereço malformado), ela é descartada do arquivo em vez de gravar dado inválido, e isso aparece no relatório da etapa.
 
 ### Modo híbrido (flags parciais)
 

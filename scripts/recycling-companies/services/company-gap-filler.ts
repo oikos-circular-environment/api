@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import type { BusinessHourSeed, DayOfWeek } from "../entities/company-seed.js";
 import type { GooglePlace } from "../entities/google-place.js";
 import { GoogleBusinessHoursParser } from "./business-hours-parser.js";
+import { generateFakePhone } from "./fake-phone.js";
 
 export interface GapFillResult {
 	phones: string[];
@@ -59,7 +60,7 @@ export class CompanyGapFiller {
 	fill(place: GooglePlace): GapFillResult {
 		const realPhone =
 			place.nationalPhoneNumber ?? place.internationalPhoneNumber;
-		const phones = realPhone ? [realPhone] : [this.generatePhone()];
+		const phones = realPhone ? [realPhone] : [generateFakePhone()];
 
 		const email = this.generateEmail(place.displayName?.text ?? "empresa");
 
@@ -70,10 +71,6 @@ export class CompanyGapFiller {
 			parsedHours.length > 0 ? parsedHours : generateSyntheticHours();
 
 		return { phones, email, business_hours };
-	}
-
-	private generatePhone(): string {
-		return `(${faker.string.numeric(2)}) 9${faker.string.numeric(4)}-${faker.string.numeric(4)}`;
 	}
 
 	private generateEmail(name: string): string {

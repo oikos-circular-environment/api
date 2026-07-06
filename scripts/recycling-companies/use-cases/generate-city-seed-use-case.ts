@@ -1,5 +1,6 @@
 import type { CityContext } from "../entities/city-context.js";
 import type { CompanySeed } from "../entities/company-seed.js";
+import type { CompanySeedRepairer } from "../services/company-seed-repairer.js";
 import type { SyntheticCompanyGenerator } from "../services/synthetic-company-generator.js";
 import type {
 	ExistsResult,
@@ -28,12 +29,18 @@ export interface GenerateCitySeedResult {
 	syntheticCount: number;
 	written: boolean;
 	path: string;
+	repairReport: string[];
+}
+
+export interface ValidateAndRepairResult {
+	companies: CompanySeed[];
+	report: string[];
 }
 
 /**
  * Orquestrador de ponta a ponta para uma cidade: resolve contexto geográfico
  * → busca empresas reais → completa com sintéticas se `target` pedir mais →
- * grava o arquivo de seed.
+ * valida/repara (segunda onda, rede de segurança) → grava o arquivo de seed.
  *
  * Cada fase é exposta como método público separado (além de `execute`, que
  * as encadeia como conveniência) para permitir progresso granular por etapa
@@ -44,6 +51,7 @@ export class GenerateCitySeedUseCase {
 		private readonly resolveCityUseCase: ResolveCityUseCase,
 		private readonly fetchCompaniesUseCase: FetchCityCompaniesUseCase,
 		private readonly syntheticGenerator: SyntheticCompanyGenerator,
+		private readonly repairer: CompanySeedRepairer,
 		private readonly writer: SeedFileWriter,
 	) {}
 
@@ -74,6 +82,35 @@ export class GenerateCitySeedUseCase {
 		);
 	}
 
+	/**
+	 * Segunda onda: repara lacunas (telefone/horário ausentes) em cada
+	 * empresa e descarta as que continuarem inválidas mesmo após a
+	 * correção, em vez de deixar dado inválido chegar no arquivo de seed.
+	 */
+	validateAndRepair(companies: CompanySeed[]): ValidateAndRepairResult {
+		const kept: CompanySeed[] = [];
+		const report: string[] = [];
+
+		for (const company of companies) {
+			const result = this.repairer.repair(company);
+
+			if (result.stillInvalid) {
+				report.push(
+					`${company.corporate_name}: descartada (dado inválido mesmo após correção)`,
+				);
+				continue;
+			}
+
+			if (result.fixes.length > 0) {
+				report.push(`${company.corporate_name}: ${result.fixes.join(", ")}`);
+			}
+
+			kept.push(result.seed);
+		}
+
+		return { companies: kept, report };
+	}
+
 	writeSeed(
 		ctx: CityContext,
 		companies: CompanySeed[],
@@ -100,7 +137,10 @@ export class GenerateCitySeedUseCase {
 		const ctx = await this.resolveCity(city, stateCode);
 		const real = await this.fetchRealCompanies(ctx);
 		const synthetic = this.generateSynthetic(ctx, real.length, opts.target);
-		const companies = [...real, ...synthetic];
+		const { companies, report } = this.validateAndRepair([
+			...real,
+			...synthetic,
+		]);
 
 		const { written, path } = this.writeSeed(ctx, companies, {
 			force: opts.force,
@@ -112,6 +152,7 @@ export class GenerateCitySeedUseCase {
 			syntheticCount: synthetic.length,
 			written,
 			path,
+			repairReport: report,
 		};
 	}
 }

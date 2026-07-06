@@ -1,5 +1,5 @@
 import {
-	autocomplete,
+	autocompleteMultiselect,
 	cancel,
 	confirm,
 	isCancel,
@@ -7,6 +7,8 @@ import {
 	text,
 } from "@clack/prompts";
 import type { IbgeMunicipio, IbgeUf } from "../entities/ibge-municipio.js";
+
+const BACK_SENTINEL = "__back__";
 
 /** Encerra o processo de forma limpa quando o usuário cancela (Ctrl+C). */
 function handleCancel<T>(value: T | symbol): T {
@@ -35,22 +37,48 @@ export async function promptState(ufs: IbgeUf[]): Promise<IbgeUf> {
 	return uf;
 }
 
-export async function promptCity(
-	municipios: IbgeMunicipio[],
-): Promise<IbgeMunicipio> {
-	const byId = new Map(municipios.map((m) => [m.id, m]));
+export type PromptCitiesResult =
+	| { back: true }
+	| { back: false; municipios: IbgeMunicipio[] };
 
-	const id = handleCancel(
-		await autocomplete({
-			message: "Digite para buscar a cidade",
+/**
+ * Multiselect com busca — deixa marcar várias cidades do mesmo estado de
+ * uma vez, em vez de uma-por-vez com confirmação no final. A primeira
+ * opção da lista é um sentinela "← Voltar": se marcada (mesmo junto de
+ * outras), a seleção inteira é descartada e o chamador deve refazer o
+ * prompt de estado — o Clack não tem navegação "para trás" nativa.
+ */
+export async function promptCities(
+	municipios: IbgeMunicipio[],
+): Promise<PromptCitiesResult> {
+	const byId = new Map(municipios.map((m) => [String(m.id), m]));
+
+	const selected = handleCancel(
+		await autocompleteMultiselect({
+			message:
+				"Digite para buscar e marque uma ou mais cidades (espaço marca, enter confirma)",
 			placeholder: "Nome da cidade...",
-			options: municipios.map((m) => ({ value: m.id, label: m.nome })),
+			required: true,
+			options: [
+				{ value: BACK_SENTINEL, label: "← Voltar (escolher outro estado)" },
+				...municipios.map((m) => ({ value: String(m.id), label: m.nome })),
+			],
 		}),
 	);
 
-	const municipio = byId.get(id);
-	if (!municipio) throw new Error(`Município id ${id} não encontrado`);
-	return municipio;
+	if (selected.includes(BACK_SENTINEL)) {
+		return { back: true };
+	}
+
+	const chosen = selected
+		.map((id) => byId.get(id))
+		.filter((m): m is IbgeMunicipio => m !== undefined);
+
+	if (chosen.length === 0) {
+		throw new Error("Nenhuma cidade selecionada");
+	}
+
+	return { back: false, municipios: chosen };
 }
 
 export async function promptTarget(): Promise<number | undefined> {
@@ -70,10 +98,10 @@ export async function promptTarget(): Promise<number | undefined> {
 	return value === "" ? undefined : Number(value);
 }
 
-export async function promptAddAnotherCity(): Promise<boolean> {
+export async function promptAddAnotherState(): Promise<boolean> {
 	return handleCancel(
 		await confirm({
-			message: "Adicionar outra cidade?",
+			message: "Adicionar cidades de outro estado?",
 			initialValue: false,
 		}),
 	);

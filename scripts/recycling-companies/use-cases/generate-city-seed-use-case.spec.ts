@@ -14,6 +14,7 @@ import type {
 import { GoogleAddressParser } from "../services/address-parser.js";
 import { CompanyGapFiller } from "../services/company-gap-filler.js";
 import { CompanySeedMapper } from "../services/company-seed-mapper.js";
+import { CompanySeedRepairer } from "../services/company-seed-repairer.js";
 import { CompanyTypeClassifier } from "../services/company-type-classifier.js";
 import { BrazilianIdentityGenerator } from "../services/identity-generator.js";
 import { SyntheticCompanyGenerator } from "../services/synthetic-company-generator.js";
@@ -120,6 +121,7 @@ function makeUseCase(placeIds: string[], writer: FakeSeedFileWriter) {
 		resolveCity,
 		fetchCompanies,
 		syntheticGenerator,
+		new CompanySeedRepairer(),
 		writer,
 	);
 }

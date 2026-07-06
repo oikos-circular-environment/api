@@ -28,3 +28,4 @@ Cada ticket é um arquivo próprio em `tickets/`, com checklist de execução. M
 | [T22](tickets/T22-documentacao-cli.md) | Documentação da CLI | ✅ Concluído |
 | [T23](tickets/T23-cache-outputdir-rename.md) | Correção do cache + flag de diretório de saída + rename do comando | ✅ Concluído |
 | [T24](tickets/T24-melhorias-consumidor-seed.md) | Melhorias no consumidor de seed (is_company_valid, validação Zod, dry-run) | ✅ Concluído |
+| [T25](tickets/T25-repair-multiselect-back.md) | Segunda onda de validação + multiselect de cidades + navegação back | ✅ Concluído |

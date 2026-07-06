@@ -2,8 +2,8 @@ import { parseArgs } from "node:util";
 import { intro, outro } from "@clack/prompts";
 import { Listr } from "listr2";
 import {
-	promptAddAnotherCity,
-	promptCity,
+	promptAddAnotherState,
+	promptCities,
 	promptOutputDir,
 	promptOverwrite,
 	promptState,
@@ -18,6 +18,7 @@ import { IbgeMunicipioProvider } from "./providers/ibge-municipio-provider.js";
 import { GoogleAddressParser } from "./services/address-parser.js";
 import { CompanyGapFiller } from "./services/company-gap-filler.js";
 import { CompanySeedMapper } from "./services/company-seed-mapper.js";
+import { CompanySeedRepairer } from "./services/company-seed-repairer.js";
 import { CompanyTypeClassifier } from "./services/company-type-classifier.js";
 import { BrazilianIdentityGenerator } from "./services/identity-generator.js";
 import { SyntheticCompanyGenerator } from "./services/synthetic-company-generator.js";
@@ -82,18 +83,31 @@ function parseCliArgs(argv: string[]): {
 	};
 }
 
+/**
+ * Loop: escolhe um estado, marca uma ou mais cidades daquele estado
+ * (multiselect com busca), e pergunta se quer cidades de outro estado
+ * também. "← Voltar" na lista de cidades refaz a escolha de estado.
+ */
 async function resolveCitiesInteractively(
 	municipioProvider: IbgeMunicipioProvider,
 ): Promise<CityInput[]> {
 	const ufs = await municipioProvider.fetchUfs();
 	const cities: CityInput[] = [];
 
-	do {
+	let keepGoing = true;
+	while (keepGoing) {
 		const uf = await promptState(ufs);
 		const municipios = await municipioProvider.fetchByUf(uf.sigla);
-		const municipio = await promptCity(municipios);
-		cities.push({ city: municipio.nome, stateCode: uf.sigla });
-	} while (await promptAddAnotherCity());
+		const result = await promptCities(municipios);
+
+		if (result.back) continue;
+
+		for (const municipio of result.municipios) {
+			cities.push({ city: municipio.nome, stateCode: uf.sigla });
+		}
+
+		keepGoing = await promptAddAnotherState();
+	}
 
 	return cities;
 }
@@ -108,6 +122,7 @@ interface CityPipelineCtx {
 	cityContext?: CityContext;
 	realCompanies?: CompanySeed[];
 	syntheticCompanies?: CompanySeed[];
+	validatedCompanies?: CompanySeed[];
 }
 
 function buildCityTasks(
@@ -178,14 +193,32 @@ function buildCityTasks(
 			},
 		},
 		{
+			title: "Validando e corrigindo dados gerados",
+			enabled: (ctx) => !ctx.skipCity,
+			task: (ctx, task) => {
+				const combined = [
+					...(ctx.realCompanies as CompanySeed[]),
+					...(ctx.syntheticCompanies ?? []),
+				];
+				const { companies, report } =
+					generateCitySeed.validateAndRepair(combined);
+				ctx.validatedCompanies = companies;
+
+				if (report.length === 0) {
+					task.title = "Validando e corrigindo dados gerados: nada a corrigir";
+					return;
+				}
+
+				task.title = `Validando e corrigindo dados gerados: ${report.length} ajuste(s)`;
+				task.output = report.join("\n");
+			},
+		},
+		{
 			title: "Escrevendo arquivo de seed",
 			enabled: (ctx) => !ctx.skipCity,
 			task: (ctx, task) => {
 				const cityContext = ctx.cityContext as CityContext;
-				const companies = [
-					...(ctx.realCompanies as CompanySeed[]),
-					...(ctx.syntheticCompanies ?? []),
-				];
+				const companies = ctx.validatedCompanies as CompanySeed[];
 				const result = generateCitySeed.writeSeed(cityContext, companies, {
 					force: ctx.force,
 				});
@@ -237,6 +270,7 @@ export async function runCli(argv: string[]): Promise<void> {
 		wasteServiceGenerator,
 		identityGenerator,
 	);
+	const repairer = new CompanySeedRepairer();
 
 	// Só entra em prompt quando algo estiver faltando E houver um terminal real
 	// — evita travar automação/CI sem TTY quando uma flag é omitida.
@@ -265,6 +299,7 @@ export async function runCli(argv: string[]): Promise<void> {
 		resolveCity,
 		fetchCompanies,
 		syntheticGenerator,
+		repairer,
 		writer,
 	);
 

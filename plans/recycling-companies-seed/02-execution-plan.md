@@ -79,6 +79,14 @@ Review do consumidor (`prisma/seeds/recycling-companies.ts`) encontrou um bug re
 |---|---|---|---|---|
 | T24 | Melhorias no consumidor de seed | `is_company_valid` calculado (não mais hardcoded); log de categoria não resolvida; validação Zod prévia (`companyGeneralRegistrationValidationSchema`/`upsertCompanyAddressSchema`/`upsertCompanyBusinessHoursSchema`); resumo final com contadores; `SEED_DRY_RUN=true`; `SEED_USER_PASSWORD` configurável | `prisma/seeds/recycling-companies.ts` | ✅ Concluído |
 
+### Lote 10 — Segunda onda de validação no CLI + multiselect + navegação back
+
+Move a mesma validação Zod do Lote 9 para dentro do próprio gerador (rede de segurança, não um reparador de arquivos já gerados) e melhora a ergonomia do modo interativo.
+
+| # | Ticket | Escopo | Arquivos | Status |
+|---|---|---|---|---|
+| T25 | Segunda onda de validação + multiselect de cidades + navegação back | `CompanySeedRepairer` (preenche telefone/horário vazios e revalida); nova task Listr2 "Validando e corrigindo dados gerados"; `promptCities` com `autocompleteMultiselect` (marca várias cidades do mesmo estado de uma vez) + sentinela "← Voltar" pra reconsiderar o estado; `generateFakePhone` extraído pra módulo compartilhado (eliminando duplicação entre `CompanyGapFiller`/`SyntheticCompanyGenerator`) | `services/fake-phone.ts`<br>`services/company-seed-repairer.ts` (+spec)<br>`use-cases/generate-city-seed-use-case.ts` (+spec)<br>`cli/prompts.ts`<br>`cli.ts`<br>`docs/recycling-seed-cli.md` | ✅ Concluído |
+
 ---
 
 ## Grafo de Dependências

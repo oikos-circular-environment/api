@@ -6,6 +6,7 @@ import type {
 	IdentityType,
 } from "../entities/company-seed.js";
 import { generateSyntheticHours } from "./company-gap-filler.js";
+import { generateFakePhone } from "./fake-phone.js";
 import type { BrazilianIdentityGenerator } from "./identity-generator.js";
 import {
 	ECOPONTO_CATEGORY_POOL,
@@ -34,10 +35,6 @@ function pickDistributionEntry(): TypeDistributionEntry {
 
 function formatZipCode(): string {
 	return faker.string.numeric(8).replace(/(\d{5})(\d{3})/, "$1-$2");
-}
-
-function formatPhone(): string {
-	return `(${faker.string.numeric(2)}) 9${faker.string.numeric(4)}-${faker.string.numeric(4)}`;
 }
 
 /**
@@ -75,7 +72,7 @@ export class SyntheticCompanyGenerator {
 			company_type,
 			status: true,
 			email: `${faker.internet.username()}@${faker.internet.domainName()}`,
-			phones: [formatPhone()],
+			phones: [generateFakePhone()],
 			website: null,
 			started_activity_in: faker.date.past({ years: 10 }).toISOString(),
 			address: {
