@@ -1,0 +1,3922 @@
+{
+	"_meta": {
+		"generated_at": "2026-07-07T15:19:31.396Z",
+		"city": "Nova Mutum",
+		"state_code": "MT",
+		"users_total": 20,
+		"companies_total": 10,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Chaim Powlowski",
+			"display_name": "Chaim",
+			"phone": "(79) 95330-3227",
+			"email": "chaim-powlowski.0.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "20351-165",
+				"street": "Tessie Walk",
+				"number": "322",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.210138,
+				"longitude": -55.997071
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJS3EImNUpoJMRO7oaro2RUsw",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Es Reciclagem",
+					"business_name": "Es Reciclagem",
+					"identity": "64005597000140",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "es.reciclagem@total-responsibility.name",
+					"phones": ["(65) 99236-8005"],
+					"website": null,
+					"started_activity_in": "2023-12-16T19:32:48.442Z",
+					"address": {
+						"zip_code": "78450-000",
+						"street": "Nova Mutum",
+						"number": "MT",
+						"complement": null,
+						"district": "Centro",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.778637199999999,
+						"longitude": -56.0883545
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "16:50"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.47,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 751.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 657.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.27,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 169.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 143.55,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 254.2,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 76.73,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 72.21,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 296.93,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 92.9,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJVxV7VUqHn5MRvj977s4rr54",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Gigante da Latinha",
+					"business_name": "Reciclagem Gigante da Latinha",
+					"identity": "42355459000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.gigante.da.latinha@astonishing-conservative.biz",
+					"phones": ["(65) 99233-8835"],
+					"website": null,
+					"started_activity_in": "2024-10-20T09:00:58.485Z",
+					"address": {
+						"zip_code": "78456-340",
+						"street": "Av. Curitiba",
+						"number": "n° 3806",
+						"complement": null,
+						"district": "Nova Mutum, MT, , Brasil",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.851356599999999,
+						"longitude": -56.089624199999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 239.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.41,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 226.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 182.26,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 150.69,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 117.95,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 137.81,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 85.2,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 262.06,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-11T19:49:10.762Z",
+					"observations": "Sodalitas urbs triumphus cattus vilicus cognomen demum patrocinor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.864136,
+								"longitude": -56.478373,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783420617347
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "County Antrim",
+							"streetNumber": "5929",
+							"street": "Koch Crescent",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44310960",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kilback Vista, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-07T07:41:33.448Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.426952,
+								"longitude": -55.574064,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783375182757
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Perry County",
+							"streetNumber": "6476",
+							"street": "Elm Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00799662",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Lake Street, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "royal-schulist.14.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-29T23:22:36.401Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.973846,
+								"longitude": -55.684233,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783381877720
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Avon",
+							"streetNumber": "8290",
+							"street": "Gerlach Forge",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76516772",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "College Street, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Erica Schiller",
+			"display_name": "Erica",
+			"phone": "(31) 92477-2315",
+			"email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "05222-542",
+				"street": "Huels Overpass",
+				"number": "375",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.221071,
+				"longitude": -56.133573
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJCUcI2BgpoJMRsQF0RfkuAqA",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Central de Triagem de Resíduos - Eco Genesys - Reciclagem/Sucatas em Geral",
+					"business_name": "Central de Triagem de Resíduos - Eco Genesys - Reciclagem/Sucatas em Geral",
+					"identity": "31259361000180",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "central.de.triagem.de.residuos.eco.genesys.reciclagem.sucatas.em.geral@mad-porter.org",
+					"phones": ["(62) 98512-6787"],
+					"website": null,
+					"started_activity_in": "2022-10-27T11:13:56.642Z",
+					"address": {
+						"zip_code": "78450-000",
+						"street": "Chácara Santa Catarina Zona Rural",
+						"number": "S/N",
+						"complement": null,
+						"district": "Nova Mutum, MT, , Brasil",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.793734899999999,
+						"longitude": -56.0906076
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:12",
+									"end_time": "17:04"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:12",
+									"end_time": "17:04"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:11",
+									"end_time": "17:05"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:12",
+									"end_time": "17:03"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:11",
+									"end_time": "17:03"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:03",
+									"end_time": "10:57"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.88,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 326.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.56,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 345.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.19,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 542.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 865.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 675.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 283.83,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 168.02,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 87.43,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJUY3LsxjzoJMRBW3fM2wgAJU",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Fortaleza",
+					"business_name": "Reciclagem Fortaleza",
+					"identity": "75898415000123",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.fortaleza@secret-jellyfish.biz",
+					"phones": ["(65) 99991-9070"],
+					"website": null,
+					"started_activity_in": "2023-06-07T05:38:47.454Z",
+					"address": {
+						"zip_code": "78455-000",
+						"street": "R. Maceió",
+						"number": "1494",
+						"complement": null,
+						"district": "Industrial, Lucas do Rio Verde",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.0513158,
+						"longitude": -55.9131739
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.98,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 960.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 825.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 177.92,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 162.59,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 123.42,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 276.49,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 207.8,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 276,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-22T06:41:41.574Z",
+					"observations": "Contigo tergeo congregatio sopor vestrum acceptus aveho supra.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.299222,
+								"longitude": -56.074401,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783429102293
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Henry County",
+							"streetNumber": "688",
+							"street": "Jacobson Throughway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20796485",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Pennsylvania Avenue, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Vidro",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jonathon Runolfsson",
+			"display_name": "Jonathon",
+			"phone": "(99) 93898-9070",
+			"email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "63087-310",
+				"street": "Lela Spring",
+				"number": "71362",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.007758,
+				"longitude": -56.000811
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJA3s-hTjyoJMRCujz4a8ZwPM",
+						"rating": 4.8,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto",
+					"business_name": "Ecoponto",
+					"identity": "52630273000113",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto@juvenile-sonar.org",
+					"phones": ["(65) 3549-7734"],
+					"website": null,
+					"started_activity_in": "2026-01-11T02:38:04.572Z",
+					"address": {
+						"zip_code": "78455-000",
+						"street": "Av. da Fé",
+						"number": "S/N",
+						"complement": null,
+						"district": "Tessele Junior, Lucas do Rio Verde",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.0428889,
+						"longitude": -55.9252288
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.54,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 859.9
+						},
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 4.25,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 921.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.27,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 205.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 142.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.98,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 631.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 114.63,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Lâmpadas",
+							"description": "Serviço de coleta e transporte de Lâmpadas",
+							"price": 246.61,
+							"unit": "UNIT",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 250.2,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 252.72,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJAUJhdwCHn5MRUL7DAiRcz_M",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "2 Irmão Reciclagem",
+					"business_name": "2 Irmão Reciclagem",
+					"identity": "63395310000172",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "2.irmao.reciclagem@frozen-deck.info",
+					"phones": ["(88) 98789-0868"],
+					"website": null,
+					"started_activity_in": "2019-01-18T05:02:05.472Z",
+					"address": {
+						"zip_code": "78450-000",
+						"street": "R. das Açucenas",
+						"number": "280",
+						"complement": null,
+						"district": "Nova Mutum, MT, , Brasil",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.8485502,
+						"longitude": -56.0877543
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:18"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:18"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:18"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:18"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:18"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.83,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 744.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.93,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 232.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.28,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 531.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.29,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 420.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 146.58,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 227.89,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 58.7,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 174.18,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 82.53,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-15T21:53:44.155Z",
+					"observations": "Temperantia amita auxilium sint viriliter adnuo decerno decet calcar amplexus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.004415,
+								"longitude": -55.526896,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783387370741
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Northumberland",
+							"streetNumber": "279",
+							"street": "E 2nd Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45251128",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beer Cape, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ashley-langworth.17.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cicero-witting.6.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"description": "Conservo traho crustulum absens corrumpo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"description": "Summopere voluptas calco bis spectaculum attonbitus ocer trans facere adipiscor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Carmine Jerde",
+			"display_name": "Carmine",
+			"phone": "(32) 95423-6320",
+			"email": "carmine-jerde.3.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "41580-914",
+				"street": "Hilpert Course",
+				"number": "876",
+				"complement": null,
+				"district": "Borders",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.939925,
+				"longitude": -55.988135
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ-0SMfY_zoJMRyPM6kMLwUMo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sacarias Luverdense",
+					"business_name": "Sacarias Luverdense",
+					"identity": "03195937000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sacarias.luverdense@sunny-operating.name",
+					"phones": ["(65) 98476-6395"],
+					"website": null,
+					"started_activity_in": "2022-07-14T10:58:36.460Z",
+					"address": {
+						"zip_code": "78460-399",
+						"street": "R. Belém",
+						"number": "1331 N",
+						"complement": null,
+						"district": "Industrial III, Lucas do Rio Verde",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.048832899999999,
+						"longitude": -55.9161149
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.65,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 944.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.95,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 309.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.65,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 717.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 113.54,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 166.63,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 73.27,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 253.16,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 85.69,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJddcrsnvxoJMRGXgJlicr1RU",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Jaba Reciclagem",
+					"business_name": "Jaba Reciclagem",
+					"identity": "77904932000193",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jaba.reciclagem@steep-steeple.org",
+					"phones": ["(65) 99927-3501"],
+					"website": null,
+					"started_activity_in": "2017-02-03T15:39:03.211Z",
+					"address": {
+						"zip_code": "78455-000",
+						"street": "Avenida Felipe Barea Ventura",
+						"number": "673W",
+						"complement": null,
+						"district": "Ventura, Lucas do Rio Verde",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.0341626,
+						"longitude": -55.9463523
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.71,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 380
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.46,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 138.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.58,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 613.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.69,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 522.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.05,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 770.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 367.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 203.61,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 74.83,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 76.18,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 105.64,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Rita Rowe",
+			"display_name": "Rita",
+			"phone": "(18) 91309-6034",
+			"email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "26448-716",
+				"street": "Deon Land",
+				"number": "438",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.041416,
+				"longitude": -55.62718
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJpdkUgF_zoJMR1fD-GzKx3gE",
+						"rating": 4.6,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Mersupel - Reciclagem e Ferro Velho",
+					"business_name": "Mersupel - Reciclagem e Ferro Velho",
+					"identity": "66746659321",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "mersupel.reciclagem.e.ferro.velho@authorized-decision.info",
+					"phones": ["(65) 99206-4416"],
+					"website": "https://mersupellrv.webnode.com.br/",
+					"started_activity_in": "2021-09-06T06:19:55.984Z",
+					"address": {
+						"zip_code": "78455-000",
+						"street": "Av. Maranhão",
+						"number": "965 N",
+						"complement": null,
+						"district": "St. Industrial, Lucas do Rio Verde",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.0491198,
+						"longitude": -55.9195894
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 828.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 178
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.44,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 887.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.4,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 249.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.73,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 612.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 283.07,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 217.79,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJSbWnCdEroJMRieXgZ34RaBE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Mutum",
+					"business_name": "Reciclagem Mutum",
+					"identity": "71046967000152",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.mutum@tempting-agreement.com",
+					"phones": ["(40) 99359-7624"],
+					"website": null,
+					"started_activity_in": "2019-10-28T02:39:12.639Z",
+					"address": {
+						"zip_code": "78450-000",
+						"street": "Nova Mutum",
+						"number": "S/N",
+						"complement": null,
+						"district": "MT, , Brasil",
+						"city": "Nova Mutum",
+						"city_ibge_id": 5106224,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.7689126,
+						"longitude": -56.123156699999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.17,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 801.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.67,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 163.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.27,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 685.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 208.76,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 275.73,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-29T04:26:03.171Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.427804,
+								"longitude": -55.860141,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783367406443
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Humberside",
+							"streetNumber": "35109",
+							"street": "Prospect Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41741788",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kassulke Mountains, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Byron Emard",
+			"display_name": "Byron",
+			"phone": "(11) 99485-0126",
+			"email": "byron-emard.5.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "92125-394",
+				"street": "Paucek Gateway",
+				"number": "8186",
+				"complement": null,
+				"district": "Lancashire",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.481714,
+				"longitude": -56.177015
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Cicero Witting",
+			"display_name": "Cicero",
+			"phone": "(64) 98646-3701",
+			"email": "cicero-witting.6.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "70347-289",
+				"street": "15th Street",
+				"number": "132",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.637149,
+				"longitude": -56.380174
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-21T22:08:53.183Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.242676,
+								"longitude": -56.275925,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783396819540
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Clay County",
+							"streetNumber": "59620",
+							"street": "Cynthia Locks",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "16682791",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mayer Parkways, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-19T19:13:34.672Z",
+					"observations": "Ventito quibusdam deserunt ademptio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.633092,
+								"longitude": -56.610827,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783382257423
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Northamptonshire",
+							"streetNumber": "167",
+							"street": "A Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42943002",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Amalia Stravenue, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lucius-schuster.9.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-11T16:17:33.815Z",
+					"observations": "Thesis non claustrum ver nesciunt xiphias cursus thorax umerus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.055108,
+								"longitude": -56.283137,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783367787809
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Hertfordshire",
+							"streetNumber": "35545",
+							"street": "Main Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59548321",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Queen's Road, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rae Hagenes-Morissette",
+			"display_name": "Rae",
+			"phone": "(62) 96658-9568",
+			"email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "63161-816",
+				"street": "Robert Loaf",
+				"number": "89061",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.821192,
+				"longitude": -55.412997
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-18T10:25:03.772Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.96229,
+								"longitude": -56.56838,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783427995250
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Gwynedd County",
+							"streetNumber": "47813",
+							"street": "Hickle Neck",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19297116",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rhiannon Locks, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-23T17:57:15.772Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.550455,
+								"longitude": -55.948552,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783378607829
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Humberside",
+							"streetNumber": "888",
+							"street": "N Poplar Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14615910",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Buckingham Road, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Eletroeletrônicos (REEE)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lucius-schuster.9.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-07T07:15:10.522Z",
+					"observations": "Absens solium incidunt expedita creator thermae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.621819,
+								"longitude": -56.143464,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783407704695
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Madison County",
+							"streetNumber": "799",
+							"street": "Leda Corner",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56986059",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Shields Row, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "byron-emard.5.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-heidenreich.12.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucius-schuster.9.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ashley-langworth.17.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+							"description": "Neque abstergo defaeco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"description": "Stella cito sulum cunabula curto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Sonja Wiza",
+			"display_name": "Sonja",
+			"phone": "(89) 93453-6969",
+			"email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "65809-328",
+				"street": "S Oak Street",
+				"number": "93913",
+				"complement": null,
+				"district": "South Glamorgan",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.923354,
+				"longitude": -55.473359
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-07-10T08:47:54.113Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.974332,
+								"longitude": -56.6452,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783413128670
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Somerset",
+							"streetNumber": "45597",
+							"street": "Raquel Keys",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06998413",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Railroad Avenue, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Eletroeletrônicos (REEE)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "cicero-witting.6.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-05T06:37:27.544Z",
+					"observations": "Vestrum corporis vetus curvo distinctio attero beneficium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.991299,
+								"longitude": -56.558889,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783421865959
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Avon",
+							"streetNumber": "207",
+							"street": "Laura Springs",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "18412512",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Fredrick Corner, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "chaim-powlowski.0.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lucius Schuster",
+			"display_name": "Lucius",
+			"phone": "(85) 96653-4154",
+			"email": "lucius-schuster.9.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "11243-973",
+				"street": "Michale Prairie",
+				"number": "9437",
+				"complement": null,
+				"district": "West Midlands",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.06567,
+				"longitude": -56.070934
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-13T10:14:51.744Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.441688,
+								"longitude": -56.588428,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783431081780
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Greene County",
+							"streetNumber": "1128",
+							"street": "Nora Keys",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74583688",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bogan Heights, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "royal-schulist.14.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "byron-emard.5.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+							"description": "Adversus surculus conturbo cibo textor cena dolores amiculum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Peggy Hahn",
+			"display_name": "Peggy",
+			"phone": "(31) 94204-8424",
+			"email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "02959-874",
+				"street": "Quinn Lodge",
+				"number": "2450",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.562327,
+				"longitude": -55.720577
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-01T12:34:43.959Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.006262,
+								"longitude": -55.421267,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783428848990
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Dorset",
+							"streetNumber": "946",
+							"street": "Cormier Shores",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48919049",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Michelle Forest, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-heidenreich.12.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Muhammad Brakus",
+			"display_name": "Muhammad",
+			"phone": "(83) 91821-6695",
+			"email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "16697-331",
+				"street": "Liliana Harbors",
+				"number": "684",
+				"complement": null,
+				"district": "Durham",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.897551,
+				"longitude": -55.795632
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-25T21:19:36.090Z",
+					"observations": "Audio laudantium soleo aegrotatio compello civis damnatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.756146,
+								"longitude": -56.520341,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783386808305
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Worcestershire",
+							"streetNumber": "160",
+							"street": "Connelly Course",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "97239839",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Doyle Hills, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "chaim-powlowski.0.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jimmie Heidenreich",
+			"display_name": "Jimmie",
+			"phone": "(26) 91138-5628",
+			"email": "jimmie-heidenreich.12.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "02396-611",
+				"street": "Nikolaus Lakes",
+				"number": "479",
+				"complement": null,
+				"district": "Scott County",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.904208,
+				"longitude": -56.022448
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Pedro Windler",
+			"display_name": "Pedro",
+			"phone": "(37) 91668-0016",
+			"email": "pedro-windler.13.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "76690-978",
+				"street": "Church Hill",
+				"number": "88383",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.812043,
+				"longitude": -55.765723
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-03T10:17:31.398Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.327228,
+								"longitude": -56.00337,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783376688046
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Buckinghamshire",
+							"streetNumber": "6037",
+							"street": "Pearl Valleys",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48532504",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Johnathon Underpass, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Vidro",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jimmie-heidenreich.12.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmine-jerde.3.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucius-schuster.9.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cicero-witting.6.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"description": "Iure tergeo tutis undique.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-06T08:06:47.324Z",
+					"observations": "Calculus verecundia varietas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.6152,
+								"longitude": -56.728543,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783354526167
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Lancashire",
+							"streetNumber": "449",
+							"street": "W 6th Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82558210",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mueller Rapids, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Vidro", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rae-hagenes-morissette.7.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucius-schuster.9.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "byron-emard.5.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ashley-langworth.17.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"description": "Tribuo tactus amita uxor stultus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Royal Schulist",
+			"display_name": "Royal",
+			"phone": "(62) 96082-7465",
+			"email": "royal-schulist.14.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "24390-839",
+				"street": "The Meadows",
+				"number": "1151",
+				"complement": null,
+				"district": "Marshall County",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.11101,
+				"longitude": -56.5138
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-08-13T13:32:57.406Z",
+					"observations": "Solium benigne alienus peior curto vehemens patior enim valeo aeternus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.845459,
+								"longitude": -56.423741,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783360443061
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "County Antrim",
+							"streetNumber": "8071",
+							"street": "Common Lane",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74153347",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kings Highway, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "pedro-windler.13.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-28T13:35:26.556Z",
+					"observations": "Accusamus acceptus cresco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.84007,
+								"longitude": -56.324379,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783428023076
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Wiltshire",
+							"streetNumber": "6860",
+							"street": "Fore Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26679707",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 9th Street, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-08T03:28:13.297Z",
+					"observations": "Celebrer aliqua compono molestias xiphias defleo sapiente.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.821015,
+								"longitude": -55.872857,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783372938847
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Clwyd",
+							"streetNumber": "677",
+							"street": "N Pine Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26281706",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wyman Meadow, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "carmine-jerde.3.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erica-schiller.1.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "byron-emard.5.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pedro-windler.13.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ashley-langworth.17.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+							"description": "Beneficium vergo tego tempora.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Gust McClure",
+			"display_name": "Gust",
+			"phone": "(35) 97236-8610",
+			"email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "72910-379",
+				"street": "Darrel Trail",
+				"number": "3255",
+				"complement": null,
+				"district": "Northamptonshire",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.984247,
+				"longitude": -55.972239
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-29T21:23:51.368Z",
+					"observations": "Cito vulticulus spargo temperantia recusandae decerno.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.060031,
+								"longitude": -55.700052,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783389306581
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Somerset",
+							"streetNumber": "34232",
+							"street": "Goodwin Flat",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52117715",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Orchard Road, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Plástico", "Vidro"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-03T23:41:38.961Z",
+					"observations": "Umquam debeo subiungo sonitus venio adfectus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.649274,
+								"longitude": -56.178856,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783386470920
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Douglas County",
+							"streetNumber": "47855",
+							"street": "The Maltings",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71910809",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Spencer Path, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "pedro-windler.13.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-13T22:34:23.217Z",
+					"observations": "Vesco aliqua cruciamentum velociter ulterius facilis annus autus stillicidium cupressus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.872102,
+								"longitude": -55.498327,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783404373060
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Lake County",
+							"streetNumber": "49199",
+							"street": "East Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87925563",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Moore Orchard, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-heidenreich.12.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonathon-runolfsson.2.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "chaim-powlowski.0.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Mitchell Kautzer",
+			"display_name": "Mitchell",
+			"phone": "(25) 95803-4698",
+			"email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "38234-545",
+				"street": "Gleichner Knolls",
+				"number": "518",
+				"complement": null,
+				"district": "Gloucestershire",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.930056,
+				"longitude": -56.382474
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-06T14:25:23.752Z",
+					"observations": "Confugo demens subvenio verecundia decens cura caries.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.461109,
+								"longitude": -56.213756,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783401059990
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Washington County",
+							"streetNumber": "5501",
+							"street": "Keebler Mill",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12100580",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Pine Close, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ashley Langworth",
+			"display_name": "Ashley",
+			"phone": "(39) 94375-0655",
+			"email": "ashley-langworth.17.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "84366-019",
+				"street": "Water Street",
+				"number": "15372",
+				"complement": null,
+				"district": "Marshall County",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.543174,
+				"longitude": -56.367145
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-27T04:46:08.974Z",
+					"observations": "Aeneus pectus stabilis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.859768,
+								"longitude": -56.511513,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783383192307
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Hancock County",
+							"streetNumber": "584",
+							"street": "Percy Pines",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75068209",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Church Avenue, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Vidro",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "pedro-windler.13.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-23T21:45:27.083Z",
+					"observations": "Certus antepono amplitudo demo comes cubicularis deserunt contego.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.924813,
+								"longitude": -56.363986,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783357562161
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Tyne and Wear",
+							"streetNumber": "20122",
+							"street": "N Center Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27340294",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rudolph Union, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": ["Vidro", "Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "mitchell-kautzer.16.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-heidenreich.12.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "muhammad-brakus.11.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmine-jerde.3.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "byron-emard.5.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rita-rowe.4.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-wiza.8.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pedro-windler.13.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "royal-schulist.14.nova-mutum-mt@oikos.seed",
+							"description": "Testimonium acidus audeo atavus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "gust-mcclure.15.nova-mutum-mt@oikos.seed",
+							"description": "Molestias deporto suppono derelinquo velum verbera ambulo ademptio curriculum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Dwayne Abbott-Herman",
+			"display_name": "Dwayne",
+			"phone": "(74) 96990-2519",
+			"email": "dwayne-abbott-herman.18.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "50883-969",
+				"street": "Moore Bridge",
+				"number": "9916",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.566217,
+				"longitude": -56.213075
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Deborah Fisher",
+			"display_name": "Deborah",
+			"phone": "(83) 90385-8890",
+			"email": "deborah-fisher.19.nova-mutum-mt@oikos.seed",
+			"address": {
+				"zip_code": "11363-261",
+				"street": "Fannie Estates",
+				"number": "567",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Nova Mutum",
+				"city_ibge_id": 5106224,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.100791,
+				"longitude": -56.554145
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-07T20:22:53.178Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.430037,
+								"longitude": -56.205059,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783403265218
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "Lake County",
+							"streetNumber": "8498",
+							"street": "Heaney Grove",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78575795",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "3rd Street, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Construção Civil e Demolição (RCD)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "peggy-hahn.10.nova-mutum-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "royal-schulist.14.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-20T12:47:22.768Z",
+					"observations": "Ventus ocer vobis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.886779,
+								"longitude": -55.5826,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783355091381
+						},
+						"addresses": {
+							"city": "Nova Mutum",
+							"district": "County Armagh",
+							"streetNumber": "157",
+							"street": "Patty Row",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "97622011",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hannah Shoal, Nova Mutum - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Óleo Mineral / Lubrificante",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "cicero-witting.6.nova-mutum-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

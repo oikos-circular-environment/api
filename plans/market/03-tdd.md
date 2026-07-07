@@ -10,7 +10,7 @@ Iniciando pelos testes com repositório in-memory, validamos a lógica de negóc
 
 ## Dados de Teste
 
-Os dados de seed em `prisma/seeds/recycling-companies.json` contêm **48 empresas reais** de Rondonópolis/MT com coordenadas GPS, horários de funcionamento, serviços e resíduos. Esses dados devem ser utilizados como base para os testes unitários.
+Os dados de seed em `prisma/seeds/recycling-companies/rondonopolis-mt.json` contêm **48 empresas reais** de Rondonópolis/MT com coordenadas GPS, horários de funcionamento, serviços e resíduos. Esses dados devem ser utilizados como base para os testes unitários.
 
 **Ponto de referência central (centro de Rondonópolis):**
 ```
