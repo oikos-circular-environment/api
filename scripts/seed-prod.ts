@@ -16,7 +16,12 @@
  *   DEST_SSH_HOST=134.65.229.35 DEST_SSH_KEY=~/.ssh/oikos-deploy npm run seed:prod
  */
 
-import { type ChildProcess, execFileSync, spawn, spawnSync } from "node:child_process";
+import {
+	type ChildProcess,
+	execFileSync,
+	spawn,
+	spawnSync,
+} from "node:child_process";
 import { connect } from "node:net";
 
 const DEST_COMPOSE_DIR = "/opt/oikos/docker";
@@ -26,7 +31,9 @@ const LOCAL_PORT = Number(process.env.LOCAL_PORT ?? 55432);
 function requireEnv(name: string): string {
 	const value = process.env[name];
 	if (!value) {
-		console.error(`ERRO: variavel de ambiente obrigatoria nao definida: ${name}`);
+		console.error(
+			`ERRO: variavel de ambiente obrigatoria nao definida: ${name}`,
+		);
 		process.exit(1);
 	}
 	return value;
@@ -74,7 +81,8 @@ async function main() {
 	const containerIp = sshExec(
 		`docker inspect ${REMOTE_CONTAINER} --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'`,
 	);
-	if (!containerIp) throw new Error("Nao consegui obter o IP do container postgresql");
+	if (!containerIp)
+		throw new Error("Nao consegui obter o IP do container postgresql");
 
 	console.log("==> Lendo credenciais do .env.prod na VM");
 	const envProd = sshExec(`cat ${DEST_COMPOSE_DIR}/.env.prod`);
@@ -82,10 +90,19 @@ async function main() {
 	const postgresPassword = readEnvVar(envProd, "POSTGRES_PASSWORD");
 	const postgresDb = readEnvVar(envProd, "POSTGRES_DB");
 
-	console.log(`==> Abrindo tunel SSH local (porta ${LOCAL_PORT} -> ${containerIp}:5432)`);
+	console.log(
+		`==> Abrindo tunel SSH local (porta ${LOCAL_PORT} -> ${containerIp}:5432)`,
+	);
 	const tunnel: ChildProcess = spawn(
 		"ssh",
-		["-i", sshKey, "-N", "-L", `${LOCAL_PORT}:${containerIp}:5432`, `deploy@${sshHost}`],
+		[
+			"-i",
+			sshKey,
+			"-N",
+			"-L",
+			`${LOCAL_PORT}:${containerIp}:5432`,
+			`deploy@${sshHost}`,
+		],
 		{ stdio: "ignore" },
 	);
 	tunnel.on("error", (err) => {
