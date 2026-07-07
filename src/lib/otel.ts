@@ -2,6 +2,7 @@ import { FastifyOtelInstrumentation } from "@fastify/otel";
 import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
 import { OTLPMetricExporter } from "@opentelemetry/exporter-metrics-otlp-http";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
+import { RuntimeNodeInstrumentation } from "@opentelemetry/instrumentation-runtime-node";
 import { resourceFromAttributes } from "@opentelemetry/resources";
 import { PeriodicExportingMetricReader } from "@opentelemetry/sdk-metrics";
 import { NodeSDK } from "@opentelemetry/sdk-node";
@@ -39,6 +40,7 @@ if (endpoint) {
 			}),
 			new FastifyOtelInstrumentation({ registerOnInitialization: true }),
 			new PrismaInstrumentation(),
+			new RuntimeNodeInstrumentation({ monitoringPrecision: 5_000 }),
 		],
 	});
 
