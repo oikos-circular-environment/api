@@ -1,0 +1,11 @@
+### API pública do IBGE — sem chave. Não existe busca por nome no servidor
+### (`?nome=` é ignorado) — por isso o fluxo real busca a lista inteira da
+### UF e faz o match client-side (ver providers/ibge-municipio-provider.ts).
+@uf = MT
+@municipioId = 5106505
+
+### Lista de municípios da UF
+GET https://servicodados.ibge.gov.br/api/v1/localidades/estados/{{uf}}/municipios
+
+### Lookup direto por id — útil para conferir o resultado do resolver
+GET https://servicodados.ibge.gov.br/api/v1/localidades/municipios/{{municipioId}}

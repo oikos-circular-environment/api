@@ -9,7 +9,7 @@ export default defineConfig({
 	},
 	test: {
 		root: "./",
-		include: ["src/**/*.spec.ts"],
+		include: ["src/**/*.spec.ts", "cli/**/*.spec.ts"],
 		exclude: [
 			"src/**/*.e2e.spec.ts",
 			"src/**/*.integration.spec.ts",

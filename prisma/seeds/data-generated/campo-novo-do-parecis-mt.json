@@ -1,0 +1,4212 @@
+{
+	"_meta": {
+		"generated_at": "2026-07-07T15:19:20.473Z",
+		"city": "Campo Novo do Parecis",
+		"state_code": "MT",
+		"users_total": 20,
+		"companies_total": 10,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Dale Ledner",
+			"display_name": "Dale",
+			"phone": "(55) 97663-0666",
+			"email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "86835-860",
+				"street": "E Center Street",
+				"number": "313",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.659032,
+				"longitude": -57.900252
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ-VrYT77vopMR13uyfl-v9gs",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "MP Reciclagem",
+					"business_name": "MP Reciclagem",
+					"identity": "05059202000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mp.reciclagem@poor-bowling.info",
+					"phones": ["(66) 99711-6962"],
+					"website": null,
+					"started_activity_in": "2021-11-20T12:24:56.472Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "R. Projetada 2",
+						"number": "número 105 NE",
+						"complement": null,
+						"district": "Campo Novo do Parecis, MT, , Brasil",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.6581297,
+						"longitude": -57.899867900000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:30",
+									"end_time": "11:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 586.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 882.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 936.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 307.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.99,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 826.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 116.61,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 274.88,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 188.78,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 80.14,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ_Uu_pz3vopMRRrls5CIVYkE",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Recicla Agro",
+					"business_name": "Recicla Agro",
+					"identity": "66469876000190",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "recicla.agro@athletic-toaster.com",
+					"phones": ["(62) 98495-1111"],
+					"website": null,
+					"started_activity_in": "2016-09-01T05:09:27.724Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "R. Projetada 3",
+						"number": "S/N",
+						"complement": null,
+						"district": "Jardim Primavera, Campo Novo do Parecis",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.657249700000001,
+						"longitude": -57.899878799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 244.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.21,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 906.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 517.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 657.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.15,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 309.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 147.52,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 294.99,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 215.96,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-23T02:53:53.898Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.669881,
+								"longitude": -57.901726,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783364218757
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "County Fermanagh",
+							"streetNumber": "9662",
+							"street": "Farrell Station",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45903057",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Bridge Street, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Madeira",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cynthia-franey.2.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-04T03:35:41.364Z",
+					"observations": "Verumtamen conqueror iste.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.673699,
+								"longitude": -57.901366,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783418983640
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lawrence County",
+							"streetNumber": "7377",
+							"street": "Howe Forge",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68530065",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Spinney, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "leonora-jenkins.16.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-11T23:11:44.037Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.648789,
+								"longitude": -57.894295,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783368572317
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Somerset",
+							"streetNumber": "98592",
+							"street": "Montana Fall",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32099676",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chestnut Grove, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Metal / Alumínio",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leonora-jenkins.16.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Verbum acerbitas convoco socius suscipit artificiose.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Speculum adnuo strenuus ante texo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Marvin Heaney",
+			"display_name": "Marvin",
+			"phone": "(68) 93242-4614",
+			"email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "80288-510",
+				"street": "Alexandra Road",
+				"number": "628",
+				"complement": null,
+				"district": "County Antrim",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.662119,
+				"longitude": -57.905602
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJu3qTE8-ymJMRaXZqlybc15g",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "TANGARÁ CARTUCHOS",
+					"business_name": "TANGARÁ CARTUCHOS",
+					"identity": "06617656000134",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "tangara.cartuchos@stark-shipper.net",
+					"phones": ["(65) 3382-3330"],
+					"website": null,
+					"started_activity_in": "2019-12-27T13:39:22.489Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "R. São Paulo",
+						"number": "599",
+						"complement": null,
+						"district": "Centro, Campo Novo do Parecis",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.6626001,
+						"longitude": -57.8900414
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.32,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 389
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.11,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 351
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.78,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 795.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.11,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 480.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.31,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 45.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.62,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 522.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 289.51,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 225.68,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 148.24,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 292.18,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 147.94,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-c07aTvvopMR6BYQE4IvWI8",
+						"rating": 4.3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "FERRO VELHO SUCATÃO",
+					"business_name": "FERRO VELHO SUCATÃO",
+					"identity": "11550761846",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.sucatao@quixotic-contrail.info",
+					"phones": ["(65) 3382-1188"],
+					"website": "https://jhfgthdjd.com.br/",
+					"started_activity_in": "2021-10-27T13:55:53.420Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "Av. Mal. Rondon",
+						"number": "901",
+						"complement": null,
+						"district": "Centro, Campo Novo do Parecis",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.6569804,
+						"longitude": -57.90238120000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 570.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.76,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 181.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.2,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 581.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.25,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 42.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 198.09,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 249.96,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 275.31,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 51.04,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-01T04:12:15.675Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.657101,
+								"longitude": -57.922345,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783433499449
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Cumbria",
+							"streetNumber": "2598",
+							"street": "Smith Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80247373",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Betty Fork, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cynthia-franey.2.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Acceptus cribro autus arca cursus tertius xiphias vehemens deporto desipio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Cynthia Franey",
+			"display_name": "Cynthia",
+			"phone": "(73) 91290-4322",
+			"email": "cynthia-franey.2.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "60497-154",
+				"street": "Warren Road",
+				"number": "311",
+				"complement": null,
+				"district": "Tayside",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.639595,
+				"longitude": -57.901293
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJtzRPUQDpopMRhAnjSH-e78Q",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto JP",
+					"business_name": "Ecoponto JP",
+					"identity": "87627291000120",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.jp@shameless-commodity.net",
+					"phones": ["(69) 99302-5614"],
+					"website": null,
+					"started_activity_in": "2020-07-27T12:04:29.791Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "Av. Minas Gerais",
+						"number": "3388",
+						"complement": null,
+						"district": "Jardim das Palmeiras, Campo Novo do Parecis",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.6471345,
+						"longitude": -57.925080699999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:40",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.87,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 815.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.03,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 44.5
+						},
+						{
+							"name": "Pilhas e Baterias",
+							"description": "Coleta de resíduos: Pilhas e Baterias",
+							"price": 0.9,
+							"unit": "KG",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 412.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 818
+						},
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 4.11,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 369.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 195.36,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 142.76,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 133.69,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJIdMO5b3popMR3JnFoEqzZps",
+						"rating": null,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"service",
+							"store",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro velho do prdrinho compra e vendas de carros usados",
+					"business_name": "Ferro velho do prdrinho compra e vendas de carros usados",
+					"identity": "78370986250",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.prdrinho.compra.e.vendas.de.carros.usados@damaged-mantua.com",
+					"phones": ["(65) 99624-2192"],
+					"website": null,
+					"started_activity_in": "2022-11-30T19:55:10.147Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "R. das Pombas",
+						"number": "S/N",
+						"complement": null,
+						"district": "Jardim das Palmeiras, Campo Novo do Parecis",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.640331199999999,
+						"longitude": -57.91675439999999
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.77,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 860.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.64,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 229.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.43,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 919
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.63,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 858.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.98,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 335.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.63,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 134.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 216.28,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 196.44,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 93.73,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 289.19,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-05T15:28:39.474Z",
+					"observations": "Advenio accusator defessus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.673847,
+								"longitude": -57.884315,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783372293723
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Douglas County",
+							"streetNumber": "84804",
+							"street": "Ginger Summit",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89533348",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Theodore Branch, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Commodo recusandae coniuratio denuncio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-28T21:49:12.329Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.652336,
+								"longitude": -57.92354,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783433577721
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Rutland",
+							"streetNumber": "11570",
+							"street": "Jermey Flat",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42181918",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Front Street, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Marlene Heidenreich",
+			"display_name": "Marlene",
+			"phone": "(05) 93039-7279",
+			"email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "52975-267",
+				"street": "Princess Street",
+				"number": "871",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.66464,
+				"longitude": -57.926647
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJO9n_YzTvopMRP6wD81EOxtg",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucata Moura",
+					"business_name": "Sucata Moura",
+					"identity": "14247819909",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "sucata.moura@trusty-linseed.info",
+					"phones": ["(58) 98135-8373"],
+					"website": null,
+					"started_activity_in": "2021-06-11T10:26:56.146Z",
+					"address": {
+						"zip_code": "78360-000",
+						"street": "Av. Amazonas",
+						"number": "1556",
+						"complement": null,
+						"district": "Jardim das Palmeiras, Campo Novo do Parecis",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.653565799999999,
+						"longitude": -57.913067
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 528
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.34,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 252
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 637.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.72,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 620.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.2,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 656.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.61,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 540.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 204.13,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 101.47,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Harber-Upton, Dickinson and Heidenreich Reciclagem",
+					"business_name": "Harber-Upton, Dickinson and Heidenreich Reciclagem",
+					"identity": "12403025000115",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Deven58@severe-king.biz",
+					"phones": ["(27) 94005-8913"],
+					"website": null,
+					"started_activity_in": "2018-08-19T18:46:34.604Z",
+					"address": {
+						"zip_code": "32289-169",
+						"street": "Spring Gardens",
+						"number": "156",
+						"complement": null,
+						"district": "Lee County",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.6685,
+						"longitude": -57.891146
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.06,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 248.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.96,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 516.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.37,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 104.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.54,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 655.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.28,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 994.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.79,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 833.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 290.47,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 209.54,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 178.87,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Mallie Champlin",
+			"display_name": "Mallie",
+			"phone": "(53) 99816-2127",
+			"email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "91874-212",
+				"street": "Woodland Close",
+				"number": "4298",
+				"complement": null,
+				"district": "Douglas County",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.676404,
+				"longitude": -57.911005
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Koch LLC Reciclagem",
+					"business_name": "Koch LLC Reciclagem",
+					"identity": "55824726000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Chet68@negative-suspension.info",
+					"phones": ["(52) 90149-3337"],
+					"website": null,
+					"started_activity_in": "2018-03-08T05:49:54.997Z",
+					"address": {
+						"zip_code": "88280-367",
+						"street": "Western Avenue",
+						"number": "571",
+						"complement": null,
+						"district": "County Londonderry",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.649921,
+						"longitude": -57.891602
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.51,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 943.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.24,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 567.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.38,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 205.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 279.84,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 245.25,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 288.19,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 172.78,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 255.43,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "McGlynn Group Reciclagem",
+					"business_name": "McGlynn Group Reciclagem",
+					"identity": "23290307620",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Greg23@another-bid.info",
+					"phones": ["(40) 91559-8393"],
+					"website": null,
+					"started_activity_in": "2023-03-30T17:23:52.620Z",
+					"address": {
+						"zip_code": "32218-654",
+						"street": "Chapel Close",
+						"number": "1064",
+						"complement": null,
+						"district": "Borders",
+						"city": "Campo Novo do Parecis",
+						"city_ibge_id": 5102637,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.665168,
+						"longitude": -57.892966
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.56,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 687.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 128.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 981.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 78.25,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 125.54,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 93.69,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 99.76,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-05T08:27:39.494Z",
+					"observations": "Cumque praesentium abstergo amplitudo animi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.67189,
+								"longitude": -57.886511,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783375665448
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Adams County",
+							"streetNumber": "6104",
+							"street": "Pagac Keys",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00486187",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schroeder Cliff, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Nicholas Howe",
+			"display_name": "Nicholas",
+			"phone": "(16) 92026-3089",
+			"email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "39105-042",
+				"street": "N Broadway",
+				"number": "817",
+				"complement": null,
+				"district": "Fayette County",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.643329,
+				"longitude": -57.90638
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-13T05:45:36.954Z",
+					"observations": "Auxilium ustulo vae quas credo vester.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.654326,
+								"longitude": -57.886226,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783384894763
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lincolnshire",
+							"streetNumber": "3365",
+							"street": "Erdman Center",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77798586",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Adam Course, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-11T19:56:24.810Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.674203,
+								"longitude": -57.89082,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783408567799
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lothian",
+							"streetNumber": "1192",
+							"street": "Dean Curve",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85551821",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Champlin Isle, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-26T02:13:51.029Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.642658,
+								"longitude": -57.897338,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783359226588
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Crawford County",
+							"streetNumber": "94605",
+							"street": "Hartmann-Heathcote Neck",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26849223",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Highfield Close, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Alonzo O'Connell",
+			"display_name": "Alonzo",
+			"phone": "(52) 92909-1448",
+			"email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "61929-830",
+				"street": "Roger Ports",
+				"number": "1748",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.642241,
+				"longitude": -57.910023
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-06T07:09:06.589Z",
+					"observations": "Sollers communis aiunt suspendo veritas adinventitias despecto tripudio utpote aspernatur.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.650284,
+								"longitude": -57.919461,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783424648715
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lee County",
+							"streetNumber": "49245",
+							"street": "Chestnut Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34079298",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Heathcote Loaf, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cynthia-franey.2.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Torrens comedo vomica summopere varius adimpleo vilicus subnecto delinquo harum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Antepono torrens subvenio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Rolando Cormier",
+			"display_name": "Rolando",
+			"phone": "(02) 94664-6196",
+			"email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "81102-405",
+				"street": "Lemke Tunnel",
+				"number": "5128",
+				"complement": null,
+				"district": "Lincolnshire",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.641535,
+				"longitude": -57.91353
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Ronny Leffler",
+			"display_name": "Ronny",
+			"phone": "(85) 92007-2556",
+			"email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "87332-995",
+				"street": "Clark Street",
+				"number": "8579",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.678708,
+				"longitude": -57.903728
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Delaney Goodwin",
+			"display_name": "Delaney",
+			"phone": "(68) 94910-7876",
+			"email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "55751-697",
+				"street": "New Road",
+				"number": "39463",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.65773,
+				"longitude": -57.891961
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-24T04:59:04.822Z",
+					"observations": "Arcesso victus attonbitus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.67953,
+								"longitude": -57.883199,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783396829706
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Douglas County",
+							"streetNumber": "3590",
+							"street": "Manor Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88524239",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S 1st Avenue, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Plástico", "Vidro", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-12T14:42:14.132Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.676425,
+								"longitude": -57.892935,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783368771288
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Strathclyde",
+							"streetNumber": "5405",
+							"street": "Beau Spur",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35165747",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clifford Gateway, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-21T18:09:38.494Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.656805,
+								"longitude": -57.920434,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783397074102
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Isle of Wight",
+							"streetNumber": "33526",
+							"street": "Emiliano Well",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95897457",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Old Road, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Lâmpadas",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Stan Wolf",
+			"display_name": "Stan",
+			"phone": "(62) 95528-7465",
+			"email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "72663-187",
+				"street": "Doyle Trail",
+				"number": "7894",
+				"complement": null,
+				"district": "Clwyd",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.656993,
+				"longitude": -57.885939
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Danielle Boyer",
+			"display_name": "Danielle",
+			"phone": "(52) 91399-6660",
+			"email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "70668-787",
+				"street": "Joey Mount",
+				"number": "54008",
+				"complement": null,
+				"district": "Kent",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.649173,
+				"longitude": -57.917262
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-18T00:36:16.520Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.6511,
+								"longitude": -57.890544,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783432515418
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Gwent",
+							"streetNumber": "4300",
+							"street": "Denesik Streets",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62852929",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Janae Glen, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Resíduos Orgânicos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cynthia-franey.2.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Trucido colligo spoliatio spes aspicio defluo vesica sub vae.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-17T07:55:34.038Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.670189,
+								"longitude": -57.922059,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783385160266
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lake County",
+							"streetNumber": "4716",
+							"street": "Fourth Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47726382",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Runolfsson Via, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Óleo Mineral / Lubrificante",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Andre Tillman",
+			"display_name": "Andre",
+			"phone": "(67) 96039-6099",
+			"email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "18264-207",
+				"street": "Lester Camp",
+				"number": "7081",
+				"complement": null,
+				"district": "Norfolk",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.651372,
+				"longitude": -57.909028
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Marianne Collins-Franey",
+			"display_name": "Marianne",
+			"phone": "(92) 91476-9930",
+			"email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "77256-295",
+				"street": "Flatley Ways",
+				"number": "53017",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.655948,
+				"longitude": -57.924612
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-17T20:15:59.616Z",
+					"observations": "Votum cernuus avaritia speculum speciosus theologus aiunt audentia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.646312,
+								"longitude": -57.878422,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783417497094
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Gwent",
+							"streetNumber": "9378",
+							"street": "Langworth Lights",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91608119",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 4th Street, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Inflammatio pax tumultus cometes balbus certe acer provident aegrus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Rashawn Fahey",
+			"display_name": "Rashawn",
+			"phone": "(65) 98286-9696",
+			"email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "78534-016",
+				"street": "O'Hara Rapids",
+				"number": "4363",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.65138,
+				"longitude": -57.878962
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-16T10:40:50.966Z",
+					"observations": "Taedium talis porro degenero cedo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.675551,
+								"longitude": -57.904499,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783395901583
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lancashire",
+							"streetNumber": "33091",
+							"street": "MacGyver Greens",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08110917",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Heron Close, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-08-18T17:56:22.472Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.6649,
+								"longitude": -57.909017,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783372594785
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Gwent",
+							"streetNumber": "940",
+							"street": "Naomie Haven",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63593460",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bergstrom Dale, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Vallum vestrum utor succedo ullam vulgivagus vulgaris.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-13T17:13:50.055Z",
+					"observations": "Curvo utor theca confugo bellicus cinis speciosus accommodo angulus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.64023,
+								"longitude": -57.920233,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783387016968
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Leicestershire",
+							"streetNumber": "973",
+							"street": "Reynolds Rue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09051546",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brook Lane, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marlene-heidenreich.3.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cynthia-franey.2.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Est dedico audentia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Maggie Kemmer",
+			"display_name": "Maggie",
+			"phone": "(74) 90974-8935",
+			"email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "11252-867",
+				"street": "Keenan Spur",
+				"number": "649",
+				"complement": null,
+				"district": "Fife",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.644265,
+				"longitude": -57.894239
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-04T12:55:39.978Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.679985,
+								"longitude": -57.907749,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783411179345
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Avon",
+							"streetNumber": "6553",
+							"street": "Blanda Flat",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08255048",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gordon Road, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marianne-collins-franey.13.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delaney-goodwin.9.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Aperiam utique eos approbo accendo peior sono suadeo crudelis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Pecco demulceo demitto utrimque derelinquo tredecim varietas.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Leonora Jenkins",
+			"display_name": "Leonora",
+			"phone": "(04) 96991-6392",
+			"email": "leonora-jenkins.16.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "21753-259",
+				"street": "Bradley Key",
+				"number": "420",
+				"complement": null,
+				"district": "Berkshire",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.651328,
+				"longitude": -57.890191
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-30T11:39:09.380Z",
+					"observations": "Sollers approbo vinculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.671453,
+								"longitude": -57.887158,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783381120282
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Tyne and Wear",
+							"streetNumber": "56628",
+							"street": "Willow Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71514212",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cronin-Sawayn Summit, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-05T12:08:28.046Z",
+					"observations": "Tantum rem temperantia amicitia concedo vergo calculus vado varius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.65116,
+								"longitude": -57.907236,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783387181821
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Tayside",
+							"streetNumber": "1310",
+							"street": "Hegmann Crossroad",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34664008",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ash Street, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Terra impedit carpo saepe voluntarius stipes anser vehemens maiores apostolus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-31T13:41:53.141Z",
+					"observations": "Crapula comedo ver valde nulla utrum deorsum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.667159,
+								"longitude": -57.91065,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783415062296
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Douglas County",
+							"streetNumber": "989",
+							"street": "Chestnut Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82862630",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Field Lane, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lola Littel",
+			"display_name": "Lola",
+			"phone": "(63) 99148-7641",
+			"email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "48872-949",
+				"street": "Collins Gardens",
+				"number": "50247",
+				"complement": null,
+				"district": "Somerset",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.658834,
+				"longitude": -57.923787
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-20T00:36:04.364Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.679867,
+								"longitude": -57.91762,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783407377341
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "West Midlands",
+							"streetNumber": "108",
+							"street": "Hammes Crossing",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85678542",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Eldora Radial, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "andre-tillman.12.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stan-wolf.10.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-18T05:56:53.351Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.663897,
+								"longitude": -57.887131,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783400395581
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "County Down",
+							"streetNumber": "6679",
+							"street": "Forest Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "18490959",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Larkin Union, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leonora-jenkins.16.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mallie-champlin.4.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronny-leffler.8.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Synagoga coruscus curia acquiro beneficium dolorem articulus tempus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Casper Witting",
+			"display_name": "Casper",
+			"phone": "(45) 99498-8402",
+			"email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "38311-701",
+				"street": "Shields-Jones Expressway",
+				"number": "23853",
+				"complement": null,
+				"district": "Central",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.673968,
+				"longitude": -57.89885
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-06T23:36:18.752Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.646962,
+								"longitude": -57.914518,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783427679073
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Gwent",
+							"streetNumber": "3147",
+							"street": "Hillside Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87578346",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Byron Center, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "nicholas-howe.5.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "danielle-boyer.11.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-13T07:22:02.943Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.663767,
+								"longitude": -57.895007,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783387989854
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Lake County",
+							"streetNumber": "1519",
+							"street": "Rodney Green",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50386516",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lela Camp, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rashawn-fahey.14.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dale-ledner.0.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Marquise Graham",
+			"display_name": "Marquise",
+			"phone": "(10) 94231-5552",
+			"email": "marquise-graham.19.campo-novo-do-parecis-mt@oikos.seed",
+			"address": {
+				"zip_code": "33544-236",
+				"street": "Rhonda Crossing",
+				"number": "77383",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Campo Novo do Parecis",
+				"city_ibge_id": 5102637,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.678476,
+				"longitude": -57.892477
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-06T19:41:55.641Z",
+					"observations": "Alter cribro cruciamentum delego caveo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.664919,
+								"longitude": -57.921652,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783432909894
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Isle of Wight",
+							"streetNumber": "1188",
+							"street": "Edmond Fall",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94666108",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Front Street, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Lâmpadas",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lola-littel.17.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-21T07:03:24.230Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.661021,
+								"longitude": -57.905434,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783354064456
+						},
+						"addresses": {
+							"city": "Campo Novo do Parecis",
+							"district": "Mid Glamorgan",
+							"streetNumber": "509",
+							"street": "O'Conner Plain",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19221427",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dach Avenue, Campo Novo do Parecis - MT"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "marvin-heaney.1.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leonora-jenkins.16.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "casper-witting.18.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rolando-cormier.7.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alonzo-o-connell.6.campo-novo-do-parecis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maggie-kemmer.15.campo-novo-do-parecis-mt@oikos.seed",
+							"description": "Tolero aureus spargo angustus vix acer uter unde sit annus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		}
+	]
+}

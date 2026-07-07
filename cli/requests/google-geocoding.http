@@ -1,0 +1,7 @@
+### Chave lida de api/.env via symlink requests/.env -> ../../../.env
+@city = Poconé
+@stateCode = MT
+
+### Geocoding — payload bruto retornado pelo SDK usado em providers/google-geocoding-provider.ts
+### (o código usa @googlemaps/google-maps-services-js, mas o request abaixo é o mesmo endpoint por baixo)
+GET https://maps.googleapis.com/maps/api/geocode/json?address={{city}},{{stateCode}},Brasil&region=br&key={{$dotenv GOOGLE_PLACES_API_KEY}}
