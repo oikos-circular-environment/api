@@ -1,8 +1,8 @@
 import { faker } from "@faker-js/faker";
+import { generateFakePhone } from "../../shared/services/fake-phone.js";
 import type { BusinessHourSeed, DayOfWeek } from "../entities/company-seed.js";
 import type { GooglePlace } from "../entities/google-place.js";
 import { GoogleBusinessHoursParser } from "./business-hours-parser.js";
-import { generateFakePhone } from "../../shared/services/fake-phone.js";
 
 export interface GapFillResult {
 	phones: string[];

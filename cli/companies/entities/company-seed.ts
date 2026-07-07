@@ -60,6 +60,11 @@ export interface CompanySeedSource {
 	synthetic: boolean;
 }
 
+/**
+ * Posse é estrutural, não indexada — uma `CompanySeed` só existe aninhada em
+ * `UserSeed.companies` (ver `company-owner-assigner.ts`), nunca solta com um
+ * ponteiro pro dono.
+ */
 export interface CompanySeed {
 	_source: CompanySeedSource;
 	corporate_name: string;
@@ -76,29 +81,4 @@ export interface CompanySeed {
 	business_hours: BusinessHourSeed[];
 	wastes: WasteSeed[];
 	services: ServiceSeed[];
-	/** Índice em `CityResidentsFile.residents` — nunca mais de 2 empresas apontam
-	 * para o mesmo morador (ver `company-owner-assigner.ts`). Preenchido só ao
-	 * final do pipeline de geração (`GenerateCitySeedUseCase`), depois que a
-	 * lista de empresas está fechada (reais + sintéticas + reparadas). */
-	owner_resident_index: number;
-}
-
-/**
- * Shape produzido por mapper/gerador/repairer, ANTES da atribuição de dono —
- * `owner_resident_index` só é conhecido depois que a lista final de empresas
- * (reais + sintéticas + reparadas) está fechada (ver `CompanyOwnerAssigner`).
- */
-export type UnownedCompanySeed = Omit<CompanySeed, "owner_resident_index">;
-
-export interface SeedFileMeta {
-	generated_at: string;
-	total: number;
-	city: string;
-	state_code: string;
-	queries_used: string[];
-}
-
-export interface SeedFile {
-	_meta: SeedFileMeta;
-	companies: CompanySeed[];
 }

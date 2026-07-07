@@ -5,15 +5,15 @@ import {
 	upsertCompanyAddressSchema,
 	upsertCompanyBusinessHoursSchema,
 } from "../../src/modules/companies/dtos/companies-dto.js";
-import type { CityContext } from "../shared/entities/city-context.js";
-import type { CityResidentSeed } from "../shared/entities/city-resident.js";
-import type { CompanySeed, SeedFileMeta } from "./entities/company-seed.js";
 import type { IbgeMunicipio } from "../shared/entities/ibge-municipio.js";
+import type { UserSeed } from "../shared/entities/user-seed.js";
 import type {
 	GeocodeResult,
 	GeocodingProvider,
 } from "../shared/providers/geocoding-provider.js";
 import type { MunicipioProvider } from "../shared/providers/municipio-provider.js";
+import { ResolveCityUseCase } from "../shared/use-cases/resolve-city-use-case.js";
+import type { CompanySeed } from "./entities/company-seed.js";
 import type {
 	PlacesProvider,
 	PlacesTextSearchResult,
@@ -29,11 +29,6 @@ import { SyntheticCompanyGenerator } from "./services/synthetic-company-generato
 import { WasteServiceGenerator } from "./services/waste-service-generator.js";
 import { FetchCityCompaniesUseCase } from "./use-cases/fetch-city-companies-use-case.js";
 import { GenerateCitySeedUseCase } from "./use-cases/generate-city-seed-use-case.js";
-import { ResolveCityUseCase } from "../shared/use-cases/resolve-city-use-case.js";
-import type {
-	SeedFileWriter,
-	WriteResult,
-} from "./writers/seed-file-writer.js";
 
 const MUNICIPIO: IbgeMunicipio = {
 	id: 5107602,
@@ -113,25 +108,6 @@ class FakePlacesProvider implements PlacesProvider {
 	}
 }
 
-class InMemorySeedFileWriter implements SeedFileWriter {
-	public companies: CompanySeed[] = [];
-	public meta?: Omit<SeedFileMeta, "total">;
-
-	exists() {
-		return { exists: false, path: "/in-memory/seed.json" };
-	}
-
-	write(
-		_ctx: CityContext,
-		companies: CompanySeed[],
-		meta: Omit<SeedFileMeta, "total">,
-	): WriteResult {
-		this.companies = companies;
-		this.meta = meta;
-		return { written: true, path: "/in-memory/seed.json" };
-	}
-}
-
 function assertBusinessRulesFor(items: CompanySeed["wastes"]): void {
 	for (const item of items) {
 		expect(measurementSchema.safeParse(item.unit).success).toBe(true);
@@ -186,7 +162,6 @@ describe("recycling-seed-pipeline", () => {
 			wasteServiceGenerator,
 			identityGenerator,
 		);
-		const writer = new InMemorySeedFileWriter();
 
 		const generateCitySeed = new GenerateCitySeedUseCase(
 			resolveCity,
@@ -194,14 +169,13 @@ describe("recycling-seed-pipeline", () => {
 			syntheticGenerator,
 			new CompanySeedRepairer(),
 			new CompanyOwnerAssigner(),
-			writer,
 		);
 
-		const residents: CityResidentSeed[] = Array.from({ length: 10 }, (_, i) => ({
-			full_name: `Morador ${i}`,
-			display_name: `M${i}`,
+		const users: UserSeed[] = Array.from({ length: 10 }, (_, i) => ({
+			full_name: `Usuário ${i}`,
+			display_name: `U${i}`,
 			phone: "(65) 91234-5678",
-			email: `morador-${i}@oikos.seed`,
+			email: `usuario-${i}@oikos.seed`,
 			address: {
 				zip_code: "78000-000",
 				street: "Rua A",
@@ -216,28 +190,29 @@ describe("recycling-seed-pipeline", () => {
 				latitude: -16.47,
 				longitude: -54.63,
 			},
+			companies: [],
+			complaints: [],
 		}));
 
-		const result = await generateCitySeed.execute(
-			"Rondonópolis",
-			"MT",
-			residents,
-			{ target: 12 },
-		);
+		const result = await generateCitySeed.execute("Rondonópolis", "MT", users, {
+			target: 12,
+		});
+
+		const companies = Array.from(result.ownedCompaniesByUser.values()).flat();
 
 		// 4 reais (place-ecoponto, place-ong, place-collector, place-company) + 8 sintéticas
 		expect(result.realCount).toBe(4);
 		expect(result.syntheticCount).toBe(8);
-		expect(writer.companies).toHaveLength(12);
+		expect(companies).toHaveLength(12);
 
-		for (const seed of writer.companies) {
+		for (const seed of companies) {
 			assertValidCompanySeed(seed);
 		}
 
-		const companyTypes = new Set(writer.companies.map((c) => c.company_type));
+		const companyTypes = new Set(companies.map((c) => c.company_type));
 		expect(companyTypes.size).toBeGreaterThan(1);
 
-		const realTypes = writer.companies
+		const realTypes = companies
 			.filter((c) => !c._source.synthetic)
 			.map((c) => c.company_type);
 		expect(realTypes).toStrictEqual([
@@ -247,30 +222,23 @@ describe("recycling-seed-pipeline", () => {
 			"COMPANY",
 		]);
 
-		const ecoponto = writer.companies.find(
+		const ecoponto = companies.find(
 			(c) => c._source.google_place_id === "place-ecoponto",
 		);
 		expect(ecoponto?._source.is_ecoponto).toBe(true);
 
-		const collector = writer.companies.find(
+		const collector = companies.find(
 			(c) => c._source.google_place_id === "place-collector",
 		);
 		expect(collector?.identity_type).toBe("CPF");
 
-		const identities = writer.companies.map((c) => c.identity);
+		const identities = companies.map((c) => c.identity);
 		expect(new Set(identities).size).toBe(identities.length);
 
-		const ownerCounts = new Map<number, number>();
-		for (const company of writer.companies) {
-			expect(company.owner_resident_index).toBeGreaterThanOrEqual(0);
-			expect(company.owner_resident_index).toBeLessThan(residents.length);
-			ownerCounts.set(
-				company.owner_resident_index,
-				(ownerCounts.get(company.owner_resident_index) ?? 0) + 1,
-			);
-		}
-		for (const count of ownerCounts.values()) {
-			expect(count).toBeLessThanOrEqual(2);
+		for (const [userIndex, companiesForUser] of result.ownedCompaniesByUser) {
+			expect(userIndex).toBeGreaterThanOrEqual(0);
+			expect(userIndex).toBeLessThan(users.length);
+			expect(companiesForUser.length).toBeLessThanOrEqual(2);
 		}
 	});
 });

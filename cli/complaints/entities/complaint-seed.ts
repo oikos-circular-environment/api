@@ -9,9 +9,10 @@ export type ComplaintVoteTypeSeed = "RESOLVED" | "NOT_RESOLVED";
 
 /**
  * Dica para o consumidor Prisma: `"PREFER_COMPANY"` só é gerada quando o
- * morador sorteado já é dono de alguma empresa no mesmo arquivo de moradores
- * da cidade — o consumidor confirma no banco e usa o `company_id` real
- * daquele morador, nunca de outro (ver `01-technical-plan.md` §3.12).
+ * usuário sorteado já é dono de alguma empresa no mesmo arquivo de usuários
+ * da cidade — o consumidor usa o `company_id` real daquele usuário (já
+ * disponível em memória do próprio seed), nunca de outro (ver
+ * `01-technical-plan.md` §3.12).
  */
 export type ResolutionHint = "PREFER_COMPANY" | "CITIZEN_ONLY";
 
@@ -22,21 +23,22 @@ export interface ComplaintAttachmentSeed {
 }
 
 export interface VoteSeed {
-	/** Índice em `CityResidentsFile.residents` — nunca o autor, nunca repetido
-	 * dentro dos votos da mesma denúncia. */
-	resident_index: number;
+	/** Email do usuário votante — chave natural em `UserSeed.email` (nunca o
+	 * autor, nunca repetido dentro dos votos da mesma denúncia). */
+	voter_email: string;
 	vote_type: ComplaintVoteTypeSeed;
 }
 
 export interface ResolutionSeed {
-	/** Índice em `CityResidentsFile.residents` — autor candidato da resolução. */
-	resident_index: number;
+	/** Email do usuário resolvedor candidato — chave natural em `UserSeed.email`. */
+	resolver_email: string;
 	description: string;
 	resolution_hint: ResolutionHint;
 }
 
+/** Posse é estrutural — uma `ComplaintSeed` só existe aninhada em
+ * `UserSeed.complaints`, nunca solta com um ponteiro pro autor. */
 export interface ComplaintSeed {
-	author_resident_index: number;
 	date: string;
 	observations: string | null;
 	geospatial: Geospatial;
@@ -47,16 +49,4 @@ export interface ComplaintSeed {
 	votes: VoteSeed[];
 	/** Vazio se `status === "OPEN"`; 1-2 se `RESOLVED`; vazio se `CANCELED`. */
 	resolutions: ResolutionSeed[];
-}
-
-export interface ComplaintSeedFileMeta {
-	generated_at: string;
-	total: number;
-	city: string;
-	state_code: string;
-}
-
-export interface ComplaintSeedFile {
-	_meta: ComplaintSeedFileMeta;
-	complaints: ComplaintSeed[];
 }

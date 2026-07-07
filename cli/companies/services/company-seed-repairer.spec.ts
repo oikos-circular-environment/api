@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import { CompanySeedRepairer } from "./company-seed-repairer.js";
 
-function makeValidSeed(overrides?: Partial<UnownedCompanySeed>): UnownedCompanySeed {
+function makeValidSeed(overrides?: Partial<CompanySeed>): CompanySeed {
 	return {
 		_source: {
 			google_place_id: "place-1",

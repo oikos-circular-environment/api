@@ -1,12 +1,12 @@
 import { faker } from "@faker-js/faker";
 import type { CityContext } from "../../shared/entities/city-context.js";
+import { generateFakePhone } from "../../shared/services/fake-phone.js";
 import type {
+	CompanySeed,
 	CompanyType,
 	IdentityType,
-	UnownedCompanySeed,
 } from "../entities/company-seed.js";
 import { generateSyntheticHours } from "./company-gap-filler.js";
-import { generateFakePhone } from "../../shared/services/fake-phone.js";
 import type { BrazilianIdentityGenerator } from "./identity-generator.js";
 import {
 	ECOPONTO_CATEGORY_POOL,
@@ -49,7 +49,7 @@ export class SyntheticCompanyGenerator {
 		private readonly identityGenerator: BrazilianIdentityGenerator,
 	) {}
 
-	generate(ctx: CityContext): UnownedCompanySeed {
+	generate(ctx: CityContext): CompanySeed {
 		const { company_type, identity_type } = pickDistributionEntry();
 		const name = `${faker.company.name()} Reciclagem`;
 		const pool =

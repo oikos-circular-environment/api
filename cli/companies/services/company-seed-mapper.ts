@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 import type { CityContext } from "../../shared/entities/city-context.js";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import type { GooglePlace } from "../entities/google-place.js";
 import type { GoogleAddressParser } from "./address-parser.js";
 import type { CompanyGapFiller } from "./company-gap-filler.js";
@@ -29,7 +29,7 @@ export class CompanySeedMapper {
 		private readonly identityGenerator: BrazilianIdentityGenerator,
 	) {}
 
-	map(place: GooglePlace, ctx: CityContext): UnownedCompanySeed {
+	map(place: GooglePlace, ctx: CityContext): CompanySeed {
 		const classification = this.classifier.classify(place);
 		const address = this.addressParser.parse(place, ctx);
 		const gaps = this.gapFiller.fill(place);

@@ -1,16 +1,11 @@
 import type { CityContext } from "../../shared/entities/city-context.js";
-import type { CityResidentSeed } from "../../shared/entities/city-resident.js";
-import type { CompanySeed, UnownedCompanySeed } from "../entities/company-seed.js";
+import type { UserSeed } from "../../shared/entities/user-seed.js";
+import type { ResolveCityUseCase } from "../../shared/use-cases/resolve-city-use-case.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import type { CompanyOwnerAssigner } from "../services/company-owner-assigner.js";
 import type { CompanySeedRepairer } from "../services/company-seed-repairer.js";
 import type { SyntheticCompanyGenerator } from "../services/synthetic-company-generator.js";
-import type {
-	ExistsResult,
-	SeedFileWriter,
-	WriteResult,
-} from "../writers/seed-file-writer.js";
 import type { FetchCityCompaniesUseCase } from "./fetch-city-companies-use-case.js";
-import type { ResolveCityUseCase } from "../../shared/use-cases/resolve-city-use-case.js";
 
 /** Queries fixas, sem cap — mesma estratégia já usada em fetch-recycling-places.ts. */
 export const RECYCLING_SEARCH_QUERIES = [
@@ -22,27 +17,28 @@ export const RECYCLING_SEARCH_QUERIES = [
 
 export interface GenerateCitySeedOptions {
 	target?: number;
-	force?: boolean;
 }
 
 export interface GenerateCitySeedResult {
 	ctx: CityContext;
 	realCount: number;
 	syntheticCount: number;
-	written: boolean;
-	path: string;
+	ownedCompaniesByUser: Map<number, CompanySeed[]>;
 	repairReport: string[];
 }
 
 export interface ValidateAndRepairResult {
-	companies: UnownedCompanySeed[];
+	companies: CompanySeed[];
 	report: string[];
 }
 
 /**
- * Orquestrador de ponta a ponta para uma cidade: resolve contexto geográfico
- * → busca empresas reais → completa com sintéticas se `target` pedir mais →
- * valida/repara (segunda onda, rede de segurança) → grava o arquivo de seed.
+ * Orquestrador de empresas para uma cidade: resolve contexto geográfico →
+ * busca empresas reais (cortadas em `target`) → completa com sintéticas se
+ * `target` pedir mais → valida/repara (segunda onda, rede de segurança) →
+ * atribui donos. A escrita do arquivo combinado da cidade acontece fora
+ * desta classe (ver `cli/cli.ts`), depois que empresas E denúncias estiverem
+ * prontas.
  *
  * Cada fase é exposta como método público separado (além de `execute`, que
  * as encadeia como conveniência) para permitir progresso granular por etapa
@@ -55,7 +51,6 @@ export class GenerateCitySeedUseCase {
 		private readonly syntheticGenerator: SyntheticCompanyGenerator,
 		private readonly repairer: CompanySeedRepairer,
 		private readonly ownerAssigner: CompanyOwnerAssigner,
-		private readonly writer: SeedFileWriter,
 	) {}
 
 	resolveCity(city: string, stateCode: string): Promise<CityContext> {
@@ -63,22 +58,33 @@ export class GenerateCitySeedUseCase {
 	}
 
 	/**
-	 * Checagem pura, sem side-effect — chamar antes de `fetchRealCompanies`
-	 * evita gastar a busca cara no Google Places quando o seed já existe.
+	 * Busca todas as empresas reais disponíveis e corta para `target` quando o
+	 * Google Places retorna mais do que o pedido — sem isso, um excedente de
+	 * reais (ex.: 44 encontradas para um alvo de 20) estoura a capacidade do
+	 * pool de usuários, que é dimensionado a partir do target pedido, não do
+	 * total real encontrado.
 	 */
-	checkExisting(ctx: CityContext): ExistsResult {
-		return this.writer.exists(ctx);
-	}
+	async fetchRealCompanies(
+		ctx: CityContext,
+		target?: number,
+	): Promise<CompanySeed[]> {
+		const companies = await this.fetchCompaniesUseCase.execute(
+			ctx,
+			RECYCLING_SEARCH_QUERIES,
+		);
 
-	fetchRealCompanies(ctx: CityContext): Promise<UnownedCompanySeed[]> {
-		return this.fetchCompaniesUseCase.execute(ctx, RECYCLING_SEARCH_QUERIES);
+		if (target !== undefined && companies.length > target) {
+			return companies.slice(0, target);
+		}
+
+		return companies;
 	}
 
 	generateSynthetic(
 		ctx: CityContext,
 		realCount: number,
 		target?: number,
-	): UnownedCompanySeed[] {
+	): CompanySeed[] {
 		const missing = Math.max(0, (target ?? 0) - realCount);
 		return Array.from({ length: missing }, () =>
 			this.syntheticGenerator.generate(ctx),
@@ -90,8 +96,8 @@ export class GenerateCitySeedUseCase {
 	 * empresa e descarta as que continuarem inválidas mesmo após a
 	 * correção, em vez de deixar dado inválido chegar no arquivo de seed.
 	 */
-	validateAndRepair(companies: UnownedCompanySeed[]): ValidateAndRepairResult {
-		const kept: UnownedCompanySeed[] = [];
+	validateAndRepair(companies: CompanySeed[]): ValidateAndRepairResult {
+		const kept: CompanySeed[] = [];
 		const report: string[] = [];
 
 		for (const company of companies) {
@@ -117,58 +123,36 @@ export class GenerateCitySeedUseCase {
 	/**
 	 * Última fase — a lista de empresas só está "fechada" (reais + sintéticas
 	 * + reparadas) aqui, então a atribuição de dono acontece depois de
-	 * `validateAndRepair`, nunca antes.
+	 * `validateAndRepair`, nunca antes. Retorna um mapa índice-do-usuário →
+	 * empresas dele; quem aninha isso em `UserSeed.companies` é `cli/cli.ts`.
 	 */
 	assignOwners(
-		companies: UnownedCompanySeed[],
-		residents: CityResidentSeed[],
-	): CompanySeed[] {
-		return this.ownerAssigner.assign(companies, residents);
-	}
-
-	writeSeed(
-		ctx: CityContext,
 		companies: CompanySeed[],
-		opts: { force?: boolean } = {},
-	): WriteResult {
-		return this.writer.write(
-			ctx,
-			companies,
-			{
-				generated_at: new Date().toISOString(),
-				city: ctx.city,
-				state_code: ctx.stateCode,
-				queries_used: RECYCLING_SEARCH_QUERIES,
-			},
-			{ force: opts.force },
-		);
+		users: UserSeed[],
+	): Map<number, CompanySeed[]> {
+		return this.ownerAssigner.assign(companies, users);
 	}
 
 	async execute(
 		city: string,
 		stateCode: string,
-		residents: CityResidentSeed[],
+		users: UserSeed[],
 		opts: GenerateCitySeedOptions = {},
 	): Promise<GenerateCitySeedResult> {
 		const ctx = await this.resolveCity(city, stateCode);
-		const real = await this.fetchRealCompanies(ctx);
+		const real = await this.fetchRealCompanies(ctx, opts.target);
 		const synthetic = this.generateSynthetic(ctx, real.length, opts.target);
 		const { companies, report } = this.validateAndRepair([
 			...real,
 			...synthetic,
 		]);
-		const owned = this.assignOwners(companies, residents);
-
-		const { written, path } = this.writeSeed(ctx, owned, {
-			force: opts.force,
-		});
+		const ownedCompaniesByUser = this.assignOwners(companies, users);
 
 		return {
 			ctx,
 			realCount: real.length,
 			syntheticCount: synthetic.length,
-			written,
-			path,
+			ownedCompaniesByUser,
 			repairReport: report,
 		};
 	}

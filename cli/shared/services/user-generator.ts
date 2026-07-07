@@ -1,34 +1,34 @@
 import { faker } from "@faker-js/faker";
 import type { AddressSeed } from "../entities/address-seed.js";
 import type { CityContext } from "../entities/city-context.js";
-import type { CityResidentSeed } from "../entities/city-resident.js";
+import type { UserSeed } from "../entities/user-seed.js";
 import { citySlug, normalizeSlugPart } from "./city-slug.js";
 import { generateFakePhone } from "./fake-phone.js";
 
-export const MIN_RESIDENTS_PER_CITY = 10;
-const MAX_COMPANIES_PER_RESIDENT = 2;
+export const MIN_USERS_PER_CITY = 10;
+const MAX_COMPANIES_PER_USER = 2;
 
 /**
  * Mesma constante de `companies/services/company-owner-assigner.ts` — mantidas
  * em sincronia manualmente (o assigner lança erro se o pool ficar pequeno
  * demais para o teto aqui assumido).
  */
-export function computeResidentPoolSize(opts: {
+export function computeUserPoolSize(opts: {
 	companiesTarget?: number;
 	complaintsTarget?: number;
-	residentsFloor?: number;
+	usersFloor?: number;
 }): number {
 	const forCompanies = opts.companiesTarget
-		? Math.ceil(opts.companiesTarget / MAX_COMPANIES_PER_RESIDENT)
+		? Math.ceil(opts.companiesTarget / MAX_COMPANIES_PER_USER)
 		: 0;
 	const forComplaints = opts.complaintsTarget
 		? Math.ceil(opts.complaintsTarget * 0.6)
 		: 0;
 	return Math.max(
-		MIN_RESIDENTS_PER_CITY,
+		MIN_USERS_PER_CITY,
 		forCompanies,
 		forComplaints,
-		opts.residentsFloor ?? 0,
+		opts.usersFloor ?? 0,
 	);
 }
 
@@ -36,7 +36,7 @@ function formatZipCode(): string {
 	return faker.string.numeric(8).replace(/(\d{5})(\d{3})/, "$1-$2");
 }
 
-function generateResidentAddress(ctx: CityContext): AddressSeed {
+function generateUserAddress(ctx: CityContext): AddressSeed {
 	return {
 		zip_code: formatZipCode(),
 		street: faker.location.street(),
@@ -61,16 +61,18 @@ function generateResidentAddress(ctx: CityContext): AddressSeed {
 	};
 }
 
-/** Gera um pool de moradores fictícios de uma cidade — compartilhado pelos
- * pipelines de empresas (donos) e denúncias (autores/votantes/resolvedores). */
-export class CityResidentGenerator {
-	generate(ctx: CityContext, count: number): CityResidentSeed[] {
+/** Gera um pool de usuários fictícios de uma cidade — compartilhado pelos
+ * pipelines de empresas (donos) e denúncias (autores/votantes/resolvedores).
+ * `companies`/`complaints` saem vazios; as fases seguintes do pipeline os
+ * preenchem via spread (ver `cli/cli.ts`). */
+export class UserGenerator {
+	generate(ctx: CityContext, count: number): UserSeed[] {
 		return Array.from({ length: count }, (_, index) =>
 			this.generateOne(ctx, index),
 		);
 	}
 
-	private generateOne(ctx: CityContext, index: number): CityResidentSeed {
+	private generateOne(ctx: CityContext, index: number): UserSeed {
 		const firstName = faker.person.firstName();
 		const lastName = faker.person.lastName();
 		const emailSlug = normalizeSlugPart(`${firstName} ${lastName}`);
@@ -80,7 +82,9 @@ export class CityResidentGenerator {
 			display_name: firstName,
 			phone: generateFakePhone(),
 			email: `${emailSlug}.${index}.${citySlug(ctx)}@oikos.seed`,
-			address: generateResidentAddress(ctx),
+			address: generateUserAddress(ctx),
+			companies: [],
+			complaints: [],
 		};
 	}
 }

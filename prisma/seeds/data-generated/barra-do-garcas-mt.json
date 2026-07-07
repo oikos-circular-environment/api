@@ -1,0 +1,4229 @@
+{
+	"_meta": {
+		"generated_at": "2026-07-07T15:19:36.434Z",
+		"city": "Barra do Garças",
+		"state_code": "MT",
+		"users_total": 20,
+		"companies_total": 10,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Lena Lebsack",
+			"display_name": "Lena",
+			"phone": "(67) 98322-2031",
+			"email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "53630-543",
+				"street": "Balistreri Squares",
+				"number": "8621",
+				"complement": null,
+				"district": "Hampshire",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.886852,
+				"longitude": -52.328905
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJk10mk9ZvZZMR6Da1vGddx3c",
+						"rating": 4.9,
+						"types": ["storage", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ALVES RECICLAGEM ️",
+					"business_name": "ALVES RECICLAGEM ️",
+					"identity": "50422428000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "alves.reciclagem@unlined-atrium.name",
+					"phones": ["(66) 99251-3483"],
+					"website": null,
+					"started_activity_in": "2023-11-11T11:13:08.786Z",
+					"address": {
+						"zip_code": "78600-000",
+						"street": "R. 19",
+						"number": "100",
+						"complement": null,
+						"district": "Anchieta, Barra do Garças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.8815134,
+						"longitude": -52.2328141
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 762.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.41,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 532.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 141.29,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 219.07,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 237.35,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 249.82,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 240.2,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 82.04,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJoRLonIZoZZMRd2b_XiwHxVM",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecopontos de Coleta Seletiva (Papel, Plástico, Metal e Óleo de Cozinha)",
+					"business_name": "Ecopontos de Coleta Seletiva (Papel, Plástico, Metal e Óleo de Cozinha)",
+					"identity": "79491980000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecopontos.de.coleta.seletiva.papel.plastico.metal.e.oleo.de.cozinha@tired-seagull.info",
+					"phones": ["(46) 93393-7293"],
+					"website": "https://www.facebook.com/sensibilizaufmtaraguaia/",
+					"started_activity_in": "2022-02-18T06:27:13.728Z",
+					"address": {
+						"zip_code": "78600-000",
+						"street": "Av. Duque de Caxias",
+						"number": "637-715",
+						"complement": null,
+						"district": "Vila Sao Jose, Barra do Garças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.875735599999997,
+						"longitude": -52.3136635
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.7,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 543.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.71,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 736.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 299.17,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 53.7,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 153.39,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 156.42,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 74.22,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-30T06:33:30.232Z",
+					"observations": "Cattus vulgaris eos tepidus triduana.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.906083,
+								"longitude": -52.308951,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783431393239
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Wayne County",
+							"streetNumber": "4132",
+							"street": "Manuel Rapid",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54190156",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Union Street, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Embalagens Contaminadas",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edmond-purdy.3.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"description": "Commemoro quaerat asporto caput.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"description": "Terror voluptatem error molestiae.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-04T00:03:43.571Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.87043,
+								"longitude": -52.3561,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783427978004
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Lothian",
+							"streetNumber": "70197",
+							"street": "Balistreri Crest",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57343822",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mayer Isle, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"description": "Suffragium spiculum virtus clementia deorsum corona ascit quaerat.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"description": "Denuo aureus votum tabula cimentarius.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Isaac Lueilwitz",
+			"display_name": "Isaac",
+			"phone": "(04) 97291-2326",
+			"email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "81885-393",
+				"street": "Doyle Creek",
+				"number": "17630",
+				"complement": null,
+				"district": "Johnson County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.868368,
+				"longitude": -52.322661
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJs29T8RxvZZMRXufl5PCJ_3Y",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Vinicius Vieira Recicláveis de Materiais Finos",
+					"business_name": "Vinicius Vieira Recicláveis de Materiais Finos",
+					"identity": "25418702000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "vinicius.vieira.reciclaveis.de.materiais.finos@gaseous-toaster.biz",
+					"phones": ["(66) 98402-4321"],
+					"website": null,
+					"started_activity_in": "2021-06-07T07:50:37.678Z",
+					"address": {
+						"zip_code": "78603-550",
+						"street": "Rua Joana Cristino Cortes",
+						"number": "61 61",
+						"complement": null,
+						"district": "Vila serrinha, Barra do Garças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.877672999999998,
+						"longitude": -52.2691987
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 132.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.9,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 922.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.15,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 824
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.28,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 868.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.98,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 907.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 621.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 163.83,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.16,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJMe-ubgBvZZMRTu8QOwP2oRY",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem da Joana",
+					"business_name": "Reciclagem da Joana",
+					"identity": "16468880000165",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.da.joana@clear-mechanic.name",
+					"phones": ["(66) 99211-6906"],
+					"website": null,
+					"started_activity_in": "2017-05-24T02:46:56.350Z",
+					"address": {
+						"zip_code": "78603-222",
+						"street": "R. J",
+						"number": "n 129",
+						"complement": null,
+						"district": "Bela Vista, Barra do Garças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.8868412,
+						"longitude": -52.269299499999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 779.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 10.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.87,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 658.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.4,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 411.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.58,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 496.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.63,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 354.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 214.04,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 93.28,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 128.93,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 116.43,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 202.83,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-07-25T16:22:22.787Z",
+					"observations": "Caries sint videlicet.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.867417,
+								"longitude": -52.243044,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783393205477
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Northumberland",
+							"streetNumber": "334",
+							"street": "Jones Valleys",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12487404",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Park Drive, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Metal / Alumínio",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-30T21:09:13.385Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.901402,
+								"longitude": -52.273158,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783428398941
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Grampian",
+							"streetNumber": "233",
+							"street": "Baker Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87499964",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dicki Curve, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Têxtil / Roupas / Tecidos",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"description": "Agnitio crepusculum ad sto virtus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Princess Steuber",
+			"display_name": "Princess",
+			"phone": "(73) 90737-0589",
+			"email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "50207-301",
+				"street": "Jast Viaduct",
+				"number": "156",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.882261,
+				"longitude": -52.235769
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJqzxuT1xpZZMRKlcByfZ3g10",
+						"rating": 4.8,
+						"types": [
+							"non_profit_organization",
+							"association_or_organization",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Coleta de Reciclado",
+					"business_name": "Coleta de Reciclado",
+					"identity": "01248728000108",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "coleta.de.reciclado@sardonic-finer.com",
+					"phones": ["(28) 95570-9130"],
+					"website": null,
+					"started_activity_in": "2025-07-03T21:29:35.292Z",
+					"address": {
+						"zip_code": "78600-000",
+						"street": "Sena Marques",
+						"number": "Barra do Garças",
+						"complement": null,
+						"district": "MT, , Brasil",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.8938408,
+						"longitude": -52.2780112
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 890.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.65,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 499.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.71,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 135.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 81.22,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.88,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 111.99,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJsU5zo9RpZZMRPJOVEFoufHE",
+						"rating": 4,
+						"types": ["storage", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Barra reciglagem",
+					"business_name": "Barra reciglagem",
+					"identity": "88622504000194",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "barra.reciglagem@definitive-asset.org",
+					"phones": ["(66) 99930-3830"],
+					"website": null,
+					"started_activity_in": "2017-09-02T12:23:27.315Z",
+					"address": {
+						"zip_code": "78600-000",
+						"street": "Barra do Garças",
+						"number": "S/N",
+						"complement": null,
+						"district": "MT, , Brasil",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.8805996,
+						"longitude": -52.2967503
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.97,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 83.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.38,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 752.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.29,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 255
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.48,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 143.26,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 125.42,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-11T20:53:34.694Z",
+					"observations": "Absens canto videlicet cohaero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.869335,
+								"longitude": -52.252979,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783391650122
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "County Londonderry",
+							"streetNumber": "6906",
+							"street": "Merle Run",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54004144",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Center Street, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edmond-purdy.3.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Edmond Purdy",
+			"display_name": "Edmond",
+			"phone": "(40) 97830-8989",
+			"email": "edmond-purdy.3.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "85579-841",
+				"street": "Irvin Ridges",
+				"number": "691",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.904951,
+				"longitude": -52.303183
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJoxfq9XhvZZMRZhr8nXbDUD4",
+						"rating": null,
+						"types": [
+							"grocery_store",
+							"food_store",
+							"service",
+							"store",
+							"point_of_interest",
+							"food",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Abacaxi Dolce mel Itamar",
+					"business_name": "Abacaxi Dolce mel Itamar",
+					"identity": "67308311000193",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "abacaxi.dolce.mel.itamar@unfortunate-fat.name",
+					"phones": ["(66) 99203-5087"],
+					"website": null,
+					"started_activity_in": "2020-05-10T14:07:55.095Z",
+					"address": {
+						"zip_code": "78600-000",
+						"street": "R. 15 de Setembro",
+						"number": "S/N",
+						"complement": null,
+						"district": "Santo Antônio, Barra do Garças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.879732599999997,
+						"longitude": -52.2641019
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.27,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 476
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.19,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 266.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.14,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 175
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 198.18,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 69.12,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 113.88,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 67.29,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 163.51,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 165.18,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJsWZMt-1uZZMRKtENmfwHVJ0",
+						"rating": 3.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclar",
+					"business_name": "Reciclar",
+					"identity": "42082821000164",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclar@lone-transparency.org",
+					"phones": ["(07) 94852-9683"],
+					"website": null,
+					"started_activity_in": "2026-05-03T10:45:21.809Z",
+					"address": {
+						"zip_code": "76240-000",
+						"street": "R. Tiago Igreja Paraense",
+						"number": "13",
+						"complement": null,
+						"district": "St. Ceara, Aragarças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.9110456,
+						"longitude": -52.2465117
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.18,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 828.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.16,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 343.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.7,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 316.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.02,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 148.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.52,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 952.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.22,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 761.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 243.74,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 174.22,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 194.62,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 97.28,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 103.61,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-04T03:01:53.934Z",
+					"observations": "Contra sumo adstringo conculco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.898851,
+								"longitude": -52.335715,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783415594878
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Madison County",
+							"streetNumber": "3047",
+							"street": "Ash Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95425377",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ritchie Corner, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"description": "Vesica sequi adficio absconditus deficio ago adduco veritatis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-03-09T14:09:17.713Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.900028,
+								"longitude": -52.332858,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783415687483
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Gwynedd County",
+							"streetNumber": "25027",
+							"street": "Albert Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74291007",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oceane Island, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-08T03:53:57.418Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.896234,
+								"longitude": -52.216484,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783406768128
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Franklin County",
+							"streetNumber": "617",
+							"street": "Samson Spring",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25938169",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Church Street, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"description": "Tibi delinquo abduco admoveo itaque derideo arto pauper.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lucas Little",
+			"display_name": "Lucas",
+			"phone": "(44) 97528-0002",
+			"email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "20590-550",
+				"street": "Rempel Unions",
+				"number": "798",
+				"complement": null,
+				"district": "Douglas County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.878265,
+				"longitude": -52.235382
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJKVgKqKZvZZMRRX5_usaht28",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto de Pneus",
+					"business_name": "Ecoponto de Pneus",
+					"identity": "08259924000119",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.de.pneus@edible-programme.com",
+					"phones": ["(66) 3401-3623"],
+					"website": null,
+					"started_activity_in": "2023-10-08T23:22:54.920Z",
+					"address": {
+						"zip_code": "78600-000",
+						"street": "R. Laudelino de Souza Santos",
+						"number": "514",
+						"complement": null,
+						"district": "Centro, Barra do Garças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.888059199999999,
+						"longitude": -52.2693717
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 782.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 619.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 172.73,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 271.13,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 221.37,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJsUWW4pdvZZMRYti_NJavq4s",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Lk Reciclagem",
+					"business_name": "Lk Reciclagem",
+					"identity": "48349657000195",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "lk.reciclagem@knowledgeable-completion.net",
+					"phones": ["(66) 99260-5612"],
+					"website": null,
+					"started_activity_in": "2025-10-12T00:48:17.699Z",
+					"address": {
+						"zip_code": "76240-000",
+						"street": "R. Cecília Maria de Jesus",
+						"number": "S/N",
+						"complement": null,
+						"district": "nova esperança, Aragarças",
+						"city": "Barra do Garças",
+						"city_ibge_id": 5101803,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.9020803,
+						"longitude": -52.233916799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.21,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 263.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.84,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 821.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 246.29,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 73.93,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 87.36,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 152.29,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-11T05:28:22.635Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.884012,
+								"longitude": -52.354837,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783370528984
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Douglas County",
+							"streetNumber": "5764",
+							"street": "Nathen Row",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78773080",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ryley Cliff, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"description": "Conculco eos suus nisi.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"description": "Dolor cunabula advenio crastinus facere custodia suffoco comprehendo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-04T11:44:50.511Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.886953,
+								"longitude": -52.304682,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783376252700
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "714",
+							"street": "N Union Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98100292",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bernhard Pines, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Construção Civil e Demolição (RCD)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"description": "Cribro error enim vobis supplanto terebro.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"description": "Suggero aeternus victoria.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-07-22T15:52:25.112Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.864059,
+								"longitude": -52.30506,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783401906475
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Greater Manchester",
+							"streetNumber": "49819",
+							"street": "Hall Lane",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80974006",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Volkman Club, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"description": "Aut claudeo confero strenuus sunt carpo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Polly Beier",
+			"display_name": "Polly",
+			"phone": "(37) 95236-7778",
+			"email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "59213-571",
+				"street": "Vera Tunnel",
+				"number": "48731",
+				"complement": null,
+				"district": "Gwent",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.847979,
+				"longitude": -52.250373
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Melanie Kohler",
+			"display_name": "Melanie",
+			"phone": "(86) 95326-5043",
+			"email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "81456-640",
+				"street": "Grange Road",
+				"number": "36331",
+				"complement": null,
+				"district": "Pike County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.877746,
+				"longitude": -52.229311
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-04T16:13:12.820Z",
+					"observations": "Succedo iure quo cubitum est tergiversatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.866773,
+								"longitude": -52.27101,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783409808303
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Tyne and Wear",
+							"streetNumber": "36122",
+							"street": "Jonas Brook",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51160759",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Quitzon Crescent, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-14T02:30:45.502Z",
+					"observations": "Thalassinus sui copia carpo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.868973,
+								"longitude": -52.262875,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783377639686
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "County Tyrone",
+							"streetNumber": "909",
+							"street": "Sawayn Fall",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79719324",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hiram Shore, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-08T10:00:34.217Z",
+					"observations": "Aetas umbra censura occaecati despecto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.903874,
+								"longitude": -52.320073,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783393113150
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Adams County",
+							"streetNumber": "1132",
+							"street": "Botsford Crossing",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68819103",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nicole Canyon, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-09T20:47:48.891Z",
+					"observations": "Debilito clementia angulus iusto aspernatur modi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.871784,
+								"longitude": -52.264804,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783436356926
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "South Glamorgan",
+							"streetNumber": "4505",
+							"street": "Kunde Park",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "31182692",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brook Street, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos Orgânicos",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Sheryl Runolfsson",
+			"display_name": "Sheryl",
+			"phone": "(14) 90295-4983",
+			"email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "32119-051",
+				"street": "Ulises Meadow",
+				"number": "73997",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.849533,
+				"longitude": -52.252696
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Annabel Jacobi",
+			"display_name": "Annabel",
+			"phone": "(41) 96222-5588",
+			"email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "18431-357",
+				"street": "Feest Throughway",
+				"number": "7994",
+				"complement": null,
+				"district": "Essex",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.864432,
+				"longitude": -52.225652
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-28T22:41:56.408Z",
+					"observations": "Cerno vos sto absque ustulo trucido autem curriculum nam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.881008,
+								"longitude": -52.31663,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783423118962
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Union County",
+							"streetNumber": "34060",
+							"street": "Stark Well",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59104295",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Russel Dale, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Medicamentos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-17T17:14:44.590Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.851237,
+								"longitude": -52.339987,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783399357321
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Madison County",
+							"streetNumber": "22017",
+							"street": "Bins Wells",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02123816",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Richmond Road, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edmond-purdy.3.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"description": "Tepesco temporibus circumvenio odit sulum bardus culpa.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Zackary Wolf",
+			"display_name": "Zackary",
+			"phone": "(62) 96870-8046",
+			"email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "54378-666",
+				"street": "Carroll Shores",
+				"number": "1103",
+				"complement": null,
+				"district": "Marion County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.861179,
+				"longitude": -52.248822
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Amy Huels",
+			"display_name": "Amy",
+			"phone": "(85) 93286-2581",
+			"email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "56734-581",
+				"street": "Zemlak Mall",
+				"number": "3378",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.875721,
+				"longitude": -52.217469
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Sonja Fritsch",
+			"display_name": "Sonja",
+			"phone": "(94) 93822-1920",
+			"email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "95210-564",
+				"street": "Petra Unions",
+				"number": "755",
+				"complement": null,
+				"district": "Bedfordshire",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.883469,
+				"longitude": -52.317317
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-08-29T18:30:04.012Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.872866,
+								"longitude": -52.296544,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783393075320
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Clay County",
+							"streetNumber": "89359",
+							"street": "Enrique Dam",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59612473",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oma Ridge, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Borracha / Pneus",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-02T00:33:39.706Z",
+					"observations": "Aliqua crebro totam contra balbus timidus angelus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.849347,
+								"longitude": -52.346336,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783390885298
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Derbyshire",
+							"streetNumber": "6825",
+							"street": "Jonathon Lock",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27245840",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jimmie Flats, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-21T21:41:58.840Z",
+					"observations": "Quis congregatio adaugeo communis thema triduana testimonium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.909227,
+								"longitude": -52.307595,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783420399402
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "County Londonderry",
+							"streetNumber": "81466",
+							"street": "Cormier Trafficway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26920944",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lind Via, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"description": "Accendo animus sophismata.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Pauline O'Reilly",
+			"display_name": "Pauline",
+			"phone": "(66) 96335-4637",
+			"email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "34302-026",
+				"street": "Fadel Fork",
+				"number": "70865",
+				"complement": null,
+				"district": "Leicestershire",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.848311,
+				"longitude": -52.321965
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-21T18:16:03.184Z",
+					"observations": "Vulgaris trucido venio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.892239,
+								"longitude": -52.230871,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783412236600
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Adams County",
+							"streetNumber": "8798",
+							"street": "Union Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71563014",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Arden Ways, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Whitney Larson",
+			"display_name": "Whitney",
+			"phone": "(82) 92092-9586",
+			"email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "37092-967",
+				"street": "W 11th Street",
+				"number": "596",
+				"complement": null,
+				"district": "Douglas County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.864382,
+				"longitude": -52.29647
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-10T11:08:58.911Z",
+					"observations": "Terebro aranea sumo argentum dedico ipsum corrumpo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.887748,
+								"longitude": -52.349648,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783412071655
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "58235",
+							"street": "Lehner Flats",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "46390813",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mueller Stream, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Plástico",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"description": "Minus vulariter cribro.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"description": "Capillus amicitia tredecim spero texo vox reiciendis deprecator aggero.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Augusta Kirlin",
+			"display_name": "Augusta",
+			"phone": "(52) 95245-7910",
+			"email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "11304-006",
+				"street": "Schultz Crossroad",
+				"number": "4039",
+				"complement": null,
+				"district": "County Fermanagh",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.882986,
+				"longitude": -52.300117
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Vallie Pfeffer",
+			"display_name": "Vallie",
+			"phone": "(68) 92612-7463",
+			"email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "66354-142",
+				"street": "Judith Garden",
+				"number": "63648",
+				"complement": null,
+				"district": "Hampshire",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.885963,
+				"longitude": -52.289179
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-22T03:58:25.048Z",
+					"observations": "Cometes comptus crux texo soleo esse curvo conventus suffragium vinculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.905752,
+								"longitude": -52.334973,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783423467925
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Cheshire",
+							"streetNumber": "4485",
+							"street": "Margie Common",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70566360",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Oval, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-05T15:59:32.964Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.871296,
+								"longitude": -52.249271,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783384626459
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Lee County",
+							"streetNumber": "74970",
+							"street": "Camille Path",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89952172",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Anne Ports, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edmond-purdy.3.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Audra Reichel",
+			"display_name": "Audra",
+			"phone": "(23) 96449-3177",
+			"email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "83063-089",
+				"street": "Hackett Flats",
+				"number": "9950",
+				"complement": null,
+				"district": "Perry County",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.892828,
+				"longitude": -52.287241
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Amos Marquardt",
+			"display_name": "Amos",
+			"phone": "(41) 99258-5087",
+			"email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "28334-212",
+				"street": "Laurel Causeway",
+				"number": "76904",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.90531,
+				"longitude": -52.319981
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-27T17:32:36.077Z",
+					"observations": "Terreo trepide aeger eos.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.886761,
+								"longitude": -52.252131,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783415858565
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "County Tyrone",
+							"streetNumber": "820",
+							"street": "Von Loaf",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56061976",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Langosh Creek, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-larson.13.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"description": "Territo bellum deficio pecco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lance VonRueden",
+			"display_name": "Lance",
+			"phone": "(60) 92100-3221",
+			"email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "31143-828",
+				"street": "Church Close",
+				"number": "21824",
+				"complement": null,
+				"district": "Tyne and Wear",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.907281,
+				"longitude": -52.273754
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-05T04:27:04.941Z",
+					"observations": "Vitae denuo commodo suasoria.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.847837,
+								"longitude": -52.320967,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783380819443
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "West Sussex",
+							"streetNumber": "64680",
+							"street": "Greenholt Via",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30108329",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Providenci Views, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Metal / Alumínio",
+						"Pilhas e Baterias"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lena-lebsack.0.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "polly-beier.5.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheryl-runolfsson.7.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lance-vonrueden.18.barra-do-garcas-mt@oikos.seed",
+							"description": "Cervus consuasor praesentium vigilo cilicium pariatur abundans thalassinus tabernus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-01T11:08:38.447Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.863554,
+								"longitude": -52.277366,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783423984289
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "County Tyrone",
+							"streetNumber": "54715",
+							"street": "Boyer Burg",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34897101",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Vicki Loop, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-11T13:19:10.229Z",
+					"observations": "Amissio depraedor alias inventore casus carpo arca.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.859779,
+								"longitude": -52.216861,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783371721364
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Clwyd",
+							"streetNumber": "119",
+							"street": "Ruecker Alley",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94404996",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Javier Avenue, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "isaac-lueilwitz.1.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"description": "Sonitus aspernatur facere casus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Aleen White",
+			"display_name": "Aleen",
+			"phone": "(39) 90385-8316",
+			"email": "aleen-white.19.barra-do-garcas-mt@oikos.seed",
+			"address": {
+				"zip_code": "32650-763",
+				"street": "Marvin Vista",
+				"number": "354",
+				"complement": null,
+				"district": "Dyfed",
+				"city": "Barra do Garças",
+				"city_ibge_id": 5101803,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.850395,
+				"longitude": -52.292035
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-11T12:00:06.625Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.878176,
+								"longitude": -52.354697,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783389052027
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Central",
+							"streetNumber": "46544",
+							"street": "1st Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58354240",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Garrick Spurs, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "amos-marquardt.17.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucas-little.4.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "audra-reichel.16.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amy-huels.10.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zackary-wolf.9.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pauline-o-reilly.12.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-kohler.6.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "augusta-kirlin.14.barra-do-garcas-mt@oikos.seed",
+							"description": "Vallum decerno apto voluptatem stipes.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "sonja-fritsch.11.barra-do-garcas-mt@oikos.seed",
+							"description": "Stella defaeco velociter ubi tribuo tutis decet patior explicabo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-08-01T02:02:44.531Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.904191,
+								"longitude": -52.347214,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783372135725
+						},
+						"addresses": {
+							"city": "Barra do Garças",
+							"district": "Somerset",
+							"streetNumber": "1422",
+							"street": "Sycamore Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23907676",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cromwell Road, Barra do Garças - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Veículos em Fim de Vida",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "princess-steuber.2.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "annabel-jacobi.8.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vallie-pfeffer.15.barra-do-garcas-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

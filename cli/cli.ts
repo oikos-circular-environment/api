@@ -6,14 +6,10 @@ import {
 	promptCities,
 	promptConfirmSelection,
 	promptOutputDir,
-	promptOverwrite,
 	promptState,
 	promptTarget,
 } from "./cli/prompts.js";
-import type {
-	CompanySeed,
-	UnownedCompanySeed,
-} from "./companies/entities/company-seed.js";
+import type { CompanySeed } from "./companies/entities/company-seed.js";
 import { GooglePlacesProvider } from "./companies/providers/google-places-provider.js";
 import { GoogleAddressParser } from "./companies/services/address-parser.js";
 import { CompanyGapFiller } from "./companies/services/company-gap-filler.js";
@@ -26,10 +22,6 @@ import { SyntheticCompanyGenerator } from "./companies/services/synthetic-compan
 import { WasteServiceGenerator } from "./companies/services/waste-service-generator.js";
 import { FetchCityCompaniesUseCase } from "./companies/use-cases/fetch-city-companies-use-case.js";
 import { GenerateCitySeedUseCase } from "./companies/use-cases/generate-city-seed-use-case.js";
-import {
-	DEFAULT_SEEDS_DIR,
-	JsonSeedFileWriter,
-} from "./companies/writers/json-seed-file-writer.js";
 import type { ComplaintSeed } from "./complaints/entities/complaint-seed.js";
 import { ComplaintAttachmentPicker } from "./complaints/services/complaint-attachment-picker.js";
 import { ComplaintCategoryPicker } from "./complaints/services/complaint-category-picker.js";
@@ -39,16 +31,19 @@ import { ResolutionGenerator } from "./complaints/services/resolution-generator.
 import { SyntheticGeospatialGenerator } from "./complaints/services/synthetic-geospatial-generator.js";
 import { VoteGenerator } from "./complaints/services/vote-generator.js";
 import { GenerateCityComplaintsUseCase } from "./complaints/use-cases/generate-city-complaints-use-case.js";
-import { JsonComplaintSeedFileWriter } from "./complaints/writers/json-complaint-seed-file-writer.js";
 import type { CityContext } from "./shared/entities/city-context.js";
-import type { CityResidentSeed } from "./shared/entities/city-resident.js";
+import type { UserSeed } from "./shared/entities/user-seed.js";
 import { env } from "./shared/env.js";
 import { GoogleGeocodingProvider } from "./shared/providers/google-geocoding-provider.js";
 import { IbgeMunicipioProvider } from "./shared/providers/ibge-municipio-provider.js";
-import { CityResidentGenerator } from "./shared/services/city-resident-generator.js";
-import { ResolveCityResidentsUseCase } from "./shared/use-cases/resolve-city-residents-use-case.js";
+import { RunLogger } from "./shared/services/run-logger.js";
+import { UserGenerator } from "./shared/services/user-generator.js";
 import { ResolveCityUseCase } from "./shared/use-cases/resolve-city-use-case.js";
-import { JsonCityResidentsFileWriter } from "./shared/writers/json-city-residents-file-writer.js";
+import { ResolveCityUsersUseCase } from "./shared/use-cases/resolve-city-users-use-case.js";
+import {
+	DEFAULT_CITY_DATA_DIR,
+	JsonCityDataWriter,
+} from "./shared/writers/json-city-data-writer.js";
 
 /** Sem essas flags nem prompt (não-interativo), o CLI ainda gera algo útil por padrão. */
 const DEFAULT_COMPANIES_TARGET = 20;
@@ -64,11 +59,13 @@ interface ParsedCliArgs {
 	residents?: number;
 	companies?: number;
 	complaints?: number;
-	force?: boolean;
 	outputDir?: string;
 }
 
-function parsePositiveIntFlag(value: string | undefined, flagName: string): number | undefined {
+function parsePositiveIntFlag(
+	value: string | undefined,
+	flagName: string,
+): number | undefined {
 	if (value === undefined) return undefined;
 	const parsed = Number(value);
 	if (!Number.isInteger(parsed) || parsed < 0) {
@@ -86,7 +83,6 @@ function parseCliArgs(argv: string[]): ParsedCliArgs {
 			residents: { type: "string" },
 			companies: { type: "string" },
 			complaints: { type: "string" },
-			force: { type: "boolean" },
 			"output-dir": { type: "string" },
 		},
 	});
@@ -110,7 +106,6 @@ function parseCliArgs(argv: string[]): ParsedCliArgs {
 		residents: parsePositiveIntFlag(values.residents, "residents"),
 		companies: parsePositiveIntFlag(values.companies, "companies"),
 		complaints: parsePositiveIntFlag(values.complaints, "complaints"),
-		force: values.force,
 		outputDir: values["output-dir"],
 	};
 }
@@ -153,48 +148,71 @@ async function resolveCitiesInteractively(
 interface CityPipelineCtx {
 	city: string;
 	stateCode: string;
-	residentsFloor?: number;
+	usersFloor?: number;
 	companiesTarget: number;
 	complaintsTarget: number;
-	force: boolean;
-	isInteractive: boolean;
 	cityContext?: CityContext;
-	residents?: CityResidentSeed[];
-	skipCompanies?: boolean;
-	realCompanies?: UnownedCompanySeed[];
-	syntheticCompanies?: UnownedCompanySeed[];
-	validatedCompanies?: UnownedCompanySeed[];
-	ownedCompanies?: CompanySeed[];
-	skipComplaints?: boolean;
-	residentsWithCompany?: Set<number>;
-	complaints?: ComplaintSeed[];
+	users?: UserSeed[];
+	realCompanies?: CompanySeed[];
+	syntheticCompanies?: CompanySeed[];
+	validatedCompanies?: CompanySeed[];
+	ownedCompaniesByUser?: Map<number, CompanySeed[]>;
+	usersWithCompany?: Set<number>;
+	complaintsByUser?: Map<number, ComplaintSeed[]>;
+}
+
+/** Loga início/fim/erro de uma etapa no arquivo da execução, sem mudar o que aparece na tela (isso continua por conta do Listr2). */
+async function withStep<T>(
+	logger: RunLogger,
+	city: string,
+	title: string,
+	fn: () => T | Promise<T>,
+): Promise<T> {
+	logger.step(city, title, "start");
+	try {
+		const result = await fn();
+		logger.step(city, title, "done");
+		return result;
+	} catch (err) {
+		logger.step(
+			city,
+			title,
+			"error",
+			err instanceof Error ? err.message : String(err),
+		);
+		throw err;
+	}
 }
 
 function buildCityTasks(
+	logger: RunLogger,
 	generateCitySeed: GenerateCitySeedUseCase,
-	resolveCityResidents: ResolveCityResidentsUseCase,
+	resolveCityUsers: ResolveCityUsersUseCase,
 	generateCityComplaints: GenerateCityComplaintsUseCase,
+	cityDataWriter: JsonCityDataWriter,
 ): Listr<CityPipelineCtx> {
 	return new Listr<CityPipelineCtx>([
 		{
 			title: "Resolvendo cidade",
-			task: async (ctx) => {
-				ctx.cityContext = await generateCitySeed.resolveCity(
-					ctx.city,
-					ctx.stateCode,
-				);
-			},
+			task: (ctx) =>
+				withStep(logger, ctx.city, "Resolvendo cidade", async () => {
+					ctx.cityContext = await generateCitySeed.resolveCity(
+						ctx.city,
+						ctx.stateCode,
+					);
+				}),
 		},
 		{
-			title: "Resolvendo moradores da cidade",
-			task: async (ctx) => {
-				const cityContext = ctx.cityContext as CityContext;
-				ctx.residents = await resolveCityResidents.execute(cityContext, {
-					companiesTarget: ctx.companiesTarget,
-					complaintsTarget: ctx.complaintsTarget,
-					residentsFloor: ctx.residentsFloor,
-				});
-			},
+			title: "Gerando moradores da cidade",
+			task: (ctx) =>
+				withStep(logger, ctx.city, "Gerando moradores da cidade", () => {
+					const cityContext = ctx.cityContext as CityContext;
+					ctx.users = resolveCityUsers.execute(cityContext, {
+						companiesTarget: ctx.companiesTarget,
+						complaintsTarget: ctx.complaintsTarget,
+						usersFloor: ctx.usersFloor,
+					});
+				}),
 		},
 		{
 			title: "Empresas de reciclagem",
@@ -202,110 +220,77 @@ function buildCityTasks(
 			task: (_ctx, task) =>
 				task.newListr([
 					{
-						title: "Verificando se já existe",
-						task: async (ctx, subtask) => {
-							if (ctx.force) return;
-
-							const cityContext = ctx.cityContext as CityContext;
-							const { exists, path } =
-								generateCitySeed.checkExisting(cityContext);
-							if (!exists) return;
-
-							if (ctx.isInteractive) {
-								const overwrite = await promptOverwrite(
-									ctx.city,
-									ctx.stateCode,
-									path,
-								);
-								if (overwrite) {
-									ctx.force = true;
-									return;
-								}
-							}
-
-							ctx.skipCompanies = true;
-							subtask.skip(
-								ctx.isInteractive
-									? `já existe em ${path}`
-									: `já existe em ${path} — use --force para regenerar`,
-							);
-						},
-					},
-					{
 						title: "Buscando empresas reais no Google Places",
-						enabled: (ctx) => !ctx.skipCompanies,
-						task: async (ctx, subtask) => {
-							const cityContext = ctx.cityContext as CityContext;
-							ctx.realCompanies =
-								await generateCitySeed.fetchRealCompanies(cityContext);
-							subtask.title = `Empresas reais encontradas: ${ctx.realCompanies.length}`;
-						},
+						task: (ctx, subtask) =>
+							withStep(
+								logger,
+								ctx.city,
+								"Buscando empresas reais no Google Places",
+								async () => {
+									const cityContext = ctx.cityContext as CityContext;
+									ctx.realCompanies = await generateCitySeed.fetchRealCompanies(
+										cityContext,
+										ctx.companiesTarget,
+									);
+									subtask.title = `Empresas reais encontradas: ${ctx.realCompanies.length}`;
+								},
+							),
 					},
 					{
 						title: "Gerando empresas sintéticas",
 						enabled: (ctx) =>
-							!ctx.skipCompanies &&
 							ctx.companiesTarget > (ctx.realCompanies?.length ?? 0),
-						task: (ctx, subtask) => {
-							const cityContext = ctx.cityContext as CityContext;
-							const realCompanies = ctx.realCompanies as UnownedCompanySeed[];
-							ctx.syntheticCompanies = generateCitySeed.generateSynthetic(
-								cityContext,
-								realCompanies.length,
-								ctx.companiesTarget,
-							);
-							subtask.title = `Empresas sintéticas geradas: ${ctx.syntheticCompanies.length}`;
-						},
+						task: (ctx, subtask) =>
+							withStep(logger, ctx.city, "Gerando empresas sintéticas", () => {
+								const cityContext = ctx.cityContext as CityContext;
+								const realCompanies = ctx.realCompanies as CompanySeed[];
+								ctx.syntheticCompanies = generateCitySeed.generateSynthetic(
+									cityContext,
+									realCompanies.length,
+									ctx.companiesTarget,
+								);
+								subtask.title = `Empresas sintéticas geradas: ${ctx.syntheticCompanies.length}`;
+							}),
 					},
 					{
 						title: "Validando e corrigindo dados gerados",
-						enabled: (ctx) => !ctx.skipCompanies,
-						task: (ctx, subtask) => {
-							const combined = [
-								...(ctx.realCompanies as UnownedCompanySeed[]),
-								...(ctx.syntheticCompanies ?? []),
-							];
-							const { companies, report } =
-								generateCitySeed.validateAndRepair(combined);
-							ctx.validatedCompanies = companies;
+						task: (ctx, subtask) =>
+							withStep(
+								logger,
+								ctx.city,
+								"Validando e corrigindo dados gerados",
+								() => {
+									const combined = [
+										...(ctx.realCompanies as CompanySeed[]),
+										...(ctx.syntheticCompanies ?? []),
+									];
+									const { companies, report } =
+										generateCitySeed.validateAndRepair(combined);
+									ctx.validatedCompanies = companies;
 
-							if (report.length === 0) {
-								subtask.title =
-									"Validando e corrigindo dados gerados: nada a corrigir";
-								return;
-							}
+									if (report.length === 0) {
+										subtask.title =
+											"Validando e corrigindo dados gerados: nada a corrigir";
+										return;
+									}
 
-							subtask.title = `Validando e corrigindo dados gerados: ${report.length} ajuste(s)`;
-							subtask.output = report.join("\n");
-						},
+									subtask.title = `Validando e corrigindo dados gerados: ${report.length} ajuste(s)`;
+									subtask.output = report.join("\n");
+								},
+							),
 					},
 					{
 						title: "Atribuindo donos de empresa",
-						enabled: (ctx) => !ctx.skipCompanies,
-						task: (ctx) => {
-							const validatedCompanies =
-								ctx.validatedCompanies as UnownedCompanySeed[];
-							const residents = ctx.residents as CityResidentSeed[];
-							ctx.ownedCompanies = generateCitySeed.assignOwners(
-								validatedCompanies,
-								residents,
-							);
-						},
-					},
-					{
-						title: "Escrevendo arquivo de seed de empresas",
-						enabled: (ctx) => !ctx.skipCompanies,
-						task: (ctx, subtask) => {
-							const cityContext = ctx.cityContext as CityContext;
-							const companies = ctx.ownedCompanies as CompanySeed[];
-							const result = generateCitySeed.writeSeed(
-								cityContext,
-								companies,
-								{ force: ctx.force },
-							);
-
-							subtask.title = `Salvo em ${result.path}`;
-						},
+						task: (ctx) =>
+							withStep(logger, ctx.city, "Atribuindo donos de empresa", () => {
+								const validatedCompanies =
+									ctx.validatedCompanies as CompanySeed[];
+								const users = ctx.users as UserSeed[];
+								ctx.ownedCompaniesByUser = generateCitySeed.assignOwners(
+									validatedCompanies,
+									users,
+								);
+							}),
 					},
 				]),
 		},
@@ -315,79 +300,69 @@ function buildCityTasks(
 			task: (_ctx, task) =>
 				task.newListr([
 					{
-						title: "Verificando se já existe",
-						task: async (ctx, subtask) => {
-							if (ctx.force) return;
-
-							const cityContext = ctx.cityContext as CityContext;
-							const { exists, path } =
-								generateCityComplaints.checkExisting(cityContext);
-							if (!exists) return;
-
-							if (ctx.isInteractive) {
-								const overwrite = await promptOverwrite(
-									ctx.city,
-									ctx.stateCode,
-									path,
-								);
-								if (overwrite) {
-									ctx.force = true;
-									return;
-								}
-							}
-
-							ctx.skipComplaints = true;
-							subtask.skip(
-								ctx.isInteractive
-									? `já existe em ${path}`
-									: `já existe em ${path} — use --force para regenerar`,
-							);
-						},
-					},
-					{
 						title: "Calculando moradores donos de empresa",
-						enabled: (ctx) => !ctx.skipComplaints,
-						task: (ctx) => {
-							const cityContext = ctx.cityContext as CityContext;
-							ctx.residentsWithCompany =
-								generateCityComplaints.computeResidentsWithCompany(
-									cityContext,
-								);
-						},
+						task: (ctx) =>
+							withStep(
+								logger,
+								ctx.city,
+								"Calculando moradores donos de empresa",
+								() => {
+									ctx.usersWithCompany =
+										generateCityComplaints.computeUsersWithCompany(
+											ctx.ownedCompaniesByUser ?? new Map(),
+										);
+								},
+							),
 					},
 					{
 						title: "Gerando denúncias",
-						enabled: (ctx) => !ctx.skipComplaints,
-						task: (ctx, subtask) => {
-							const cityContext = ctx.cityContext as CityContext;
-							const residents = ctx.residents as CityResidentSeed[];
-							const residentsWithCompany =
-								ctx.residentsWithCompany as Set<number>;
-							ctx.complaints = generateCityComplaints.generateComplaints(
-								cityContext,
-								residents,
-								residentsWithCompany,
-								ctx.complaintsTarget,
-							);
-							subtask.title = `Denúncias geradas: ${ctx.complaints.length}`;
-						},
-					},
-					{
-						title: "Escrevendo arquivo de seed de denúncias",
-						enabled: (ctx) => !ctx.skipComplaints,
-						task: (ctx, subtask) => {
-							const cityContext = ctx.cityContext as CityContext;
-							const complaints = ctx.complaints as ComplaintSeed[];
-							const result = generateCityComplaints.writeSeed(
-								cityContext,
-								complaints,
-								{ force: ctx.force },
-							);
-
-							subtask.title = `Salvo em ${result.path}`;
-						},
+						task: (ctx, subtask) =>
+							withStep(logger, ctx.city, "Gerando denúncias", () => {
+								const cityContext = ctx.cityContext as CityContext;
+								const users = ctx.users as UserSeed[];
+								const usersWithCompany = ctx.usersWithCompany as Set<number>;
+								ctx.complaintsByUser =
+									generateCityComplaints.generateComplaints(
+										cityContext,
+										users,
+										usersWithCompany,
+										ctx.complaintsTarget,
+									);
+								const totalGenerated = Array.from(
+									ctx.complaintsByUser.values(),
+								).reduce((sum, complaints) => sum + complaints.length, 0);
+								subtask.title = `Denúncias geradas: ${totalGenerated}`;
+							}),
 					},
 				]),
+		},
+		{
+			title: "Escrevendo arquivo de seed da cidade",
+			task: (ctx, task) =>
+				withStep(
+					logger,
+					ctx.city,
+					"Escrevendo arquivo de seed da cidade",
+					() => {
+						const cityContext = ctx.cityContext as CityContext;
+						const users = ctx.users as UserSeed[];
+						const ownedCompaniesByUser = ctx.ownedCompaniesByUser ?? new Map();
+						const complaintsByUser = ctx.complaintsByUser ?? new Map();
+
+						const finalUsers: UserSeed[] = users.map((user, i) => ({
+							...user,
+							companies: ownedCompaniesByUser.get(i) ?? [],
+							complaints: complaintsByUser.get(i) ?? [],
+						}));
+
+						const result = cityDataWriter.write(
+							cityContext,
+							{ users: finalUsers },
+							{ generated_at: new Date().toISOString() },
+						);
+						task.title = `Salvo em ${result.path}`;
+					},
+				),
 		},
 	]);
 	// exitOnError (default true): para as tasks restantes DESTA cidade assim
@@ -404,7 +379,6 @@ export async function runCli(argv: string[]): Promise<void> {
 		residents: flagResidents,
 		companies: flagCompanies,
 		complaints: flagComplaints,
-		force: flagForce,
 		outputDir: flagOutputDir,
 	} = parseCliArgs(argv);
 
@@ -430,10 +404,7 @@ export async function runCli(argv: string[]): Promise<void> {
 		municipioProvider,
 		geocodingProvider,
 	);
-	const resolveCityResidents = new ResolveCityResidentsUseCase(
-		new JsonCityResidentsFileWriter(),
-		new CityResidentGenerator(),
-	);
+	const resolveCityUsers = new ResolveCityUsersUseCase(new UserGenerator());
 	const fetchCompanies = new FetchCityCompaniesUseCase(placesProvider, mapper);
 	const syntheticGenerator = new SyntheticCompanyGenerator(
 		wasteServiceGenerator,
@@ -451,6 +422,8 @@ export async function runCli(argv: string[]): Promise<void> {
 		new ResolutionGenerator(),
 	);
 
+	const logger = new RunLogger();
+
 	// Só entra em prompt quando algo estiver faltando E houver um terminal real
 	// — evita travar automação/CI sem TTY quando uma flag é omitida.
 	const isInteractive = process.stdin.isTTY === true;
@@ -467,8 +440,9 @@ export async function runCli(argv: string[]): Promise<void> {
 		cities = await resolveCitiesInteractively(municipioProvider);
 	}
 
-	const residents =
-		flagResidents ?? (isInteractive ? await promptTarget("moradores") : undefined);
+	const usersFloor =
+		flagResidents ??
+		(isInteractive ? await promptTarget("moradores") : undefined);
 	const companiesTarget =
 		flagCompanies ??
 		(isInteractive
@@ -482,57 +456,53 @@ export async function runCli(argv: string[]): Promise<void> {
 			: DEFAULT_COMPLAINTS_TARGET) ??
 		DEFAULT_COMPLAINTS_TARGET;
 
-	// --output-dir controla só o diretório de empresas (mantém o significado
-	// original da flag) — denúncias sempre usam o próprio default
-	// (prisma/seeds/complaints). Aplicar o mesmo diretório às duas geraria
-	// colisão de nome de arquivo (mesmo slug de cidade, conteúdos diferentes).
+	// Um único arquivo por cidade (usuários + empresas + denúncias aninhadas) —
+	// o diretório de saída controla onde esse arquivo combinado é gravado.
 	const outputDir =
 		flagOutputDir ??
-		(isInteractive ? await promptOutputDir(DEFAULT_SEEDS_DIR) : undefined);
+		(isInteractive ? await promptOutputDir(DEFAULT_CITY_DATA_DIR) : undefined);
 
-	const writer = new JsonSeedFileWriter(outputDir);
+	const cityDataWriter = new JsonCityDataWriter(outputDir);
 	const generateCitySeed = new GenerateCitySeedUseCase(
 		resolveCity,
 		fetchCompanies,
 		syntheticGenerator,
 		repairer,
 		ownerAssigner,
-		writer,
 	);
 
 	const generateCityComplaints = new GenerateCityComplaintsUseCase(
-		resolveCity,
-		resolveCityResidents,
 		complaintGenerator,
-		new JsonComplaintSeedFileWriter(),
 	);
 
 	let hasFailure = false;
 
 	for (const { city, stateCode } of cities) {
 		const tasks = buildCityTasks(
+			logger,
 			generateCitySeed,
-			resolveCityResidents,
+			resolveCityUsers,
 			generateCityComplaints,
+			cityDataWriter,
 		);
 		try {
 			await tasks.run({
 				city,
 				stateCode,
-				residentsFloor: residents,
+				usersFloor,
 				companiesTarget,
 				complaintsTarget,
-				force: flagForce ?? false,
-				isInteractive,
 			});
-		} catch {
+		} catch (err) {
 			// Erro já foi mostrado inline pela task que falhou (ver buildCityTasks);
 			// aqui só isolamos a falha desta cidade das demais no mesmo run.
+			logger.error(city, err);
 			hasFailure = true;
 		}
 	}
 
 	outro(hasFailure ? "Concluído com falhas." : "Concluído.");
+	console.log(`Log da execução: ${logger.filePath}`);
 
 	if (hasFailure) {
 		process.exitCode = 1;

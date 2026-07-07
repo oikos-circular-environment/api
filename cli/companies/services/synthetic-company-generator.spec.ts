@@ -6,7 +6,7 @@ import {
 	upsertCompanyBusinessHoursSchema,
 } from "../../../src/modules/companies/dtos/companies-dto.js";
 import type { CityContext } from "../../shared/entities/city-context.js";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import { BrazilianIdentityGenerator } from "./identity-generator.js";
 import { SyntheticCompanyGenerator } from "./synthetic-company-generator.js";
 import { WasteServiceGenerator } from "./waste-service-generator.js";
@@ -26,7 +26,7 @@ function makeCtx(): CityContext {
 	};
 }
 
-function expectValidSeed(seed: UnownedCompanySeed): void {
+function expectValidSeed(seed: CompanySeed): void {
 	expect(
 		companyGeneralRegistrationValidationSchema.safeParse(seed).success,
 	).toBe(true);

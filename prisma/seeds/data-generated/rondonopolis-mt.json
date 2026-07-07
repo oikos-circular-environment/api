@@ -1,0 +1,4050 @@
+{
+	"_meta": {
+		"generated_at": "2026-07-07T15:13:22.165Z",
+		"city": "Rondonópolis",
+		"state_code": "MT",
+		"users_total": 20,
+		"companies_total": 10,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Darby Powlowski",
+			"display_name": "Darby",
+			"phone": "(69) 90974-9683",
+			"email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "00552-076",
+				"street": "Grange Avenue",
+				"number": "5815",
+				"complement": null,
+				"district": "Johnson County",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.464321,
+				"longitude": -54.616774
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJpapLPWrJeZMRZ0sjhvPshvo",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JJ reciclagem",
+					"business_name": "JJ reciclagem",
+					"identity": "78248688000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jj.reciclagem@married-label.name",
+					"phones": ["(66) 99943-8202"],
+					"website": null,
+					"started_activity_in": "2025-02-09T04:33:00.727Z",
+					"address": {
+						"zip_code": "78700-980",
+						"street": "MT-130",
+						"number": "1174",
+						"complement": null,
+						"district": "Micro Dist Anezio Pereira De O, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4225581,
+						"longitude": -54.612286
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 97.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.27,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 573.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 133.79,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 183.54,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 162.1,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 159.46,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 228.1,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJG0j6acfJeZMRk92vwEAI6HU",
+						"rating": 4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Bio Ecologica",
+					"business_name": "Bio Ecologica",
+					"identity": "56375078000145",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "bio.ecologica@rusty-roundabout.com",
+					"phones": ["(66) 98436-8767"],
+					"website": null,
+					"started_activity_in": "2020-12-03T01:28:24.878Z",
+					"address": {
+						"zip_code": "78745-710",
+						"street": "R. L",
+						"number": "554",
+						"complement": null,
+						"district": "Distrito Industrial, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4757009,
+						"longitude": -54.668492699999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.37,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 375.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.73,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 802.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.48,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 459.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 436.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.9,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 609.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.32,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 811
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 159.24,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 206.76,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 246.22,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Suzanne Hessel",
+			"display_name": "Suzanne",
+			"phone": "(13) 91663-8346",
+			"email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "88191-457",
+				"street": "Daniela Causeway",
+				"number": "76363",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.499636,
+				"longitude": -54.631357
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ2XWIvJnJeZMRHGv97obdwdk",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ms Reciclagem",
+					"business_name": "Ms Reciclagem",
+					"identity": "07858507000120",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ms.reciclagem@round-sediment.net",
+					"phones": ["(85) 96820-2545"],
+					"website": null,
+					"started_activity_in": "2018-11-13T18:07:01.208Z",
+					"address": {
+						"zip_code": "78750-716",
+						"street": "Vila Olinda",
+						"number": "Rondonópolis",
+						"complement": null,
+						"district": "MT, , Brasil",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4652173,
+						"longitude": -54.6791395
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.82,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 272.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.52,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 447.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 105,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 277.14,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJFdudvn3IeZMRZzUPkmMklyE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "J.K.F. Reciclagem",
+					"business_name": "J.K.F. Reciclagem",
+					"identity": "22716968000151",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "j.k.f.reciclagem@worthless-puritan.name",
+					"phones": ["(66) 99636-4810"],
+					"website": null,
+					"started_activity_in": "2020-03-02T15:11:17.712Z",
+					"address": {
+						"zip_code": "78725-130",
+						"street": "R. Odílio Antônio de Oliveira",
+						"number": "S/N",
+						"complement": null,
+						"district": "Vila Olga Maria, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4463093,
+						"longitude": -54.6166797
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.42,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 924.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.76,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 478.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.94,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 514.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.94,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 892.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.76,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 902.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.89,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 521.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 96.59,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 292.69,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 156.43,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 59.63,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-10T18:59:49.548Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.508189,
+								"longitude": -54.687784,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783399778803
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Warren County",
+							"streetNumber": "5907",
+							"street": "Jeffery Fort",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52972143",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wilfred Wells, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Vidro", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ira Cassin",
+			"display_name": "Ira",
+			"phone": "(83) 96206-9178",
+			"email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "82711-209",
+				"street": "Afton Trace",
+				"number": "5657",
+				"complement": null,
+				"district": "Carroll County",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.487971,
+				"longitude": -54.677981
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJUeKgeADJeZMRzoh1DilAvb8",
+						"rating": 5,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JL Reciclagem",
+					"business_name": "JL Reciclagem",
+					"identity": "02026926000181",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jl.reciclagem@cool-equal.name",
+					"phones": ["(66) 99996-2727"],
+					"website": null,
+					"started_activity_in": "2022-04-27T12:25:21.604Z",
+					"address": {
+						"zip_code": "78725-400",
+						"street": "Av. Abigail Deveza Costa",
+						"number": "S/N",
+						"complement": null,
+						"district": "Vila Iracy, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4441916,
+						"longitude": -54.613732199999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 815.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.94,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 403
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.47,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 992.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.74,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 766
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.52,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 353.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 256.95,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 265.97,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJeWFUcnfJeZMRAjTYLTa03qM",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "DJ RECICLAGEM DE PLÁSTICOS",
+					"business_name": "DJ RECICLAGEM DE PLÁSTICOS",
+					"identity": "04568692000120",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "dj.reciclagem.de.plasticos@sick-partridge.org",
+					"phones": ["(66) 99923-1786"],
+					"website": null,
+					"started_activity_in": "2018-12-22T16:23:00.905Z",
+					"address": {
+						"zip_code": "78700-000",
+						"street": "R MARIO ROSSIGNOLO",
+						"number": "Q13 LT42",
+						"complement": null,
+						"district": "Distrito Industrial, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4802969,
+						"longitude": -54.674161
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 163.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.81,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 100.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 268.59,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 131.32,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 65.35,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 106.13,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 261.99,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-08T08:13:57.574Z",
+					"observations": "Undique abeo adhuc denuncio suspendo cauda vinum ubi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.447454,
+								"longitude": -54.61516,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783429260891
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Herefordshire",
+							"streetNumber": "6352",
+							"street": "Meadow Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27624776",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Demarcus Ports, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-19T12:20:02.850Z",
+					"observations": "Cicuta porro venio atque circumvenio aliquam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.418761,
+								"longitude": -54.625737,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783413026693
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Wayne County",
+							"streetNumber": "43451",
+							"street": "Devonshire Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59409080",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bernhard Valleys, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"description": "Amor benevolentia eaque.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"description": "Velociter conscendo assentator animi suasoria provident ullam tergo arbustum.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-10T18:03:04.880Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.423295,
+								"longitude": -54.613275,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783356587794
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Johnson County",
+							"streetNumber": "1932",
+							"street": "MacGyver Alley",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09229389",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brekke Ridge, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-30T18:39:44.143Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.476815,
+								"longitude": -54.632551,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783397981770
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Buckinghamshire",
+							"streetNumber": "5040",
+							"street": "Herman Hill",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49309621",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cliff Road, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"description": "Tracto sum vespillo tonsor impedit arceo validus amor clamo denique.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-08-21T03:37:13.035Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.468596,
+								"longitude": -54.607442,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783428075490
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Logan County",
+							"streetNumber": "82949",
+							"street": "Waterloo Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64534248",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rodriguez Groves, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"description": "Virtus celo rerum.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"description": "Angustus denuncio tui carus conicio accusator praesentium thalassinus sopor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jon Luettgen",
+			"display_name": "Jon",
+			"phone": "(49) 91304-8402",
+			"email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "29216-753",
+				"street": "Purdy Heights",
+				"number": "48417",
+				"complement": null,
+				"district": "Dorset",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.446361,
+				"longitude": -54.60028
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJo21NBwDHeZMRaB6fci05CME",
+						"rating": 4.9,
+						"types": ["storage", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Alemão Reciclagem",
+					"business_name": "Alemão Reciclagem",
+					"identity": "17106172000147",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "alemao.reciclagem@complicated-extension.name",
+					"phones": ["(03) 99551-3997"],
+					"website": null,
+					"started_activity_in": "2022-03-05T11:06:04.764Z",
+					"address": {
+						"zip_code": "78735-338",
+						"street": "Av. Valter Farias Ribeiro",
+						"number": "653",
+						"complement": null,
+						"district": "Parque Sagrada Família, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4780893,
+						"longitude": -54.596248499999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.32,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 143.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.88,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 665.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 100.88,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 241.55,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJpTczE2rIeZMRbcfkKCh21bY",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "AMAZÔNIA Reciclagem",
+					"business_name": "AMAZÔNIA Reciclagem",
+					"identity": "43354377000151",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "amazonia.reciclagem@dreary-entry.com",
+					"phones": ["(77) 92292-0348"],
+					"website": null,
+					"started_activity_in": "2016-11-07T09:34:29.817Z",
+					"address": {
+						"zip_code": "78745-050",
+						"street": "Centro",
+						"number": "S/N",
+						"complement": null,
+						"district": "B, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4639017,
+						"longitude": -54.630516699999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.24,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 708
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 163.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 54.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.26,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 765.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.99,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 639.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.13,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 469
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 248.08,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 131.88,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 271.28,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Mac Kuphal",
+			"display_name": "Mac",
+			"phone": "(80) 92564-5469",
+			"email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "60205-426",
+				"street": "Highfield Avenue",
+				"number": "194",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.450753,
+				"longitude": -54.634555
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJQyLOmTrJeZMRllZsi9Vy0ys",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Rondosólidos Gerenciamento e Reciclagem de Resíduos da Construção Civil",
+					"business_name": "Rondosólidos Gerenciamento e Reciclagem de Resíduos da Construção Civil",
+					"identity": "52939004000133",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rondosolidos.gerenciamento.e.reciclagem.de.residuos.da.construcao.civil@blushing-ribbon.name",
+					"phones": ["(66) 99984-4477"],
+					"website": null,
+					"started_activity_in": "2018-11-24T23:59:22.596Z",
+					"address": {
+						"zip_code": "78721-063",
+						"street": "Av. Bandeirantes",
+						"number": "s/n",
+						"complement": null,
+						"district": "Chácaras Globo Recreio II, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4175614,
+						"longitude": -54.6089263
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.33,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 820.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.89,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 355
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.44,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 316
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 112.96,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 172.95,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJDzE1FDfJeZMRxKCrJC-6C3Q",
+						"rating": 4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Colecta Reciclagem e Gestão Plena de Resíduos - Rondonópolis",
+					"business_name": "Colecta Reciclagem e Gestão Plena de Resíduos - Rondonópolis",
+					"identity": "86878706000176",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "colecta.reciclagem.e.gestao.plena.de.residuos.rondonopolis@precious-forager.org",
+					"phones": ["(66) 3423-1025"],
+					"website": "http://colecta.eco.br/",
+					"started_activity_in": "2024-10-18T02:13:46.468Z",
+					"address": {
+						"zip_code": "78745-705",
+						"street": "Avenida Mario Acunha Aristides",
+						"number": "1375 1375",
+						"complement": null,
+						"district": "Distrito Industrial, Rondonópolis",
+						"city": "Rondonópolis",
+						"city_ibge_id": 5107602,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.4665314,
+						"longitude": -54.662961599999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.52,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 49.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.17,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 793.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.46,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 334.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 877.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.47,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 736.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 949.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 194.39,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 112.72,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 246.05,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 272.89,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 277.2,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 71.54,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-06T18:53:16.801Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.44806,
+								"longitude": -54.686695,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783358845984
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Shropshire",
+							"streetNumber": "2459",
+							"street": "Upton Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91288551",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Birch Avenue, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emma-howell.18.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"description": "Commodi amiculum dolore officiis sufficio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-05T05:47:42.603Z",
+					"observations": "Claro hic abundans ullam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.429977,
+								"longitude": -54.645668,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783407223276
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Norfolk",
+							"streetNumber": "5294",
+							"street": "Mathilde Causeway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48790967",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mayert Pines, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-30T11:07:42.667Z",
+					"observations": "Sum autem bibo spero vulpes validus cito cinis causa defendo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.437154,
+								"longitude": -54.688999,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783427964726
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Gloucestershire",
+							"streetNumber": "119",
+							"street": "Zoe Underpass",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26095613",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Darrin Unions, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Plástico", "Madeira", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+							"description": "Arcesso apparatus stillicidium porro damno quos adstringo culpa.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Gail Dibbert",
+			"display_name": "Gail",
+			"phone": "(06) 97860-5352",
+			"email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "13526-363",
+				"street": "Elm Grove",
+				"number": "943",
+				"complement": null,
+				"district": "Marshall County",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.442591,
+				"longitude": -54.650785
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Cody Mills",
+			"display_name": "Cody",
+			"phone": "(77) 97703-7567",
+			"email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "64871-584",
+				"street": "Maureen Mills",
+				"number": "4106",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.450961,
+				"longitude": -54.630522
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Reanna Veum",
+			"display_name": "Reanna",
+			"phone": "(11) 90117-6516",
+			"email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "17535-138",
+				"street": "Ida Overpass",
+				"number": "1001",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.478883,
+				"longitude": -54.603378
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-07T20:39:41.181Z",
+					"observations": "Admoveo coerceo ademptio urbanus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.482681,
+								"longitude": -54.589006,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783375672096
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Calhoun County",
+							"streetNumber": "24092",
+							"street": "Vanessa Mills",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49311319",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lori Ferry, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Lâmpadas",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "emma-howell.18.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"description": "Coepi curia denique.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"description": "Argumentum perspiciatis thalassinus carus eos virtus quam adicio dapifer.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Juvenal Olson",
+			"display_name": "Juvenal",
+			"phone": "(67) 96877-9747",
+			"email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "12213-402",
+				"street": "Legros Bridge",
+				"number": "44608",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.483978,
+				"longitude": -54.573035
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-21T17:46:52.280Z",
+					"observations": "Vivo verbum auxilium deserunt curo sperno quam tardus dignissimos umquam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.498263,
+								"longitude": -54.589863,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783420384250
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Kent",
+							"streetNumber": "366",
+							"street": "Charles Lake",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56032642",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "South Drive, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Brock Fritsch",
+			"display_name": "Brock",
+			"phone": "(58) 96631-0713",
+			"email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "08826-689",
+				"street": "Duane Groves",
+				"number": "75691",
+				"complement": null,
+				"district": "Devon",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.449825,
+				"longitude": -54.64454
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-08T09:07:01.281Z",
+					"observations": "Deinde centum texo trepide vitiosus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.478461,
+								"longitude": -54.589656,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783393291697
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Henry County",
+							"streetNumber": "30723",
+							"street": "Ismael Rapids",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22078336",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Flossie Shoals, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-15T14:57:55.573Z",
+					"observations": "Subnecto urbanus quam deprecator.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.477899,
+								"longitude": -54.610216,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783397658172
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Avon",
+							"streetNumber": "82393",
+							"street": "Koss Mission",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09438689",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lind Meadow, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Borracha / Pneus",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-04T03:17:10.793Z",
+					"observations": "Abundans aperiam dapifer claustrum tabesco conduco coerceo ex audeo pecus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.506312,
+								"longitude": -54.693709,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783403208772
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Somerset",
+							"streetNumber": "160",
+							"street": "Delores Parkways",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44430924",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Mews, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Papel / Papelão",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"description": "Adsuesco tenuis calamitas.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-25T18:37:13.589Z",
+					"observations": "Desparatus aperte pauci tabesco defleo dicta stillicidium vivo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.441812,
+								"longitude": -54.65909,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783407157978
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "South Yorkshire",
+							"streetNumber": "5343",
+							"street": "N Washington Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39037195",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stella Drive, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Carlo Wunsch",
+			"display_name": "Carlo",
+			"phone": "(87) 93306-3011",
+			"email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "69126-318",
+				"street": "Romaguera Freeway",
+				"number": "13474",
+				"complement": null,
+				"district": "Cumbria",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.506459,
+				"longitude": -54.625836
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-02T04:33:14.252Z",
+					"observations": "Crepusculum theatrum tabella cilicium validus vesica.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.4647,
+								"longitude": -54.580901,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783421298651
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Calhoun County",
+							"streetNumber": "90853",
+							"street": "Louis Union",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01297790",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Elna Ports, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-13T14:11:55.617Z",
+					"observations": "Molestiae crux neque.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.46273,
+								"longitude": -54.649259,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783359555649
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "West Sussex",
+							"streetNumber": "57783",
+							"street": "Court Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "17546778",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hudson Rue, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-07-20T12:08:14.846Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.473474,
+								"longitude": -54.688047,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783429205812
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Greater Manchester",
+							"streetNumber": "195",
+							"street": "Blanda Isle",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28515217",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Park Avenue, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emma-howell.18.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"description": "Cernuus ago clam audeo terror.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Clarence Greenholt",
+			"display_name": "Clarence",
+			"phone": "(27) 99677-5761",
+			"email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "55631-824",
+				"street": "Prosacco Causeway",
+				"number": "172",
+				"complement": null,
+				"district": "County Down",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.461518,
+				"longitude": -54.597215
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-05T20:37:43.790Z",
+					"observations": "Repudiandae acer victoria curvo stella surculus comburo solus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.448765,
+								"longitude": -54.616101,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783402219694
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "West Midlands",
+							"streetNumber": "899",
+							"street": "Schaefer Circle",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50912233",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N 1st Street, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Stacy Boyle",
+			"display_name": "Stacy",
+			"phone": "(21) 91314-2870",
+			"email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "26034-111",
+				"street": "Riverside",
+				"number": "4257",
+				"complement": null,
+				"district": "Tyne and Wear",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.456278,
+				"longitude": -54.63235
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Layne Marks",
+			"display_name": "Layne",
+			"phone": "(94) 93050-9853",
+			"email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "57463-778",
+				"street": "Marks Parkways",
+				"number": "8249",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.496807,
+				"longitude": -54.580508
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-10T17:52:58.564Z",
+					"observations": "Acsi suscipio spargo sopor absconditus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.430938,
+								"longitude": -54.611138,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783382018366
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "West Sussex",
+							"streetNumber": "5525",
+							"street": "Bell Lane",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93219912",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bechtelar Views, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "suzanne-hessel.1.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emma-howell.18.rondonopolis-mt@oikos.seed",
+							"description": "Asperiores degero suscipio asporto ceno demens.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"description": "Credo succurro velit sophismata tibi vir.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-27T13:20:01.682Z",
+					"observations": "Comes perspiciatis canonicus attonbitus cribro vivo cito turbo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.498638,
+								"longitude": -54.631921,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783355538609
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Johnson County",
+							"streetNumber": "755",
+							"street": "Eino Courts",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90590682",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Phoebe Meadows, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emma-howell.18.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"description": "Odit contigo adfectus texo umbra crustulum tero culpa.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"description": "Magni thermae crinis caste ambulo totidem adhuc adaugeo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-23T15:23:40.711Z",
+					"observations": "Adinventitias super pecus antiquus et eos.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.483788,
+								"longitude": -54.600331,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783422471657
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Pike County",
+							"streetNumber": "9310",
+							"street": "Ash Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63137732",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schowalter Meadow, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+							"description": "Quisquam pecus deleniti ademptio compello commemoro.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"description": "Substantia benevolentia viscus commodo carbo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Janie Leuschke",
+			"display_name": "Janie",
+			"phone": "(56) 93695-8940",
+			"email": "janie-leuschke.14.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "48927-624",
+				"street": "Vanessa Grove",
+				"number": "6894",
+				"complement": null,
+				"district": "Tayside",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.463166,
+				"longitude": -54.676708
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-16T20:15:54.369Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.467747,
+								"longitude": -54.656541,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783396519961
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Greater Manchester",
+							"streetNumber": "5235",
+							"street": "Watery Lane",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "40474575",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Jackson Street, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "juvenal-olson.8.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Salvatore Wehner",
+			"display_name": "Salvatore",
+			"phone": "(23) 94183-8592",
+			"email": "salvatore-wehner.15.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "34957-432",
+				"street": "Judah Union",
+				"number": "114",
+				"complement": null,
+				"district": "Highlands and Islands",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.482684,
+				"longitude": -54.667087
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-27T07:52:39.596Z",
+					"observations": "Vos testimonium deserunt deputo cupio testimonium termes cauda.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.465069,
+								"longitude": -54.598652,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783430475084
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Nottinghamshire",
+							"streetNumber": "8735",
+							"street": "W 1st Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66151340",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Walker Orchard, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-31T09:26:14.164Z",
+					"observations": "Ter crudelis teneo vita commodi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.483632,
+								"longitude": -54.59275,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783394718880
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Northumberland",
+							"streetNumber": "162",
+							"street": "Stamm Streets",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35601194",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Washington Street, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-26T02:55:06.716Z",
+					"observations": "Torqueo suspendo ceno abscido aiunt cubicularis vigor verecundia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.464752,
+								"longitude": -54.5835,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783403935426
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Clay County",
+							"streetNumber": "998",
+							"street": "Conn Forks",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25831165",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nathen Burg, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ira-cassin.2.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+							"description": "Dolore cedo adulatio deorsum decor caecus demergo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "gail-dibbert.5.rondonopolis-mt@oikos.seed",
+							"description": "Carmen succurro succurro utrum dignissimos cunctatio blanditiis voluptatibus vindico commemoro.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-10T13:53:08.043Z",
+					"observations": "Subvenio verumtamen defluo spoliatio sollers coerceo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.445775,
+								"longitude": -54.670749,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783351138250
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Washington County",
+							"streetNumber": "4208",
+							"street": "Tianna Expressway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34853262",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ash Road, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stacy-boyle.12.rondonopolis-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Marian Koch",
+			"display_name": "Marian",
+			"phone": "(20) 99568-9233",
+			"email": "marian-koch.16.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "59235-817",
+				"street": "Moore Junctions",
+				"number": "120",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.466953,
+				"longitude": -54.689138
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Terrance Brakus",
+			"display_name": "Terrance",
+			"phone": "(44) 93415-8920",
+			"email": "terrance-brakus.17.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "27172-986",
+				"street": "Wunsch Stravenue",
+				"number": "15224",
+				"complement": null,
+				"district": "Nottinghamshire",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.453008,
+				"longitude": -54.650394
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-17T09:27:44.777Z",
+					"observations": "Aggero condico tyrannus adimpleo comparo recusandae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.448756,
+								"longitude": -54.616628,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783408757324
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Kent",
+							"streetNumber": "17839",
+							"street": "Botsford Expressway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "60141970",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hahn Cape, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Emma Howell",
+			"display_name": "Emma",
+			"phone": "(79) 98054-7691",
+			"email": "emma-howell.18.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "58161-121",
+				"street": "Ernser Plaza",
+				"number": "748",
+				"complement": null,
+				"district": "Rutland",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.440723,
+				"longitude": -54.610321
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-15T10:37:33.487Z",
+					"observations": "Eveniet comprehendo ancilla tantum modi cilicium tendo animadverto victus provident.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.463708,
+								"longitude": -54.651538,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783360159655
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "Clay County",
+							"streetNumber": "1200",
+							"street": "Kathy Lock",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71018891",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Fahey-Walker Falls, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "reanna-veum.7.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlo-wunsch.10.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Donavon Littel",
+			"display_name": "Donavon",
+			"phone": "(28) 93158-9162",
+			"email": "donavon-littel.19.rondonopolis-mt@oikos.seed",
+			"address": {
+				"zip_code": "38870-802",
+				"street": "Pine Close",
+				"number": "387",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Rondonópolis",
+				"city_ibge_id": 5107602,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.509442,
+				"longitude": -54.656486
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-21T10:10:34.045Z",
+					"observations": "Termes coruscus rerum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.504058,
+								"longitude": -54.579387,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783380139133
+						},
+						"addresses": {
+							"city": "Rondonópolis",
+							"district": "South Glamorgan",
+							"streetNumber": "5282",
+							"street": "St John's Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58720978",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cleveland Street, Rondonópolis - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "mac-kuphal.4.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cody-mills.6.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-greenholt.11.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "layne-marks.13.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brock-fritsch.9.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darby-powlowski.0.rondonopolis-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jon-luettgen.3.rondonopolis-mt@oikos.seed",
+							"description": "Supplanto voro unde.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		}
+	]
+}

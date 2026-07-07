@@ -2,25 +2,16 @@ import { describe, expect, it } from "vitest";
 import { geospatialSchema } from "../../src/modules/complaints/entities/complaint-entity.js";
 import { CATEGORIES } from "../../src/modules/wastes/data/waste-categories-base.js";
 import type {
-	CityResidentsFile,
-	CityResidentSeed,
-	CityResidentsFileMeta,
-} from "../shared/entities/city-resident.js";
-import type { IbgeMunicipio, IbgeUf } from "../shared/entities/ibge-municipio.js";
+	IbgeMunicipio,
+	IbgeUf,
+} from "../shared/entities/ibge-municipio.js";
 import type {
 	GeocodeResult,
 	GeocodingProvider,
 } from "../shared/providers/geocoding-provider.js";
 import type { MunicipioProvider } from "../shared/providers/municipio-provider.js";
-import { CityResidentGenerator } from "../shared/services/city-resident-generator.js";
-import { ResolveCityResidentsUseCase } from "../shared/use-cases/resolve-city-residents-use-case.js";
 import { ResolveCityUseCase } from "../shared/use-cases/resolve-city-use-case.js";
-import type {
-	CityResidentsFileWriter,
-	ExistsResult as ResidentsExistsResult,
-	WriteResult as ResidentsWriteResult,
-} from "../shared/writers/city-residents-file-writer.js";
-import type { ComplaintSeed } from "./entities/complaint-seed.js";
+import { ResolveCityUsersUseCase } from "../shared/use-cases/resolve-city-users-use-case.js";
 import { ComplaintAttachmentPicker } from "./services/complaint-attachment-picker.js";
 import { ComplaintCategoryPicker } from "./services/complaint-category-picker.js";
 import { ComplaintGenerator } from "./services/complaint-generator.js";
@@ -29,11 +20,6 @@ import { ResolutionGenerator } from "./services/resolution-generator.js";
 import { SyntheticGeospatialGenerator } from "./services/synthetic-geospatial-generator.js";
 import { calculateWeights, VoteGenerator } from "./services/vote-generator.js";
 import { GenerateCityComplaintsUseCase } from "./use-cases/generate-city-complaints-use-case.js";
-import type {
-	ComplaintSeedFileWriter,
-	ExistsResult,
-	WriteResult,
-} from "./writers/complaint-seed-file-writer.js";
 
 function makeMunicipio(nome: string, id: number): IbgeMunicipio {
 	return {
@@ -68,52 +54,13 @@ class FakeGeocodingProvider implements GeocodingProvider {
 	}
 }
 
-class InMemoryCityResidentsFileWriter implements CityResidentsFileWriter {
-	private stored: CityResidentsFile | null = null;
-
-	exists(): ResidentsExistsResult {
-		return { exists: this.stored !== null, path: "/fake/residents.json" };
-	}
-
-	write(
-		_ctx: unknown,
-		residents: CityResidentSeed[],
-		meta: Omit<CityResidentsFileMeta, "total">,
-	): ResidentsWriteResult {
-		this.stored = { _meta: { ...meta, total: residents.length }, residents };
-		return { written: true, path: "/fake/residents.json" };
-	}
-
-	read(): CityResidentSeed[] {
-		if (!this.stored) throw new Error("nothing stored");
-		return this.stored.residents;
-	}
-}
-
-class InMemoryComplaintSeedFileWriter implements ComplaintSeedFileWriter {
-	public complaints: ComplaintSeed[] = [];
-	public existsResult = { exists: false, path: "/fake/complaints.json" };
-
-	exists(): ExistsResult {
-		return this.existsResult;
-	}
-
-	write(_ctx: unknown, complaints: ComplaintSeed[]): WriteResult {
-		this.complaints = complaints;
-		return { written: true, path: "/fake/complaints.json" };
-	}
-}
-
 describe("complaint-seed-pipeline", () => {
 	it("composes the full pipeline (fakes only, no network/disk) into valid, coherent ComplaintSeeds", async () => {
 		const resolveCity = new ResolveCityUseCase(
 			new FakeMunicipioProvider(),
 			new FakeGeocodingProvider(),
 		);
-		const resolveCityResidents = new ResolveCityResidentsUseCase(
-			new InMemoryCityResidentsFileWriter(),
-			new CityResidentGenerator(),
-		);
+		const resolveCityUsers = new ResolveCityUsersUseCase();
 		const complaintGenerator = new ComplaintGenerator(
 			new ComplaintCategoryPicker(),
 			new ComplaintAttachmentPicker(["a.jpg", "b.jpg", "c.jpg"]),
@@ -122,77 +69,77 @@ describe("complaint-seed-pipeline", () => {
 			new VoteGenerator(),
 			new ResolutionGenerator(),
 		);
-		const writer = new InMemoryComplaintSeedFileWriter();
 
-		const useCase = new GenerateCityComplaintsUseCase(
-			resolveCity,
-			resolveCityResidents,
-			complaintGenerator,
-			writer,
+		const useCase = new GenerateCityComplaintsUseCase(complaintGenerator);
+
+		const ctx = await resolveCity.execute("Rondonópolis", "MT");
+		const users = resolveCityUsers.execute(ctx, { complaintsTarget: 60 });
+
+		const complaintsByUser = useCase.generateComplaints(
+			ctx,
+			users,
+			new Set(),
+			60,
 		);
 
-		const ctx = await useCase.resolveCity("Rondonópolis", "MT");
-		const residents = await useCase.resolveResidents(ctx, {
-			complaintsTarget: 60,
-		});
-
-		const result = await useCase.execute("Rondonópolis", "MT", residents, {
-			target: 60,
-		});
-
-		expect(result.total).toBe(60);
-		expect(writer.complaints).toHaveLength(60);
+		const totalComplaints = Array.from(complaintsByUser.values()).reduce(
+			(sum, complaints) => sum + complaints.length,
+			0,
+		);
+		expect(totalComplaints).toBe(60);
 
 		const canonicalNames = new Set(CATEGORIES.map((c) => c.name));
 
-		for (const complaint of writer.complaints) {
-			// geospatial válido contra o schema Zod real
-			expect(geospatialSchema.safeParse(complaint.geospatial).success).toBe(
-				true,
-			);
+		for (const [authorIndex, complaints] of complaintsByUser) {
+			const authorEmail = users[authorIndex].email;
 
-			// categorias sempre do catálogo canônico
-			expect(complaint.waste_category_names.length).toBeGreaterThanOrEqual(1);
-			for (const name of complaint.waste_category_names) {
-				expect(canonicalNames.has(name)).toBe(true);
-			}
+			for (const complaint of complaints) {
+				// geospatial válido contra o schema Zod real
+				expect(geospatialSchema.safeParse(complaint.geospatial).success).toBe(
+					true,
+				);
 
-			// votantes distintos entre si e nunca o autor
-			const voterIndexes = complaint.votes.map((v) => v.resident_index);
-			expect(new Set(voterIndexes).size).toBe(voterIndexes.length);
-			expect(voterIndexes.includes(complaint.author_resident_index)).toBe(
-				false,
-			);
+				// categorias sempre do catálogo canônico
+				expect(complaint.waste_category_names.length).toBeGreaterThanOrEqual(1);
+				for (const name of complaint.waste_category_names) {
+					expect(canonicalNames.has(name)).toBe(true);
+				}
 
-			// coerência status <-> quórum real
-			const { positive, negative } = calculateWeights(complaint.votes);
-			if (complaint.status === "RESOLVED") {
-				expect(positive).toBeGreaterThanOrEqual(5 + negative);
-				expect(complaint.resolutions.length).toBeGreaterThanOrEqual(1);
-			}
-			if (complaint.status === "OPEN") {
-				expect(positive).toBeLessThan(5 + negative);
-				expect(complaint.resolutions).toEqual([]);
-			}
-			if (complaint.status === "CANCELED") {
-				expect(complaint.resolutions).toEqual([]);
-			}
+				// votantes distintos entre si e nunca o autor
+				const voterEmails = complaint.votes.map((v) => v.voter_email);
+				expect(new Set(voterEmails).size).toBe(voterEmails.length);
+				expect(voterEmails.includes(authorEmail)).toBe(false);
 
-			// resoluções: nunca duplica resident_index na mesma denúncia; sem
-			// moradores donos de empresa nesta execução, nunca há PREFER_COMPANY
-			const resolutionIndexes = complaint.resolutions.map(
-				(r) => r.resident_index,
-			);
-			expect(new Set(resolutionIndexes).size).toBe(resolutionIndexes.length);
-			for (const resolution of complaint.resolutions) {
-				expect(resolution.resolution_hint).toBe("CITIZEN_ONLY");
-			}
+				// coerência status <-> quórum real
+				const { positive, negative } = calculateWeights(complaint.votes);
+				if (complaint.status === "RESOLVED") {
+					expect(positive).toBeGreaterThanOrEqual(5 + negative);
+					expect(complaint.resolutions.length).toBeGreaterThanOrEqual(1);
+				}
+				if (complaint.status === "OPEN") {
+					expect(positive).toBeLessThan(5 + negative);
+					expect(complaint.resolutions).toEqual([]);
+				}
+				if (complaint.status === "CANCELED") {
+					expect(complaint.resolutions).toEqual([]);
+				}
 
-			// anexos sempre referenciam um dos arquivos injetados, sem repetição
-			const attachmentFiles = complaint.attachments.map((a) => a.asset_file);
-			expect(new Set(attachmentFiles).size).toBe(attachmentFiles.length);
-			for (const file of attachmentFiles) {
-				expect(["a.jpg", "b.jpg", "c.jpg"]).toContain(file);
+				// resoluções: nunca duplica resolver_email na mesma denúncia; sem
+				// usuários donos de empresa nesta execução, nunca há PREFER_COMPANY
+				const resolverEmails = complaint.resolutions.map(
+					(r) => r.resolver_email,
+				);
+				expect(new Set(resolverEmails).size).toBe(resolverEmails.length);
+				for (const resolution of complaint.resolutions) {
+					expect(resolution.resolution_hint).toBe("CITIZEN_ONLY");
+				}
+
+				// anexos sempre referenciam um dos arquivos injetados, sem repetição
+				const attachmentFiles = complaint.attachments.map((a) => a.asset_file);
+				expect(new Set(attachmentFiles).size).toBe(attachmentFiles.length);
+				for (const file of attachmentFiles) {
+					expect(["a.jpg", "b.jpg", "c.jpg"]).toContain(file);
+				}
 			}
 		}
 	});

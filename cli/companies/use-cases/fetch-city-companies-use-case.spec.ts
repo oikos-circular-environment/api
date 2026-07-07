@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { CityContext } from "../../shared/entities/city-context.js";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import type { GooglePlace } from "../entities/google-place.js";
 import type {
 	PlacesProvider,
@@ -40,7 +40,7 @@ class FakePlacesProvider implements PlacesProvider {
 }
 
 class FakeMapper implements PlaceMapper {
-	map(place: GooglePlace, ctx: CityContext): UnownedCompanySeed {
+	map(place: GooglePlace, ctx: CityContext): CompanySeed {
 		return {
 			_source: {
 				google_place_id: place.id,

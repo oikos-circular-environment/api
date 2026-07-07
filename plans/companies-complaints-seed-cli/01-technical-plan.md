@@ -122,6 +122,23 @@ api/docs/recycling-seed-cli.md          # reescrito/renomeado para docs/seed-cli
 
 ## 3. Contratos de Dados
 
+> **Nota (atualizado após a implementação real, substitui o desenho original de §3.2-§3.7 abaixo):**
+> A implementação convergiu para **um único arquivo JSON por cidade**
+> (`prisma/seeds/data-generated/<slug>.json`), não três arquivos separados
+> (`city-residents/`, `recycling-companies/`, `complaints/`) como descrito
+> originalmente nesta seção. Além disso, a correlação entre morador/empresa/
+> denúncia deixou de ser por **índice posicional** (`owner_resident_index`,
+> `author_resident_index`, `resident_index`) e passou a ser **estrutural**:
+> o topo do arquivo é `users: UserSeed[]`, e cada `UserSeed` carrega
+> embutidas as `companies` que possui e as `complaints` que fez — exatamente
+> como o `schema.prisma` modela (`User` é dono de `Company`/`Complaint`).
+> Referências que cruzam usuários diferentes (voto/resolução na denúncia de
+> outra pessoa) usam o **email** do usuário (chave natural, já usada pelo
+> upsert), não mais um índice de array. Os blocos abaixo (§3.2-§3.7)
+> descrevem o desenho anterior por índice — mantidos como registro histórico
+> da decisão, mas **não refletem o código atual**. Ver §3.2-bis logo após
+> §3.7 para os contratos reais.
+
 ### 3.1 `shared/entities/address-seed.ts` (relocado, sem mudança de shape)
 
 ```typescript
@@ -311,6 +328,56 @@ export interface ComplaintSeedFile {
 }
 ```
 
+### 3.2-bis Contratos reais (`shared/entities/user-seed.ts`, ajustes em `company-seed.ts`/`complaint-seed.ts`, `shared/writers/city-data-writer.ts`)
+
+```typescript
+// shared/entities/user-seed.ts
+export interface UserSeed {
+	full_name: string;
+	display_name: string;
+	phone: string;
+	email: string;              // chave natural — usada pelo upsert E por toda referência cruzada
+	address: AddressSeed;
+	companies: CompanySeed[];   // empresas que este usuário possui (0-2)
+	complaints: ComplaintSeed[]; // denúncias que este usuário fez
+}
+
+// companies/entities/company-seed.ts — igual a §3.5, MENOS owner_resident_index
+// (posse é estrutural: uma CompanySeed só existe dentro de UserSeed.companies)
+
+// complaints/entities/complaint-seed.ts — igual a §3.7, MENOS author_resident_index
+// (autoria é estrutural: uma ComplaintSeed só existe dentro de UserSeed.complaints)
+export interface VoteSeed {
+	voter_email: string;        // era resident_index
+	vote_type: ComplaintVoteTypeSeed;
+}
+export interface ResolutionSeed {
+	resolver_email: string;     // era resident_index
+	description: string;
+	resolution_hint: ResolutionHint;
+}
+
+// shared/writers/city-data-writer.ts — um único arquivo por cidade
+export interface CityData {
+	users: UserSeed[];
+}
+export interface CityDataFileMeta {
+	generated_at: string;
+	city: string;
+	state_code: string;
+	users_total: number;
+	companies_total: number;    // soma de users[].companies.length
+	complaints_total: number;   // soma de users[].complaints.length
+}
+export interface CityDataFile extends CityData {
+	_meta: CityDataFileMeta;
+}
+```
+
+O pipeline de geração (`cli/cli.ts`) continua produzindo, em fases separadas, um pool de usuários "vazio" (`UserGenerator`), depois um `Map<number, CompanySeed[]>` (índice do usuário → empresas, via `CompanyOwnerAssigner`) e um `Map<number, ComplaintSeed[]>` (índice do usuário autor → denúncias, via `GenerateCityComplaintsUseCase`) — o índice só existe **durante a geração**, como chave de mapa em memória; no momento de montar o `UserSeed[]` final (`cli.ts`, passo "Escrevendo arquivo de seed da cidade"), cada usuário recebe suas `companies`/`complaints` por spread, e o índice desaparece do JSON. `VoteGenerator`/`ResolutionGenerator` resolvem `voter_email`/`resolver_email` a partir do índice interno no momento de montar cada voto/resolução, já usando o pool de usuários que têm em mãos.
+
+O consumidor (`prisma/seeds/data-generated.ts`, ver §5-bis) faz o caminho inverso em duas passadas: primeiro materializa todos os usuários + suas empresas (`Map<email, { userId, companyIds }>`), depois processa as denúncias resolvendo `voter_email`/`resolver_email` nesse mapa — nunca depende de dois arrays estarem na mesma ordem.
+
 ### 3.8 Geração do `geospatial` fabricado (`complaints/services/synthetic-geospatial-generator.ts`)
 
 ```typescript
@@ -485,6 +552,30 @@ Não há mais `promptDatasets()`/`resolveDatasets()`/tipo `Dataset` — removido
 ---
 
 ## 5. Consumidores Prisma
+
+> **Nota (atualizado após a implementação real, substitui §5.1-§5.3 abaixo):**
+> Assim como em §3, a implementação convergiu para **um único consumidor**
+> (`prisma/seeds/data-generated.ts`, chamado por `seedGeneratedCityData`),
+> não dois arquivos separados (`recycling-companies.ts` + `complaints.ts`)
+> lendo arquivos JSON também separados. `upsertCityResident` foi renomeado
+> para `upsertUser` (`prisma/seeds/shared/upsert-user.ts`), mesma
+> responsabilidade (upsert por email). A "compatibilidade com JSONs
+> antigos" descrita em §5.2 não existe mais — o formato antigo (arquivos
+> `prisma/seeds/recycling-companies/*.json` sem vínculo a usuário) foi
+> removido do repositório, não há branch de fallback no consumidor atual.
+> Ver §5-bis logo após §5.3 para o fluxo real.
+
+### 5-bis Fluxo real (`prisma/seeds/data-generated.ts`)
+
+Duas passadas por cidade (`data.users: UserSeed[]`), construindo em memória
+um `Map<string /* email */, { userId: string; companyIds: string[] }>`:
+
+1. **Usuários + empresas**: para cada `user`, `upsertUser(prisma, user, passwordHash)` resolve o `userId` (idempotente por email). Em seguida, para cada empresa aninhada em `user.companies`, cria (ou reaproveita, se já existir por `identity`) e empurra o `id` resultante em `companyIds` daquele usuário — inclusive no caso "já existe", cujo id antes era descartado e agora precisa ser capturado para o passo 2.
+2. **Denúncias**: para cada `user`, para cada `complaint` aninhada, o autor é o próprio `user` (sem lookup). Voto/resolução resolvem `voter_email`/`resolver_email` no mapa. Para `resolution_hint === "PREFER_COMPANY"`, `company_id = userByEmail.get(resolver_email)?.companyIds[0] ?? null` — **sem query ao banco** (`tx.company.findFirst`) como no desenho antigo (§5.3): a empresa do resolvedor já está disponível em memória do passo 1 da mesma execução.
+
+A checagem de "cidade já seedada" usa os `userId`s reais coletados no mapa (filtrando os vazios de dry-run), no lugar do antigo array `residentUserIds` construído por ordem de arquivo.
+
+### 5.1-5.3 (histórico — design por arquivos separados, substituído acima)
 
 ### 5.1 `prisma/seeds/shared/upsert-city-resident.ts` (novo, compartilhado pelos dois consumidores)
 

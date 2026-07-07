@@ -1,37 +1,47 @@
-import type { CityResidentSeed } from "../../shared/entities/city-resident.js";
-import type { CompanySeed, UnownedCompanySeed } from "../entities/company-seed.js";
+import type { UserSeed } from "../../shared/entities/user-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 
-export const MAX_COMPANIES_PER_RESIDENT = 2;
+export const MAX_COMPANIES_PER_USER = 2;
 
 /**
- * Distribui `owner_resident_index` entre as empresas geradas, round-robin,
- * nunca excedendo `MAX_COMPANIES_PER_RESIDENT` empresas para o mesmo morador.
- * Chamado ao final do pipeline (`GenerateCitySeedUseCase`), depois que a
- * lista de empresas está fechada (reais + sintéticas + reparadas).
+ * Distribui as empresas geradas entre os usuários, round-robin, nunca
+ * excedendo `MAX_COMPANIES_PER_USER` empresas para o mesmo usuário. Chamado
+ * ao final do pipeline (`GenerateCitySeedUseCase`), depois que a lista de
+ * empresas está fechada (reais + sintéticas + reparadas). Retorna um mapa
+ * índice-do-usuário → empresas dele — quem aninha isso em `UserSeed.companies`
+ * é `cli/cli.ts`, na montagem final do arquivo da cidade.
  */
 export class CompanyOwnerAssigner {
 	assign(
-		companies: UnownedCompanySeed[],
-		residents: CityResidentSeed[],
-	): CompanySeed[] {
-		const capacity = residents.length * MAX_COMPANIES_PER_RESIDENT;
+		companies: CompanySeed[],
+		users: UserSeed[],
+	): Map<number, CompanySeed[]> {
+		const capacity = users.length * MAX_COMPANIES_PER_USER;
 		if (companies.length > capacity) {
 			throw new Error(
-				`Pool de moradores insuficiente: ${companies.length} empresas exigem ` +
-					`pelo menos ${Math.ceil(companies.length / MAX_COMPANIES_PER_RESIDENT)} moradores ` +
-					`(há ${residents.length}, capacidade máxima de ${capacity} empresas).`,
+				`Pool de usuários insuficiente: ${companies.length} empresas exigem ` +
+					`pelo menos ${Math.ceil(companies.length / MAX_COMPANIES_PER_USER)} usuários ` +
+					`(há ${users.length}, capacidade máxima de ${capacity} empresas).`,
 			);
 		}
 
-		const companiesOwnedBy = new Array<number>(residents.length).fill(0);
+		const ownedByUser = new Map<number, CompanySeed[]>();
+		const companiesOwnedBy = new Array<number>(users.length).fill(0);
 
-		return companies.map((company) => {
-			const residentIndex = companiesOwnedBy.findIndex(
-				(count) => count < MAX_COMPANIES_PER_RESIDENT,
+		for (const company of companies) {
+			const userIndex = companiesOwnedBy.findIndex(
+				(count) => count < MAX_COMPANIES_PER_USER,
 			);
-			companiesOwnedBy[residentIndex]++;
+			companiesOwnedBy[userIndex]++;
 
-			return { ...company, owner_resident_index: residentIndex };
-		});
+			const existing = ownedByUser.get(userIndex);
+			if (existing) {
+				existing.push(company);
+			} else {
+				ownedByUser.set(userIndex, [company]);
+			}
+		}
+
+		return ownedByUser;
 	}
 }

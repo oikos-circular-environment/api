@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import type { CityResidentSeed } from "../../shared/entities/city-resident.js";
+import type { UserSeed } from "../../shared/entities/user-seed.js";
 import type { CompanySeed } from "../entities/company-seed.js";
 import {
 	CompanyOwnerAssigner,
-	MAX_COMPANIES_PER_RESIDENT,
+	MAX_COMPANIES_PER_USER,
 } from "./company-owner-assigner.js";
 
 function makeCompany(id: string): CompanySeed {
@@ -42,69 +42,70 @@ function makeCompany(id: string): CompanySeed {
 		business_hours: [],
 		wastes: [],
 		services: [],
-		owner_resident_index: -1,
 	};
 }
 
-function makeResident(id: string): CityResidentSeed {
+function makeUser(id: string): UserSeed {
 	return {
-		full_name: `Morador ${id}`,
+		full_name: `Usuário ${id}`,
 		display_name: id,
 		phone: "(65) 91234-5678",
 		email: `${id}@oikos.seed`,
 		address: makeCompany(id).address,
+		companies: [],
+		complaints: [],
 	};
 }
 
+function flatten(ownedByUser: Map<number, CompanySeed[]>): CompanySeed[] {
+	return Array.from(ownedByUser.values()).flat();
+}
+
 describe("company-owner-assigner", () => {
-	it("assigns an owner_resident_index to every company", () => {
+	it("assigns every company to a valid user index", () => {
 		const companies = [makeCompany("1"), makeCompany("2"), makeCompany("3")];
-		const residents = [makeResident("a"), makeResident("b")];
+		const users = [makeUser("a"), makeUser("b")];
 
-		const result = new CompanyOwnerAssigner().assign(companies, residents);
+		const result = new CompanyOwnerAssigner().assign(companies, users);
 
-		expect(result).toHaveLength(3);
-		for (const company of result) {
-			expect(company.owner_resident_index).toBeGreaterThanOrEqual(0);
-			expect(company.owner_resident_index).toBeLessThan(residents.length);
+		expect(flatten(result)).toHaveLength(3);
+		for (const userIndex of result.keys()) {
+			expect(userIndex).toBeGreaterThanOrEqual(0);
+			expect(userIndex).toBeLessThan(users.length);
 		}
 	});
 
-	it("never assigns more than MAX_COMPANIES_PER_RESIDENT companies to the same resident", () => {
+	it("never assigns more than MAX_COMPANIES_PER_USER companies to the same user", () => {
 		const companies = Array.from({ length: 10 }, (_, i) =>
 			makeCompany(String(i)),
 		);
-		const residents = Array.from({ length: 5 }, (_, i) => makeResident(`r${i}`));
+		const users = Array.from({ length: 5 }, (_, i) => makeUser(`u${i}`));
 
-		const result = new CompanyOwnerAssigner().assign(companies, residents);
+		const result = new CompanyOwnerAssigner().assign(companies, users);
 
-		const counts = new Map<number, number>();
-		for (const company of result) {
-			counts.set(
-				company.owner_resident_index,
-				(counts.get(company.owner_resident_index) ?? 0) + 1,
+		for (const companiesForUser of result.values()) {
+			expect(companiesForUser.length).toBeLessThanOrEqual(
+				MAX_COMPANIES_PER_USER,
 			);
 		}
-		for (const count of counts.values()) {
-			expect(count).toBeLessThanOrEqual(MAX_COMPANIES_PER_RESIDENT);
-		}
 	});
 
-	it("throws when the resident pool is too small for the number of companies", () => {
-		const companies = Array.from({ length: 5 }, (_, i) => makeCompany(String(i)));
-		const residents = [makeResident("a")]; // capacidade máxima: 2
+	it("throws when the user pool is too small for the number of companies", () => {
+		const companies = Array.from({ length: 5 }, (_, i) =>
+			makeCompany(String(i)),
+		);
+		const users = [makeUser("a")]; // capacidade máxima: 2
 
-		expect(() =>
-			new CompanyOwnerAssigner().assign(companies, residents),
-		).toThrow();
+		expect(() => new CompanyOwnerAssigner().assign(companies, users)).toThrow();
 	});
 
-	it("does not mutate the input companies array", () => {
+	it("does not mutate the input companies", () => {
 		const companies = [makeCompany("1")];
-		const residents = [makeResident("a")];
+		const users = [makeUser("a")];
 
-		new CompanyOwnerAssigner().assign(companies, residents);
+		const original = { ...companies[0] };
+		new CompanyOwnerAssigner().assign(companies, users);
 
-		expect(companies[0].owner_resident_index).toBe(-1);
+		expect(companies[0]).toStrictEqual(original);
 	});
 });

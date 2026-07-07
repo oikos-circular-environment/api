@@ -7,7 +7,10 @@ import {
 	select,
 	text,
 } from "@clack/prompts";
-import type { IbgeMunicipio, IbgeUf } from "../shared/entities/ibge-municipio.js";
+import type {
+	IbgeMunicipio,
+	IbgeUf,
+} from "../shared/entities/ibge-municipio.js";
 
 /** Encerra o processo de forma limpa quando o usuário cancela (Ctrl+C). */
 function handleCancel<T>(value: T | symbol): T {
@@ -109,7 +112,8 @@ export async function promptTarget(
 			placeholder: defaultValue !== undefined ? String(defaultValue) : "ex: 40",
 			validate(value) {
 				if (value === undefined || value === "") return undefined;
-				if (!/^\d+$/.test(value)) return "Informe um número inteiro (0 ou mais)";
+				if (!/^\d+$/.test(value))
+					return "Informe um número inteiro (0 ou mais)";
 				return undefined;
 			},
 		}),
@@ -123,24 +127,6 @@ export async function promptAddAnotherState(): Promise<boolean> {
 	return handleCancel(
 		await confirm({
 			message: "Adicionar cidades de outro estado?",
-			initialValue: false,
-		}),
-	);
-}
-
-/**
- * Perguntado só quando o seed daquela cidade específica já existe — mais
- * preciso que um prompt genérico de "force" no início da execução, que
- * perguntaria antes mesmo de saber se alguma cidade precisa disso.
- */
-export async function promptOverwrite(
-	city: string,
-	stateCode: string,
-	path: string,
-): Promise<boolean> {
-	return handleCancel(
-		await confirm({
-			message: `Seed de ${city}-${stateCode} já existe em ${path}. Sobrescrever?`,
 			initialValue: false,
 		}),
 	);

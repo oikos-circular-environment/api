@@ -3,12 +3,12 @@ import {
 	upsertCompanyAddressSchema,
 	upsertCompanyBusinessHoursSchema,
 } from "../../../src/modules/companies/dtos/companies-dto.js";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
-import { generateSyntheticHours } from "./company-gap-filler.js";
 import { generateFakePhone } from "../../shared/services/fake-phone.js";
+import type { CompanySeed } from "../entities/company-seed.js";
+import { generateSyntheticHours } from "./company-gap-filler.js";
 
 export interface RepairResult {
-	seed: UnownedCompanySeed;
+	seed: CompanySeed;
 	fixes: string[];
 	stillInvalid: boolean;
 }
@@ -22,7 +22,7 @@ export interface RepairResult {
  * corrigindo em vez de deixar o dado inválido chegar no arquivo de seed.
  */
 export class CompanySeedRepairer {
-	repair(seed: UnownedCompanySeed): RepairResult {
+	repair(seed: CompanySeed): RepairResult {
 		const fixes: string[] = [];
 		let repaired = seed;
 

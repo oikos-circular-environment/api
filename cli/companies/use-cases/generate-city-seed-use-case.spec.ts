@@ -1,13 +1,12 @@
 import { describe, expect, it } from "vitest";
-import type { CityContext } from "../../shared/entities/city-context.js";
-import type { CompanySeed, SeedFileMeta } from "../entities/company-seed.js";
-import type { CityResidentSeed } from "../../shared/entities/city-resident.js";
 import type { IbgeMunicipio } from "../../shared/entities/ibge-municipio.js";
+import type { UserSeed } from "../../shared/entities/user-seed.js";
 import type {
 	GeocodeResult,
 	GeocodingProvider,
 } from "../../shared/providers/geocoding-provider.js";
 import type { MunicipioProvider } from "../../shared/providers/municipio-provider.js";
+import { ResolveCityUseCase } from "../../shared/use-cases/resolve-city-use-case.js";
 import type {
 	PlacesProvider,
 	PlacesTextSearchResult,
@@ -21,13 +20,8 @@ import { CompanyTypeClassifier } from "../services/company-type-classifier.js";
 import { BrazilianIdentityGenerator } from "../services/identity-generator.js";
 import { SyntheticCompanyGenerator } from "../services/synthetic-company-generator.js";
 import { WasteServiceGenerator } from "../services/waste-service-generator.js";
-import type {
-	SeedFileWriter,
-	WriteResult,
-} from "../writers/seed-file-writer.js";
 import { FetchCityCompaniesUseCase } from "./fetch-city-companies-use-case.js";
 import { GenerateCitySeedUseCase } from "./generate-city-seed-use-case.js";
-import { ResolveCityUseCase } from "../../shared/use-cases/resolve-city-use-case.js";
 
 const MUNICIPIO: IbgeMunicipio = {
 	id: 5107602,
@@ -76,28 +70,7 @@ class FakePlacesProvider implements PlacesProvider {
 	}
 }
 
-class FakeSeedFileWriter implements SeedFileWriter {
-	public lastWrite?: {
-		companies: CompanySeed[];
-		meta: Omit<SeedFileMeta, "total">;
-	};
-	public existsResult = { exists: false, path: "/fake/path.json" };
-
-	exists() {
-		return this.existsResult;
-	}
-
-	write(
-		_ctx: CityContext,
-		companies: CompanySeed[],
-		meta: Omit<SeedFileMeta, "total">,
-	): WriteResult {
-		this.lastWrite = { companies, meta };
-		return { written: true, path: "/fake/path.json" };
-	}
-}
-
-function makeUseCase(placeIds: string[], writer: FakeSeedFileWriter) {
+function makeUseCase(placeIds: string[]) {
 	const mapper = new CompanySeedMapper(
 		new GoogleAddressParser(),
 		new CompanyTypeClassifier(),
@@ -125,16 +98,15 @@ function makeUseCase(placeIds: string[], writer: FakeSeedFileWriter) {
 		syntheticGenerator,
 		new CompanySeedRepairer(),
 		new CompanyOwnerAssigner(),
-		writer,
 	);
 }
 
-function makeResidents(count: number): CityResidentSeed[] {
+function makeUsers(count: number): UserSeed[] {
 	return Array.from({ length: count }, (_, i) => ({
-		full_name: `Morador ${i}`,
-		display_name: `M${i}`,
+		full_name: `Usuário ${i}`,
+		display_name: `U${i}`,
 		phone: "(65) 91234-5678",
-		email: `morador-${i}@oikos.seed`,
+		email: `usuario-${i}@oikos.seed`,
 		address: {
 			zip_code: "78000-000",
 			street: "Rua A",
@@ -149,57 +121,55 @@ function makeResidents(count: number): CityResidentSeed[] {
 			latitude: -16.47,
 			longitude: -54.63,
 		},
+		companies: [],
+		complaints: [],
 	}));
 }
 
-describe("generate-city-seed-use-case", () => {
-	it("writes only real companies when no target is given", async () => {
-		const writer = new FakeSeedFileWriter();
-		const useCase = makeUseCase(["p1", "p2"], writer);
+function flattenOwnedCompanies(ownedByUser: Map<number, unknown[]>): number {
+	let total = 0;
+	for (const companies of ownedByUser.values()) total += companies.length;
+	return total;
+}
 
-		const result = await useCase.execute(
-			"Rondonópolis",
-			"MT",
-			makeResidents(10),
-		);
+describe("generate-city-seed-use-case", () => {
+	it("returns only real companies when no target is given", async () => {
+		const useCase = makeUseCase(["p1", "p2"]);
+
+		const result = await useCase.execute("Rondonópolis", "MT", makeUsers(10));
 
 		expect(result.realCount).toBe(2);
 		expect(result.syntheticCount).toBe(0);
-		expect(writer.lastWrite?.companies).toHaveLength(2);
+		expect(flattenOwnedCompanies(result.ownedCompaniesByUser)).toBe(2);
 	});
 
 	it("pads with synthetic companies up to the target when real count is lower", async () => {
-		const writer = new FakeSeedFileWriter();
-		const useCase = makeUseCase(["p1"], writer);
+		const useCase = makeUseCase(["p1"]);
 
-		const result = await useCase.execute("Rondonópolis", "MT", makeResidents(10), {
+		const result = await useCase.execute("Rondonópolis", "MT", makeUsers(10), {
 			target: 5,
 		});
 
 		expect(result.realCount).toBe(1);
 		expect(result.syntheticCount).toBe(4);
-		expect(writer.lastWrite?.companies).toHaveLength(5);
-		const syntheticFlags = writer.lastWrite?.companies.map(
-			(c) => c._source.synthetic,
-		);
-		expect(syntheticFlags).toStrictEqual([false, true, true, true, true]);
+		expect(flattenOwnedCompanies(result.ownedCompaniesByUser)).toBe(5);
 	});
 
-	it("does not pad when target is lower than or equal to the real count", async () => {
-		const writer = new FakeSeedFileWriter();
-		const useCase = makeUseCase(["p1", "p2", "p3"], writer);
+	it("caps real companies to the target when Google Places finds more than requested", async () => {
+		const useCase = makeUseCase(["p1", "p2", "p3"]);
 
-		const result = await useCase.execute("Rondonópolis", "MT", makeResidents(10), {
+		const result = await useCase.execute("Rondonópolis", "MT", makeUsers(10), {
 			target: 2,
 		});
 
-		expect(result.realCount).toBe(3);
+		expect(result.realCount).toBe(2);
 		expect(result.syntheticCount).toBe(0);
+		expect(flattenOwnedCompanies(result.ownedCompaniesByUser)).toBe(2);
 	});
 
 	describe("granular phase methods", () => {
 		it("resolveCity returns the CityContext for the given city/state", async () => {
-			const useCase = makeUseCase([], new FakeSeedFileWriter());
+			const useCase = makeUseCase([]);
 
 			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
 
@@ -209,7 +179,7 @@ describe("generate-city-seed-use-case", () => {
 		});
 
 		it("fetchRealCompanies returns companies mapped from the places provider", async () => {
-			const useCase = makeUseCase(["p1", "p2"], new FakeSeedFileWriter());
+			const useCase = makeUseCase(["p1", "p2"]);
 			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
 
 			const real = await useCase.fetchRealCompanies(ctx);
@@ -218,8 +188,25 @@ describe("generate-city-seed-use-case", () => {
 			expect(real.every((c) => !c._source.synthetic)).toBe(true);
 		});
 
+		it("fetchRealCompanies caps the result to the given target", async () => {
+			const useCase = makeUseCase(["p1", "p2", "p3"]);
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			const real = await useCase.fetchRealCompanies(ctx, 2);
+
+			expect(real).toHaveLength(2);
+		});
+
+		it("fetchRealCompanies does not cap when target is undefined or not exceeded", async () => {
+			const useCase = makeUseCase(["p1", "p2", "p3"]);
+			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
+
+			expect(await useCase.fetchRealCompanies(ctx)).toHaveLength(3);
+			expect(await useCase.fetchRealCompanies(ctx, 5)).toHaveLength(3);
+		});
+
 		it("generateSynthetic returns exactly target minus realCount companies", async () => {
-			const useCase = makeUseCase([], new FakeSeedFileWriter());
+			const useCase = makeUseCase([]);
 			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
 
 			expect(useCase.generateSynthetic(ctx, 2, 5)).toHaveLength(3);
@@ -227,51 +214,18 @@ describe("generate-city-seed-use-case", () => {
 			expect(useCase.generateSynthetic(ctx, 0, undefined)).toHaveLength(0);
 		});
 
-		it("assignOwners fills owner_resident_index respecting the 2-per-resident cap", async () => {
-			const useCase = makeUseCase(["p1", "p2", "p3"], new FakeSeedFileWriter());
+		it("assignOwners distributes companies respecting the 2-per-user cap", async () => {
+			const useCase = makeUseCase(["p1", "p2", "p3"]);
 			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
 			const real = await useCase.fetchRealCompanies(ctx);
-			const residents = makeResidents(2);
+			const users = makeUsers(2);
 
-			const owned = useCase.assignOwners(real, residents);
+			const ownedByUser = useCase.assignOwners(real, users);
 
-			expect(owned).toHaveLength(3);
-			const counts = new Map<number, number>();
-			for (const company of owned) {
-				counts.set(
-					company.owner_resident_index,
-					(counts.get(company.owner_resident_index) ?? 0) + 1,
-				);
+			expect(flattenOwnedCompanies(ownedByUser)).toBe(3);
+			for (const companies of ownedByUser.values()) {
+				expect(companies.length).toBeLessThanOrEqual(2);
 			}
-			for (const count of counts.values()) {
-				expect(count).toBeLessThanOrEqual(2);
-			}
-		});
-
-		it("writeSeed delegates to the writer with the given companies and force option", async () => {
-			const writer = new FakeSeedFileWriter();
-			const useCase = makeUseCase([], writer);
-			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
-
-			const result = useCase.writeSeed(ctx, [], { force: true });
-
-			expect(result.written).toBe(true);
-			expect(writer.lastWrite?.companies).toStrictEqual([]);
-		});
-
-		it("checkExisting delegates to the writer's exists() without side effects", async () => {
-			const writer = new FakeSeedFileWriter();
-			writer.existsResult = {
-				exists: true,
-				path: "/fake/rondonopolis-mt.json",
-			};
-			const useCase = makeUseCase([], writer);
-			const ctx = await useCase.resolveCity("Rondonópolis", "MT");
-
-			const result = useCase.checkExisting(ctx);
-
-			expect(result).toStrictEqual(writer.existsResult);
-			expect(writer.lastWrite).toBeUndefined();
 		});
 	});
 });

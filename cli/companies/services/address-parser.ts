@@ -1,5 +1,5 @@
-import type { CityContext } from "../../shared/entities/city-context.js";
 import type { AddressSeed } from "../../shared/entities/address-seed.js";
+import type { CityContext } from "../../shared/entities/city-context.js";
 import type { GooglePlace } from "../entities/google-place.js";
 
 const DEFAULT_ZIP_CODE = "00000-000";

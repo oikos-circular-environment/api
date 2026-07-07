@@ -1,0 +1,4176 @@
+{
+	"_meta": {
+		"generated_at": "2026-07-07T15:19:44.616Z",
+		"city": "Primavera do Leste",
+		"state_code": "MT",
+		"users_total": 20,
+		"companies_total": 10,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Angelica Dach",
+			"display_name": "Angelica",
+			"phone": "(06) 92767-9870",
+			"email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "56634-399",
+				"street": "Brown Station",
+				"number": "57505",
+				"complement": null,
+				"district": "Kent",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.510645,
+				"longitude": -54.35159
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJX_dk92Qld5MRCbnG29Lp-3I",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM ARAUJO",
+					"business_name": "RECICLAGEM ARAUJO",
+					"identity": "77341451000117",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.araujo@radiant-vol.biz",
+					"phones": ["(66) 99678-8120"],
+					"website": "https://bit.ly/4bipNyF",
+					"started_activity_in": "2020-08-26T06:29:33.109Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Av Florianópolis",
+						"number": "05",
+						"complement": null,
+						"district": "Centro leste, Primavera do Leste",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.559781599999997,
+						"longitude": -54.292326499999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.63,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 492.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.84,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 17.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 90.12,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 164.89,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 256.39,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 188.3,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 228.94,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJOXW_C3gld5MRTTJQvo1drsk",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "N.T Plás - Reciclagem Novo Tempo",
+					"business_name": "N.T Plás - Reciclagem Novo Tempo",
+					"identity": "13011545000145",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "n.t.plas.reciclagem.novo.tempo@bulky-expense.biz",
+					"phones": ["(66) 98115-0007"],
+					"website": null,
+					"started_activity_in": "2019-05-07T00:47:55.274Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Rua Zilba Ignes Ruaro n.º 145",
+						"number": "S/N",
+						"complement": null,
+						"district": "Distrito Industrial",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.581596099999999,
+						"longitude": -54.330647799999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 403.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.47,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 952.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 973.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 66.68,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 233.75,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 171.72,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 277.94,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 232.19,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-07-31T19:53:43.114Z",
+					"observations": "Conturbo tepidus inflammatio conduco casso voluptatum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.572773,
+								"longitude": -54.318542,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783422152233
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "South Yorkshire",
+							"streetNumber": "638",
+							"street": "Hill Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "18782787",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wintheiser Turnpike, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Vidro",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"description": "Odit laudantium decumbo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-09T19:22:21.893Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.561991,
+								"longitude": -54.334265,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783370964383
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Mid Glamorgan",
+							"streetNumber": "560",
+							"street": "Gene Walks",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "31687919",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alysson Brooks, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"description": "Tego bonus summa soleo solum eveniet sodalitas terebro conspergo surgo.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+							"description": "Crebro speciosus confido celer ante talio antea conservo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Deonte Fritsch",
+			"display_name": "Deonte",
+			"phone": "(78) 99029-4106",
+			"email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "28341-545",
+				"street": "Park Street",
+				"number": "89900",
+				"complement": null,
+				"district": "South Yorkshire",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.5668,
+				"longitude": -54.319297
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJy1AOfH8nd5MRC_Q0lquL_Cs",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Chácara dos paletes",
+					"business_name": "Chácara dos paletes",
+					"identity": "53063083000124",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "chacara.dos.paletes@apprehensive-mathematics.net",
+					"phones": ["(81) 93162-4682"],
+					"website": null,
+					"started_activity_in": "2019-05-07T20:00:05.022Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Rua takashi takahara",
+						"number": "731",
+						"complement": null,
+						"district": "Chácaras nova esperança, Primavera do Leste",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.516502299999999,
+						"longitude": -54.339197
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 785.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.62,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 253.9
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 876.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 203.12,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 65.99,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 241.94,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 249.55,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJg2dyZwAld5MRoX10-7RMW0k",
+						"rating": 5,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto 04 - Tuiuiú",
+					"business_name": "Ecoponto 04 - Tuiuiú",
+					"identity": "76740617000105",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.04.tuiuiu@worthwhile-collectivization.com",
+					"phones": ["(60) 97004-4888"],
+					"website": null,
+					"started_activity_in": "2018-11-18T23:17:50.474Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "R. Tuiuiú",
+						"number": "S/N",
+						"complement": null,
+						"district": "Condominio Res. Tuiuiu, Primavera do Leste",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.5638232,
+						"longitude": -54.3355983
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.93,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 35.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.15,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 530.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.77,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 803.2
+						},
+						{
+							"name": "Construção Civil e Demolição (RCD)",
+							"description": "Coleta de resíduos: Construção Civil e Demolição (RCD)",
+							"price": 1.27,
+							"unit": "KG",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 66.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 228.28,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 260.49,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 100.41,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 182.06,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 212.68,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-21T12:11:37.673Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.518411,
+								"longitude": -54.332327,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783354917849
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Greene County",
+							"streetNumber": "5720",
+							"street": "Tromp Causeway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85932483",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brown Burg, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"description": "Cuius validus clam rerum animus desparatus aro.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-25T10:31:37.472Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.566991,
+								"longitude": -54.283405,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783355906886
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Jackson County",
+							"streetNumber": "57083",
+							"street": "Harvey Ramp",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70587459",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oak Avenue, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Lâmpadas",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rhiannon Rodriguez-Nolan",
+			"display_name": "Rhiannon",
+			"phone": "(05) 99688-1702",
+			"email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "67412-065",
+				"street": "Wunsch Dale",
+				"number": "106",
+				"complement": null,
+				"district": "Bedfordshire",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.513515,
+				"longitude": -54.347072
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJbY5cTa0nd5MR1toMKD4vJcU",
+						"rating": 4.3,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto 02 - Jardim Luciana",
+					"business_name": "Ecoponto 02 - Jardim Luciana",
+					"identity": "72220362000107",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.02.jardim.luciana@clean-legend.com",
+					"phones": ["(20) 90116-2818"],
+					"website": null,
+					"started_activity_in": "2019-02-18T03:12:27.089Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "R. Bela",
+						"number": "665",
+						"complement": null,
+						"district": "Jardim Luciana, Primavera do Leste",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.534099999999999,
+						"longitude": -54.286326700000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 2.97,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 917.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.32,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 522.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.43,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 658.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 127.95,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Lâmpadas",
+							"description": "Serviço de coleta e transporte de Lâmpadas",
+							"price": 217.21,
+							"unit": "UNIT",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 283.91,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJZ721A8Yld5MR47Xc5XlfCa8",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Ideal",
+					"business_name": "Reciclagem Ideal",
+					"identity": "98545996000115",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.ideal@brilliant-pillow.net",
+					"phones": ["(66) 99905-2613"],
+					"website": null,
+					"started_activity_in": "2025-09-08T12:51:34.612Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Av Florianópolis",
+						"number": "1741 São Cristóvão 2",
+						"complement": null,
+						"district": "Primavera II, Primavera do Leste",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.5436766,
+						"longitude": -54.2910924
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.4,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 738
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 58.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.38,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 244.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.58,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 462.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 66.52,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 95.05,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 169.24,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 86.31,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 58.85,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 276.45,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Kelvin Cartwright",
+			"display_name": "Kelvin",
+			"phone": "(11) 97372-1947",
+			"email": "kelvin-cartwright.3.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "69821-295",
+				"street": "Purdy Gateway",
+				"number": "41819",
+				"complement": null,
+				"district": "Buckinghamshire",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.538679,
+				"longitude": -54.32759
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJBQD3Jaknd5MR-1KxDKlRp5g",
+						"rating": 4.7,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto 01 - Bela Vista",
+					"business_name": "Ecoponto 01 - Bela Vista",
+					"identity": "82032193000127",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.01.bela.vista@energetic-minion.org",
+					"phones": ["(66) 3498-9985"],
+					"website": null,
+					"started_activity_in": "2025-06-30T21:29:03.605Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Av. Ipê",
+						"number": "S/N",
+						"complement": null,
+						"district": "Primavera do Leste, MT, , Brasil",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.5298302,
+						"longitude": -54.3117601
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.42,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 54.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.24,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 466.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 249.25,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 234.21,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 254.21,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 195.61,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 260.33,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJi1nIGAAld5MRelgyiiZiI60",
+						"rating": null,
+						"types": ["manufacturer", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Novo Tempo Ltda",
+					"business_name": "Reciclagem Novo Tempo Ltda",
+					"identity": "86967214000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.novo.tempo.ltda@robust-transom.com",
+					"phones": ["(98) 95875-7605"],
+					"website": null,
+					"started_activity_in": "2025-12-08T09:51:00.884Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Rua Zilba Ignes Ruaro n.º 145",
+						"number": "S/N",
+						"complement": null,
+						"district": "Distrito Industrial",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.5816449,
+						"longitude": -54.3304129
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.83,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 241.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 331.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.88,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 102.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 124.45,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 276.92,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 143.2,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 78.01,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-27T19:19:06.928Z",
+					"observations": "Uxor demoror fugit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.555611,
+								"longitude": -54.307721,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783388021269
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Grant County",
+							"streetNumber": "866",
+							"street": "Mertz Light",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "04708119",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Long Lane, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-23T11:41:58.790Z",
+					"observations": "Viscus a summopere demens conatus acies color.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.545839,
+								"longitude": -54.300044,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783367418272
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Hamilton County",
+							"streetNumber": "245",
+							"street": "Mallory Knoll",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89497500",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Union Street, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Madeira", "Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"description": "Aliquid absorbeo caste astrum nostrum ager usque attollo annus coepi.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-01T20:32:08.199Z",
+					"observations": "Ventito utrimque canis est pecco ventus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.560433,
+								"longitude": -54.28787,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783352852909
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Central",
+							"streetNumber": "4865",
+							"street": "Garett Pass",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86205330",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mark Views, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Lâmpadas",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-10T20:21:03.815Z",
+					"observations": "Ullam cubitum bene turbo quos arma denuncio civitas delego aequitas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.539547,
+								"longitude": -54.342764,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783407160866
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Powys",
+							"streetNumber": "472",
+							"street": "Smith Port",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "24490863",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Erin Village, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Medicamentos",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"description": "Cursus alienus advenio unus cerno alioqui sopor vitiosus derelinquo stultus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"description": "Pauper atrox degusto dolorum civis talus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Doris Bahringer",
+			"display_name": "Doris",
+			"phone": "(15) 92269-1009",
+			"email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "45448-341",
+				"street": "Langosh Mount",
+				"number": "471",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.518419,
+				"longitude": -54.308519
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJb3TnP8Ald5MR67CjO7Vh8OU",
+						"rating": 4.9,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Hazera reciclagem",
+					"business_name": "Hazera reciclagem",
+					"identity": "11391938000104",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "hazera.reciclagem@inborn-airline.net",
+					"phones": ["(66) 99662-5041"],
+					"website": null,
+					"started_activity_in": "2020-12-02T16:33:31.586Z",
+					"address": {
+						"zip_code": "78810-000",
+						"street": "Av. Quatorze de Março",
+						"number": "115",
+						"complement": null,
+						"district": "Eldorado, Primavera do Leste",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.555892199999999,
+						"longitude": -54.2899192
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.63,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 245.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.44,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 470.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 283.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 970.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 163.97,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 146.17,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 119.8,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 135.19,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJBXg-WAAnd5MROAa08nwHLpc",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto 03 - Padre Onesto Costa",
+					"business_name": "Ecoponto 03 - Padre Onesto Costa",
+					"identity": "26220455000106",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.03.padre.onesto.costa@lonely-petal.biz",
+					"phones": ["(05) 94971-9658"],
+					"website": null,
+					"started_activity_in": "2022-02-15T23:23:33.489Z",
+					"address": {
+						"zip_code": "78850-000",
+						"street": "Primavera do Leste",
+						"number": "S/N",
+						"complement": null,
+						"district": "MT, , Brasil",
+						"city": "Primavera do Leste",
+						"city_ibge_id": 5107040,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -15.518624199999998,
+						"longitude": -54.3350173
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.79,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 150.2
+						},
+						{
+							"name": "Pilhas e Baterias",
+							"description": "Coleta de resíduos: Pilhas e Baterias",
+							"price": 3.57,
+							"unit": "KG",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 563.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.31,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 96.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 634.6
+						},
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 285.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 170.39,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 223.28,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 55.75,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 299.41,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-07-24T20:55:23.919Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.578487,
+								"longitude": -54.29174,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783422879456
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Dorset",
+							"streetNumber": "9975",
+							"street": "S 3rd Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76340264",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Front Street, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Papel / Papelão",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-27T07:56:15.028Z",
+					"observations": "Fugiat conitor administratio tredecim sono confero circumvenio curtus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.571522,
+								"longitude": -54.32091,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783396128089
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Adams County",
+							"streetNumber": "815",
+							"street": "Purdy Ramp",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19455176",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N 8th Street, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Embalagens Contaminadas",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"description": "Somniculosus clamo ancilla.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"description": "Admoneo fugiat apto adamo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Martha Cole",
+			"display_name": "Martha",
+			"phone": "(33) 92679-0615",
+			"email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "67670-652",
+				"street": "Blick Extension",
+				"number": "90641",
+				"complement": null,
+				"district": "County Armagh",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.567899,
+				"longitude": -54.286578
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-04T03:45:57.075Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.512372,
+								"longitude": -54.350093,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783434581400
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "County Antrim",
+							"streetNumber": "602",
+							"street": "E 5th Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87078555",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alexandra Road, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Katherine Koch",
+			"display_name": "Katherine",
+			"phone": "(87) 98014-0332",
+			"email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "21793-438",
+				"street": "Douglas Prairie",
+				"number": "4268",
+				"complement": null,
+				"district": "Northamptonshire",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.557136,
+				"longitude": -54.339933
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-01T15:07:56.949Z",
+					"observations": "Deprimo aliquid viscus adinventitias abstergo voluptatem atavus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.580085,
+								"longitude": -54.301732,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783359639878
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Lawrence County",
+							"streetNumber": "8586",
+							"street": "Orlando Garden",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36388772",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Quarry Road, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"description": "Distinctio adamo velum tero caute iste decor sto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-04T10:10:25.913Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.549364,
+								"longitude": -54.284844,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783367824982
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "County Fermanagh",
+							"streetNumber": "300",
+							"street": "Walter Centers",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02829609",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Victoria Road, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Madeira",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"description": "Virtus cibo causa conduco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"description": "Canto desipio socius.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lance Bogisich",
+			"display_name": "Lance",
+			"phone": "(88) 96182-4557",
+			"email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "02707-031",
+				"street": "Kemmer Via",
+				"number": "2018",
+				"complement": null,
+				"district": "Cumbria",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.522869,
+				"longitude": -54.321769
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-01T02:39:54.155Z",
+					"observations": "Volva odio degenero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.518252,
+								"longitude": -54.32095,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783424232749
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Suffolk",
+							"streetNumber": "3882",
+							"street": "Doris Views",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01956786",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Main, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-01T12:09:06.177Z",
+					"observations": "Harum vigilo tibi atrox.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.544148,
+								"longitude": -54.28089,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783364006527
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Buckinghamshire",
+							"streetNumber": "30622",
+							"street": "Robyn Fields",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88302192",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kelli Parks, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Vidro",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"description": "Subito demens cariosus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"description": "Trado debeo ventosus necessitatibus arbor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Sheri Brown",
+			"display_name": "Sheri",
+			"phone": "(01) 99420-6701",
+			"email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "78853-636",
+				"street": "Anderson Unions",
+				"number": "6649",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.587686,
+				"longitude": -54.306786
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-01T23:44:36.922Z",
+					"observations": "Tubineus ventosus adduco volubilis eos.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.579249,
+								"longitude": -54.310616,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783399592614
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Tayside",
+							"streetNumber": "848",
+							"street": "Grimes Manors",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59372422",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Randy Junctions, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-11T21:11:43.323Z",
+					"observations": "Audax solutio taedium vomito asperiores uxor corpus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.585121,
+								"longitude": -54.301188,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783421763856
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Essex",
+							"streetNumber": "1698",
+							"street": "Roman Way",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "73569931",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Littel Corners, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Óleo Mineral / Lubrificante",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"description": "Uterque amplitudo cubo tonsor caelum tabgo deleniti taedium corrupti contigo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-25T11:19:49.431Z",
+					"observations": "Aranea peccatus calco absorbeo carpo curo adiuvo paens adamo arto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.539756,
+								"longitude": -54.351082,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783374988792
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "West Yorkshire",
+							"streetNumber": "673",
+							"street": "Owen Oval",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25570654",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wren Close, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Vidro", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelvin-cartwright.3.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"description": "Adsum complectus suscipio artificiose vix crux comminor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"description": "Incidunt suspendo accusamus amitto celo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Solon Cruickshank",
+			"display_name": "Solon",
+			"phone": "(99) 94139-3985",
+			"email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "73113-853",
+				"street": "Kurt Crescent",
+				"number": "52009",
+				"complement": null,
+				"district": "Washington County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.534199,
+				"longitude": -54.318705
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-24T13:27:38.397Z",
+					"observations": "Summa ulterius creta repudiandae sursum paulatim comptus volup tactus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.516677,
+								"longitude": -54.282029,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783375112154
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Rutland",
+							"streetNumber": "12289",
+							"street": "Nancy Walk",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50321445",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dale Street, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelvin-cartwright.3.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"description": "Aureus vado spectaculum crastinus aegrotatio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Thad Schuppe",
+			"display_name": "Thad",
+			"phone": "(73) 90313-3147",
+			"email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "32878-578",
+				"street": "11th Street",
+				"number": "183",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.513592,
+				"longitude": -54.284684
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Jaleel Grant",
+			"display_name": "Jaleel",
+			"phone": "(28) 97943-5859",
+			"email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "89643-286",
+				"street": "Michele Avenue",
+				"number": "6424",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.574394,
+				"longitude": -54.323785
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-27T13:27:01.633Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.515543,
+								"longitude": -54.324085,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783405882053
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Pike County",
+							"streetNumber": "760",
+							"street": "Orchard Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85231873",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nash Mountain, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Alexandro Sporer",
+			"display_name": "Alexandro",
+			"phone": "(68) 90196-4865",
+			"email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "84989-102",
+				"street": "Maxwell Spur",
+				"number": "161",
+				"complement": null,
+				"district": "Henry County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.51543,
+				"longitude": -54.326357
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-14T07:27:23.443Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.557633,
+								"longitude": -54.351159,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783425097887
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Berkshire",
+							"streetNumber": "126",
+							"street": "Beverly Route",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51830308",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clay Meadow, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kelvin-cartwright.3.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Wilbur Bauch",
+			"display_name": "Wilbur",
+			"phone": "(07) 97192-8677",
+			"email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "65293-316",
+				"street": "W 12th Street",
+				"number": "13895",
+				"complement": null,
+				"district": "Union County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.527888,
+				"longitude": -54.335463
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-06T19:59:40.850Z",
+					"observations": "Aperte aeger depraedor coma.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.544188,
+								"longitude": -54.33366,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783364522646
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Hamilton County",
+							"streetNumber": "19568",
+							"street": "W 10th Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "33667040",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Walsh Pass, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katherine-koch.6.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"description": "Animi verecundia conor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-07-11T06:44:01.834Z",
+					"observations": "Sui magnam vomer currus cinis adficio tutis verto censura expedita.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.510061,
+								"longitude": -54.352908,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783359096909
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Perry County",
+							"streetNumber": "296",
+							"street": "The Oaks",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10251022",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beulah Extension, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)", "Lâmpadas"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "angelica-dach.0.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "doris-bahringer.4.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-31T01:57:12.102Z",
+					"observations": "Credo conservo terreo arx.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.565126,
+								"longitude": -54.32384,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783354138705
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Nottinghamshire",
+							"streetNumber": "2518",
+							"street": "Nathaniel Divide",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37724391",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Park Lane, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "martha-cole.5.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Gia Friesen",
+			"display_name": "Gia",
+			"phone": "(92) 92722-3375",
+			"email": "gia-friesen.14.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "41066-716",
+				"street": "Maple Street",
+				"number": "72268",
+				"complement": null,
+				"district": "West Sussex",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.568316,
+				"longitude": -54.351096
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-15T17:47:15.529Z",
+					"observations": "Advoco vitiosus fugit tutamen cruciamentum unde celo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.530961,
+								"longitude": -54.311037,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783417011228
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Logan County",
+							"streetNumber": "90679",
+							"street": "Washington Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74069449",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bogan Villages, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Conrad Emard",
+			"display_name": "Conrad",
+			"phone": "(92) 99397-5446",
+			"email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "05549-268",
+				"street": "Lowe Alley",
+				"number": "14720",
+				"complement": null,
+				"district": "Hampshire",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.546884,
+				"longitude": -54.298925
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-07T20:14:47.341Z",
+					"observations": "Patrocinor conduco campana delibero vilitas tempore celer cimentarius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.518176,
+								"longitude": -54.349758,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783409108251
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "54380",
+							"street": "Pat Summit",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27249768",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Middle Street, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Vidro", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lance-bogisich.7.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deonte-fritsch.1.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lura Predovic",
+			"display_name": "Lura",
+			"phone": "(61) 95287-9756",
+			"email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "29227-830",
+				"street": "N Water Street",
+				"number": "22090",
+				"complement": null,
+				"district": "Powys",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.533687,
+				"longitude": -54.349792
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-12T18:42:53.911Z",
+					"observations": "Defaeco comes molestias.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.57911,
+								"longitude": -54.339115,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783354472123
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Wayne County",
+							"streetNumber": "123",
+							"street": "VonRueden Gardens",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05731559",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Iris Bypass, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "wilbur-bauch.13.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-03T17:09:31.191Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.560265,
+								"longitude": -54.342929,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783355996935
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Shropshire",
+							"streetNumber": "46847",
+							"street": "W Main",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63700724",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Main, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexandro-sporer.12.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "solon-cruickshank.9.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rex Crooks",
+			"display_name": "Rex",
+			"phone": "(32) 99457-2867",
+			"email": "rex-crooks.17.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "30801-343",
+				"street": "Woodside Road",
+				"number": "3454",
+				"complement": null,
+				"district": "Marion County",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.511986,
+				"longitude": -54.322194
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Sara Wyman",
+			"display_name": "Sara",
+			"phone": "(27) 99870-4243",
+			"email": "sara-wyman.18.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "44812-639",
+				"street": "Wiza Hills",
+				"number": "4047",
+				"complement": null,
+				"district": "Norfolk",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.545133,
+				"longitude": -54.325609
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-17T10:57:44.365Z",
+					"observations": "Tabernus sollers creta quas tabesco caritas admiratio denuo derideo modi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.55049,
+								"longitude": -54.308496,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783387715808
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Grampian",
+							"streetNumber": "3842",
+							"street": "O'Kon Groves",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27243110",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Steuber Forges, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Metal / Alumínio"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rhiannon-rodriguez-nolan.2.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thad-schuppe.10.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lura-predovic.16.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheri-brown.8.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "conrad-emard.15.primavera-do-leste-mt@oikos.seed",
+							"description": "Facilis textus utor blanditiis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "jaleel-grant.11.primavera-do-leste-mt@oikos.seed",
+							"description": "Tui terga vulgo itaque vilicus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-28T17:01:13.120Z",
+					"observations": "Cultellus cavus avarus arma via crapula tenuis vetus arma charisma.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -15.543867,
+								"longitude": -54.350132,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1783436853572
+						},
+						"addresses": {
+							"city": "Primavera do Leste",
+							"district": "Montgomery County",
+							"streetNumber": "40389",
+							"street": "West View",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25877886",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rempel Well, Primavera do Leste - MT"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Óleo Mineral / Lubrificante",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jonatan Koss",
+			"display_name": "Jonatan",
+			"phone": "(99) 92634-6379",
+			"email": "jonatan-koss.19.primavera-do-leste-mt@oikos.seed",
+			"address": {
+				"zip_code": "66119-368",
+				"street": "Elijah Burgs",
+				"number": "39382",
+				"complement": null,
+				"district": "Grampian",
+				"city": "Primavera do Leste",
+				"city_ibge_id": 5107040,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -15.58704,
+				"longitude": -54.343292
+			},
+			"companies": [],
+			"complaints": []
+		}
+	]
+}

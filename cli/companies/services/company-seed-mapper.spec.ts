@@ -6,7 +6,7 @@ import {
 	upsertCompanyBusinessHoursSchema,
 } from "../../../src/modules/companies/dtos/companies-dto.js";
 import type { CityContext } from "../../shared/entities/city-context.js";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import type { GooglePlace } from "../entities/google-place.js";
 import { GoogleAddressParser } from "./address-parser.js";
 import { CompanyGapFiller } from "./company-gap-filler.js";
@@ -47,7 +47,7 @@ function makeMapper(): CompanySeedMapper {
  * schemas de criação (upsertCompanyAddressSchema/upsertCompanyBusinessHoursSchema)
  * e, para wastes/services, asserts de regra de negócio diretamente.
  */
-function expectValidSeed(seed: UnownedCompanySeed): void {
+function expectValidSeed(seed: CompanySeed): void {
 	expect(
 		companyGeneralRegistrationValidationSchema.safeParse(seed).success,
 	).toBe(true);

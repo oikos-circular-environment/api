@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import type { UserSeed } from "../../shared/entities/user-seed.js";
 import type {
 	ComplaintStatusSeed,
 	ComplaintVoteTypeSeed,
@@ -14,9 +15,10 @@ const QUORUM_THRESHOLD = 5;
  * do dono ou o limiar `5`), atualizar aqui também. Aqui o autor nunca vota
  * (ver `generate()`), então todo peso é 1.
  */
-export function calculateWeights(
-	votes: VoteSeed[],
-): { positive: number; negative: number } {
+export function calculateWeights(votes: VoteSeed[]): {
+	positive: number;
+	negative: number;
+} {
 	let positive = 0;
 	let negative = 0;
 	for (const vote of votes) {
@@ -26,8 +28,8 @@ export function calculateWeights(
 	return { positive, negative };
 }
 
-function candidatePool(residentPoolSize: number, authorIndex: number): number[] {
-	return Array.from({ length: residentPoolSize }, (_, i) => i).filter(
+function candidatePool(userPoolSize: number, authorIndex: number): number[] {
+	return Array.from({ length: userPoolSize }, (_, i) => i).filter(
 		(i) => i !== authorIndex,
 	);
 }
@@ -43,22 +45,25 @@ function candidatePool(residentPoolSize: number, authorIndex: number): number[] 
 export class VoteGenerator {
 	generate(
 		status: ComplaintStatusSeed,
-		residentPoolSize: number,
+		users: UserSeed[],
 		authorIndex: number,
 	): VoteSeed[] {
-		const candidates = candidatePool(residentPoolSize, authorIndex);
+		const candidates = candidatePool(users.length, authorIndex);
 
 		switch (status) {
 			case "RESOLVED":
-				return this.generateResolved(candidates);
+				return this.generateResolved(users, candidates);
 			case "OPEN":
-				return this.generateOpen(candidates);
+				return this.generateOpen(users, candidates);
 			case "CANCELED":
-				return this.generateCanceled(candidates);
+				return this.generateCanceled(users, candidates);
 		}
 	}
 
-	private generateResolved(candidates: number[]): VoteSeed[] {
+	private generateResolved(
+		users: UserSeed[],
+		candidates: number[],
+	): VoteSeed[] {
 		const maxVotes = candidates.length;
 
 		let negativeCount = faker.number.int({
@@ -69,11 +74,14 @@ export class VoteGenerator {
 
 		const extraRoom = maxVotes - (positiveCount + negativeCount);
 		if (extraRoom > 0) {
-			positiveCount += faker.number.int({ min: 0, max: Math.min(2, extraRoom) });
+			positiveCount += faker.number.int({
+				min: 0,
+				max: Math.min(2, extraRoom),
+			});
 		}
 
 		// Rede de segurança para pools muito pequenos — nunca deveria disparar
-		// dado o piso de MIN_RESIDENTS_PER_CITY, mas evita gerar mais votos do
+		// dado o piso de MIN_USERS_PER_CITY, mas evita gerar mais votos do
 		// que candidatos disponíveis.
 		if (positiveCount + negativeCount > maxVotes) {
 			negativeCount = 0;
@@ -88,14 +96,16 @@ export class VoteGenerator {
 		);
 
 		return [
-			...positiveVoters.map((resident_index) => this.vote(resident_index, "RESOLVED")),
-			...negativeVoters.map((resident_index) =>
-				this.vote(resident_index, "NOT_RESOLVED"),
+			...positiveVoters.map((userIndex) =>
+				this.vote(users, userIndex, "RESOLVED"),
+			),
+			...negativeVoters.map((userIndex) =>
+				this.vote(users, userIndex, "NOT_RESOLVED"),
 			),
 		];
 	}
 
-	private generateOpen(candidates: number[]): VoteSeed[] {
+	private generateOpen(users: UserSeed[], candidates: number[]): VoteSeed[] {
 		// No máximo 4 votos distintos, com pesos todos 1 (autor nunca vota) —
 		// mesmo com todos positivos (4) e nenhum negativo, 4 < 5 + 0, nunca
 		// atinge o quórum real.
@@ -105,24 +115,39 @@ export class VoteGenerator {
 		);
 		const voters = faker.helpers.arrayElements(candidates, count);
 
-		return voters.map((resident_index) =>
-			this.vote(resident_index, faker.datatype.boolean() ? "RESOLVED" : "NOT_RESOLVED"),
+		return voters.map((userIndex) =>
+			this.vote(
+				users,
+				userIndex,
+				faker.datatype.boolean() ? "RESOLVED" : "NOT_RESOLVED",
+			),
 		);
 	}
 
-	private generateCanceled(candidates: number[]): VoteSeed[] {
+	private generateCanceled(
+		users: UserSeed[],
+		candidates: number[],
+	): VoteSeed[] {
 		const count = Math.min(
 			faker.number.int({ min: 0, max: 3 }),
 			candidates.length,
 		);
 		const voters = faker.helpers.arrayElements(candidates, count);
 
-		return voters.map((resident_index) =>
-			this.vote(resident_index, faker.datatype.boolean() ? "RESOLVED" : "NOT_RESOLVED"),
+		return voters.map((userIndex) =>
+			this.vote(
+				users,
+				userIndex,
+				faker.datatype.boolean() ? "RESOLVED" : "NOT_RESOLVED",
+			),
 		);
 	}
 
-	private vote(resident_index: number, vote_type: ComplaintVoteTypeSeed): VoteSeed {
-		return { resident_index, vote_type };
+	private vote(
+		users: UserSeed[],
+		userIndex: number,
+		vote_type: ComplaintVoteTypeSeed,
+	): VoteSeed {
+		return { voter_email: users[userIndex].email, vote_type };
 	}
 }

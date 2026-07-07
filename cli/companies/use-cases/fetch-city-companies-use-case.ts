@@ -1,5 +1,5 @@
 import type { CityContext } from "../../shared/entities/city-context.js";
-import type { UnownedCompanySeed } from "../entities/company-seed.js";
+import type { CompanySeed } from "../entities/company-seed.js";
 import type { GooglePlace } from "../entities/google-place.js";
 import type { PlacesProvider } from "../providers/places-provider.js";
 
@@ -10,7 +10,7 @@ import type { PlacesProvider } from "../providers/places-provider.js";
  * incompatível como tipo de parâmetro para fakes por duck typing).
  */
 export interface PlaceMapper {
-	map(place: GooglePlace, ctx: CityContext): UnownedCompanySeed;
+	map(place: GooglePlace, ctx: CityContext): CompanySeed;
 }
 
 /** Busca lugares reais via as queries fixas, dedupe por place.id, mapeia para CompanySeed. */
@@ -20,7 +20,7 @@ export class FetchCityCompaniesUseCase {
 		private readonly mapper: PlaceMapper,
 	) {}
 
-	async execute(ctx: CityContext, queries: string[]): Promise<UnownedCompanySeed[]> {
+	async execute(ctx: CityContext, queries: string[]): Promise<CompanySeed[]> {
 		const places = await this.searchAllQueries(ctx, queries);
 		const detailed = await this.fetchDetails(places);
 
