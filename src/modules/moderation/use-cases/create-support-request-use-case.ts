@@ -1,3 +1,4 @@
+import { fileTypeFromBuffer } from "file-type";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type {
@@ -59,6 +60,18 @@ export class CreateSupportRequestUseCase {
 				throw new AppError(
 					"Support request attachment exceeds the maximum size of 10MB",
 					"SUPPORT_REQUEST_ATTACHMENT_TOO_LARGE",
+					400,
+				);
+			}
+
+			const detected = await fileTypeFromBuffer(file.content);
+			if (
+				!detected ||
+				!(detected.mime in SUPPORT_REQUEST_ATTACHMENT_MIME_TYPES)
+			) {
+				throw new AppError(
+					"Support request attachment content does not match a valid image",
+					"SUPPORT_REQUEST_ATTACHMENT_CONTENT_INVALID",
 					400,
 				);
 			}

@@ -2,6 +2,10 @@ import "dotenv/config";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
+import {
+	JPEG_MAGIC_BYTES,
+	PNG_MAGIC_BYTES,
+} from "@/modules/common/test/image-fixtures.js";
 
 type MultipartFileInput = {
 	field?: string;
@@ -74,12 +78,12 @@ describe("create-support-request", () => {
 				{
 					fileName: "1.png",
 					mimeType: "image/png",
-					content: Buffer.from("png-content-1"),
+					content: PNG_MAGIC_BYTES,
 				},
 				{
 					fileName: "2.jpg",
 					mimeType: "image/jpeg",
-					content: Buffer.from("jpeg-content-2"),
+					content: JPEG_MAGIC_BYTES,
 				},
 			],
 		);
@@ -180,5 +184,31 @@ describe("create-support-request", () => {
 
 		expect(res.statusCode).toBe(400);
 		expect(res.json().code).toBe("SUPPORT_REQUEST_ATTACHMENT_TOO_LARGE");
+	});
+
+	it("400 — attachment content does not match declared type", async () => {
+		const { payload, contentType } = await buildMultipartPayload(
+			{
+				title: "Spoofed file",
+				description: "Declaring image/png but sending plain text.",
+			},
+			[
+				{
+					fileName: "fake.png",
+					mimeType: "image/png",
+					content: Buffer.from("not-really-a-png"),
+				},
+			],
+		);
+
+		const res = await app.inject({
+			method: "POST",
+			url: "/v1/moderation/support",
+			headers: { "content-type": contentType },
+			payload,
+		});
+
+		expect(res.statusCode).toBe(400);
+		expect(res.json().code).toBe("SUPPORT_REQUEST_ATTACHMENT_CONTENT_INVALID");
 	});
 });

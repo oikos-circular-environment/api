@@ -1,4 +1,5 @@
 import z from "zod";
+import { safeTextSchema } from "@/modules/common/dtos/safe-text-schema.js";
 
 export type {
 	ModerationStatus,
@@ -13,16 +14,21 @@ export {
 
 export const MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH = 2500;
 
+export const MAX_SUPPORT_REQUEST_TITLE_LENGTH = 200;
+
 export const createSupportRequestBodySchema = z.object({
-	title: z.string().trim().min(1, "title is required"),
-	description: z
-		.string()
-		.trim()
-		.min(1, "description is required")
-		.max(
-			MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH,
-			`description must be at most ${MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH} characters`,
-		),
+	title: safeTextSchema({
+		min: 1,
+		max: MAX_SUPPORT_REQUEST_TITLE_LENGTH,
+		minMessage: "title is required",
+		maxMessage: `title must be at most ${MAX_SUPPORT_REQUEST_TITLE_LENGTH} characters`,
+	}),
+	description: safeTextSchema({
+		min: 1,
+		max: MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH,
+		minMessage: "description is required",
+		maxMessage: `description must be at most ${MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH} characters`,
+	}),
 });
 export type CreateSupportRequestBody = z.infer<
 	typeof createSupportRequestBodySchema
