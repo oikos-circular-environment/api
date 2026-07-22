@@ -53,3 +53,9 @@ enum ComplaintVoteType {
   RESOLVED
   NOT_RESOLVED
 }
+
+enum ModerationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
