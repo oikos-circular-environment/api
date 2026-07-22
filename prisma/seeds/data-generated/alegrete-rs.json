@@ -1,0 +1,4105 @@
+{
+  "_meta": {
+    "generated_at": "2026-07-07T22:05:29.133Z",
+    "city": "Alegrete",
+    "state_code": "RS",
+    "users_total": 20,
+    "companies_total": 10,
+    "complaints_total": 30
+  },
+  "users": [
+    {
+      "full_name": "Roxanne Hagenes",
+      "display_name": "Roxanne",
+      "phone": "(95) 90835-9343",
+      "email": "roxanne-hagenes.0.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "04922-020",
+        "street": "Wisoky Brooks",
+        "number": "3415",
+        "complement": null,
+        "district": "Clwyd",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.778978,
+        "longitude": -55.796823
+      },
+      "companies": [
+        {
+          "_source": {
+            "google_place_id": "ChIJU-EP9Ce6qpUR00BTu-jWsLc",
+            "rating": 4.7,
+            "types": [
+              "point_of_interest",
+              "service",
+              "establishment"
+            ],
+            "is_ecoponto": false,
+            "synthetic": false
+          },
+          "corporate_name": "Sucatão Do Monga",
+          "business_name": "Sucatão Do Monga",
+          "identity": "09459291000155",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "sucatao.do.monga@clueless-carnival.org",
+          "phones": [
+            "(55) 3422-0193"
+          ],
+          "website": null,
+          "started_activity_in": "2023-07-13T17:17:11.684Z",
+          "address": {
+            "zip_code": "97547-370",
+            "street": "R. Santa Catarina",
+            "number": "670",
+            "complement": null,
+            "district": "Capão do Angico, Alegrete",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.8035596,
+            "longitude": -55.757542099999995
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "SATURDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 1.9,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 682.1
+            },
+            {
+              "name": "Óleo Vegetal Usado (de cozinha)",
+              "description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+              "price": 0.52,
+              "unit": "KG",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 389.3
+            },
+            {
+              "name": "Madeira",
+              "description": "Coleta de resíduos: Madeira",
+              "price": 4.48,
+              "unit": "KG",
+              "waste_category_name": "Madeira",
+              "quantity": 141.8
+            },
+            {
+              "name": "Borracha / Pneus",
+              "description": "Coleta de resíduos: Borracha / Pneus",
+              "price": 3.91,
+              "unit": "KG",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 882.7
+            },
+            {
+              "name": "Plástico",
+              "description": "Coleta de resíduos: Plástico",
+              "price": 3.43,
+              "unit": "KG",
+              "waste_category_name": "Plástico",
+              "quantity": 176.6
+            },
+            {
+              "name": "Papel / Papelão",
+              "description": "Coleta de resíduos: Papel / Papelão",
+              "price": 3.97,
+              "unit": "KG",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 285.6
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Eletroeletrônicos (REEE)",
+              "description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+              "price": 179.22,
+              "unit": "UNIT",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Têxtil / Roupas / Tecidos",
+              "description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+              "price": 111.81,
+              "unit": "UNIT",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Madeira",
+              "description": "Serviço de coleta e transporte de Madeira",
+              "price": 130.35,
+              "unit": "UNIT",
+              "waste_category_name": "Madeira",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Metal / Alumínio",
+              "description": "Serviço de coleta e transporte de Metal / Alumínio",
+              "price": 53.29,
+              "unit": "UNIT",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "_source": {
+            "google_place_id": "ChIJpWniLAC5qpURGL5e4w2i6Ds",
+            "rating": null,
+            "types": [
+              "service",
+              "point_of_interest",
+              "establishment"
+            ],
+            "is_ecoponto": false,
+            "synthetic": false
+          },
+          "corporate_name": "Preserve",
+          "business_name": "Preserve",
+          "identity": "10979011000119",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "preserve@insignificant-festival.info",
+          "phones": [
+            "(45) 90160-9049"
+          ],
+          "website": null,
+          "started_activity_in": "2022-03-22T12:21:46.396Z",
+          "address": {
+            "zip_code": "97546-145",
+            "street": "R. Eleodoro-Prates García",
+            "number": "665",
+            "complement": null,
+            "district": "Nova Brasília, Alegrete",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.8045817,
+            "longitude": -55.770380599999996
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 4.43,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 515.1
+            },
+            {
+              "name": "Metal / Alumínio",
+              "description": "Coleta de resíduos: Metal / Alumínio",
+              "price": 3.6,
+              "unit": "KG",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 827.9
+            },
+            {
+              "name": "Papel / Papelão",
+              "description": "Coleta de resíduos: Papel / Papelão",
+              "price": 1.88,
+              "unit": "KG",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 253.5
+            },
+            {
+              "name": "Óleo Vegetal Usado (de cozinha)",
+              "description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+              "price": 0.98,
+              "unit": "KG",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 764.8
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Borracha / Pneus",
+              "description": "Serviço de coleta e transporte de Borracha / Pneus",
+              "price": 56.08,
+              "unit": "UNIT",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Madeira",
+              "description": "Serviço de coleta e transporte de Madeira",
+              "price": 234.87,
+              "unit": "UNIT",
+              "waste_category_name": "Madeira",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "complaints": [
+        {
+          "date": "2026-01-24T16:54:16.597Z",
+          "observations": "Blanditiis delicate caries saepe curia ambitus.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.79632,
+                "longitude": -55.778836,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783381438997
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Logan County",
+              "streetNumber": "34945",
+              "street": "W 7th Street",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "13571225",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Hyatt Ramp, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Veículos em Fim de Vida"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": []
+        },
+        {
+          "date": "2026-07-06T00:12:43.553Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.8091,
+                "longitude": -55.757831,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783420695980
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Clark County",
+              "streetNumber": "7129",
+              "street": "E Central Avenue",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "02517066",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Mosciski Rest, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Pilhas e Baterias",
+            "Vidro",
+            "Resíduos Orgânicos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-07.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "CANCELED",
+          "votes": [],
+          "resolutions": []
+        },
+        {
+          "date": "2025-07-17T14:38:55.297Z",
+          "observations": "Carcer solio assumenda cado calculus turpis libero at desparatus.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.799999,
+                "longitude": -55.784893,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783410256097
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Nottinghamshire",
+              "streetNumber": "7168",
+              "street": "S 2nd Street",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "05288865",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Leffler Knolls, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Metal / Alumínio",
+            "Lâmpadas"
+          ],
+          "attachments": [],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "jaleel-dach.13.alegrete-rs@oikos.seed",
+              "description": "Curto contabesco quos annus tametsi arma molestiae vix votum.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        },
+        {
+          "date": "2025-12-22T00:42:29.440Z",
+          "observations": "Thymbra abbas solio appono timidus stillicidium voluptatum.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.785208,
+                "longitude": -55.810254,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783423521696
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "County Down",
+              "streetNumber": "13518",
+              "street": "Rickie Highway",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "63033991",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Kate Neck, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Pilhas e Baterias",
+            "Óleo Vegetal Usado (de cozinha)",
+            "Vidro"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-07.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "jodi-nader.3.alegrete-rs@oikos.seed",
+              "description": "Brevis canto adopto tum cultura.",
+              "resolution_hint": "PREFER_COMPANY"
+            },
+            {
+              "resolver_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "description": "Voluntarius amitto contego eaque curvo.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Felix Zemlak",
+      "display_name": "Felix",
+      "phone": "(74) 99166-4465",
+      "email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "10810-211",
+        "street": "Corwin Creek",
+        "number": "590",
+        "complement": null,
+        "district": "Johnson County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.767536,
+        "longitude": -55.758831
+      },
+      "companies": [
+        {
+          "_source": {
+            "google_place_id": "ChIJ18gkCgC5qpURsxn3iKsDseQ",
+            "rating": 5,
+            "types": [
+              "point_of_interest",
+              "establishment"
+            ],
+            "is_ecoponto": false,
+            "synthetic": false
+          },
+          "corporate_name": "J. Ferreira Comércio de Metais",
+          "business_name": "J. Ferreira Comércio de Metais",
+          "identity": "44762270000105",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "j.ferreira.comercio.de.metais@that-honesty.name",
+          "phones": [
+            "(55) 3422-8067"
+          ],
+          "website": "https://alegrete.com.br/empresa/j-ferreira-comercio-de-metais.html",
+          "started_activity_in": "2020-07-24T23:04:27.641Z",
+          "address": {
+            "zip_code": "97543-440",
+            "street": "R. Pinheiro Machado",
+            "number": "115",
+            "complement": null,
+            "district": "Cidade Alta, Alegrete",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.796402800000003,
+            "longitude": -55.799775399999994
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "13:00",
+                  "end_time": "17:45"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "13:00",
+                  "end_time": "17:45"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "13:00",
+                  "end_time": "17:45"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "13:00",
+                  "end_time": "17:45"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "13:00",
+                  "end_time": "17:45"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 0.73,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 371.5
+            },
+            {
+              "name": "Borracha / Pneus",
+              "description": "Coleta de resíduos: Borracha / Pneus",
+              "price": 2.47,
+              "unit": "KG",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 84.7
+            },
+            {
+              "name": "Óleo Vegetal Usado (de cozinha)",
+              "description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+              "price": 0.37,
+              "unit": "KG",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 641.4
+            },
+            {
+              "name": "Metal / Alumínio",
+              "description": "Coleta de resíduos: Metal / Alumínio",
+              "price": 1.91,
+              "unit": "KG",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 717
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Madeira",
+              "description": "Serviço de coleta e transporte de Madeira",
+              "price": 296.12,
+              "unit": "UNIT",
+              "waste_category_name": "Madeira",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Plástico",
+              "description": "Serviço de coleta e transporte de Plástico",
+              "price": 237.84,
+              "unit": "UNIT",
+              "waste_category_name": "Plástico",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Borracha / Pneus",
+              "description": "Serviço de coleta e transporte de Borracha / Pneus",
+              "price": 243.86,
+              "unit": "UNIT",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "_source": {
+            "google_place_id": "ChIJX6pDKTO4qpURauGTv23Y7LE",
+            "rating": 2.8,
+            "types": [
+              "service",
+              "point_of_interest",
+              "establishment"
+            ],
+            "is_ecoponto": false,
+            "synthetic": false
+          },
+          "corporate_name": "Sucatão do Julião",
+          "business_name": "Sucatão do Julião",
+          "identity": "57819786000190",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "sucatao.do.juliao@pertinent-fireplace.com",
+          "phones": [
+            "(55) 3426-2005"
+          ],
+          "website": null,
+          "started_activity_in": "2022-01-22T14:44:20.145Z",
+          "address": {
+            "zip_code": "97545-570",
+            "street": "Av. Pedreiras",
+            "number": "1312",
+            "complement": null,
+            "district": "Coxilha, Alegrete",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.810002099999995,
+            "longitude": -55.8228255
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "09:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "09:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "09:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "09:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "09:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "SATURDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "09:00",
+                  "end_time": "18:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Plástico",
+              "description": "Coleta de resíduos: Plástico",
+              "price": 4.9,
+              "unit": "KG",
+              "waste_category_name": "Plástico",
+              "quantity": 642.5
+            },
+            {
+              "name": "Têxtil / Roupas / Tecidos",
+              "description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+              "price": 0.92,
+              "unit": "KG",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 806.9
+            },
+            {
+              "name": "Borracha / Pneus",
+              "description": "Coleta de resíduos: Borracha / Pneus",
+              "price": 4.82,
+              "unit": "KG",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 291.4
+            },
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 1.65,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 243.4
+            },
+            {
+              "name": "Vidro",
+              "description": "Coleta de resíduos: Vidro",
+              "price": 3.04,
+              "unit": "KG",
+              "waste_category_name": "Vidro",
+              "quantity": 410.2
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Metal / Alumínio",
+              "description": "Serviço de coleta e transporte de Metal / Alumínio",
+              "price": 125.27,
+              "unit": "UNIT",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Eletroeletrônicos (REEE)",
+              "description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+              "price": 179.45,
+              "unit": "UNIT",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Papel / Papelão",
+              "description": "Serviço de coleta e transporte de Papel / Papelão",
+              "price": 79.56,
+              "unit": "UNIT",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Plástico",
+              "description": "Serviço de coleta e transporte de Plástico",
+              "price": 192.36,
+              "unit": "UNIT",
+              "waste_category_name": "Plástico",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Têxtil / Roupas / Tecidos",
+              "description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+              "price": 51.91,
+              "unit": "UNIT",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "complaints": [
+        {
+          "date": "2026-05-24T14:06:07.540Z",
+          "observations": "Omnis comes tempore creber.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.807559,
+                "longitude": -55.751525,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783460257126
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "West Sussex",
+              "streetNumber": "905",
+              "street": "Jast Junction",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "96209220",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Woodside Road, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Madeira",
+            "Óleo Vegetal Usado (de cozinha)",
+            "Óleo Mineral / Lubrificante"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "nedra-weber.6.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "jodi-nader.3.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "description": "Theatrum tactus ver stultus dapifer veniam.",
+              "resolution_hint": "PREFER_COMPANY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Leonard Kunde",
+      "display_name": "Leonard",
+      "phone": "(95) 91710-4594",
+      "email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "02667-682",
+        "street": "Garden Close",
+        "number": "520",
+        "complement": null,
+        "district": "County Armagh",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.803321,
+        "longitude": -55.795871
+      },
+      "companies": [
+        {
+          "_source": {
+            "google_place_id": "ChIJN00zAI8AAJUR4AcIO1RNqCY",
+            "rating": 4.6,
+            "types": [
+              "butcher_shop",
+              "food_store",
+              "store",
+              "manufacturer",
+              "service",
+              "food",
+              "point_of_interest",
+              "establishment"
+            ],
+            "is_ecoponto": false,
+            "synthetic": false
+          },
+          "corporate_name": "Sucatão do Alemão",
+          "business_name": "Sucatão do Alemão",
+          "identity": "66593958000141",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "sucatao.do.alemao@second-hand-gerbil.biz",
+          "phones": [
+            "(55) 3422-1317"
+          ],
+          "website": "https://alegrete.com.br/empresa/sucatao-do-alemao.html",
+          "started_activity_in": "2021-09-26T16:49:14.232Z",
+          "address": {
+            "zip_code": "97541-970",
+            "street": "etr Br 290",
+            "number": "S/N",
+            "complement": null,
+            "district": "s/n Km 578",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.808321,
+            "longitude": -55.768354599999995
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "SATURDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Óleo Vegetal Usado (de cozinha)",
+              "description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+              "price": 4.88,
+              "unit": "KG",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 176.5
+            },
+            {
+              "name": "Metal / Alumínio",
+              "description": "Coleta de resíduos: Metal / Alumínio",
+              "price": 3.23,
+              "unit": "KG",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 114.1
+            },
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 0.24,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 187.4
+            },
+            {
+              "name": "Papel / Papelão",
+              "description": "Coleta de resíduos: Papel / Papelão",
+              "price": 4.58,
+              "unit": "KG",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 873.5
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Vidro",
+              "description": "Serviço de coleta e transporte de Vidro",
+              "price": 50.62,
+              "unit": "UNIT",
+              "waste_category_name": "Vidro",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Papel / Papelão",
+              "description": "Serviço de coleta e transporte de Papel / Papelão",
+              "price": 252.82,
+              "unit": "UNIT",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "_source": {
+            "google_place_id": "ChIJgzNkEMm7qpURoUGgfY6702g",
+            "rating": 5,
+            "types": [
+              "point_of_interest",
+              "service",
+              "establishment"
+            ],
+            "is_ecoponto": false,
+            "synthetic": false
+          },
+          "corporate_name": "Sucata Agricola Leonardi",
+          "business_name": "Sucata Agricola Leonardi",
+          "identity": "95963222737",
+          "identity_type": "CPF",
+          "company_type": "COLLECTOR",
+          "status": true,
+          "email": "sucata.agricola.leonardi@alert-traffic.com",
+          "phones": [
+            "(36) 90246-1498"
+          ],
+          "website": null,
+          "started_activity_in": "2024-06-30T21:09:56.896Z",
+          "address": {
+            "zip_code": "97547-090",
+            "street": "BR-290",
+            "number": "S/N",
+            "complement": null,
+            "district": "Nova Brasília, Alegrete",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.816672099999995,
+            "longitude": -55.73991660000001
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                },
+                {
+                  "start_time": "14:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "SATURDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Metal / Alumínio",
+              "description": "Coleta de resíduos: Metal / Alumínio",
+              "price": 4.68,
+              "unit": "KG",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 40.1
+            },
+            {
+              "name": "Têxtil / Roupas / Tecidos",
+              "description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+              "price": 1.69,
+              "unit": "KG",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 889
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Madeira",
+              "description": "Serviço de coleta e transporte de Madeira",
+              "price": 261.9,
+              "unit": "UNIT",
+              "waste_category_name": "Madeira",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Borracha / Pneus",
+              "description": "Serviço de coleta e transporte de Borracha / Pneus",
+              "price": 153.55,
+              "unit": "UNIT",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+              "description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+              "price": 163.85,
+              "unit": "UNIT",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Papel / Papelão",
+              "description": "Serviço de coleta e transporte de Papel / Papelão",
+              "price": 246.45,
+              "unit": "UNIT",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Têxtil / Roupas / Tecidos",
+              "description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+              "price": 276.61,
+              "unit": "UNIT",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Vidro",
+              "description": "Serviço de coleta e transporte de Vidro",
+              "price": 162.01,
+              "unit": "UNIT",
+              "waste_category_name": "Vidro",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "complaints": [
+        {
+          "date": "2025-10-23T01:54:03.924Z",
+          "observations": "Summopere arbustum nemo capto eaque veniam combibo.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.80337,
+                "longitude": -55.791374,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783410971219
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Jefferson County",
+              "streetNumber": "615",
+              "street": "Clarence Road",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "31141630",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Orlando Cape, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Lâmpadas"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-02.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-01.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [],
+          "resolutions": []
+        },
+        {
+          "date": "2025-07-18T05:01:50.343Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.767136,
+                "longitude": -55.773816,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783459285413
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Lincolnshire",
+              "streetNumber": "604",
+              "street": "Murazik Pine",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "42620517",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "E 11th Street, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Vidro",
+            "Resíduos de Serviços de Saúde (RSS)"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "larue-johnson.10.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "penny-west.9.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "tyree-rolfson.12.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+              "description": "Illo cedo communis.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        },
+        {
+          "date": "2026-02-12T01:19:01.313Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.79788,
+                "longitude": -55.823478,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783392517440
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Dyfed",
+              "streetNumber": "950",
+              "street": "Wyman Mount",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "49484841",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Casey River, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Eletroeletrônicos (REEE)",
+            "Resíduos Orgânicos",
+            "Vidro"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "jaleel-dach.13.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Jodi Nader",
+      "display_name": "Jodi",
+      "phone": "(58) 98283-3758",
+      "email": "jodi-nader.3.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "19843-380",
+        "street": "Koelpin View",
+        "number": "7666",
+        "complement": null,
+        "district": "County Fermanagh",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.807293,
+        "longitude": -55.81962
+      },
+      "companies": [
+        {
+          "_source": {
+            "google_place_id": null,
+            "rating": null,
+            "types": [],
+            "is_ecoponto": false,
+            "synthetic": true
+          },
+          "corporate_name": "Stoltenberg and Sons Reciclagem",
+          "business_name": "Stoltenberg and Sons Reciclagem",
+          "identity": "13397086396",
+          "identity_type": "CPF",
+          "company_type": "COLLECTOR",
+          "status": true,
+          "email": "Leilani_Stark@another-legislature.net",
+          "phones": [
+            "(21) 94599-3212"
+          ],
+          "website": null,
+          "started_activity_in": "2024-08-18T23:43:12.800Z",
+          "address": {
+            "zip_code": "38251-921",
+            "street": "King's Road",
+            "number": "706",
+            "complement": null,
+            "district": "Henry County",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.770435,
+            "longitude": -55.78132
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "SATURDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "12:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Vidro",
+              "description": "Coleta de resíduos: Vidro",
+              "price": 3.12,
+              "unit": "KG",
+              "waste_category_name": "Vidro",
+              "quantity": 90.7
+            },
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 1.83,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 522.3
+            },
+            {
+              "name": "Papel / Papelão",
+              "description": "Coleta de resíduos: Papel / Papelão",
+              "price": 4.46,
+              "unit": "KG",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 628.7
+            },
+            {
+              "name": "Têxtil / Roupas / Tecidos",
+              "description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+              "price": 4.24,
+              "unit": "KG",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 29.1
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Borracha / Pneus",
+              "description": "Serviço de coleta e transporte de Borracha / Pneus",
+              "price": 196.82,
+              "unit": "UNIT",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+              "description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+              "price": 238.6,
+              "unit": "UNIT",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "_source": {
+            "google_place_id": null,
+            "rating": null,
+            "types": [],
+            "is_ecoponto": false,
+            "synthetic": true
+          },
+          "corporate_name": "Bartell, Dicki and Hane Reciclagem",
+          "business_name": "Bartell, Dicki and Hane Reciclagem",
+          "identity": "64922634053",
+          "identity_type": "CPF",
+          "company_type": "COLLECTOR",
+          "status": true,
+          "email": "Vickie.Wisoky81@spiffy-import.name",
+          "phones": [
+            "(19) 95263-4012"
+          ],
+          "website": null,
+          "started_activity_in": "2024-09-10T00:25:52.645Z",
+          "address": {
+            "zip_code": "40266-631",
+            "street": "Larkin Spurs",
+            "number": "5901",
+            "complement": null,
+            "district": "West Yorkshire",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.784824,
+            "longitude": -55.75658
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Óleo Vegetal Usado (de cozinha)",
+              "description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+              "price": 3.03,
+              "unit": "KG",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 106.9
+            },
+            {
+              "name": "Plástico",
+              "description": "Coleta de resíduos: Plástico",
+              "price": 1.27,
+              "unit": "KG",
+              "waste_category_name": "Plástico",
+              "quantity": 16.8
+            },
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 2.28,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 85.8
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Papel / Papelão",
+              "description": "Serviço de coleta e transporte de Papel / Papelão",
+              "price": 252.49,
+              "unit": "UNIT",
+              "waste_category_name": "Papel / Papelão",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Madeira",
+              "description": "Serviço de coleta e transporte de Madeira",
+              "price": 291.79,
+              "unit": "UNIT",
+              "waste_category_name": "Madeira",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Plástico",
+              "description": "Serviço de coleta e transporte de Plástico",
+              "price": 165.22,
+              "unit": "UNIT",
+              "waste_category_name": "Plástico",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+              "description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+              "price": 137.18,
+              "unit": "UNIT",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Metal / Alumínio",
+              "description": "Serviço de coleta e transporte de Metal / Alumínio",
+              "price": 109.29,
+              "unit": "UNIT",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "complaints": [
+        {
+          "date": "2026-01-27T19:14:55.772Z",
+          "observations": "Vaco solio caelestis voro.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.813916,
+                "longitude": -55.822234,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783377959340
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Mid Glamorgan",
+              "streetNumber": "9033",
+              "street": "Alexane Circles",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "28466890",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "W 10th Street, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Veículos em Fim de Vida",
+            "Medicamentos",
+            "Vidro"
+          ],
+          "attachments": [],
+          "status": "OPEN",
+          "votes": [],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Suzanne Feest",
+      "display_name": "Suzanne",
+      "phone": "(45) 98711-3916",
+      "email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "07011-319",
+        "street": "Kihn Meadows",
+        "number": "5158",
+        "complement": null,
+        "district": "Lawrence County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.779247,
+        "longitude": -55.737484
+      },
+      "companies": [
+        {
+          "_source": {
+            "google_place_id": null,
+            "rating": null,
+            "types": [],
+            "is_ecoponto": false,
+            "synthetic": true
+          },
+          "corporate_name": "Macejkovic - Mohr Reciclagem",
+          "business_name": "Macejkovic - Mohr Reciclagem",
+          "identity": "45614890000160",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "Adolphus.Hegmann14@infinite-litter.name",
+          "phones": [
+            "(43) 91813-6586"
+          ],
+          "website": null,
+          "started_activity_in": "2026-02-02T18:52:21.474Z",
+          "address": {
+            "zip_code": "89759-297",
+            "street": "E 11th Street",
+            "number": "6409",
+            "complement": null,
+            "district": "Hancock County",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.796879,
+            "longitude": -55.748924
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Borracha / Pneus",
+              "description": "Coleta de resíduos: Borracha / Pneus",
+              "price": 2.05,
+              "unit": "KG",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 138.2
+            },
+            {
+              "name": "Têxtil / Roupas / Tecidos",
+              "description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+              "price": 3.39,
+              "unit": "KG",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 68
+            },
+            {
+              "name": "Madeira",
+              "description": "Coleta de resíduos: Madeira",
+              "price": 4.53,
+              "unit": "KG",
+              "waste_category_name": "Madeira",
+              "quantity": 999.5
+            },
+            {
+              "name": "Eletroeletrônicos (REEE)",
+              "description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+              "price": 3.97,
+              "unit": "KG",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 828.5
+            },
+            {
+              "name": "Óleo Vegetal Usado (de cozinha)",
+              "description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+              "price": 4.85,
+              "unit": "KG",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 894.8
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Eletroeletrônicos (REEE)",
+              "description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+              "price": 53.78,
+              "unit": "UNIT",
+              "waste_category_name": "Eletroeletrônicos (REEE)",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+              "description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+              "price": 87.58,
+              "unit": "UNIT",
+              "waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Metal / Alumínio",
+              "description": "Serviço de coleta e transporte de Metal / Alumínio",
+              "price": 101.3,
+              "unit": "UNIT",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Borracha / Pneus",
+              "description": "Serviço de coleta e transporte de Borracha / Pneus",
+              "price": 234.72,
+              "unit": "UNIT",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Plástico",
+              "description": "Serviço de coleta e transporte de Plástico",
+              "price": 173.89,
+              "unit": "UNIT",
+              "waste_category_name": "Plástico",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "_source": {
+            "google_place_id": null,
+            "rating": null,
+            "types": [],
+            "is_ecoponto": false,
+            "synthetic": true
+          },
+          "corporate_name": "Parisian and Sons Reciclagem",
+          "business_name": "Parisian and Sons Reciclagem",
+          "identity": "77364674000108",
+          "identity_type": "CNPJ",
+          "company_type": "COMPANY",
+          "status": true,
+          "email": "Golden90@limp-experience.net",
+          "phones": [
+            "(34) 94078-1222"
+          ],
+          "website": null,
+          "started_activity_in": "2019-04-13T08:04:03.090Z",
+          "address": {
+            "zip_code": "02078-673",
+            "street": "University Drive",
+            "number": "43388",
+            "complement": null,
+            "district": "Bedfordshire",
+            "city": "Alegrete",
+            "city_ibge_id": 4300406,
+            "state": "Rio Grande do Sul",
+            "state_ibge_id": 43,
+            "state_code": "RS",
+            "latitude": -29.802781,
+            "longitude": -55.736526
+          },
+          "business_hours": [
+            {
+              "day_of_week": "MONDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "TUESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "WEDNESDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "THURSDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            },
+            {
+              "day_of_week": "FRIDAY",
+              "is_open": true,
+              "time_slots": [
+                {
+                  "start_time": "08:00",
+                  "end_time": "18:00"
+                }
+              ]
+            }
+          ],
+          "wastes": [
+            {
+              "name": "Metal / Alumínio",
+              "description": "Coleta de resíduos: Metal / Alumínio",
+              "price": 0.36,
+              "unit": "KG",
+              "waste_category_name": "Metal / Alumínio",
+              "quantity": 452.6
+            },
+            {
+              "name": "Madeira",
+              "description": "Coleta de resíduos: Madeira",
+              "price": 2.75,
+              "unit": "KG",
+              "waste_category_name": "Madeira",
+              "quantity": 294.4
+            }
+          ],
+          "services": [
+            {
+              "name": "Coleta de Vidro",
+              "description": "Serviço de coleta e transporte de Vidro",
+              "price": 193.37,
+              "unit": "UNIT",
+              "waste_category_name": "Vidro",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Borracha / Pneus",
+              "description": "Serviço de coleta e transporte de Borracha / Pneus",
+              "price": 272.52,
+              "unit": "UNIT",
+              "waste_category_name": "Borracha / Pneus",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Madeira",
+              "description": "Serviço de coleta e transporte de Madeira",
+              "price": 224.84,
+              "unit": "UNIT",
+              "waste_category_name": "Madeira",
+              "quantity": 1
+            },
+            {
+              "name": "Coleta de Têxtil / Roupas / Tecidos",
+              "description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+              "price": 59.38,
+              "unit": "UNIT",
+              "waste_category_name": "Têxtil / Roupas / Tecidos",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "complaints": [
+        {
+          "date": "2025-10-14T18:35:17.501Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.771207,
+                "longitude": -55.753686,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783400739786
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Bedfordshire",
+              "streetNumber": "675",
+              "street": "Sylvia Court",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "44605636",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Shelley Burg, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos de Serviços de Saúde (RSS)",
+            "Papel / Papelão",
+            "Lâmpadas"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-01.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "roxanne-hagenes.0.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "jodi-nader.3.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "orie-stehr.5.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "description": "Alioqui tergiversatio admitto alius deleo suus caries pecus pauper.",
+              "resolution_hint": "CITIZEN_ONLY"
+            },
+            {
+              "resolver_email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+              "description": "Verto angelus tracto.",
+              "resolution_hint": "PREFER_COMPANY"
+            }
+          ]
+        },
+        {
+          "date": "2025-11-06T00:06:42.207Z",
+          "observations": "Debeo cursim nihil stella cognomen vivo vestigium.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.773436,
+                "longitude": -55.803184,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783435620822
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Northumberland",
+              "streetNumber": "1525",
+              "street": "Ruecker Key",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "50432752",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Lynch Mall, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Lâmpadas",
+            "Têxtil / Roupas / Tecidos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "penny-west.9.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "orie-stehr.5.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "roxanne-hagenes.0.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "tyree-rolfson.12.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "larue-johnson.10.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "description": "Vinculum degenero universe adversus.",
+              "resolution_hint": "CITIZEN_ONLY"
+            },
+            {
+              "resolver_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "description": "Adiuvo amoveo repudiandae.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Orie Stehr",
+      "display_name": "Orie",
+      "phone": "(50) 93641-1898",
+      "email": "orie-stehr.5.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "17092-285",
+        "street": "Legros Walk",
+        "number": "2518",
+        "complement": null,
+        "district": "Warren County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.802404,
+        "longitude": -55.793152
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2026-05-25T10:02:22.930Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.774503,
+                "longitude": -55.786121,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783409839056
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "County Londonderry",
+              "streetNumber": "7589",
+              "street": "Rolfson Radial",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "65841578",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Karl Shore, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Óleo Vegetal Usado (de cozinha)"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "CANCELED",
+          "votes": [
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        },
+        {
+          "date": "2025-12-25T05:52:51.656Z",
+          "observations": "Vacuus voluptates dolor.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.812845,
+                "longitude": -55.825652,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783402690217
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Morgan County",
+              "streetNumber": "85355",
+              "street": "Turner Wall",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "87694326",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Darnell Shoals, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Óleo Vegetal Usado (de cozinha)",
+            "Óleo Mineral / Lubrificante"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-07.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "jaleel-dach.13.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Nedra Weber",
+      "display_name": "Nedra",
+      "phone": "(41) 99859-3309",
+      "email": "nedra-weber.6.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "11690-750",
+        "street": "S Front Street",
+        "number": "54866",
+        "complement": null,
+        "district": "Greene County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.807122,
+        "longitude": -55.781881
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2025-11-08T13:09:37.306Z",
+          "observations": "Studio depromo tolero super attonbitus aequitas saepe substantia voluptatibus.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.78655,
+                "longitude": -55.763419,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783390371845
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Marion County",
+              "streetNumber": "2845",
+              "street": "Laura Garden",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "95439461",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Rosemarie Street, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos Orgânicos",
+            "Têxtil / Roupas / Tecidos",
+            "Medicamentos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-06.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "tyree-rolfson.12.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "orie-stehr.5.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "jaleel-dach.13.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "description": "Laborum tumultus atque studio adicio.",
+              "resolution_hint": "CITIZEN_ONLY"
+            },
+            {
+              "resolver_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "description": "Abstergo sufficio vulgo ab aperiam.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-25T00:05:08.643Z",
+          "observations": "Desipio tactus adsuesco consequatur derelinquo vomica ter doloribus.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.810882,
+                "longitude": -55.769533,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783444816634
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Crawford County",
+              "streetNumber": "9374",
+              "street": "Church Street",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "38059882",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Telly Ranch, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Madeira"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "CANCELED",
+          "votes": [],
+          "resolutions": []
+        },
+        {
+          "date": "2025-09-26T05:32:41.527Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.796006,
+                "longitude": -55.756,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783411795431
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Johnson County",
+              "streetNumber": "7407",
+              "street": "The Coppice",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "70213415",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Jast Vista, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos Orgânicos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "orie-stehr.5.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Debbie DuBuque",
+      "display_name": "Debbie",
+      "phone": "(05) 91542-9289",
+      "email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "28176-325",
+        "street": "The Crescent",
+        "number": "8860",
+        "complement": null,
+        "district": "South Yorkshire",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.765139,
+        "longitude": -55.817559
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2026-06-03T02:07:03.390Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.807249,
+                "longitude": -55.744769,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783418370941
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Madison County",
+              "streetNumber": "72926",
+              "street": "Garry Ports",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "35219242",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Veronica Canyon, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos Orgânicos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Toby Mosciski",
+      "display_name": "Toby",
+      "phone": "(41) 96940-4775",
+      "email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "82324-913",
+        "street": "Jeremiah Via",
+        "number": "27887",
+        "complement": null,
+        "district": "Logan County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.80855,
+        "longitude": -55.768048
+      },
+      "companies": [],
+      "complaints": []
+    },
+    {
+      "full_name": "Penny West",
+      "display_name": "Penny",
+      "phone": "(62) 94296-3472",
+      "email": "penny-west.9.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "14157-087",
+        "street": "Albert Pine",
+        "number": "702",
+        "complement": null,
+        "district": "Warren County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.81402,
+        "longitude": -55.823212
+      },
+      "companies": [],
+      "complaints": []
+    },
+    {
+      "full_name": "Larue Johnson",
+      "display_name": "Larue",
+      "phone": "(95) 95313-3425",
+      "email": "larue-johnson.10.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "01477-818",
+        "street": "Joey Canyon",
+        "number": "9347",
+        "complement": null,
+        "district": "Gloucestershire",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.790517,
+        "longitude": -55.756083
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2026-06-23T03:29:04.290Z",
+          "observations": "Ratione truculenter stipes colo libero summa pariatur aro antea.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.797971,
+                "longitude": -55.778056,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783456380732
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Clay County",
+              "streetNumber": "646",
+              "street": "Beech Close",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "88230821",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Travis Trafficway, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos Orgânicos",
+            "Borracha / Pneus"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "penny-west.9.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "jodi-nader.3.alegrete-rs@oikos.seed",
+              "description": "Victoria defungo aspicio deporto damno cito neque.",
+              "resolution_hint": "PREFER_COMPANY"
+            },
+            {
+              "resolver_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "description": "Deinde canonicus acquiro saepe cavus explicabo conduco odio communis vulnero.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        },
+        {
+          "date": "2025-12-18T16:12:53.475Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.806684,
+                "longitude": -55.767066,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783435986222
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Norfolk",
+              "streetNumber": "250",
+              "street": "Darin Trace",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "82182666",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Corwin Garden, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Embalagens Contaminadas",
+            "Resíduos Orgânicos",
+            "Metal / Alumínio"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [],
+          "resolutions": []
+        },
+        {
+          "date": "2026-04-13T03:01:19.330Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.790525,
+                "longitude": -55.779359,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783460931677
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Hancock County",
+              "streetNumber": "7211",
+              "street": "Macejkovic Ways",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "11967236",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Wuckert Parkway, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Eletroeletrônicos (REEE)",
+            "Resíduos Orgânicos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-02.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "jodi-nader.3.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Viola Ferry",
+      "display_name": "Viola",
+      "phone": "(19) 90629-7558",
+      "email": "viola-ferry.11.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "20200-902",
+        "street": "Gusikowski Run",
+        "number": "964",
+        "complement": null,
+        "district": "Perry County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.790328,
+        "longitude": -55.753485
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2025-10-22T07:18:25.694Z",
+          "observations": "Caelum synagoga cilicium utrum vito.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.809952,
+                "longitude": -55.795693,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783375700078
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "North Yorkshire",
+              "streetNumber": "913",
+              "street": "Jast Stravenue",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "15268461",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Gwen Lock, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Construção Civil e Demolição (RCD)",
+            "Vidro"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": []
+        },
+        {
+          "date": "2026-02-20T09:01:23.949Z",
+          "observations": "Paulatim utique consequatur sint.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.773382,
+                "longitude": -55.746565,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783412165787
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Gwent",
+              "streetNumber": "7564",
+              "street": "E Grand Avenue",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "06224173",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Market Place, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Veículos em Fim de Vida"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Tyree Rolfson",
+      "display_name": "Tyree",
+      "phone": "(09) 91266-9844",
+      "email": "tyree-rolfson.12.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "17287-069",
+        "street": "Chapel Road",
+        "number": "21118",
+        "complement": null,
+        "district": "Lancashire",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.767747,
+        "longitude": -55.736682
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2025-08-31T04:56:36.556Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.787662,
+                "longitude": -55.803278,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783375954609
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Franklin County",
+              "streetNumber": "876",
+              "street": "Randolph Field",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "29785498",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Spencer Canyon, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos de Serviços de Saúde (RSS)",
+            "Medicamentos"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "nedra-weber.6.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "roxanne-hagenes.0.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "jaleel-dach.13.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "suzanne-feest.4.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "leonard-kunde.2.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "description": "Optio blandior vis volup timor tener canis cado.",
+              "resolution_hint": "CITIZEN_ONLY"
+            },
+            {
+              "resolver_email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+              "description": "Voluptate defleo circumvenio arto laborum autem.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Jaleel Dach",
+      "display_name": "Jaleel",
+      "phone": "(23) 97270-9266",
+      "email": "jaleel-dach.13.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "58621-161",
+        "street": "Mayer Overpass",
+        "number": "9063",
+        "complement": null,
+        "district": "Morgan County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.774584,
+        "longitude": -55.762493
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2026-05-10T21:39:09.079Z",
+          "observations": "Appello tenuis deinde somniculosus trado admiratio.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.789413,
+                "longitude": -55.799276,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783433161980
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Nottinghamshire",
+              "streetNumber": "70842",
+              "street": "Gutmann Court",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "26783371",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Herzog Mill, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Construção Civil e Demolição (RCD)",
+            "Eletroeletrônicos (REEE)"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-01.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-07.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "nedra-weber.6.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "larue-johnson.10.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Dewey Feil",
+      "display_name": "Dewey",
+      "phone": "(74) 94188-6915",
+      "email": "dewey-feil.14.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "57008-380",
+        "street": "Mossie Street",
+        "number": "152",
+        "complement": null,
+        "district": "Greene County",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.773923,
+        "longitude": -55.747385
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2025-10-20T13:39:12.789Z",
+          "observations": "Conor benigne sto.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.798397,
+                "longitude": -55.810179,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783454524504
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "County Armagh",
+              "streetNumber": "8253",
+              "street": "Christiansen Lodge",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "74404827",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Callie Bridge, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Medicamentos",
+            "Pilhas e Baterias"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-07.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Grant Dooley",
+      "display_name": "Grant",
+      "phone": "(37) 99831-1010",
+      "email": "grant-dooley.15.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "34204-256",
+        "street": "Oakfield Road",
+        "number": "483",
+        "complement": null,
+        "district": "Leicestershire",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.774294,
+        "longitude": -55.82256
+      },
+      "companies": [],
+      "complaints": []
+    },
+    {
+      "full_name": "Virginia Rowe",
+      "display_name": "Virginia",
+      "phone": "(70) 93352-4691",
+      "email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "94236-591",
+        "street": "Schaden Junctions",
+        "number": "42140",
+        "complement": null,
+        "district": "County Down",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.772369,
+        "longitude": -55.744158
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2026-04-25T18:34:16.926Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.801209,
+                "longitude": -55.772589,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783426056064
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Lake County",
+              "streetNumber": "902",
+              "street": "Wolf Trail",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "34298484",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Dach Wells, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Resíduos Orgânicos",
+            "Eletroeletrônicos (REEE)",
+            "Madeira"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "nedra-weber.6.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Rene Schmidt",
+      "display_name": "Rene",
+      "phone": "(47) 94656-2643",
+      "email": "rene-schmidt.17.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "14307-671",
+        "street": "Maverick Track",
+        "number": "3488",
+        "complement": null,
+        "district": "Surrey",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.809236,
+        "longitude": -55.81622
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2026-03-18T16:12:26.561Z",
+          "observations": "Ventosus vero voro vapulus necessitatibus.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.805143,
+                "longitude": -55.786888,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783411430955
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Essex",
+              "streetNumber": "224",
+              "street": "Adams Street",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "45023427",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Stanton Lakes, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Construção Civil e Demolição (RCD)"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            },
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "grant-dooley.15.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "nedra-weber.6.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            },
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        },
+        {
+          "date": "2026-07-05T10:25:53.168Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.768593,
+                "longitude": -55.764854,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783375666689
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Isle of Wight",
+              "streetNumber": "367",
+              "street": "Rodriguez Key",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "61166808",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Nicole Views, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Vidro"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-03.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [
+            {
+              "voter_email": "toby-mosciski.8.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "virginia-rowe.16.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "NOT_RESOLVED"
+            }
+          ],
+          "resolutions": []
+        },
+        {
+          "date": "2025-11-24T22:56:11.605Z",
+          "observations": "Cognatus aestus dedico acceptus thalassinus.",
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.807187,
+                "longitude": -55.765059,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783424165153
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Borders",
+              "streetNumber": "36930",
+              "street": "Koss Lakes",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "82260538",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "3rd Avenue, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Papel / Papelão",
+            "Vidro",
+            "Madeira"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-05.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "RESOLVED",
+          "votes": [
+            {
+              "voter_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "felix-zemlak.1.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "dewey-feil.14.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "viola-ferry.11.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            },
+            {
+              "voter_email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+              "vote_type": "RESOLVED"
+            }
+          ],
+          "resolutions": [
+            {
+              "resolver_email": "debbie-dubuque.7.alegrete-rs@oikos.seed",
+              "description": "Spiritus cibo summisse color bestia adhuc.",
+              "resolution_hint": "CITIZEN_ONLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Olive Schowalter",
+      "display_name": "Olive",
+      "phone": "(25) 95006-5259",
+      "email": "olive-schowalter.18.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "30962-178",
+        "street": "3rd Avenue",
+        "number": "2266",
+        "complement": null,
+        "district": "Herefordshire",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.782433,
+        "longitude": -55.753848
+      },
+      "companies": [],
+      "complaints": [
+        {
+          "date": "2025-12-06T17:32:14.315Z",
+          "observations": null,
+          "geospatial": {
+            "heading": null,
+            "location": {
+              "coords": {
+                "latitude": -29.8161,
+                "longitude": -55.743976,
+                "altitude": null,
+                "accuracy": null,
+                "altitudeAccuracy": null,
+                "heading": null,
+                "speed": null
+              },
+              "timestamp": 1783420051661
+            },
+            "addresses": {
+              "city": "Alegrete",
+              "district": "Monroe County",
+              "streetNumber": "757",
+              "street": "Veum Locks",
+              "region": "RS",
+              "subregion": null,
+              "country": "Brasil",
+              "postalCode": "76434218",
+              "name": null,
+              "isoCountryCode": "BR",
+              "timezone": "America/Sao_Paulo",
+              "formattedAddress": "Green Gardens, Alegrete - RS"
+            }
+          },
+          "waste_category_names": [
+            "Lâmpadas",
+            "Papel / Papelão"
+          ],
+          "attachments": [
+            {
+              "asset_file": "complaint-sample-04.jpg",
+              "type": "PHOTO"
+            }
+          ],
+          "status": "OPEN",
+          "votes": [],
+          "resolutions": []
+        }
+      ]
+    },
+    {
+      "full_name": "Camren Wintheiser",
+      "display_name": "Camren",
+      "phone": "(30) 91731-2709",
+      "email": "camren-wintheiser.19.alegrete-rs@oikos.seed",
+      "address": {
+        "zip_code": "41895-759",
+        "street": "Jakubowski Ways",
+        "number": "59535",
+        "complement": null,
+        "district": "Dumfries and Galloway",
+        "city": "Alegrete",
+        "city_ibge_id": 4300406,
+        "state": "Rio Grande do Sul",
+        "state_ibge_id": 43,
+        "state_code": "RS",
+        "latitude": -29.79277,
+        "longitude": -55.74833
+      },
+      "companies": [],
+      "complaints": []
+    }
+  ]
+}
