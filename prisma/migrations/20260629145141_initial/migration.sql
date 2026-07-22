@@ -1,6 +1,3 @@
--- CreateExtension
-CREATE EXTENSION IF NOT EXISTS postgis;
-
 -- CreateEnum
 CREATE TYPE "IdentityType" AS ENUM ('CPF', 'CNPJ');
 
