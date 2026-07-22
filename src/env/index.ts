@@ -45,10 +45,9 @@ const envSchema = z
 		ADMIN_USERNAME: z.string(),
 		ADMIN_PASSWORD: z.string(),
 
-		// Autenticacao de cliente (mobile/web) via header X-Client-Key - ver
-		// docs/api-key-methodology.md. `false` valida e loga violacao sem
-		// bloquear - usado so para sequenciar o primeiro deploy em producao sem
-		// quebrar clientes ainda nao atualizados.
+		CLIENT_KEY_MOBILE: z.string().optional(),
+		CLIENT_KEY_WEB: z.string().optional(),
+
 		// Nao usa z.coerce.boolean(): `Boolean("false")` e `true` em JS, o que
 		// coagiria a string "false" para o booleano true.
 		CLIENT_KEY_ENFORCE: z

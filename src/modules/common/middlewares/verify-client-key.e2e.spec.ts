@@ -1,12 +1,6 @@
 import "dotenv/config";
-import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
-import { prisma } from "@/lib/prisma.js";
-import { invalidateApiClientCache } from "@/modules/common/providers/api-client/api-client-provider.js";
-import { hashClientKey } from "@/modules/common/providers/api-client/client-key-hash.js";
-
-const RAW_KEY = "e2e-test-raw-client-key";
-const CLIENT_NAME = "e2e-test-client";
 
 describe("verify-client-key (wiring, CLIENT_KEY_ENFORCE=false in test env)", () => {
 	beforeAll(async () => {
@@ -17,21 +11,11 @@ describe("verify-client-key (wiring, CLIENT_KEY_ENFORCE=false in test env)", () 
 		await app.close();
 	});
 
-	afterEach(async () => {
-		await prisma.apiClient.deleteMany({ where: { name: CLIENT_NAME } });
-		invalidateApiClientCache();
-	});
-
-	it("allows a request with a valid client-key and sets request.apiClient", async () => {
-		await prisma.apiClient.create({
-			data: { name: CLIENT_NAME, hashed_key: hashClientKey(RAW_KEY) },
-		});
-		invalidateApiClientCache();
-
+	it("allows a request with a valid client-key", async () => {
 		const res = await app.inject({
 			method: "GET",
 			url: "/v1/waste-categories",
-			headers: { "x-client-key": RAW_KEY },
+			headers: { "x-client-key": "test-mobile-client-key" },
 		});
 
 		expect(res.statusCode).toBe(200);

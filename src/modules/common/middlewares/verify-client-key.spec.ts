@@ -1,7 +1,6 @@
 import type { FastifyRequest } from "fastify";
 import { describe, expect, it, vi } from "vitest";
 import { AppError } from "../errors/app-error.js";
-import type { ApiClientRecord } from "../providers/api-client/api-client-provider.js";
 import { createVerifyClientKey } from "./verify-client-key.js";
 
 function makeRequest(headers: Record<string, string> = {}): FastifyRequest {
@@ -12,27 +11,32 @@ function makeRequest(headers: Record<string, string> = {}): FastifyRequest {
 	} as unknown as FastifyRequest;
 }
 
-const validClient: ApiClientRecord = {
-	id: "client-1",
-	name: "mobile",
-	rateLimit: null,
-};
+const clients = [
+	{ name: "mobile", key: "mobile-raw-key" },
+	{ name: "web", key: "web-raw-key" },
+];
 
 describe("verify-client-key", () => {
-	it("passes and sets request.apiClient when the key is valid", async () => {
-		const lookup = vi.fn().mockResolvedValue(validClient);
-		const verifyClientKey = createVerifyClientKey({ enforce: true, lookup });
-		const request = makeRequest({ "x-client-key": "valid-raw-key" });
+	it("passes and sets request.apiClient when the key matches a known client", async () => {
+		const verifyClientKey = createVerifyClientKey({ enforce: true, clients });
+		const request = makeRequest({ "x-client-key": "mobile-raw-key" });
 
 		await verifyClientKey(request);
 
-		expect(lookup).toHaveBeenCalledWith("valid-raw-key");
-		expect(request.apiClient).toEqual(validClient);
+		expect(request.apiClient).toEqual({ name: "mobile" });
+	});
+
+	it("matches a different known client independently", async () => {
+		const verifyClientKey = createVerifyClientKey({ enforce: true, clients });
+		const request = makeRequest({ "x-client-key": "web-raw-key" });
+
+		await verifyClientKey(request);
+
+		expect(request.apiClient).toEqual({ name: "web" });
 	});
 
 	it("throws 401 when enforcing and the key is missing", async () => {
-		const lookup = vi.fn().mockResolvedValue(null);
-		const verifyClientKey = createVerifyClientKey({ enforce: true, lookup });
+		const verifyClientKey = createVerifyClientKey({ enforce: true, clients });
 		const request = makeRequest();
 
 		await expect(verifyClientKey(request)).rejects.toThrow(AppError);
@@ -43,16 +47,24 @@ describe("verify-client-key", () => {
 	});
 
 	it("throws 401 when enforcing and the key is invalid", async () => {
-		const lookup = vi.fn().mockResolvedValue(null);
-		const verifyClientKey = createVerifyClientKey({ enforce: true, lookup });
+		const verifyClientKey = createVerifyClientKey({ enforce: true, clients });
 		const request = makeRequest({ "x-client-key": "garbage" });
 
 		await expect(verifyClientKey(request)).rejects.toThrow(AppError);
 	});
 
+	it("ignores a client entry configured with an empty key", async () => {
+		const verifyClientKey = createVerifyClientKey({
+			enforce: true,
+			clients: [{ name: "web", key: "" }],
+		});
+		const request = makeRequest({ "x-client-key": "" });
+
+		await expect(verifyClientKey(request)).rejects.toThrow(AppError);
+	});
+
 	it("does not throw when enforce is disabled, but logs the violation", async () => {
-		const lookup = vi.fn().mockResolvedValue(null);
-		const verifyClientKey = createVerifyClientKey({ enforce: false, lookup });
+		const verifyClientKey = createVerifyClientKey({ enforce: false, clients });
 		const request = makeRequest();
 
 		await expect(verifyClientKey(request)).resolves.toBeUndefined();
@@ -60,13 +72,15 @@ describe("verify-client-key", () => {
 	});
 
 	it("does not call the log warning when enforce is disabled but the key is valid", async () => {
-		const lookup = vi.fn().mockResolvedValue(validClient);
-		const verifyClientKey = createVerifyClientKey({ enforce: false, lookup });
-		const request = makeRequest({ "x-client-key": "valid-raw-key" });
+		const verifyClientKey = createVerifyClientKey({
+			enforce: false,
+			clients,
+		});
+		const request = makeRequest({ "x-client-key": "mobile-raw-key" });
 
 		await verifyClientKey(request);
 
-		expect(request.apiClient).toEqual(validClient);
+		expect(request.apiClient).toEqual({ name: "mobile" });
 		expect(request.log.warn).not.toHaveBeenCalled();
 	});
 });

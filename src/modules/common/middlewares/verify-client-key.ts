@@ -1,30 +1,37 @@
+import { timingSafeEqual } from "node:crypto";
 import type { FastifyRequest } from "fastify";
 import { AppError } from "../errors/app-error.js";
-import {
-	type ApiClientRecord,
-	findApiClientByRawKey,
-} from "../providers/api-client/api-client-provider.js";
 
-type ClientKeyLookup = (rawKey: string) => Promise<ApiClientRecord | null>;
+export type ClientKeyEntry = { name: string; key: string };
 
-// Nao le `env` diretamente (import de @/env/index.js falha em unit tests
-// puros, que nao carregam dotenv) - quem monta a instancia real (app.ts) ja
-// depende de env e repassa o valor explicitamente.
+function keysMatch(a: string, b: string): boolean {
+	const bufferA = Buffer.from(a);
+	const bufferB = Buffer.from(b);
+
+	if (bufferA.length !== bufferB.length) {
+		return false;
+	}
+
+	return timingSafeEqual(bufferA, bufferB);
+}
+
 export function createVerifyClientKey(options: {
 	enforce: boolean;
-	lookup?: ClientKeyLookup;
+	clients: ClientKeyEntry[];
 }) {
 	const { enforce } = options;
-	const lookup = options.lookup ?? findApiClientByRawKey;
+	const clients = options.clients.filter((client) => client.key.length > 0);
 
 	return async function verifyClientKey(request: FastifyRequest) {
 		const header = request.headers["x-client-key"];
 		const rawKey = Array.isArray(header) ? header[0] : header;
 
-		const client = rawKey ? await lookup(rawKey) : null;
+		const match = rawKey
+			? clients.find((client) => keysMatch(client.key, rawKey))
+			: undefined;
 
-		if (client) {
-			request.apiClient = client;
+		if (match) {
+			request.apiClient = { name: match.name };
 			return;
 		}
 

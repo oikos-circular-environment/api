@@ -99,10 +99,12 @@ app.register(fastifyMultipart, {
 	},
 });
 
-// Roda antes do rate-limit (abaixo) para que `request.apiClient` esteja
-// disponível no keyGenerator composto.
 const verifyClientKey = createVerifyClientKey({
 	enforce: env.CLIENT_KEY_ENFORCE,
+	clients: [
+		{ name: "mobile", key: env.CLIENT_KEY_MOBILE ?? "" },
+		{ name: "web", key: env.CLIENT_KEY_WEB ?? "" },
+	],
 });
 
 app.addHook("onRequest", async (request) => {
@@ -119,21 +121,7 @@ app.register(fastifyRateLimit, {
 	allowList: ["/docs"],
 	skipOnError: false,
 	keyGenerator: (request: FastifyRequest) => {
-		const clientId = request.apiClient?.id ?? "no-client";
-
-		const authHeader = request.headers.authorization;
-		if (authHeader?.startsWith("Bearer ")) {
-			const token = authHeader.slice("Bearer ".length);
-			const decoded = request.server.jwt.decode<{ sub?: string }>(token);
-			if (decoded?.sub) {
-				return `${clientId}:${decoded.sub}`;
-			}
-		}
-
-		// Nunca so `clientId`: todos os usuarios de um mesmo cliente (ex.: todo
-		// mundo no app mobile) compartilhariam uma unica cota, e um atacante com
-		// a client-key esgotaria o limite de todos os usuarios legitimos.
-		return `${clientId}:${request.ip}`;
+		return request.ip;
 	},
 });
 
