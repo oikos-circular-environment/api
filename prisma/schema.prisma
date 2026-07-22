@@ -30,6 +30,23 @@ model User {
   @@map("users")
 }
 
+// Credencial de cliente (app mobile, web) — distinta de User/auth. Autentica
+// "qual aplicativo oficial está chamando", nao "qual usuario esta logado".
+// Ver docs/api-key-methodology.md e plans/plano-seguranca-api-key.md (raiz do
+// pseudo-monorepo oikos).
+model ApiClient {
+  id         String    @id @default(uuid())
+  name       String    @unique
+  hashed_key String    @unique
+  active     Boolean   @default(true)
+  rate_limit Int?
+  expires_at DateTime?
+  created_at DateTime  @default(now())
+  revoked_at DateTime?
+
+  @@map("api_clients")
+}
+
 model Profile {
   id           String   @id @default(uuid())
   full_name    String

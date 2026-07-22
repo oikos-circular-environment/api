@@ -14,9 +14,10 @@ import {
 	validatorCompiler,
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
-import { env } from "@/env/index.js";
+import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
 import { authRoutes } from "./modules/auth/auth-routes.js";
+import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { marketRoutes } from "./modules/market/market-routes.js";
@@ -26,6 +27,12 @@ import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
 import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
 
+const CLIENT_KEY_EXEMPT_PREFIXES = ["/health", "/docs", "/bullboard"];
+
+function isExemptFromClientKey(url: string): boolean {
+	return CLIENT_KEY_EXEMPT_PREFIXES.some((prefix) => url.startsWith(prefix));
+}
+
 export const app = Fastify({
 	loggerInstance: serverLogger as unknown as FastifyBaseLogger,
 	disableRequestLogging: true,
@@ -34,8 +41,10 @@ export const app = Fastify({
 	},
 }).withTypeProvider<ZodTypeProvider>();
 
+const corsAllowedOrigins = getCorsAllowedOrigins();
+
 app.register(fastifyCors, {
-	origin: "*",
+	origin: corsAllowedOrigins.length > 0 ? corsAllowedOrigins : "*",
 });
 
 app.setValidatorCompiler(validatorCompiler);
@@ -58,8 +67,14 @@ app.register(fastifySwagger, {
 					scheme: "bearer",
 					bearerFormat: "JWT",
 				},
+				clientKeyAuth: {
+					type: "apiKey",
+					in: "header",
+					name: "X-Client-Key",
+				},
 			},
 		},
+		security: [{ clientKeyAuth: [] }],
 	},
 	transform: jsonSchemaTransform,
 });
@@ -84,6 +99,19 @@ app.register(fastifyMultipart, {
 	},
 });
 
+// Roda antes do rate-limit (abaixo) para que `request.apiClient` esteja
+// disponível no keyGenerator composto.
+const verifyClientKey = createVerifyClientKey({
+	enforce: env.CLIENT_KEY_ENFORCE,
+});
+
+app.addHook("onRequest", async (request) => {
+	if (isExemptFromClientKey(request.url)) {
+		return;
+	}
+	await verifyClientKey(request);
+});
+
 app.register(fastifyRateLimit, {
 	max: 100,
 	timeWindow: "1 minute",
@@ -91,7 +119,21 @@ app.register(fastifyRateLimit, {
 	allowList: ["/docs"],
 	skipOnError: false,
 	keyGenerator: (request: FastifyRequest) => {
-		return request.ip;
+		const clientId = request.apiClient?.id ?? "no-client";
+
+		const authHeader = request.headers.authorization;
+		if (authHeader?.startsWith("Bearer ")) {
+			const token = authHeader.slice("Bearer ".length);
+			const decoded = request.server.jwt.decode<{ sub?: string }>(token);
+			if (decoded?.sub) {
+				return `${clientId}:${decoded.sub}`;
+			}
+		}
+
+		// Nunca so `clientId`: todos os usuarios de um mesmo cliente (ex.: todo
+		// mundo no app mobile) compartilhariam uma unica cota, e um atacante com
+		// a client-key esgotaria o limite de todos os usuarios legitimos.
+		return `${clientId}:${request.ip}`;
 	},
 });
 
@@ -150,6 +192,9 @@ app.register(ScalarApiReference, {
 			securitySchemes: {
 				bearerAuth: {
 					token: "",
+				},
+				clientKeyAuth: {
+					value: "",
 				},
 			},
 		},
