@@ -104,3 +104,9 @@ workers/          # BullMQ background workers
 1. `npm run test -- <file-or-filter>` — validate the targeted test in isolation first.
 2. `npm run test` — confirm the full suite still passes.
 3. `npm run test:coverage` — use the report to check for logic gaps.
+
+## Pull requests
+
+- A PR represents finished, verified work — never expose an open "Test plan" checklist in the PR description. That's a to-do list, and a PR isn't the place to leave to-dos.
+- If there's verification still pending (migrations to apply, tests to run, manual checks), do it — or explicitly suggest it to the user — *before* opening the PR, not as a checklist inside it.
+- Keep the PR body to a plain Summary of what changed and why. Only mention manual/local verification steps if something couldn't be verified in this environment and the reviewer needs to do it themselves.
