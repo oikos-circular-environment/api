@@ -1,13 +1,20 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
+import { PrismaRefreshTokenRepository } from "../auth/repositories/prisma/refresh-token-repository-prisma.js";
+import { issueAuthTokens } from "../auth/token-service.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
-import { createUserSchema, userResponseSchema } from "./dtos/users-dto.js";
+import {
+	changePasswordSchema,
+	createUserSchema,
+	userResponseSchema,
+} from "./dtos/users-dto.js";
 import { BullMQAccountDeletionJobDispatcher } from "./providers/queue/bullmq/bullmq-account-deletion-job-dispatcher.js";
 import { PrismaUsersRepository } from "./repositories/prisma/users-repository-prisma.js";
 import { CancelAccountDeletionUseCase } from "./use-cases/cancel-account-deletion-use-case.js";
+import { ChangePasswordUseCase } from "./use-cases/change-password-use-case.js";
 import { GetUserUseCase } from "./use-cases/get-user-use-case.js";
 import { RegisterUserUseCase } from "./use-cases/register-user-use-case.js";
 import { RequestAccountDeletionUseCase } from "./use-cases/request-account-deletion-use-case.js";
@@ -150,6 +157,54 @@ export async function userRoutes(app: FastifyInstance) {
 				return reply.status(200).send({
 					message: "Account deletion cancelled.",
 				});
+			},
+		);
+
+		typedAuth.patch(
+			"/users/me/change-password",
+			{
+				schema: withBearerAuth({
+					tags: ["Users"],
+					summary: "Change password",
+					description:
+						"Changes the authenticated user's password. Revokes every other " +
+						"session and returns a fresh token pair for the current device.",
+					body: changePasswordSchema,
+					response: {
+						200: z.object({
+							token: z.string(),
+							refreshToken: z.string(),
+						}),
+						401: appErrorSchema,
+						404: appErrorSchema,
+						422: appErrorSchema,
+					},
+				}),
+			},
+			async (request, reply) => {
+				const userId = request.user.sub;
+				const { current_password, new_password } = request.body;
+
+				const usersRepository = new PrismaUsersRepository();
+				const refreshTokenRepository = new PrismaRefreshTokenRepository();
+				const useCase = new ChangePasswordUseCase(
+					usersRepository,
+					refreshTokenRepository,
+				);
+
+				const user = await useCase.execute({
+					userId,
+					currentPassword: current_password,
+					newPassword: new_password,
+				});
+
+				const { token, refreshToken } = await issueAuthTokens(
+					reply,
+					refreshTokenRepository,
+					user,
+				);
+
+				return reply.status(200).send({ token, refreshToken });
 			},
 		);
 	});

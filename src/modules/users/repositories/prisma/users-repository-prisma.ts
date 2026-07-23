@@ -23,6 +23,15 @@ export class PrismaUsersRepository implements UsersRepository {
 		return user;
 	}
 
+	async findByIdWithPassword(id: string) {
+		const user = await prisma.user.findUnique({
+			where: { id },
+			select: { id: true, email: true, password: true },
+		});
+
+		return user;
+	}
+
 	async create(data: UserCreateInput) {
 		const user = await prisma.user.create({
 			data,
@@ -53,6 +62,13 @@ export class PrismaUsersRepository implements UsersRepository {
 		});
 
 		return user;
+	}
+
+	async updatePassword(userId: string, passwordHash: string) {
+		await prisma.user.update({
+			where: { id: userId },
+			data: { password: passwordHash },
+		});
 	}
 
 	async delete(userId: string) {
