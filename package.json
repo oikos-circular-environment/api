@@ -32,6 +32,7 @@
 		"seed": "tsx prisma/seeds/index.ts",
 		"cli": "tsx cli/index.ts",
 		"seed:prod": "tsx scripts/seed-prod.ts",
+		"client-key:create": "tsx scripts/client-key-create.ts",
 		"minio:console": "xdg-open http://localhost:9001"
 	},
 	"prisma": {
@@ -68,20 +69,23 @@
 		"dotenv": "^17.4.2",
 		"fastify": "^5.8.5",
 		"fastify-type-provider-zod": "^6.1.0",
+		"file-type": "^22.0.1",
 		"ioredis": "^5.11.0",
 		"pg": "^8.20.0",
 		"pino": "^10.3.1",
 		"pino-opentelemetry-transport": "^3.0.0",
+		"sanitize-html": "^2.17.6",
 		"superjson": "^2.2.6",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.12",
-		"@faker-js/faker": "^10.4.0",
 		"@clack/prompts": "^1.7.0",
+		"@faker-js/faker": "^10.4.0",
 		"@googlemaps/google-maps-services-js": "^3.4.2",
 		"@types/node": "^25.9.4",
 		"@types/pg": "^8.20.0",
+		"@types/sanitize-html": "^2.16.1",
 		"@vitest/coverage-v8": "^4.1.4",
 		"@vitest/ui": "^4.1.4",
 		"concurrently": "^10.0.3",

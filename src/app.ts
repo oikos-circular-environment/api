@@ -14,16 +14,24 @@ import {
 	validatorCompiler,
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
-import { env } from "@/env/index.js";
+import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
 import { authRoutes } from "./modules/auth/auth-routes.js";
+import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { marketRoutes } from "./modules/market/market-routes.js";
+import { moderationRoutes } from "./modules/moderation/moderation-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";
 import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
+
+const CLIENT_KEY_EXEMPT_PREFIXES = ["/health", "/docs", "/bullboard"];
+
+function isExemptFromClientKey(url: string): boolean {
+	return CLIENT_KEY_EXEMPT_PREFIXES.some((prefix) => url.startsWith(prefix));
+}
 
 export const app = Fastify({
 	loggerInstance: serverLogger as unknown as FastifyBaseLogger,
@@ -33,8 +41,10 @@ export const app = Fastify({
 	},
 }).withTypeProvider<ZodTypeProvider>();
 
+const corsAllowedOrigins = getCorsAllowedOrigins();
+
 app.register(fastifyCors, {
-	origin: "*",
+	origin: corsAllowedOrigins.length > 0 ? corsAllowedOrigins : "*",
 });
 
 app.setValidatorCompiler(validatorCompiler);
@@ -57,8 +67,14 @@ app.register(fastifySwagger, {
 					scheme: "bearer",
 					bearerFormat: "JWT",
 				},
+				clientKeyAuth: {
+					type: "apiKey",
+					in: "header",
+					name: "X-Client-Key",
+				},
 			},
 		},
+		security: [{ clientKeyAuth: [] }],
 	},
 	transform: jsonSchemaTransform,
 });
@@ -81,6 +97,21 @@ app.register(fastifyMultipart, {
 		files: 1,
 		fileSize: 50 * 1024 * 1024,
 	},
+});
+
+const verifyClientKey = createVerifyClientKey({
+	enforce: env.CLIENT_KEY_ENFORCE,
+	clients: [
+		{ name: "mobile", key: env.CLIENT_KEY_MOBILE ?? "" },
+		{ name: "web", key: env.CLIENT_KEY_WEB ?? "" },
+	],
+});
+
+app.addHook("onRequest", async (request) => {
+	if (isExemptFromClientKey(request.url)) {
+		return;
+	}
+	await verifyClientKey(request);
 });
 
 app.register(fastifyRateLimit, {
@@ -150,6 +181,9 @@ app.register(ScalarApiReference, {
 				bearerAuth: {
 					token: "",
 				},
+				clientKeyAuth: {
+					value: "",
+				},
 			},
 		},
 		metaData: {
@@ -182,6 +216,7 @@ app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });
 app.register(complaintRoutes, { prefix: "/v1" });
 app.register(marketRoutes, { prefix: "/v1" });
+app.register(moderationRoutes, { prefix: "/v1" });
 app.register(wasteCategoriesRoutes, { prefix: "/v1" });
 
 if (env.STORAGE_PROVIDER === "minio") {

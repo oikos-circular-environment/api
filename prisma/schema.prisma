@@ -21,10 +21,11 @@ model User {
   deletion_job_id String?
   profile         Profile?
 
-  companies  Company[]
-  complaints Complaint[]
-  votes      ComplaintVote[]
-  resolutions ComplaintResolution[] @relation("ResolutionResolver")
+  companies        Company[]
+  complaints       Complaint[]
+  votes            ComplaintVote[]
+  resolutions      ComplaintResolution[] @relation("ResolutionResolver")
+  support_requests SupportRequest[]
 
   @@map("users")
 }
@@ -207,14 +208,14 @@ model WasteSubcategory {
 }
 
 model CompanyWaste {
-  id           String      @id @default(uuid())
-  name         String
-  description  String?
-  price        Decimal     @db.Decimal(12, 2)
-  unit         Measurement
-  quantity     Decimal     @db.Decimal(12, 2)
-  created_at   DateTime    @default(now())
-  updated_at   DateTime    @updatedAt
+  id          String      @id @default(uuid())
+  name        String
+  description String?
+  price       Decimal     @db.Decimal(12, 2)
+  unit        Measurement
+  quantity    Decimal     @db.Decimal(12, 2)
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
 
   company_id String
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
@@ -226,14 +227,14 @@ model CompanyWaste {
 }
 
 model CompanyService {
-  id           String      @id @default(uuid())
-  name         String
-  description  String?
-  price        Decimal     @db.Decimal(12, 2)
-  unit         Measurement
-  quantity     Decimal     @db.Decimal(12, 2)
-  created_at   DateTime    @default(now())
-  updated_at   DateTime    @updatedAt
+  id          String      @id @default(uuid())
+  name        String
+  description String?
+  price       Decimal     @db.Decimal(12, 2)
+  unit        Measurement
+  quantity    Decimal     @db.Decimal(12, 2)
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
 
   company_id String
   company    Company @relation(fields: [company_id], references: [id], onDelete: Cascade)
@@ -245,20 +246,20 @@ model CompanyService {
 }
 
 model Complaint {
-  id           String          @id @default(uuid())
-  status       ComplaintStatus @default(OPEN)
+  id           String                                        @id @default(uuid())
+  status       ComplaintStatus                               @default(OPEN)
   date         DateTime
   observations String?
   geospatial   Json
   location     Unsupported("public.geography(Point, 4326)")?
-  created_at   DateTime        @default(now())
+  created_at   DateTime                                      @default(now())
 
   user_id String
   user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
-  attachments    ComplaintAttachment[]
-  votes          ComplaintVote[]
-  resolutions    ComplaintResolution[]
+  attachments      ComplaintAttachment[]
+  votes            ComplaintVote[]
+  resolutions      ComplaintResolution[]
   waste_categories ComplaintWasteCategory[]
 
   @@index([user_id, created_at(sort: Desc)])
@@ -290,12 +291,40 @@ model ComplaintAttachment {
   metadata   Json?
   created_at DateTime @default(now())
 
-  type         ComplaintCaptureMode @default(PHOTO)
+  type ComplaintCaptureMode @default(PHOTO)
 
   complaint_id String
   complaint    Complaint @relation(fields: [complaint_id], references: [id], onDelete: Cascade)
 
   @@map("complaint_attachments")
+}
+
+model SupportRequest {
+  id          String           @id @default(uuid())
+  title       String
+  description String
+  status      ModerationStatus @default(PENDING)
+  created_at  DateTime         @default(now())
+
+  user_id String?
+  user    User?   @relation(fields: [user_id], references: [id], onDelete: SetNull)
+
+  attachments SupportRequestAttachment[]
+
+  @@map("support_requests")
+}
+
+model SupportRequestAttachment {
+  id         String   @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  created_at DateTime @default(now())
+
+  support_request_id String
+  support_request    SupportRequest @relation(fields: [support_request_id], references: [id], onDelete: Cascade)
+
+  @@map("support_request_attachments")
 }
 
 model ComplaintVote {
@@ -345,7 +374,7 @@ model ComplaintResolutionAttachment {
 
   type          ComplaintCaptureMode @default(PHOTO)
   resolution_id String
-  resolution    ComplaintResolution @relation(fields: [resolution_id], references: [id], onDelete: Cascade)
+  resolution    ComplaintResolution  @relation(fields: [resolution_id], references: [id], onDelete: Cascade)
 
   @@map("complaint_resolution_attachments")
 }

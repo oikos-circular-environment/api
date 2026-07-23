@@ -45,6 +45,20 @@ const envSchema = z
 		ADMIN_USERNAME: z.string(),
 		ADMIN_PASSWORD: z.string(),
 
+		CLIENT_KEY_MOBILE: z.string().optional(),
+		CLIENT_KEY_WEB: z.string().optional(),
+
+		// Nao usa z.coerce.boolean(): `Boolean("false")` e `true` em JS, o que
+		// coagiria a string "false" para o booleano true.
+		CLIENT_KEY_ENFORCE: z
+			.string()
+			.optional()
+			.transform((value) => value?.toLowerCase() !== "false"),
+
+		// Allowlist de origens para CORS, separadas por virgula. Vazio/ausente
+		// mantem `origin: "*"` (comportamento atual, adequado para dev local).
+		CORS_ALLOWED_ORIGINS: z.string().optional(),
+
 		// OpenTelemetry — quando definido e não vazio, activa o SDK (ver devops/observability/)
 		// String vazia equivale a não definido (permite desabilitar via OTEL_EXPORTER_OTLP_ENDPOINT=)
 		OTEL_EXPORTER_OTLP_ENDPOINT: z.preprocess(
@@ -132,6 +146,14 @@ export function getMinioConfig(): {
 		secretKey: MINIO_SECRET_KEY,
 		bucket: env.MINIO_BUCKET,
 	};
+}
+
+export function getCorsAllowedOrigins(): string[] {
+	return (
+		env.CORS_ALLOWED_ORIGINS?.split(",")
+			.map((origin) => origin.trim())
+			.filter(Boolean) ?? []
+	);
 }
 
 export function getSupabaseConfig(): {

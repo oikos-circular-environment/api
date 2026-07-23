@@ -1,6 +1,31 @@
 pre-commit:
   commands:
+    guard-branch:
+      run: |
+        branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+        case "$branch" in
+          development|production|main|master)
+            echo "🚫 Commit direto em '$branch' não é permitido. Crie uma branch dedicada (ex.: git checkout -b feat/minha-tarefa)." >&2
+            exit 1
+            ;;
+        esac
     biome-check:
-      glob: "api/**/*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
+
+pre-push:
+  commands:
+    guard-remote:
+      use_stdin: true
+      run: |
+        while read -r local_ref local_sha remote_ref remote_sha; do
+          case "$remote_ref" in
+            refs/heads/development|refs/heads/production|refs/heads/main|refs/heads/master)
+              echo "🚫 Push direto para '${remote_ref#refs/heads/}' não é permitido. Abra um Pull Request." >&2
+              exit 1
+              ;;
+          esac
+        done
+    test:
+      run: npm run test
