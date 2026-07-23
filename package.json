@@ -32,6 +32,7 @@
 		"seed": "tsx prisma/seeds/index.ts",
 		"cli": "tsx cli/index.ts",
 		"seed:prod": "tsx scripts/seed-prod.ts",
+		"client-key:create": "tsx scripts/client-key-create.ts",
 		"minio:console": "xdg-open http://localhost:9001"
 	},
 	"prisma": {
