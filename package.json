@@ -23,6 +23,7 @@
 		"test:infra:down": "docker compose -p oikos-test -f docker-compose.test.yml down -v",
 		"dev:up": "docker compose -f docker-compose.dev.yml --profile dev up",
 		"dev:down": "docker compose -f docker-compose.dev.yml --profile dev down",
+		"tunnel": "cloudflared tunnel run oikos-local-dev",
 		"sim:migrate": "docker compose -f docker-compose.dev.yml --profile simulation run --rm api-sim npx prisma migrate deploy",
 		"sim:up": "docker compose -f docker-compose.dev.yml --profile simulation up --build",
 		"sim:down": "docker compose -f docker-compose.dev.yml --profile simulation down",

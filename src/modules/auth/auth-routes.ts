@@ -9,19 +9,15 @@ import { withBearerAuth } from "../common/types/openapi-security.js";
 import { loginSchema, refreshBodySchema } from "./dtos/auth-dto.js";
 import { PrismaAuthRepository } from "./repositories/prisma/auth-repository-prisma.js";
 import { PrismaRefreshTokenRepository } from "./repositories/prisma/refresh-token-repository-prisma.js";
+import {
+	ACCESS_TOKEN_EXPIRES_IN,
+	issueAuthTokens,
+	REFRESH_TOKEN_EXPIRES_IN,
+	REFRESH_TOKEN_TTL_MS,
+	refreshCookieOptions,
+} from "./token-service.js";
 import { AuthenticateUserUseCase } from "./use-cases/authenticate-user-use-case.js";
 import { RefreshTokenUseCase } from "./use-cases/refresh-token-use-case.js";
-
-const ACCESS_TOKEN_EXPIRES_IN = "1d";
-const REFRESH_TOKEN_EXPIRES_IN = "7d";
-const REFRESH_TOKEN_TTL_MS = 7 * 24 * 60 * 60 * 1000;
-
-const refreshCookieOptions = {
-	path: "/",
-	httpOnly: true,
-	sameSite: "strict",
-	secure: true,
-} as const;
 
 export async function authRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
@@ -52,26 +48,13 @@ export async function authRoutes(app: FastifyInstance) {
 			);
 			const user = await authenticateUserUseCase.execute({ email, password });
 
-			const token = await reply.jwtSign(
-				{ user: { id: user.id, email: user.email } },
-				{ sign: { sub: user.id, expiresIn: ACCESS_TOKEN_EXPIRES_IN } },
+			const { token, refreshToken } = await issueAuthTokens(
+				reply,
+				refreshTokenRepository,
+				user,
 			);
 
-			const jti = randomUUID();
-			const refreshToken = await reply.jwtSign(
-				{ user: { id: user.id, email: user.email }, jti },
-				{ sign: { sub: user.id, expiresIn: REFRESH_TOKEN_EXPIRES_IN } },
-			);
-
-			await refreshTokenRepository.create({
-				jti,
-				userId: user.id,
-				expiresAt: new Date(Date.now() + REFRESH_TOKEN_TTL_MS),
-			});
-
-			reply
-				.setCookie("refreshToken", refreshToken, refreshCookieOptions)
-				.send({ token, refreshToken });
+			reply.send({ token, refreshToken });
 		},
 	);
 
