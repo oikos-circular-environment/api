@@ -1,5 +1,7 @@
 # Plano: Moderation — Denunciations (Denúncia interna do app)
 
+> **Registrado como issue**: este plano virou [api#59](https://github.com/oikos-circular-environment/api/issues/59) (M02), sub-issue do épico de Moderação [api#57](https://github.com/oikos-circular-environment/api/issues/57). O lado mobile é [mobile#39](https://github.com/oikos-circular-environment/mobile/issues/39) (M03). Mapa do épico: [`epics/01-moderation.md`](./epics/01-moderation.md).
+
 ## Contexto
 
 O Oikos já possui um módulo de **complaints** (denúncias ambientais) com geolocalização, categorias de resíduos, votação e quórum. Esta nova funcionalidade é diferente: trata-se de um sistema de **moderação interna do aplicativo**, onde usuários denunciam conteúdo, postagens ou perfis inadequados. O fluxo é simplificado — apenas título, descrição e imagens — sem votação, sem categorias de resíduos, com status gerenciado internamente pela moderação.
