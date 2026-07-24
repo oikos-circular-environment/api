@@ -44,8 +44,13 @@ describe("auth-refresh", () => {
 
 	afterEach(async () => {
 		if (createdUserIds.length > 0) {
+			const placeholders = createdUserIds.map((_, i) => `$${i + 1}`).join(", ");
 			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${createdUserIds.map((_, i) => `$${i + 1}`).join(", ")})`,
+				`DELETE FROM refresh_tokens WHERE user_id IN (${placeholders})`,
+				...createdUserIds,
+			);
+			await prisma.$executeRawUnsafe(
+				`DELETE FROM users WHERE id IN (${placeholders})`,
 				...createdUserIds,
 			);
 			createdUserIds.length = 0;
@@ -69,6 +74,35 @@ describe("auth-refresh", () => {
 			const body = res.json();
 			expect(typeof body.token).toBe("string");
 			expect(typeof body.refreshToken).toBe("string");
+			expect(body.refreshToken).not.toBe(refreshToken);
+		});
+
+		it("200 — rotation revokes the previous refresh token", async () => {
+			const user = await createUser();
+			const { refreshToken } = await login(user.email, user.password);
+
+			const first = await app.inject({
+				method: "PATCH",
+				url: "/v1/auth/refresh",
+				payload: { refreshToken },
+			});
+			expect(first.statusCode).toBe(200);
+
+			// Reusing the rotated-out token must fail.
+			const reused = await app.inject({
+				method: "PATCH",
+				url: "/v1/auth/refresh",
+				payload: { refreshToken },
+			});
+			expect(reused.statusCode).toBe(401);
+
+			// The freshly issued token still works.
+			const next = await app.inject({
+				method: "PATCH",
+				url: "/v1/auth/refresh",
+				payload: { refreshToken: first.json().refreshToken },
+			});
+			expect(next.statusCode).toBe(200);
 		});
 
 		it("401 — invalid refreshToken", async () => {
@@ -86,6 +120,43 @@ describe("auth-refresh", () => {
 				method: "PATCH",
 				url: "/v1/auth/refresh",
 				payload: {},
+			});
+
+			expect(res.statusCode).toBe(401);
+		});
+	});
+
+	// ─── POST /v1/auth/logout ────────────────────────────────────────────────
+
+	describe("POST /v1/auth/logout", () => {
+		it("200 — revokes the refresh token so it can no longer be rotated", async () => {
+			const user = await createUser();
+			const { token, refreshToken } = await login(user.email, user.password);
+
+			const logout = await app.inject({
+				method: "POST",
+				url: "/v1/auth/logout",
+				headers: { authorization: `Bearer ${token}` },
+				payload: { refreshToken },
+			});
+			expect(logout.statusCode).toBe(200);
+
+			const reused = await app.inject({
+				method: "PATCH",
+				url: "/v1/auth/refresh",
+				payload: { refreshToken },
+			});
+			expect(reused.statusCode).toBe(401);
+		});
+
+		it("401 — without an access token", async () => {
+			const user = await createUser();
+			const { refreshToken } = await login(user.email, user.password);
+
+			const res = await app.inject({
+				method: "POST",
+				url: "/v1/auth/logout",
+				payload: { refreshToken },
 			});
 
 			expect(res.statusCode).toBe(401);

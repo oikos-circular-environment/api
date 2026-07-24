@@ -32,8 +32,13 @@ describe("auth-login", () => {
 
 	afterEach(async () => {
 		if (createdUserIds.length > 0) {
+			const placeholders = createdUserIds.map((_, i) => `$${i + 1}`).join(", ");
 			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${createdUserIds.map((_, i) => `$${i + 1}`).join(", ")})`,
+				`DELETE FROM refresh_tokens WHERE user_id IN (${placeholders})`,
+				...createdUserIds,
+			);
+			await prisma.$executeRawUnsafe(
+				`DELETE FROM users WHERE id IN (${placeholders})`,
 				...createdUserIds,
 			);
 			createdUserIds.length = 0;
@@ -56,6 +61,22 @@ describe("auth-login", () => {
 			const body = res.json();
 			expect(typeof body.token).toBe("string");
 			expect(typeof body.refreshToken).toBe("string");
+		});
+
+		it("200 — login persists an active refresh token", async () => {
+			const user = await createUser();
+
+			await app.inject({
+				method: "POST",
+				url: "/v1/auth/login",
+				payload: { email: user.email, password: user.password },
+			});
+
+			const tokens = await prisma.refreshToken.findMany({
+				where: { user_id: user.id },
+			});
+			expect(tokens).toHaveLength(1);
+			expect(tokens[0].revoked_at).toBeNull();
 		});
 
 		it("401 — wrong password", async () => {
