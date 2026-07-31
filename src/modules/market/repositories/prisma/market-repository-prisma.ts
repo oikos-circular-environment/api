@@ -70,14 +70,14 @@ export class MarketRepositoryPrisma implements MarketRepository {
 
 		const textFilter = q
 			? Prisma.sql`AND (
-      c.business_name ILIKE ${`%${q}%`}
+      unaccent(c.business_name) ILIKE unaccent(${`%${q}%`})
       OR EXISTS (
         SELECT 1 FROM company_services cs
-        WHERE cs.company_id = c.id AND cs.name ILIKE ${`%${q}%`}
+        WHERE cs.company_id = c.id AND unaccent(cs.name) ILIKE unaccent(${`%${q}%`})
       )
       OR EXISTS (
         SELECT 1 FROM company_wastes cw
-        WHERE cw.company_id = c.id AND cw.name ILIKE ${`%${q}%`}
+        WHERE cw.company_id = c.id AND unaccent(cw.name) ILIKE unaccent(${`%${q}%`})
       )
     )`
 			: Prisma.empty;

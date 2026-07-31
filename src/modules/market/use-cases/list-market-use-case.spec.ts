@@ -139,6 +139,39 @@ describe("list-market-use-case", () => {
 		);
 	});
 
+	it("filters by business_name text ignoring accents", async () => {
+		repo.companies = [
+			makeDefaultCompany({ business_name: "Recicladora Alemão" }),
+		];
+		const result = await sut.execute({
+			...ORIGIN,
+			radius: 5000,
+			q: "alemao",
+		});
+		expect(result.companies).toHaveLength(1);
+		expect(result.companies[0].business_name).toBe("Recicladora Alemão");
+	});
+
+	it("filters by waste name ignoring accents", async () => {
+		repo.companies = [
+			makeDefaultCompany({
+				wastes: [
+					makeMarketItem({
+						id: "waste-oil",
+						name: "Óleo de cozinha",
+						description: "Óleo usado",
+						price: 1.2,
+						waste_category_id: PLASTICO_CATEGORY.id,
+						waste_category: PLASTICO_CATEGORY,
+						quantity: 0,
+					}),
+				],
+			}),
+		];
+		const result = await sut.execute({ ...ORIGIN, radius: 5000, q: "oleo" });
+		expect(result.companies).toHaveLength(1);
+	});
+
 	it("filters by service name", async () => {
 		const companyWithService = makeMarketCompany({
 			id: "company-service",
