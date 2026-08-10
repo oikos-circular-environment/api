@@ -1,6 +1,13 @@
 import type { MarketCompanyRecord } from "@/modules/market/dtos/market-dto.js";
 import type { MarketRepository } from "@/modules/market/repositories/market-repository.js";
 
+function normalizeForSearch(value: string): string {
+	return value
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase();
+}
+
 function haversineDistance(
 	lat1: number,
 	lon1: number,
@@ -44,16 +51,16 @@ export class InMemoryMarketRepository implements MarketRepository {
 			.filter((company) => company.distance_in_meters <= radius);
 
 		if (q !== undefined) {
-			const lowerQ = q.toLowerCase();
+			const normalizedQ = normalizeForSearch(q);
 			filtered = filtered.filter((company) => {
-				const inBusinessName = company.business_name
-					.toLowerCase()
-					.includes(lowerQ);
+				const inBusinessName = normalizeForSearch(
+					company.business_name,
+				).includes(normalizedQ);
 				const inServices = company.services.some((service) =>
-					service.name.toLowerCase().includes(lowerQ),
+					normalizeForSearch(service.name).includes(normalizedQ),
 				);
 				const inWastes = company.wastes.some((waste) =>
-					waste.name.toLowerCase().includes(lowerQ),
+					normalizeForSearch(waste.name).includes(normalizedQ),
 				);
 				return inBusinessName || inServices || inWastes;
 			});
