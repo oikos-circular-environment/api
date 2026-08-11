@@ -31,6 +31,30 @@ export const signInV2ResponseSchema = z.object({
 });
 export type SignInV2Response = z.infer<typeof signInV2ResponseSchema>;
 
+export const changePasswordV2Schema = z.object({
+	currentPassword: z.string().min(1, "Current password is required"),
+	newPassword: z.string().min(6, "Password must be at least 6 characters long"),
+});
+export type ChangePasswordV2Input = z.infer<typeof changePasswordV2Schema>;
+
+export const forgotPasswordV2Schema = z.object({
+	email: z.email("Invalid email address"),
+});
+export type ForgotPasswordV2Input = z.infer<typeof forgotPasswordV2Schema>;
+
+export const forgotPasswordV2ResponseSchema = z.object({
+	message: z.string(),
+});
+export type ForgotPasswordV2Response = z.infer<
+	typeof forgotPasswordV2ResponseSchema
+>;
+
+export const resetPasswordV2Schema = z.object({
+	token: z.string().min(1, "Token is required"),
+	newPassword: z.string().min(6, "Password must be at least 6 characters long"),
+});
+export type ResetPasswordV2Input = z.infer<typeof resetPasswordV2Schema>;
+
 export const sessionV2ResponseSchema = z.object({
 	user: authV2UserSchema,
 });

@@ -9,7 +9,7 @@ import { makeEmailProvider } from "../email/make-email-provider.js";
 
 const BCRYPT_COST = 10;
 
-const emailProvider = makeEmailProvider();
+export const emailProvider = makeEmailProvider();
 
 export const auth = betterAuth({
 	appName: "Oikos API",
