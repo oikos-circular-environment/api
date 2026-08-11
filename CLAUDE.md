@@ -123,3 +123,13 @@ workers/          # BullMQ background workers
 - A PR represents finished, verified work — never expose an open "Test plan" checklist in the PR description. That's a to-do list, and a PR isn't the place to leave to-dos.
 - If there's verification still pending (migrations to apply, tests to run, manual checks), do it — or explicitly suggest it to the user — *before* opening the PR, not as a checklist inside it.
 - Keep the PR body to a plain Summary of what changed and why. Only mention manual/local verification steps if something couldn't be verified in this environment and the reviewer needs to do it themselves.
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
