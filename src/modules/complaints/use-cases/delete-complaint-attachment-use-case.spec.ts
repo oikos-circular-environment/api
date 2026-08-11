@@ -1,8 +1,8 @@
 import { assert, describe, expect, it, vi } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
-import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 import { DeleteComplaintAttachmentUseCase } from "./delete-complaint-attachment-use-case.js";
 
 function makeStorageProvider(): StorageProvider {

@@ -1,7 +1,7 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
+import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type { ProfileImage } from "@/modules/profiles/dtos/profiles-dto.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
-import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 
 const PROFILE_IMAGE_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
 

@@ -1,7 +1,7 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
-import { makeStorageProvider } from "../../shared/providers/storage/make-storage-provider.js";
+import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";

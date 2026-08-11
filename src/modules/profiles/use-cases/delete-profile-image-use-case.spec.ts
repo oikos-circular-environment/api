@@ -1,9 +1,9 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
 import { makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
-import { InMemoryStorageProvider } from "@/shared/providers/storage/in-memory/in-memory-storage.js";
 import { DeleteProfileImageUseCase } from "./delete-profile-image-use-case.js";
 
 describe("delete-profile-image-use-case", () => {
