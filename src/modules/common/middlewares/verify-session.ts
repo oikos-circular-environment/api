@@ -1,5 +1,5 @@
 import type { FastifyRequest } from "fastify";
-import type { AuthProvider } from "@/modules/auth/providers/auth-provider.js";
+import type { AuthProvider } from "@/modules/auth/providers/auth/auth-provider.js";
 import { AppError } from "../errors/app-error.js";
 
 function buildHeaders(request: FastifyRequest): Headers {

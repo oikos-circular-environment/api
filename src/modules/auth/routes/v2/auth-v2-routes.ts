@@ -14,16 +14,16 @@ import {
 	signInV2Schema,
 	signUpV2Schema,
 } from "../../dtos/auth-v2-dto.js";
-import type { AuthUser } from "../../providers/auth-provider.js";
-import { auth } from "../../providers/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../../providers/better-auth/better-auth-auth-provider.js";
-import { ChangePasswordV2UseCase } from "../../use-cases/change-password-v2-use-case.js";
-import { GetSessionV2UseCase } from "../../use-cases/get-session-v2-use-case.js";
-import { RequestPasswordResetV2UseCase } from "../../use-cases/request-password-reset-v2-use-case.js";
-import { ResetPasswordV2UseCase } from "../../use-cases/reset-password-v2-use-case.js";
-import { SignInV2UseCase } from "../../use-cases/sign-in-v2-use-case.js";
-import { SignOutV2UseCase } from "../../use-cases/sign-out-v2-use-case.js";
-import { SignUpV2UseCase } from "../../use-cases/sign-up-v2-use-case.js";
+import type { AuthUser } from "../../providers/auth/auth-provider.js";
+import { auth } from "../../providers/auth/better-auth/better-auth.js";
+import { makeBetterAuthAuthProvider } from "../../providers/auth/better-auth/better-auth-auth-provider.js";
+import { ChangePasswordUseCase } from "../../use-cases/v2/change-password-use-case.js";
+import { GetSessionUseCase } from "../../use-cases/v2/get-session-use-case.js";
+import { RequestPasswordResetUseCase } from "../../use-cases/v2/request-password-reset-use-case.js";
+import { ResetPasswordUseCase } from "../../use-cases/v2/reset-password-use-case.js";
+import { SignInUseCase } from "../../use-cases/v2/sign-in-use-case.js";
+import { SignOutUseCase } from "../../use-cases/v2/sign-out-use-case.js";
+import { SignUpUseCase } from "../../use-cases/v2/sign-up-use-case.js";
 
 const AUTH_V2_TAG = "Auth V2";
 
@@ -52,15 +52,15 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 
-	const signUpUseCase = new SignUpV2UseCase(authProvider);
-	const signInUseCase = new SignInV2UseCase(authProvider);
-	const signOutUseCase = new SignOutV2UseCase(authProvider);
-	const getSessionUseCase = new GetSessionV2UseCase(authProvider);
-	const changePasswordUseCase = new ChangePasswordV2UseCase(authProvider);
-	const requestPasswordResetUseCase = new RequestPasswordResetV2UseCase(
+	const signUpUseCase = new SignUpUseCase(authProvider);
+	const signInUseCase = new SignInUseCase(authProvider);
+	const signOutUseCase = new SignOutUseCase(authProvider);
+	const getSessionUseCase = new GetSessionUseCase(authProvider);
+	const changePasswordUseCase = new ChangePasswordUseCase(authProvider);
+	const requestPasswordResetUseCase = new RequestPasswordResetUseCase(
 		authProvider,
 	);
-	const resetPasswordUseCase = new ResetPasswordV2UseCase(authProvider);
+	const resetPasswordUseCase = new ResetPasswordUseCase(authProvider);
 
 	typedApp.post(
 		"/auth/sign-up",

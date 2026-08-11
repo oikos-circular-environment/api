@@ -1,6 +1,6 @@
 import type { FastifyRequest } from "fastify";
 import { describe, expect, it, vi } from "vitest";
-import { InMemoryAuthProvider } from "@/modules/auth/providers/in-memory/in-memory-auth-provider.js";
+import { InMemoryAuthProvider } from "@/modules/auth/providers/auth/in-memory/in-memory-auth-provider.js";
 import { AppError } from "../errors/app-error.js";
 import { createVerifySession } from "./verify-session.js";
 

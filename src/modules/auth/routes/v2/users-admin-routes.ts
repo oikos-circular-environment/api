@@ -16,19 +16,22 @@ import {
 	setRoleAdminBodySchema,
 	userAdminParamsSchema,
 } from "../../dtos/users-admin-dto.js";
-import type { AuthSession, AuthUser } from "../../providers/auth-provider.js";
-import { auth } from "../../providers/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../../providers/better-auth/better-auth-auth-provider.js";
-import { BanUserAdminUseCase } from "../../use-cases/ban-user-admin-use-case.js";
-import { CreateUserAdminUseCase } from "../../use-cases/create-user-admin-use-case.js";
-import { GetUserAdminUseCase } from "../../use-cases/get-user-admin-use-case.js";
-import { ListUserSessionsAdminUseCase } from "../../use-cases/list-user-sessions-admin-use-case.js";
-import { ListUsersAdminUseCase } from "../../use-cases/list-users-admin-use-case.js";
-import { RemoveUserAdminUseCase } from "../../use-cases/remove-user-admin-use-case.js";
-import { ResetUserPasswordAdminUseCase } from "../../use-cases/reset-user-password-admin-use-case.js";
-import { RevokeUserSessionsAdminUseCase } from "../../use-cases/revoke-user-sessions-admin-use-case.js";
-import { SetUserRoleAdminUseCase } from "../../use-cases/set-user-role-admin-use-case.js";
-import { UnbanUserAdminUseCase } from "../../use-cases/unban-user-admin-use-case.js";
+import type {
+	AuthSession,
+	AuthUser,
+} from "../../providers/auth/auth-provider.js";
+import { auth } from "../../providers/auth/better-auth/better-auth.js";
+import { makeBetterAuthAuthProvider } from "../../providers/auth/better-auth/better-auth-auth-provider.js";
+import { BanUserUseCase } from "../../use-cases/v2/admin/ban-user-use-case.js";
+import { CreateUserUseCase } from "../../use-cases/v2/admin/create-user-use-case.js";
+import { GetUserUseCase } from "../../use-cases/v2/admin/get-user-use-case.js";
+import { ListUserSessionsUseCase } from "../../use-cases/v2/admin/list-user-sessions-use-case.js";
+import { ListUsersUseCase } from "../../use-cases/v2/admin/list-users-use-case.js";
+import { RemoveUserUseCase } from "../../use-cases/v2/admin/remove-user-use-case.js";
+import { ResetUserPasswordUseCase } from "../../use-cases/v2/admin/reset-user-password-use-case.js";
+import { RevokeUserSessionsUseCase } from "../../use-cases/v2/admin/revoke-user-sessions-use-case.js";
+import { SetUserRoleUseCase } from "../../use-cases/v2/admin/set-user-role-use-case.js";
+import { UnbanUserUseCase } from "../../use-cases/v2/admin/unban-user-use-case.js";
 
 const USERS_ADMIN_TAG = "Users Admin";
 
@@ -68,22 +71,16 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 	const verifySession = createVerifySession(authProvider);
 	const requireAdmin = requireRole("admin");
 
-	const listUsersUseCase = new ListUsersAdminUseCase(authProvider);
-	const getUserUseCase = new GetUserAdminUseCase(authProvider);
-	const createUserUseCase = new CreateUserAdminUseCase(authProvider);
-	const setUserRoleUseCase = new SetUserRoleAdminUseCase(authProvider);
-	const banUserUseCase = new BanUserAdminUseCase(authProvider);
-	const unbanUserUseCase = new UnbanUserAdminUseCase(authProvider);
-	const listUserSessionsUseCase = new ListUserSessionsAdminUseCase(
-		authProvider,
-	);
-	const revokeUserSessionsUseCase = new RevokeUserSessionsAdminUseCase(
-		authProvider,
-	);
-	const resetUserPasswordUseCase = new ResetUserPasswordAdminUseCase(
-		authProvider,
-	);
-	const removeUserUseCase = new RemoveUserAdminUseCase(authProvider);
+	const listUsersUseCase = new ListUsersUseCase(authProvider);
+	const getUserUseCase = new GetUserUseCase(authProvider);
+	const createUserUseCase = new CreateUserUseCase(authProvider);
+	const setUserRoleUseCase = new SetUserRoleUseCase(authProvider);
+	const banUserUseCase = new BanUserUseCase(authProvider);
+	const unbanUserUseCase = new UnbanUserUseCase(authProvider);
+	const listUserSessionsUseCase = new ListUserSessionsUseCase(authProvider);
+	const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(authProvider);
+	const resetUserPasswordUseCase = new ResetUserPasswordUseCase(authProvider);
+	const removeUserUseCase = new RemoveUserUseCase(authProvider);
 
 	typedApp.get(
 		"/users",

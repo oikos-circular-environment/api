@@ -16,8 +16,8 @@ import {
 	REFRESH_TOKEN_TTL_MS,
 	refreshCookieOptions,
 } from "../../token-service.js";
-import { AuthenticateUserUseCase } from "../../use-cases/authenticate-user-use-case.js";
-import { RefreshTokenUseCase } from "../../use-cases/refresh-token-use-case.js";
+import { AuthenticateUserUseCase } from "../../use-cases/v1/authenticate-user-use-case.js";
+import { RefreshTokenUseCase } from "../../use-cases/v1/refresh-token-use-case.js";
 
 export async function authRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
