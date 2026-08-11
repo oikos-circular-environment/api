@@ -1,10 +1,10 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
+import { InMemoryStorageProvider } from "@/shared/providers/storage/in-memory/in-memory-storage.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 import { UploadCompanyAvatarUseCase } from "./upload-company-avatar-use-case.js";
 
 class UploadFailStorageProvider implements StorageProvider {

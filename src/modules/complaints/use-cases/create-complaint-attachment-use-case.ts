@@ -1,7 +1,7 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type { Complaint } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 
 const COMPLAINT_ATTACHMENT_MAX_SIZE_IN_BYTES = 50 * 1024 * 1024; // 50MB
 

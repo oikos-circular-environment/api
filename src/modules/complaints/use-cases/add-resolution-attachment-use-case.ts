@@ -1,7 +1,7 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type { ResolutionAttachment } from "@/modules/complaints/dtos/complaints-dto.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 
 const MAX_SIZE_BYTES = 10 * 1024 * 1024;
 

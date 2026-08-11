@@ -1,6 +1,6 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 
 type DeleteProfileImageUseCaseRequest = {
 	userId: string;

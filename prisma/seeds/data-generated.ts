@@ -5,12 +5,12 @@ import type {
 	Prisma,
 	PrismaClient,
 } from "../../src/generated/prisma/client.js";
-import { makeStorageProvider } from "../../src/modules/common/providers/storage/make-storage-provider.js";
 import {
 	companyGeneralRegistrationValidationSchema,
 	upsertCompanyAddressSchema,
 	upsertCompanyBusinessHoursSchema,
 } from "../../src/modules/companies/dtos/companies-dto.js";
+import { makeStorageProvider } from "../../src/shared/providers/storage/make-storage-provider.js";
 import { upsertUser } from "./shared/upsert-user.js";
 
 const DATA_DIR = resolve("prisma/seeds/data-generated");

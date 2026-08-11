@@ -5,7 +5,7 @@ import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
-import { makeEmailProvider } from "../email/make-email-provider.js";
+import { makeEmailProvider } from "@/shared/providers/email/make-email-provider.js";
 
 const BCRYPT_COST = 10;
 

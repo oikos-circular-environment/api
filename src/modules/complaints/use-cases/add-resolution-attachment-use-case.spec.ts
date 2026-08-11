@@ -1,9 +1,9 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
 import { InMemoryComplaintsRepository } from "@/modules/complaints/repositories/in-memory/in-memory-complaints-repository.js";
+import { InMemoryStorageProvider } from "@/shared/providers/storage/in-memory/in-memory-storage.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 import { AddResolutionAttachmentUseCase } from "./add-resolution-attachment-use-case.js";
 import { CreateComplaintUseCase } from "./create-complaint-use-case.js";
 import { SubmitResolutionUseCase } from "./submit-resolution-use-case.js";

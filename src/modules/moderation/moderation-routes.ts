@@ -1,8 +1,8 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
+import { makeStorageProvider } from "../../shared/providers/storage/make-storage-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { createSupportRequestBodySchema } from "./dtos/moderation-dto.js";
 import { supportRequestSchema } from "./entities/support-request-entity.js";
 import { PrismaSupportRequestsRepository } from "./repositories/prisma/support-requests-repository-prisma.js";

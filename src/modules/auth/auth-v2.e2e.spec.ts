@@ -11,8 +11,8 @@ import {
 import { app } from "@/app.js";
 import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
+import type { InMemoryEmailProvider } from "@/shared/providers/email/in-memory/in-memory-email-provider.js";
 import { emailProvider } from "./providers/better-auth/better-auth.js";
-import type { InMemoryEmailProvider } from "./providers/email/in-memory/in-memory-email-provider.js";
 
 describe("auth-v2", () => {
 	const createdEmails: string[] = [];

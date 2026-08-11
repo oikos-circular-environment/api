@@ -1,9 +1,9 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
+import { makeStorageProvider } from "../../shared/providers/storage/make-storage-provider.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import { makeStorageProvider } from "../common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import { PrismaWasteCategoriesRepository } from "../wastes/repositories/prisma/waste-categories-repository-prisma.js";
 import {

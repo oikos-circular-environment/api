@@ -1,7 +1,7 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type { Company } from "@/modules/companies/dtos/companies-dto.js";
 import type { CompaniesRepository } from "@/modules/companies/repositories/companies-repository.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 
 const COMPANY_AVATAR_MAX_SIZE_IN_BYTES = 5 * 1024 * 1024; // 5MB
 

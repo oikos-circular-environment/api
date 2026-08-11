@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
 import {
 	JPEG_MAGIC_BYTES,
 	PNG_MAGIC_BYTES,
 } from "@/modules/common/test/image-fixtures.js";
 import { InMemorySupportRequestsRepository } from "@/modules/moderation/repositories/in-memory/in-memory-support-requests-repository.js";
+import { InMemoryStorageProvider } from "@/shared/providers/storage/in-memory/in-memory-storage.js";
 import { CreateSupportRequestUseCase } from "./create-support-request-use-case.js";
 
 describe("create-support-request-use-case", () => {

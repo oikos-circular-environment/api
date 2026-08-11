@@ -1,11 +1,11 @@
 import { fileTypeFromBuffer } from "file-type";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type {
 	CreateSupportRequestBody,
 	SupportRequest,
 } from "@/modules/moderation/dtos/moderation-dto.js";
 import type { SupportRequestsRepository } from "@/modules/moderation/repositories/support-requests-repository.js";
+import type { StorageProvider } from "@/shared/providers/storage/storage.js";
 
 export const SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
 export const MAX_SUPPORT_REQUEST_FILES = 5;
