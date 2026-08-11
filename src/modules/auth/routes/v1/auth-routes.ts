@@ -2,22 +2,22 @@ import { randomUUID } from "node:crypto";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
-import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { verifyJwt } from "../common/middlewares/verify-jwt.js";
-import type { AuthTokenPayload } from "../common/types/auth-token-payload.js";
-import { withBearerAuth } from "../common/types/openapi-security.js";
-import { loginSchema, refreshBodySchema } from "./dtos/auth-dto.js";
-import { PrismaAuthRepository } from "./repositories/prisma/auth-repository-prisma.js";
-import { PrismaRefreshTokenRepository } from "./repositories/prisma/refresh-token-repository-prisma.js";
+import { AppError, appErrorSchema } from "../../../common/errors/app-error.js";
+import { verifyJwt } from "../../../common/middlewares/verify-jwt.js";
+import type { AuthTokenPayload } from "../../../common/types/auth-token-payload.js";
+import { withBearerAuth } from "../../../common/types/openapi-security.js";
+import { loginSchema, refreshBodySchema } from "../../dtos/auth-dto.js";
+import { PrismaAuthRepository } from "../../repositories/prisma/auth-repository-prisma.js";
+import { PrismaRefreshTokenRepository } from "../../repositories/prisma/refresh-token-repository-prisma.js";
 import {
 	ACCESS_TOKEN_EXPIRES_IN,
 	issueAuthTokens,
 	REFRESH_TOKEN_EXPIRES_IN,
 	REFRESH_TOKEN_TTL_MS,
 	refreshCookieOptions,
-} from "./token-service.js";
-import { AuthenticateUserUseCase } from "./use-cases/authenticate-user-use-case.js";
-import { RefreshTokenUseCase } from "./use-cases/refresh-token-use-case.js";
+} from "../../token-service.js";
+import { AuthenticateUserUseCase } from "../../use-cases/authenticate-user-use-case.js";
+import { RefreshTokenUseCase } from "../../use-cases/refresh-token-use-case.js";
 
 export async function authRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();

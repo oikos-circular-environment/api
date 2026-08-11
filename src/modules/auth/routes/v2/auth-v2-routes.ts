@@ -13,17 +13,17 @@ import {
 	signInV2ResponseSchema,
 	signInV2Schema,
 	signUpV2Schema,
-} from "../dtos/auth-v2-dto.js";
-import type { AuthUser } from "../providers/auth-provider.js";
-import { auth } from "../providers/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../providers/better-auth/better-auth-auth-provider.js";
-import { ChangePasswordV2UseCase } from "../use-cases/change-password-v2-use-case.js";
-import { GetSessionV2UseCase } from "../use-cases/get-session-v2-use-case.js";
-import { RequestPasswordResetV2UseCase } from "../use-cases/request-password-reset-v2-use-case.js";
-import { ResetPasswordV2UseCase } from "../use-cases/reset-password-v2-use-case.js";
-import { SignInV2UseCase } from "../use-cases/sign-in-v2-use-case.js";
-import { SignOutV2UseCase } from "../use-cases/sign-out-v2-use-case.js";
-import { SignUpV2UseCase } from "../use-cases/sign-up-v2-use-case.js";
+} from "../../dtos/auth-v2-dto.js";
+import type { AuthUser } from "../../providers/auth-provider.js";
+import { auth } from "../../providers/better-auth/better-auth.js";
+import { makeBetterAuthAuthProvider } from "../../providers/better-auth/better-auth-auth-provider.js";
+import { ChangePasswordV2UseCase } from "../../use-cases/change-password-v2-use-case.js";
+import { GetSessionV2UseCase } from "../../use-cases/get-session-v2-use-case.js";
+import { RequestPasswordResetV2UseCase } from "../../use-cases/request-password-reset-v2-use-case.js";
+import { ResetPasswordV2UseCase } from "../../use-cases/reset-password-v2-use-case.js";
+import { SignInV2UseCase } from "../../use-cases/sign-in-v2-use-case.js";
+import { SignOutV2UseCase } from "../../use-cases/sign-out-v2-use-case.js";
+import { SignUpV2UseCase } from "../../use-cases/sign-up-v2-use-case.js";
 
 const AUTH_V2_TAG = "Auth V2";
 
