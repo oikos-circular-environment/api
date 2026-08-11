@@ -14,6 +14,21 @@ const envSchema = z
 		STORAGE_PROVIDER: z.enum(["minio", "supabase"]).default("minio"),
 		APP_PUBLIC_URL: z.string().default("http://localhost:3333"),
 
+		BETTER_AUTH_SECRET: z.string(),
+		BETTER_AUTH_URL: z.string().optional(),
+		BETTER_AUTH_TRUSTED_ORIGINS: z
+			.string()
+			.optional()
+			.transform((value) =>
+				value
+					? value
+							.split(",")
+							.map((origin) => origin.trim())
+							.filter(Boolean)
+					: undefined,
+			),
+		EMAIL_PROVIDER: z.string().default("console"),
+
 		MINIO_ENDPOINT: z.string().optional(),
 		MINIO_PORT: z.coerce.number().default(9000),
 		MINIO_ACCESS_KEY: z.string().optional(),

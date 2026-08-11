@@ -33,6 +33,10 @@ export class ChangePasswordUseCase {
 			throw new UserNotFoundError();
 		}
 
+		if (!user.password) {
+			throw new InvalidCredentialsError();
+		}
+
 		const currentPasswordMatches = await compare(
 			currentPassword,
 			user.password,
