@@ -5,11 +5,12 @@ import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
+import { AuthEmailRenderer } from "@/modules/auth/emails/auth-email-renderer.js";
 import { makeEmailProvider } from "@/modules/common/providers/email/make-email-provider.js";
 
 const BCRYPT_COST = 10;
 
-export const emailProvider = makeEmailProvider();
+export const emailProvider = makeEmailProvider(new AuthEmailRenderer());
 
 export const auth = betterAuth({
 	appName: "Oikos API",

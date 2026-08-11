@@ -75,12 +75,22 @@ describe("make-email-provider", () => {
 		expect(provider.constructor.name).toBe("InMemoryEmailProvider");
 	});
 
-	it("throws when EMAIL_PROVIDER is resend", async () => {
+	it("returns ResendEmailProvider when EMAIL_PROVIDER is resend and renderer is provided", async () => {
+		process.env.EMAIL_PROVIDER = "resend";
+		const { makeEmailProvider } = await import("./make-email-provider.js");
+		const renderer = { render: vi.fn() };
+
+		const provider = makeEmailProvider(renderer);
+
+		expect(provider.constructor.name).toBe("ResendEmailProvider");
+	});
+
+	it("throws when EMAIL_PROVIDER is resend without a renderer", async () => {
 		process.env.EMAIL_PROVIDER = "resend";
 		const { makeEmailProvider } = await import("./make-email-provider.js");
 
 		expect(() => makeEmailProvider()).toThrow(
-			"Resend email provider is not implemented yet (E04, api#65).",
+			"EmailRenderer is required when EMAIL_PROVIDER=resend.",
 		);
 	});
 });
