@@ -5,8 +5,11 @@ import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
+import { makeEmailProvider } from "../email/make-email-provider.js";
 
 const BCRYPT_COST = 10;
+
+const emailProvider = makeEmailProvider();
 
 export const auth = betterAuth({
 	appName: "Oikos API",
@@ -21,6 +24,18 @@ export const auth = betterAuth({
 			hash: async (password) => hash(password, BCRYPT_COST),
 			verify: async ({ hash: passwordHash, password }) =>
 				compare(password, passwordHash),
+		},
+		sendResetPassword: async (data) => {
+			await emailProvider.send({
+				type: "reset-password",
+				to: data.user.email,
+				subject: "Reset your password",
+				payload: {
+					url: data.url,
+					token: data.token,
+					name: data.user.name,
+				},
+			});
 		},
 	},
 	user: {
