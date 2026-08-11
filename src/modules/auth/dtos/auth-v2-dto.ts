@@ -62,3 +62,17 @@ export const sessionV2ResponseSchema = z.object({
 	user: authV2UserSchema,
 });
 export type SessionV2Response = z.infer<typeof sessionV2ResponseSchema>;
+
+export const sendVerificationEmailV2Schema = z.object({
+	email: z.email("Invalid email address"),
+});
+export type SendVerificationEmailV2Input = z.infer<
+	typeof sendVerificationEmailV2Schema
+>;
+
+export const sendVerificationEmailV2ResponseSchema = z.object({
+	message: z.string(),
+});
+export type SendVerificationEmailV2Response = z.infer<
+	typeof sendVerificationEmailV2ResponseSchema
+>;

@@ -21,11 +21,16 @@ const SHORT_PASSWORD = "123";
 type AuthProviderContractContext = {
 	createProvider: () => AuthProvider;
 	getResetToken: (provider: AuthProvider, email: string) => Promise<string>;
+	getVerificationToken: (
+		provider: AuthProvider,
+		email: string,
+	) => Promise<string>;
 };
 
 function describeAuthProviderContract({
 	createProvider,
 	getResetToken,
+	getVerificationToken,
 }: AuthProviderContractContext) {
 	it("signs up with password and returns a token and user", async () => {
 		const provider = createProvider();
@@ -311,6 +316,28 @@ function describeAuthProviderContract({
 			expect(thrownError.code).toBe("INVALID_RESET_TOKEN");
 			expect(thrownError.statusCode).toBe(400);
 		}
+	});
+
+	it("sends a verification email for an existing user", async () => {
+		const provider = createProvider();
+		await provider.signUpWithPassword({
+			name: NAME,
+			email: EMAIL,
+			password: PASSWORD,
+		});
+
+		await provider.sendVerificationEmail(EMAIL);
+		const token = await getVerificationToken(provider, EMAIL);
+
+		expect(token).not.toBeNull();
+	});
+
+	it("does not throw when sending verification email to an unknown address", async () => {
+		const provider = createProvider();
+
+		await expect(
+			provider.sendVerificationEmail("unknown@example.com"),
+		).resolves.toBeUndefined();
 	});
 
 	describe("admin methods", () => {
@@ -808,6 +835,14 @@ describe("auth-provider-contract", () => {
 				if (token) return Promise.resolve(token);
 				throw new Error("expected a pending reset token");
 			},
+			getVerificationToken: (provider, email) => {
+				const token = (
+					provider as InMemoryAuthProvider
+				).getPendingVerificationToken(email);
+				expect(token).not.toBeNull();
+				if (token) return Promise.resolve(token);
+				throw new Error("expected a pending verification token");
+			},
 		});
 	});
 
@@ -825,6 +860,13 @@ describe("auth-provider-contract", () => {
 				expect(token).not.toBeNull();
 				if (token) return Promise.resolve(token);
 				throw new Error("expected a pending reset token");
+			},
+			getVerificationToken: (provider, email) => {
+				const api = apiByProvider.get(provider);
+				const token = api?.getPendingVerificationToken(email) ?? null;
+				expect(token).not.toBeNull();
+				if (token) return Promise.resolve(token);
+				throw new Error("expected a pending verification token");
 			},
 		});
 	});

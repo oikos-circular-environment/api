@@ -254,6 +254,63 @@ describe("auth-v2", () => {
 		});
 	});
 
+	describe("POST /v2/auth/send-verification-email", () => {
+		it("returns the same generic response for existing and unknown emails", async () => {
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await app.inject({
+				method: "POST",
+				url: "/v2/auth/sign-up",
+				headers: clientKeyHeader,
+				payload: { name: "Ada Lovelace", email, password },
+			});
+
+			const existingRes = await app.inject({
+				method: "POST",
+				url: "/v2/auth/send-verification-email",
+				headers: clientKeyHeader,
+				payload: { email },
+			});
+
+			const unknownRes = await app.inject({
+				method: "POST",
+				url: "/v2/auth/send-verification-email",
+				headers: clientKeyHeader,
+				payload: { email: `unknown-${randomUUID()}@test.local` },
+			});
+
+			expect(existingRes.statusCode).toBe(200);
+			expect(unknownRes.statusCode).toBe(200);
+			expect(existingRes.json()).toEqual(unknownRes.json());
+		});
+
+		it("delivers a verify-email message for an existing email", async () => {
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await app.inject({
+				method: "POST",
+				url: "/v2/auth/sign-up",
+				headers: clientKeyHeader,
+				payload: { name: "Ada Lovelace", email, password },
+			});
+
+			const res = await app.inject({
+				method: "POST",
+				url: "/v2/auth/send-verification-email",
+				headers: clientKeyHeader,
+				payload: { email },
+			});
+
+			expect(res.statusCode).toBe(200);
+			const token = (
+				emailProvider as InMemoryEmailProvider
+			).getVerificationTokenForEmail(email);
+			expect(token).not.toBeNull();
+		});
+	});
+
 	describe("POST /v2/auth/reset-password", () => {
 		it("resets the password and allows sign-in with the new password", async () => {
 			const email = makeEmail();

@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+import { EmailNotVerifiedError } from "@/modules/auth/errors/email-not-verified-error.js";
 import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
 import { InvalidResetTokenError } from "@/modules/auth/errors/invalid-reset-token-error.js";
 import { InvalidRoleError } from "@/modules/auth/errors/invalid-role-error.js";
@@ -32,6 +33,7 @@ import type {
 
 const MIN_PASSWORD_LENGTH = 6;
 const RESET_TOKEN_TTL_MS = 60 * 60 * 1000;
+const VERIFICATION_TOKEN_TTL_MS = 60 * 60 * 1000;
 const SESSION_COOKIE_NAME = "better-auth.session_token";
 
 type ResetTokenRecord = {
@@ -39,11 +41,22 @@ type ResetTokenRecord = {
 	expiresAt: Date;
 };
 
+type VerificationTokenRecord = {
+	email: string;
+	expiresAt: Date;
+};
+
+export type InMemoryAuthProviderOptions = {
+	requireEmailVerification?: boolean;
+};
+
 export class InMemoryAuthProvider implements AuthProvider {
 	public users: AuthUser[] = [];
 	public sessions = new Map<string, AuthSession>();
 	public resetTokens = new Map<string, ResetTokenRecord>();
+	public verificationTokens = new Map<string, VerificationTokenRecord>();
 	private readonly passwords = new Map<string, string>();
+	private readonly requireEmailVerification: boolean;
 
 	async signUpWithPassword({ name, email, password }: SignUpWithPasswordInput) {
 		assertPasswordLength(password);
@@ -71,14 +84,52 @@ export class InMemoryAuthProvider implements AuthProvider {
 		return { token: session.token, user };
 	}
 
+	constructor(options: InMemoryAuthProviderOptions = {}) {
+		this.requireEmailVerification = options.requireEmailVerification ?? false;
+	}
+
 	async signInWithPassword({ email, password }: SignInWithPasswordInput) {
 		const user = this.users.find((item) => item.email === email);
 		if (!user || this.passwords.get(user.id) !== password) {
 			throw new InvalidCredentialsError();
 		}
+		if (this.requireEmailVerification && !user.emailVerified) {
+			throw new EmailNotVerifiedError();
+		}
 
 		const session = this.createSession(user.id);
 		return { token: session.token, user };
+	}
+
+	async sendVerificationEmail(email: string) {
+		if (!this.users.some((user) => user.email === email)) return;
+		this.verificationTokens.set(randomUUID(), {
+			email,
+			expiresAt: new Date(Date.now() + VERIFICATION_TOKEN_TTL_MS),
+		});
+	}
+
+	async verifyEmail(token: string) {
+		const record = this.verificationTokens.get(token);
+		if (!record || record.expiresAt.getTime() <= Date.now()) {
+			throw new InvalidResetTokenError();
+		}
+
+		const user = this.users.find((item) => item.email === record.email);
+		if (!user) throw new InvalidResetTokenError();
+
+		user.emailVerified = true;
+		user.updatedAt = new Date();
+		this.verificationTokens.delete(token);
+	}
+
+	getPendingVerificationToken(email: string): string | null {
+		for (const [token, record] of this.verificationTokens) {
+			if (record.email === email && record.expiresAt.getTime() > Date.now()) {
+				return token;
+			}
+		}
+		return null;
 	}
 
 	async getSession(headers: Headers): Promise<SessionResult | null> {

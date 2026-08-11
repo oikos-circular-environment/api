@@ -9,6 +9,8 @@ import {
 	forgotPasswordV2ResponseSchema,
 	forgotPasswordV2Schema,
 	resetPasswordV2Schema,
+	sendVerificationEmailV2ResponseSchema,
+	sendVerificationEmailV2Schema,
 	sessionV2ResponseSchema,
 	signInV2ResponseSchema,
 	signInV2Schema,
@@ -21,6 +23,7 @@ import { ChangePasswordUseCase } from "../../use-cases/v2/change-password-use-ca
 import { GetSessionUseCase } from "../../use-cases/v2/get-session-use-case.js";
 import { RequestPasswordResetUseCase } from "../../use-cases/v2/request-password-reset-use-case.js";
 import { ResetPasswordUseCase } from "../../use-cases/v2/reset-password-use-case.js";
+import { SendVerificationEmailUseCase } from "../../use-cases/v2/send-verification-email-use-case.js";
 import { SignInUseCase } from "../../use-cases/v2/sign-in-use-case.js";
 import { SignOutUseCase } from "../../use-cases/v2/sign-out-use-case.js";
 import { SignUpUseCase } from "../../use-cases/v2/sign-up-use-case.js";
@@ -61,6 +64,9 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 		authProvider,
 	);
 	const resetPasswordUseCase = new ResetPasswordUseCase(authProvider);
+	const sendVerificationEmailUseCase = new SendVerificationEmailUseCase(
+		authProvider,
+	);
 
 	typedApp.post(
 		"/auth/sign-up",
@@ -212,6 +218,31 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 		async (request, reply) => {
 			await resetPasswordUseCase.execute(request.body);
 			return reply.status(204).send();
+		},
+	);
+
+	typedApp.post(
+		"/auth/send-verification-email",
+		{
+			schema: {
+				tags: [AUTH_V2_TAG],
+				summary: "Resend verification email",
+				description:
+					"Resends the email verification link. The response is identical " +
+					"whether the email exists or not to avoid leaking account existence.",
+				body: sendVerificationEmailV2Schema,
+				response: {
+					200: sendVerificationEmailV2ResponseSchema,
+					400: appErrorSchema,
+				},
+			},
+		},
+		async (request, reply) => {
+			await sendVerificationEmailUseCase.execute(request.body.email);
+			return reply.send({
+				message:
+					"If this email exists in our system, check your email for the verification link",
+			});
 		},
 	);
 }

@@ -21,6 +21,7 @@ export const auth = betterAuth({
 	emailAndPassword: {
 		enabled: true,
 		minPasswordLength: 6,
+		requireEmailVerification: env.REQUIRE_EMAIL_VERIFICATION,
 		password: {
 			hash: async (password) => hash(password, BCRYPT_COST),
 			verify: async ({ hash: passwordHash, password }) =>
@@ -31,6 +32,20 @@ export const auth = betterAuth({
 				type: "reset-password",
 				to: data.user.email,
 				subject: "Reset your password",
+				payload: {
+					url: data.url,
+					token: data.token,
+					name: data.user.name,
+				},
+			});
+		},
+	},
+	emailVerification: {
+		sendVerificationEmail: async (data) => {
+			await emailProvider.send({
+				type: "verify-email",
+				to: data.user.email,
+				subject: "Verify your email",
 				payload: {
 					url: data.url,
 					token: data.token,

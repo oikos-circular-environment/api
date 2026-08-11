@@ -24,6 +24,15 @@ export class InMemoryEmailProvider implements EmailProvider {
 		return payload.token ?? null;
 	}
 
+	getVerificationTokenForEmail(email: string): string | null {
+		const message = this.messages.find(
+			(item) => item.to === email && item.type === "verify-email",
+		);
+		if (!message) return null;
+		const payload = message.payload as { token: string };
+		return payload.token ?? null;
+	}
+
 	clear(): void {
 		this.messages = [];
 	}

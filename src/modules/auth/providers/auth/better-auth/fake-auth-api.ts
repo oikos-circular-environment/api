@@ -9,6 +9,7 @@ import type {
 
 const MIN_PASSWORD_LENGTH = 6;
 const RESET_TOKEN_TTL_MS = 60 * 60 * 1000;
+const VERIFICATION_TOKEN_TTL_MS = 60 * 60 * 1000;
 const SESSION_COOKIE_NAME = "better-auth.session_token";
 
 type FakeUserRecord = {
@@ -20,6 +21,10 @@ export class FakeAuthApi implements AuthApiClient {
 	public records = new Map<string, FakeUserRecord>();
 	public sessions = new Map<string, AuthApiSession>();
 	public resetTokens = new Map<string, { email: string; expiresAt: Date }>();
+	public verificationTokens = new Map<
+		string,
+		{ email: string; expiresAt: Date }
+	>();
 
 	async signUpEmail({
 		body: { name, email, password },
@@ -67,6 +72,29 @@ export class FakeAuthApi implements AuthApiClient {
 
 		const session = this.createSession(record.user.id);
 		return { token: session.token, user: record.user };
+	}
+
+	async sendVerificationEmail({
+		body: { email },
+	}: {
+		body: { email: string; callbackURL?: string };
+	}) {
+		if (this.findByEmail(email)) {
+			this.verificationTokens.set(randomUUID(), {
+				email,
+				expiresAt: new Date(Date.now() + VERIFICATION_TOKEN_TTL_MS),
+			});
+		}
+		return { status: true };
+	}
+
+	getPendingVerificationToken(email: string): string | null {
+		for (const [token, record] of this.verificationTokens) {
+			if (record.email === email && record.expiresAt.getTime() > Date.now()) {
+				return token;
+			}
+		}
+		return null;
 	}
 
 	async getSession({ headers }: { headers: Headers }) {

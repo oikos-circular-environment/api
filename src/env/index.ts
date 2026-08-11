@@ -32,6 +32,10 @@ const envSchema = z
 			.default("console"),
 		RESEND_API_KEY: z.string().optional(),
 		RESEND_FROM_EMAIL: z.string().optional(),
+		REQUIRE_EMAIL_VERIFICATION: z
+			.string()
+			.optional()
+			.transform((value) => value?.toLowerCase() === "true"),
 
 		MINIO_ENDPOINT: z.string().optional(),
 		MINIO_PORT: z.coerce.number().default(9000),

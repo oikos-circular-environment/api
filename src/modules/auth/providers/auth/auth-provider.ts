@@ -127,6 +127,7 @@ export interface AuthProvider {
 	signInWithPassword(
 		input: SignInWithPasswordInput,
 	): Promise<AuthenticatedUser>;
+	sendVerificationEmail(email: string): Promise<void>;
 	getSession(headers: Headers): Promise<SessionResult | null>;
 	signOut(headers: Headers): Promise<void>;
 	changePassword(input: ChangePasswordInput, headers: Headers): Promise<void>;
