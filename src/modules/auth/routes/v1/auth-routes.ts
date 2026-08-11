@@ -4,18 +4,18 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { AppError, appErrorSchema } from "../../../common/errors/app-error.js";
 import { verifyJwt } from "../../../common/middlewares/verify-jwt.js";
-import type { AuthTokenPayload } from "../../../common/types/auth-token-payload.js";
-import { withBearerAuth } from "../../../common/types/openapi-security.js";
-import { loginSchema, refreshBodySchema } from "../../dtos/auth-dto.js";
-import { PrismaAuthRepository } from "../../repositories/prisma/auth-repository-prisma.js";
-import { PrismaRefreshTokenRepository } from "../../repositories/prisma/refresh-token-repository-prisma.js";
 import {
 	ACCESS_TOKEN_EXPIRES_IN,
 	issueAuthTokens,
 	REFRESH_TOKEN_EXPIRES_IN,
 	REFRESH_TOKEN_TTL_MS,
 	refreshCookieOptions,
-} from "../../token-service.js";
+} from "../../../common/services/auth/token-service.js";
+import type { AuthTokenPayload } from "../../../common/types/auth-token-payload.js";
+import { withBearerAuth } from "../../../common/types/openapi-security.js";
+import { loginSchema, refreshBodySchema } from "../../dtos/auth-dto.js";
+import { PrismaAuthRepository } from "../../repositories/prisma/auth-repository-prisma.js";
+import { PrismaRefreshTokenRepository } from "../../repositories/prisma/refresh-token-repository-prisma.js";
 import { AuthenticateUserUseCase } from "../../use-cases/v1/authenticate-user-use-case.js";
 import { RefreshTokenUseCase } from "../../use-cases/v1/refresh-token-use-case.js";
 
@@ -49,12 +49,17 @@ export async function authRoutes(app: FastifyInstance) {
 			const user = await authenticateUserUseCase.execute({ email, password });
 
 			const { token, refreshToken } = await issueAuthTokens(
-				reply,
+				{
+					sign: async (payload, options) =>
+						reply.jwtSign(payload, { sign: options }),
+				},
 				refreshTokenRepository,
 				user,
 			);
 
-			reply.send({ token, refreshToken });
+			reply
+				.setCookie("refreshToken", refreshToken, refreshCookieOptions)
+				.send({ token, refreshToken });
 		},
 	);
 

@@ -2,9 +2,12 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { PrismaRefreshTokenRepository } from "../auth/repositories/prisma/refresh-token-repository-prisma.js";
-import { issueAuthTokens } from "../auth/token-service.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
+import {
+	issueAuthTokens,
+	refreshCookieOptions,
+} from "../common/services/auth/token-service.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	changePasswordSchema,
@@ -199,12 +202,18 @@ export async function userRoutes(app: FastifyInstance) {
 				});
 
 				const { token, refreshToken } = await issueAuthTokens(
-					reply,
+					{
+						sign: async (payload, options) =>
+							reply.jwtSign(payload, { sign: options }),
+					},
 					refreshTokenRepository,
 					user,
 				);
 
-				return reply.status(200).send({ token, refreshToken });
+				return reply
+					.status(200)
+					.setCookie("refreshToken", refreshToken, refreshCookieOptions)
+					.send({ token, refreshToken });
 			},
 		);
 	});
