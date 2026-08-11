@@ -17,14 +17,14 @@ export const authV2UserSchema = z.object({
 	id: z.string(),
 	email: z.string(),
 	name: z.string().nullable(),
-	emailVerified: z.boolean(),
+	email_verified: z.boolean(),
 	image: z.string().nullable(),
 	role: z.string(),
 	banned: z.boolean(),
-	banReason: z.string().nullable(),
-	banExpires: z.string().datetime().nullable(),
-	createdAt: z.string().datetime(),
-	updatedAt: z.string().datetime(),
+	ban_reason: z.string().nullable(),
+	ban_expires: z.string().datetime().nullable(),
+	created_at: z.string().datetime(),
+	updated_at: z.string().datetime(),
 });
 export type AuthV2UserResponse = z.infer<typeof authV2UserSchema>;
 

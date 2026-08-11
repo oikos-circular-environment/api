@@ -68,9 +68,9 @@ export const listUserSessionsAdminResponseSchema = z.object({
 		z.object({
 			id: z.string(),
 			token: z.string(),
-			expiresAt: z.string().datetime(),
-			userId: z.string(),
-			impersonatedBy: z.string().nullable().optional(),
+			expires_at: z.string().datetime(),
+			user_id: z.string(),
+			impersonated_by: z.string().nullable().optional(),
 		}),
 	),
 });

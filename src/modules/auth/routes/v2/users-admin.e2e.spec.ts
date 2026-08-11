@@ -174,10 +174,10 @@ describe("users-admin", () => {
 			});
 			expect(banRes.statusCode).toBe(200);
 			const banBody = banRes.json<{
-				user: { banned: boolean; banReason: string | null };
+				user: { banned: boolean; ban_reason: string | null };
 			}>();
 			expect(banBody.user.banned).toBe(true);
-			expect(banBody.user.banReason).toBe("violation");
+			expect(banBody.user.ban_reason).toBe("violation");
 
 			const revokeRes = await app.inject({
 				method: "POST",

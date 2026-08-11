@@ -44,14 +44,14 @@ function mapAuthUserToResponse(user: AuthUser) {
 		id: user.id,
 		email: user.email,
 		name: user.name,
-		emailVerified: user.emailVerified,
+		email_verified: user.emailVerified,
 		image: user.image,
 		role: user.role,
 		banned: user.banned,
-		banReason: user.banReason,
-		banExpires: user.banExpires?.toISOString() ?? null,
-		createdAt: user.createdAt.toISOString(),
-		updatedAt: user.updatedAt.toISOString(),
+		ban_reason: user.banReason,
+		ban_expires: user.banExpires?.toISOString() ?? null,
+		created_at: user.createdAt.toISOString(),
+		updated_at: user.updatedAt.toISOString(),
 	};
 }
 
@@ -59,9 +59,9 @@ function mapAuthSessionToResponse(session: AuthSession) {
 	return {
 		id: session.id,
 		token: session.token,
-		expiresAt: session.expiresAt.toISOString(),
-		userId: session.userId,
-		impersonatedBy: session.impersonatedBy ?? null,
+		expires_at: session.expiresAt.toISOString(),
+		user_id: session.userId,
+		impersonated_by: session.impersonatedBy ?? null,
 	};
 }
 
