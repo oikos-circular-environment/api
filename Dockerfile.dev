@@ -32,8 +32,12 @@ ENV NODE_ENV=production
 COPY package*.json ./
 COPY prisma/ ./prisma/
 COPY prisma.config.ts ./
-RUN npm ci --omit=dev --ignore-scripts && npx prisma generate
+RUN npm ci --omit=dev --omit=optional --ignore-scripts
 
+# prisma CLI é devDep, mas necessária pro `prisma migrate deploy` (mesmo arranjo
+# do devops/docker/Dockerfile.api.prod). O client já vem gerado dentro do dist.
+COPY --from=simulation-builder /app/node_modules/prisma ./node_modules/prisma
+COPY --from=simulation-builder /app/node_modules/.bin/prisma ./node_modules/.bin/prisma
 COPY --from=simulation-builder /app/dist ./dist
 
 # Migration não roda no CMD (mesmo comportamento do deploy real) — rodar
