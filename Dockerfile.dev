@@ -12,6 +12,18 @@ CMD ["npm", "run", "dev"]
 # ---- Stage: simulation (aproxima o comportamento de produção — build imutável, sem hot-reload) ----
 # Não é a imagem real de deploy (essa vive em devops/docker/Dockerfile.api.prod) — é uma
 # aproximação local pra validar comportamento antes do push, sem depender do repo devops.
+FROM node:lts-alpine AS simulation-builder
+WORKDIR /app
+
+COPY package*.json ./
+COPY prisma/ ./prisma/
+COPY prisma.config.ts ./
+RUN npm ci --ignore-scripts
+
+COPY tsconfig.json tsconfig.build.json ./
+COPY src/ ./src/
+RUN npx prisma generate && npm run build
+
 FROM node:lts-alpine AS simulation
 WORKDIR /app
 
@@ -20,11 +32,9 @@ ENV NODE_ENV=production
 COPY package*.json ./
 COPY prisma/ ./prisma/
 COPY prisma.config.ts ./
-RUN npm ci --ignore-scripts
+RUN npm ci --omit=dev --ignore-scripts && npx prisma generate
 
-COPY tsconfig.json ./
-COPY src/ ./src/
-RUN npx prisma generate && npm run build
+COPY --from=simulation-builder /app/dist ./dist
 
 # Migration não roda no CMD (mesmo comportamento do deploy real) — rodar
 # `docker compose -f docker-compose.dev.yml --profile simulation run --rm api-sim npx prisma migrate deploy`
