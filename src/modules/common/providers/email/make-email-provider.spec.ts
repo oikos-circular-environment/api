@@ -6,6 +6,8 @@ describe("make-email-provider", () => {
 	beforeEach(() => {
 		const keys = [
 			"EMAIL_PROVIDER",
+			"RESEND_API_KEY",
+			"RESEND_FROM_EMAIL",
 			"JWT_SECRET",
 			"DATABASE_URL",
 			"BETTER_AUTH_SECRET",
@@ -21,6 +23,8 @@ describe("make-email-provider", () => {
 			originalEnv[key] = process.env[key];
 		}
 
+		process.env.RESEND_API_KEY = "test-resend-key";
+		process.env.RESEND_FROM_EMAIL = "test@example.com";
 		process.env.JWT_SECRET = "test-jwt-secret";
 		process.env.DATABASE_URL = "postgresql://test:test@localhost:5432/test";
 		process.env.BETTER_AUTH_SECRET = "test-better-auth-secret-0123456789abcdef";
@@ -69,5 +73,14 @@ describe("make-email-provider", () => {
 		const provider = makeEmailProvider();
 
 		expect(provider.constructor.name).toBe("InMemoryEmailProvider");
+	});
+
+	it("throws when EMAIL_PROVIDER is resend", async () => {
+		process.env.EMAIL_PROVIDER = "resend";
+		const { makeEmailProvider } = await import("./make-email-provider.js");
+
+		expect(() => makeEmailProvider()).toThrow(
+			"Resend email provider is not implemented yet (E04, api#65).",
+		);
 	});
 });

@@ -1,5 +1,4 @@
 import { Html, Text } from "@react-email/components";
-import { createElement } from "react";
 import { describe, expect, it } from "vitest";
 import { renderEmail } from "./render-email.js";
 
@@ -8,17 +7,17 @@ interface TestEmailProps {
 }
 
 function TestEmail({ message }: TestEmailProps) {
-	return createElement(
-		Html,
-		{ lang: "pt-BR" },
-		createElement(Text, null, message),
+	return (
+		<Html lang="pt-BR">
+			<Text>{message}</Text>
+		</Html>
 	);
 }
 
 describe("render-email", () => {
 	it("renders html and plain text from a react element", async () => {
 		const { html, text } = await renderEmail(
-			createElement(TestEmail, { message: "hello world" }),
+			<TestEmail message="hello world" />,
 		);
 
 		expect(html).toContain("hello world");
@@ -27,7 +26,7 @@ describe("render-email", () => {
 
 	it("returns html distinct from plain text", async () => {
 		const { html, text } = await renderEmail(
-			createElement(TestEmail, { message: "test content" }),
+			<TestEmail message="test content" />,
 		);
 
 		expect(html).toContain("<html");
