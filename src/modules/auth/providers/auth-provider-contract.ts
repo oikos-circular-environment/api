@@ -1,7 +1,11 @@
-import { expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { InvalidCredentialsError } from "@/modules/auth/errors/invalid-credentials-error.js";
 import { InvalidResetTokenError } from "@/modules/auth/errors/invalid-reset-token-error.js";
+import { InvalidRoleError } from "@/modules/auth/errors/invalid-role-error.js";
+import { UserAlreadyBannedError } from "@/modules/auth/errors/user-already-banned-error.js";
 import { UserAlreadyExistsError } from "@/modules/auth/errors/user-already-exists-error.js";
+import { UserNotBannedError } from "@/modules/auth/errors/user-not-banned-error.js";
+import { UserNotFoundError } from "@/modules/auth/errors/user-not-found-error.js";
 import { WeakPasswordError } from "@/modules/auth/errors/weak-password-error.js";
 import type { AuthProvider } from "./auth-provider.js";
 
@@ -304,5 +308,485 @@ export function describeAuthProviderContract({
 			expect(thrownError.code).toBe("INVALID_RESET_TOKEN");
 			expect(thrownError.statusCode).toBe(400);
 		}
+	});
+
+	describe("admin methods", () => {
+		const ADMIN_EMAIL = "admin@example.com";
+		const ADMIN_NAME = "Admin User";
+
+		async function createAdminActor(provider: AuthProvider) {
+			await provider.createUser(
+				{
+					email: ADMIN_EMAIL,
+					name: ADMIN_NAME,
+					password: PASSWORD,
+					role: "admin",
+				},
+				new Headers(),
+			);
+			const session = await provider.signInWithPassword({
+				email: ADMIN_EMAIL,
+				password: PASSWORD,
+			});
+			const token = session.token;
+			if (!token) throw new Error("expected a session token");
+			return { token };
+		}
+
+		function adminHeaders(token: string) {
+			return new Headers({ authorization: `Bearer ${token}` });
+		}
+
+		it("lists users with pagination", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			await provider.signUpWithPassword({
+				name: "Alice",
+				email: "alice@example.com",
+				password: PASSWORD,
+			});
+			await provider.signUpWithPassword({
+				name: "Bob",
+				email: "bob@example.com",
+				password: PASSWORD,
+			});
+
+			const page1 = await provider.listUsers(
+				{ limit: 1, offset: 0, sortBy: "email", sortDirection: "asc" },
+				headers,
+			);
+			const page2 = await provider.listUsers(
+				{ limit: 1, offset: 1, sortBy: "email", sortDirection: "asc" },
+				headers,
+			);
+
+			expect(page1.users).toHaveLength(1);
+			expect(page2.users).toHaveLength(1);
+			expect(page1.users[0].email).not.toBe(page2.users[0].email);
+			expect(page1.total).toBeGreaterThanOrEqual(2);
+		});
+
+		it("searches users by email", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			await provider.signUpWithPassword({
+				name: "Alice",
+				email: "alice@example.com",
+				password: PASSWORD,
+			});
+			await provider.signUpWithPassword({
+				name: "Bob",
+				email: "bob@example.com",
+				password: PASSWORD,
+			});
+
+			const result = await provider.listUsers(
+				{ searchValue: "alice@example.com", searchField: "email" },
+				headers,
+			);
+
+			expect(result.users).toHaveLength(1);
+			expect(result.users[0].email).toBe("alice@example.com");
+		});
+
+		it("gets a user by id", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			const found = await provider.getUser({ userId: user.id }, headers);
+
+			expect(found.id).toBe(user.id);
+			expect(found.email).toBe(EMAIL);
+		});
+
+		it("throws user-not-found-error when getting unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.getUser({ userId: "unknown-id" }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("creates a user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			const user = await provider.createUser(
+				{
+					email: "new@example.com",
+					name: "New User",
+					password: PASSWORD,
+					role: "admin",
+				},
+				headers,
+			);
+
+			expect(user.email).toBe("new@example.com");
+			expect(user.role).toBe("admin");
+			expect(user.banned).toBe(false);
+
+			const session = await provider.signInWithPassword({
+				email: "new@example.com",
+				password: PASSWORD,
+			});
+			expect(session.user.id).toBe(user.id);
+		});
+
+		it("throws user-already-exists-error on duplicate email when creating user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			await provider.createUser(
+				{ email: "dup@example.com", name: "Dup", password: PASSWORD },
+				headers,
+			);
+
+			await expect(
+				provider.createUser(
+					{ email: "dup@example.com", name: "Dup 2", password: PASSWORD },
+					headers,
+				),
+			).rejects.toBeInstanceOf(UserAlreadyExistsError);
+		});
+
+		it("throws invalid-role-error when creating user with invalid role", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.createUser(
+					{
+						email: "bad@example.com",
+						name: "Bad",
+						password: PASSWORD,
+						role: "",
+					},
+					headers,
+				),
+			).rejects.toBeInstanceOf(InvalidRoleError);
+		});
+
+		it("updates a user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			const updated = await provider.updateUser(
+				{ userId: user.id, data: { name: "Updated Name" } },
+				headers,
+			);
+
+			expect(updated.name).toBe("Updated Name");
+			expect(updated.updatedAt.getTime()).toBeGreaterThanOrEqual(
+				user.updatedAt.getTime(),
+			);
+		});
+
+		it("throws user-not-found-error when updating unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.updateUser(
+					{ userId: "unknown", data: { name: "X" } },
+					headers,
+				),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("throws invalid-role-error when updating user with invalid role", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			await expect(
+				provider.updateUser({ userId: user.id, data: { role: "" } }, headers),
+			).rejects.toBeInstanceOf(InvalidRoleError);
+		});
+
+		it("sets a user's role", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			const updated = await provider.setRole(
+				{ userId: user.id, role: "admin" },
+				headers,
+			);
+
+			expect(updated.role).toBe("admin");
+		});
+
+		it("throws invalid-role-error when setting invalid role", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			await expect(
+				provider.setRole({ userId: user.id, role: "" }, headers),
+			).rejects.toBeInstanceOf(InvalidRoleError);
+		});
+
+		it("throws user-not-found-error when setting role for unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.setRole({ userId: "unknown", role: "admin" }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("bans a user and clears their sessions", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			const banned = await provider.banUser(
+				{ userId: user.id, banReason: "spam", banExpiresIn: 3600 },
+				headers,
+			);
+
+			expect(banned.banned).toBe(true);
+			expect(banned.banReason).toBe("spam");
+			expect(banned.banExpires).not.toBeNull();
+			expect(
+				await provider.listUserSessions({ userId: user.id }, headers),
+			).toHaveLength(0);
+		});
+
+		it("unbans a user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+			await provider.banUser({ userId: user.id, banReason: "spam" }, headers);
+
+			const unbanned = await provider.unbanUser({ userId: user.id }, headers);
+
+			expect(unbanned.banned).toBe(false);
+			expect(unbanned.banReason).toBeNull();
+			expect(unbanned.banExpires).toBeNull();
+		});
+
+		it("throws user-not-found-error when banning unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.banUser({ userId: "unknown" }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("throws user-already-banned-error when banning an already banned user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+			await provider.banUser({ userId: user.id }, headers);
+
+			await expect(
+				provider.banUser({ userId: user.id }, headers),
+			).rejects.toBeInstanceOf(UserAlreadyBannedError);
+		});
+
+		it("throws user-not-banned-error when unbanning a non-banned user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			await expect(
+				provider.unbanUser({ userId: user.id }, headers),
+			).rejects.toBeInstanceOf(UserNotBannedError);
+		});
+
+		it("lists user sessions", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user, token: userToken } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			const sessions = await provider.listUserSessions(
+				{ userId: user.id },
+				headers,
+			);
+
+			expect(sessions).toHaveLength(1);
+			expect(sessions[0].token).toBe(userToken);
+		});
+
+		it("throws user-not-found-error when listing sessions for unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.listUserSessions({ userId: "unknown" }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("revokes user sessions", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			await provider.revokeUserSessions({ userId: user.id }, headers);
+
+			expect(
+				await provider.listUserSessions({ userId: user.id }, headers),
+			).toHaveLength(0);
+		});
+
+		it("throws user-not-found-error when revoking sessions for unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.revokeUserSessions({ userId: "unknown" }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("sets a user's password", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const user = await provider.createUser(
+				{ email: "nopass@example.com", name: "No Pass" },
+				headers,
+			);
+
+			await provider.setUserPassword(
+				{ userId: user.id, newPassword: NEW_PASSWORD },
+				headers,
+			);
+
+			const session = await provider.signInWithPassword({
+				email: user.email,
+				password: NEW_PASSWORD,
+			});
+			expect(session.user.id).toBe(user.id);
+		});
+
+		it("throws user-not-found-error when setting password for unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.setUserPassword(
+					{ userId: "unknown", newPassword: NEW_PASSWORD },
+					headers,
+				),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
+
+		it("throws weak-password-error when setting a short password", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const user = await provider.createUser(
+				{ email: "weak@example.com", name: "Weak" },
+				headers,
+			);
+
+			await expect(
+				provider.setUserPassword(
+					{ userId: user.id, newPassword: SHORT_PASSWORD },
+					headers,
+				),
+			).rejects.toBeInstanceOf(WeakPasswordError);
+		});
+
+		it("removes a user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+			const { user } = await provider.signUpWithPassword({
+				name: NAME,
+				email: EMAIL,
+				password: PASSWORD,
+			});
+
+			await provider.removeUser({ userId: user.id }, headers);
+
+			await expect(
+				provider.getUser({ userId: user.id }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+			await expect(
+				provider.signInWithPassword({ email: EMAIL, password: PASSWORD }),
+			).rejects.toBeInstanceOf(InvalidCredentialsError);
+		});
+
+		it("throws user-not-found-error when removing unknown user", async () => {
+			const provider = createProvider();
+			const { token } = await createAdminActor(provider);
+			const headers = adminHeaders(token);
+
+			await expect(
+				provider.removeUser({ userId: "unknown" }, headers),
+			).rejects.toBeInstanceOf(UserNotFoundError);
+		});
 	});
 }
