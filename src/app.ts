@@ -18,6 +18,7 @@ import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
 import { authRoutes } from "./modules/auth/auth-routes.js";
 import { authV2Routes } from "./modules/auth/v2/auth-v2-routes.js";
+import { usersAdminRoutes } from "./modules/auth/v2/users-admin-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
@@ -213,6 +214,7 @@ app.get("/health", () => ({ status: "ok" }));
 
 app.register(authRoutes, { prefix: "/v1" });
 app.register(authV2Routes, { prefix: "/v2" });
+app.register(usersAdminRoutes, { prefix: "/v2" });
 app.register(userRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });

@@ -20,6 +20,9 @@ export const authV2UserSchema = z.object({
 	emailVerified: z.boolean(),
 	image: z.string().nullable(),
 	role: z.string(),
+	banned: z.boolean(),
+	banReason: z.string().nullable(),
+	banExpires: z.string().datetime().nullable(),
 	createdAt: z.string().datetime(),
 	updatedAt: z.string().datetime(),
 });

@@ -39,6 +39,9 @@ function mapAuthUserToResponse(user: AuthUser) {
 		emailVerified: user.emailVerified,
 		image: user.image,
 		role: user.role,
+		banned: user.banned,
+		banReason: user.banReason,
+		banExpires: user.banExpires?.toISOString() ?? null,
 		createdAt: user.createdAt.toISOString(),
 		updatedAt: user.updatedAt.toISOString(),
 	};
