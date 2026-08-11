@@ -31,7 +31,7 @@ export const auth = betterAuth({
 			await emailProvider.send({
 				type: "reset-password",
 				to: data.user.email,
-				subject: "Reset your password",
+				subject: "Redefinição de senha - Oikos",
 				payload: {
 					url: data.url,
 					token: data.token,
@@ -45,7 +45,7 @@ export const auth = betterAuth({
 			await emailProvider.send({
 				type: "verify-email",
 				to: data.user.email,
-				subject: "Verify your email",
+				subject: "Confirme seu e-mail - Oikos",
 				payload: {
 					url: data.url,
 					token: data.token,

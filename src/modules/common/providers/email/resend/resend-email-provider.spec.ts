@@ -57,7 +57,7 @@ describe("resend-email-provider", () => {
 		}
 	});
 
-	it("sends html and text with an idempotency key derived from type and recipient", async () => {
+	it("sends html and text with an idempotency key scoped to the message", async () => {
 		sendMock.mockResolvedValue({ data: { id: "email-id" }, error: null });
 		const { ResendEmailProvider } = await import("./resend-email-provider.js");
 		const renderer = {
@@ -86,8 +86,63 @@ describe("resend-email-provider", () => {
 				html: "<p>hello</p>",
 				text: "hello",
 			},
-			{ idempotencyKey: "reset-password/user@example.com" },
+			{
+				idempotencyKey: expect.stringMatching(
+					/^reset-password\/user@example\.com\/[0-9a-f]{32}$/,
+				),
+			},
 		);
+	});
+
+	it("gives a different idempotency key to a second reset with a new token", async () => {
+		sendMock.mockResolvedValue({ data: { id: "email-id" }, error: null });
+		const { ResendEmailProvider } = await import("./resend-email-provider.js");
+		const renderer = {
+			render: vi
+				.fn()
+				.mockResolvedValue({ html: "<p>hello</p>", text: "hello" }),
+		};
+		const provider = new ResendEmailProvider(renderer);
+
+		const message = {
+			to: "user@example.com",
+			subject: "Reset your password",
+			type: "reset-password",
+		};
+
+		await provider.send({ ...message, payload: { token: "first-token" } });
+		await provider.send({ ...message, payload: { token: "second-token" } });
+
+		const [firstKey, secondKey] = sendMock.mock.calls.map(
+			(call) => call[1].idempotencyKey,
+		);
+		expect(firstKey).not.toBe(secondKey);
+	});
+
+	it("reuses the idempotency key when the same message is retried", async () => {
+		sendMock.mockResolvedValue({ data: { id: "email-id" }, error: null });
+		const { ResendEmailProvider } = await import("./resend-email-provider.js");
+		const renderer = {
+			render: vi
+				.fn()
+				.mockResolvedValue({ html: "<p>hello</p>", text: "hello" }),
+		};
+		const provider = new ResendEmailProvider(renderer);
+
+		const message = {
+			to: "user@example.com",
+			subject: "Reset your password",
+			type: "reset-password",
+			payload: { token: "same-token" },
+		};
+
+		await provider.send(message);
+		await provider.send(message);
+
+		const [firstKey, secondKey] = sendMock.mock.calls.map(
+			(call) => call[1].idempotencyKey,
+		);
+		expect(firstKey).toBe(secondKey);
 	});
 
 	it("throws an error with context when the SDK returns an error", async () => {

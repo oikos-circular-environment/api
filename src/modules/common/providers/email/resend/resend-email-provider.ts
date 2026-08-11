@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { Resend } from "resend";
 import type {
 	EmailMessage,
@@ -5,6 +6,15 @@ import type {
 	EmailRenderer,
 } from "../email-provider.js";
 import { getResendConfig } from "./resend-config.js";
+
+function idempotencyKeyFor<TPayload>(message: EmailMessage<TPayload>): string {
+	const digest = createHash("sha256")
+		.update(JSON.stringify(message.payload ?? null))
+		.digest("hex")
+		.slice(0, 32);
+
+	return `${message.type}/${message.to}/${digest}`;
+}
 
 export class ResendEmailProvider implements EmailProvider {
 	private readonly resend: Resend;
@@ -30,7 +40,7 @@ export class ResendEmailProvider implements EmailProvider {
 				text,
 			},
 			{
-				idempotencyKey: `${message.type}/${message.to}`,
+				idempotencyKey: idempotencyKeyFor(message),
 			},
 		);
 
