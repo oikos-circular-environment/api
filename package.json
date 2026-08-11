@@ -8,7 +8,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "concurrently \"tsx watch --env-file=.env --import ./src/lib/otel.ts src/server.ts\" \"tsc --noEmit --watch --preserveWatchOutput\"",
-		"build": "tsc && tsc-alias",
+		"build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
 		"start": "node --import ./dist/lib/otel.js dist/server.js",
 		"format": "biome format --write --files-ignore-unknown=true .",
 		"lint": "biome lint --write --files-ignore-unknown=true .",
