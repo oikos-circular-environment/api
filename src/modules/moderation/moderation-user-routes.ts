@@ -2,12 +2,10 @@ import type { FastifyInstance, FastifyRequest } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { authV2UserSchema } from "@/modules/auth/dtos/auth-v2-dto.js";
-import type {
-	AuthSession,
-	AuthUser,
-} from "@/modules/auth/providers/auth/auth-provider.js";
+import type { AuthSession } from "@/modules/auth/providers/auth/auth-provider.js";
 import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
+import { authUserResponseMapper } from "@/modules/auth/providers/auth/better-auth/mapper/auth-user-response-mapper.js";
 import { requireRole } from "@/modules/common/middlewares/require-role.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
@@ -33,27 +31,10 @@ import { RevokeUserSessionsUseCase } from "./use-cases/admin/revoke-user-session
 import { SetUserRoleUseCase } from "./use-cases/admin/set-user-role-use-case.js";
 import { UnbanUserUseCase } from "./use-cases/admin/unban-user-use-case.js";
 
-const MODERATION_TAG = "Moderation";
 const MODERATION_USERS_TAG = "Moderation / Users";
 
 function buildHeaders(request: FastifyRequest): Headers {
 	return new Headers(request.headers as Record<string, string>);
-}
-
-function mapAuthUserToResponse(user: AuthUser) {
-	return {
-		id: user.id,
-		email: user.email,
-		name: user.name,
-		email_verified: user.emailVerified,
-		image: user.image,
-		role: user.role,
-		banned: user.banned,
-		ban_reason: user.banReason,
-		ban_expires: user.banExpires?.toISOString() ?? null,
-		created_at: user.createdAt.toISOString(),
-		updated_at: user.updatedAt.toISOString(),
-	};
 }
 
 function mapAuthSessionToResponse(session: AuthSession) {
@@ -66,7 +47,7 @@ function mapAuthSessionToResponse(session: AuthSession) {
 	};
 }
 
-export async function moderationAdminRoutes(
+export async function moderationUsersRoutes(
 	app: FastifyInstance,
 ): Promise<void> {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
@@ -90,7 +71,7 @@ export async function moderationAdminRoutes(
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [MODERATION_TAG, MODERATION_USERS_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "List users",
 				description: "Lists users with search, filter, sort and pagination.",
 				querystring: listUsersAdminQuerySchema,
@@ -107,7 +88,7 @@ export async function moderationAdminRoutes(
 				buildHeaders(request),
 			);
 			return reply.send({
-				users: result.users.map(mapAuthUserToResponse),
+				users: result.users.map(authUserResponseMapper),
 				total: result.total,
 				limit: result.limit,
 				offset: result.offset,
@@ -136,7 +117,7 @@ export async function moderationAdminRoutes(
 				request.params.id,
 				buildHeaders(request),
 			);
-			return reply.send({ user: mapAuthUserToResponse(user) });
+			return reply.send({ user: authUserResponseMapper(user) });
 		},
 	);
 
@@ -162,7 +143,7 @@ export async function moderationAdminRoutes(
 				request.body,
 				buildHeaders(request),
 			);
-			return reply.status(201).send({ user: mapAuthUserToResponse(user) });
+			return reply.status(201).send({ user: authUserResponseMapper(user) });
 		},
 	);
 
@@ -190,7 +171,7 @@ export async function moderationAdminRoutes(
 				{ userId: request.params.id, role: request.body.role },
 				buildHeaders(request),
 			);
-			return reply.send({ user: mapAuthUserToResponse(user) });
+			return reply.send({ user: authUserResponseMapper(user) });
 		},
 	);
 
@@ -223,7 +204,7 @@ export async function moderationAdminRoutes(
 				},
 				buildHeaders(request),
 			);
-			return reply.send({ user: mapAuthUserToResponse(user) });
+			return reply.send({ user: authUserResponseMapper(user) });
 		},
 	);
 
@@ -251,7 +232,7 @@ export async function moderationAdminRoutes(
 				request.params.id,
 				buildHeaders(request),
 			);
-			return reply.send({ user: mapAuthUserToResponse(user) });
+			return reply.send({ user: authUserResponseMapper(user) });
 		},
 	);
 
