@@ -1,6 +1,6 @@
 # T02 — Renomear módulo `users` → `accounts`, aposentar `GET /v1/users/me`
 
-**Status:** ⬜ Pendente
+**Status:** [x] Concluído
 **Depende de:** nada (não cruza arquivo com T01, mas rode depois por ordem de plano)
 **Módulos:** `src/modules/users` → `src/modules/accounts`, `src/app.ts`, `src/server.ts`, `src/modules/profiles`
 

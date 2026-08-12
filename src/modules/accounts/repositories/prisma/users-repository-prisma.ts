@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma.js";
-import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
+import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 
 export class PrismaUsersRepository implements UsersRepository {
 	async findById(id: string) {

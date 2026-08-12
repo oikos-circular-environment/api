@@ -1,8 +1,8 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
+import { PrismaUsersRepository } from "@/modules/accounts/repositories/prisma/users-repository-prisma.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
-import { PrismaUsersRepository } from "@/modules/users/repositories/prisma/users-repository-prisma.js";
 import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";

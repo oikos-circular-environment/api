@@ -1,5 +1,5 @@
-import type { User } from "@/modules/users/dtos/users-dto.js";
-import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
+import type { User } from "@/modules/accounts/dtos/accounts-dto.js";
+import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 
 export class InMemoryUsersRepository implements UsersRepository {
 	public items: User[] = [];

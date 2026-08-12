@@ -6,14 +6,12 @@ import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/b
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { createVerifySession } from "../common/middlewares/verify-session.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
-import { userResponseSchema } from "./dtos/users-dto.js";
 import { BullMQAccountDeletionJobDispatcher } from "./providers/queue/bullmq/bullmq-account-deletion-job-dispatcher.js";
 import { PrismaUsersRepository } from "./repositories/prisma/users-repository-prisma.js";
 import { CancelAccountDeletionUseCase } from "./use-cases/cancel-account-deletion-use-case.js";
-import { GetUserUseCase } from "./use-cases/get-user-use-case.js";
 import { RequestAccountDeletionUseCase } from "./use-cases/request-account-deletion-use-case.js";
 
-export async function userRoutes(app: FastifyInstance) {
+export async function accountRoutes(app: FastifyInstance) {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
@@ -25,42 +23,11 @@ export async function userRoutes(app: FastifyInstance) {
 			await verifySession(request);
 		});
 
-		typedAuth.get(
-			"/users/me",
-			{
-				schema: withBearerAuth({
-					tags: ["Users"],
-					summary: "Get authenticated user",
-					description: "Returns the authenticated user's account information.",
-					response: {
-						200: z.object({ user: userResponseSchema }),
-						401: appErrorSchema,
-						404: appErrorSchema,
-					},
-				}),
-			},
-			async (request, reply) => {
-				const userId = request.authV2User.id;
-				const usersRepository = new PrismaUsersRepository();
-				const useCase = new GetUserUseCase(usersRepository);
-				const user = await useCase.execute({ userId });
-
-				return reply.status(200).send({
-					user: {
-						id: user.id,
-						email: user.email,
-						created_at: user.created_at,
-						deleted_at: user.deleted_at,
-					},
-				});
-			},
-		);
-
 		typedAuth.delete(
-			"/users/me",
+			"/accounts/me",
 			{
 				schema: withBearerAuth({
-					tags: ["Users"],
+					tags: ["Accounts"],
 					summary: "Request account deletion",
 					description:
 						"Schedules the authenticated user's account for deletion after a grace period.",
@@ -94,10 +61,10 @@ export async function userRoutes(app: FastifyInstance) {
 		);
 
 		typedAuth.patch(
-			"/users/me/cancel-deletion",
+			"/accounts/me/cancel-deletion",
 			{
 				schema: withBearerAuth({
-					tags: ["Users"],
+					tags: ["Accounts"],
 					summary: "Cancel account deletion",
 					description: "Cancels a previously scheduled account deletion.",
 					response: {

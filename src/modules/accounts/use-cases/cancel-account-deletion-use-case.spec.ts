@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { AccountNotScheduledForDeletionError } from "@/modules/users/errors/account-not-scheduled-for-deletion-error.js";
-import { UserNotFoundError } from "@/modules/users/errors/user-not-found-error.js";
-import { makeUser } from "@/modules/users/factories/make-user.js";
-import { InMemoryAccountDeletionJobDispatcher } from "@/modules/users/providers/queue/in-memory/in-memory-account-deletion-job-dispatcher.js";
-import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
+import { AccountNotScheduledForDeletionError } from "@/modules/accounts/errors/account-not-scheduled-for-deletion-error.js";
+import { UserNotFoundError } from "@/modules/accounts/errors/user-not-found-error.js";
+import { makeUser } from "@/modules/accounts/factories/make-user.js";
+import { InMemoryAccountDeletionJobDispatcher } from "@/modules/accounts/providers/queue/in-memory/in-memory-account-deletion-job-dispatcher.js";
+import { InMemoryUsersRepository } from "@/modules/accounts/repositories/in-memory/in-memory-users-repositories.js";
 import { CancelAccountDeletionUseCase } from "./cancel-account-deletion-use-case.js";
 
 describe("cancel-account-deletion-use-case", () => {

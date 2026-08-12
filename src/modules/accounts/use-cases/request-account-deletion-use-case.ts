@@ -1,8 +1,8 @@
-import type { User } from "@/modules/users/dtos/users-dto.js";
-import { AccountAlreadyScheduledForDeletionError } from "@/modules/users/errors/account-already-scheduled-for-deletion-error.js";
-import { UserNotFoundError } from "@/modules/users/errors/user-not-found-error.js";
-import type { AccountDeletionJobDispatcher } from "@/modules/users/providers/queue/account-deletion-job-dispatcher.js";
-import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
+import type { User } from "@/modules/accounts/dtos/accounts-dto.js";
+import { AccountAlreadyScheduledForDeletionError } from "@/modules/accounts/errors/account-already-scheduled-for-deletion-error.js";
+import { UserNotFoundError } from "@/modules/accounts/errors/user-not-found-error.js";
+import type { AccountDeletionJobDispatcher } from "@/modules/accounts/providers/queue/account-deletion-job-dispatcher.js";
+import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 
 type RequestAccountDeletionUseCaseRequest = {
 	userId: string;

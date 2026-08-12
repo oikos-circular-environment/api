@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { faker } from "@faker-js/faker";
-import type { User } from "@/modules/users/dtos/users-dto.js";
+import type { User } from "@/modules/accounts/dtos/accounts-dto.js";
 
 export function makeUser(overrides?: Partial<User>): User {
 	return {
