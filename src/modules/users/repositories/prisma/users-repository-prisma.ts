@@ -1,4 +1,3 @@
-import type { UserCreateInput } from "@/generated/prisma/models.js";
 import { prisma } from "@/lib/prisma.js";
 import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
 
@@ -18,23 +17,6 @@ export class PrismaUsersRepository implements UsersRepository {
 			where: {
 				email,
 			},
-		});
-
-		return user;
-	}
-
-	async findByIdWithPassword(id: string) {
-		const user = await prisma.user.findUnique({
-			where: { id },
-			select: { id: true, email: true, password: true },
-		});
-
-		return user;
-	}
-
-	async create(data: UserCreateInput) {
-		const user = await prisma.user.create({
-			data,
 		});
 
 		return user;
@@ -62,13 +44,6 @@ export class PrismaUsersRepository implements UsersRepository {
 		});
 
 		return user;
-	}
-
-	async updatePassword(userId: string, passwordHash: string) {
-		await prisma.user.update({
-			where: { id: userId },
-			data: { password: passwordHash },
-		});
 	}
 
 	async delete(userId: string) {

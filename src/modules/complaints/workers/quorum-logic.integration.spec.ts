@@ -11,7 +11,7 @@ describe("quorum-logic", () => {
 	async function createUser(): Promise<string> {
 		const userId = randomUUID();
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			`quorum-test-${userId}@integration.test`,
 		);
@@ -143,7 +143,7 @@ describe("check-quorum-met", () => {
 	async function createUser(): Promise<string> {
 		const userId = randomUUID();
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			`check-quorum-test-${userId}@integration.test`,
 		);

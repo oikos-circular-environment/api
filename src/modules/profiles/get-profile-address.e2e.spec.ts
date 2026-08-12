@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
+import { createTestSession } from "@/test/create-test-session.js";
 
 describe("get-profile-address", () => {
 	const createdUserIds: string[] = [];
@@ -13,7 +14,7 @@ describe("get-profile-address", () => {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			userEmail,
 		);
@@ -21,8 +22,8 @@ describe("get-profile-address", () => {
 		return { id: userId, email: userEmail };
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email: string): Promise<string> {
+		return createTestSession(userId);
 	}
 
 	beforeAll(async () => {
@@ -49,7 +50,9 @@ describe("get-profile-address", () => {
 		await app.inject({
 			method: "PUT",
 			url: "/v1/profiles",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				full_name: "Sem Endereço",
 				display_name: `noaddr-${randomUUID().slice(0, 8)}`,
@@ -60,7 +63,9 @@ describe("get-profile-address", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: "/v1/profiles/addresses",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(200);
@@ -74,7 +79,9 @@ describe("get-profile-address", () => {
 		await app.inject({
 			method: "PUT",
 			url: "/v1/profiles",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				full_name: "Com Endereço",
 				display_name: `withaddr-${randomUUID().slice(0, 8)}`,
@@ -99,7 +106,9 @@ describe("get-profile-address", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: "/v1/profiles/addresses",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(200);
@@ -115,7 +124,9 @@ describe("get-profile-address", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: "/v1/profiles/addresses",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(404);

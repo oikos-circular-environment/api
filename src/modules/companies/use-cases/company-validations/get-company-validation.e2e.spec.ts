@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
+import { createTestSession } from "@/test/create-test-session.js";
 
 describe("get-company-validation", () => {
 	const createdUserIds: string[] = [];
@@ -12,7 +13,7 @@ describe("get-company-validation", () => {
 		const id = randomUUID();
 		const email = `e2e-${id}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			id,
 			email,
 		);
@@ -20,8 +21,8 @@ describe("get-company-validation", () => {
 		return { id, email };
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email: string): Promise<string> {
+		return createTestSession(userId);
 	}
 
 	async function createCompanyViaHttp(
@@ -32,7 +33,7 @@ describe("get-company-validation", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
-			headers: { authorization: `Bearer ${bearerToken(userId, email)}` },
+			headers: { authorization: `Bearer ${await bearerToken(userId, email)}` },
 			payload: {
 				identity,
 				identity_type: "CPF",
@@ -84,7 +85,9 @@ describe("get-company-validation", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/companies/${company.id}/validations`,
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 		});
 
 		expect(res.statusCode).toBe(200);
@@ -110,7 +113,7 @@ describe("get-company-validation", () => {
 			method: "GET",
 			url: `/v1/companies/${company.id}/validations`,
 			headers: {
-				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+				authorization: `Bearer ${await bearerToken(other.id, other.email)}`,
 			},
 		});
 

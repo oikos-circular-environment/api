@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
+import { createTestSession } from "@/test/create-test-session.js";
 
 describe("create-company", () => {
 	const createdUserIds: string[] = [];
@@ -12,7 +13,7 @@ describe("create-company", () => {
 		const id = randomUUID();
 		const email = `e2e-${id}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			id,
 			email,
 		);
@@ -20,8 +21,8 @@ describe("create-company", () => {
 		return { id, email };
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email: string): Promise<string> {
+		return createTestSession(userId);
 	}
 
 	beforeAll(async () => {
@@ -54,7 +55,9 @@ describe("create-company", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				identity: "12345678901",
 				identity_type: "CPF",

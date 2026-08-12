@@ -4,6 +4,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { createTestSession } from "@/test/create-test-session.js";
 
 describe("get-resolutions", () => {
 	const createdComplaintIds: string[] = [];
@@ -15,7 +16,7 @@ describe("get-resolutions", () => {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			userEmail,
 		);
@@ -62,8 +63,8 @@ describe("get-resolutions", () => {
 		return resolution.id;
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email: string): Promise<string> {
+		return createTestSession(userId);
 	}
 
 	beforeAll(async () => {
@@ -98,7 +99,7 @@ describe("get-resolutions", () => {
 			method: "GET",
 			url: `/v1/complaints/${complaintId}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(owner.id, owner.email)}`,
+				authorization: `Bearer ${await bearerToken(owner.id, owner.email)}`,
 			},
 		});
 
@@ -116,7 +117,7 @@ describe("get-resolutions", () => {
 			method: "GET",
 			url: `/v1/complaints/${complaintId}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 		});
 

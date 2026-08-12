@@ -1,7 +1,6 @@
 import fastifyBasicAuth from "@fastify/basic-auth";
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
-import fastifyJwt from "@fastify/jwt";
 import fastifyMultipart from "@fastify/multipart";
 import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
@@ -16,7 +15,6 @@ import {
 } from "fastify-type-provider-zod";
 import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
-import { authRoutes } from "./modules/auth/routes/v1/auth-routes.js";
 import { authV2Routes } from "./modules/auth/routes/v2/auth-v2-routes.js";
 import { usersAdminRoutes } from "./modules/auth/routes/v2/users-admin-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
@@ -79,17 +77,6 @@ app.register(fastifySwagger, {
 		security: [{ clientKeyAuth: [] }],
 	},
 	transform: jsonSchemaTransform,
-});
-
-app.register(fastifyJwt, {
-	secret: env.JWT_SECRET,
-	cookie: {
-		cookieName: "refreshToken",
-		signed: false,
-	},
-	sign: {
-		expiresIn: "7d",
-	},
 });
 
 app.register(fastifyCookie);
@@ -212,7 +199,6 @@ app.register(ScalarApiReference, {
 
 app.get("/health", () => ({ status: "ok" }));
 
-app.register(authRoutes, { prefix: "/v1" });
 app.register(authV2Routes, { prefix: "/v2" });
 app.register(usersAdminRoutes, { prefix: "/v2" });
 app.register(userRoutes, { prefix: "/v1" });

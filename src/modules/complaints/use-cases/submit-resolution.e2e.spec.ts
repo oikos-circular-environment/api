@@ -4,6 +4,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { createTestSession } from "@/test/create-test-session.js";
 
 describe("submit-resolution", () => {
 	const createdComplaintIds: string[] = [];
@@ -15,7 +16,7 @@ describe("submit-resolution", () => {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			userEmail,
 		);
@@ -37,8 +38,8 @@ describe("submit-resolution", () => {
 		return c.id;
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email: string): Promise<string> {
+		return createTestSession(userId);
 	}
 
 	beforeAll(async () => {
@@ -74,7 +75,7 @@ describe("submit-resolution", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "The problem was fixed by the city hall." },
 		});
@@ -92,7 +93,7 @@ describe("submit-resolution", () => {
 		const owner = await createUser();
 		const resolver = await createUser();
 		const complaintId = await createComplaint(owner.id);
-		const token = bearerToken(resolver.id, resolver.email);
+		const token = await bearerToken(resolver.id, resolver.email);
 
 		await app.inject({
 			method: "POST",
@@ -125,7 +126,7 @@ describe("submit-resolution", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "Should not be allowed." },
 		});
@@ -141,7 +142,7 @@ describe("submit-resolution", () => {
 			method: "POST",
 			url: `/v1/complaints/${randomUUID()}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "The issue was resolved." },
 		});
