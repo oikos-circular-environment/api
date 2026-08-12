@@ -13,8 +13,8 @@ const BCRYPT_COST = 10;
 export const emailProvider = makeEmailProvider(new AuthEmailRenderer());
 
 export const auth = betterAuth({
-	appName: "Oikos API",
-	database: prismaAdapter(prisma, { provider: "postgresql" }),
+	appName: "Oikos Economia Circular",
+	database: prismaAdapter(prisma, { provider: "postgresql", usePlural: true }),
 	secret: env.BETTER_AUTH_SECRET,
 	baseURL: env.BETTER_AUTH_URL ?? env.APP_PUBLIC_URL,
 	trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS,
@@ -31,7 +31,7 @@ export const auth = betterAuth({
 			await emailProvider.send({
 				type: "reset-password",
 				to: data.user.email,
-				subject: "Redefinição de senha - Oikos",
+				subject: "Redefinição de senha",
 				payload: {
 					url: data.url,
 					token: data.token,
@@ -41,11 +41,12 @@ export const auth = betterAuth({
 		},
 	},
 	emailVerification: {
+		sendOnSignUp: true,
 		sendVerificationEmail: async (data) => {
 			await emailProvider.send({
 				type: "verify-email",
 				to: data.user.email,
-				subject: "Confirme seu e-mail - Oikos",
+				subject: "Confirme seu e-mail",
 				payload: {
 					url: data.url,
 					token: data.token,

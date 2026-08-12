@@ -16,9 +16,9 @@ import {
 	signInV2Schema,
 	signUpV2Schema,
 } from "../../dtos/auth-v2-dto.js";
-import type { AuthUser } from "../../providers/auth/auth-provider.js";
 import { auth } from "../../providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "../../providers/auth/better-auth/better-auth-auth-provider.js";
+import { authUserResponseMapper } from "../../providers/auth/better-auth/mapper/auth-user-response-mapper.js";
 import { ChangePasswordUseCase } from "../../use-cases/v2/change-password-use-case.js";
 import { GetSessionUseCase } from "../../use-cases/v2/get-session-use-case.js";
 import { RequestPasswordResetUseCase } from "../../use-cases/v2/request-password-reset-use-case.js";
@@ -32,22 +32,6 @@ const AUTH_V2_TAG = "Auth V2";
 
 function buildHeaders(request: FastifyRequest): Headers {
 	return new Headers(request.headers as Record<string, string>);
-}
-
-function mapAuthUserToResponse(user: AuthUser) {
-	return {
-		id: user.id,
-		email: user.email,
-		name: user.name,
-		email_verified: user.emailVerified,
-		image: user.image,
-		role: user.role,
-		banned: user.banned,
-		ban_reason: user.banReason,
-		ban_expires: user.banExpires?.toISOString() ?? null,
-		created_at: user.createdAt.toISOString(),
-		updated_at: user.updatedAt.toISOString(),
-	};
 }
 
 export async function authV2Routes(app: FastifyInstance): Promise<void> {
@@ -107,7 +91,7 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const { token, user } = await signInUseCase.execute(request.body);
-			return reply.send({ token, user: mapAuthUserToResponse(user) });
+			return reply.send({ token, user: authUserResponseMapper(user) });
 		},
 	);
 
@@ -145,7 +129,7 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const { user } = await getSessionUseCase.execute(buildHeaders(request));
-			return reply.send({ user: mapAuthUserToResponse(user) });
+			return reply.send({ user: authUserResponseMapper(user) });
 		},
 	);
 
