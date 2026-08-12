@@ -16,12 +16,12 @@ import {
 import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
 import { authV2Routes } from "./modules/auth/routes/v2/auth-v2-routes.js";
-import { usersAdminRoutes } from "./modules/auth/routes/v2/users-admin-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
 import { marketRoutes } from "./modules/market/market-routes.js";
 import { moderationRoutes } from "./modules/moderation/moderation-routes.js";
+import { usersAdminRoutes } from "./modules/moderation/users-admin-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { userRoutes } from "./modules/users/user-routes.js";

@@ -1,4 +1,4 @@
-import type { AuthProvider } from "../../../providers/auth/auth-provider.js";
+import type { AuthProvider } from "@/modules/auth/providers/auth/auth-provider.js";
 
 export type ResetUserPasswordUseCaseInput = {
 	userId: string;

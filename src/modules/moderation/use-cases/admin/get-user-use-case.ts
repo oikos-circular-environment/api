@@ -1,7 +1,7 @@
 import type {
 	AuthProvider,
 	AuthUser,
-} from "../../../providers/auth/auth-provider.js";
+} from "@/modules/auth/providers/auth/auth-provider.js";
 
 export class GetUserUseCase {
 	constructor(private readonly authProvider: AuthProvider) {}

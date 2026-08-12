@@ -1,5 +1,5 @@
 import z from "zod";
-import { authV2UserSchema } from "./auth-v2-dto.js";
+import { authV2UserSchema } from "@/modules/auth/dtos/auth-v2-dto.js";
 
 export const listUsersAdminQuerySchema = z.object({
 	searchValue: z.string().optional(),

@@ -1,11 +1,17 @@
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
-import { appErrorSchema } from "@/modules/common/errors/app-error.js";
+import { authV2UserSchema } from "@/modules/auth/dtos/auth-v2-dto.js";
+import type {
+	AuthSession,
+	AuthUser,
+} from "@/modules/auth/providers/auth/auth-provider.js";
+import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
+import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { requireRole } from "@/modules/common/middlewares/require-role.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
-import { authV2UserSchema } from "../../dtos/auth-v2-dto.js";
+import { appErrorSchema } from "../common/errors/app-error.js";
 import {
 	banUserAdminBodySchema,
 	createUserAdminBodySchema,
@@ -15,23 +21,17 @@ import {
 	resetPasswordAdminBodySchema,
 	setRoleAdminBodySchema,
 	userAdminParamsSchema,
-} from "../../dtos/users-admin-dto.js";
-import type {
-	AuthSession,
-	AuthUser,
-} from "../../providers/auth/auth-provider.js";
-import { auth } from "../../providers/auth/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../../providers/auth/better-auth/better-auth-auth-provider.js";
-import { BanUserUseCase } from "../../use-cases/v2/admin/ban-user-use-case.js";
-import { CreateUserUseCase } from "../../use-cases/v2/admin/create-user-use-case.js";
-import { GetUserUseCase } from "../../use-cases/v2/admin/get-user-use-case.js";
-import { ListUserSessionsUseCase } from "../../use-cases/v2/admin/list-user-sessions-use-case.js";
-import { ListUsersUseCase } from "../../use-cases/v2/admin/list-users-use-case.js";
-import { RemoveUserUseCase } from "../../use-cases/v2/admin/remove-user-use-case.js";
-import { ResetUserPasswordUseCase } from "../../use-cases/v2/admin/reset-user-password-use-case.js";
-import { RevokeUserSessionsUseCase } from "../../use-cases/v2/admin/revoke-user-sessions-use-case.js";
-import { SetUserRoleUseCase } from "../../use-cases/v2/admin/set-user-role-use-case.js";
-import { UnbanUserUseCase } from "../../use-cases/v2/admin/unban-user-use-case.js";
+} from "./dtos/users-admin-dto.js";
+import { BanUserUseCase } from "./use-cases/admin/ban-user-use-case.js";
+import { CreateUserUseCase } from "./use-cases/admin/create-user-use-case.js";
+import { GetUserUseCase } from "./use-cases/admin/get-user-use-case.js";
+import { ListUserSessionsUseCase } from "./use-cases/admin/list-user-sessions-use-case.js";
+import { ListUsersUseCase } from "./use-cases/admin/list-users-use-case.js";
+import { RemoveUserUseCase } from "./use-cases/admin/remove-user-use-case.js";
+import { ResetUserPasswordUseCase } from "./use-cases/admin/reset-user-password-use-case.js";
+import { RevokeUserSessionsUseCase } from "./use-cases/admin/revoke-user-sessions-use-case.js";
+import { SetUserRoleUseCase } from "./use-cases/admin/set-user-role-use-case.js";
+import { UnbanUserUseCase } from "./use-cases/admin/unban-user-use-case.js";
 
 const USERS_ADMIN_TAG = "Users Admin";
 
