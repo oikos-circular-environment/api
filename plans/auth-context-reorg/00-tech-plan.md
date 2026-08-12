@@ -32,6 +32,15 @@ mesma branch `christiancesar/8-adicionar-better-auth-na-api`.
   de usuários é privado (usa sessão v2) e fica em `/v2/moderation/users`, não
   `/v1` — mistura versão com o suporte seria inconsistente com o mecanismo de auth
   real. Ver T03.
+- **`moderation-routes.ts` é composition root.** Cada sub-área de `moderation`
+  (support, admin, e as que vierem) ganha seu próprio arquivo
+  `moderation-<area>-routes.ts`, com seu prefixo aplicado no `register()`
+  interno. `app.ts` registra só `moderationRoutes`, sem prefixo — os
+  sub-módulos carregam o prefixo próprio (`/v1` pro support público,
+  `/v2/moderation` pro admin privado). Tags OpenAPI seguem o mesmo espírito:
+  `"Moderation"` é a tag guarda-chuva (só na rota representativa de cada
+  sub-área), `"Moderation / Support"` e `"Moderation / Users"` são as
+  sub-tags. Ver T04.
 - **Sem RBAC novo.** `role="admin"` continua sendo o único gate; separar
   moderador/dono fica para quando o épico de RBAC multi-tenant for priorizado.
 - **Sem compat layer.** `/v1/users/*` é removido por completo, não redirecionado.

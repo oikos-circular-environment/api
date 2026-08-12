@@ -33,7 +33,8 @@ import { RevokeUserSessionsUseCase } from "./use-cases/admin/revoke-user-session
 import { SetUserRoleUseCase } from "./use-cases/admin/set-user-role-use-case.js";
 import { UnbanUserUseCase } from "./use-cases/admin/unban-user-use-case.js";
 
-const USERS_ADMIN_TAG = "Users Admin";
+const MODERATION_TAG = "Moderation";
+const MODERATION_USERS_TAG = "Moderation / Users";
 
 function buildHeaders(request: FastifyRequest): Headers {
 	return new Headers(request.headers as Record<string, string>);
@@ -65,7 +66,9 @@ function mapAuthSessionToResponse(session: AuthSession) {
 	};
 }
 
-export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
+export async function moderationAdminRoutes(
+	app: FastifyInstance,
+): Promise<void> {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
@@ -87,7 +90,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_TAG, MODERATION_USERS_TAG],
 				summary: "List users",
 				description: "Lists users with search, filter, sort and pagination.",
 				querystring: listUsersAdminQuerySchema,
@@ -117,7 +120,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Get user by id",
 				params: userAdminParamsSchema,
 				response: {
@@ -142,7 +145,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Create user",
 				body: createUserAdminBodySchema,
 				response: {
@@ -168,7 +171,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Set user role",
 				description: "Changes the role of a user.",
 				params: userAdminParamsSchema,
@@ -196,7 +199,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Ban user",
 				description: "Bans a user and revokes their sessions.",
 				params: userAdminParamsSchema,
@@ -229,7 +232,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Unban user",
 				description: "Removes the ban from a user.",
 				params: userAdminParamsSchema,
@@ -257,7 +260,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "List user sessions",
 				params: userAdminParamsSchema,
 				response: {
@@ -284,7 +287,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Revoke user sessions",
 				description: "Revokes all sessions for a user.",
 				params: userAdminParamsSchema,
@@ -310,7 +313,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Reset user password",
 				description: "Hard resets a user's password without the current one.",
 				params: userAdminParamsSchema,
@@ -341,7 +344,7 @@ export async function usersAdminRoutes(app: FastifyInstance): Promise<void> {
 		{
 			preHandler: [verifySession, requireAdmin],
 			schema: withBearerAuth({
-				tags: [USERS_ADMIN_TAG],
+				tags: [MODERATION_USERS_TAG],
 				summary: "Delete user",
 				description: "Permanently removes a user and their sessions.",
 				params: userAdminParamsSchema,

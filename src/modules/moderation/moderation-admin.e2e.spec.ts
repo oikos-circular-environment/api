@@ -7,7 +7,7 @@ import { prisma } from "@/lib/prisma.js";
 const PASSWORD = "Test@123456";
 const NEW_PASSWORD = "NewPass@123456";
 
-describe("users-admin", () => {
+describe("moderation-admin", () => {
 	const createdUserIds: string[] = [];
 	const clientKeyHeader = { "X-Client-Key": env.CLIENT_KEY_MOBILE ?? "" };
 
