@@ -27,6 +27,11 @@ mesma branch `christiancesar/8-adicionar-better-auth-na-api`.
   conceitos diferentes que passam a compartilhar o nome. Isso é intencional — Christian
   confirmou que "account" aqui é sobre a conta do usuário logado, não a entidade
   `Account` do Better Auth.
+- **URL reflete o aninhamento, não só o dono do arquivo.** `moderation` terá
+  endpoints públicos (`/v1/moderation/support`, já existente) e privados. O painel
+  de usuários é privado (usa sessão v2) e fica em `/v2/moderation/users`, não
+  `/v1` — mistura versão com o suporte seria inconsistente com o mecanismo de auth
+  real. Ver T03.
 - **Sem RBAC novo.** `role="admin"` continua sendo o único gate; separar
   moderador/dono fica para quando o épico de RBAC multi-tenant for priorizado.
 - **Sem compat layer.** `/v1/users/*` é removido por completo, não redirecionado.

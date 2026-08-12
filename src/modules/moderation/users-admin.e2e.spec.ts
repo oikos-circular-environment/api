@@ -78,7 +78,7 @@ describe("users-admin", () => {
 		await prisma.verification.deleteMany({});
 	});
 
-	describe("GET /v2/users", () => {
+	describe("GET /v2/moderation/users", () => {
 		it("lists users when authenticated as admin", async () => {
 			const adminEmail = makeEmail("admin");
 			await makeAdmin(adminEmail);
@@ -89,7 +89,7 @@ describe("users-admin", () => {
 
 			const res = await app.inject({
 				method: "GET",
-				url: "/v2/users",
+				url: "/v2/moderation/users",
 				headers: {
 					...clientKeyHeader,
 					authorization: `Bearer ${adminToken}`,
@@ -110,7 +110,7 @@ describe("users-admin", () => {
 
 			const res = await app.inject({
 				method: "GET",
-				url: "/v2/users",
+				url: "/v2/moderation/users",
 				headers: {
 					...clientKeyHeader,
 					authorization: `Bearer ${token}`,
@@ -138,7 +138,7 @@ describe("users-admin", () => {
 
 			const listRes = await app.inject({
 				method: "GET",
-				url: "/v2/users",
+				url: "/v2/moderation/users",
 				headers: adminHeaders,
 				query: { searchValue: email, searchField: "email" },
 			});
@@ -148,7 +148,7 @@ describe("users-admin", () => {
 
 			const getRes = await app.inject({
 				method: "GET",
-				url: `/v2/users/${targetId}`,
+				url: `/v2/moderation/users/${targetId}`,
 				headers: adminHeaders,
 			});
 			expect(getRes.statusCode).toBe(200);
@@ -157,7 +157,7 @@ describe("users-admin", () => {
 
 			const sessionsBeforeRes = await app.inject({
 				method: "GET",
-				url: `/v2/users/${targetId}/sessions`,
+				url: `/v2/moderation/users/${targetId}/sessions`,
 				headers: adminHeaders,
 			});
 			expect(sessionsBeforeRes.statusCode).toBe(200);
@@ -168,7 +168,7 @@ describe("users-admin", () => {
 
 			const banRes = await app.inject({
 				method: "POST",
-				url: `/v2/users/${targetId}/ban`,
+				url: `/v2/moderation/users/${targetId}/ban`,
 				headers: adminHeaders,
 				payload: { banReason: "violation" },
 			});
@@ -181,14 +181,14 @@ describe("users-admin", () => {
 
 			const revokeRes = await app.inject({
 				method: "POST",
-				url: `/v2/users/${targetId}/revoke-sessions`,
+				url: `/v2/moderation/users/${targetId}/revoke-sessions`,
 				headers: adminHeaders,
 			});
 			expect(revokeRes.statusCode).toBe(204);
 
 			const sessionsAfterRes = await app.inject({
 				method: "GET",
-				url: `/v2/users/${targetId}/sessions`,
+				url: `/v2/moderation/users/${targetId}/sessions`,
 				headers: adminHeaders,
 			});
 			expect(sessionsAfterRes.statusCode).toBe(200);
@@ -199,7 +199,7 @@ describe("users-admin", () => {
 
 			const resetRes = await app.inject({
 				method: "POST",
-				url: `/v2/users/${targetId}/reset-password`,
+				url: `/v2/moderation/users/${targetId}/reset-password`,
 				headers: adminHeaders,
 				payload: { newPassword: NEW_PASSWORD },
 			});
@@ -207,7 +207,7 @@ describe("users-admin", () => {
 
 			const unbanForSignInRes = await app.inject({
 				method: "POST",
-				url: `/v2/users/${targetId}/unban`,
+				url: `/v2/moderation/users/${targetId}/unban`,
 				headers: adminHeaders,
 			});
 			expect(unbanForSignInRes.statusCode).toBe(200);
@@ -222,21 +222,21 @@ describe("users-admin", () => {
 
 			const removeRes = await app.inject({
 				method: "DELETE",
-				url: `/v2/users/${targetId}`,
+				url: `/v2/moderation/users/${targetId}`,
 				headers: adminHeaders,
 			});
 			expect(removeRes.statusCode).toBe(204);
 
 			const getAfterRemoveRes = await app.inject({
 				method: "GET",
-				url: `/v2/users/${targetId}`,
+				url: `/v2/moderation/users/${targetId}`,
 				headers: adminHeaders,
 			});
 			expect(getAfterRemoveRes.statusCode).toBe(404);
 		});
 	});
 
-	describe("POST /v2/users/:id/unban", () => {
+	describe("POST /v2/moderation/users/:id/unban", () => {
 		it("unbans a previously banned user", async () => {
 			const adminEmail = makeEmail("admin");
 			await makeAdmin(adminEmail);
@@ -252,14 +252,14 @@ describe("users-admin", () => {
 
 			await app.inject({
 				method: "POST",
-				url: `/v2/users/${targetId}/ban`,
+				url: `/v2/moderation/users/${targetId}/ban`,
 				headers: adminHeaders,
 				payload: {},
 			});
 
 			const unbanRes = await app.inject({
 				method: "POST",
-				url: `/v2/users/${targetId}/unban`,
+				url: `/v2/moderation/users/${targetId}/unban`,
 				headers: adminHeaders,
 			});
 			expect(unbanRes.statusCode).toBe(200);
@@ -268,7 +268,7 @@ describe("users-admin", () => {
 		});
 	});
 
-	describe("POST /v2/users", () => {
+	describe("POST /v2/moderation/users", () => {
 		it("creates a user when authenticated as admin", async () => {
 			const adminEmail = makeEmail("admin");
 			await makeAdmin(adminEmail);
@@ -277,7 +277,7 @@ describe("users-admin", () => {
 			const newEmail = makeEmail("created");
 			const res = await app.inject({
 				method: "POST",
-				url: "/v2/users",
+				url: "/v2/moderation/users",
 				headers: {
 					...clientKeyHeader,
 					authorization: `Bearer ${adminToken}`,
@@ -300,7 +300,7 @@ describe("users-admin", () => {
 		});
 	});
 
-	describe("PATCH /v2/users/:id/role", () => {
+	describe("PATCH /v2/moderation/users/:id/role", () => {
 		it("changes the user role when authenticated as admin", async () => {
 			const adminEmail = makeEmail("admin");
 			await makeAdmin(adminEmail);
@@ -311,7 +311,7 @@ describe("users-admin", () => {
 
 			const res = await app.inject({
 				method: "PATCH",
-				url: `/v2/users/${targetId}/role`,
+				url: `/v2/moderation/users/${targetId}/role`,
 				headers: {
 					...clientKeyHeader,
 					authorization: `Bearer ${adminToken}`,
@@ -341,32 +341,40 @@ describe("users-admin", () => {
 			};
 
 			const routes = [
-				{ method: "GET", url: "/v2/users" },
-				{ method: "GET", url: `/v2/users/${targetId}` },
+				{ method: "GET", url: "/v2/moderation/users" },
+				{ method: "GET", url: `/v2/moderation/users/${targetId}` },
 				{
 					method: "POST",
-					url: "/v2/users",
+					url: "/v2/moderation/users",
 					payload: { name: "X", email: makeEmail("x") },
 				},
 				{
 					method: "PATCH",
-					url: `/v2/users/${targetId}/role`,
+					url: `/v2/moderation/users/${targetId}/role`,
 					payload: { role: "admin" },
 				},
-				{ method: "POST", url: `/v2/users/${targetId}/ban`, payload: {} },
-				{ method: "POST", url: `/v2/users/${targetId}/unban`, payload: {} },
-				{ method: "GET", url: `/v2/users/${targetId}/sessions` },
 				{
 					method: "POST",
-					url: `/v2/users/${targetId}/revoke-sessions`,
+					url: `/v2/moderation/users/${targetId}/ban`,
 					payload: {},
 				},
 				{
 					method: "POST",
-					url: `/v2/users/${targetId}/reset-password`,
+					url: `/v2/moderation/users/${targetId}/unban`,
+					payload: {},
+				},
+				{ method: "GET", url: `/v2/moderation/users/${targetId}/sessions` },
+				{
+					method: "POST",
+					url: `/v2/moderation/users/${targetId}/revoke-sessions`,
+					payload: {},
+				},
+				{
+					method: "POST",
+					url: `/v2/moderation/users/${targetId}/reset-password`,
 					payload: { newPassword: NEW_PASSWORD },
 				},
-				{ method: "DELETE", url: `/v2/users/${targetId}` },
+				{ method: "DELETE", url: `/v2/moderation/users/${targetId}` },
 			];
 
 			for (const route of routes) {
@@ -381,7 +389,7 @@ describe("users-admin", () => {
 
 			await app.inject({
 				method: "DELETE",
-				url: `/v2/users/${targetId}`,
+				url: `/v2/moderation/users/${targetId}`,
 				headers: {
 					...clientKeyHeader,
 					authorization: `Bearer ${adminToken}`,

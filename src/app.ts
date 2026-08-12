@@ -200,7 +200,7 @@ app.register(ScalarApiReference, {
 app.get("/health", () => ({ status: "ok" }));
 
 app.register(authV2Routes, { prefix: "/v2" });
-app.register(usersAdminRoutes, { prefix: "/v2" });
+app.register(usersAdminRoutes, { prefix: "/v2/moderation" });
 app.register(accountRoutes, { prefix: "/v2" });
 app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });
