@@ -3,6 +3,7 @@ import type { Company } from "@/modules/companies/dtos/companies-dto.js";
 export type PrismaCompany = {
 	id: string;
 	user_id: string;
+	organization_id: string;
 	identity: string;
 	identity_type: "CPF" | "CNPJ";
 	company_type: "ONG" | "COMPANY" | "GOVERNMENT" | "COLLECTOR";
@@ -32,6 +33,7 @@ export function companyMapper(company: PrismaCompany): Company | null {
 	return {
 		id: company.id,
 		user_id: company.user_id,
+		organization_id: company.organization_id,
 		identity: company.identity,
 		identity_type: company.identity_type,
 		company_type: company.company_type,

@@ -53,7 +53,7 @@ export async function moderationUsersRoutes(
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
-	const requireAdmin = requireRole("admin");
+	const requireModerator = requireRole("moderator");
 
 	const listUsersUseCase = new ListUsersUseCase(authProvider);
 	const getUserUseCase = new GetUserUseCase(authProvider);
@@ -69,7 +69,7 @@ export async function moderationUsersRoutes(
 	typedApp.get(
 		"/users",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "List users",
@@ -99,7 +99,7 @@ export async function moderationUsersRoutes(
 	typedApp.get(
 		"/users/:id",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Get user by id",
@@ -124,7 +124,7 @@ export async function moderationUsersRoutes(
 	typedApp.post(
 		"/users",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Create user",
@@ -150,7 +150,7 @@ export async function moderationUsersRoutes(
 	typedApp.patch(
 		"/users/:id/role",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Set user role",
@@ -178,7 +178,7 @@ export async function moderationUsersRoutes(
 	typedApp.post(
 		"/users/:id/ban",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Ban user",
@@ -211,7 +211,7 @@ export async function moderationUsersRoutes(
 	typedApp.post(
 		"/users/:id/unban",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Unban user",
@@ -239,7 +239,7 @@ export async function moderationUsersRoutes(
 	typedApp.get(
 		"/users/:id/sessions",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "List user sessions",
@@ -266,7 +266,7 @@ export async function moderationUsersRoutes(
 	typedApp.post(
 		"/users/:id/revoke-sessions",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Revoke user sessions",
@@ -292,7 +292,7 @@ export async function moderationUsersRoutes(
 	typedApp.post(
 		"/users/:id/reset-password",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Reset user password",
@@ -323,7 +323,7 @@ export async function moderationUsersRoutes(
 	typedApp.delete(
 		"/users/:id",
 		{
-			preHandler: [verifySession, requireAdmin],
+			preHandler: [verifySession, requireModerator],
 			schema: withBearerAuth({
 				tags: [MODERATION_USERS_TAG],
 				summary: "Delete user",

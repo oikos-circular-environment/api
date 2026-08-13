@@ -18,7 +18,7 @@ describe("set-user-role-use-case", () => {
 				name: "Admin",
 				email: "admin@example.com",
 				password: "Test@123456",
-				role: "admin",
+				role: "moderator",
 			},
 			new Headers(),
 		);
@@ -31,10 +31,10 @@ describe("set-user-role-use-case", () => {
 		});
 
 		const result = await sut.execute(
-			{ userId: user.id, role: "admin" },
+			{ userId: user.id, role: "moderator" },
 			headers,
 		);
 
-		expect(result.role).toBe("admin");
+		expect(result.role).toBe("moderator");
 	});
 });

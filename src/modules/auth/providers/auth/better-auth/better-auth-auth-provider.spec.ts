@@ -127,6 +127,30 @@ describe("better-auth-auth-provider", () => {
 			}
 		});
 
+		it("translates invalid-token from verify-email to invalid-reset-token-error", async () => {
+			const provider = providerWithApi({
+				verifyEmail: vi.fn().mockRejectedValue(
+					new APIError("BAD_REQUEST", {
+						code: "INVALID_TOKEN",
+						message: "Invalid token",
+					}),
+				),
+			});
+
+			let thrownError: unknown;
+			try {
+				await provider.verifyEmail("invalid");
+			} catch (error) {
+				thrownError = error;
+			}
+
+			expect(thrownError).toBeInstanceOf(InvalidResetTokenError);
+			if (thrownError instanceof InvalidResetTokenError) {
+				expect(thrownError.code).toBe("INVALID_RESET_TOKEN");
+				expect(thrownError.statusCode).toBe(400);
+			}
+		});
+
 		it("translates email-not-verified to email-not-verified-error", async () => {
 			const provider = providerWithApi({
 				signInEmail: vi.fn().mockRejectedValue(

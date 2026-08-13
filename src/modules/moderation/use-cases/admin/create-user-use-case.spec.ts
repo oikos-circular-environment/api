@@ -12,7 +12,7 @@ describe("create-user-use-case", () => {
 				name: "Admin",
 				email: "admin@example.com",
 				password: "Test@123456",
-				role: "admin",
+				role: "moderator",
 			},
 			new Headers(),
 		);
@@ -29,12 +29,12 @@ describe("create-user-use-case", () => {
 				name: "New User",
 				email: "new@example.com",
 				password: "Test@123456",
-				role: "admin",
+				role: "moderator",
 			},
 			headers,
 		);
 
 		expect(result.email).toBe("new@example.com");
-		expect(result.role).toBe("admin");
+		expect(result.role).toBe("moderator");
 	});
 });

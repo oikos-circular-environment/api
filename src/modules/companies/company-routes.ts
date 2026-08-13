@@ -23,6 +23,7 @@ import {
 	upsertCompanyServicesSchema,
 	upsertCompanyWastesSchema,
 } from "./dtos/companies-dto.js";
+import { BetterAuthOrganizationProvider } from "./providers/better-auth-organization-provider.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaBusinessHoursRepository } from "./repositories/prisma/business-hours-repository-prisma.js";
 import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repository-prisma.js";
@@ -63,10 +64,12 @@ export async function companyRoutes(app: FastifyInstance) {
 	const storageProvider = makeStorageProvider();
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
+	const organizationProvider = new BetterAuthOrganizationProvider(auth);
 
 	const createCompanyUseCase = new CreateCompanyUseCase(
 		companiesRepository,
 		validationRepository,
+		organizationProvider,
 	);
 	const getCompanyUseCase = new GetCompanyUseCase(
 		companiesRepository,
@@ -141,7 +144,10 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_TAG],
 				summary: "Create user company",
 				description: "Creates a company for the authenticated user.",
-				body: createCompanySchema.omit({ user_id: true }),
+				body: createCompanySchema.omit({
+					user_id: true,
+					organization_id: true,
+				}),
 				response: {
 					201: z.object({ company: companySchema }),
 					401: appErrorSchema,

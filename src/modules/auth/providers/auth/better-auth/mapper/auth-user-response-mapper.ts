@@ -1,7 +1,9 @@
 import type { AuthV2UserResponse } from "@/modules/auth/dtos/auth-v2-dto.js";
 import type { AuthUser } from "../../auth-provider.js";
 
-export function authUserResponseMapper(user: AuthUser): AuthV2UserResponse {
+export function authUserResponseMapper(
+	user: AuthUser,
+): Omit<AuthV2UserResponse, "organizations"> {
 	return {
 		id: user.id,
 		email: user.email,

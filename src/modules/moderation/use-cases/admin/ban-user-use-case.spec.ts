@@ -18,7 +18,7 @@ describe("ban-user-use-case", () => {
 				name: "Admin",
 				email: "admin@example.com",
 				password: "Test@123456",
-				role: "admin",
+				role: "moderator",
 			},
 			new Headers(),
 		);

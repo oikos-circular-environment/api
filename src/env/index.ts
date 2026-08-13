@@ -12,6 +12,7 @@ const envSchema = z
 
 		STORAGE_PROVIDER: z.enum(["minio", "supabase"]).default("minio"),
 		APP_PUBLIC_URL: z.string().default("http://localhost:3333"),
+		WEB_APP_URL: z.string().default("http://localhost:3000"),
 
 		BETTER_AUTH_SECRET: z.string(),
 		BETTER_AUTH_URL: z.string().optional(),

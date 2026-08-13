@@ -41,7 +41,7 @@ describe("moderation-admin", () => {
 		const { user } = await signIn(email);
 		await prisma.user.update({
 			where: { id: user.id },
-			data: { role: "admin" },
+			data: { role: "moderator" },
 		});
 		createdUserIds.push(user.id);
 		return email;
@@ -316,12 +316,12 @@ describe("moderation-admin", () => {
 					...clientKeyHeader,
 					authorization: `Bearer ${adminToken}`,
 				},
-				payload: { role: "admin" },
+				payload: { role: "moderator" },
 			});
 
 			expect(res.statusCode).toBe(200);
 			const body = res.json<{ user: { role: string } }>();
-			expect(body.user.role).toBe("admin");
+			expect(body.user.role).toBe("moderator");
 		});
 	});
 
@@ -351,7 +351,7 @@ describe("moderation-admin", () => {
 				{
 					method: "PATCH",
 					url: `/v2/moderation/users/${targetId}/role`,
-					payload: { role: "admin" },
+					payload: { role: "moderator" },
 				},
 				{
 					method: "POST",

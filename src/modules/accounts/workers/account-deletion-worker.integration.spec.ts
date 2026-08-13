@@ -109,6 +109,10 @@ describe("account-deletion-worker", () => {
 			avatarId = avatar.id;
 		}
 
+		const organization = await prisma.organization.create({
+			data: { name: "Test Org", slug: randomUUID() },
+		});
+
 		return prisma.company.create({
 			data: {
 				identity: randomUUID().slice(0, 14),
@@ -119,6 +123,7 @@ describe("account-deletion-worker", () => {
 				phones: ["66999990001"],
 				started_activity_in: new Date(),
 				user_id: userId,
+				organization_id: organization.id,
 				address_id: addressId,
 				avatar_id: avatarId,
 			},
