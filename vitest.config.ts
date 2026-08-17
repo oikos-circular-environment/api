@@ -9,10 +9,10 @@ export default defineConfig({
 	},
 	test: {
 		root: "./",
-		include: ["src/**/*.spec.ts", "cli/**/*.spec.ts"],
+		include: ["src/**/*.spec.{ts,tsx}", "cli/**/*.spec.{ts,tsx}"],
 		exclude: [
-			"src/**/*.e2e.spec.ts",
-			"src/**/*.integration.spec.ts",
+			"src/**/*.e2e.spec.{ts,tsx}",
+			"src/**/*.integration.spec.{ts,tsx}",
 			"**/node_modules/**",
 		],
 		coverage: {

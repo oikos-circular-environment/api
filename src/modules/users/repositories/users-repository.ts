@@ -5,7 +5,7 @@ export interface UsersRepository {
 	findByEmail(email: string): Promise<User | null>;
 	findByIdWithPassword(
 		id: string,
-	): Promise<{ id: string; email: string; password: string } | null>;
+	): Promise<{ id: string; email: string; password: string | null } | null>;
 	create(data: CreateUser): Promise<User>;
 	findAll(): Promise<User[]>;
 	markAsDeleted(userId: string, deletionJobId: string): Promise<User>;

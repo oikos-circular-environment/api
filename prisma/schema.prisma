@@ -14,21 +14,81 @@ datasource db {
 
 model User {
   id              String    @id @default(uuid())
+  name            String?
   email           String    @unique
-  password        String
-  created_at      DateTime  @default(now())
-  deleted_at      DateTime?
+  email_verified  Boolean   @default(false)
+  image           String?
+  role            String    @default("user")
+  banned          Boolean   @default(false)
+  ban_reason      String?
+  ban_expires     DateTime?
+  password       String?
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @default(now()) @updatedAt
+  deleted_at     DateTime?
   deletion_job_id String?
-  profile         Profile?
 
+  profile          Profile?
   companies        Company[]
   complaints       Complaint[]
   votes            ComplaintVote[]
   resolutions      ComplaintResolution[] @relation("ResolutionResolver")
   support_requests SupportRequest[]
   refresh_tokens   RefreshToken[]
+  accounts         Account[]
+  sessions         Session[]
 
   @@map("users")
+}
+
+model Account {
+  id                       String    @id @default(uuid())
+  account_id               String
+  provider_id              String
+  password                 String?
+  access_token             String?
+  refresh_token            String?
+  id_token                 String?
+  access_token_expires_at  DateTime?
+  refresh_token_expires_at DateTime?
+  scope                    String?
+  created_at               DateTime  @default(now())
+  updated_at               DateTime  @updatedAt
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("accounts")
+}
+
+model Session {
+  id              String   @id @default(uuid())
+  token           String   @unique
+  expires_at      DateTime
+  ip_address      String?
+  user_agent      String?
+  impersonated_by String?
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("sessions")
+}
+
+model Verification {
+  id         String   @id @default(uuid())
+  identifier String
+  value      String
+  expires_at DateTime
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("verifications")
 }
 
 model RefreshToken {

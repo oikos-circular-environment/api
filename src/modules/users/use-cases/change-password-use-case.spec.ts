@@ -43,7 +43,7 @@ describe("change-password-use-case", () => {
 		expect(result).toStrictEqual({ id: user.id, email: user.email });
 
 		const stored = await usersRepository.findByIdWithPassword(user.id);
-		const matches = stored
+		const matches = stored?.password
 			? await compare("brand-new-password-456", stored.password)
 			: false;
 		expect(matches).toBe(true);
