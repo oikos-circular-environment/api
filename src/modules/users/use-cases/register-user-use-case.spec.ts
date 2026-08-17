@@ -18,9 +18,12 @@ describe("register-user-use-case", () => {
 		const result = await sut.execute(input);
 
 		expect(result.email).toBe(input.email);
+		expect(result.password).not.toBeNull();
 		expect(result.password).not.toBe(TEST_PASSWORD);
 
-		const passwordMatches = await compare(TEST_PASSWORD, result.password);
+		const passwordMatches = result.password
+			? await compare(TEST_PASSWORD, result.password)
+			: false;
 
 		expect(passwordMatches).toBe(true);
 	});
