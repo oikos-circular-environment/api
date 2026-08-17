@@ -37,6 +37,8 @@ model User {
   refresh_tokens   RefreshToken[]
   accounts         Account[]
   sessions         Session[]
+  members          Member[]
+  sent_invitations Invitation[]          @relation("InvitationInviter")
 
   @@map("users")
 }
@@ -63,14 +65,15 @@ model Account {
 }
 
 model Session {
-  id              String   @id @default(uuid())
-  token           String   @unique
-  expires_at      DateTime
-  ip_address      String?
-  user_agent      String?
-  impersonated_by String?
-  created_at      DateTime @default(now())
-  updated_at      DateTime @updatedAt
+  id                     String   @id @default(uuid())
+  token                  String   @unique
+  expires_at             DateTime
+  ip_address             String?
+  user_agent             String?
+  impersonated_by        String?
+  active_organization_id String?
+  created_at             DateTime @default(now())
+  updated_at             DateTime @updatedAt
 
   user_id String
   user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
@@ -89,6 +92,55 @@ model Verification {
 
   @@index([identifier])
   @@map("verifications")
+}
+
+model Organization {
+  id         String    @id @default(uuid())
+  name       String
+  slug       String    @unique
+  logo       String?
+  created_at DateTime  @default(now())
+  updated_at DateTime?
+
+  members     Member[]
+  invitations Invitation[]
+  company     Company?
+
+  @@map("organizations")
+}
+
+model Member {
+  id         String   @id @default(uuid())
+  role       String   @default("member")
+  created_at DateTime @default(now())
+
+  organization_id String
+  organization    Organization @relation(fields: [organization_id], references: [id], onDelete: Cascade)
+
+  user_id String
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([organization_id])
+  @@index([user_id])
+  @@map("members")
+}
+
+model Invitation {
+  id         String    @id @default(uuid())
+  email      String
+  role       String
+  status     String    @default("pending")
+  expires_at DateTime?
+  created_at DateTime  @default(now())
+
+  organization_id String
+  organization    Organization @relation(fields: [organization_id], references: [id], onDelete: Cascade)
+
+  inviter_id String
+  inviter    User   @relation("InvitationInviter", fields: [inviter_id], references: [id], onDelete: Cascade)
+
+  @@index([organization_id])
+  @@map("invitations")
 }
 
 model RefreshToken {
@@ -159,6 +211,9 @@ model Company {
 
   user_id String
   user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  organization_id String       @unique
+  organization    Organization @relation(fields: [organization_id], references: [id])
 
   avatar_id String?
   avatar    CompanyAvatar? @relation(fields: [avatar_id], references: [id])

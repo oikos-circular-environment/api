@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { InMemoryUsersRepository } from "@/modules/accounts/repositories/in-memory/in-memory-users-repositories.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import {
 	makeAddress,
@@ -6,7 +7,6 @@ import {
 } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryAddressesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-addresses-repository.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
-import { InMemoryUsersRepository } from "@/modules/users/repositories/in-memory/in-memory-users-repositories.js";
 import { UpsertProfileUseCase } from "./upsert-profile-use-case.js";
 
 function createUser(usersRepository: InMemoryUsersRepository, userId: string) {

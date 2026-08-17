@@ -97,6 +97,32 @@ export class FakeAuthApi implements AuthApiClient {
 		return null;
 	}
 
+	async verifyEmail({ query: { token } }: { query: { token: string } }) {
+		const record = this.verificationTokens.get(token);
+		if (!record || record.expiresAt.getTime() <= Date.now()) {
+			throw new APIError("BAD_REQUEST", {
+				code: "INVALID_TOKEN",
+				message: "Invalid token",
+			});
+		}
+
+		const userRecord = this.findByEmail(record.email);
+		if (!userRecord) {
+			throw new APIError("BAD_REQUEST", {
+				code: "INVALID_TOKEN",
+				message: "Invalid token",
+			});
+		}
+
+		userRecord.user = {
+			...userRecord.user,
+			emailVerified: true,
+			updatedAt: new Date(),
+		};
+		this.verificationTokens.delete(token);
+		return { status: true };
+	}
+
 	async getSession({ headers }: { headers: Headers }) {
 		const token = extractSessionToken(headers);
 		if (!token) return null;

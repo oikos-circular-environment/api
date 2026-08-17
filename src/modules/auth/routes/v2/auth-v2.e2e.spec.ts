@@ -311,6 +311,52 @@ describe("auth-v2", () => {
 		});
 	});
 
+	describe("POST /v2/auth/verify-email", () => {
+		it("verifies the email using the token sent on sign-up", async () => {
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await app.inject({
+				method: "POST",
+				url: "/v2/auth/sign-up",
+				headers: clientKeyHeader,
+				payload: { name: "Ada Lovelace", email, password },
+			});
+
+			const token = (
+				emailProvider as InMemoryEmailProvider
+			).getVerificationTokenForEmail(email);
+
+			const res = await app.inject({
+				method: "POST",
+				url: "/v2/auth/verify-email",
+				headers: clientKeyHeader,
+				payload: { token },
+			});
+
+			expect(res.statusCode).toBe(200);
+
+			const signInRes = await app.inject({
+				method: "POST",
+				url: "/v2/auth/sign-in",
+				headers: clientKeyHeader,
+				payload: { email, password },
+			});
+			expect(signInRes.json().user.email_verified).toBe(true);
+		});
+
+		it("rejects an invalid token", async () => {
+			const res = await app.inject({
+				method: "POST",
+				url: "/v2/auth/verify-email",
+				headers: clientKeyHeader,
+				payload: { token: "invalid-token" },
+			});
+
+			expect(res.statusCode).toBe(400);
+		});
+	});
+
 	describe("POST /v2/auth/reset-password", () => {
 		it("resets the password and allows sign-in with the new password", async () => {
 			const email = makeEmail();

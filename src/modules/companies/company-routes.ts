@@ -2,6 +2,7 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
+import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
@@ -21,6 +22,7 @@ import {
 	upsertCompanyServicesSchema,
 	upsertCompanyWastesSchema,
 } from "./dtos/companies-dto.js";
+import { BetterAuthOrganizationProvider } from "./providers/better-auth-organization-provider.js";
 import { PrismaAddressesRepository } from "./repositories/prisma/addresses-repository-prisma.js";
 import { PrismaBusinessHoursRepository } from "./repositories/prisma/business-hours-repository-prisma.js";
 import { PrismaCompaniesRepository } from "./repositories/prisma/companies-repository-prisma.js";
@@ -59,10 +61,12 @@ export async function companyRoutes(app: FastifyInstance) {
 	const validationRepository = new PrismaCompanyValidationRepository();
 	const wasteCategoriesRepository = new PrismaWasteCategoriesRepository();
 	const storageProvider = makeStorageProvider();
+	const organizationProvider = new BetterAuthOrganizationProvider(auth);
 
 	const createCompanyUseCase = new CreateCompanyUseCase(
 		companiesRepository,
 		validationRepository,
+		organizationProvider,
 	);
 	const getCompanyUseCase = new GetCompanyUseCase(
 		companiesRepository,
@@ -137,7 +141,10 @@ export async function companyRoutes(app: FastifyInstance) {
 				tags: [COMPANIES_TAG],
 				summary: "Create user company",
 				description: "Creates a company for the authenticated user.",
-				body: createCompanySchema.omit({ user_id: true }),
+				body: createCompanySchema.omit({
+					user_id: true,
+					organization_id: true,
+				}),
 				response: {
 					201: z.object({ company: companySchema }),
 					401: appErrorSchema,

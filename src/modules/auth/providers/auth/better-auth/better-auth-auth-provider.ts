@@ -66,6 +66,7 @@ export type AuthApiClient = {
 	sendVerificationEmail(args: {
 		body: { email: string; callbackURL?: string };
 	}): Promise<{ status: boolean }>;
+	verifyEmail(args: { query: { token: string } }): Promise<{ status: boolean }>;
 	getSession(args: {
 		headers: Headers;
 	}): Promise<{ session: AuthApiSession; user: AuthApiUser } | null>;
@@ -168,6 +169,14 @@ export class BetterAuthAuthProvider implements AuthProvider {
 	async sendVerificationEmail(email: string) {
 		try {
 			await this.options.api.sendVerificationEmail({ body: { email } });
+		} catch (error) {
+			throw translateApiError(error);
+		}
+	}
+
+	async verifyEmail(token: string) {
+		try {
+			await this.options.api.verifyEmail({ query: { token } });
 		} catch (error) {
 			throw translateApiError(error);
 		}

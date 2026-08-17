@@ -16,9 +16,9 @@ import {
 } from "fastify-type-provider-zod";
 import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
+import { accountRoutes } from "./modules/accounts/account-routes.js";
 import { authRoutes } from "./modules/auth/routes/v1/auth-routes.js";
 import { authV2Routes } from "./modules/auth/routes/v2/auth-v2-routes.js";
-import { usersAdminRoutes } from "./modules/auth/routes/v2/users-admin-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
@@ -26,7 +26,6 @@ import { marketRoutes } from "./modules/market/market-routes.js";
 import { moderationRoutes } from "./modules/moderation/moderation-routes.js";
 import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { storageRoutes } from "./modules/storage/storage-routes.js";
-import { userRoutes } from "./modules/users/user-routes.js";
 import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
 
 const CLIENT_KEY_EXEMPT_PREFIXES = ["/health", "/docs", "/bullboard"];
@@ -214,13 +213,12 @@ app.get("/health", () => ({ status: "ok" }));
 
 app.register(authRoutes, { prefix: "/v1" });
 app.register(authV2Routes, { prefix: "/v2" });
-app.register(usersAdminRoutes, { prefix: "/v2" });
-app.register(userRoutes, { prefix: "/v1" });
+app.register(accountRoutes, { prefix: "/v2" });
 app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });
 app.register(complaintRoutes, { prefix: "/v1" });
 app.register(marketRoutes, { prefix: "/v1" });
-app.register(moderationRoutes, { prefix: "/v1" });
+app.register(moderationRoutes);
 app.register(wasteCategoriesRoutes, { prefix: "/v1" });
 
 if (env.STORAGE_PROVIDER === "minio") {
