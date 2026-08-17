@@ -84,11 +84,11 @@ async function main() {
 	if (!containerIp)
 		throw new Error("Nao consegui obter o IP do container postgresql");
 
-	console.log("==> Lendo credenciais do .env.prod na VM");
-	const envProd = sshExec(`cat ${DEST_COMPOSE_DIR}/.env.prod`);
-	const postgresUser = readEnvVar(envProd, "POSTGRES_USER");
-	const postgresPassword = readEnvVar(envProd, "POSTGRES_PASSWORD");
-	const postgresDb = readEnvVar(envProd, "POSTGRES_DB");
+	console.log("==> Lendo credenciais do .env.infra na VM");
+	const envInfra = sshExec(`cat ${DEST_COMPOSE_DIR}/.env.infra`);
+	const postgresUser = readEnvVar(envInfra, "POSTGRES_USER");
+	const postgresPassword = readEnvVar(envInfra, "POSTGRES_PASSWORD");
+	const postgresDb = readEnvVar(envInfra, "POSTGRES_DB");
 
 	console.log(
 		`==> Abrindo tunel SSH local (porta ${LOCAL_PORT} -> ${containerIp}:5432)`,
