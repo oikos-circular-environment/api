@@ -1,6 +1,6 @@
 # T06 — Corrigir `upsertUser` (quebrado) + seed fixo de dois usuários
 
-**Status:** [ ] Pendente
+**Status:** [x] Concluído
 **Depende de:** T01 (organização), T04 (company cria organização), T02 (papel `moderator`)
 **Módulos:** `prisma/seeds/shared/upsert-user.ts`, novo `prisma/seeds/fixed-users.seed.ts`,
 `prisma/seeds/index.ts`

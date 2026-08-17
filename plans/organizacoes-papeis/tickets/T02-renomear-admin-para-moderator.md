@@ -1,6 +1,6 @@
 # T02 — Renomear o valor de `role` de plataforma: `"admin"` → `"moderator"`
 
-**Status:** [ ] Pendente
+**Status:** [x] Concluído
 **Depende de:** nada (independente de T01, mas pode rodar depois por ordem de plano)
 **Módulos:** `src/modules/common/middlewares/require-role.ts`,
 `src/modules/moderation/moderation-user-routes.ts`, specs afetados

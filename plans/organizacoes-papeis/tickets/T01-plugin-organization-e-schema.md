@@ -1,6 +1,6 @@
 # T01 — Ligar o plugin `organization` do Better Auth + `Company.organization_id`
 
-**Status:** [ ] Pendente
+**Status:** [x] Concluído
 **Depende de:** nada
 **Módulos:** `prisma/schema.prisma`, `src/modules/auth/providers/auth/better-auth/`
 

@@ -1,6 +1,6 @@
 # T03 — Migrar ownership de `Company` de `user_id` direto pra membership na `Organization`
 
-**Status:** [ ] Pendente
+**Status:** [x] Concluído
 **Depende de:** T01 (schema precisa ter `Company.organization_id` + `Member`)
 **Módulos:** `src/modules/companies/repositories/`
 

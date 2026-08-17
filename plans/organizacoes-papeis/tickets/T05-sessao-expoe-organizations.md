@@ -1,6 +1,6 @@
 # T05 — `/v2/auth/session` e `/v2/auth/sign-in` passam a retornar `organizations`
 
-**Status:** [ ] Pendente
+**Status:** [x] Concluído
 **Depende de:** T01 (precisa de `Member`/`Organization`/`Company.organization_id`)
 **Módulos:** `src/modules/auth/dtos/auth-v2-dto.ts`, `src/modules/auth/routes/v2/auth-v2-routes.ts`,
 novo repositório em `src/modules/auth/`

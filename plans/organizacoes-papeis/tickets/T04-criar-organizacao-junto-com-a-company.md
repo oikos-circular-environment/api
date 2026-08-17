@@ -1,6 +1,6 @@
 # T04 — `CreateCompanyUseCase` cria a `Organization` pareada
 
-**Status:** [ ] Pendente
+**Status:** [x] Concluído
 **Depende de:** T01 (schema/plugin)
 **Módulos:** `src/modules/companies/use-cases/create-company-use-case.ts`,
 `src/modules/companies/repositories/`, `src/modules/companies/dtos/companies-dto.ts`,
