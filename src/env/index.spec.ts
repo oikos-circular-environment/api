@@ -6,6 +6,7 @@ describe("env", () => {
 	beforeEach(() => {
 		const keys = [
 			"NODE_ENV",
+			"JWT_SECRET",
 			"DATABASE_URL",
 			"BETTER_AUTH_SECRET",
 			"REDIS_URL",
@@ -18,6 +19,7 @@ describe("env", () => {
 			originalEnv[key] = process.env[key];
 		}
 
+		process.env.JWT_SECRET = "test-jwt-secret";
 		process.env.DATABASE_URL = "postgresql://test:test@localhost:5432/test";
 		process.env.BETTER_AUTH_SECRET = "test-better-auth-secret-0123456789abcdef";
 		process.env.REDIS_URL = "redis://localhost:6379/0";

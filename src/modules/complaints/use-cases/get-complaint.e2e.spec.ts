@@ -4,7 +4,6 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
-import { createTestSession } from "@/test/create-test-session.js";
 
 describe("get-complaint", () => {
 	const createdComplaintIds: string[] = [];
@@ -16,7 +15,7 @@ describe("get-complaint", () => {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
+			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
 			userId,
 			userEmail,
 		);
@@ -38,8 +37,8 @@ describe("get-complaint", () => {
 		return c.id;
 	}
 
-	async function bearerToken(userId: string, _email: string): Promise<string> {
-		return createTestSession(userId);
+	function bearerToken(userId: string, email: string): string {
+		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
 	beforeAll(async () => {
@@ -73,9 +72,7 @@ describe("get-complaint", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/complaints/${complaintId}`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 		});
 
 		expect(res.statusCode).toBe(200);
@@ -95,9 +92,7 @@ describe("get-complaint", () => {
 		const res = await app.inject({
 			method: "GET",
 			url: `/v1/complaints/${randomUUID()}`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 		});
 
 		expect(res.statusCode).toBe(404);

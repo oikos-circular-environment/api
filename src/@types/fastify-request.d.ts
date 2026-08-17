@@ -4,6 +4,6 @@ import type { AuthUser } from "@/modules/auth/providers/auth/auth-provider.js";
 declare module "fastify" {
 	interface FastifyRequest {
 		apiClient?: { name: string } | null;
-		authV2User: AuthUser;
+		authV2User?: AuthUser;
 	}
 }

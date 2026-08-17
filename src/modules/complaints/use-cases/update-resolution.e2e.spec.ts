@@ -4,7 +4,6 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
-import { createTestSession } from "@/test/create-test-session.js";
 
 describe("update-resolution", () => {
 	const createdComplaintIds: string[] = [];
@@ -16,7 +15,7 @@ describe("update-resolution", () => {
 		const userId = randomUUID();
 		const userEmail = email ?? `e2e-${userId}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
+			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
 			userId,
 			userEmail,
 		);
@@ -53,8 +52,8 @@ describe("update-resolution", () => {
 		return resolution.id;
 	}
 
-	async function bearerToken(userId: string, _email: string): Promise<string> {
-		return createTestSession(userId);
+	function bearerToken(userId: string, email: string): string {
+		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
 	beforeAll(async () => {
@@ -90,7 +89,7 @@ describe("update-resolution", () => {
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 			headers: {
-				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "Updated description." },
 		});
@@ -111,7 +110,7 @@ describe("update-resolution", () => {
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${randomUUID()}`,
 			headers: {
-				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "Should not work." },
 		});
@@ -131,7 +130,7 @@ describe("update-resolution", () => {
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 			headers: {
-				authorization: `Bearer ${await bearerToken(other.id, other.email)}`,
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
 			},
 			payload: { description: "Should not work." },
 		});
@@ -153,7 +152,7 @@ describe("update-resolution", () => {
 			method: "PATCH",
 			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 			headers: {
-				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "Should not work." },
 		});

@@ -2,10 +2,8 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
-import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { createVerifySession } from "../common/middlewares/verify-session.js";
+import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	complaintResumeSchema,
@@ -57,8 +55,6 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	const storageProvider = makeStorageProvider();
 	const jobDispatcher = new BullMQJobDispatcher();
 	const companyChecker = new PrismaCompanyOwnershipChecker();
-	const authProvider = makeBetterAuthAuthProvider(auth);
-	const verifySession = createVerifySession(authProvider);
 
 	const createComplaintUseCase = new CreateComplaintUseCase(
 		complaintsRepository,
@@ -119,7 +115,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 
 	typedApp.addHook("onRequest", async (request) => {
 		if ((request.routeOptions.config as { public?: boolean })?.public) return;
-		await verifySession(request);
+		await verifyJwt(request);
 	});
 
 	typedApp.get(
@@ -141,7 +137,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { status, cursor, limit } = request.query;
 
 			const result = await getComplaintsUseCase.execute({
@@ -170,7 +166,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const dashboard = await getComplaintsDashboardUseCase.execute({ userId });
 			return reply.send({ dashboard });
 		},
@@ -212,7 +208,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const complaint = await getComplaintUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -237,7 +233,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const complaint = await createComplaintUseCase.execute({
 				userId,
 				data: request.body,
@@ -264,7 +260,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const complaint = await updateComplaintUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -293,7 +289,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const complaint = await resolveComplaintUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -319,7 +315,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const complaint = await cancelComplaintUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -344,7 +340,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const vote = await getComplaintVoteUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -370,7 +366,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const vote = await voteComplaintUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -394,7 +390,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await complaintsRepository.removeVoteFromComplaint(
 				userId,
 				request.params.id,
@@ -418,7 +414,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const resolutions = await getResolutionsUseCase.execute({
 				complaintId: request.params.id,
 				userId,
@@ -444,7 +440,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await submitResolutionUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -471,7 +467,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await updateResolutionUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -500,7 +496,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await deleteResolutionUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -529,7 +525,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const file = await request.file();
 
 			if (!file) {
@@ -569,7 +565,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await deleteResolutionAttachmentUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -596,7 +592,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await deleteComplaintAttachmentUseCase.execute({
 				userId,
 				complaintId: request.params.id,
@@ -626,7 +622,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const file = await request.file();
 
 			if (!file) {

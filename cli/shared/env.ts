@@ -2,7 +2,7 @@ import { z } from "zod";
 
 /**
  * Schema mínimo, escopado só ao que este pacote precisa — não reaproveita
- * `src/env/index.ts` (exige DATABASE_URL/REDIS_URL/etc. que este
+ * `src/env/index.ts` (exige DATABASE_URL/JWT_SECRET/REDIS_URL/etc. que este
  * script isolado não usa; ver 01-technical-plan.md, decisão-chave #1).
  */
 const envSchema = z.object({

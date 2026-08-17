@@ -3,10 +3,8 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { PrismaUsersRepository } from "@/modules/accounts/repositories/prisma/users-repository-prisma.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
-import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { createVerifySession } from "../common/middlewares/verify-session.js";
+import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	addressSchema,
@@ -32,8 +30,6 @@ export async function profileRoutes(app: FastifyInstance) {
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = makeStorageProvider();
 	const usersRepository = new PrismaUsersRepository();
-	const authProvider = makeBetterAuthAuthProvider(auth);
-	const verifySession = createVerifySession(authProvider);
 
 	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,
@@ -55,7 +51,7 @@ export async function profileRoutes(app: FastifyInstance) {
 	);
 
 	typedApp.addHook("onRequest", async (request) => {
-		await verifySession(request);
+		await verifyJwt(request);
 	});
 
 	typedApp.put(
@@ -83,7 +79,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const profile = await upsertProfileUseCase.execute({
 				userId,
 				data: request.body,
@@ -109,7 +105,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const profile = await getProfileUseCase.execute({ userId });
 
 			return reply.send({
@@ -137,7 +133,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const file = await request.file();
 
 			if (!file) {
@@ -184,7 +180,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			await deleteProfileImageUseCase.execute({ userId });
 
 			return reply.status(202).send(null);
@@ -208,7 +204,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const address = await getProfileAddressUseCase.execute({ userId });
 
 			return reply.send({

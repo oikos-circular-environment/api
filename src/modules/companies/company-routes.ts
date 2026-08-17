@@ -3,9 +3,8 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
-import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
-import { createVerifySession } from "../common/middlewares/verify-session.js";
+import { verifyJwt } from "../common/middlewares/verify-jwt.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import { PrismaWasteCategoriesRepository } from "../wastes/repositories/prisma/waste-categories-repository-prisma.js";
 import {
@@ -62,8 +61,6 @@ export async function companyRoutes(app: FastifyInstance) {
 	const validationRepository = new PrismaCompanyValidationRepository();
 	const wasteCategoriesRepository = new PrismaWasteCategoriesRepository();
 	const storageProvider = makeStorageProvider();
-	const authProvider = makeBetterAuthAuthProvider(auth);
-	const verifySession = createVerifySession(authProvider);
 	const organizationProvider = new BetterAuthOrganizationProvider(auth);
 
 	const createCompanyUseCase = new CreateCompanyUseCase(
@@ -134,7 +131,7 @@ export async function companyRoutes(app: FastifyInstance) {
 	);
 
 	typedApp.addHook("onRequest", async (request) => {
-		await verifySession(request);
+		await verifyJwt(request);
 	});
 
 	typedApp.post(
@@ -155,7 +152,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const company = await createCompanyUseCase.execute({
 				userId,
 				data: request.body,
@@ -180,7 +177,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const companies = await getCompanyUseCase.execute({ userId });
 
 			return reply.send({ companies });
@@ -205,7 +202,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const company = await updateCompanyUseCase.execute({
 				userId,
@@ -235,7 +232,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const { status } = request.body;
 
@@ -268,7 +265,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const data = await request.file();
 
@@ -313,7 +310,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const business_hours = await getCompanyBusinessHoursUseCase.execute({
 				userId,
@@ -343,7 +340,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const business_hours = await upsertCompanyBusinessHoursUseCase.execute({
 				userId,
@@ -374,7 +371,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const wastes = await upsertCompanyWastesUseCase.execute({
 				userId,
@@ -402,7 +399,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const wastes = await getCompanyWastesUseCase.execute({
 				userId,
@@ -432,7 +429,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const services = await upsertCompanyServicesUseCase.execute({
 				userId,
@@ -460,7 +457,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const services = await getCompanyServicesUseCase.execute({
 				userId,
@@ -487,7 +484,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const address = await getCompanyAddressUseCase.execute({
 				userId,
@@ -515,7 +512,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const validation = await getCompanyValidationUseCase.execute({
 				userId,
@@ -544,7 +541,7 @@ export async function companyRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.authV2User.id;
+			const userId = request.user.sub;
 			const { id: companyId } = request.params;
 			const address = await upsertCompanyAddressUseCase.execute({
 				userId,

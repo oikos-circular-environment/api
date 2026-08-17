@@ -15,7 +15,7 @@ describe("resolve-complaint-use-case", () => {
 	async function createUser(): Promise<string> {
 		const userId = randomUUID();
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
+			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
 			userId,
 			`resolve-test-${userId}@integration.test`,
 		);

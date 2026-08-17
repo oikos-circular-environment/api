@@ -3,7 +3,6 @@ import { randomUUID } from "node:crypto";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
-import { createTestSession } from "@/test/create-test-session.js";
 
 describe("upsert-company-business-hours", () => {
 	const createdUserIds: string[] = [];
@@ -13,7 +12,7 @@ describe("upsert-company-business-hours", () => {
 		const id = randomUUID();
 		const email = `e2e-${id}@test.local`;
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
+			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
 			id,
 			email,
 		);
@@ -21,8 +20,8 @@ describe("upsert-company-business-hours", () => {
 		return { id, email };
 	}
 
-	async function bearerToken(userId: string, _email: string): Promise<string> {
-		return createTestSession(userId);
+	function bearerToken(userId: string, email: string): string {
+		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
 	}
 
 	async function createCompanyViaHttp(
@@ -33,7 +32,7 @@ describe("upsert-company-business-hours", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
-			headers: { authorization: `Bearer ${await bearerToken(userId, email)}` },
+			headers: { authorization: `Bearer ${bearerToken(userId, email)}` },
 			payload: {
 				identity,
 				identity_type: "CPF",
@@ -85,9 +84,7 @@ describe("upsert-company-business-hours", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 			payload: {
 				business_hours: [
 					{
@@ -125,9 +122,7 @@ describe("upsert-company-business-hours", () => {
 		await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 			payload: {
 				business_hours: [
 					{
@@ -142,9 +137,7 @@ describe("upsert-company-business-hours", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 			payload: {
 				business_hours: [
 					{
@@ -179,9 +172,7 @@ describe("upsert-company-business-hours", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 			payload: {
 				business_hours: [
 					{
@@ -212,9 +203,7 @@ describe("upsert-company-business-hours", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 			payload: {
 				business_hours: [
 					{
@@ -240,9 +229,7 @@ describe("upsert-company-business-hours", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
-			headers: {
-				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
-			},
+			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
 			payload: {
 				business_hours: [
 					{
@@ -270,7 +257,7 @@ describe("upsert-company-business-hours", () => {
 			method: "PUT",
 			url: `/v1/companies/${company.id}/business-hours`,
 			headers: {
-				authorization: `Bearer ${await bearerToken(other.id, other.email)}`,
+				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
 			},
 			payload: {
 				business_hours: [
