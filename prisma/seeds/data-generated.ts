@@ -5,13 +5,17 @@ import type {
 	Prisma,
 	PrismaClient,
 } from "../../src/generated/prisma/client.js";
+import { auth } from "../../src/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeStorageProvider } from "../../src/modules/common/providers/storage/make-storage-provider.js";
 import {
 	companyGeneralRegistrationValidationSchema,
 	upsertCompanyAddressSchema,
 	upsertCompanyBusinessHoursSchema,
 } from "../../src/modules/companies/dtos/companies-dto.js";
+import { BetterAuthOrganizationProvider } from "../../src/modules/companies/providers/better-auth-organization-provider.js";
 import { upsertUser } from "./shared/upsert-user.js";
+
+const organizationProvider = new BetterAuthOrganizationProvider(auth);
 
 const DATA_DIR = resolve("prisma/seeds/data-generated");
 const ASSETS_DIR = resolve("cli/assets");
@@ -312,6 +316,12 @@ export async function seedGeneratedCityData(prisma: PrismaClient) {
 					(wastesValid || servicesValid);
 
 				try {
+					const { organizationId } =
+						await organizationProvider.createOrganization({
+							name: company.business_name ?? company.corporate_name,
+							userId,
+						});
+
 					const createdCompanyId = await prisma.$transaction(async (tx) => {
 						const address = await tx.address.create({
 							data: {
@@ -358,6 +368,7 @@ export async function seedGeneratedCityData(prisma: PrismaClient) {
 								started_activity_in: new Date(company.started_activity_in),
 								is_company_valid: isCompanyValid,
 								user_id: userId,
+								organization_id: organizationId,
 								address_id: address.id,
 							},
 						});
