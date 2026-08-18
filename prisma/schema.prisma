@@ -23,6 +23,7 @@ model User {
   ban_reason      String?
   ban_expires     DateTime?
   password       String?
+  auth_source    String    @default("better_auth")
   created_at     DateTime  @default(now())
   updated_at     DateTime  @default(now()) @updatedAt
   deleted_at     DateTime?

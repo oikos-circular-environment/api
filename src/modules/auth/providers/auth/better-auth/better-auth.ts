@@ -76,6 +76,14 @@ export const auth = betterAuth({
 			createdAt: "created_at",
 			updatedAt: "updated_at",
 		},
+		additionalFields: {
+			authSource: {
+				type: "string",
+				input: false,
+				fieldName: "auth_source",
+				defaultValue: "better_auth",
+			},
+		},
 	},
 	account: {
 		fields: {

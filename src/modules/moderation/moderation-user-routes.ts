@@ -9,10 +9,12 @@ import { authUserResponseMapper } from "@/modules/auth/providers/auth/better-aut
 import { requireRole } from "@/modules/common/middlewares/require-role.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
+import { PrismaProfilesRepository } from "@/modules/profiles/repositories/prisma/profiles-repository-prisma.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import {
 	banUserAdminBodySchema,
 	createUserAdminBodySchema,
+	getUserAdminResponseSchema,
 	listUserSessionsAdminResponseSchema,
 	listUsersAdminQuerySchema,
 	listUsersAdminResponseSchema,
@@ -20,6 +22,7 @@ import {
 	setRoleAdminBodySchema,
 	userAdminParamsSchema,
 } from "./dtos/users-admin-dto.js";
+import { PrismaAccountsRepository } from "./repositories/prisma/accounts-repository-prisma.js";
 import { BanUserUseCase } from "./use-cases/admin/ban-user-use-case.js";
 import { CreateUserUseCase } from "./use-cases/admin/create-user-use-case.js";
 import { GetUserUseCase } from "./use-cases/admin/get-user-use-case.js";
@@ -44,6 +47,8 @@ function mapAuthSessionToResponse(session: AuthSession) {
 		expires_at: session.expiresAt.toISOString(),
 		user_id: session.userId,
 		impersonated_by: session.impersonatedBy ?? null,
+		ip_address: session.ipAddress ?? null,
+		user_agent: session.userAgent ?? null,
 	};
 }
 
@@ -54,6 +59,8 @@ export async function moderationUsersRoutes(
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 	const requireModerator = requireRole("moderator");
+	const profilesRepository = new PrismaProfilesRepository();
+	const accountsRepository = new PrismaAccountsRepository();
 
 	const listUsersUseCase = new ListUsersUseCase(authProvider);
 	const getUserUseCase = new GetUserUseCase(authProvider);
@@ -105,7 +112,7 @@ export async function moderationUsersRoutes(
 				summary: "Get user by id",
 				params: userAdminParamsSchema,
 				response: {
-					200: z.object({ user: authV2UserSchema }),
+					200: getUserAdminResponseSchema,
 					401: appErrorSchema,
 					403: appErrorSchema,
 					404: appErrorSchema,
@@ -113,11 +120,23 @@ export async function moderationUsersRoutes(
 			}),
 		},
 		async (request, reply) => {
-			const user = await getUserUseCase.execute(
-				request.params.id,
-				buildHeaders(request),
-			);
-			return reply.send({ user: authUserResponseMapper(user) });
+			const [user, profile, accounts] = await Promise.all([
+				getUserUseCase.execute(request.params.id, buildHeaders(request)),
+				profilesRepository.findByUserId(request.params.id),
+				accountsRepository.listByUserId(request.params.id),
+			]);
+			return reply.send({
+				user: authUserResponseMapper(user),
+				profile: profile ?? null,
+				accounts: accounts.map((account) => ({
+					id: account.id,
+					provider_id: account.provider_id,
+					account_id: account.account_id,
+					scope: account.scope,
+					created_at: account.created_at.toISOString(),
+					updated_at: account.updated_at.toISOString(),
+				})),
+			});
 		},
 	);
 
@@ -199,8 +218,8 @@ export async function moderationUsersRoutes(
 			const user = await banUserUseCase.execute(
 				{
 					userId: request.params.id,
-					banReason: request.body.banReason,
-					banExpiresIn: request.body.banExpiresIn,
+					banReason: request.body.ban_reason,
+					banExpiresIn: request.body.ban_expires_in,
 				},
 				buildHeaders(request),
 			);

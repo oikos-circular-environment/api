@@ -15,6 +15,7 @@ function makeAuthUser(overrides: Partial<AuthUser> = {}): AuthUser {
 		banned: false,
 		banReason: null,
 		banExpires: null,
+		authSource: "better_auth",
 		createdAt: new Date(),
 		updatedAt: new Date(),
 		...overrides,
