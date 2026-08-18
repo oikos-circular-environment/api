@@ -11,6 +11,12 @@ type CompanyAvatar = NonNullable<Company["avatar"]>;
 export class InMemoryCompaniesRepository implements CompaniesRepository {
 	public items: Company[] = [];
 	public avatars: CompanyAvatar[] = [];
+	/**
+	 * Mirrors the `Member` table for specs — maps organization_id to the user ids
+	 * that belong to it. Defaults to `[company.user_id]` for every company added via
+	 * `create()`, since today only the owner (creator) is ever a member.
+	 */
+	public memberships: Map<string, Set<string>> = new Map();
 
 	async findById(id: string) {
 		const company = this.items.find((item) => item.id === id);
@@ -23,11 +29,23 @@ export class InMemoryCompaniesRepository implements CompaniesRepository {
 	}
 
 	async findByUserAndCompanyId(userId: string, companyId: string) {
-		const company = this.items.find(
-			(item) => item.user_id === userId && item.id === companyId,
-		);
+		const company = this.items.find((item) => item.id === companyId);
 
-		return company ?? null;
+		if (!company) {
+			return null;
+		}
+
+		const members = this.memberships.get(company.organization_id);
+		// No explicit membership registered for this organization (common in specs that
+		// push a company straight into `.items`) — fall back to the creator, since today
+		// the owner is always the only member.
+		const isMember = members ? members.has(userId) : company.user_id === userId;
+
+		if (!isMember) {
+			return null;
+		}
+
+		return company;
 	}
 
 	async create(data: CreateCompany) {
@@ -35,6 +53,7 @@ export class InMemoryCompaniesRepository implements CompaniesRepository {
 		const company = {
 			id: randomUUID(),
 			user_id: data.user_id,
+			organization_id: data.organization_id,
 			identity: data.identity,
 			identity_type: data.identity_type,
 			company_type: data.company_type,
@@ -51,6 +70,10 @@ export class InMemoryCompaniesRepository implements CompaniesRepository {
 		} satisfies Company;
 
 		this.items.push(company);
+
+		const members = this.memberships.get(company.organization_id) ?? new Set();
+		members.add(data.user_id);
+		this.memberships.set(company.organization_id, members);
 
 		return company;
 	}

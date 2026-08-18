@@ -4,6 +4,7 @@ import { companyTypeSchema, identityTypeSchema } from "./enums.js";
 export const companySchema = z.object({
 	id: z.string(),
 	user_id: z.uuid(),
+	organization_id: z.string(),
 	identity: z.string().min(1, "Identity is required"),
 	identity_type: identityTypeSchema,
 	company_type: companyTypeSchema,

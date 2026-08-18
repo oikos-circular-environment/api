@@ -3,20 +3,34 @@ import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
+import { organization } from "better-auth/plugins/organization";
 import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
 import { AuthEmailRenderer } from "@/modules/auth/emails/auth-email-renderer.js";
 import { makeEmailProvider } from "@/modules/common/providers/email/make-email-provider.js";
+import {
+	ac as organizationAc,
+	admin as organizationAdmin,
+	owner as organizationOwner,
+	user as organizationUser,
+} from "./organization-permissions.js";
+import {
+	ac as platformAc,
+	moderator as platformModerator,
+	user as platformUser,
+} from "./platform-permissions.js";
 
 const BCRYPT_COST = 10;
 
 export const emailProvider = makeEmailProvider(new AuthEmailRenderer());
 
+const publicApiUrl = env.BETTER_AUTH_URL ?? env.APP_PUBLIC_URL;
+
 export const auth = betterAuth({
-	appName: "Oikos API",
+	appName: "Oikos Economia Circular",
 	database: prismaAdapter(prisma, { provider: "postgresql" }),
 	secret: env.BETTER_AUTH_SECRET,
-	baseURL: env.BETTER_AUTH_URL ?? env.APP_PUBLIC_URL,
+	baseURL: publicApiUrl,
 	trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS,
 	emailAndPassword: {
 		enabled: true,
@@ -31,7 +45,7 @@ export const auth = betterAuth({
 			await emailProvider.send({
 				type: "reset-password",
 				to: data.user.email,
-				subject: "Redefinição de senha - Oikos",
+				subject: "Redefinição de senha",
 				payload: {
 					url: data.url,
 					token: data.token,
@@ -41,13 +55,15 @@ export const auth = betterAuth({
 		},
 	},
 	emailVerification: {
+		sendOnSignUp: true,
 		sendVerificationEmail: async (data) => {
+			const verificationUrl = `${env.WEB_APP_URL}/verify-email?token=${encodeURIComponent(data.token)}`;
 			await emailProvider.send({
 				type: "verify-email",
 				to: data.user.email,
-				subject: "Confirme seu e-mail - Oikos",
+				subject: "Confirme seu e-mail",
 				payload: {
-					url: data.url,
+					url: verificationUrl,
 					token: data.token,
 					name: data.user.name,
 				},
@@ -59,6 +75,14 @@ export const auth = betterAuth({
 			emailVerified: "email_verified",
 			createdAt: "created_at",
 			updatedAt: "updated_at",
+		},
+		additionalFields: {
+			authSource: {
+				type: "string",
+				input: false,
+				fieldName: "auth_source",
+				defaultValue: "better_auth",
+			},
 		},
 	},
 	account: {
@@ -83,6 +107,7 @@ export const auth = betterAuth({
 			userAgent: "user_agent",
 			createdAt: "created_at",
 			updatedAt: "updated_at",
+			activeOrganizationId: "active_organization_id",
 		},
 	},
 	verification: {
@@ -94,6 +119,9 @@ export const auth = betterAuth({
 	},
 	plugins: [
 		admin({
+			ac: platformAc,
+			adminRoles: ["moderator"],
+			roles: { moderator: platformModerator, user: platformUser },
 			schema: {
 				user: {
 					fields: {
@@ -109,5 +137,34 @@ export const auth = betterAuth({
 			},
 		}),
 		bearer(),
+		organization({
+			ac: organizationAc,
+			creatorRole: "owner",
+			roles: {
+				owner: organizationOwner,
+				admin: organizationAdmin,
+				user: organizationUser,
+			},
+			schema: {
+				organization: {
+					fields: { createdAt: "created_at", updatedAt: "updated_at" },
+				},
+				member: {
+					fields: {
+						organizationId: "organization_id",
+						userId: "user_id",
+						createdAt: "created_at",
+					},
+				},
+				invitation: {
+					fields: {
+						organizationId: "organization_id",
+						inviterId: "inviter_id",
+						expiresAt: "expires_at",
+						createdAt: "created_at",
+					},
+				},
+			},
+		}),
 	],
 });

@@ -27,7 +27,10 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 
 	async findByUserAndCompanyId(userId: string, companyId: string) {
 		const company = await prisma.company.findFirst({
-			where: { id: companyId, user_id: userId },
+			where: {
+				id: companyId,
+				organization: { members: { some: { user_id: userId } } },
+			},
 			include: { avatar: true },
 		});
 
@@ -38,6 +41,7 @@ export class PrismaCompaniesRepository implements CompaniesRepository {
 		const company = await prisma.company.create({
 			data: {
 				user_id: data.user_id,
+				organization_id: data.organization_id,
 				identity: data.identity,
 				identity_type: data.identity_type,
 				company_type: data.company_type,

@@ -1,3 +1,4 @@
+import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type {
 	CreateAddress,
@@ -6,7 +7,6 @@ import type {
 } from "@/modules/profiles/dtos/profiles-dto.js";
 import type { AddressesRepository } from "@/modules/profiles/repositories/address-repository.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
-import type { UsersRepository } from "@/modules/users/repositories/users-repository.js";
 
 type UpsertProfileUseCaseRequest = {
 	userId: string;

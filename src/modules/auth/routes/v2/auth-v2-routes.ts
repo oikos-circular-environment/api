@@ -15,10 +15,13 @@ import {
 	signInV2ResponseSchema,
 	signInV2Schema,
 	signUpV2Schema,
+	verifyEmailV2ResponseSchema,
+	verifyEmailV2Schema,
 } from "../../dtos/auth-v2-dto.js";
-import type { AuthUser } from "../../providers/auth/auth-provider.js";
 import { auth } from "../../providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "../../providers/auth/better-auth/better-auth-auth-provider.js";
+import { authUserResponseMapper } from "../../providers/auth/better-auth/mapper/auth-user-response-mapper.js";
+import { PrismaUserOrganizationsRepository } from "../../repositories/prisma/user-organizations-repository-prisma.js";
 import { ChangePasswordUseCase } from "../../use-cases/v2/change-password-use-case.js";
 import { GetSessionUseCase } from "../../use-cases/v2/get-session-use-case.js";
 import { RequestPasswordResetUseCase } from "../../use-cases/v2/request-password-reset-use-case.js";
@@ -27,6 +30,7 @@ import { SendVerificationEmailUseCase } from "../../use-cases/v2/send-verificati
 import { SignInUseCase } from "../../use-cases/v2/sign-in-use-case.js";
 import { SignOutUseCase } from "../../use-cases/v2/sign-out-use-case.js";
 import { SignUpUseCase } from "../../use-cases/v2/sign-up-use-case.js";
+import { VerifyEmailUseCase } from "../../use-cases/v2/verify-email-use-case.js";
 
 const AUTH_V2_TAG = "Auth V2";
 
@@ -34,26 +38,11 @@ function buildHeaders(request: FastifyRequest): Headers {
 	return new Headers(request.headers as Record<string, string>);
 }
 
-function mapAuthUserToResponse(user: AuthUser) {
-	return {
-		id: user.id,
-		email: user.email,
-		name: user.name,
-		emailVerified: user.emailVerified,
-		image: user.image,
-		role: user.role,
-		banned: user.banned,
-		banReason: user.banReason,
-		banExpires: user.banExpires?.toISOString() ?? null,
-		createdAt: user.createdAt.toISOString(),
-		updatedAt: user.updatedAt.toISOString(),
-	};
-}
-
 export async function authV2Routes(app: FastifyInstance): Promise<void> {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
+	const userOrganizationsRepository = new PrismaUserOrganizationsRepository();
 
 	const signUpUseCase = new SignUpUseCase(authProvider);
 	const signInUseCase = new SignInUseCase(authProvider);
@@ -67,6 +56,7 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 	const sendVerificationEmailUseCase = new SendVerificationEmailUseCase(
 		authProvider,
 	);
+	const verifyEmailUseCase = new VerifyEmailUseCase(authProvider);
 
 	typedApp.post(
 		"/auth/sign-up",
@@ -107,7 +97,21 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const { token, user } = await signInUseCase.execute(request.body);
-			return reply.send({ token, user: mapAuthUserToResponse(user) });
+			const organizations = await userOrganizationsRepository.findByUserId(
+				user.id,
+			);
+			return reply.send({
+				token,
+				user: {
+					...authUserResponseMapper(user),
+					organizations: organizations.map((org) => ({
+						id: org.id,
+						company_id: org.companyId,
+						name: org.name,
+						role: org.role,
+					})),
+				},
+			});
 		},
 	);
 
@@ -145,7 +149,20 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const { user } = await getSessionUseCase.execute(buildHeaders(request));
-			return reply.send({ user: mapAuthUserToResponse(user) });
+			const organizations = await userOrganizationsRepository.findByUserId(
+				user.id,
+			);
+			return reply.send({
+				user: {
+					...authUserResponseMapper(user),
+					organizations: organizations.map((org) => ({
+						id: org.id,
+						company_id: org.companyId,
+						name: org.name,
+						role: org.role,
+					})),
+				},
+			});
 		},
 	);
 
@@ -243,6 +260,29 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 				message:
 					"If this email exists in our system, check your email for the verification link",
 			});
+		},
+	);
+
+	typedApp.post(
+		"/auth/verify-email",
+		{
+			schema: {
+				tags: [AUTH_V2_TAG],
+				summary: "Verify email",
+				description:
+					"Confirms the user's email using the token received by email. " +
+					"Called by the web/mobile client after reading the token from the " +
+					"verification link, not meant to be opened directly in a browser.",
+				body: verifyEmailV2Schema,
+				response: {
+					200: verifyEmailV2ResponseSchema,
+					400: appErrorSchema,
+				},
+			},
+		},
+		async (request, reply) => {
+			await verifyEmailUseCase.execute(request.body.token);
+			return reply.send({ message: "Email verified successfully" });
 		},
 	);
 }

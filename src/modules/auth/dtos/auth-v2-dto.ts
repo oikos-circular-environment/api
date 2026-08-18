@@ -13,18 +13,29 @@ export const signInV2Schema = z.object({
 });
 export type SignInV2Input = z.infer<typeof signInV2Schema>;
 
+export const authV2OrganizationSchema = z.object({
+	id: z.string(),
+	company_id: z.string().nullable(),
+	name: z.string(),
+	role: z.string(),
+});
+export type AuthV2Organization = z.infer<typeof authV2OrganizationSchema>;
+
 export const authV2UserSchema = z.object({
 	id: z.string(),
 	email: z.string(),
 	name: z.string().nullable(),
-	emailVerified: z.boolean(),
+	email_verified: z.boolean(),
 	image: z.string().nullable(),
 	role: z.string(),
 	banned: z.boolean(),
-	banReason: z.string().nullable(),
-	banExpires: z.string().datetime().nullable(),
-	createdAt: z.string().datetime(),
-	updatedAt: z.string().datetime(),
+	ban_reason: z.string().nullable(),
+	ban_expires: z.string().datetime().nullable(),
+	auth_source: z.string(),
+	created_at: z.string().datetime(),
+	updated_at: z.string().datetime(),
+	// Only /v2/auth/sign-in and /v2/auth/session populate this — moderation reuses the schema without it.
+	organizations: z.array(authV2OrganizationSchema).optional(),
 });
 export type AuthV2UserResponse = z.infer<typeof authV2UserSchema>;
 
@@ -76,3 +87,13 @@ export const sendVerificationEmailV2ResponseSchema = z.object({
 export type SendVerificationEmailV2Response = z.infer<
 	typeof sendVerificationEmailV2ResponseSchema
 >;
+
+export const verifyEmailV2Schema = z.object({
+	token: z.string().min(1, "Token is required"),
+});
+export type VerifyEmailV2Input = z.infer<typeof verifyEmailV2Schema>;
+
+export const verifyEmailV2ResponseSchema = z.object({
+	message: z.string(),
+});
+export type VerifyEmailV2Response = z.infer<typeof verifyEmailV2ResponseSchema>;

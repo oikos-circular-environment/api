@@ -8,6 +8,7 @@ export type AuthUser = {
 	banned: boolean;
 	banReason: string | null;
 	banExpires: Date | null;
+	authSource: string;
 	createdAt: Date;
 	updatedAt: Date;
 };
@@ -18,6 +19,8 @@ export type AuthSession = {
 	expiresAt: Date;
 	userId: string;
 	impersonatedBy?: string | null;
+	ipAddress?: string | null;
+	userAgent?: string | null;
 };
 
 export type AuthenticatedUser = {
@@ -128,6 +131,7 @@ export interface AuthProvider {
 		input: SignInWithPasswordInput,
 	): Promise<AuthenticatedUser>;
 	sendVerificationEmail(email: string): Promise<void>;
+	verifyEmail(token: string): Promise<void>;
 	getSession(headers: Headers): Promise<SessionResult | null>;
 	signOut(headers: Headers): Promise<void>;
 	changePassword(input: ChangePasswordInput, headers: Headers): Promise<void>;

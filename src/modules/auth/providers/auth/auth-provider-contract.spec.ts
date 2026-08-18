@@ -350,7 +350,7 @@ function describeAuthProviderContract({
 					email: ADMIN_EMAIL,
 					name: ADMIN_NAME,
 					password: PASSWORD,
-					role: "admin",
+					role: "moderator",
 				},
 				new Headers(),
 			);
@@ -457,13 +457,13 @@ function describeAuthProviderContract({
 					email: "new@example.com",
 					name: "New User",
 					password: PASSWORD,
-					role: "admin",
+					role: "moderator",
 				},
 				headers,
 			);
 
 			expect(user.email).toBe("new@example.com");
-			expect(user.role).toBe("admin");
+			expect(user.role).toBe("moderator");
 			expect(user.banned).toBe(false);
 
 			const session = await provider.signInWithPassword({
@@ -568,11 +568,11 @@ function describeAuthProviderContract({
 			});
 
 			const updated = await provider.setRole(
-				{ userId: user.id, role: "admin" },
+				{ userId: user.id, role: "moderator" },
 				headers,
 			);
 
-			expect(updated.role).toBe("admin");
+			expect(updated.role).toBe("moderator");
 		});
 
 		it("throws invalid-role-error when setting invalid role", async () => {
@@ -596,7 +596,7 @@ function describeAuthProviderContract({
 			const headers = adminHeaders(token);
 
 			await expect(
-				provider.setRole({ userId: "unknown", role: "admin" }, headers),
+				provider.setRole({ userId: "unknown", role: "moderator" }, headers),
 			).rejects.toBeInstanceOf(UserNotFoundError);
 		});
 

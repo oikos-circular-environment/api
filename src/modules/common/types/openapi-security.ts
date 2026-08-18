@@ -1,10 +1,13 @@
 export const bearerAuthSecurity = [{ bearerAuth: [] }] as const;
+export const bearerAndClientKeyAuthSecurity = [
+	{ bearerAuth: [], clientKeyAuth: [] },
+] as const;
 
 export function withBearerAuth<T extends Record<string, unknown>>(
 	schema: T,
-): T & { security: typeof bearerAuthSecurity } {
+): T & { security: typeof bearerAndClientKeyAuthSecurity } {
 	return {
 		...schema,
-		security: bearerAuthSecurity,
+		security: bearerAndClientKeyAuthSecurity,
 	};
 }

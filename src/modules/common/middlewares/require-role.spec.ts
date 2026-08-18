@@ -15,6 +15,7 @@ function makeAuthUser(overrides: Partial<AuthUser> = {}): AuthUser {
 		banned: false,
 		banReason: null,
 		banExpires: null,
+		authSource: "better_auth",
 		createdAt: new Date(),
 		updatedAt: new Date(),
 		...overrides,
@@ -27,29 +28,29 @@ function makeRequest(user?: AuthUser): FastifyRequest {
 
 describe("require-role", () => {
 	it("passes when user has the required role", async () => {
-		const requireAdmin = requireRole("admin");
-		const request = makeRequest(makeAuthUser({ role: "admin" }));
+		const requireModerator = requireRole("moderator");
+		const request = makeRequest(makeAuthUser({ role: "moderator" }));
 
-		await expect(requireAdmin(request)).resolves.toBeUndefined();
+		await expect(requireModerator(request)).resolves.toBeUndefined();
 	});
 
 	it("throws 403 when user has a different role", async () => {
-		const requireAdmin = requireRole("admin");
+		const requireModerator = requireRole("moderator");
 		const request = makeRequest(makeAuthUser({ role: "user" }));
 
-		await expect(requireAdmin(request)).rejects.toThrow(AppError);
-		await expect(requireAdmin(request)).rejects.toMatchObject({
+		await expect(requireModerator(request)).rejects.toThrow(AppError);
+		await expect(requireModerator(request)).rejects.toMatchObject({
 			code: "FORBIDDEN",
 			statusCode: 403,
 		});
 	});
 
 	it("throws 403 when authV2User is missing", async () => {
-		const requireAdmin = requireRole("admin");
+		const requireModerator = requireRole("moderator");
 		const request = makeRequest();
 
-		await expect(requireAdmin(request)).rejects.toThrow(AppError);
-		await expect(requireAdmin(request)).rejects.toMatchObject({
+		await expect(requireModerator(request)).rejects.toThrow(AppError);
+		await expect(requireModerator(request)).rejects.toMatchObject({
 			code: "FORBIDDEN",
 			statusCode: 403,
 		});
