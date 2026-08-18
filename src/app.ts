@@ -213,7 +213,7 @@ app.get("/health", () => ({ status: "ok" }));
 
 app.register(authRoutes, { prefix: "/v1" });
 app.register(authV2Routes, { prefix: "/v2" });
-app.register(accountRoutes, { prefix: "/v2" });
+app.register(accountRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });
 app.register(complaintRoutes, { prefix: "/v1" });

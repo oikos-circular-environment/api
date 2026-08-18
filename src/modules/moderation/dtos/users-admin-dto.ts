@@ -1,5 +1,6 @@
 import z from "zod";
 import { authV2UserSchema } from "@/modules/auth/dtos/auth-v2-dto.js";
+import { profileSchema } from "@/modules/profiles/dtos/profiles-dto.js";
 
 export const listUsersAdminQuerySchema = z.object({
 	searchValue: z.string().optional(),
@@ -46,8 +47,8 @@ export const setRoleAdminBodySchema = z.object({
 export type SetRoleAdminBodyInput = z.infer<typeof setRoleAdminBodySchema>;
 
 export const banUserAdminBodySchema = z.object({
-	banReason: z.string().optional(),
-	banExpiresIn: z.number().int().min(0).optional(),
+	ban_reason: z.string().optional(),
+	ban_expires_in: z.number().int().min(0).optional(),
 });
 export type BanUserAdminBodyInput = z.infer<typeof banUserAdminBodySchema>;
 
@@ -63,6 +64,23 @@ export const userAdminParamsSchema = z.object({
 });
 export type UserAdminParamsInput = z.infer<typeof userAdminParamsSchema>;
 
+export const accountSummarySchema = z.object({
+	id: z.string(),
+	provider_id: z.string(),
+	account_id: z.string(),
+	scope: z.string().nullable(),
+	created_at: z.string().datetime(),
+	updated_at: z.string().datetime(),
+});
+export type AccountSummaryResponse = z.infer<typeof accountSummarySchema>;
+
+export const getUserAdminResponseSchema = z.object({
+	user: authV2UserSchema,
+	profile: profileSchema.nullable(),
+	accounts: z.array(accountSummarySchema),
+});
+export type GetUserAdminResponse = z.infer<typeof getUserAdminResponseSchema>;
+
 export const listUserSessionsAdminResponseSchema = z.object({
 	sessions: z.array(
 		z.object({
@@ -71,6 +89,8 @@ export const listUserSessionsAdminResponseSchema = z.object({
 			expires_at: z.string().datetime(),
 			user_id: z.string(),
 			impersonated_by: z.string().nullable().optional(),
+			ip_address: z.string().nullable(),
+			user_agent: z.string().nullable(),
 		}),
 	),
 });

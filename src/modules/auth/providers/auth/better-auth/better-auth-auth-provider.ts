@@ -44,6 +44,7 @@ export type AuthApiUser = {
 	banned?: boolean;
 	banReason?: string | null;
 	banExpires?: Date | null;
+	authSource?: string;
 };
 
 export type AuthApiSession = {
@@ -52,6 +53,8 @@ export type AuthApiSession = {
 	expiresAt: Date;
 	userId: string;
 	impersonatedBy?: string | null;
+	ipAddress?: string | null;
+	userAgent?: string | null;
 };
 
 export type AuthApiClient = {
@@ -407,6 +410,7 @@ function mapUser(user: AuthApiUser): AuthUser {
 		banned: user.banned ?? false,
 		banReason: user.banReason ?? null,
 		banExpires: user.banExpires ?? null,
+		authSource: user.authSource ?? "better_auth",
 		createdAt: user.createdAt,
 		updatedAt: user.updatedAt,
 	};
@@ -419,6 +423,8 @@ function mapSession(session: AuthApiSession): AuthSession {
 		expiresAt: session.expiresAt,
 		userId: session.userId,
 		impersonatedBy: session.impersonatedBy ?? null,
+		ipAddress: session.ipAddress ?? null,
+		userAgent: session.userAgent ?? null,
 	};
 }
 

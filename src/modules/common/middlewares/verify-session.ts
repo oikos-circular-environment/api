@@ -11,6 +11,7 @@ export type AuthUserLike = {
 	banned: boolean;
 	banReason: string | null;
 	banExpires: Date | null;
+	authSource: string;
 	createdAt: Date;
 	updatedAt: Date;
 };

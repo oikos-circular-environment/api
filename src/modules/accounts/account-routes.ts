@@ -93,10 +93,10 @@ export async function accountRoutes(app: FastifyInstance) {
 		);
 
 		typedAuth.delete(
-			"/accounts/me",
+			"/users/me",
 			{
 				schema: withBearerAuth({
-					tags: ["Accounts"],
+					tags: ["Users"],
 					summary: "Request account deletion",
 					description:
 						"Schedules the authenticated user's account for deletion after a grace period.",
@@ -130,10 +130,10 @@ export async function accountRoutes(app: FastifyInstance) {
 		);
 
 		typedAuth.patch(
-			"/accounts/me/cancel-deletion",
+			"/users/me/cancel-deletion",
 			{
 				schema: withBearerAuth({
-					tags: ["Accounts"],
+					tags: ["Users"],
 					summary: "Cancel account deletion",
 					description: "Cancels a previously scheduled account deletion.",
 					response: {

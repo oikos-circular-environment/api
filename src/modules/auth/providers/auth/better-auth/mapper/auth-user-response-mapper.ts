@@ -14,6 +14,7 @@ export function authUserResponseMapper(
 		banned: user.banned,
 		ban_reason: user.banReason,
 		ban_expires: user.banExpires?.toISOString() ?? null,
+		auth_source: user.authSource,
 		created_at: user.createdAt.toISOString(),
 		updated_at: user.updatedAt.toISOString(),
 	};
