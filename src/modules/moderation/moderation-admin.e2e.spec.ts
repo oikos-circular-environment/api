@@ -170,7 +170,7 @@ describe("moderation-admin", () => {
 				method: "POST",
 				url: `/v2/moderation/users/${targetId}/ban`,
 				headers: adminHeaders,
-				payload: { banReason: "violation" },
+				payload: { ban_reason: "violation" },
 			});
 			expect(banRes.statusCode).toBe(200);
 			const banBody = banRes.json<{
