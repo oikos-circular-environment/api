@@ -147,7 +147,23 @@ function loadAllCityDataFiles(): CityDataFileEntry[] {
 		process.exit(1);
 	}
 
-	const files = readdirSync(DATA_DIR).filter((f) => f.endsWith(".json"));
+	const citySlugFilter = process.env.SEED_CITY_SLUG?.split(",")
+		.map((s) => s.trim())
+		.filter(Boolean);
+
+	let files = readdirSync(DATA_DIR).filter((f) => f.endsWith(".json"));
+	if (citySlugFilter && citySlugFilter.length > 0) {
+		files = files.filter((f) =>
+			citySlugFilter.includes(f.replace(/\.json$/, "")),
+		);
+		console.log(`Filtro SEED_CITY_SLUG ativo: ${citySlugFilter.join(", ")}`);
+		if (files.length === 0) {
+			console.error(
+				`Nenhum arquivo encontrado em ${DATA_DIR} para os slugs informados`,
+			);
+			process.exit(1);
+		}
+	}
 
 	return files.map((file) => {
 		const data: CityDataFile = JSON.parse(
