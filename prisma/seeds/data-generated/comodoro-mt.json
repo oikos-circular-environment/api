@@ -1,0 +1,5965 @@
+{
+	"_meta": {
+		"generated_at": "2026-08-22T23:43:58.152Z",
+		"city": "Comodoro",
+		"state_code": "MT",
+		"users_total": 20,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Alison Kessler-Pagac",
+			"display_name": "Alison",
+			"phone": "(28) 95343-0156",
+			"email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "49154-343",
+				"street": "Price Points",
+				"number": "26856",
+				"complement": null,
+				"district": "Pike County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.837482,
+				"longitude": -60.247912
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJEfpk6KRruZMRECD9GfYYfqU",
+						"rating": 4.3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "COOPRERON - Cooperativa de Reciclagem do Estado de Rondônia",
+					"business_name": "COOPRERON - Cooperativa de Reciclagem do Estado de Rondônia",
+					"identity": "62521953000152",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "coopreron.cooperativa.de.reciclagem.do.estado.de.rondonia@metallic-derby.com",
+					"phones": ["(45) 97254-6824"],
+					"website": "http://coopreronreciclagem.no.comunidades.net/index.php",
+					"started_activity_in": "2018-04-08T09:01:48.534Z",
+					"address": {
+						"zip_code": "76980-000",
+						"street": "R. Setecentos e Vinte e Quatro",
+						"number": "1828",
+						"complement": null,
+						"district": "Marcos Freire, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7289675,
+						"longitude": -60.155092499999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 970.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.65,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 32.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.48,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 841.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.3,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 473.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.03,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 805.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.51,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 927.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 114.32,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 113.09,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 149.51,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 153.25,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 200.15,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 192.4,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJYUofyGetvZMRQAU61mmq_XM",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JR SUCATAS PONTO DE APOIO",
+					"business_name": "JR SUCATAS PONTO DE APOIO",
+					"identity": "64826631000147",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jr.sucatas.ponto.de.apoio@selfish-commodity.info",
+					"phones": ["(65) 99913-4077"],
+					"website": null,
+					"started_activity_in": "2018-09-30T05:16:16.357Z",
+					"address": {
+						"zip_code": "78319-000",
+						"street": "R. Maceió",
+						"number": "353",
+						"complement": null,
+						"district": "Centro, Campos de Júlio",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.7263196,
+						"longitude": -59.25642130000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.92,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 749.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 489.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 475.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 292.62,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 216.92,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 114.37,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.17,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-08T11:37:00.713Z",
+					"observations": "Cura officia ustilo arto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.052168,
+								"longitude": -59.145116,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787380431685
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Gloucestershire",
+							"streetNumber": "5669",
+							"street": "Nader Highway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82974544",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Herta Ferry, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"description": "Cinis ea vado bis audentia cubo triduana aliqua totam.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-31T18:16:27.233Z",
+					"observations": "Creber subito crudelis ventus canonicus cuppedia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.865175,
+								"longitude": -59.033222,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787406383643
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Humberside",
+							"streetNumber": "7739",
+							"street": "Keeling Run",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02717178",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "North Road, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlie-bruen.17.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"description": "Temporibus fuga auctor ocer doloribus stillicidium suasoria apparatus alias odit.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"description": "Praesentium turpis quidem cultellus tergiversatio consuasor aestas nulla expedita tumultus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-09T10:10:34.387Z",
+					"observations": "Bibo audax sopor conicio vulnus statua volva.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.708444,
+								"longitude": -60.461022,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787432473320
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Scott County",
+							"streetNumber": "717",
+							"street": "Reilly Loop",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47518152",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hazel Alley, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Alan O'Hara",
+			"display_name": "Alan",
+			"phone": "(05) 97279-1242",
+			"email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "82925-236",
+				"street": "Lowe Well",
+				"number": "37081",
+				"complement": null,
+				"district": "Humberside",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.707533,
+				"longitude": -59.516494
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ8yFUEQBpuZMRbQtA75Io2ro",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Vilhena",
+					"business_name": "Reciclagem Vilhena",
+					"identity": "17509948000170",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.vilhena@unlawful-fax.name",
+					"phones": ["(69) 99248-2732"],
+					"website": null,
+					"started_activity_in": "2017-01-08T11:57:48.658Z",
+					"address": {
+						"zip_code": "78310-000",
+						"street": "Embratel",
+						"number": "Vilhena",
+						"complement": null,
+						"district": "RO, , Brasil",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7250214,
+						"longitude": -60.088503300000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 622.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.59,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 366.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.58,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 162
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 705.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.76,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 946.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 297.74,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 165.06,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJDYGOPa9puZMR2VWxwi-C1w0",
+						"rating": 4.9,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "NSA Metais",
+					"business_name": "NSA Metais",
+					"identity": "39214075000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "nsa.metais@beloved-programme.name",
+					"phones": ["(69) 98458-0568"],
+					"website": null,
+					"started_activity_in": "2025-01-15T21:41:11.141Z",
+					"address": {
+						"zip_code": "76987-498",
+						"street": "R. Seiscentos e Cinqüenta e Um",
+						"number": "726",
+						"complement": null,
+						"district": "St. 06, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.749119700000001,
+						"longitude": -60.0995864
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.36,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 755.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.42,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 37.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.02,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 83.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.97,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 281.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.32,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 958.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 263.96,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 141.86,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 94.12,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 147.11,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 163.43,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 202.33,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-04T18:21:19.859Z",
+					"observations": "Sponte tepidus tot nesciunt caecus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.336211,
+								"longitude": -60.420159,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787407002471
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "North Yorkshire",
+							"streetNumber": "7044",
+							"street": "Von Views",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06244313",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nakia Freeway, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Madeira",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlie-bruen.17.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"description": "Angulus viriliter tricesimus thorax vorax.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "leif-langosh.10.comodoro-mt@oikos.seed",
+							"description": "Tredecim stips incidunt ademptio optio convoco deleo caecus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Aaron Funk",
+			"display_name": "Aaron",
+			"phone": "(61) 91510-9701",
+			"email": "aaron-funk.2.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "38489-245",
+				"street": "Roob Lodge",
+				"number": "549",
+				"complement": null,
+				"district": "Logan County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.719886,
+				"longitude": -58.904471
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJM55lPGVruZMRdIW2apK2IkY",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Só tambor",
+					"business_name": "Só tambor",
+					"identity": "31851606000164",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "so.tambor@submissive-slime.name",
+					"phones": ["(69) 99946-8619"],
+					"website": null,
+					"started_activity_in": "2017-02-18T20:54:33.610Z",
+					"address": {
+						"zip_code": "76980-160",
+						"street": "Av. Mal. Rondon",
+						"number": "2530",
+						"complement": null,
+						"district": "Centro, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.736654699999999,
+						"longitude": -60.1496584
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.27,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 134.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 649.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.44,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 559.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.48,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 892.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 282.53,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 184.43,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 150.23,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ6fd9rXJruZMROwJaLBnlXcc",
+						"rating": 4.2,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "IAPPE RECICLAGEM EPP",
+					"business_name": "IAPPE RECICLAGEM EPP",
+					"identity": "11855144000146",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "iappe.reciclagem.epp@made-up-technologist.info",
+					"phones": ["(69) 99306-7897"],
+					"website": "https://instagram.com/c.iappereciclagem?utm_medium=copy_link",
+					"started_activity_in": "2022-05-07T00:08:12.071Z",
+					"address": {
+						"zip_code": "76982-174",
+						"street": "Rua Rio grande do norte",
+						"number": "1805 Parque industrial Novo tempo",
+						"complement": null,
+						"district": "Novo Tempo, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7226149,
+						"longitude": -60.1348371
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.81,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 976.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.52,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 200.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.7,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 530
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.15,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 268.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 258.02,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 88.91,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 119.86,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-22T18:15:50.802Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.283119,
+								"longitude": -59.702204,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787420501138
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Dorset",
+							"streetNumber": "5382",
+							"street": "Woodlands",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03350916",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Vernon Expressway, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-23T22:40:58.594Z",
+					"observations": "In vomer culpa utrum theatrum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.389891,
+								"longitude": -59.770637,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787392235193
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Franklin County",
+							"streetNumber": "428",
+							"street": "Barton Crest",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36549005",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S 1st Street, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"description": "Thermae corrupti a assumenda cunabula saepe cuppedia vix vulariter.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-15T11:23:00.310Z",
+					"observations": "Denego supplanto vallum degusto hic viridis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.159798,
+								"longitude": -59.29707,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787360701381
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "West Yorkshire",
+							"streetNumber": "84726",
+							"street": "Jadyn Heights",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "72762209",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Laurels, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-08-24T05:46:42.712Z",
+					"observations": "Sperno somniculosus atavus ullam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.01893,
+								"longitude": -59.507194,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787397020941
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Merseyside",
+							"streetNumber": "7838",
+							"street": "S 7th Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93595615",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Block Parkways, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlie-bruen.17.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leif-langosh.10.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"description": "Surculus combibo coadunatio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Steven Lang",
+			"display_name": "Steven",
+			"phone": "(74) 94480-7988",
+			"email": "steven-lang.3.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "13686-438",
+				"street": "Anderson Lights",
+				"number": "4456",
+				"complement": null,
+				"district": "Oxfordshire",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.452609,
+				"longitude": -59.120181
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJTQrr_FqtvZMRrvDQJepuSNA",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cearpa",
+					"business_name": "Cearpa",
+					"identity": "90332239000151",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cearpa@front-pulse.biz",
+					"phones": ["(73) 94948-7618"],
+					"website": null,
+					"started_activity_in": "2024-12-04T09:23:04.186Z",
+					"address": {
+						"zip_code": "78307-000",
+						"street": "Estr. Cearpa",
+						"number": "Campos de Júlio",
+						"complement": null,
+						"district": "MT, , Brasil",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.7352805,
+						"longitude": -59.2530673
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 708.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.69,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 105.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 588.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.99,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 195.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 84.06,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 274.19,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 217.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 170.25,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 207.13,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 206.83,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ0SZEkLFruZMRfQohMYsBYHE",
+						"rating": 3.9,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "NSA Metais",
+					"business_name": "NSA Metais",
+					"identity": "98113007000114",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "nsa.metais@darling-event.info",
+					"phones": ["(69) 3321-1152"],
+					"website": null,
+					"started_activity_in": "2018-04-16T00:25:33.061Z",
+					"address": {
+						"zip_code": "76982-249",
+						"street": "Avenida Jô Sato",
+						"number": "2153",
+						"complement": null,
+						"district": "Novo Tempo, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.721194599999999,
+						"longitude": -60.127987000000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.3,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 558.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.42,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 651
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.83,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 315.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 196.93,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 71.3,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-25T15:44:45.636Z",
+					"observations": "Pauci versus utor avaritia videlicet defetiscor cogito spiculum aedificium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.65148,
+								"longitude": -60.163899,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787372345300
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Lee County",
+							"streetNumber": "76737",
+							"street": "Medhurst Coves",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67849289",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cathy Cliff, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Plástico",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "flora-bailey.5.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-03T07:05:49.564Z",
+					"observations": "Rerum subnecto absorbeo quis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.487237,
+								"longitude": -59.780192,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787378481504
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Cumbria",
+							"streetNumber": "6400",
+							"street": "Mill Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15468523",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "South Street, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Papel / Papelão",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leif-langosh.10.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "flora-bailey.5.comodoro-mt@oikos.seed",
+							"description": "Doloribus sumo clamo alo animus ab cauda tres aufero.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-07T22:22:51.324Z",
+					"observations": "Cognatus vix doloremque carmen atavus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -14.062062,
+								"longitude": -59.373455,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787406312444
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Lake County",
+							"streetNumber": "6177",
+							"street": "Angelica Crescent",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59196956",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mante Wells, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Bobby Bartell-Prosacco",
+			"display_name": "Bobby",
+			"phone": "(69) 91305-4095",
+			"email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "21515-403",
+				"street": "Jaskolski Pass",
+				"number": "888",
+				"complement": null,
+				"district": "Lothian",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.086707,
+				"longitude": -59.578439
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJeRO_h7FruZMRiK3az9w2OoE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Amazon Metais Comércio De Sucatas",
+					"business_name": "Amazon Metais Comércio De Sucatas",
+					"identity": "94792320000175",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "amazon.metais.comercio.de.sucatas@pointless-unique.org",
+					"phones": ["(69) 99319-0074"],
+					"website": null,
+					"started_activity_in": "2020-05-21T10:41:15.978Z",
+					"address": {
+						"zip_code": "76980-000",
+						"street": "Av. Mal. Rondon",
+						"number": "2430",
+						"complement": null,
+						"district": "Bodanese, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7363272,
+						"longitude": -60.15093859999999
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 10.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.65,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 549.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 276.9,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 93.36,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 232.3,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 207.25,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 266.21,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJc9oFHrTPvZMRLZycWslDFoU",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CATANORTE",
+					"business_name": "CATANORTE",
+					"identity": "43909610000115",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "catanorte@productive-middle.biz",
+					"phones": ["(69) 99964-9208"],
+					"website": null,
+					"started_activity_in": "2022-05-06T19:28:42.531Z",
+					"address": {
+						"zip_code": "76808-695",
+						"street": "BR 364",
+						"number": "KM 11 – Estrada da Rema s/nº",
+						"complement": null,
+						"district": "Vila Princesa",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -13.8330404,
+						"longitude": -59.628731
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.56,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 502.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.64,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 202.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.45,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 788.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 320.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 266.47,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 197.95,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 159.37,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 275.29,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-27T00:25:57.581Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.480355,
+								"longitude": -59.526804,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787427914274
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Highlands and Islands",
+							"streetNumber": "7166",
+							"street": "Ahmad Mills",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52509821",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Church Lane, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leif-langosh.10.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-28T21:16:06.422Z",
+					"observations": "Et territo adinventitias.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.563139,
+								"longitude": -60.010811,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787433100205
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Somerset",
+							"streetNumber": "3479",
+							"street": "Romaguera Flat",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09407636",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Esperanza Rue, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-15T09:21:16.855Z",
+					"observations": "Ratione asper demulceo arto blandior.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.3261,
+								"longitude": -60.382761,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787362432617
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "West Glamorgan",
+							"streetNumber": "512",
+							"street": "University Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84890103",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "High Road, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-19T08:27:41.594Z",
+					"observations": "Crinis comptus cervus demum theologus debeo defendo corpus officiis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.249682,
+								"longitude": -60.691648,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787405618092
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Monroe County",
+							"streetNumber": "40178",
+							"street": "S 1st Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77660283",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lime Grove, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Flora Bailey",
+			"display_name": "Flora",
+			"phone": "(77) 98450-2633",
+			"email": "flora-bailey.5.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "06482-646",
+				"street": "Barton Road",
+				"number": "22671",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.721328,
+				"longitude": -60.636088
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJf_qwmLVruZMRBW4nqSV56D8",
+						"rating": 3.5,
+						"types": [
+							"car_repair",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Truckauto Auto Peças",
+					"business_name": "Truckauto Auto Peças",
+					"identity": "04553849000143",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "truckauto.auto.pecas@grizzled-accompanist.net",
+					"phones": ["(69) 98432-3911"],
+					"website": null,
+					"started_activity_in": "2019-02-28T18:43:15.570Z",
+					"address": {
+						"zip_code": "76980-000",
+						"street": "Av. Celso Mazutti",
+						"number": "3399",
+						"complement": null,
+						"district": "Jardim América, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.737431599999999,
+						"longitude": -60.142919
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 710.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 299.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 630.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.93,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 609.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 38.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.93,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 391.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 284.11,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 254.3,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 225.9,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 86.09,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 296.63,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 292.53,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJGRuiSV5ruZMRwbjSbcOxo-4",
+						"rating": 4,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"service",
+							"store",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Interlagos Comércio de Peças Usadas",
+					"business_name": "Interlagos Comércio de Peças Usadas",
+					"identity": "76078270000187",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "interlagos.comercio.de.pecas.usadas@stark-steeple.info",
+					"phones": ["(69) 99278-4242"],
+					"website": null,
+					"started_activity_in": "2020-05-18T20:53:48.908Z",
+					"address": {
+						"zip_code": "76988-034",
+						"street": "saida para Pvh",
+						"number": "setor D",
+						"complement": null,
+						"district": "Br364",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.726346,
+						"longitude": -60.18452070000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "13:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "13:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.3,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 354.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.7,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 634.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.56,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 454.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.45,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 932.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.62,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 912.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 158.77,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 78.01,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 299.21,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 155.82,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-21T09:36:57.835Z",
+					"observations": "Deleniti virtus beatae vomer taceo unus cupressus delectatio paens decens.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.992256,
+								"longitude": -59.255479,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787394767583
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Jackson County",
+							"streetNumber": "51126",
+							"street": "Sawayn Springs",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09981635",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Edmund Viaduct, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"description": "Agnosco nesciunt amplexus subnecto verecundia nesciunt.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-15T23:01:55.404Z",
+					"observations": "Casso confido odit voluptatum solio modi cogito sublime cavus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.460456,
+								"longitude": -60.268566,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787398588499
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Borders",
+							"streetNumber": "33737",
+							"street": "Matt Expressway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "33384962",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lemke Branch, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Lâmpadas",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-31T04:24:18.462Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.538886,
+								"longitude": -60.27969,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787385059269
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Carroll County",
+							"streetNumber": "324",
+							"street": "Hickory Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77424375",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Crona Street, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lexi O'Conner",
+			"display_name": "Lexi",
+			"phone": "(90) 99529-3172",
+			"email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "09844-262",
+				"street": "Robert Ford",
+				"number": "6485",
+				"complement": null,
+				"district": "Wayne County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.487893,
+				"longitude": -59.415621
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ-Vbp9bZruZMRLRZkB7ujn9Q",
+						"rating": 4,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Telepeças Guerra",
+					"business_name": "Telepeças Guerra",
+					"identity": "07298172000132",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "telepecas.guerra@moral-pocket-watch.org",
+					"phones": ["(69) 3321-5941"],
+					"website": null,
+					"started_activity_in": "2022-06-11T09:54:08.702Z",
+					"address": {
+						"zip_code": "78995-000",
+						"street": "Av. Celso Mazutti",
+						"number": "16852",
+						"complement": null,
+						"district": "Jardim América, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7370364,
+						"longitude": -60.1439681
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.01,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 565.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.74,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 451.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 268.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.61,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 241.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 165.13,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 254.95,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 204.46,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 226.07,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 160.04,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 166.85,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJmf12hbdruZMR80BfGhBKjKs",
+						"rating": 1.7,
+						"types": [
+							"auto_parts_store",
+							"point_of_interest",
+							"car_repair",
+							"store",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Stop Peças e Latarias",
+					"business_name": "Stop Peças e Latarias",
+					"identity": "40485145000144",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "stop.pecas.e.latarias@likable-plumber.biz",
+					"phones": ["(69) 99256-5611"],
+					"website": null,
+					"started_activity_in": "2024-08-09T10:44:15.201Z",
+					"address": {
+						"zip_code": "76980-000",
+						"street": "Av. Celso Mazutti",
+						"number": "3917",
+						"complement": null,
+						"district": "Centro, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7408819,
+						"longitude": -60.1292049
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.44,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 213.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 543
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.74,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 126
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.85,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 225
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.08,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 166.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.73,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 717.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 123.66,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 172.57,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 260.21,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Roosevelt Graham-Adams",
+			"display_name": "Roosevelt",
+			"phone": "(33) 97414-6996",
+			"email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "22425-106",
+				"street": "Garden Street",
+				"number": "9107",
+				"complement": null,
+				"district": "Bedfordshire",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.8855,
+				"longitude": -60.397837
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJjXZGWwBruZMRa0Tdl1UMVAE",
+						"rating": null,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Dino",
+					"business_name": "Ferro Velho Dino",
+					"identity": "24379014932",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.dino@bad-cash.info",
+					"phones": ["(69) 98407-1290"],
+					"website": null,
+					"started_activity_in": "2022-10-01T23:31:13.357Z",
+					"address": {
+						"zip_code": "76980-000",
+						"street": "R. Ceará",
+						"number": "2263",
+						"complement": null,
+						"district": "Novo Tempo, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7181362,
+						"longitude": -60.1349662
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.43,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 139
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.87,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 287.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.63,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 168.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 477.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 722.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 128.5,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 237.39,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ5X7jejJquZMRdlnA_oyQa8Y",
+						"rating": 4.2,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Real Comércio de Peças",
+					"business_name": "Real Comércio de Peças",
+					"identity": "10553199000139",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "real.comercio.de.pecas@electric-deck.net",
+					"phones": ["(69) 3322-7730"],
+					"website": null,
+					"started_activity_in": "2018-10-09T14:28:32.938Z",
+					"address": {
+						"zip_code": "76980-000",
+						"street": "Av. Mal. Rondon",
+						"number": "4574",
+						"complement": null,
+						"district": "Centro, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7420715,
+						"longitude": -60.130676199999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.69,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 697
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.41,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 504.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.82,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 662.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.56,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 364.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.52,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 335.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.6,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 482.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 104.4,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 181.3,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 295.83,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Garry McLaughlin",
+			"display_name": "Garry",
+			"phone": "(51) 99867-1293",
+			"email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "47495-434",
+				"street": "Walter Plains",
+				"number": "55830",
+				"complement": null,
+				"district": "Monroe County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.744345,
+				"longitude": -60.574313
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJvU2N8pJpuZMRa6PoNIwgtko",
+						"rating": 4.1,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Auto car assessório peças novas e usadas",
+					"business_name": "Auto car assessório peças novas e usadas",
+					"identity": "23740550000142",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "auto.car.assessorio.pecas.novas.e.usadas@hollow-cruelty.info",
+					"phones": ["(69) 99964-1436"],
+					"website": null,
+					"started_activity_in": "2022-05-31T12:34:59.087Z",
+					"address": {
+						"zip_code": "76986-334",
+						"street": "R. 8520",
+						"number": "número 1152",
+						"complement": null,
+						"district": "Assosset, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.736303999999999,
+						"longitude": -60.092462100000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.58,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 922.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.93,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 112.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.11,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 137.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.24,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 985.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 117.88,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 187.56,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 157.83,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 184.51,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJV-FKv8pruZMR7ACsMRBsR-c",
+						"rating": 4.2,
+						"types": [
+							"market",
+							"tire_shop",
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Rondobras Autopeças",
+					"business_name": "Rondobras Autopeças",
+					"identity": "94217613000129",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rondobras.autopecas@far-flung-pinstripe.net",
+					"phones": ["(69) 3733-7528"],
+					"website": "https://rondobras.com.br/",
+					"started_activity_in": "2025-09-23T04:39:30.985Z",
+					"address": {
+						"zip_code": "76980-082",
+						"street": "Av. Mal. Rondon",
+						"number": "3564",
+						"complement": null,
+						"district": "Centro, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.739350000000002,
+						"longitude": -60.140097000000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.93,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 165.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.51,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 972.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.86,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 788.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 389.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.44,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 730.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 288.95,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 106.18,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 78.74,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 109.24,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 134.24,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-03T13:32:21.965Z",
+					"observations": "Venio audio aequitas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.498083,
+								"longitude": -59.935123,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787383858498
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Marion County",
+							"streetNumber": "7568",
+							"street": "Bednar Oval",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79960101",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Goodwin Estate, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bobby-bartell-prosacco.4.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lela-kirlin.18.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+							"description": "Video voluptatibus tenetur catena templum enim caelum.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-08-26T09:00:08.497Z",
+					"observations": "Adicio creber adeo magnam creber.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.504139,
+								"longitude": -59.793627,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787423315154
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Gloucestershire",
+							"streetNumber": "20866",
+							"street": "E North Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98539437",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Derby Road, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "leif-langosh.10.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Barbara Goyette",
+			"display_name": "Barbara",
+			"phone": "(01) 98485-6020",
+			"email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "60050-782",
+				"street": "Cartwright Orchard",
+				"number": "6708",
+				"complement": null,
+				"district": "Clay County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.616042,
+				"longitude": -59.425028
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ-Vbp9bZruZMRfk9GmOame5c",
+						"rating": 4.3,
+						"types": [
+							"auto_parts_store",
+							"point_of_interest",
+							"car_repair",
+							"store",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Castrillon Autopeças Vilhena - RO",
+					"business_name": "Castrillon Autopeças Vilhena - RO",
+					"identity": "89984984000104",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "castrillon.autopecas.vilhena.ro@strident-courtroom.info",
+					"phones": ["(69) 2018-0220"],
+					"website": "http://www.castrillon.com.br/",
+					"started_activity_in": "2022-06-29T18:46:34.090Z",
+					"address": {
+						"zip_code": "76980-807",
+						"street": "Av. Celso Mazutti",
+						"number": "3663",
+						"complement": null,
+						"district": "Jardim América, Vilhena",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7379398,
+						"longitude": -60.1405258
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.33,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 43.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.82,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 350
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.06,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 656.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.47,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 711.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.89,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 850.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.65,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 238
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 57.48,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 168.11,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 210.21,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 205.15,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 269.45,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-Vbp9bZruZMR2SNiDytds6o",
+						"rating": 4.6,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Condor Auto Peças",
+					"business_name": "Condor Auto Peças",
+					"identity": "80712386000101",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "condor.auto.pecas@precious-polarisation.org",
+					"phones": ["(69) 3321-2800"],
+					"website": "https://www.instagram.com/condorautopecasvilhena?r=nametag",
+					"started_activity_in": "2026-04-19T15:44:09.520Z",
+					"address": {
+						"zip_code": "76980-160",
+						"street": "Condor Auto Peças",
+						"number": "S/N",
+						"complement": null,
+						"district": "Av. Mal. Rondon, 2484",
+						"city": "Comodoro",
+						"city_ibge_id": 5103304,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -12.7365272,
+						"longitude": -60.1501918
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.94,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 818.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 668.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 653.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.34,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 527.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.22,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 773.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.59,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 62.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 198.79,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 280.87,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-07T13:50:03.708Z",
+					"observations": "Tempus acquiro crapula turba.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.718654,
+								"longitude": -59.431887,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787393490190
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Tayside",
+							"streetNumber": "805",
+							"street": "Margret Loop",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76956886",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cummerata Motorway, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Leif Langosh",
+			"display_name": "Leif",
+			"phone": "(23) 96420-4841",
+			"email": "leif-langosh.10.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "22804-173",
+				"street": "O'Keefe-Zieme Isle",
+				"number": "680",
+				"complement": null,
+				"district": "Strathclyde",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.158268,
+				"longitude": -60.659034
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-16T22:58:19.575Z",
+					"observations": "Ceno cras conatus decerno utique curriculum thermae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.631502,
+								"longitude": -60.410962,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787374986982
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Dyfed",
+							"streetNumber": "204",
+							"street": "Katlynn Mews",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47927997",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bluebell Close, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-24T17:37:59.302Z",
+					"observations": "Somnus sui sit arto accendo nostrum suadeo cattus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.970186,
+								"longitude": -60.519244,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787367687114
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Perry County",
+							"streetNumber": "71003",
+							"street": "N Maple Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65637782",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kohler Corner, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ryan Stamm",
+			"display_name": "Ryan",
+			"phone": "(86) 98530-5298",
+			"email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "91469-217",
+				"street": "Beahan Plains",
+				"number": "4615",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.344965,
+				"longitude": -58.915969
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-08T19:25:20.304Z",
+					"observations": "Debeo reprehenderit molestias pecco bardus alienus cenaculum ducimus ciminatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.729448,
+								"longitude": -58.880063,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787360112797
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Union County",
+							"streetNumber": "32451",
+							"street": "Patrick Lights",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82607078",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Santiago Mount, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Robin Bogan",
+			"display_name": "Robin",
+			"phone": "(84) 93052-5578",
+			"email": "robin-bogan.12.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "67363-986",
+				"street": "Abshire Views",
+				"number": "3500",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.195515,
+				"longitude": -59.447133
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-29T21:38:18.048Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.805531,
+								"longitude": -60.045973,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787421338554
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Cheshire",
+							"streetNumber": "3023",
+							"street": "Brekke Extensions",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65026908",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hackett Extensions, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Fae Wiza",
+			"display_name": "Fae",
+			"phone": "(96) 96745-4644",
+			"email": "fae-wiza.13.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "79029-845",
+				"street": "S 2nd Street",
+				"number": "9639",
+				"complement": null,
+				"district": "Clwyd",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.483301,
+				"longitude": -60.575173
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Ramiro Bartell",
+			"display_name": "Ramiro",
+			"phone": "(39) 92815-8966",
+			"email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "72870-922",
+				"street": "Simon Passage",
+				"number": "11021",
+				"complement": null,
+				"district": "Hancock County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -12.909307,
+				"longitude": -60.352522
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-09T23:30:26.554Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.246366,
+								"longitude": -60.286598,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787387185627
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Pike County",
+							"streetNumber": "4873",
+							"street": "Emmerich Way",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37353157",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cody Wall, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Óleo Mineral / Lubrificante",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leif-langosh.10.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carlie-bruen.17.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+							"description": "Volup aurum adopto calculus condico.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"description": "Vitium vitae terror expedita.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lonny Cartwright",
+			"display_name": "Lonny",
+			"phone": "(88) 93644-0801",
+			"email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "64933-442",
+				"street": "Ronnie Spurs",
+				"number": "91339",
+				"complement": null,
+				"district": "Grampian",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.903874,
+				"longitude": -59.468612
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Ova Rutherford",
+			"display_name": "Ova",
+			"phone": "(72) 90787-9604",
+			"email": "ova-rutherford.16.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "11291-525",
+				"street": "Yundt Cliff",
+				"number": "8048",
+				"complement": null,
+				"district": "Durham",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.963573,
+				"longitude": -58.853102
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-13T23:08:07.809Z",
+					"observations": "Compono venio culpa via denego terebro circumvenio cernuus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.617828,
+								"longitude": -60.034908,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787361586215
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Union County",
+							"streetNumber": "44970",
+							"street": "S 1st Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57841025",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Walsh Gateway, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Vidro",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Carlie Bruen",
+			"display_name": "Carlie",
+			"phone": "(97) 92487-2389",
+			"email": "carlie-bruen.17.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "07474-751",
+				"street": "Mann River",
+				"number": "676",
+				"complement": null,
+				"district": "Durham",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -14.131088,
+				"longitude": -59.515127
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-20T13:58:29.525Z",
+					"observations": "Anser tepesco votum taedium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.818179,
+								"longitude": -59.798821,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787398639459
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Borders",
+							"streetNumber": "49044",
+							"street": "Davis Circles",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82762573",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Price Ridge, Comodoro - MT"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Plástico",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "garry-mclaughlin.8.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fae-wiza.13.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lela-kirlin.18.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ramiro-bartell.14.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "steven-lang.3.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ole-botsford.19.comodoro-mt@oikos.seed",
+							"description": "Averto tertius explicabo vinculum magni.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "flora-bailey.5.comodoro-mt@oikos.seed",
+							"description": "Sperno argumentum attollo deleniti culpo assentator careo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lela Kirlin",
+			"display_name": "Lela",
+			"phone": "(08) 91322-1867",
+			"email": "lela-kirlin.18.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "57361-671",
+				"street": "Paucek Creek",
+				"number": "567",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.779705,
+				"longitude": -59.822525
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-08T15:37:18.614Z",
+					"observations": "Carmen demoror audax sustineo repudiandae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -13.448225,
+								"longitude": -59.163148,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787441065399
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "Adams County",
+							"streetNumber": "703",
+							"street": "Candice Causeway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96720794",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cemetery Road, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ryan-stamm.11.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flora-bailey.5.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robin-bogan.12.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"description": "Cauda apostolus denuo eligendi compello.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"description": "Terga tremo summa cibus totam conforto cinis.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Ole Botsford",
+			"display_name": "Ole",
+			"phone": "(60) 98168-9849",
+			"email": "ole-botsford.19.comodoro-mt@oikos.seed",
+			"address": {
+				"zip_code": "06034-998",
+				"street": "W Center Street",
+				"number": "3443",
+				"complement": null,
+				"district": "Lee County",
+				"city": "Comodoro",
+				"city_ibge_id": 5103304,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -13.106869,
+				"longitude": -59.684603
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-15T11:39:14.384Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -12.888926,
+								"longitude": -60.360637,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1787407104588
+						},
+						"addresses": {
+							"city": "Comodoro",
+							"district": "South Glamorgan",
+							"streetNumber": "7021",
+							"street": "Kiehn Center",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91359443",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Geoffrey Mews, Comodoro - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Plástico"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-graham-adams.7.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aaron-funk.2.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "barbara-goyette.9.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alison-kessler-pagac.0.comodoro-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lonny-cartwright.15.comodoro-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lexi-o-conner.6.comodoro-mt@oikos.seed",
+							"description": "Animi cultura curso theologus cognomen verbum textus sursum cura depromo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alan-o-hara.1.comodoro-mt@oikos.seed",
+							"description": "Accusantium pecco recusandae.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		}
+	]
+}

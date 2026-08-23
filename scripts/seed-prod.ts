@@ -12,8 +12,14 @@
  *   DEST_SSH_HOST - IP publico da A1.Flex
  *   DEST_SSH_KEY  - caminho da chave privada do usuario deploy
  *
+ * Variaveis opcionais:
+ *   SEED_CITY_SLUG - restringe o seed a um ou mais arquivos de
+ *     prisma/seeds/data-generated (slug = nome do arquivo sem .json),
+ *     separados por virgula. Sem isso, semeia todas as cidades do diretorio.
+ *
  * Uso:
  *   DEST_SSH_HOST=134.65.229.35 DEST_SSH_KEY=~/.ssh/oikos-deploy npm run seed:prod
+ *   SEED_CITY_SLUG=comodoro-mt DEST_SSH_HOST=... DEST_SSH_KEY=... npm run seed:prod
  */
 
 import {
