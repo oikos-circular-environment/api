@@ -30,6 +30,11 @@ export interface ComplaintsRepository {
 
 	createForUser(userId: string, data: CreateComplaint): Promise<Complaint>;
 
+	deleteByUserAndComplaintId(
+		userId: string,
+		complaintId: string,
+	): Promise<void>;
+
 	updateByUserAndComplaintId(
 		userId: string,
 		complaintId: string,
