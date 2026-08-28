@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
@@ -273,6 +273,85 @@ describe("create-complaint-attachment-use-case", () => {
 			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_UPLOAD_FAILED");
 			expect(thrownError.statusCode).toBe(500);
 		}
+	});
+
+	it("rolls back the complaint when upload fails", async () => {
+		class UploadFailStorageProvider implements StorageProvider {
+			async uploadFile() {
+				return null;
+			}
+
+			async deleteFile() {}
+
+			async getFileUrl() {
+				return { url: "https://in-memory.storage/complaints/fallback.jpeg" };
+			}
+
+			async checkFileExists() {
+				return false;
+			}
+
+			async convertFileToBase64() {
+				return "";
+			}
+		}
+
+		const complaintsRepository = new InMemoryComplaintsRepository();
+		const deleteByUserAndComplaintIdSpy = vi.spyOn(
+			complaintsRepository,
+			"deleteByUserAndComplaintId",
+		);
+		const storageProvider = new UploadFailStorageProvider();
+		const sut = new CreateComplaintAttachmentUseCase(
+			complaintsRepository,
+			storageProvider,
+		);
+
+		const created = await complaintsRepository.createForUser(
+			"11111111-1111-1111-1111-111111111111",
+			{
+				date: new Date("2026-04-20T10:00:00.000Z"),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
+		);
+
+		let thrownError: unknown;
+
+		try {
+			await sut.execute({
+				userId: "11111111-1111-1111-1111-111111111111",
+				complaintId: created.id,
+				file: {
+					fileName: "attachment.jpeg",
+					mimeType: "image/jpeg",
+					content: Buffer.from("jpeg-image-content"),
+				},
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(deleteByUserAndComplaintIdSpy).toHaveBeenCalledWith(
+			"11111111-1111-1111-1111-111111111111",
+			created.id,
+		);
+
+		expect(thrownError instanceof AppError).toBe(true);
+
+		if (thrownError instanceof AppError) {
+			expect(thrownError.message).toBe("Failed to upload complaint attachment");
+			expect(thrownError.code).toBe("COMPLAINT_ATTACHMENT_UPLOAD_FAILED");
+			expect(thrownError.statusCode).toBe(500);
+		}
+
+		const remainingComplaint =
+			await complaintsRepository.findByUserAndComplaintId(
+				"11111111-1111-1111-1111-111111111111",
+				created.id,
+			);
+		expect(remainingComplaint).toBeNull();
 	});
 
 	it("throws when attach returns null after upload succeeds", async () => {
