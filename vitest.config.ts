@@ -9,6 +9,7 @@ export default defineConfig({
 	},
 	test: {
 		root: "./",
+		setupFiles: ["./src/test/unit-env.ts"],
 		include: ["src/**/*.spec.{ts,tsx}", "cli/**/*.spec.{ts,tsx}"],
 		exclude: [
 			"src/**/*.e2e.spec.{ts,tsx}",
