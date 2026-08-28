@@ -155,6 +155,15 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		return mapComplaint(complaint as PrismaComplaintPayload);
 	}
 
+	async deleteByUserAndComplaintId(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
+		await prisma.complaint.deleteMany({
+			where: { id: complaintId, user_id: userId },
+		});
+	}
+
 	async updateByUserAndComplaintId(
 		userId: string,
 		complaintId: string,

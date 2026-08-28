@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { makeCompany } from "@/modules/companies/factories/make-company.js";
+import { FakeOrganizationProvider } from "@/modules/companies/providers/fake-organization-provider.js";
 import { InMemoryCompaniesRepository } from "@/modules/companies/repositories/in-memory/in-memory-companies-repositories.js";
 import { InMemoryCompanyValidationRepository } from "@/modules/companies/repositories/in-memory/in-memory-company-validation-repository.js";
 import { CreateCompanyUseCase } from "./create-company-use-case.js";
@@ -10,9 +11,11 @@ describe("create-company-use-case", () => {
 		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
+		const organizationProvider = new FakeOrganizationProvider();
 		const sut = new CreateCompanyUseCase(
 			companiesRepository,
 			validationRepository,
+			organizationProvider,
 		);
 
 		const input = makeCompany({ user_id: userId });
@@ -35,9 +38,11 @@ describe("create-company-use-case", () => {
 		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
+		const organizationProvider = new FakeOrganizationProvider();
 		const sut = new CreateCompanyUseCase(
 			companiesRepository,
 			validationRepository,
+			organizationProvider,
 		);
 
 		const input1 = makeCompany({ user_id: userId });
@@ -60,9 +65,11 @@ describe("create-company-use-case", () => {
 		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
+		const organizationProvider = new FakeOrganizationProvider();
 		const sut = new CreateCompanyUseCase(
 			companiesRepository,
 			validationRepository,
+			organizationProvider,
 		);
 
 		const company = await sut.execute({
@@ -84,9 +91,11 @@ describe("create-company-use-case", () => {
 		const userId = randomUUID();
 		const companiesRepository = new InMemoryCompaniesRepository();
 		const validationRepository = new InMemoryCompanyValidationRepository();
+		const organizationProvider = new FakeOrganizationProvider();
 		const sut = new CreateCompanyUseCase(
 			companiesRepository,
 			validationRepository,
+			organizationProvider,
 		);
 
 		const company = await sut.execute({

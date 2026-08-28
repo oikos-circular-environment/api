@@ -13,6 +13,30 @@ const envSchema = z
 
 		STORAGE_PROVIDER: z.enum(["minio", "supabase"]).default("minio"),
 		APP_PUBLIC_URL: z.string().default("http://localhost:3333"),
+		WEB_APP_URL: z.string().default("http://localhost:3000"),
+
+		BETTER_AUTH_SECRET: z.string(),
+		BETTER_AUTH_URL: z.string().optional(),
+		BETTER_AUTH_TRUSTED_ORIGINS: z
+			.string()
+			.optional()
+			.transform((value) =>
+				value
+					? value
+							.split(",")
+							.map((origin) => origin.trim())
+							.filter(Boolean)
+					: undefined,
+			),
+		EMAIL_PROVIDER: z
+			.enum(["console", "in-memory", "resend"])
+			.default("console"),
+		RESEND_API_KEY: z.string().optional(),
+		RESEND_FROM_EMAIL: z.string().optional(),
+		REQUIRE_EMAIL_VERIFICATION: z
+			.string()
+			.optional()
+			.transform((value) => value?.toLowerCase() === "true"),
 
 		MINIO_ENDPOINT: z.string().optional(),
 		MINIO_PORT: z.coerce.number().default(9000),
@@ -33,9 +57,6 @@ const envSchema = z
 			.default(90 * 24 * 60 * 60 * 1000),
 		WORKER_CONCURRENCY: z.coerce.number().default(5),
 
-		// So usadas pelos seeds de conta de teste (prisma/seeds/google-account.seed.ts,
-		// apple-account.seed.ts) - opcionais pra API subir sem exigir credenciais de
-		// teste em producao, onde o seed roda manualmente e separado do deploy.
 		GOOGLE_ACCOUNT_EMAIL: z.email().optional(),
 		GOOGLE_ACCOUNT_PASSWORD: z.string().optional(),
 
@@ -48,19 +69,13 @@ const envSchema = z
 		CLIENT_KEY_MOBILE: z.string().optional(),
 		CLIENT_KEY_WEB: z.string().optional(),
 
-		// Nao usa z.coerce.boolean(): `Boolean("false")` e `true` em JS, o que
-		// coagiria a string "false" para o booleano true.
 		CLIENT_KEY_ENFORCE: z
 			.string()
 			.optional()
 			.transform((value) => value?.toLowerCase() !== "false"),
 
-		// Allowlist de origens para CORS, separadas por virgula. Vazio/ausente
-		// mantem `origin: "*"` (comportamento atual, adequado para dev local).
 		CORS_ALLOWED_ORIGINS: z.string().optional(),
 
-		// OpenTelemetry — quando definido e não vazio, activa o SDK (ver devops/observability/)
-		// String vazia equivale a não definido (permite desabilitar via OTEL_EXPORTER_OTLP_ENDPOINT=)
 		OTEL_EXPORTER_OTLP_ENDPOINT: z.preprocess(
 			(v) => (v === "" ? undefined : v),
 			z.string().url().optional(),
@@ -113,6 +128,23 @@ const envSchema = z
 					message:
 						"SUPABASE_OIKOS_PROFILES_BUCKET is required when STORAGE_PROVIDER=supabase",
 					path: ["SUPABASE_OIKOS_PROFILES_BUCKET"],
+				});
+			}
+		}
+
+		if (data.EMAIL_PROVIDER === "resend") {
+			if (!data.RESEND_API_KEY) {
+				ctx.addIssue({
+					code: "custom",
+					message: "RESEND_API_KEY is required when EMAIL_PROVIDER=resend",
+					path: ["RESEND_API_KEY"],
+				});
+			}
+			if (!data.RESEND_FROM_EMAIL) {
+				ctx.addIssue({
+					code: "custom",
+					message: "RESEND_FROM_EMAIL is required when EMAIL_PROVIDER=resend",
+					path: ["RESEND_FROM_EMAIL"],
 				});
 			}
 		}
@@ -179,4 +211,15 @@ export function getSupabaseConfig(): {
 		publishableKey: env.SUPABASE_PUBLISHABLE_KEY,
 		bucket: SUPABASE_OIKOS_PROFILES_BUCKET,
 	};
+}
+
+export function getResendConfig(): {
+	apiKey: string;
+	fromEmail: string;
+} {
+	const { RESEND_API_KEY, RESEND_FROM_EMAIL } = env;
+	if (!RESEND_API_KEY || !RESEND_FROM_EMAIL) {
+		throw new Error("Resend config unavailable. Ensure EMAIL_PROVIDER=resend");
+	}
+	return { apiKey: RESEND_API_KEY, fromEmail: RESEND_FROM_EMAIL };
 }

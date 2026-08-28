@@ -24,5 +24,7 @@ graphify-out/
 .claude/settings.json
 .claude/settings.local.json
 
-# secrets
+# Credenciais de OAuth baixadas do Google Cloud Console
+client_secret_*.json
+**/client_secret_*.json
 docs/client_secret_*.json

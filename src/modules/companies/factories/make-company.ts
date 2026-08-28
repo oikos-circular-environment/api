@@ -6,6 +6,7 @@ export function makeCompany(overrides?: Partial<Company>): Company {
 	return {
 		id: randomUUID(),
 		user_id: randomUUID(),
+		organization_id: randomUUID(),
 		identity: faker.string.numeric(11),
 		identity_type: "CPF",
 		company_type: "COMPANY",

@@ -1,6 +1,10 @@
-import type { AuthUser } from "@/modules/auth/dtos/auth-dto.js";
+export type AuthUserRecord = {
+	id: string;
+	email: string;
+	password: string | null;
+};
 
 export interface AuthRepository {
-	findByEmail(email: string): Promise<AuthUser | null>;
+	findByEmail(email: string): Promise<AuthUserRecord | null>;
 	findById(id: string): Promise<{ id: string; email: string } | null>;
 }

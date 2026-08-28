@@ -12,8 +12,14 @@
  *   DEST_SSH_HOST - IP publico da A1.Flex
  *   DEST_SSH_KEY  - caminho da chave privada do usuario deploy
  *
+ * Variaveis opcionais:
+ *   SEED_CITY_SLUG - restringe o seed a um ou mais arquivos de
+ *     prisma/seeds/data-generated (slug = nome do arquivo sem .json),
+ *     separados por virgula. Sem isso, semeia todas as cidades do diretorio.
+ *
  * Uso:
  *   DEST_SSH_HOST=134.65.229.35 DEST_SSH_KEY=~/.ssh/oikos-deploy npm run seed:prod
+ *   SEED_CITY_SLUG=comodoro-mt DEST_SSH_HOST=... DEST_SSH_KEY=... npm run seed:prod
  */
 
 import {
@@ -84,11 +90,11 @@ async function main() {
 	if (!containerIp)
 		throw new Error("Nao consegui obter o IP do container postgresql");
 
-	console.log("==> Lendo credenciais do .env.prod na VM");
-	const envProd = sshExec(`cat ${DEST_COMPOSE_DIR}/.env.prod`);
-	const postgresUser = readEnvVar(envProd, "POSTGRES_USER");
-	const postgresPassword = readEnvVar(envProd, "POSTGRES_PASSWORD");
-	const postgresDb = readEnvVar(envProd, "POSTGRES_DB");
+	console.log("==> Lendo credenciais do .env.infra na VM");
+	const envInfra = sshExec(`cat ${DEST_COMPOSE_DIR}/.env.infra`);
+	const postgresUser = readEnvVar(envInfra, "POSTGRES_USER");
+	const postgresPassword = readEnvVar(envInfra, "POSTGRES_PASSWORD");
+	const postgresDb = readEnvVar(envInfra, "POSTGRES_DB");
 
 	console.log(
 		`==> Abrindo tunel SSH local (porta ${LOCAL_PORT} -> ${containerIp}:5432)`,

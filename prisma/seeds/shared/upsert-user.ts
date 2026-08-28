@@ -68,7 +68,7 @@ export async function upsertUser(
 	const created = await prisma.user.create({
 		data: {
 			email: user.email,
-			password: passwordHash,
+			auth_source: "default",
 			profile: {
 				create: {
 					full_name: user.full_name,
@@ -77,6 +77,15 @@ export async function upsertUser(
 					address_id: address.id,
 				},
 			},
+		},
+	});
+
+	await prisma.account.create({
+		data: {
+			account_id: created.id,
+			provider_id: "credential",
+			password: passwordHash,
+			user_id: created.id,
 		},
 	});
 

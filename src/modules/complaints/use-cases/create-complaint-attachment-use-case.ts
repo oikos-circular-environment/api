@@ -1,3 +1,4 @@
+import { serverLogger } from "@/lib/logger.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type { Complaint } from "@/modules/complaints/dtos/complaints-dto.js";
@@ -69,35 +70,55 @@ export class CreateComplaintAttachmentUseCase {
 
 		const filePath = `complaints/${complaintId}/${Date.now()}.${ext}`;
 
-		const uploadResult = await this.storageProvider.uploadFile(
-			filePath,
-			file.content,
-		);
-
-		if (!uploadResult) {
-			throw new AppError(
-				"Failed to upload complaint attachment",
-				"COMPLAINT_ATTACHMENT_UPLOAD_FAILED",
-				500,
+		try {
+			const uploadResult = await this.storageProvider.uploadFile(
+				filePath,
+				file.content,
 			);
+
+			if (!uploadResult) {
+				throw new AppError(
+					"Failed to upload complaint attachment",
+					"COMPLAINT_ATTACHMENT_UPLOAD_FAILED",
+					500,
+				);
+			}
+
+			const { url } = await this.storageProvider.getFileUrl(filePath);
+
+			const updatedComplaint =
+				await this.complaintsRepository.attachByComplaintId(
+					userId,
+					complaintId,
+					{
+						url,
+						file_name: file.fileName,
+						path: filePath,
+						base64: file.content.toString("base64"),
+						type,
+						metadata: null,
+					},
+				);
+
+			if (!updatedComplaint) {
+				throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
+			}
+
+			return updatedComplaint;
+		} catch (error) {
+			try {
+				await this.complaintsRepository.deleteByUserAndComplaintId(
+					userId,
+					complaintId,
+				);
+			} catch (rollbackError) {
+				serverLogger.error(
+					{ userId, complaintId, err: rollbackError },
+					"Failed to roll back complaint after attachment upload failure",
+				);
+			}
+
+			throw error;
 		}
-
-		const { url } = await this.storageProvider.getFileUrl(filePath);
-
-		const updatedComplaint =
-			await this.complaintsRepository.attachByComplaintId(userId, complaintId, {
-				url,
-				file_name: file.fileName,
-				path: filePath,
-				base64: file.content.toString("base64"),
-				type,
-				metadata: null,
-			});
-
-		if (!updatedComplaint) {
-			throw new AppError("Complaint not found", "COMPLAINT_NOT_FOUND", 404);
-		}
-
-		return updatedComplaint;
 	}
 }

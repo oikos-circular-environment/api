@@ -130,6 +130,32 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		return this.mapComplaint(complaint);
 	}
 
+	async deleteByUserAndComplaintId(
+		userId: string,
+		complaintId: string,
+	): Promise<void> {
+		const index = this.complaints.findIndex(
+			(c) => c.id === complaintId && c.user_id === userId,
+		);
+		if (index === -1) return;
+
+		this.complaints.splice(index, 1);
+		this.attachments = this.attachments.filter(
+			(a) => a.complaint_id !== complaintId,
+		);
+		this.votes = this.votes.filter((v) => v.complaint_id !== complaintId);
+
+		const removedResolutionIds = this.resolutions
+			.filter((r) => r.complaint_id === complaintId)
+			.map((r) => r.id);
+		this.resolutions = this.resolutions.filter(
+			(r) => r.complaint_id !== complaintId,
+		);
+		this.resolutionAttachments = this.resolutionAttachments.filter(
+			(a) => !removedResolutionIds.includes(a.resolution_id),
+		);
+	}
+
 	async updateByUserAndComplaintId(
 		userId: string,
 		complaintId: string,

@@ -1,4 +1,98 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"plugin": [".opencode/plugins/graphify.js"]
+	"plugin": [".opencode/plugins/graphify.js"],
+	"provider": {
+		"ollama": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "Ollama (local)",
+			"options": {
+				"baseURL": "http://localhost:11435/v1"
+			},
+			"models": {
+				"qwen2.5-coder:3b": {
+					"name": "Qwen2.5 Coder 3B (local)"
+				}
+			}
+		}
+	},
+	"agent": {
+		"oikos-exec": {
+			"description": "Executor T1 (free) — implementa tasks orquestradas",
+			"mode": "primary",
+			"model": "opencode/big-pickle",
+			"prompt": "{file:./prompt/oikos-exec.md}",
+			"permission": {
+				"edit": "allow",
+				"bash": "allow",
+				"webfetch": "allow"
+			}
+		},
+		"oikos-exec-alt": {
+			"description": "Executor T1 (fallback free) — segunda tentativa antes de subir de tier",
+			"mode": "primary",
+			"model": "opencode/deepseek-v4-flash-free",
+			"prompt": "{file:./prompt/oikos-exec.md}",
+			"permission": {
+				"edit": "allow",
+				"bash": "allow",
+				"webfetch": "allow"
+			}
+		},
+		"oikos-exec-gemini": {
+			"description": "Executor T1 (gemini flash) — tasks com muito contexto de leitura",
+			"mode": "primary",
+			"model": "google/gemini-3.6-flash",
+			"prompt": "{file:./prompt/oikos-exec.md}",
+			"permission": {
+				"edit": "allow",
+				"bash": "allow",
+				"webfetch": "allow"
+			}
+		},
+		"oikos-exec-go": {
+			"description": "Executor T2 (pago, opencode-go) — escalonamento apos falha no T1",
+			"mode": "primary",
+			"model": "opencode-go/kimi-k2.7-code",
+			"prompt": "{file:./prompt/oikos-exec.md}",
+			"permission": {
+				"edit": "allow",
+				"bash": "allow",
+				"webfetch": "allow"
+			}
+		},
+		"oikos-review": {
+			"description": "Revisor barato — le e reporta, nunca edita",
+			"mode": "primary",
+			"model": "opencode/ling-3.0-tiny-free",
+			"prompt": "{file:./prompt/oikos-review.md}",
+			"permission": {
+				"edit": "deny",
+				"bash": "allow"
+			}
+		},
+		"oikos-text": {
+			"description": "T0 local — apenas texto curto. Nunca codigo.",
+			"mode": "primary",
+			"model": "ollama/qwen2.5-coder:3b",
+			"prompt": "{file:./prompt/oikos-text.md}",
+			"tools": {
+				"write": false,
+				"edit": false,
+				"bash": false,
+				"read": false,
+				"grep": false,
+				"glob": false,
+				"list": false,
+				"patch": false,
+				"todowrite": false,
+				"todoread": false,
+				"webfetch": false,
+				"task": false
+			},
+			"permission": {
+				"edit": "deny",
+				"bash": "deny"
+			}
+		}
+	}
 }
