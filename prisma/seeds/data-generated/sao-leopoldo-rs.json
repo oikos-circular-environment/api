@@ -1,0 +1,5712 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:52:53.177Z",
+		"city": "São Leopoldo",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Vivien Veum",
+			"display_name": "Vivien",
+			"phone": "(93) 96112-7627",
+			"email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "83354-763",
+				"street": "Division Street",
+				"number": "180",
+				"complement": null,
+				"district": "Union County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.772922,
+				"longitude": -51.112412
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJP8LSj_5dGZURgglG8lB5MY0",
+						"rating": 4.6,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Comércio de Reciclagem Bom Jesus",
+					"business_name": "Comércio de Reciclagem Bom Jesus",
+					"identity": "01073291000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.reciclagem.bom.jesus@soft-amendment.info",
+					"phones": ["(82) 90097-2912"],
+					"website": null,
+					"started_activity_in": "2017-11-14T04:41:59.931Z",
+					"address": {
+						"zip_code": "93140-320",
+						"street": "Arroio da Manteiga",
+						"number": "São Leopoldo",
+						"complement": null,
+						"district": "RS, , Brasil",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7259675,
+						"longitude": -51.1839259
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 181.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.27,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 958.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 566.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 285.88,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 186.39,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 80.62,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 287.72,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 259.57,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 171.91,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJMYzXEgBpGZURYO1hixVkHZE",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Rafa Sucatas",
+					"business_name": "Rafa Sucatas",
+					"identity": "93365883000114",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rafa.sucatas@usable-license.biz",
+					"phones": ["(94) 97086-2933"],
+					"website": null,
+					"started_activity_in": "2019-09-04T18:15:06.674Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "R. Olga Benário Prestes",
+						"number": "282",
+						"complement": null,
+						"district": "Santos Dumont, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.746397899999998,
+						"longitude": -51.1394936
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "00:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 336.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.27,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 989
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.77,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 82.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.14,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 511.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.34,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 341
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.95,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 664.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 92.3,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 279.57,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 91.8,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 222.53,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-16T14:54:26.647Z",
+					"observations": "Bestia amo traho.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.796857,
+								"longitude": -51.115451,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340276922
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "County Londonderry",
+							"streetNumber": "7545",
+							"street": "Rosario Ranch",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79268351",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Predovic Prairie, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"description": "Constans claudeo atrox vespillo audacia vorax.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Christy Wilderman",
+			"display_name": "Christy",
+			"phone": "(04) 99673-2666",
+			"email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "18299-442",
+				"street": "Greenfelder Pass",
+				"number": "3697",
+				"complement": null,
+				"district": "Calhoun County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.74575,
+				"longitude": -51.100135
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJe3BP3jVpGZURB2AKDJuDSBo",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecofab Reciclagem",
+					"business_name": "Ecofab Reciclagem",
+					"identity": "04859931000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecofab.reciclagem@juicy-sarong.name",
+					"phones": ["(51) 99791-9785"],
+					"website": null,
+					"started_activity_in": "2018-10-25T01:18:08.423Z",
+					"address": {
+						"zip_code": "93025-360",
+						"street": "R. Orquídeas",
+						"number": "05",
+						"complement": null,
+						"district": "Vicentina, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7710123,
+						"longitude": -51.1727436
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.08,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 25.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 798.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.32,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 348.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 120.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.11,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 560.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.47,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 506.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 122.65,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 252.81,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 293.55,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 103.37,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ8e82id1BGZUR_icJsMHf9uo",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem garcia",
+					"business_name": "Reciclagem garcia",
+					"identity": "42004361000156",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.garcia@brown-cake.name",
+					"phones": ["(51) 99724-6272"],
+					"website": null,
+					"started_activity_in": "2024-04-04T22:07:38.618Z",
+					"address": {
+						"zip_code": "93544-350",
+						"street": "R. Assis Barreto da Costa",
+						"number": "324",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.699353799999997,
+						"longitude": -51.0903412
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 51.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.12,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 879.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 239.65,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 224.75,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 151.8,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 208.23,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 125.11,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 131.72,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-13T08:37:07.598Z",
+					"observations": "Comparo defungo xiphias adficio tergeo cur minus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.770573,
+								"longitude": -51.11774,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349529444
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "North Yorkshire",
+							"streetNumber": "586",
+							"street": "Kiehn Hills",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89524623",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Murphy Underpass, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jerad Marquardt",
+			"display_name": "Jerad",
+			"phone": "(27) 91836-8885",
+			"email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "69376-137",
+				"street": "N Main",
+				"number": "25524",
+				"complement": null,
+				"district": "Henry County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.801385,
+				"longitude": -51.115701
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJL6m62UFpGZURIbg0pg--D8s",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem da Antena",
+					"business_name": "Reciclagem da Antena",
+					"identity": "71650260000150",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.da.antena@prestigious-louse.com",
+					"phones": ["(55) 99605-2141"],
+					"website": null,
+					"started_activity_in": "2016-12-28T00:47:40.051Z",
+					"address": {
+						"zip_code": "93130-300",
+						"street": "R. Farrapos",
+						"number": "140",
+						"complement": null,
+						"district": "Campina, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.748709400000003,
+						"longitude": -51.1565994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 554.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 993.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.06,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 168.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.64,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 875.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.26,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 133
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.66,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 746
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 161.03,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 102.77,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 286.86,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 188.17,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 133.86,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 121.41,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJU5zJQ15DGZUROHRCv4buUIo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JL Reciclagem NH",
+					"business_name": "JL Reciclagem NH",
+					"identity": "51630606000141",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jl.reciclagem.nh@wonderful-replacement.com",
+					"phones": ["(51) 99493-7304"],
+					"website": null,
+					"started_activity_in": "2016-11-03T08:48:19.425Z",
+					"address": {
+						"zip_code": "93415-530",
+						"street": "R. Guilherme Growermann",
+						"number": "760",
+						"complement": null,
+						"district": "Rondônia, Novo Hamburgo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.703869299999997,
+						"longitude": -51.1171625
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.45,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 818.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.74,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 529.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.81,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 731.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 395.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.95,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 267.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 116.71,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 99.62,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 209.05,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 210.25,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-07T02:15:00.985Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.798061,
+								"longitude": -51.187885,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788284492368
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Gloucestershire",
+							"streetNumber": "947",
+							"street": "Kihn Meadows",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08681772",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "George Street, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Vidro",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"description": "Speciosus concido cinis doloremque terra enim sto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Preston Schoen",
+			"display_name": "Preston",
+			"phone": "(46) 93675-5066",
+			"email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "97929-909",
+				"street": "MacGyver Station",
+				"number": "5086",
+				"complement": null,
+				"district": "Madison County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.724966,
+				"longitude": -51.119166
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJDf3QA9xDGZUR0CzDprkrb6c",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "3R Reciclagem de Residuos Ltda",
+					"business_name": "3R Reciclagem de Residuos Ltda",
+					"identity": "80251971000143",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "3r.reciclagem.de.residuos.ltda@gentle-flu.biz",
+					"phones": ["(51) 99946-6650"],
+					"website": null,
+					"started_activity_in": "2022-02-02T19:58:57.533Z",
+					"address": {
+						"zip_code": "93546-000",
+						"street": "R. Bartolomeu de Gusmão",
+						"number": "2110",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.6949597,
+						"longitude": -51.0994265
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 706.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 760.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 335.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.44,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 541.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 229.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 157.26,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 288.73,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 139.73,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJq4vGzaRDGZURc7nlb1xREsU",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem - Ebenezer",
+					"business_name": "Reciclagem - Ebenezer",
+					"identity": "35966413000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.ebenezer@alert-labourer.name",
+					"phones": ["(51) 99324-4098"],
+					"website": null,
+					"started_activity_in": "2023-07-21T09:18:05.961Z",
+					"address": {
+						"zip_code": "93113-220",
+						"street": "Av. Arnaldo Pereira da Silva",
+						"number": "198",
+						"complement": null,
+						"district": "Santos Dumont, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7364152,
+						"longitude": -51.1488537
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.37,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 92
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 127.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.81,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 654.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 254.25,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 67.4,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Andres Leuschke-Lind",
+			"display_name": "Andres",
+			"phone": "(90) 90780-6303",
+			"email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "28822-334",
+				"street": "Clayton Spurs",
+				"number": "63081",
+				"complement": null,
+				"district": "Johnson County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.767641,
+				"longitude": -51.085846
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ6UmuRkZDGZURMtQhTvFCF88",
+						"rating": 4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JS comércio de sucatas",
+					"business_name": "JS comércio de sucatas",
+					"identity": "84405833000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "js.comercio.de.sucatas@descriptive-ethyl.org",
+					"phones": ["(71) 91092-9981"],
+					"website": null,
+					"started_activity_in": "2022-05-01T08:24:56.132Z",
+					"address": {
+						"zip_code": "93546-550",
+						"street": "R. Bananal",
+						"number": "1123",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.701668799999997,
+						"longitude": -51.1014682
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.45,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 982.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.39,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 177.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 203.12,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 265.5,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 277.46,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ_5OyyGxpGZURqzUZynJz4Ns",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Metais Fuhr",
+					"business_name": "Metais Fuhr",
+					"identity": "19042940000171",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "metais.fuhr@experienced-morning.biz",
+					"phones": ["(51) 98255-8703"],
+					"website": null,
+					"started_activity_in": "2016-12-15T19:13:33.145Z",
+					"address": {
+						"zip_code": "93130-060",
+						"street": "R. Jacob Blauth Netto",
+						"number": "136",
+						"complement": null,
+						"district": "Campina, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.746738299999997,
+						"longitude": -51.152145000000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.76,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 763.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.4,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 316.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.9,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 346.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 288.74,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 209.22,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 257.55,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 62.56,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 188.48,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 274.09,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-06T06:40:31.977Z",
+					"observations": "Peccatus desino calamitas vulariter valde vos substantia supplanto unde.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.739158,
+								"longitude": -51.173669,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788335972862
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Montgomery County",
+							"streetNumber": "30178",
+							"street": "E Central Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01571336",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Zoie Shoals, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Glenn Osinski",
+			"display_name": "Glenn",
+			"phone": "(52) 91117-2480",
+			"email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "39473-636",
+				"street": "Joann Crossroad",
+				"number": "43464",
+				"complement": null,
+				"district": "Gwynedd County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.742928,
+				"longitude": -51.190039
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ0_OTRa1dGZURN_96OZe1KHU",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "EVERPLAST ME",
+					"business_name": "EVERPLAST ME",
+					"identity": "78343327000153",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "everplast.me@elementary-whack.info",
+					"phones": ["(36) 91664-1003"],
+					"website": null,
+					"started_activity_in": "2022-09-18T15:56:29.104Z",
+					"address": {
+						"zip_code": "93110-360",
+						"street": "R. 5",
+						"number": "108",
+						"complement": null,
+						"district": "Arroio da Manteiga, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.731655999999997,
+						"longitude": -51.1868128
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.35,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 162.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 789.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.88,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 672.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 207.22,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 258.04,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 175.16,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 262.31,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJsdeFNIRlGZURw4bRmEoFPVg",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "New Recycling",
+					"business_name": "New Recycling",
+					"identity": "43667230000111",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "new.recycling@fine-scholarship.biz",
+					"phones": ["(51) 3509-2895"],
+					"website": "https://www.newrecycling.com.br/",
+					"started_activity_in": "2019-02-25T13:57:48.775Z",
+					"address": {
+						"zip_code": "93020-566",
+						"street": "Av. Getúlio Vargas",
+						"number": "2008",
+						"complement": null,
+						"district": "Fião, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.777081900000002,
+						"longitude": -51.1550478
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 199.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 623.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.08,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 472.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 112.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 529.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.41,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 352
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 155.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 196.07,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-23T14:30:07.555Z",
+					"observations": "Baiulus tepesco cedo velut cimentarius caute.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.784781,
+								"longitude": -51.170267,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325546586
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Shropshire",
+							"streetNumber": "24288",
+							"street": "Feeney Freeway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15332381",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bayer Radial, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jeremy Corwin",
+			"display_name": "Jeremy",
+			"phone": "(83) 97882-9541",
+			"email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "09070-512",
+				"street": "Salisbury Road",
+				"number": "9123",
+				"complement": null,
+				"district": "Tyne and Wear",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.693449,
+				"longitude": -51.176073
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJN0JyNABpGZURTwzzKKw9WWM",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem souza",
+					"business_name": "Reciclagem souza",
+					"identity": "77826572000159",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.souza@inexperienced-mozzarella.biz",
+					"phones": ["(51) 99552-1280"],
+					"website": null,
+					"started_activity_in": "2017-05-14T15:53:54.662Z",
+					"address": {
+						"zip_code": "93052-230",
+						"street": "R. Afonso Schafer",
+						"number": "S/N",
+						"complement": null,
+						"district": "Feitoria, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7460018,
+						"longitude": -51.100896
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 369.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.17,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 190.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.42,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 458.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.64,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 421.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 885.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.54,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 915.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 248.13,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 51.16,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 159.99,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 114.61,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJMTX2idpcGZURHJFtVTIBLZ0",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sinosfer Comércio de Metais",
+					"business_name": "Sinosfer Comércio de Metais",
+					"identity": "24857855000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sinosfer.comercio.de.metais@suburban-confusion.org",
+					"phones": ["(40) 90827-7764"],
+					"website": null,
+					"started_activity_in": "2025-06-25T09:30:12.172Z",
+					"address": {
+						"zip_code": "93145-110",
+						"street": "R. Rio São Francisco",
+						"number": "125",
+						"complement": null,
+						"district": "Jardim Luciana, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7068618,
+						"longitude": -51.192899499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.42,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 945.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.78,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 55.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 153.66,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 52.63,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 172.02,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 241.85,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 151.48,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 224.34,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-21T01:47:16.003Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.795602,
+								"longitude": -51.200256,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321688150
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Leicestershire",
+							"streetNumber": "2613",
+							"street": "Upton Oval",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15672618",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Old Road, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"description": "Curtus statua coepi asperiores carmen vereor barba comprehendo cognomen.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-24T11:59:01.548Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.705421,
+								"longitude": -51.152563,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279415174
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Franklin County",
+							"streetNumber": "18852",
+							"street": "S 10th Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64933213",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jarret Drives, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kylee Lesch",
+			"display_name": "Kylee",
+			"phone": "(52) 90612-7873",
+			"email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "59331-964",
+				"street": "Moor Lane",
+				"number": "802",
+				"complement": null,
+				"district": "Northamptonshire",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.727957,
+				"longitude": -51.151227
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJuQNWLt9rGZUR3fYDXVGxsO8",
+						"rating": 4.4,
+						"types": ["corporate_office", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Usina de Reciclagem Pavani",
+					"business_name": "Usina de Reciclagem Pavani",
+					"identity": "61608829000166",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "usina.de.reciclagem.pavani@sugary-commercial.com",
+					"phones": ["(51) 3037-7514"],
+					"website": "https://www.usinapavani.com.br/",
+					"started_activity_in": "2023-05-20T03:10:03.837Z",
+					"address": {
+						"zip_code": "93046-490",
+						"street": "R. Jacob Wilers",
+						"number": "240",
+						"complement": null,
+						"district": "Lot. Parque Recreio, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7740606,
+						"longitude": -51.093801299999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.66,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 414.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.67,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 389.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.26,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 736
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 61.46,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 69.15,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 183.78,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 218.85,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 113.72,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ8RUK3T1DGZURXTMMq6rollM",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ACERT Reciclagem",
+					"business_name": "ACERT Reciclagem",
+					"identity": "41557031000125",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "acert.reciclagem@sizzling-verve.name",
+					"phones": ["(51) 99516-7590"],
+					"website": null,
+					"started_activity_in": "2016-11-16T05:31:44.276Z",
+					"address": {
+						"zip_code": "93546-605",
+						"street": "R. João Darci de Vargas",
+						"number": "15",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.704928700000004,
+						"longitude": -51.1027716
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.75,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 586.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 249
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.48,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 718.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.37,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 511.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 90.33,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 192.83,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 232.13,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 296.95,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 185.35,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Nathen Jenkins",
+			"display_name": "Nathen",
+			"phone": "(87) 91033-7877",
+			"email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "24826-744",
+				"street": "S West Street",
+				"number": "84800",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.710621,
+				"longitude": -51.140662
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJdw6qMG5oGZURvTnz4ZrF7Zo",
+						"rating": 4.4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "DNC Comércio de Papel",
+					"business_name": "DNC Comércio de Papel",
+					"identity": "79177773000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "dnc.comercio.de.papel@aged-thorn.biz",
+					"phones": ["(51) 3590-4155"],
+					"website": "http://www.dncpapeis.com.br/",
+					"started_activity_in": "2017-02-14T22:10:00.858Z",
+					"address": {
+						"zip_code": "93025-280",
+						"street": "R. Taiti",
+						"number": "370",
+						"complement": null,
+						"district": "Vicentina, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.772168899999997,
+						"longitude": -51.1680881
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.08,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 22.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 113
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 81.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.23,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 188.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 753.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 226.13,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 171.83,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 159.66,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 95.05,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJFbF8UfNBGZURAj9a0j6aRIY",
+						"rating": 4.3,
+						"types": [
+							"local_government_office",
+							"government_office",
+							"consultant",
+							"association_or_organization",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ambientaliza soluções ambientais",
+					"business_name": "ambientaliza soluções ambientais",
+					"identity": "58990961000170",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ambientaliza.solucoes.ambientais@bare-farmer.com",
+					"phones": ["(51) 98187-9304"],
+					"website": null,
+					"started_activity_in": "2017-05-03T14:44:50.707Z",
+					"address": {
+						"zip_code": "93420-010",
+						"street": "R. Leopoldo Wasun",
+						"number": "900",
+						"complement": null,
+						"district": "Santo Afonso, Novo Hamburgo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7368047,
+						"longitude": -51.134656899999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 859.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 827.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.04,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 502.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.22,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 612.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 275.42,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 296.29,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 106.54,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 283.14,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 220.75,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 165.5,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Trycia Weimann",
+			"display_name": "Trycia",
+			"phone": "(65) 99064-5824",
+			"email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "02242-381",
+				"street": "Amy Rue",
+				"number": "6262",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.759429,
+				"longitude": -51.162621
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJayxCukBoGZURydj4QKNSl1Q",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "SLj Reciclagem e metais",
+					"business_name": "SLj Reciclagem e metais",
+					"identity": "42584339000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "slj.reciclagem.e.metais@incomplete-tennis.info",
+					"phones": ["(51) 99769-5336"],
+					"website": null,
+					"started_activity_in": "2018-06-05T09:11:24.054Z",
+					"address": {
+						"zip_code": "93110-315",
+						"street": "Av. Sen. Salgado Filho",
+						"number": "640",
+						"complement": null,
+						"district": "Campina, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.753596199999997,
+						"longitude": -51.1520316
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.54,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 497.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.88,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 945.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 76.31,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 138.57,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 92.35,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 76.02,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 298.62,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJTT-GGgBpGZUR7veXDqSwJSg",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoffer Sucatas",
+					"business_name": "Ecoffer Sucatas",
+					"identity": "57043930000140",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecoffer.sucatas@unwieldy-fun.biz",
+					"phones": ["(43) 93874-1307"],
+					"website": null,
+					"started_activity_in": "2017-07-16T23:19:27.123Z",
+					"address": {
+						"zip_code": "93115-050",
+						"street": "R. Nei Câmara",
+						"number": "260",
+						"complement": null,
+						"district": "Santos Dumont, São Leopoldo",
+						"city": "São Leopoldo",
+						"city_ibge_id": 4318705,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.742274100000003,
+						"longitude": -51.1455418
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 711.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 540.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 255.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.45,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 185.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 298.16,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 268.42,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 91.7,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 158.13,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 164.65,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 232.53,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-14T09:10:59.888Z",
+					"observations": "Autus constans aegrus adstringo ustilo civitas accendo deinde adstringo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.697706,
+								"longitude": -51.173626,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325375359
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Jackson County",
+							"streetNumber": "729",
+							"street": "Thompson Garden",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90995806",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Park Road, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Harrison Kshlerin",
+			"display_name": "Harrison",
+			"phone": "(88) 95337-1413",
+			"email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "51788-041",
+				"street": "Kuhic Shores",
+				"number": "78202",
+				"complement": null,
+				"district": "Surrey",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.779439,
+				"longitude": -51.185709
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-09T23:18:00.643Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.806273,
+								"longitude": -51.159856,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297914492
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Johnson County",
+							"streetNumber": "976",
+							"street": "Spencer Crossroad",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03547535",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Toy Parks, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"description": "Iste adimpleo tabgo abutor sulum cursus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-31T01:31:00.616Z",
+					"observations": "Verecundia temporibus tantum cinis pax somnus quidem tot torqueo angelus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.771605,
+								"longitude": -51.15518,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325535809
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Wiltshire",
+							"streetNumber": "79797",
+							"street": "Warren Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55092994",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Shanelle River, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Raymond Grady",
+			"display_name": "Raymond",
+			"phone": "(80) 94918-7328",
+			"email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "11462-603",
+				"street": "The Laurels",
+				"number": "46416",
+				"complement": null,
+				"district": "Tayside",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.706646,
+				"longitude": -51.09012
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-11T16:03:40.659Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.793035,
+								"longitude": -51.168388,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788289530130
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Borders",
+							"streetNumber": "2594",
+							"street": "Hodkiewicz Alley",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92040500",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gleichner Glen, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"description": "Absorbeo amicitia suppono.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"description": "Arma caste adimpleo minima sublime confido.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-02T14:45:47.489Z",
+					"observations": "Valetudo tricesimus quasi cursus vestigium adflicto ipsam defendo dicta.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.724186,
+								"longitude": -51.122269,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788332109003
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Suffolk",
+							"streetNumber": "82734",
+							"street": "Schuster-Kirlin Creek",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42319053",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lake Drive, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"description": "Stillicidium aestus numquam nesciunt vergo color molestias venia sophismata tergum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"description": "Tandem tredecim usque tabgo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Allene Schamberger",
+			"display_name": "Allene",
+			"phone": "(01) 93201-8043",
+			"email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "49288-654",
+				"street": "Spencer Key",
+				"number": "405",
+				"complement": null,
+				"district": "Mid Glamorgan",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.753373,
+				"longitude": -51.185512
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-03T06:16:14.362Z",
+					"observations": "Speculum cena virga video contra.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.712348,
+								"longitude": -51.160675,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308343113
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Merseyside",
+							"streetNumber": "419",
+							"street": "Church Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23715811",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Medhurst Inlet, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-15T19:36:52.212Z",
+					"observations": "Coruscus cresco combibo vereor adnuo titulus enim.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.70395,
+								"longitude": -51.149876,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788300055355
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "West Midlands",
+							"streetNumber": "7296",
+							"street": "Marjory Knolls",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00454904",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Robel Knolls, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-22T07:48:44.681Z",
+					"observations": "Desidero approbo derideo trucido sapiente commodo beneficium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.803666,
+								"longitude": -51.162724,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788360404562
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Gloucestershire",
+							"streetNumber": "8109",
+							"street": "Charles River",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05212954",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lamont Ways, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Metal / Alumínio",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"description": "Subnecto depereo clementia terreo titulus arma.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Corey Spinka",
+			"display_name": "Corey",
+			"phone": "(81) 98254-2788",
+			"email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "03018-715",
+				"street": "Gretchen Canyon",
+				"number": "270",
+				"complement": null,
+				"district": "Jackson County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.734316,
+				"longitude": -51.205601
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-30T17:01:44.182Z",
+					"observations": "Amo numquam cavus incidunt armarium adhuc cavus speculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.773608,
+								"longitude": -51.154295,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342919255
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Somerset",
+							"streetNumber": "73633",
+							"street": "The Croft",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56865770",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Center Road, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Lâmpadas",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-08T14:40:10.362Z",
+					"observations": "Validus ustulo adimpleo arbitro.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.725468,
+								"longitude": -51.156515,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276422640
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Somerset",
+							"streetNumber": "8902",
+							"street": "Sadye Forest",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92326090",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lansdowne Road, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Linnea Homenick",
+			"display_name": "Linnea",
+			"phone": "(46) 93920-2163",
+			"email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "84897-053",
+				"street": "Park Avenue",
+				"number": "3070",
+				"complement": null,
+				"district": "Dyfed",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.698659,
+				"longitude": -51.197182
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-03T17:42:13.535Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.724477,
+								"longitude": -51.099215,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788356344979
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Lancashire",
+							"streetNumber": "9888",
+							"street": "Stroman-Schuppe Loaf",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26537732",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Verdie Fields, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Vidro", "Borracha / Pneus", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-18T18:15:51.771Z",
+					"observations": "Supplanto vulnus subvenio defendo utroque coma.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.72628,
+								"longitude": -51.125764,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788350048627
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Derbyshire",
+							"streetNumber": "63490",
+							"street": "Park View",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67259455",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hannah Drive, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Madeira",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"description": "Caritas terminatio abbas cubicularis caveo cubo dolore amiculum capillus suspendo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-15T13:20:59.609Z",
+					"observations": "Ascisco depopulo dignissimos celer alter comptus cetera sui.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.707606,
+								"longitude": -51.15213,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788348865569
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Jefferson County",
+							"streetNumber": "8931",
+							"street": "Langworth Curve",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93176521",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Shanahan Burg, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"description": "Asperiores sublime versus tego tutis vita.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"description": "Ater stillicidium barba sed excepturi tergum aperte provident cattus quidem.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Carter Connelly",
+			"display_name": "Carter",
+			"phone": "(95) 92446-9678",
+			"email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "91593-146",
+				"street": "Priory Road",
+				"number": "176",
+				"complement": null,
+				"district": "Essex",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.737086,
+				"longitude": -51.179894
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Vaughn Bednar",
+			"display_name": "Vaughn",
+			"phone": "(58) 91505-4938",
+			"email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "25329-559",
+				"street": "East Road",
+				"number": "251",
+				"complement": null,
+				"district": "Adams County",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.796184,
+				"longitude": -51.135151
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-28T03:14:35.888Z",
+					"observations": "Aequitas id clarus stips complectus cauda libero sit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.772962,
+								"longitude": -51.147196,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276423978
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Fife",
+							"streetNumber": "892",
+							"street": "Birch Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64871561",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "West End, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"description": "Comes explicabo abeo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"description": "Vigilo debitis versus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-02T18:54:16.752Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.764724,
+								"longitude": -51.132191,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306765403
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Marshall County",
+							"streetNumber": "197",
+							"street": "Kirlin Brook",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43121642",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Emiliano Circle, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Plástico",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"description": "Uxor creptio valens fugiat amicitia angelus vitiosus.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"description": "Toties sophismata esse talus subseco ventito acquiro spero doloremque pel.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-30T10:09:45.805Z",
+					"observations": "Repudiandae patrocinor super nobis sunt contabesco a spectaculum animus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.708507,
+								"longitude": -51.164508,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788348915920
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Suffolk",
+							"streetNumber": "212",
+							"street": "Ortiz Pass",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "40693433",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Church Avenue, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-wilderman.1.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vivien-veum.0.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"description": "Vulgo colligo vox ancilla ullus capto tristis confugo sui eum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "andres-leuschke-lind.4.sao-leopoldo-rs@oikos.seed",
+							"description": "Calculus decor templum aestas infit assumenda audio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Neha Wilderman",
+			"display_name": "Neha",
+			"phone": "(18) 98508-8672",
+			"email": "neha-wilderman.17.sao-leopoldo-rs@oikos.seed",
+			"address": {
+				"zip_code": "84012-730",
+				"street": "Martin Luther King Boulevard",
+				"number": "400",
+				"complement": null,
+				"district": "Lothian",
+				"city": "São Leopoldo",
+				"city_ibge_id": 4318705,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.764888,
+				"longitude": -51.098742
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-12T18:26:18.549Z",
+					"observations": "Viduo villa deputo temeritas praesentium victoria cernuus tunc verumtamen testimonium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.779733,
+								"longitude": -51.168842,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309152774
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Hampshire",
+							"streetNumber": "13570",
+							"street": "Sarah Plain",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80355403",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dayna Glens, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Papel / Papelão",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "linnea-homenick.14.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-21T12:40:06.767Z",
+					"observations": "Dolore cum via quisquam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.776664,
+								"longitude": -51.166901,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342704663
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Lincoln County",
+							"streetNumber": "3604",
+							"street": "Hilpert Forks",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28054025",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Zemlak Ferry, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "vaughn-bednar.16.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-22T20:12:53.211Z",
+					"observations": "Speculum dolorum universe dedecor laborum decimus suffragium defero ab.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.79357,
+								"longitude": -51.148473,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298192206
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Jefferson County",
+							"streetNumber": "40775",
+							"street": "Commerce Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58310059",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Littel Bypass, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Resíduos Orgânicos"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "corey-spinka.13.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-26T13:20:58.039Z",
+					"observations": "Sum illum tamisium verus tempore terga delicate.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.733713,
+								"longitude": -51.163623,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303863601
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Dyfed",
+							"streetNumber": "80192",
+							"street": "Armando Forge",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91746594",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cameron Dale, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)",
+						"Borracha / Pneus"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "harrison-kshlerin.10.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremy-corwin.6.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carter-connelly.15.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jerad-marquardt.2.sao-leopoldo-rs@oikos.seed",
+							"description": "Cruciamentum tersus cunabula minus deprimo utor.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-16T11:19:39.523Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.759631,
+								"longitude": -51.19398,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278198795
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Madison County",
+							"streetNumber": "927",
+							"street": "Hills Burg",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95993766",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Katlynn Islands, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allene-schamberger.12.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kylee-lesch.7.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-23T22:26:47.135Z",
+					"observations": "Arma arbustum argumentum adulatio veniam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.807118,
+								"longitude": -51.195135,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280024582
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "County Londonderry",
+							"streetNumber": "192",
+							"street": "Ryleigh Run",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74630220",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "New Road, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "trycia-weimann.9.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nathen-jenkins.8.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "glenn-osinski.5.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "preston-schoen.3.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-22T13:43:12.131Z",
+					"observations": "Copiose tenus cernuus laboriosam apud capitulus cognomen tabesco vomito decumbo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.805041,
+								"longitude": -51.113811,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347528686
+						},
+						"addresses": {
+							"city": "São Leopoldo",
+							"district": "Bedfordshire",
+							"streetNumber": "7610",
+							"street": "Lenore Keys",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87525244",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kozey Divide, São Leopoldo - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "raymond-grady.11.sao-leopoldo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

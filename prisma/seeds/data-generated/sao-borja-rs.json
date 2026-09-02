@@ -1,0 +1,5544 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:51:19.842Z",
+		"city": "São Borja",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Bernhard Cremin",
+			"display_name": "Bernhard",
+			"phone": "(99) 99573-3765",
+			"email": "bernhard-cremin.0.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "49203-435",
+				"street": "Dewey Fields",
+				"number": "1049",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.632078,
+				"longitude": -56.009606
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJq-PQYJPHVZQRv6RbeD43NBg",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Köhler",
+					"business_name": "Reciclagem Köhler",
+					"identity": "35274245000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.kohler@sudden-chow.com",
+					"phones": ["(55) 99906-9198"],
+					"website": "https://www.facebook.com/people/Reciclagem-K%C3%B6hler/61564574138760/?mibextid=ZbWKwL",
+					"started_activity_in": "2022-03-08T09:12:01.284Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. Eddie Freire Nunes",
+						"number": "1015",
+						"complement": null,
+						"district": "Centro, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.655125599999998,
+						"longitude": -55.994900699999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:45",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:45",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:45",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:45",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:45",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:45",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:45",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:45",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:45",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:45",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:45",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.45,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 968.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.38,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 940.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.41,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 665.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.15,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 631.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 62.22,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 95.33,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJCe5DRTPJVZQRWOabWQf4sLg",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM BALLOTIN - SÃO BORJA/RS",
+					"business_name": "RECICLAGEM BALLOTIN - SÃO BORJA/RS",
+					"identity": "05825773000120",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.ballotin.sao.borja.rs@brisk-necklace.com",
+					"phones": ["(55) 99960-7192"],
+					"website": "https://guiasaoborja.com/reciclagemballotin",
+					"started_activity_in": "2017-04-18T15:55:41.584Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "Av. Cel. Tristão de Araújo Nóbrega",
+						"number": "2450",
+						"complement": null,
+						"district": "Passo, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.633318799999998,
+						"longitude": -56.026527900000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.39,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 353.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.58,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 347.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.95,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 759.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 137.53,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 77.1,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-02T08:49:14.876Z",
+					"observations": "Barba auctus conor patior vulticulus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.694129,
+								"longitude": -55.973196,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788345644756
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Suffolk",
+							"streetNumber": "78664",
+							"street": "The Ridings",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34616769",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Champlin Via, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-18T21:11:36.941Z",
+					"observations": "Vel coepi torrens sint odit velum ullus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.649655,
+								"longitude": -55.983892,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788299401894
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Crawford County",
+							"streetNumber": "94233",
+							"street": "O'Conner Land",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02867683",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kuvalis Oval, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Embalagens Contaminadas",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kiley Konopelski",
+			"display_name": "Kiley",
+			"phone": "(06) 93427-1805",
+			"email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "46073-479",
+				"street": "Thiel Alley",
+				"number": "285",
+				"complement": null,
+				"district": "Lee County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.682785,
+				"longitude": -55.990678
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJL9GnhdfJVZQRkMb756Nb3rI",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecos do Pampa",
+					"business_name": "Ecos do Pampa",
+					"identity": "22327623000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecos.do.pampa@far-off-junior.name",
+					"phones": ["(55) 99954-2199"],
+					"website": null,
+					"started_activity_in": "2020-04-10T18:40:40.650Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. Monsenhor Patrício Petit Jean",
+						"number": "3765",
+						"complement": null,
+						"district": "Passo, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.6303897,
+						"longitude": -56.035953299999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.48,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 491.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 181.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.05,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 164.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 73.36,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 144.25,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 198.68,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 292.27,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJz8g2sXfHVZQR07-U6DxbjSY",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucata Moaço",
+					"business_name": "Sucata Moaço",
+					"identity": "41479708771",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "sucata.moaco@old-emergent.com",
+					"phones": ["(55) 99900-0824"],
+					"website": null,
+					"started_activity_in": "2019-09-27T20:06:41.224Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. Herondina Mendes Escobar",
+						"number": "588",
+						"complement": null,
+						"district": "Betim, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.673491,
+						"longitude": -55.995550900000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.42,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 254.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.68,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 200.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.31,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 823.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.8,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 612.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.95,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 146.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 127.99,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 92.11,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 130.72,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 257.68,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Kendall Rutherford",
+			"display_name": "Kendall",
+			"phone": "(34) 91150-3930",
+			"email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "52140-095",
+				"street": "Priory Close",
+				"number": "88755",
+				"complement": null,
+				"district": "Carroll County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.624406,
+				"longitude": -56.03173
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJg1FGhkjHVZQRny3TfqJtZD8",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Jr_Cell.Imports",
+					"business_name": "Jr_Cell.Imports",
+					"identity": "14315994000140",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jr.cell.imports@superior-perp.info",
+					"phones": ["(55) 99640-0431"],
+					"website": "https://www.instagram.com/jrcell_imports.oficial?igsh=MWZrdWptcGpxbHlpbg==&utm_source=qr",
+					"started_activity_in": "2026-06-17T12:13:16.063Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. João Palmeiro",
+						"number": "689",
+						"complement": null,
+						"district": "Tiro, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.6538802,
+						"longitude": -55.9968345
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.71,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 732.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.06,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 953
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 55.56,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 273.29,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJkeNrBq_IVZQRk5LS9lpqd4I",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Transcarro Comércio Sucata",
+					"business_name": "Transcarro Comércio Sucata",
+					"identity": "60371249000135",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "transcarro.comercio.sucata@small-airport.info",
+					"phones": ["(55) 3431-4237"],
+					"website": null,
+					"started_activity_in": "2026-02-02T10:17:58.414Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. José de Alençar",
+						"number": "1954",
+						"complement": null,
+						"district": "Passo, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.6338641,
+						"longitude": -56.032684599999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "06:00",
+									"end_time": "23:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 242.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.15,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 720.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.79,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 689.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 51.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 128.28,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 119.43,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 215.57,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 117.21,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 181.73,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-22T10:02:15.757Z",
+					"observations": "Pectus adfectus spoliatio defluo clementia caelestis valetudo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.652506,
+								"longitude": -55.986772,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314098449
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Adams County",
+							"streetNumber": "8002",
+							"street": "Hermiston Way",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "07957465",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Devonshire Road, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-adams.5.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"description": "Repudiandae victoria animadverto summa iste aptus crur.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Adrain Runolfsdottir",
+			"display_name": "Adrain",
+			"phone": "(15) 93054-6592",
+			"email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "14740-219",
+				"street": "Schumm Mill",
+				"number": "196",
+				"complement": null,
+				"district": "Surrey",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.67139,
+				"longitude": -55.971857
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJNcQa01vHVZQRZ10MNe4HdOI",
+						"rating": 4.4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Claudinho Auto Demolidora",
+					"business_name": "Claudinho Auto Demolidora",
+					"identity": "08676368000186",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "claudinho.auto.demolidora@negative-bowler.name",
+					"phones": ["(55) 3431-9601"],
+					"website": null,
+					"started_activity_in": "2026-01-25T00:37:17.439Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. Eng. Manuel Luís Fagundes",
+						"number": "2160",
+						"complement": null,
+						"district": "Centro, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.663234799999994,
+						"longitude": -56.003593699999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.94,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 911.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 576.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.66,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 697.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 457.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.88,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 718.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 178.5,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 131.18,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 147.56,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 194.66,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJlcTNyk3GVZQRHI8tsFaE_G8",
+						"rating": 4.8,
+						"types": [
+							"general_contractor",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Comércio De Ferros Pinton",
+					"business_name": "Comércio De Ferros Pinton",
+					"identity": "69435546000171",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.ferros.pinton@talkative-tenant.info",
+					"phones": ["(55) 3431-2926"],
+					"website": null,
+					"started_activity_in": "2021-05-30T14:57:17.155Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "R. Vinte de Setembro",
+						"number": "472",
+						"complement": null,
+						"district": "Bairro Menugusso, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.651752,
+						"longitude": -55.994203
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 50.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.68,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 773.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 99.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 503.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.66,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 666.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 180.9,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 229.47,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 161.56,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 240.15,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 120.45,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-05T12:29:58.307Z",
+					"observations": "Quis torqueo repellat suppellex auctus vulgivagus turba tredecim.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.679842,
+								"longitude": -56.050561,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287379371
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Jefferson County",
+							"streetNumber": "7443",
+							"street": "Bath Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27322661",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dalton Burgs, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernhard-cremin.0.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-17T15:09:28.521Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.676255,
+								"longitude": -56.050185,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349413845
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Clay County",
+							"streetNumber": "5418",
+							"street": "Laburnum Grove",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93143656",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maritza Keys, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maribel-green.7.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"description": "Iusto conicio perspiciatis ultra calamitas amitto via.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"description": "Demens odit corpus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Emma Carroll",
+			"display_name": "Emma",
+			"phone": "(46) 98965-7323",
+			"email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "45381-682",
+				"street": "Holly Pine",
+				"number": "4866",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.680947,
+				"longitude": -56.026542
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ5TKPd8nHVZQRXNe89ktMZP8",
+						"rating": null,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro velho mendes",
+					"business_name": "Ferro velho mendes",
+					"identity": "67113347444",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.mendes@reckless-cuckoo.com",
+					"phones": ["(55) 99633-0504"],
+					"website": null,
+					"started_activity_in": "2026-01-17T13:02:29.366Z",
+					"address": {
+						"zip_code": "97670-000",
+						"street": "792",
+						"number": "S/N",
+						"complement": null,
+						"district": "Pirahy, São Borja",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.6579718,
+						"longitude": -55.9916339
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "13:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.45,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 798.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.68,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 56.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.04,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 938.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.37,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 788.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 185,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 151.81,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Homenick, Emard and D'Amore Reciclagem",
+					"business_name": "Homenick, Emard and D'Amore Reciclagem",
+					"identity": "03250208000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Dustin.Carroll0@blue-thigh.biz",
+					"phones": ["(56) 93635-2633"],
+					"website": null,
+					"started_activity_in": "2021-07-17T22:17:20.071Z",
+					"address": {
+						"zip_code": "61343-377",
+						"street": "Rogahn Walks",
+						"number": "5442",
+						"complement": null,
+						"district": "Staffordshire",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.676628,
+						"longitude": -55.989389
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.82,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 739.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.66,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 672.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 69.78,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 165.16,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 253.48,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 217.46,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 58.6,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Dale Adams",
+			"display_name": "Dale",
+			"phone": "(89) 99800-2937",
+			"email": "dale-adams.5.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "08075-715",
+				"street": "Third Street",
+				"number": "979",
+				"complement": null,
+				"district": "Mid Glamorgan",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.690379,
+				"longitude": -56.037222
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hoppe LLC Reciclagem",
+					"business_name": "Hoppe LLC Reciclagem",
+					"identity": "20244689857",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Ella_Schiller47@long-spring.name",
+					"phones": ["(36) 94016-6520"],
+					"website": null,
+					"started_activity_in": "2023-05-26T21:05:42.242Z",
+					"address": {
+						"zip_code": "51753-315",
+						"street": "S Division Street",
+						"number": "7693",
+						"complement": null,
+						"district": "Dumfries and Galloway",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.622791,
+						"longitude": -56.047926
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.86,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 459.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 95.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.58,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 599.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.92,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 131.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.44,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 189.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 175.31,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 277.56,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 148.19,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hane, Schultz and Casper Reciclagem",
+					"business_name": "Hane, Schultz and Casper Reciclagem",
+					"identity": "57819998000178",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Nella56@indolent-cook.name",
+					"phones": ["(61) 94905-9341"],
+					"website": null,
+					"started_activity_in": "2021-07-02T09:27:22.800Z",
+					"address": {
+						"zip_code": "96720-420",
+						"street": "Ernser Orchard",
+						"number": "1884",
+						"complement": null,
+						"district": "Strathclyde",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.675448,
+						"longitude": -56.029762
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 949.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 689.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.16,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 856.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.81,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 38.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 972.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 117.97,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 72.45,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 235.84,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 133.68,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 112.41,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-16T06:49:13.403Z",
+					"observations": "Comprehendo advenio ustulo conculco ascisco vociferor aliqua pauper defleo aestus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.661417,
+								"longitude": -56.014136,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342625793
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Merseyside",
+							"streetNumber": "44955",
+							"street": "Mraz Rapids",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32215418",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dave Haven, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Plástico",
+						"Pilhas e Baterias"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-17T18:21:14.706Z",
+					"observations": "Commodo coepi aut terebro.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.693241,
+								"longitude": -55.999696,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330767881
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Hancock County",
+							"streetNumber": "58933",
+							"street": "Aaron Stravenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06846414",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Janice Walks, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "willis-grady.17.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-18T21:25:35.825Z",
+					"observations": "Absum abundans a victoria exercitationem adinventitias arcus vir.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.682141,
+								"longitude": -56.040655,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292304030
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Washington County",
+							"streetNumber": "832",
+							"street": "Willow Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47287424",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Weston Hill, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bernhard-cremin.0.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Antonia West",
+			"display_name": "Antonia",
+			"phone": "(39) 96799-4062",
+			"email": "antonia-west.6.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "31139-073",
+				"street": "Larkin Skyway",
+				"number": "92738",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.689638,
+				"longitude": -55.971574
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kohler - Konopelski Reciclagem",
+					"business_name": "Kohler - Konopelski Reciclagem",
+					"identity": "60340058000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Gwendolyn_Smitham@quick-witted-wasabi.name",
+					"phones": ["(65) 94655-7660"],
+					"website": null,
+					"started_activity_in": "2019-12-17T21:47:43.682Z",
+					"address": {
+						"zip_code": "98734-572",
+						"street": "Gary Branch",
+						"number": "6690",
+						"complement": null,
+						"district": "Hertfordshire",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.697882,
+						"longitude": -56.03049
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 190.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.66,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 570.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 192.01,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 189.25,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 207.36,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 218.33,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 57.33,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 123,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hegmann - Cronin Reciclagem",
+					"business_name": "Hegmann - Cronin Reciclagem",
+					"identity": "64349705000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Garrett_Herzog52@paltry-overload.name",
+					"phones": ["(26) 93029-7912"],
+					"website": null,
+					"started_activity_in": "2021-11-10T23:24:20.992Z",
+					"address": {
+						"zip_code": "57816-567",
+						"street": "Stoney Lane",
+						"number": "29611",
+						"complement": null,
+						"district": "Morgan County",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.677603,
+						"longitude": -56.035722
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.67,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 902.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.55,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 85.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 182.06,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 75.19,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 73.75,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-15T10:55:22.884Z",
+					"observations": "Ancilla vereor tabgo sordeo teneo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.68143,
+								"longitude": -55.984473,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788341899064
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Lincoln County",
+							"streetNumber": "5637",
+							"street": "Emmy Passage",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14402451",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Henry Fork, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Madeira",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-26T23:56:23.907Z",
+					"observations": "Casso cimentarius contra tepesco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.641243,
+								"longitude": -55.98159,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312495640
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Lancashire",
+							"streetNumber": "7291",
+							"street": "Schimmel Fort",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75374780",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hanna Knolls, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-adams.5.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Maribel Green",
+			"display_name": "Maribel",
+			"phone": "(24) 98332-8287",
+			"email": "maribel-green.7.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "67741-174",
+				"street": "Carter Ford",
+				"number": "193",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.666503,
+				"longitude": -56.013119
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Bashirian Inc Reciclagem",
+					"business_name": "Bashirian Inc Reciclagem",
+					"identity": "81690750000134",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Blanche_Beatty@fussy-caption.name",
+					"phones": ["(08) 90519-3255"],
+					"website": null,
+					"started_activity_in": "2022-09-22T18:14:20.676Z",
+					"address": {
+						"zip_code": "07753-388",
+						"street": "Sawayn Unions",
+						"number": "361",
+						"complement": null,
+						"district": "Logan County",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.638,
+						"longitude": -56.041068
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 776.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.05,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 602.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 89.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 135.85,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 108.87,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Goyette LLC Reciclagem",
+					"business_name": "Goyette LLC Reciclagem",
+					"identity": "02565648000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Lee70@noxious-resource.biz",
+					"phones": ["(47) 96719-9143"],
+					"website": null,
+					"started_activity_in": "2019-10-07T05:16:00.196Z",
+					"address": {
+						"zip_code": "87756-113",
+						"street": "Benny Pine",
+						"number": "5326",
+						"complement": null,
+						"district": "Nottinghamshire",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.69701,
+						"longitude": -56.021966
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.48,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 432.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.68,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 154.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.21,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 125.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 206.27,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 276.86,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 255.79,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 134.71,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 177.16,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 282.88,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-18T18:58:50.590Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.684379,
+								"longitude": -56.044676,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788296382939
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "County Armagh",
+							"streetNumber": "760",
+							"street": "Bauch Mews",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54047352",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Moen Haven, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-20T00:45:05.667Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.678174,
+								"longitude": -55.984339,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327305308
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "West Glamorgan",
+							"streetNumber": "37438",
+							"street": "Church Hill",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39568818",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Edwin River, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Minnie Windler",
+			"display_name": "Minnie",
+			"phone": "(67) 92947-9160",
+			"email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "66341-073",
+				"street": "Bay Street",
+				"number": "28763",
+				"complement": null,
+				"district": "Monroe County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.65687,
+				"longitude": -56.036515
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Krajcik, Windler and D'Amore Reciclagem",
+					"business_name": "Krajcik, Windler and D'Amore Reciclagem",
+					"identity": "76829530000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Alberta_Kreiger@optimistic-membership.info",
+					"phones": ["(36) 99958-8957"],
+					"website": null,
+					"started_activity_in": "2025-05-02T22:25:07.113Z",
+					"address": {
+						"zip_code": "04616-177",
+						"street": "E Park Avenue",
+						"number": "517",
+						"complement": null,
+						"district": "Devon",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.698646,
+						"longitude": -56.00888
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.17,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 818.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.36,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 425.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 103.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.65,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 471
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 112.67,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 88.03,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 55.19,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 81.62,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 106.48,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Gislason-Kling, Bosco and Mertz Reciclagem",
+					"business_name": "Gislason-Kling, Bosco and Mertz Reciclagem",
+					"identity": "81494780000175",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Lois_Wyman@able-pants.net",
+					"phones": ["(40) 91261-2920"],
+					"website": null,
+					"started_activity_in": "2019-04-23T13:25:57.034Z",
+					"address": {
+						"zip_code": "24074-003",
+						"street": "E 9th Street",
+						"number": "612",
+						"complement": null,
+						"district": "Gwent",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.624112,
+						"longitude": -55.988581
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 799.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.53,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 98.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 245.62,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 235.18,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 260.8,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 133.12,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 135.74,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-27T11:46:29.532Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.704171,
+								"longitude": -55.973873,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311521055
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Somerset",
+							"streetNumber": "9485",
+							"street": "E Broad Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25473887",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Broad Street, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-adams.5.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bernhard-cremin.0.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+							"description": "Pauper tenax colligo caries cura adipisci asper.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"description": "Cattus bis vulariter volo articulus crepusculum occaecati certe carbo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-05T05:58:36.132Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.642218,
+								"longitude": -56.008267,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788323459425
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Bedfordshire",
+							"streetNumber": "697",
+							"street": "Kaya Estates",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02144660",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gladstone Road, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Papel / Papelão",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Carol Auer",
+			"display_name": "Carol",
+			"phone": "(11) 93917-6138",
+			"email": "carol-auer.9.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "61992-793",
+				"street": "Amanda Forges",
+				"number": "997",
+				"complement": null,
+				"district": "Central",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.642558,
+				"longitude": -56.024911
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Denesik Group Reciclagem",
+					"business_name": "Denesik Group Reciclagem",
+					"identity": "80283789000174",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Angela.Goldner@smart-adrenalin.net",
+					"phones": ["(50) 93016-0733"],
+					"website": null,
+					"started_activity_in": "2017-11-07T06:03:16.567Z",
+					"address": {
+						"zip_code": "58428-157",
+						"street": "Lindgren Shore",
+						"number": "55449",
+						"complement": null,
+						"district": "Essex",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.630641,
+						"longitude": -56.018626
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.32,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 48.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.69,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 845.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.71,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 476.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 187.78,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 249.01,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Weber - Mraz Reciclagem",
+					"business_name": "Weber - Mraz Reciclagem",
+					"identity": "62785053000112",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Blanca.Cronin@awesome-boulevard.info",
+					"phones": ["(45) 98163-4046"],
+					"website": null,
+					"started_activity_in": "2018-01-22T07:15:18.250Z",
+					"address": {
+						"zip_code": "29026-425",
+						"street": "Baumbach Dam",
+						"number": "6621",
+						"complement": null,
+						"district": "Durham",
+						"city": "São Borja",
+						"city_ibge_id": 4318002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -28.662691,
+						"longitude": -56.014338
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.58,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 763.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.4,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 715.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 819.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 663.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 790.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.4,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 414.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 151.23,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 125.44,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 199.87,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 132.28,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 135.11,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 271.88,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Izabella King",
+			"display_name": "Izabella",
+			"phone": "(16) 92226-6038",
+			"email": "izabella-king.10.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "72925-341",
+				"street": "E Union Street",
+				"number": "691",
+				"complement": null,
+				"district": "County Londonderry",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.638422,
+				"longitude": -55.980657
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-04T21:56:39.115Z",
+					"observations": "Alioqui tergum amplexus conitor tempora thorax.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.67595,
+								"longitude": -56.024913,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346896390
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Nottinghamshire",
+							"streetNumber": "8458",
+							"street": "Collier Bypass",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55542498",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Friesen Road, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Papel / Papelão",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernhard-cremin.0.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maribel-green.7.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"description": "Vox taedium cicuta depopulo currus error urbanus turbo celer.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Willa Reilly-Kuhic",
+			"display_name": "Willa",
+			"phone": "(07) 90050-8387",
+			"email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "32747-188",
+				"street": "Chaim Mission",
+				"number": "91875",
+				"complement": null,
+				"district": "Greene County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.636742,
+				"longitude": -56.01569
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-03T22:20:47.196Z",
+					"observations": "Thermae temperantia vivo virga speciosus abundans.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.66699,
+								"longitude": -55.972807,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306542336
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Polk County",
+							"streetNumber": "44906",
+							"street": "Jerome Spring",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27674949",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jenna Burgs, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "willis-grady.17.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-adams.5.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Everett Vandervort",
+			"display_name": "Everett",
+			"phone": "(07) 95020-1244",
+			"email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "04522-162",
+				"street": "Sheri Cape",
+				"number": "82487",
+				"complement": null,
+				"district": "Powys",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.656192,
+				"longitude": -56.006771
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-31T04:36:09.803Z",
+					"observations": "Voluptatibus aggredior apparatus utpote aestas tergum adversus vulgo truculenter.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.704311,
+								"longitude": -55.997955,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298394648
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Berkshire",
+							"streetNumber": "403",
+							"street": "Yasmin Canyon",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "29317747",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jodi Route, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-23T01:22:16.017Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.671976,
+								"longitude": -55.971517,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788333759590
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Central",
+							"streetNumber": "588",
+							"street": "Gwen Forge",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25205921",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "St Mary's Road, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Mineral / Lubrificante",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "willis-grady.17.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maribel-green.7.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"description": "Antiquus subiungo decipio quisquam una cunae vergo bellicus tunc thymbra.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"description": "Venia coniuratio triduana nulla.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Alexis Huels",
+			"display_name": "Alexis",
+			"phone": "(80) 91319-6447",
+			"email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "25087-878",
+				"street": "Brekke Tunnel",
+				"number": "957",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.666034,
+				"longitude": -56.024453
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-19T03:33:04.979Z",
+					"observations": "Unus solvo cursus omnis rem adulatio molestias decimus viridis decerno.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.636497,
+								"longitude": -56.040191,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330529712
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Johnson County",
+							"streetNumber": "98218",
+							"street": "Kling Mountain",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20094698",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Laurine Drives, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Construção Civil e Demolição (RCD)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Natalie Kovacek",
+			"display_name": "Natalie",
+			"phone": "(44) 90399-0431",
+			"email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "35095-000",
+				"street": "Kiehn Gateway",
+				"number": "79126",
+				"complement": null,
+				"district": "Strathclyde",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.654493,
+				"longitude": -55.97106
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-07T07:54:57.296Z",
+					"observations": "Utpote agnosco timidus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.633083,
+								"longitude": -55.99393,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788348170804
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Northamptonshire",
+							"streetNumber": "41428",
+							"street": "3rd Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15404383",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Washington Street, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-12T17:20:35.137Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.628268,
+								"longitude": -56.038056,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318013369
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Tayside",
+							"streetNumber": "57592",
+							"street": "Collier Brooks",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76754130",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 4th Street, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dale-adams.5.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-05T13:31:15.663Z",
+					"observations": "Ante totus verbera comprehendo stella casus aliquam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.657091,
+								"longitude": -56.046555,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319196528
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Surrey",
+							"streetNumber": "12170",
+							"street": "Charley Island",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49008239",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "McLaughlin Extension, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Papel / Papelão",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Elijah Johnston",
+			"display_name": "Elijah",
+			"phone": "(50) 91362-1855",
+			"email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "23451-482",
+				"street": "Bridget Expressway",
+				"number": "73178",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.65075,
+				"longitude": -55.976508
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-28T11:32:29.714Z",
+					"observations": "Cunae coniuratio antiquus theatrum depulso canis cunae corona vivo bis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.68139,
+								"longitude": -56.000722,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275447789
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Oxfordshire",
+							"streetNumber": "837",
+							"street": "N College Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10571643",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tierra Courts, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-10T23:20:36.813Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.665399,
+								"longitude": -55.985935,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330378121
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Lee County",
+							"streetNumber": "368",
+							"street": "Lonny Highway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "40019256",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oxford Road, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Vidro",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "izabella-king.10.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "willis-grady.17.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maribel-green.7.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"description": "Vapulus decumbo cernuus inventore absque.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+							"description": "Summopere laudantium alveus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jess Crist",
+			"display_name": "Jess",
+			"phone": "(82) 92777-4860",
+			"email": "jess-crist.16.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "28942-295",
+				"street": "Rosalie Centers",
+				"number": "55874",
+				"complement": null,
+				"district": "Kent",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.636946,
+				"longitude": -55.977174
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-23T13:16:20.212Z",
+					"observations": "Quae degusto pecto magni defetiscor abutor pecco patruus absens conventus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.622022,
+								"longitude": -56.045992,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788352382063
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "County Fermanagh",
+							"streetNumber": "352",
+							"street": "Aspen Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49779719",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "O'Reilly Corner, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "willa-reilly-kuhic.11.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emma-carroll.4.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kiley-konopelski.1.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "willis-grady.17.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-30T10:22:46.621Z",
+					"observations": "Claustrum arbustum circumvenio alo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.65219,
+								"longitude": -55.983229,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788331699974
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Central",
+							"streetNumber": "47236",
+							"street": "Rafael Rapids",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77248130",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Joe Rapid, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Papel / Papelão",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Willis Grady",
+			"display_name": "Willis",
+			"phone": "(26) 95971-1391",
+			"email": "willis-grady.17.sao-borja-rs@oikos.seed",
+			"address": {
+				"zip_code": "40180-910",
+				"street": "Edna Freeway",
+				"number": "13568",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "São Borja",
+				"city_ibge_id": 4318002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -28.674982,
+				"longitude": -56.047489
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-25T04:23:47.299Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.680767,
+								"longitude": -56.030966,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321237934
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "North Yorkshire",
+							"streetNumber": "6654",
+							"street": "Lance Points",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74621754",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aspen Close, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-24T06:57:06.983Z",
+					"observations": "Aperio triduana uberrime spes alter pectus armarium aggredior bonus fuga.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.642552,
+								"longitude": -55.993727,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281182433
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "Worcestershire",
+							"streetNumber": "866",
+							"street": "Schoen Ferry",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "83580268",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Elvis Track, São Borja - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-21T07:27:27.751Z",
+					"observations": "Solutio adduco patria abduco unde velut desino arx.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.665076,
+								"longitude": -55.990384,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275424093
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "North Yorkshire",
+							"streetNumber": "7641",
+							"street": "Orchard Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26176811",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schimmel Place, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kendall-rutherford.2.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "adrain-runolfsdottir.3.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-johnston.15.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-west.6.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-kovacek.14.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "minnie-windler.8.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maribel-green.7.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-huels.13.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jess-crist.16.sao-borja-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "carol-auer.9.sao-borja-rs@oikos.seed",
+							"description": "Compello ventus conduco architecto damnatio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-25T02:38:01.903Z",
+					"observations": "Libero cilicium sponte nemo id depulso cursus distinctio depono.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -28.650526,
+								"longitude": -56.026812,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788352786823
+						},
+						"addresses": {
+							"city": "São Borja",
+							"district": "West Yorkshire",
+							"streetNumber": "42024",
+							"street": "N 2nd Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53138729",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Pine Street, São Borja - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "everett-vandervort.12.sao-borja-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

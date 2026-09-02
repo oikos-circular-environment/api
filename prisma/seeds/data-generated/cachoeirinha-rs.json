@@ -1,0 +1,5463 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:53:03.598Z",
+		"city": "Cachoeirinha",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Elenora Waters",
+			"display_name": "Elenora",
+			"phone": "(69) 91179-4265",
+			"email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "42797-779",
+				"street": "Weimann Throughway",
+				"number": "1474",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.947059,
+				"longitude": -51.074849
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJX-q5wUZzGZURA30xvCHirMc",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem correia",
+					"business_name": "Reciclagem correia",
+					"identity": "06588694000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.correia@taut-arcade.name",
+					"phones": ["(22) 91306-2259"],
+					"website": null,
+					"started_activity_in": "2024-03-20T18:00:04.888Z",
+					"address": {
+						"zip_code": "94955-110",
+						"street": "R. Caxias",
+						"number": "45",
+						"complement": null,
+						"district": "Vila Anair, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9110912,
+						"longitude": -51.0773079
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.54,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 740.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.23,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 832.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.89,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 17.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.62,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 550.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.11,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 711.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.33,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 705.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 73.03,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 167.02,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 205.34,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJo4GVL2ZxGZUR1Vtc2Glgr_M",
+						"rating": 4.6,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclacom Reciclagem e Logística",
+					"business_name": "Reciclacom Reciclagem e Logística",
+					"identity": "43380526000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclacom.reciclagem.e.logistica@blushing-bran.biz",
+					"phones": ["(51) 3471-2002"],
+					"website": "http://reciclacom.com.br/",
+					"started_activity_in": "2021-12-07T06:11:17.482Z",
+					"address": {
+						"zip_code": "94930-230",
+						"street": "Av. das Indústrias",
+						"number": "340",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.936867399999997,
+						"longitude": -51.10571890000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.44,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 25.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.99,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 624
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.7,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 398.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.91,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 651
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.96,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 833.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 222.82,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 161.52,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 178.47,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-10T09:51:50.323Z",
+					"observations": "Comprehendo exercitationem tres degusto color laborum carpo cultura centum somnus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.933323,
+								"longitude": -51.124418,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788333253437
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Marshall County",
+							"streetNumber": "35872",
+							"street": "Schuster Glens",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "97336020",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Courtney Wall, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Joanne Volkman",
+			"display_name": "Joanne",
+			"phone": "(63) 93460-5456",
+			"email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "20067-279",
+				"street": "Conroy Rapids",
+				"number": "878",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.953085,
+				"longitude": -51.090774
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJdS-UyflzGZURi1VmzUWZ8N4",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Pelsul Depósito de Reciclagem",
+					"business_name": "Pelsul Depósito de Reciclagem",
+					"identity": "47860517000114",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "pelsul.deposito.de.reciclagem@beneficial-scratch.org",
+					"phones": ["(51) 98976-8202"],
+					"website": null,
+					"started_activity_in": "2018-06-09T17:05:53.284Z",
+					"address": {
+						"zip_code": "94965-575",
+						"street": "Tv. do Povo",
+						"number": "115",
+						"complement": null,
+						"district": "Fatima, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.908451,
+						"longitude": -51.074259999999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.86,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 644.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.98,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 314.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.45,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 235.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.86,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 297.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.95,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 145.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 178.61,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 159.91,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 251.43,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 92.05,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJGYoLZ2txGZURaFVRt1hfr90",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Grupo Recicla - Matriz",
+					"business_name": "Grupo Recicla - Matriz",
+					"identity": "51528604000146",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "grupo.recicla.matriz@hasty-subexpression.biz",
+					"phones": ["(51) 3041-9400"],
+					"website": "http://www.gruporecicla.com.br/",
+					"started_activity_in": "2021-02-16T16:03:21.169Z",
+					"address": {
+						"zip_code": "94930-240",
+						"street": "R. Ítalo Raffo",
+						"number": "650",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.939024099999994,
+						"longitude": -51.1159616
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.78,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 602.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.04,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 529.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.67,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 376.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.54,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 768
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.08,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 291
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.66,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 973.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 135.39,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 85.98,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 116.03,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 206.33,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-28T00:01:50.605Z",
+					"observations": "Vita soluta sum voluptates rem.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.944545,
+								"longitude": -51.089105,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285011478
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Northamptonshire",
+							"streetNumber": "96362",
+							"street": "Western Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84247714",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rachel Fall, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ernest Langosh",
+			"display_name": "Ernest",
+			"phone": "(02) 96222-1145",
+			"email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "75553-028",
+				"street": "Regina Flat",
+				"number": "6146",
+				"complement": null,
+				"district": "County Antrim",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.879283,
+				"longitude": -51.122055
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJn0rbcwBxGZURCmTt8zM-6ck",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Alfa Reciclagem LTDA",
+					"business_name": "Alfa Reciclagem LTDA",
+					"identity": "41371669000177",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "alfa.reciclagem.ltda@difficult-fat.name",
+					"phones": ["(51) 2165-0511"],
+					"website": "https://www.instagram.com/alfa.reciclagem?igsh=MWY3MzBiMXJ5bzEzcw%3D%3D&utm_source=qr",
+					"started_activity_in": "2019-07-24T12:42:35.858Z",
+					"address": {
+						"zip_code": "94930-340",
+						"street": "Estr. José Zingano",
+						"number": "S/N",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9220079,
+						"longitude": -51.107617499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 839.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.47,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 973.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 755.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.88,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 96.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 246.63,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 194.88,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 63.54,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ1SvN7mJxGZURIDM-XE-pPCM",
+						"rating": 4.9,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ECOMET METAIS SUSTENTÁVEIS",
+					"business_name": "ECOMET METAIS SUSTENTÁVEIS",
+					"identity": "77561279000107",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecomet.metais.sustentaveis@hopeful-injunction.org",
+					"phones": ["(51) 3441-4291"],
+					"website": "http://www.ecomet.com.br/",
+					"started_activity_in": "2019-02-07T07:22:14.714Z",
+					"address": {
+						"zip_code": "94930-240",
+						"street": "R. Ítalo Raffo",
+						"number": "255",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9384517,
+						"longitude": -51.1120491
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.72,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 74.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.2,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 388
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 222.16,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 218.06,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 59.82,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-10T08:27:50.395Z",
+					"observations": "Certe constans balbus adimpleo textor comminor deludo delibero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.929963,
+								"longitude": -51.111063,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281748231
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Borders",
+							"streetNumber": "3496",
+							"street": "Veterans Memorial Drive",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59551848",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jacobs Ridges, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"description": "Autem carcer aegrus acerbitas tardus culpo patrocinor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"description": "Illum talus spectaculum subito coerceo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-03-19T07:33:20.926Z",
+					"observations": "Cupiditate exercitationem adicio admiratio adimpleo demo cena tempora bibo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.913508,
+								"longitude": -51.100588,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788359212009
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Madison County",
+							"streetNumber": "342",
+							"street": "S Broadway Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19408919",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aspen Close, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Crystal Franey",
+			"display_name": "Crystal",
+			"phone": "(16) 90598-4005",
+			"email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "20181-012",
+				"street": "Chapel Close",
+				"number": "231",
+				"complement": null,
+				"district": "Cornwall",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.936021,
+				"longitude": -51.122181
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJY7kZ3AF0GZUR9tftds9CW9c",
+						"rating": 4.6,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Trade Brasil Recicle",
+					"business_name": "Trade Brasil Recicle",
+					"identity": "02305465000186",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "trade.brasil.recicle@any-toothpick.info",
+					"phones": ["(51) 3469-0906"],
+					"website": "https://tradebrasilrecicle.com.br/",
+					"started_activity_in": "2023-03-19T10:46:30.811Z",
+					"address": {
+						"zip_code": "94910-170",
+						"street": "R. Papa João XXIII",
+						"number": "1121",
+						"complement": null,
+						"district": "Vila Cachoeirinha, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9592201,
+						"longitude": -51.0942304
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.04,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 518.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.53,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 621.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.95,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 61.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 185.55,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 166.08,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 121.02,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 52.8,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 95.97,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJi8-RFMlzGZURKw-SWw6w4Mc",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "AD Reciclagem",
+					"business_name": "AD Reciclagem",
+					"identity": "94967432000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ad.reciclagem@shady-perfection.biz",
+					"phones": ["(88) 95318-6436"],
+					"website": null,
+					"started_activity_in": "2022-02-25T17:46:27.464Z",
+					"address": {
+						"zip_code": "94955-130",
+						"street": "R. Curitiba",
+						"number": "119",
+						"complement": null,
+						"district": "Vila Anair, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.916741599999998,
+						"longitude": -51.0785877
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 44.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 391.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.26,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 785.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 192.17,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 270.49,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-27T07:39:43.954Z",
+					"observations": "Compono ascit comprehendo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.937628,
+								"longitude": -51.119874,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788355319594
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Grant County",
+							"streetNumber": "2031",
+							"street": "Davis Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "69266433",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alma Street, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Donavon Rippin",
+			"display_name": "Donavon",
+			"phone": "(85) 96136-0692",
+			"email": "donavon-rippin.4.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "41678-767",
+				"street": "S Front Street",
+				"number": "5077",
+				"complement": null,
+				"district": "Leicestershire",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.875869,
+				"longitude": -51.106433
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJOyZly65zGZUR4ed9PgTLdG4",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Vargas",
+					"business_name": "Reciclagem Vargas",
+					"identity": "18419851000139",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.vargas@best-devastation.net",
+					"phones": ["(51) 98992-8763"],
+					"website": null,
+					"started_activity_in": "2018-07-15T14:15:45.060Z",
+					"address": {
+						"zip_code": "94960-120",
+						"street": "Av. Capitão Garibaldi Pinto dos Santos",
+						"number": "2690",
+						"complement": null,
+						"district": "Parque Granja Esperanca, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.912527899999994,
+						"longitude": -51.0877226
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.04,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 57.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.78,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 50
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 71.56,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 161.3,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ13V8lIJxGZURzSYvzttjSe0",
+						"rating": 4.8,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Juntapel",
+					"business_name": "Juntapel",
+					"identity": "27729274000172",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "juntapel@polite-verve.name",
+					"phones": ["(51) 3406-2626"],
+					"website": "http://www.juntapel.com.br/",
+					"started_activity_in": "2018-10-25T20:45:18.170Z",
+					"address": {
+						"zip_code": "94930-280",
+						"street": "Estr. José Zingano",
+						"number": "420",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.922462,
+						"longitude": -51.1062314
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.43,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 50.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 298.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 279.48,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 219.99,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 190.94,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Owen Gerlach",
+			"display_name": "Owen",
+			"phone": "(27) 97773-0793",
+			"email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "06878-046",
+				"street": "Boyer Lakes",
+				"number": "460",
+				"complement": null,
+				"district": "Lincolnshire",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.877381,
+				"longitude": -51.095981
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJZdBYI7RzGZURwxenAtaI2tg",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Lucimar Demétrio de vargas",
+					"business_name": "Lucimar Demétrio de vargas",
+					"identity": "23345638000160",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "lucimar.demetrio.de.vargas@crowded-postbox.biz",
+					"phones": ["(51) 98211-5104"],
+					"website": null,
+					"started_activity_in": "2023-07-03T06:15:43.149Z",
+					"address": {
+						"zip_code": "94945-000",
+						"street": "Av. José Brambila",
+						"number": "756",
+						"complement": null,
+						"district": "Vila Vista Alegre, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.925210500000002,
+						"longitude": -51.0811475
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 924.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.44,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 220.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.76,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 603.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 166.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.64,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 772.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 286.2,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 237.2,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJDbIleEpzGZURzvRjDDDWfRI",
+						"rating": 3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Azevedo",
+					"business_name": "Reciclagem Azevedo",
+					"identity": "76822896000156",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.azevedo@spirited-thyme.info",
+					"phones": ["(51) 99143-3912"],
+					"website": null,
+					"started_activity_in": "2021-04-17T13:25:37.810Z",
+					"address": {
+						"zip_code": "94070-425",
+						"street": "R. São Pedro",
+						"number": "197 Bairro",
+						"complement": null,
+						"district": "São Judas Tadeu, Gravataí",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.939464500000003,
+						"longitude": -51.067259899999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.54,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 215.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.83,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 674.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 723.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 180.03,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 82.99,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 183.47,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 179.72,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 255.77,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 147.94,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-15T12:00:43.011Z",
+					"observations": "Apparatus censura cohaero theca absens stabilis sapiente sto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.909463,
+								"longitude": -51.125977,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340388949
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Somerset",
+							"streetNumber": "502",
+							"street": "Luther Valleys",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27287504",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W 6th Street, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"description": "Cresco casus cruentus numquam.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"description": "Similique damnatio capto cultellus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Piper Kuphal",
+			"display_name": "Piper",
+			"phone": "(74) 93828-5126",
+			"email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "57677-413",
+				"street": "W High Street",
+				"number": "50831",
+				"complement": null,
+				"district": "Tayside",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.873231,
+				"longitude": -51.108086
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJZ-YjWuxxGZURmPgil0Kd6mE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Nando sucatas",
+					"business_name": "Nando sucatas",
+					"identity": "99162090000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "nando.sucatas@scientific-pepper.name",
+					"phones": ["(51) 98525-4790"],
+					"website": null,
+					"started_activity_in": "2018-06-13T21:34:45.933Z",
+					"address": {
+						"zip_code": "94930-590",
+						"street": "R. Gildo de Freitas",
+						"number": "09",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.921868300000003,
+						"longitude": -51.1027219
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.74,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 179.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.05,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 168
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.35,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 138.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.06,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 512.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 247.87,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 247.18,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 103.24,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 138.2,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 54.68,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJBYNfxCxxGZURmWyFEp6B-q4",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "D&C Solution reciclagem ♻️",
+					"business_name": "D&C Solution reciclagem ♻️",
+					"identity": "10358402000116",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "d.c.solution.reciclagem@crafty-address.info",
+					"phones": ["(48) 99152-0877"],
+					"website": "http://dcsolutionreciclar.netlify.app/",
+					"started_activity_in": "2017-01-15T07:24:34.584Z",
+					"address": {
+						"zip_code": "92500-000",
+						"street": "R. D",
+						"number": "360",
+						"complement": null,
+						"district": "Olaria, Canoas",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.923391300000002,
+						"longitude": -51.119790699999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.42,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 268.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.85,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 338.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 232.78,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 233.2,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 134.21,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 106.72,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 51.22,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Calvin Farrell",
+			"display_name": "Calvin",
+			"phone": "(58) 98359-8585",
+			"email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "77990-280",
+				"street": "Laverne Drive",
+				"number": "34917",
+				"complement": null,
+				"district": "Cleveland",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.958275,
+				"longitude": -51.109659
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJyyyBi2NzGZURcA2qv87Xw0A",
+						"rating": 4.9,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sulpel Comércio de Reciclados",
+					"business_name": "Sulpel Comércio de Reciclados",
+					"identity": "20550996000116",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sulpel.comercio.de.reciclados@talkative-verve.name",
+					"phones": ["(51) 98219-9031"],
+					"website": "http://sulpel.com/",
+					"started_activity_in": "2024-03-03T13:37:47.943Z",
+					"address": {
+						"zip_code": "94955-130",
+						"street": "R. Curitiba",
+						"number": "1197",
+						"complement": null,
+						"district": "Vila Fatima, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.908799999999996,
+						"longitude": -51.072264999999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 324
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 837.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 281.9,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 280.66,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 102.76,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ32CcQ9hxGZURi4KLBpqWcUY",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ritter Sucatas",
+					"business_name": "Ritter Sucatas",
+					"identity": "40135032000119",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ritter.sucatas@obvious-contractor.com",
+					"phones": ["(51) 99427-8839"],
+					"website": null,
+					"started_activity_in": "2022-12-11T00:22:33.634Z",
+					"address": {
+						"zip_code": "94945-000",
+						"street": "Av. Frederico Augusto Ritter",
+						"number": "206",
+						"complement": null,
+						"district": "Vila Regina, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9507735,
+						"longitude": -51.1034611
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 526.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.5,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 493.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 63.81,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 294.6,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-18T17:50:21.578Z",
+					"observations": "Spes depulso vito textilis unde comptus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.927938,
+								"longitude": -51.109425,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788355130626
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Gwynedd County",
+							"streetNumber": "2883",
+							"street": "North Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32808546",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E High Street, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-20T18:20:21.942Z",
+					"observations": "Cohibeo expedita pariatur vitiosus tamisium vicissitudo sit beneficium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.877488,
+								"longitude": -51.090482,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788331950862
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Gwynedd County",
+							"streetNumber": "38239",
+							"street": "Corwin Field",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32138545",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wilderman Rapid, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Têxtil / Roupas / Tecidos"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucie-spencer-jones.15.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"description": "Cohors adaugeo curriculum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"description": "Deduco inventore cognatus cupiditate absens demergo dapifer.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Wesley Miller",
+			"display_name": "Wesley",
+			"phone": "(68) 90812-5162",
+			"email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "87274-833",
+				"street": "Melba Divide",
+				"number": "3456",
+				"complement": null,
+				"district": "Lee County",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.933864,
+				"longitude": -51.081751
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJUYpoVwBzGZUR6AAoiB9oE3M",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sacata Rondon",
+					"business_name": "Sacata Rondon",
+					"identity": "70784278000182",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sacata.rondon@everlasting-tarragon.info",
+					"phones": ["(63) 99453-6754"],
+					"website": null,
+					"started_activity_in": "2019-08-26T01:02:28.517Z",
+					"address": {
+						"zip_code": "94945-460",
+						"street": "Av. Mal. Rondon",
+						"number": "196",
+						"complement": null,
+						"district": "Morada do Vale I, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.929617,
+						"longitude": -51.075646
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "14:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "14:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "14:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "14:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "14:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "14:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.36,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 804.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.09,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 65.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.89,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 878.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.66,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 605.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 218.56,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 83.52,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 107.96,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 252.14,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJlVD82GejHJUR1qZaHJAppOI",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Resisul Comércio de Papeis Ltda.",
+					"business_name": "Resisul Comércio de Papeis Ltda.",
+					"identity": "30632532000102",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "resisul.comercio.de.papeis.ltda@oily-yeast.org",
+					"phones": ["(51) 3470-6085"],
+					"website": "https://resisulrs.com.br/",
+					"started_activity_in": "2020-06-07T08:55:48.417Z",
+					"address": {
+						"zip_code": "94930-230",
+						"street": "Av. das Indústrias",
+						"number": "1060",
+						"complement": null,
+						"district": "Distrito Industrial, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9366897,
+						"longitude": -51.113568199999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 368.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 405.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.93,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 786.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 192.66,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 239.34,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 146.43,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-19T21:24:31.650Z",
+					"observations": "Ipsa absconditus stillicidium ceno pecco modi benigne conservo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.961567,
+								"longitude": -51.12247,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311843912
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "County Armagh",
+							"streetNumber": "7850",
+							"street": "Frank Forest",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26995219",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Highfield Avenue, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Madeira",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-12T12:02:34.235Z",
+					"observations": "Thema appono thalassinus tricesimus patior coadunatio patrocinor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.935619,
+								"longitude": -51.078568,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278350060
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Cumbria",
+							"streetNumber": "96082",
+							"street": "River Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44516158",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schaden Land, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Têxtil / Roupas / Tecidos",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lucie-spencer-jones.15.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Golden Greenfelder",
+			"display_name": "Golden",
+			"phone": "(84) 93631-6957",
+			"email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "75912-419",
+				"street": "Aufderhar Knolls",
+				"number": "5545",
+				"complement": null,
+				"district": "West Yorkshire",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.881345,
+				"longitude": -51.08227
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJQfAw-V9xGZUR-NhwXKzGDdY",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Bauer Comércio de Metais",
+					"business_name": "Bauer Comércio de Metais",
+					"identity": "63201751000196",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "bauer.comercio.de.metais@frequent-formation.com",
+					"phones": ["(51) 3471-1519"],
+					"website": null,
+					"started_activity_in": "2018-12-28T13:34:59.563Z",
+					"address": {
+						"zip_code": "94935-260",
+						"street": "R. Iguaçu",
+						"number": "118",
+						"complement": null,
+						"district": "Vila Ponta Pora, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9385902,
+						"longitude": -51.095837499999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.99,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 212.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.54,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 789.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 109.25,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 161.12,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 174.55,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 132.25,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 251.01,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 56.88,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJgWWvOT5vGZURjVYM7igZPUU",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "PratikCar",
+					"business_name": "PratikCar",
+					"identity": "65847376000181",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "pratikcar@limp-ravioli.net",
+					"phones": ["(06) 94548-3055"],
+					"website": "http://www.pratikcar.org/",
+					"started_activity_in": "2020-03-12T03:59:00.587Z",
+					"address": {
+						"zip_code": "94970-360",
+						"street": "Estr. dos Caetanos",
+						"number": "855",
+						"complement": null,
+						"district": "Res. Meu Rincao, Cachoeirinha",
+						"city": "Cachoeirinha",
+						"city_ibge_id": 4303103,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.879371100000004,
+						"longitude": -51.1061635
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.6,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 196.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.7,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 124.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.84,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 996.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 802.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 122.83,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 260.23,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 245.54,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 238.66,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 91.39,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-18T09:15:35.452Z",
+					"observations": "Caput angustus paulatim caelum vesica suppellex terminatio volup bellicus testimonium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.934252,
+								"longitude": -51.091477,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788324287822
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Perry County",
+							"streetNumber": "5627",
+							"street": "Cemetery Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47965980",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schaden Islands, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Plástico",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-29T16:37:37.455Z",
+					"observations": "Totidem vinculum cornu cui doloribus vito solio vinitor illum voluntarius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.903518,
+								"longitude": -51.065216,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788296214467
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "County Fermanagh",
+							"streetNumber": "594",
+							"street": "Lincoln Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87833940",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dooley Islands, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Thelma Connelly",
+			"display_name": "Thelma",
+			"phone": "(19) 98415-8108",
+			"email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "27136-413",
+				"street": "Haylie Pass",
+				"number": "258",
+				"complement": null,
+				"district": "Hancock County",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.871236,
+				"longitude": -51.10532
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-04T03:37:04.843Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.914613,
+								"longitude": -51.076555,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788338817281
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Clay County",
+							"streetNumber": "880",
+							"street": "Springfield Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "60665792",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "George Street, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Lâmpadas", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-25T06:50:56.821Z",
+					"observations": "Xiphias tyrannus stipes cogito totus curis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.925309,
+								"longitude": -51.075826,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304499784
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "County Fermanagh",
+							"streetNumber": "809",
+							"street": "Moen Cove",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02603636",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "June Inlet, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-02T14:06:15.090Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.891929,
+								"longitude": -51.096218,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285831076
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Devon",
+							"streetNumber": "182",
+							"street": "Alma Shoal",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89109735",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Flatley Stream, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Plástico",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucie-spencer-jones.15.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-rippin.4.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"description": "Fugit stultus at tabella aetas valetudo condico.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-15T14:23:48.970Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.899557,
+								"longitude": -51.096813,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346805230
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Dyfed",
+							"streetNumber": "4968",
+							"street": "Wood Lane",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "04671145",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kody Ferry, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Pilhas e Baterias",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Darlene Bednar",
+			"display_name": "Darlene",
+			"phone": "(09) 95874-4273",
+			"email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "43238-941",
+				"street": "Central Avenue",
+				"number": "669",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.92605,
+				"longitude": -51.075564
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-08T03:29:43.442Z",
+					"observations": "Vae uberrime pecus ullam talis itaque vulariter demulceo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.874867,
+								"longitude": -51.095469,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788352501266
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Greater Manchester",
+							"streetNumber": "1903",
+							"street": "Flatley Freeway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80708193",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Martin Luther King Jr Boulevard, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"description": "Agnosco audeo crebro.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-23T10:04:28.863Z",
+					"observations": "Tabula clamo adaugeo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.946415,
+								"longitude": -51.089092,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318197495
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Gwent",
+							"streetNumber": "8152",
+							"street": "Turcotte Lakes",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "29007404",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Raynor Stream, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-25T11:41:59.654Z",
+					"observations": "Asperiores tempora numquam vito cultura tametsi cohaero sponte curis aer.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.869486,
+								"longitude": -51.08299,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788338160988
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Henry County",
+							"streetNumber": "1676",
+							"street": "Schimmel Knoll",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "07338593",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brook Street, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-rippin.4.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-13T23:47:16.021Z",
+					"observations": "Amaritudo deorsum illum ascit vulnero corpus sapiente.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.887495,
+								"longitude": -51.121238,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317079261
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Highlands and Islands",
+							"streetNumber": "42444",
+							"street": "Zboncak Land",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05914185",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wood Lane, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Veículos em Fim de Vida",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lacey Johns",
+			"display_name": "Lacey",
+			"phone": "(90) 92160-0050",
+			"email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "80136-617",
+				"street": "Daryl Pike",
+				"number": "1864",
+				"complement": null,
+				"district": "Oxfordshire",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.888927,
+				"longitude": -51.070378
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-29T06:16:48.705Z",
+					"observations": "Vulnero vero carcer considero calculus correptius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.935866,
+								"longitude": -51.099413,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320092717
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Lothian",
+							"streetNumber": "30426",
+							"street": "Hilpert Dale",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39651732",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nolan Glens, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lucie-spencer-jones.15.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-30T15:01:04.940Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.918571,
+								"longitude": -51.095193,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298557657
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Douglas County",
+							"streetNumber": "33037",
+							"street": "Mayfield Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66038797",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Main, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-rippin.4.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"description": "Ipsa cubitum creptio statua cur amiculum consequatur ago utroque sequi.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Stella Barton",
+			"display_name": "Stella",
+			"phone": "(09) 98530-1988",
+			"email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "10488-327",
+				"street": "Zella Stream",
+				"number": "71812",
+				"complement": null,
+				"district": "County Armagh",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.939367,
+				"longitude": -51.103024
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Erick Heathcote-Reynolds",
+			"display_name": "Erick",
+			"phone": "(64) 91931-3243",
+			"email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "68804-995",
+				"street": "Upton Springs",
+				"number": "61435",
+				"complement": null,
+				"district": "Oxfordshire",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.914831,
+				"longitude": -51.088035
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-14T06:45:42.062Z",
+					"observations": "Vestigium cuius tenus dignissimos vulnero claudeo ubi aliquid via.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.931888,
+								"longitude": -51.086785,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288292414
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Warren County",
+							"streetNumber": "641",
+							"street": "Taylor Pine",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63789379",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Zboncak Manor, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-16T11:45:17.927Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.941585,
+								"longitude": -51.078209,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292008916
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "West Glamorgan",
+							"streetNumber": "992",
+							"street": "Atlantic Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34560903",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cynthia Flat, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Madeira",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donavon-rippin.4.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"description": "Cubitum triumphus victoria corona denuo conatus textor carcer callide.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"description": "Aperiam denuo tibi teres volva circumvenio agnitio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lucie Spencer-Jones",
+			"display_name": "Lucie",
+			"phone": "(28) 93169-1888",
+			"email": "lucie-spencer-jones.15.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "15535-599",
+				"street": "Mulberry Street",
+				"number": "642",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.951287,
+				"longitude": -51.096781
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-08T11:51:20.089Z",
+					"observations": "Cupiditate audeo suus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.86804,
+								"longitude": -51.084815,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788359944806
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Norfolk",
+							"streetNumber": "680",
+							"street": "Pine Grove",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "73961978",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Grange, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Medicamentos",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Krystal Krajcik",
+			"display_name": "Krystal",
+			"phone": "(43) 90738-1926",
+			"email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "99436-145",
+				"street": "Beer Motorway",
+				"number": "4952",
+				"complement": null,
+				"district": "Mid Glamorgan",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.887097,
+				"longitude": -51.08498
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-07T12:50:39.236Z",
+					"observations": "Congregatio tot officia itaque tepesco agnosco solium conicio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.947633,
+								"longitude": -51.064344,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275481109
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Herefordshire",
+							"streetNumber": "73339",
+							"street": "Terrence Track",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22741563",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Oaks, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "ernest-langosh.2.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "darlene-bednar.11.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-10T07:39:19.222Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.880841,
+								"longitude": -51.067911,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294808994
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Norfolk",
+							"streetNumber": "568",
+							"street": "Market Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08324287",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rasheed Common, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanne-volkman.1.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thelma-connelly.10.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "piper-kuphal.6.cachoeirinha-rs@oikos.seed",
+							"description": "Curis somnus antepono modi coadunatio tener ver.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"description": "Auditor dapifer tricesimus cupiditas tametsi harum victoria antiquus velit contabesco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-23T22:48:35.214Z",
+					"observations": "Tendo magni accommodo aeger.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.888505,
+								"longitude": -51.101197,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287568532
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "North Yorkshire",
+							"streetNumber": "35162",
+							"street": "Otis Stream",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35704748",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lesch Forks, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wesley-miller.8.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-franey.3.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "erick-heathcote-reynolds.14.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Hayden Rath",
+			"display_name": "Hayden",
+			"phone": "(81) 92184-3923",
+			"email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+			"address": {
+				"zip_code": "77590-915",
+				"street": "Marsh Lane",
+				"number": "61097",
+				"complement": null,
+				"district": "Franklin County",
+				"city": "Cachoeirinha",
+				"city_ibge_id": 4303103,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.898082,
+				"longitude": -51.124422
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-16T03:02:44.028Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.955353,
+								"longitude": -51.098132,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317575770
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "West Midlands",
+							"streetNumber": "34376",
+							"street": "First Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25761181",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Derwent Close, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-30T17:43:59.456Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.884357,
+								"longitude": -51.080325,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346624807
+						},
+						"addresses": {
+							"city": "Cachoeirinha",
+							"district": "Somerset",
+							"streetNumber": "528",
+							"street": "Koelpin Extension",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05492273",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Belmont Road, Cachoeirinha - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "krystal-krajcik.16.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "golden-greenfelder.9.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stella-barton.13.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "calvin-farrell.7.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucie-spencer-jones.15.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lacey-johns.12.cachoeirinha-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "owen-gerlach.5.cachoeirinha-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "hayden-rath.17.cachoeirinha-rs@oikos.seed",
+							"description": "Deleniti patior caelestis charisma vulpes fuga inflammatio amplitudo inventore.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "elenora-waters.0.cachoeirinha-rs@oikos.seed",
+							"description": "Angelus cultura taceo deprimo ancilla casso verbum ea caries magni.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		}
+	]
+}
