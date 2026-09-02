@@ -1,9 +1,12 @@
 /**
  * Roda os seeds (prisma/seeds) contra o Postgres de producao, via tunel SSH
  * pro IP interno do container - ver docs/infrastructure.md (repo devops)
- * secao "Conectando um gerenciador de banco". Uso esperado: manutencao
- * pontual ou povoamento inicial de infra nova - nao faz parte do fluxo
- * normal de dev (que roda `npm run seed` contra o Postgres local).
+ * secao "Conectando um gerenciador de banco". Tambem tunela o MinIO de
+ * producao (mesmo esquema) e aponta STORAGE_PROVIDER pra ele, senao os
+ * anexos de denuncia sobem pro MinIO local de dev e a URL gravada no banco
+ * de prod fica quebrada. Uso esperado: manutencao pontual ou povoamento
+ * inicial de infra nova - nao faz parte do fluxo normal de dev (que roda
+ * `npm run seed` contra o Postgres local).
  *
  * Sem guarda especial pra seedUsers de proposito - os usuarios fake fazem
  * parte do povoamento de dados do MVP.
@@ -31,8 +34,11 @@ import {
 import { connect } from "node:net";
 
 const DEST_COMPOSE_DIR = "/opt/oikos/docker";
-const REMOTE_CONTAINER = "oikos-prod-postgresql-1";
+const REMOTE_POSTGRES_CONTAINER = "oikos-prod-postgresql-1";
+const REMOTE_MINIO_CONTAINER = "oikos-prod-minio-1";
 const LOCAL_PORT = Number(process.env.LOCAL_PORT ?? 55432);
+const LOCAL_MINIO_PORT = Number(process.env.LOCAL_MINIO_PORT ?? 55900);
+const PROD_PUBLIC_URL = "https://api.oikos.company";
 
 function requireEnv(name: string): string {
 	const value = process.env[name];
@@ -83,21 +89,27 @@ function waitForPort(port: number, timeoutMs = 5000): Promise<void> {
 }
 
 async function main() {
-	console.log("==> Descobrindo IP interno do container postgresql");
-	const containerIp = sshExec(
-		`docker inspect ${REMOTE_CONTAINER} --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'`,
+	console.log("==> Descobrindo IPs internos dos containers postgresql/minio");
+	const postgresIp = sshExec(
+		`docker inspect ${REMOTE_POSTGRES_CONTAINER} --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'`,
 	);
-	if (!containerIp)
+	if (!postgresIp)
 		throw new Error("Nao consegui obter o IP do container postgresql");
+	const minioIp = sshExec(
+		`docker inspect ${REMOTE_MINIO_CONTAINER} --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'`,
+	);
+	if (!minioIp) throw new Error("Nao consegui obter o IP do container minio");
 
 	console.log("==> Lendo credenciais do .env.infra na VM");
 	const envInfra = sshExec(`cat ${DEST_COMPOSE_DIR}/.env.infra`);
 	const postgresUser = readEnvVar(envInfra, "POSTGRES_USER");
 	const postgresPassword = readEnvVar(envInfra, "POSTGRES_PASSWORD");
 	const postgresDb = readEnvVar(envInfra, "POSTGRES_DB");
+	const minioAccessKey = readEnvVar(envInfra, "MINIO_ACCESS_KEY");
+	const minioSecretKey = readEnvVar(envInfra, "MINIO_SECRET_KEY");
 
 	console.log(
-		`==> Abrindo tunel SSH local (porta ${LOCAL_PORT} -> ${containerIp}:5432)`,
+		`==> Abrindo tuneis SSH locais (postgres ${LOCAL_PORT} -> ${postgresIp}:5432, minio ${LOCAL_MINIO_PORT} -> ${minioIp}:9000)`,
 	);
 	const tunnel: ChildProcess = spawn(
 		"ssh",
@@ -106,7 +118,9 @@ async function main() {
 			sshKey,
 			"-N",
 			"-L",
-			`${LOCAL_PORT}:${containerIp}:5432`,
+			`${LOCAL_PORT}:${postgresIp}:5432`,
+			"-L",
+			`${LOCAL_MINIO_PORT}:${minioIp}:9000`,
 			`deploy@${sshHost}`,
 		],
 		{ stdio: "ignore" },
@@ -118,12 +132,27 @@ async function main() {
 
 	try {
 		await waitForPort(LOCAL_PORT);
+		await waitForPort(LOCAL_MINIO_PORT);
 
 		const databaseUrl = `postgresql://${postgresUser}:${postgresPassword}@localhost:${LOCAL_PORT}/${postgresDb}`;
 		console.log(`==> Rodando seed contra producao (banco: ${postgresDb})`);
+		// Sem os dois primeiros grupos de env abaixo, storageProvider.uploadFile
+		// sobe os anexos das denuncias no MinIO local de dev em vez do MinIO
+		// real de producao (upload) e/ou grava a `url` apontando pro host local
+		// de dev em vez de `PROD_PUBLIC_URL` (o campo lido por getFileUrl) —
+		// nos dois casos a URL gravada no banco de prod fica quebrada.
 		const result = spawnSync("npm", ["run", "seed"], {
 			stdio: "inherit",
-			env: { ...process.env, DATABASE_URL: databaseUrl },
+			env: {
+				...process.env,
+				DATABASE_URL: databaseUrl,
+				STORAGE_PROVIDER: "minio",
+				MINIO_ENDPOINT: "localhost",
+				MINIO_PORT: String(LOCAL_MINIO_PORT),
+				MINIO_ACCESS_KEY: minioAccessKey,
+				MINIO_SECRET_KEY: minioSecretKey,
+				APP_PUBLIC_URL: PROD_PUBLIC_URL,
+			},
 		});
 		if (result.status !== 0) {
 			throw new Error(`Seed terminou com codigo ${result.status}`);

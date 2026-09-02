@@ -33,6 +33,7 @@
 		"seed": "tsx prisma/seeds/index.ts",
 		"cli": "tsx cli/index.ts",
 		"seed:prod": "tsx scripts/seed-prod.ts",
+		"fix:prod-attachments": "tsx scripts/fix-prod-complaint-attachments.ts",
 		"client-key:create": "tsx scripts/client-key-create.ts",
 		"minio:console": "xdg-open http://localhost:9001",
 		"email:dev": "email dev --dir src/modules/auth/emails --port 3001"
