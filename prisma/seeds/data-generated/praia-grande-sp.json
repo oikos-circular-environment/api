@@ -1,0 +1,5534 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:25:45.207Z",
+		"city": "Praia Grande",
+		"state_code": "SP",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Mozell Wolf",
+			"display_name": "Mozell",
+			"phone": "(38) 91680-6897",
+			"email": "mozell-wolf.0.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "11755-376",
+				"street": "Elm Road",
+				"number": "258",
+				"complement": null,
+				"district": "Buckinghamshire",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.979354,
+				"longitude": -46.531797
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJuTH_RyUhzpQR674-OJEYng8",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho do 011",
+					"business_name": "Ferro Velho do 011",
+					"identity": "44819236016",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.011@qualified-whale.biz",
+					"phones": ["(13) 98220-7090"],
+					"website": null,
+					"started_activity_in": "2021-01-16T07:17:46.645Z",
+					"address": {
+						"zip_code": "11712-000",
+						"street": "Av. Milton de Oliveira",
+						"number": "28925",
+						"complement": null,
+						"district": "Jardim Melvi, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0341058,
+						"longitude": -46.541131299999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 373.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.33,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 719
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.91,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 201.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.46,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 114.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 152.23,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 191.24,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 285.11,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 294.73,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJl3c9CwAhzpQR1zRNTpI40GE",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem D&G",
+					"business_name": "Reciclagem D&G",
+					"identity": "36664572000112",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.d.g@lawful-mobility.name",
+					"phones": ["(87) 98055-6847"],
+					"website": null,
+					"started_activity_in": "2022-09-09T03:28:52.190Z",
+					"address": {
+						"zip_code": "11712-180",
+						"street": "Rua Monte Serrat",
+						"number": "1910",
+						"complement": null,
+						"district": "Jardim Melvi, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.030326799999997,
+						"longitude": -46.5390751
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 911
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.55,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 399.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.26,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 531.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.62,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 942.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.8,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 701.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 298,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 213.59,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 52.86,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 294.54,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 74.42,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 288.06,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-31T19:31:01.730Z",
+					"observations": "Dedecor curso conturbo coruscus tollo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.059847,
+								"longitude": -46.574775,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286125654
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Mid Glamorgan",
+							"streetNumber": "1318",
+							"street": "Broadway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32958523",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jast Curve, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Gina Schoen",
+			"display_name": "Gina",
+			"phone": "(53) 96230-9743",
+			"email": "gina-schoen.1.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "29995-787",
+				"street": "Duke Street",
+				"number": "35839",
+				"complement": null,
+				"district": "Gloucestershire",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.960037,
+				"longitude": -46.448475
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ_WVvhL8bzpQRJOmZ6YVMMWg",
+						"rating": 5,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"service",
+							"store",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CR RECICLAGEM",
+					"business_name": "CR RECICLAGEM",
+					"identity": "73114233000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cr.reciclagem@pretty-nucleotidase.org",
+					"phones": ["(13) 98804-4683"],
+					"website": null,
+					"started_activity_in": "2024-08-26T03:34:42.189Z",
+					"address": {
+						"zip_code": "11355-030",
+						"street": "R. Tambaú",
+						"number": "494",
+						"complement": null,
+						"district": "Vila Nossa Sra. de Fatima, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9510769,
+						"longitude": -46.4067468
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 687.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 803.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.08,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 957.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.13,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 15.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 801.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 211.89,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 282.79,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 54.87,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 146.35,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 177.16,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 88.88,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJcbwH8eUfzpQRVRZ9CGv0GUY",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Latasa reciclagem",
+					"business_name": "Latasa reciclagem",
+					"identity": "95551920000104",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "latasa.reciclagem@tangible-place.info",
+					"phones": ["(13) 97419-0050"],
+					"website": null,
+					"started_activity_in": "2017-06-30T23:24:58.853Z",
+					"address": {
+						"zip_code": "11347-400",
+						"street": "R. Jequié",
+						"number": "930",
+						"complement": null,
+						"district": "Jardim Rio Negro, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9868977,
+						"longitude": -46.4678149
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 239.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.39,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 297.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.36,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 828
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.55,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 997.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.61,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 348.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 292.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 71.03,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 298.02,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 157.08,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 103.05,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 175.72,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-16T08:17:04.251Z",
+					"observations": "Supra arx aspernatur.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.02788,
+								"longitude": -46.415488,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279301076
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Lake County",
+							"streetNumber": "40568",
+							"street": "Spencer Ways",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "31826264",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Julian Motorway, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "loma-langosh.4.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mozell-wolf.0.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"description": "Atrocitas calco maiores auxilium quos victoria acervus beneficium coaegresco peccatus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-10T08:45:57.549Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.032496,
+								"longitude": -46.580336,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788313149641
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Hancock County",
+							"streetNumber": "65356",
+							"street": "Electa Path",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43509098",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Murphy Trace, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mozell-wolf.0.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"description": "Ex votum carpo aeternus ceno.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "loma-langosh.4.praia-grande-sp@oikos.seed",
+							"description": "Saepe vulgaris bestia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Shelly Zieme",
+			"display_name": "Shelly",
+			"phone": "(84) 92380-4535",
+			"email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "30998-527",
+				"street": "Della Lane",
+				"number": "773",
+				"complement": null,
+				"district": "Fife",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.035684,
+				"longitude": -46.576961
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJBcH-UagfzpQRMd0KTAu-3Fo",
+						"rating": 3.3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro velho do didi",
+					"business_name": "Ferro velho do didi",
+					"identity": "58625304958",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.didi@ragged-chairperson.biz",
+					"phones": ["(84) 99418-1659"],
+					"website": null,
+					"started_activity_in": "2017-07-18T12:30:52.136Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Vila Ema",
+						"number": "São Vicente",
+						"complement": null,
+						"district": "SP, Brasil",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.996634699999998,
+						"longitude": -46.4909943
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.52,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 561.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.03,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 114.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.02,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 535.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 577.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 263.08,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 247.41,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 69.66,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ4R5TbTwfzpQR4XPsrtuDTds",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ponto de Reciclagem Metal Nobre",
+					"business_name": "Ponto de Reciclagem Metal Nobre",
+					"identity": "64775292000117",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ponto.de.reciclagem.metal.nobre@worthwhile-deer.com",
+					"phones": ["(13) 99155-8927"],
+					"website": "https://reciclagemmetalnobre.negocio.site/?utm_source=gmb&utm_medium=referral",
+					"started_activity_in": "2024-07-23T16:54:25.956Z",
+					"address": {
+						"zip_code": "11713-300",
+						"street": "Av. Zélia Giglioli Galves",
+						"number": "20",
+						"complement": null,
+						"district": "Balneário Esmeralda, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.034311199999998,
+						"longitude": -46.5128055
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:20"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:20"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.97,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 381.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.13,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 379.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.65,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 151.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.26,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 986.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.82,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 388.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 129.38,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 59.77,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 244.99,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 241.28,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 175.18,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 155,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Marcella Bailey",
+			"display_name": "Marcella",
+			"phone": "(30) 95621-4632",
+			"email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "11984-119",
+				"street": "Common Lane",
+				"number": "2473",
+				"complement": null,
+				"district": "Polk County",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.040021,
+				"longitude": -46.421214
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJifXN800hzpQRmhuMJIdbsHE",
+						"rating": 3.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho do cabeça",
+					"business_name": "Ferro Velho do cabeça",
+					"identity": "42416988409",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.cabeca@trivial-step-mother.com",
+					"phones": ["(13) 99773-1071"],
+					"website": null,
+					"started_activity_in": "2018-08-27T03:17:17.284Z",
+					"address": {
+						"zip_code": "11712-010",
+						"street": "Av. Wilson de Oliveira",
+						"number": "599",
+						"complement": null,
+						"district": "Jardim Melvi, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0396085,
+						"longitude": -46.5329505
+					},
+					"business_hours": [
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "00:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 960.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 924.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 334.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.18,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 316.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.21,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 901
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 924.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 164.31,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 297.06,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 216.88,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 231.27,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 74.11,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJhw3__IgczpQROFBFmWiXMAI",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JM Reciclagem",
+					"business_name": "JM Reciclagem",
+					"identity": "02324825000197",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jm.reciclagem@whopping-representation.info",
+					"phones": ["(13) 3469-5807"],
+					"website": null,
+					"started_activity_in": "2018-11-20T13:27:01.139Z",
+					"address": {
+						"zip_code": "11330-200",
+						"street": "Av. Cap. Luiz Antônio Pimenta",
+						"number": "559",
+						"complement": null,
+						"district": "Parque Bitaru, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.972170199999997,
+						"longitude": -46.3980177
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.32,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 988.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 877
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 548.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 186.78,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 161.92,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Loma Langosh",
+			"display_name": "Loma",
+			"phone": "(74) 90140-2189",
+			"email": "loma-langosh.4.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "54346-066",
+				"street": "Willow Grove",
+				"number": "699",
+				"complement": null,
+				"district": "Essex",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.967439,
+				"longitude": -46.5527
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJxTmZOAAdzpQRHYe7JNNhmKY",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem",
+					"business_name": "Reciclagem",
+					"identity": "59768556000175",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem@carefree-insolence.com",
+					"phones": ["(95) 99920-2453"],
+					"website": null,
+					"started_activity_in": "2017-03-29T14:04:18.708Z",
+					"address": {
+						"zip_code": "11724-040",
+						"street": "R. Mário Iannelli",
+						"number": "20",
+						"complement": null,
+						"district": "Sítio do Campo, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0022337,
+						"longitude": -46.4216742
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 774
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.02,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 819.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 244.62,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 191.66,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 231.82,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 287.83,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 280.02,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 126.05,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-wg0CJ0bzpQRx5-bnnK4384",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Esperanca II",
+					"business_name": "Ferro Velho Esperanca II",
+					"identity": "22271556988",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.esperanca.ii@agitated-character.biz",
+					"phones": ["(85) 92678-7745"],
+					"website": null,
+					"started_activity_in": "2021-01-02T05:59:35.729Z",
+					"address": {
+						"zip_code": "11360-300",
+						"street": "Av. Augusto Severo",
+						"number": "992",
+						"complement": null,
+						"district": "Parque Sao Vicente, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9502296,
+						"longitude": -46.4025596
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.95,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 35.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.84,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 221.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.46,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 736.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.84,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 376.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.42,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 139.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.13,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 28.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 195.71,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 52.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 272.7,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 70.34,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-09T17:11:41.693Z",
+					"observations": "Studio conventus cernuus patruus damno suadeo degusto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.079454,
+								"longitude": -46.494239,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788241133294
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Hancock County",
+							"streetNumber": "33392",
+							"street": "Blake Alley",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27312596",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Muller Club, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "quinton-kihn.14.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-15T17:46:51.886Z",
+					"observations": "Vacuus dolores strues vulgaris.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.036056,
+								"longitude": -46.39242,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788233429692
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Grampian",
+							"streetNumber": "75795",
+							"street": "W 2nd Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14390414",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Abbott Shoals, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"description": "Credo alioqui hic doloremque nihil dedecor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Rosalind Emard",
+			"display_name": "Rosalind",
+			"phone": "(96) 92369-9431",
+			"email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "77422-429",
+				"street": "Amira Crest",
+				"number": "455",
+				"complement": null,
+				"district": "Humberside",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.009716,
+				"longitude": -46.460327
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJXWvoHX4fzpQRrRNHulmllyI",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "LJ Reciclagem",
+					"business_name": "LJ Reciclagem",
+					"identity": "51271753000172",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "lj.reciclagem@repentant-deduction.com",
+					"phones": ["(13) 99103-5145"],
+					"website": null,
+					"started_activity_in": "2025-01-12T12:47:14.317Z",
+					"address": {
+						"zip_code": "11712-005",
+						"street": "Av. Diamantino Cruz Ferreira Mourão",
+						"number": "33114",
+						"complement": null,
+						"district": "Jardim Melvi, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0363339,
+						"longitude": -46.516190400000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 686.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 182.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.11,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 489.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 721.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.14,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 798.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.35,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 693.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 127.53,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 142.98,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 89.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 231.33,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJzf3JV4IczpQR6-vtPYRi2S4",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Amam Reciclagem",
+					"business_name": "Amam Reciclagem",
+					"identity": "66422688000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "amam.reciclagem@thorny-omelet.org",
+					"phones": ["(13) 97416-8787"],
+					"website": "https://www.instagram.com/amam_reciclagem/",
+					"started_activity_in": "2023-12-04T11:42:56.898Z",
+					"address": {
+						"zip_code": "11365-250",
+						"street": "R. João B. Robortella",
+						"number": "131",
+						"complement": null,
+						"district": "Catiapoã, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.960870999999997,
+						"longitude": -46.3937907
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.19,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 954.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 73.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.45,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 417.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 67.57,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 105.69,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 92.51,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-11T13:27:57.659Z",
+					"observations": "Amicitia voluptatum astrum arbor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.035668,
+								"longitude": -46.4355,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788236517347
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Northumberland",
+							"streetNumber": "179",
+							"street": "Bechtelar Crossroad",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79362502",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lee Street, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gina-schoen.1.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "quinton-kihn.14.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"description": "Acer cubo aperiam ambitus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"description": "Votum tener sortitus bene tamdiu suadeo sono torrens sum atque.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-18T03:04:37.634Z",
+					"observations": "Sponte viridis nostrum auxilium stipes decens deorsum coaegresco cattus tripudio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.012792,
+								"longitude": -46.60975,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316185908
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Dorset",
+							"streetNumber": "8405",
+							"street": "Mill Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80746690",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lincoln Road, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Edgar Johnson",
+			"display_name": "Edgar",
+			"phone": "(30) 92415-9816",
+			"email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "31003-968",
+				"street": "Mayfield Road",
+				"number": "480",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.065229,
+				"longitude": -46.552139
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJY0ki7HobzpQRVS4mlno5A-E",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Fontes Reciclagem",
+					"business_name": "Fontes Reciclagem",
+					"identity": "61070812000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "fontes.reciclagem@proud-forgery.org",
+					"phones": ["(13) 99721-2064"],
+					"website": null,
+					"started_activity_in": "2017-08-22T09:09:55.261Z",
+					"address": {
+						"zip_code": "11365-010",
+						"street": "R. Machado de Assis",
+						"number": "331",
+						"complement": null,
+						"district": "Parque Sao Vicente, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9505916,
+						"longitude": -46.3928452
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 897.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.47,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 132.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 53.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.29,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 786.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.82,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 709.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.74,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 82.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 252.11,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 51.8,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 191.97,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 63.44,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 264.23,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 60.19,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJWWQ2x_kdzpQRk9DdJOIJ9iw",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Glória Reciclagem",
+					"business_name": "Glória Reciclagem",
+					"identity": "72188883000116",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "gloria.reciclagem@dirty-unibody.name",
+					"phones": ["(13) 98805-8100"],
+					"website": null,
+					"started_activity_in": "2022-06-26T16:52:40.802Z",
+					"address": {
+						"zip_code": "11724-000",
+						"street": "Av. Min. Marcos Freire",
+						"number": "2464",
+						"complement": null,
+						"district": "Guilhermina, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0077146,
+						"longitude": -46.4364953
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 502.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.3,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 228.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.61,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 303
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 635.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 239.07,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 279.79,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Imani Watsica",
+			"display_name": "Imani",
+			"phone": "(27) 90704-7400",
+			"email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "99305-670",
+				"street": "Carmelo Knoll",
+				"number": "93609",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.990988,
+				"longitude": -46.576878
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ92I4fgAhzpQRGygvBFwhaFo",
+						"rating": 4.3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho da koka",
+					"business_name": "Ferro Velho da koka",
+					"identity": "62191869742",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.da.koka@blank-settler.com",
+					"phones": ["(13) 99189-5724"],
+					"website": null,
+					"started_activity_in": "2025-07-06T06:46:16.676Z",
+					"address": {
+						"zip_code": "11712-020",
+						"street": "Av. Brg. Eduardo Gomes",
+						"number": "786",
+						"complement": null,
+						"district": "Jardim Melvi, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0380887,
+						"longitude": -46.533537599999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 395.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.1,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 34.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.36,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 928.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.43,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 12.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 173.65,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 248.88,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 133.11,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 56.36,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 264.82,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 77.36,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ10VFvI4ezpQRuTAHL4hKRoA",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Bola Reciclagem",
+					"business_name": "Bola Reciclagem",
+					"identity": "20887333000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "bola.reciclagem@infamous-discourse.info",
+					"phones": ["(13) 98842-2822"],
+					"website": null,
+					"started_activity_in": "2025-04-06T22:26:34.500Z",
+					"address": {
+						"zip_code": "11721-120",
+						"street": "Rua João Abdalla",
+						"number": "83",
+						"complement": null,
+						"district": "Vila Antartica, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0121807,
+						"longitude": -46.452927599999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "09:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 56.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.56,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 511.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 85.97,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 138.55,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 199,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 145.93,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 110.59,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-14T20:29:58.093Z",
+					"observations": "Conitor totus bonus conicio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.969947,
+								"longitude": -46.579737,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303230086
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Merseyside",
+							"streetNumber": "89803",
+							"street": "Mueller Stream",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "24426954",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Collier Plain, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Arnold Kuphal",
+			"display_name": "Arnold",
+			"phone": "(88) 91672-4979",
+			"email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "11972-407",
+				"street": "Lonnie Bridge",
+				"number": "707",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.032081,
+				"longitude": -46.504601
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJd8ThKmEbzpQRO97bLfzqj70",
+						"rating": 4.9,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Viva Metais",
+					"business_name": "Viva Metais",
+					"identity": "77885983000115",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "viva.metais@sticky-divine.com",
+					"phones": ["(13) 3468-4606"],
+					"website": null,
+					"started_activity_in": "2019-06-21T13:36:09.671Z",
+					"address": {
+						"zip_code": "11370-400",
+						"street": "Av. Penedo",
+						"number": "7",
+						"complement": null,
+						"district": "Catiapoã, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9508962,
+						"longitude": -46.3842187
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.99,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 77.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.32,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 129.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.76,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 214.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 275.6,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 205.45,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 104.67,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJpcEiMAAhzpQR9hwgMzHrO0M",
+						"rating": 5,
+						"types": [
+							"storage",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Edinho Reciclagem",
+					"business_name": "Edinho Reciclagem",
+					"identity": "71689437000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "edinho.reciclagem@strong-language.info",
+					"phones": ["(13) 98126-6734"],
+					"website": null,
+					"started_activity_in": "2017-04-12T19:52:26.082Z",
+					"address": {
+						"zip_code": "11712-030",
+						"street": "Av. Milena Perutich",
+						"number": "421",
+						"complement": null,
+						"district": "Jardim Melvi, Praia Grande",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.039855199999998,
+						"longitude": -46.5303191
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "12:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.84,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 40.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 431.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 125.6,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 162.49,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 149.96,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 109.79,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Brian King",
+			"display_name": "Brian",
+			"phone": "(89) 99078-7925",
+			"email": "brian-king.9.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "43389-445",
+				"street": "High Road",
+				"number": "755",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.965668,
+				"longitude": -46.535107
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJXSl-woMDzpQRAKp0ZSbvEcA",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Redes para sacada em São Vicente SP - Redes para gatos, telas de proteção em São Vicente - SP",
+					"business_name": "Redes para sacada em São Vicente SP - Redes para gatos, telas de proteção em São Vicente - SP",
+					"identity": "98823046000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "redes.para.sacada.em.sao.vicente.sp.redes.para.gatos.telas.de.protecao.em.sao.vicente.sp@primary-boyfriend.net",
+					"phones": ["(13) 4104-3911"],
+					"website": null,
+					"started_activity_in": "2020-02-09T07:56:49.114Z",
+					"address": {
+						"zip_code": "11346-350",
+						"street": "R. Alfio Benassi",
+						"number": "S/N",
+						"complement": null,
+						"district": "Vila Nova Sao Vicente, São Vicente",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9882319,
+						"longitude": -46.4910731
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 891.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.34,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 314.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 595.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.49,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 478.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 263.5,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 288.67,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 171.58,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 159.57,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJi-VwgLcdzpQRsoqRS6SKRgA",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "SV Reciclagem",
+					"business_name": "SV Reciclagem",
+					"identity": "36146464000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sv.reciclagem@grave-scorn.info",
+					"phones": ["(13) 97407-3717"],
+					"website": null,
+					"started_activity_in": "2020-12-10T04:48:14.810Z",
+					"address": {
+						"zip_code": "11310-201",
+						"street": "Av. Capitão-Mor Aguiar",
+						"number": "32",
+						"complement": null,
+						"district": "Lj 2",
+						"city": "Praia Grande",
+						"city_ibge_id": 3541000,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9710224,
+						"longitude": -46.391366
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 776.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 425.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.5,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 904.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.87,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 869.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 284.82,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 277.93,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 163.76,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 202.88,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-06T10:34:47.597Z",
+					"observations": "Utrum calamitas ultra.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.01802,
+								"longitude": -46.440067,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788260128357
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Mid Glamorgan",
+							"streetNumber": "3967",
+							"street": "Walker Land",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51137242",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hermann Circles, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-10T14:34:00.230Z",
+					"observations": "Adeo bis ago tricesimus quibusdam succedo cultura comparo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.019177,
+								"longitude": -46.407224,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788272649218
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Suffolk",
+							"streetNumber": "116",
+							"street": "Schroeder Ramp",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90533963",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Levi Village, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Gretchen King",
+			"display_name": "Gretchen",
+			"phone": "(78) 95909-2223",
+			"email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "57799-752",
+				"street": "Hayes Summit",
+				"number": "559",
+				"complement": null,
+				"district": "Gwent",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.986056,
+				"longitude": -46.394089
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-21T15:16:50.791Z",
+					"observations": "Pel compono comburo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.966907,
+								"longitude": -46.406699,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788249795073
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "County Fermanagh",
+							"streetNumber": "690",
+							"street": "Konopelski Row",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54710171",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beech Drive, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "loma-langosh.4.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "quinton-kihn.14.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+							"description": "Aliqua trans umerus appello.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Cristina Halvorson",
+			"display_name": "Cristina",
+			"phone": "(97) 99522-2563",
+			"email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "77970-500",
+				"street": "Block Mission",
+				"number": "8830",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.029485,
+				"longitude": -46.511297
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-11T23:26:24.347Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.007766,
+								"longitude": -46.492777,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788233829910
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Norfolk",
+							"streetNumber": "76378",
+							"street": "Batz Via",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21582463",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Oak Street, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Plástico", "Medicamentos", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-09T02:15:09.968Z",
+					"observations": "Doloribus verto usitas tamen coaegresco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.055143,
+								"longitude": -46.447533,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314350335
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Marion County",
+							"streetNumber": "821",
+							"street": "Johathan Mall",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98776546",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Barn Close, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mozell-wolf.0.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"description": "Stillicidium ullus alioqui.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-19T04:15:47.656Z",
+					"observations": "Tricesimus valens depono amplus conturbo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.041107,
+								"longitude": -46.486985,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788257445329
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "South Yorkshire",
+							"streetNumber": "7010",
+							"street": "Wilkinson Throughway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20939351",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lowell Falls, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Clarissa Pagac",
+			"display_name": "Clarissa",
+			"phone": "(72) 93438-5816",
+			"email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "82256-949",
+				"street": "Mayert Ways",
+				"number": "9133",
+				"complement": null,
+				"district": "County Armagh",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.978493,
+				"longitude": -46.547038
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-13T00:37:01.570Z",
+					"observations": "Crinis ago aestas confido advoco aer animus coniecto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.008587,
+								"longitude": -46.508821,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288688842
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Suffolk",
+							"streetNumber": "4259",
+							"street": "Sandy Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01247831",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wolff Dam, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-26T14:00:18.217Z",
+					"observations": "Attollo defendo viridis tracto umquam repellendus cubo nemo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.085561,
+								"longitude": -46.600876,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788242364265
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Lincolnshire",
+							"streetNumber": "5691",
+							"street": "W Pine Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26182739",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 2nd Street, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Janis D'Amore",
+			"display_name": "Janis",
+			"phone": "(76) 95201-4604",
+			"email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "49541-611",
+				"street": "Spruce Street",
+				"number": "38592",
+				"complement": null,
+				"district": "Lincolnshire",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.98062,
+				"longitude": -46.424361
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-14T15:06:05.129Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.985531,
+								"longitude": -46.400809,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293132045
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "North Yorkshire",
+							"streetNumber": "1765",
+							"street": "Jessika Walks",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68265087",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ike Junctions, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-11T17:12:33.630Z",
+					"observations": "Cauda admoveo quam totus porro studio denuncio vado tertius tabesco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.99494,
+								"longitude": -46.423705,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286257454
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Isle of Wight",
+							"streetNumber": "82590",
+							"street": "Samantha Avenue",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42885729",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kristoffer Cliffs, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Eletroeletrônicos (REEE)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gina-schoen.1.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mozell-wolf.0.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"description": "Charisma pauper cito arcus verbum demonstro.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"description": "Caritas conculco arcus vacuus quod beatus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Quinton Kihn",
+			"display_name": "Quinton",
+			"phone": "(92) 99420-0794",
+			"email": "quinton-kihn.14.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "28094-379",
+				"street": "Schamberger Manors",
+				"number": "54888",
+				"complement": null,
+				"district": "Mid Glamorgan",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.994108,
+				"longitude": -46.428778
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-26T03:58:44.236Z",
+					"observations": "Caelestis dedico architecto sint.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.024428,
+								"longitude": -46.547343,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788252685475
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Pike County",
+							"streetNumber": "97820",
+							"street": "Camille Loop",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25799732",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Matt Divide, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Papel / Papelão",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"description": "Accendo collum aperiam adamo absconditus amplitudo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-27T22:45:36.438Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.049286,
+								"longitude": -46.585636,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788310850656
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Wayne County",
+							"streetNumber": "10323",
+							"street": "Ankunding Course",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41687958",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ian Drives, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Têxtil / Roupas / Tecidos",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-30T14:02:58.546Z",
+					"observations": "Brevis cuppedia defungo copiose talus videlicet architecto patria aggredior.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.000464,
+								"longitude": -46.562749,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788263006467
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Polk County",
+							"streetNumber": "600",
+							"street": "Common Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81269949",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Paddock, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Têxtil / Roupas / Tecidos",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "loma-langosh.4.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-21T10:49:38.626Z",
+					"observations": "Apostolus speculum nihil.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.031953,
+								"longitude": -46.51292,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788239588909
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Tyne and Wear",
+							"streetNumber": "38184",
+							"street": "Rutherford Knolls",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75620379",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hill Street, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-26T06:35:32.034Z",
+					"observations": "Vorago angulus cruciamentum vae terreo accedo abscido accommodo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.040192,
+								"longitude": -46.489563,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293205499
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Monroe County",
+							"streetNumber": "686",
+							"street": "Vicarage Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43974688",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Windsor Drive, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "clarissa-pagac.12.praia-grande-sp@oikos.seed",
+							"description": "Amoveo timor decerno benigne.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"description": "Coniuratio crapula vigor artificiose saepe super libero dignissimos.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-03T10:06:42.794Z",
+					"observations": "Abbas cinis succurro curia video enim aegre.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.042606,
+								"longitude": -46.434561,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788269192816
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Avon",
+							"streetNumber": "739",
+							"street": "Walter Gardens",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96512520",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Orval Mountains, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Fred Heller",
+			"display_name": "Fred",
+			"phone": "(49) 93300-5813",
+			"email": "fred-heller.15.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "40308-181",
+				"street": "Predovic-Franecki Prairie",
+				"number": "40867",
+				"complement": null,
+				"district": "Clay County",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.061619,
+				"longitude": -46.591531
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Benjamin Hermann",
+			"display_name": "Benjamin",
+			"phone": "(66) 92708-1115",
+			"email": "benjamin-hermann.16.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "41713-689",
+				"street": "Champlin Junctions",
+				"number": "483",
+				"complement": null,
+				"district": "Clay County",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.065899,
+				"longitude": -46.402872
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-08T00:23:17.837Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.952106,
+								"longitude": -46.542986,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788246081789
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Durham",
+							"streetNumber": "670",
+							"street": "The Croft",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58483911",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Horace Divide, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Medicamentos", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "cristina-halvorson.11.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mozell-wolf.0.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imani-watsica.7.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fred-heller.15.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelly-zieme.2.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "quinton-kihn.14.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "loma-langosh.4.praia-grande-sp@oikos.seed",
+							"description": "Aetas carbo spargo tribuo aestivus acsi volup crapula casus voluptate.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"description": "Stillicidium reiciendis omnis vitae delego terror consequuntur solum spargo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-23T02:38:11.181Z",
+					"observations": "Atrocitas autem comptus adicio totam aegre vester tredecim vociferor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.052796,
+								"longitude": -46.387756,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788268161675
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Dyfed",
+							"streetNumber": "1061",
+							"street": "Old State Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10015932",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W 11th Street, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gina-schoen.1.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-20T10:45:59.502Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.061206,
+								"longitude": -46.450153,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788236239459
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Somerset",
+							"streetNumber": "77325",
+							"street": "Jerde Mission",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62052795",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Katlynn Villages, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "quinton-kihn.14.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-19T00:45:13.041Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.063823,
+								"longitude": -46.562377,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788240822593
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Logan County",
+							"streetNumber": "58872",
+							"street": "Greenholt Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58790821",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gislason Circle, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Resíduos Orgânicos",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jacqueline Murphy-Ryan",
+			"display_name": "Jacqueline",
+			"phone": "(87) 93564-9398",
+			"email": "jacqueline-murphy-ryan.17.praia-grande-sp@oikos.seed",
+			"address": {
+				"zip_code": "02463-672",
+				"street": "Davis Turnpike",
+				"number": "444",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Praia Grande",
+				"city_ibge_id": 3541000,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.059808,
+				"longitude": -46.398444
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-17T16:45:22.539Z",
+					"observations": "Vir administratio abbas perspiciatis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.075131,
+								"longitude": -46.549407,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288838213
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "South Glamorgan",
+							"streetNumber": "498",
+							"street": "Springfield Close",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80721749",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Emil Haven, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gretchen-king.10.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "janis-d-amore.13.praia-grande-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "brian-king.9.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marcella-bailey.3.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-31T12:13:52.135Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.962859,
+								"longitude": -46.53717,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788247407308
+						},
+						"addresses": {
+							"city": "Praia Grande",
+							"district": "Staffordshire",
+							"streetNumber": "1421",
+							"street": "O'Kon Keys",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27758199",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chelsea Estate, Praia Grande - SP"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "arnold-kuphal.8.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edgar-johnson.6.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalind-emard.5.praia-grande-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}
