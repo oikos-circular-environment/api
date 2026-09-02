@@ -1,0 +1,5682 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:25:49.231Z",
+		"city": "Bertioga",
+		"state_code": "SP",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Mireya Homenick",
+			"display_name": "Mireya",
+			"phone": "(93) 98357-7394",
+			"email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "88079-523",
+				"street": "S Oak Street",
+				"number": "910",
+				"complement": null,
+				"district": "Washington County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.823484,
+				"longitude": -46.092281
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ7QVDaVT6zZQRv5i0Qp7MbUo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Jk Reciclagem Latinha",
+					"business_name": "Jk Reciclagem Latinha",
+					"identity": "27614383000144",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jk.reciclagem.latinha@uneven-backbone.org",
+					"phones": ["(13) 99792-0357"],
+					"website": null,
+					"started_activity_in": "2020-12-17T18:37:57.593Z",
+					"address": {
+						"zip_code": "11250-000",
+						"street": "Av. Anchieta",
+						"number": "S/N",
+						"complement": null,
+						"district": "Jardim Rafael, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8174991,
+						"longitude": -46.091175199999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.18,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 296.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 502.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.92,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 498
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 63.68,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 171.49,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 249.57,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 161.66,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 52.47,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 95.87,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJOfpIcpj7zZQR1zaA8Rz8Cow",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cabelo reciclagem",
+					"business_name": "Cabelo reciclagem",
+					"identity": "66430760000147",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cabelo.reciclagem@mysterious-catalyst.org",
+					"phones": ["(13) 99118-4257"],
+					"website": null,
+					"started_activity_in": "2022-09-21T05:35:36.533Z",
+					"address": {
+						"zip_code": "11250-000",
+						"street": "R. Peirão de Castro",
+						"number": "1020",
+						"complement": null,
+						"district": "Vista Linda, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8080005,
+						"longitude": -46.0880669
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.28,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 808
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.43,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 570.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.76,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 504.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.67,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 539.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.52,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 24.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 76.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 177.1,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 180.71,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 89.07,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 66.38,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.29,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-10T13:52:15.711Z",
+					"observations": "Solitudo deleniti cubo stultus virtus deporto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.770308,
+								"longitude": -46.091876,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788291117695
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Merseyside",
+							"streetNumber": "49554",
+							"street": "Duane Islands",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80430646",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Water Street, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Borracha / Pneus"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "aniya-tillman.3.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-23T04:12:21.208Z",
+					"observations": "Tracto aegre solio aestivus tam minus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.828296,
+								"longitude": -46.005185,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788273189413
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Kent",
+							"streetNumber": "241",
+							"street": "Kristina Manors",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37540190",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Washington Street, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "julian-steuber.17.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"description": "Cui nesciunt articulus bellicus consectetur conturbo cribro comes.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Brandt Heaney",
+			"display_name": "Brandt",
+			"phone": "(20) 91934-8051",
+			"email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "29684-270",
+				"street": "N Jackson Street",
+				"number": "17391",
+				"complement": null,
+				"district": "Bedfordshire",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.79086,
+				"longitude": -45.87994
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJWXaYV-XwzZQREL9pVxEe_YA",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Posto De Coleta De Materiais Recicláveis",
+					"business_name": "Posto De Coleta De Materiais Recicláveis",
+					"identity": "20606572000126",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "posto.de.coleta.de.materiais.reciclaveis@humiliating-juggernaut.com",
+					"phones": ["(95) 94036-4939"],
+					"website": null,
+					"started_activity_in": "2022-04-08T18:16:12.544Z",
+					"address": {
+						"zip_code": "11262-024",
+						"street": "Riviera de São Lourenço",
+						"number": "Bertioga",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8010844,
+						"longitude": -46.0276005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 879.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 429.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.5,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 789.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.49,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 771.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 158.33,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 187.67,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 211.34,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJtXxbTpf7zZQRfIa-TIv66Aw",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ap sucatas",
+					"business_name": "Ap sucatas",
+					"identity": "23315524000177",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ap.sucatas@forsaken-utilization.biz",
+					"phones": ["(13) 98224-3586"],
+					"website": "https://www.instagram.com/apsucata/",
+					"started_activity_in": "2018-11-12T05:38:00.417Z",
+					"address": {
+						"zip_code": "11259-042",
+						"street": "R. Aprovada 599",
+						"number": "152",
+						"complement": null,
+						"district": "chacaras, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8030164,
+						"longitude": -46.084340999999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 629.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 287
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.2,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 421.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.43,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 397.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 463.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 109.42,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 124.81,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 247.25,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 279.23,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 295.84,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-18T04:10:55.507Z",
+					"observations": "Verus conforto aufero turbo adinventitias id ascisco absconditus traho odit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.824625,
+								"longitude": -46.195962,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788282287422
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Clark County",
+							"streetNumber": "827",
+							"street": "Lester Causeway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09043696",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stiedemann Flat, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-15T12:20:49.000Z",
+					"observations": "Tyrannus studio comitatus varietas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.778192,
+								"longitude": -46.042211,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788243244244
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "County Tyrone",
+							"streetNumber": "39796",
+							"street": "Damon Cape",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87280318",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bernita Crest, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Shelia Walker",
+			"display_name": "Shelia",
+			"phone": "(36) 94831-0927",
+			"email": "shelia-walker.2.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "69453-797",
+				"street": "Vella Glens",
+				"number": "97666",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.711683,
+				"longitude": -45.873385
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJO6bFBGT7zZQRpqcQbp6AZHk",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLA BERTIOGA",
+					"business_name": "RECICLA BERTIOGA",
+					"identity": "12783426000148",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "recicla.bertioga@baggy-declaration.org",
+					"phones": ["(13) 99754-0981"],
+					"website": null,
+					"started_activity_in": "2018-08-23T00:37:06.870Z",
+					"address": {
+						"zip_code": "11259-339",
+						"street": "R. Aprovada 613",
+						"number": "S/N",
+						"complement": null,
+						"district": "Chácara Vista Linda, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.801133699999998,
+						"longitude": -46.0777529
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 610.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 703.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.2,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 766.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.55,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 703
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.55,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 975.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 189.27,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 139.3,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 262.31,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ33fMgiP9zZQRIwzlmbWTa9M",
+						"rating": 4.4,
+						"types": [
+							"association_or_organization",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "COOPERSUBERT",
+					"business_name": "COOPERSUBERT",
+					"identity": "64412514000137",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "coopersubert@merry-fit.org",
+					"phones": ["(65) 98916-6546"],
+					"website": null,
+					"started_activity_in": "2022-08-05T04:03:20.409Z",
+					"address": {
+						"zip_code": "11250-000",
+						"street": "Parque Caiubura",
+						"number": "Bertioga",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.843509599999997,
+						"longitude": -46.164268400000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.4,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 676.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.97,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 24.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.83,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 371.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.31,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 600.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 185.74,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 269.11,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-19T23:40:33.915Z",
+					"observations": "Triduana tergeo textus tempore studio deprimo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.872515,
+								"longitude": -45.961932,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788257851763
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "East Sussex",
+							"streetNumber": "59447",
+							"street": "Main Avenue",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08701437",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nichole Springs, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Embalagens Contaminadas",
+						"Lâmpadas"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-28T12:58:01.506Z",
+					"observations": "Quidem asperiores odio admitto traho angustus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.84012,
+								"longitude": -46.013117,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788274626626
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Hertfordshire",
+							"streetNumber": "97723",
+							"street": "Bauch Lock",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34280131",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cassin Trace, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Eletroeletrônicos (REEE)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-hauck.8.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-18T17:24:38.463Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.86703,
+								"longitude": -46.066281,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788250498402
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Northumberland",
+							"streetNumber": "59276",
+							"street": "Mill Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "11135671",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Greenwood Road, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Metal / Alumínio",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-13T10:55:22.695Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.877744,
+								"longitude": -46.04182,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309359407
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Washington County",
+							"streetNumber": "1375",
+							"street": "Keebler Ville",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "69945723",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dwayne Burgs, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-hauck.8.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aniya-tillman.3.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"description": "Sordeo adsum colo voluptatibus.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"description": "Canis cernuus clamo teneo comitatus absconditus veritatis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Aniya Tillman",
+			"display_name": "Aniya",
+			"phone": "(45) 93219-8027",
+			"email": "aniya-tillman.3.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "03686-609",
+				"street": "The Glebe",
+				"number": "717",
+				"complement": null,
+				"district": "Fayette County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.843461,
+				"longitude": -46.200908
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ_-ZlYRH7zZQRFGD7Jw79PoE",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "SUCATAS BERTIOGA",
+					"business_name": "SUCATAS BERTIOGA",
+					"identity": "23661795000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucatas.bertioga@excellent-configuration.biz",
+					"phones": ["(11) 99455-4061"],
+					"website": null,
+					"started_activity_in": "2025-01-15T01:52:56.259Z",
+					"address": {
+						"zip_code": "11259-339",
+						"street": "R. Aprovada 613",
+						"number": "80",
+						"complement": null,
+						"district": "Chácara Vista Linda, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8010435,
+						"longitude": -46.0776143
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.11,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 265.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.34,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 179.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 930
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 255.2,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 171.23,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJEXMO4FnwzZQRh0F7ZcQP6QI",
+						"rating": 3.3,
+						"types": ["corporate_office", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cooperativa de Triagem de Sucata União de Bertioga",
+					"business_name": "Cooperativa de Triagem de Sucata União de Bertioga",
+					"identity": "63638766000116",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "cooperativa.de.triagem.de.sucata.uniao.de.bertioga@peaceful-singing.net",
+					"phones": ["(13) 99761-4229"],
+					"website": null,
+					"started_activity_in": "2026-05-09T21:58:58.219Z",
+					"address": {
+						"zip_code": "11250-000",
+						"street": "R. Gentil Teixeira dos Santos",
+						"number": "611",
+						"complement": null,
+						"district": "Indaia, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8122667,
+						"longitude": -46.045212600000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.91,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 122.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.34,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 820.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.07,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 253.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.99,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 128.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.87,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 123
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.99,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 950
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 282,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 186.85,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 277.58,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-03T21:34:56.576Z",
+					"observations": "Temptatio amor strenuus aeternus aestivus molestiae arca.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.707139,
+								"longitude": -45.895381,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788257737643
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Marion County",
+							"streetNumber": "6478",
+							"street": "Johnson Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28475773",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rutherford Shores, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Leona White",
+			"display_name": "Leona",
+			"phone": "(77) 92546-7839",
+			"email": "leona-white.4.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "60980-508",
+				"street": "Spring Street",
+				"number": "2317",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.75249,
+				"longitude": -46.056128
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJYfG8G9n7zZQRzoQF1jnE3Pc",
+						"rating": 5,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "7 Recicla",
+					"business_name": "7 Recicla",
+					"identity": "75017267000190",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "7.recicla@elastic-traditionalism.name",
+					"phones": ["(13) 98152-2088"],
+					"website": null,
+					"started_activity_in": "2022-04-25T07:42:43.362Z",
+					"address": {
+						"zip_code": "11250-000",
+						"street": "R. Orestes Colombari",
+						"number": "674",
+						"complement": null,
+						"district": "Jardim Rafael, Bertioga",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.805800200000004,
+						"longitude": -46.078793499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.45,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 863.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.56,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 284.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 848.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.38,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 325.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 67.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 150.37,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 89.72,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 271.56,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 253.46,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 132.64,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJE1MtFnH7zZQRW0hhCbVwKro",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ale Ferro Velho Bertioga — Ferro Velho em Bertioga",
+					"business_name": "Ale Ferro Velho Bertioga — Ferro Velho em Bertioga",
+					"identity": "13982289076",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ale.ferro.velho.bertioga.ferro.velho.em.bertioga@free-pleasure.net",
+					"phones": ["(11) 94743-8620"],
+					"website": "https://www.cartao-digital.com/aleferrovelho/",
+					"started_activity_in": "2018-06-07T17:01:27.391Z",
+					"address": {
+						"zip_code": "11250-000",
+						"street": "BR-101",
+						"number": "930",
+						"complement": null,
+						"district": "Antigo 35",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.8153155,
+						"longitude": -46.1117554
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.68,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 55.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 128.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.17,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 850.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 682.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 926
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 274.92,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 251.76,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 89.04,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 178.36,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-25T21:25:29.283Z",
+					"observations": "Tui vester iure contego cohaero taedium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.716818,
+								"longitude": -46.12752,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788282239852
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Scott County",
+							"streetNumber": "484",
+							"street": "Elbert Lodge",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41454977",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Feeney Mountain, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "shelia-walker.2.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "julian-steuber.17.bertioga-sp@oikos.seed",
+							"description": "Allatus debitis censura.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-21T17:38:17.994Z",
+					"observations": "Catena ademptio dolore aggero adsuesco dedecor paens charisma villa.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.730834,
+								"longitude": -45.959305,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295302385
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Cheshire",
+							"streetNumber": "2104",
+							"street": "Rico Knoll",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "99254485",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hammes Summit, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Metal / Alumínio",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-18T05:23:29.732Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.774896,
+								"longitude": -45.945255,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788240645385
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Essex",
+							"streetNumber": "914",
+							"street": "Watsica Overpass",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22157049",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Harmon Curve, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Embalagens Contaminadas",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelia-walker.2.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-hauck.8.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"description": "Verbum tenax curtus vitiosus tollo adulescens.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"description": "Comparo civitas at adinventitias texo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Rex Yost",
+			"display_name": "Rex",
+			"phone": "(93) 92182-0887",
+			"email": "rex-yost.5.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "49427-348",
+				"street": "Poplar Avenue",
+				"number": "4497",
+				"complement": null,
+				"district": "Jackson County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.808973,
+				"longitude": -46.003365
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Gutmann LLC Reciclagem",
+					"business_name": "Gutmann LLC Reciclagem",
+					"identity": "69680451410",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Suzanne.Gottlieb@devoted-extent.name",
+					"phones": ["(76) 90834-3116"],
+					"website": null,
+					"started_activity_in": "2018-01-16T17:01:04.247Z",
+					"address": {
+						"zip_code": "71712-800",
+						"street": "Meadow Drive",
+						"number": "17187",
+						"complement": null,
+						"district": "Greater Manchester",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.871786,
+						"longitude": -46.045053
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 551.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.82,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 238.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 950.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 178.04,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 147.23,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Davis - Graham Reciclagem",
+					"business_name": "Davis - Graham Reciclagem",
+					"identity": "16060108245",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Felix3@repentant-appliance.org",
+					"phones": ["(85) 92855-9788"],
+					"website": null,
+					"started_activity_in": "2023-11-09T22:24:42.735Z",
+					"address": {
+						"zip_code": "28576-963",
+						"street": "Julio Creek",
+						"number": "583",
+						"complement": null,
+						"district": "Lincolnshire",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.795523,
+						"longitude": -46.144177
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 201.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.01,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 707.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 278.93,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 56.01,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 56.73,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Charley Pfeffer",
+			"display_name": "Charley",
+			"phone": "(37) 90681-4155",
+			"email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "96994-683",
+				"street": "Vicarage Lane",
+				"number": "787",
+				"complement": null,
+				"district": "Jackson County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.882084,
+				"longitude": -45.971804
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Brekke, McKenzie and Grady-Koch Reciclagem",
+					"business_name": "Brekke, McKenzie and Grady-Koch Reciclagem",
+					"identity": "88668542000188",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Leonard71@parched-chiffonier.org",
+					"phones": ["(82) 92589-5920"],
+					"website": null,
+					"started_activity_in": "2025-01-27T00:40:08.253Z",
+					"address": {
+						"zip_code": "96635-061",
+						"street": "Fritsch Point",
+						"number": "77073",
+						"complement": null,
+						"district": "West Yorkshire",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.82631,
+						"longitude": -46.139618
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.56,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 408.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.29,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 989.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.27,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 604.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.47,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 560.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.42,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 496.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.62,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 725.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 216.35,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 286.41,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 215.6,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 144.2,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 220.75,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Durgan, Huel and Parker Reciclagem",
+					"business_name": "Durgan, Huel and Parker Reciclagem",
+					"identity": "29243022000164",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Marcos.Weimann-McGlynn56@any-wedding.org",
+					"phones": ["(65) 95406-4839"],
+					"website": null,
+					"started_activity_in": "2025-01-11T20:01:54.384Z",
+					"address": {
+						"zip_code": "91405-963",
+						"street": "Troy Hills",
+						"number": "6329",
+						"complement": null,
+						"district": "Merseyside",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.811127,
+						"longitude": -46.126742
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.7,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 594
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.27,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 334.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.9,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 484.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.64,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 761.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 207.41,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 131.72,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 134.15,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Kelton Nicolas",
+			"display_name": "Kelton",
+			"phone": "(89) 92649-9503",
+			"email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "21828-151",
+				"street": "Carter Knoll",
+				"number": "6874",
+				"complement": null,
+				"district": "Grant County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.788077,
+				"longitude": -45.831039
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Wiza - West Reciclagem",
+					"business_name": "Wiza - West Reciclagem",
+					"identity": "92212502000102",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Lance_Grady@enchanting-editor.biz",
+					"phones": ["(47) 96070-3914"],
+					"website": null,
+					"started_activity_in": "2023-08-08T23:53:11.953Z",
+					"address": {
+						"zip_code": "83551-461",
+						"street": "Patty Circle",
+						"number": "4240",
+						"complement": null,
+						"district": "Union County",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.743833,
+						"longitude": -45.966396
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.88,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 255.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.99,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 268.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 508.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 162.02,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 224.49,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 240.48,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 253.85,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Purdy - Hayes Reciclagem",
+					"business_name": "Purdy - Hayes Reciclagem",
+					"identity": "44850536000171",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Alek.Breitenberg@memorable-possession.info",
+					"phones": ["(53) 96269-5543"],
+					"website": null,
+					"started_activity_in": "2019-01-31T21:13:00.875Z",
+					"address": {
+						"zip_code": "21668-941",
+						"street": "Jakubowski Falls",
+						"number": "338",
+						"complement": null,
+						"district": "Clark County",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.851256,
+						"longitude": -45.872028
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.95,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 730
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.21,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 415.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.88,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 149.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 288.77,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 161.11,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 83.36,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-01T11:29:58.722Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.827309,
+								"longitude": -46.114986,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304808033
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Warwickshire",
+							"streetNumber": "75795",
+							"street": "Sterling Prairie",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85642938",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Blanda Stravenue, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Embalagens Contaminadas",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "julian-steuber.17.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carol-hauck.8.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"description": "Curia pecto dolorum desolo clam illo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"description": "Amet contego veniam dicta curvo cado ultio sortitus voveo vulnero.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Carol Hauck",
+			"display_name": "Carol",
+			"phone": "(54) 91742-9697",
+			"email": "carol-hauck.8.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "61705-251",
+				"street": "Avis Loaf",
+				"number": "46016",
+				"complement": null,
+				"district": "Devon",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.780359,
+				"longitude": -45.921412
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kassulke, Upton and Armstrong Reciclagem",
+					"business_name": "Kassulke, Upton and Armstrong Reciclagem",
+					"identity": "69010711000143",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Bobbie_Wehner@scary-chapel.name",
+					"phones": ["(20) 92003-9873"],
+					"website": null,
+					"started_activity_in": "2025-06-24T05:32:31.226Z",
+					"address": {
+						"zip_code": "63246-973",
+						"street": "Castle Street",
+						"number": "6263",
+						"complement": null,
+						"district": "Mid Glamorgan",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.878121,
+						"longitude": -45.993428
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.14,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 219.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 626.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.72,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 355.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.18,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 221.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.84,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 905
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 60.36,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 56.78,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Sporer - Moen Reciclagem",
+					"business_name": "Sporer - Moen Reciclagem",
+					"identity": "73429876000121",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Lucio_West@hasty-role.net",
+					"phones": ["(07) 98014-4307"],
+					"website": null,
+					"started_activity_in": "2018-05-01T16:33:59.789Z",
+					"address": {
+						"zip_code": "32586-318",
+						"street": "Jenna Point",
+						"number": "548",
+						"complement": null,
+						"district": "Durham",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.774037,
+						"longitude": -46.043853
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.66,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 186
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.55,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 725
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.4,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 524.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.39,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 760.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.79,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 618.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 139.2,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 196.71,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 217.75,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 191.73,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-21T17:42:56.275Z",
+					"observations": "Ad cunabula culpo maxime delego temeritas assumenda.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.705658,
+								"longitude": -45.990368,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788258023622
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Montgomery County",
+							"streetNumber": "889",
+							"street": "Hoeger River",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93452626",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Vickie Unions, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelia-walker.2.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"description": "Vereor votum cornu.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-13T18:12:29.457Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.862632,
+								"longitude": -45.879602,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788261751592
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Union County",
+							"streetNumber": "9144",
+							"street": "N Chestnut Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30133822",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Terrence Estate, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Felicita Medhurst",
+			"display_name": "Felicita",
+			"phone": "(84) 97474-0923",
+			"email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "19295-743",
+				"street": "11th Street",
+				"number": "60924",
+				"complement": null,
+				"district": "Nottinghamshire",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.824599,
+				"longitude": -45.933497
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Mann Inc Reciclagem",
+					"business_name": "Mann Inc Reciclagem",
+					"identity": "13073029000145",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Violet_Kuhlman75@gripping-valley.name",
+					"phones": ["(67) 93847-6967"],
+					"website": null,
+					"started_activity_in": "2026-08-31T05:35:00.604Z",
+					"address": {
+						"zip_code": "35732-914",
+						"street": "Alfred Circles",
+						"number": "7336",
+						"complement": null,
+						"district": "South Glamorgan",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.738156,
+						"longitude": -46.025023
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.94,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 319.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.01,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 538.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 67.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.33,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 672.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.63,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 647
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 255.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 256.42,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 142.62,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 266.21,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 273.09,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 289.65,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "McDermott, Schneider and Altenwerth Reciclagem",
+					"business_name": "McDermott, Schneider and Altenwerth Reciclagem",
+					"identity": "95383304000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Shakira.Schaden@insignificant-doing.net",
+					"phones": ["(48) 98869-0535"],
+					"website": null,
+					"started_activity_in": "2019-09-24T02:05:59.029Z",
+					"address": {
+						"zip_code": "70121-685",
+						"street": "Balistreri Spur",
+						"number": "80824",
+						"complement": null,
+						"district": "Crawford County",
+						"city": "Bertioga",
+						"city_ibge_id": 3506359,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.767536,
+						"longitude": -45.916172
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.77,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 827.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.51,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 244.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 288.44,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 266.72,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 55.42,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-01T04:57:41.327Z",
+					"observations": "Auditor creber inflammatio ambitus mollitia talio repellat omnis certe.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.775928,
+								"longitude": -45.862197,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788263688256
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Polk County",
+							"streetNumber": "5241",
+							"street": "Marilyne Creek",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75380671",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Baker Street, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Têxtil / Roupas / Tecidos",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ansley Schmitt",
+			"display_name": "Ansley",
+			"phone": "(08) 98811-3399",
+			"email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "70652-382",
+				"street": "Bailey Stream",
+				"number": "4054",
+				"complement": null,
+				"district": "Monroe County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.818188,
+				"longitude": -46.104642
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-10T09:42:41.633Z",
+					"observations": "Correptius summa ater ara.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.861708,
+								"longitude": -46.039766,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312339771
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Staffordshire",
+							"streetNumber": "1374",
+							"street": "Kirlin Route",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59417935",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Warren Road, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "julian-steuber.17.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aniya-tillman.3.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"description": "Adsuesco aureus laborum alter cura conscendo absens tersus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"description": "Vomica somnus spoliatio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Eduardo Harber",
+			"display_name": "Eduardo",
+			"phone": "(77) 98481-3457",
+			"email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "92999-051",
+				"street": "Tremblay Roads",
+				"number": "3171",
+				"complement": null,
+				"district": "West Sussex",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.834798,
+				"longitude": -45.839275
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-08T08:28:08.023Z",
+					"observations": "Eligendi vito ipsum urbanus laudantium defaeco suffragium suscipio dolor varius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.822685,
+								"longitude": -45.873943,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315088008
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "74869",
+							"street": "Collins Rue",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94167774",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brook Lane, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kevon Pouros",
+			"display_name": "Kevon",
+			"phone": "(82) 94186-7210",
+			"email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "76415-171",
+				"street": "Eulalia Common",
+				"number": "84191",
+				"complement": null,
+				"district": "Strathclyde",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.807667,
+				"longitude": -46.014523
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-12T03:36:03.904Z",
+					"observations": "Doloremque vulgivagus torqueo error.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.809322,
+								"longitude": -46.031538,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306823210
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "County Londonderry",
+							"streetNumber": "3553",
+							"street": "Heaney Trace",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96742268",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Roman Road, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Madeira",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Darius Hodkiewicz",
+			"display_name": "Darius",
+			"phone": "(33) 91419-1650",
+			"email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "04396-969",
+				"street": "Ziemann Lake",
+				"number": "42200",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.739104,
+				"longitude": -46.098323
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-07T08:03:52.223Z",
+					"observations": "Cumque paulatim deporto est complectus benigne.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.853689,
+								"longitude": -46.022243,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788271789360
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Cleveland",
+							"streetNumber": "39210",
+							"street": "Elbert Court",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53087305",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Watsica Cove, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Veículos em Fim de Vida",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "julian-steuber.17.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelia-walker.2.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-10T18:03:52.114Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.797839,
+								"longitude": -45.993437,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280568276
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Wayne County",
+							"streetNumber": "40516",
+							"street": "Upton Courts",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "99264298",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Erma Way, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-27T09:22:59.020Z",
+					"observations": "Villa aufero thymbra stillicidium strues cernuus valetudo architecto calco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.736288,
+								"longitude": -46.190046,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788296204589
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Avon",
+							"streetNumber": "1976",
+							"street": "Waelchi Land",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90844184",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Waters Common, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aniya-tillman.3.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "carol-hauck.8.bertioga-sp@oikos.seed",
+							"description": "Voluptates beatus strues thymum conscendo cado vulgus celo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Kate Raynor",
+			"display_name": "Kate",
+			"phone": "(95) 93497-6072",
+			"email": "kate-raynor.14.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "21533-807",
+				"street": "Swift Trafficway",
+				"number": "30620",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.856222,
+				"longitude": -45.892551
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-15T16:54:22.297Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.854559,
+								"longitude": -46.059555,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315484299
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Henry County",
+							"streetNumber": "171",
+							"street": "Dach Place",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96931210",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cherry Close, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Borracha / Pneus",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-20T22:59:13.558Z",
+					"observations": "Arx approbo attonbitus barba comis adipisci conitor calculus animadverto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.882552,
+								"longitude": -46.098371,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788242508783
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Buckinghamshire",
+							"streetNumber": "6717",
+							"street": "Fairfield Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "40441623",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Howell Forest, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelia-walker.2.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darius-hodkiewicz.13.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "aniya-tillman.3.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "felicita-medhurst.9.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"description": "Versus quibusdam audio vulariter eligendi blandior tandem pectus vespillo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Robyn Hirthe",
+			"display_name": "Robyn",
+			"phone": "(79) 96811-9161",
+			"email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "23316-334",
+				"street": "Poplar Road",
+				"number": "18137",
+				"complement": null,
+				"district": "Lake County",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.840008,
+				"longitude": -46.108411
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-21T20:41:56.568Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.809885,
+								"longitude": -46.029765,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788259072581
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Gloucestershire",
+							"streetNumber": "285",
+							"street": "Lori Burg",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80200464",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Labadie Isle, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Pilhas e Baterias",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-09T02:53:35.316Z",
+					"observations": "Arca taedium pauper delego harum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.803604,
+								"longitude": -45.888561,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311139221
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Northumberland",
+							"streetNumber": "34153",
+							"street": "Emmett Trafficway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54222541",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Odell Lakes, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandt-heaney.1.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Terrence Runolfsdottir",
+			"display_name": "Terrence",
+			"phone": "(33) 92955-5056",
+			"email": "terrence-runolfsdottir.16.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "60381-849",
+				"street": "Eriberto Junction",
+				"number": "33791",
+				"complement": null,
+				"district": "Gloucestershire",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.786696,
+				"longitude": -45.933515
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-27T04:39:45.710Z",
+					"observations": "Admoneo ventus aliquid articulus illum thorax est summopere.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.748951,
+								"longitude": -46.014709,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788237073426
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Nottinghamshire",
+							"streetNumber": "5227",
+							"street": "W South Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "24446625",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hall Lane, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Plástico",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "eduardo-harber.11.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "julian-steuber.17.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leona-white.4.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rex-yost.5.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "robyn-hirthe.15.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kelton-nicolas.7.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shelia-walker.2.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "mireya-homenick.0.bertioga-sp@oikos.seed",
+							"description": "Tego vestrum molestiae terebro utrimque confido auctus eligendi ubi.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Julian Steuber",
+			"display_name": "Julian",
+			"phone": "(22) 95986-0527",
+			"email": "julian-steuber.17.bertioga-sp@oikos.seed",
+			"address": {
+				"zip_code": "41916-203",
+				"street": "Isadore Via",
+				"number": "49764",
+				"complement": null,
+				"district": "Dorset",
+				"city": "Bertioga",
+				"city_ibge_id": 3506359,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.729663,
+				"longitude": -46.16354
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-24T01:17:34.106Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.731485,
+								"longitude": -46.066446,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788268312675
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Franklin County",
+							"streetNumber": "16565",
+							"street": "South View",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03262355",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Martin Luther King Boulevard, Bertioga - SP"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ansley-schmitt.10.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kate-raynor.14.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "charley-pfeffer.6.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-19T09:51:40.879Z",
+					"observations": "Cognatus doloribus vos patrocinor valeo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.829548,
+								"longitude": -46.17196,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276029214
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Marshall County",
+							"streetNumber": "16426",
+							"street": "Annie Knoll",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89597312",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schiller Union, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Madeira",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kevon-pouros.12.bertioga-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-30T16:31:57.418Z",
+					"observations": "Demergo cauda cur universe arca sulum cupiditate viduo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.759212,
+								"longitude": -46.156615,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788289251936
+						},
+						"addresses": {
+							"city": "Bertioga",
+							"district": "Northumberland",
+							"streetNumber": "6785",
+							"street": "S State Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85482121",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W 9th Street, Bertioga - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Veículos em Fim de Vida",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "carol-hauck.8.bertioga-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

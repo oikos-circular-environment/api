@@ -1,0 +1,5521 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:26:11.757Z",
+		"city": "Mongaguá",
+		"state_code": "SP",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Madelyn Ebert",
+			"display_name": "Madelyn",
+			"phone": "(88) 92970-7340",
+			"email": "madelyn-ebert.0.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "77935-157",
+				"street": "Maribel Ports",
+				"number": "4748",
+				"complement": null,
+				"district": "Lawrence County",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.107074,
+				"longitude": -46.704296
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJMZAKKAwnzpQRifJtWQb2lcs",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Coleta Legal",
+					"business_name": "Coleta Legal",
+					"identity": "36780747000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "coleta.legal@rewarding-follower.net",
+					"phones": ["(13) 4109-2340"],
+					"website": null,
+					"started_activity_in": "2018-09-05T09:06:45.195Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Olindo Tamagnini",
+						"number": "187",
+						"complement": null,
+						"district": "Jardim Chacara Sao Joao, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0931036,
+						"longitude": -46.62532420000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.36,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 269
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.92,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 254
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.42,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 282
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.82,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 371.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.25,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 37.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 264.19,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 199.32,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 151.8,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 280.53,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 98.89,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJawq5PuQpzpQRVu9b9VnGSN4",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Grillo Reciclagem",
+					"business_name": "Grillo Reciclagem",
+					"identity": "03462754000151",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "grillo.reciclagem@worldly-loaf.org",
+					"phones": ["(13) 99658-8919"],
+					"website": null,
+					"started_activity_in": "2017-01-28T21:00:38.796Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Estrada da cachoreira",
+						"number": "414",
+						"complement": null,
+						"district": "Jardim Primavera, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.113914599999998,
+						"longitude": -46.7125889
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.15,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 370.9
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.26,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 685
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.43,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 589.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 395.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.75,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 232.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 212.2,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 157.89,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 211.4,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 291.02,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 130.01,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 212.34,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-22T00:31:43.776Z",
+					"observations": "Tergum nam curto distinctio sunt depopulo ago aegrotatio adamo fugiat.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.073074,
+								"longitude": -46.70774,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788255160949
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Avon",
+							"streetNumber": "929",
+							"street": "Willow Drive",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39433901",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Camila Haven, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "madelyn-ebert.0.mongagua-sp@oikos.seed",
+							"description": "Ustulo vomer hic.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "ludwig-dooley.3.mongagua-sp@oikos.seed",
+							"description": "Ullam utrum iure studio arcesso absconditus ago.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-26T00:44:19.903Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.112299,
+								"longitude": -46.711625,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788237296605
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Leicestershire",
+							"streetNumber": "27414",
+							"street": "Auer Island",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78808738",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bruen Mill, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-dooley.3.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melba-bins.13.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "melba-bins.13.mongagua-sp@oikos.seed",
+							"description": "Aegre cultellus cognomen ait quidem et.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"description": "Adinventitias vacuus victus attero tempus sophismata.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-28T11:01:17.116Z",
+					"observations": "Adipiscor agnosco patrocinor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.039849,
+								"longitude": -46.721406,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788301107276
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Johnson County",
+							"streetNumber": "55994",
+							"street": "N 9th Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64114571",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kuphal Land, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-macejkovic.8.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"description": "Suffragium ascisco cicuta thesis eaque thesaurus auctus incidunt clamo iure.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"description": "Cunctatio acquiro comminor aperiam vis administratio attollo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Caterina McKenzie",
+			"display_name": "Caterina",
+			"phone": "(36) 98720-1945",
+			"email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "39236-202",
+				"street": "Nicole Trafficway",
+				"number": "5288",
+				"complement": null,
+				"district": "West Yorkshire",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.064091,
+				"longitude": -46.729489
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJFbglOngozpQRudn_6lusIyU",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Unidade De Triagem Materiais Reciclaveis",
+					"business_name": "Unidade De Triagem Materiais Reciclaveis",
+					"identity": "49105827000159",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "unidade.de.triagem.materiais.reciclaveis@worse-distinction.info",
+					"phones": ["(87) 92288-5215"],
+					"website": null,
+					"started_activity_in": "2023-07-18T10:35:41.573Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. José Jacob Seckler",
+						"number": "S/N",
+						"complement": null,
+						"district": "Balneario Anchieta, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1038578,
+						"longitude": -46.6722384
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 660.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.58,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 346.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.24,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 539.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 256.24,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 115.3,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 50.18,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 267.52,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 255.63,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJDZ6gBJYnzpQRydBHrD3VedM",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Lobato",
+					"business_name": "Reciclagem Lobato",
+					"identity": "18378114000135",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.lobato@gullible-printer.name",
+					"phones": ["(13) 99611-8748"],
+					"website": null,
+					"started_activity_in": "2024-03-11T11:34:32.492Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Monteiro Lobato",
+						"number": "4510",
+						"complement": null,
+						"district": "Vila Atlântica, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1052775,
+						"longitude": -46.645856599999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "22:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.39,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 245.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.87,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 405.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.74,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 684.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 253.74,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 193.01,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-27T10:24:15.216Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.120067,
+								"longitude": -46.646221,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314695184
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Essex",
+							"streetNumber": "272",
+							"street": "Jenkins Creek",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02380128",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hailie Creek, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "frankie-macejkovic.8.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Wade Erdman",
+			"display_name": "Wade",
+			"phone": "(17) 94792-0392",
+			"email": "wade-erdman.2.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "09966-869",
+				"street": "Libby Meadow",
+				"number": "6677",
+				"complement": null,
+				"district": "Adams County",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.095006,
+				"longitude": -46.615869
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ0YLTIwAnzpQRRfeNLuxX3n4",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "PE",
+					"business_name": "PE",
+					"identity": "43497955000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "pe@gullible-making.info",
+					"phones": ["(87) 97632-7512"],
+					"website": null,
+					"started_activity_in": "2018-01-23T10:47:45.470Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "R. das Sereias",
+						"number": "S/N",
+						"complement": null,
+						"district": "Balneario Anchieta, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1132973,
+						"longitude": -46.656771
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.09,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 11.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.33,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 97.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 914.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 269.4,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 235.29,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 270.96,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 287.19,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 271.22,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJMxttHc8nzpQR9F24xzfPfSk",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "DanLex Metais",
+					"business_name": "DanLex Metais",
+					"identity": "29968989000103",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "danlex.metais@athletic-knuckle.net",
+					"phones": ["(13) 98101-1632"],
+					"website": null,
+					"started_activity_in": "2023-01-01T12:43:16.435Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. José Cesário Pereira Filho",
+						"number": "631",
+						"complement": null,
+						"district": "Vila Vera Cruz, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1005254,
+						"longitude": -46.6407999
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.51,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 736.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.73,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 63.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.47,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 78.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.63,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 538.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 291.54,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 217.17,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 230.08,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 138.87,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 175.21,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 196.32,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-16T09:46:31.767Z",
+					"observations": "Nisi uberrime decens fugiat angelus angustus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.124274,
+								"longitude": -46.677327,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315443555
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Worcestershire",
+							"streetNumber": "24526",
+							"street": "Luz Camp",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12665843",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aniyah Avenue, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ludwig Dooley",
+			"display_name": "Ludwig",
+			"phone": "(08) 97833-9929",
+			"email": "ludwig-dooley.3.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "94258-280",
+				"street": "Keaton Branch",
+				"number": "91444",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.124107,
+				"longitude": -46.70238
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJR-KjkpUnzpQR729kSZ_W18A",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Atlântica Reciclagem",
+					"business_name": "Atlântica Reciclagem",
+					"identity": "02840453000151",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "atlantica.reciclagem@caring-handful.info",
+					"phones": ["(07) 92684-4234"],
+					"website": null,
+					"started_activity_in": "2021-02-18T22:08:50.580Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Monteiro Lobato",
+						"number": "4720",
+						"complement": null,
+						"district": "CDHU, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1061965,
+						"longitude": -46.647715299999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 715
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.74,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 879.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.19,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 316.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 93.36,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 161.18,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 57.27,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 138.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJCSE30A4pzpQRRtWnbZGyl28",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Do Bahia",
+					"business_name": "Reciclagem Do Bahia",
+					"identity": "19358573000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.bahia@nice-millet.net",
+					"phones": ["(11) 96069-5917"],
+					"website": null,
+					"started_activity_in": "2023-03-10T01:43:26.103Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Nossa Senhora De Fátima",
+						"number": "S/N",
+						"complement": null,
+						"district": "Av. Agenor de Campos, 1904",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1197576,
+						"longitude": -46.7015269
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.9,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 594.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.89,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 521.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 185.7,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 277.79,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 283.68,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 270.58,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 229.63,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-14T01:15:20.229Z",
+					"observations": "Despecto reprehenderit creator vulpes acidus ocer cervus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.038707,
+								"longitude": -46.694038,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788267538819
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "County Tyrone",
+							"streetNumber": "854",
+							"street": "Morissette Corners",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06414057",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "O'Reilly Point, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-16T17:55:22.976Z",
+					"observations": "Abduco appositus benigne attonbitus defero armarium compello amplexus turba.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.086433,
+								"longitude": -46.726451,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788235055898
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "West Sussex",
+							"streetNumber": "85043",
+							"street": "Russell Fall",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58519939",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nitzsche Crossroad, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Donald Hagenes",
+			"display_name": "Donald",
+			"phone": "(83) 96548-2867",
+			"email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "08014-270",
+				"street": "Altenwerth Ramp",
+				"number": "48716",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.080965,
+				"longitude": -46.687487
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJY42EkpUnzpQRq4G8L_rAjzQ",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM CABEÇA BRANCA",
+					"business_name": "RECICLAGEM CABEÇA BRANCA",
+					"identity": "64381893000145",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.cabeca.branca@boiling-cash.net",
+					"phones": ["(77) 98174-7730"],
+					"website": null,
+					"started_activity_in": "2021-10-15T15:02:35.546Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Monteiro Lobato",
+						"number": "4720",
+						"complement": null,
+						"district": "CDHU, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.106212799999998,
+						"longitude": -46.647722699999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.99,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 735
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.48,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 435.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.79,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 587.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 221.97,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 141.43,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 286.71,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 177.99,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 178.13,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 142.02,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJEx2wkuEnzpQRa_EpBqeLUV0",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Red-K Metas",
+					"business_name": "Red-K Metas",
+					"identity": "57351578000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "red.k.metas@whispered-diagram.name",
+					"phones": ["(13) 98163-2225"],
+					"website": null,
+					"started_activity_in": "2025-03-22T16:31:46.913Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Cidade de São Carlos",
+						"number": "389",
+						"complement": null,
+						"district": "Balneario Santa Eugenia, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1173134,
+						"longitude": -46.669315499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.42,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 317.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.8,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 22.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 152.6,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 96.47,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 167.45,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 197.54,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 110.43,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 257.53,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-20T07:15:34.384Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.14367,
+								"longitude": -46.739304,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788267633898
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "West Sussex",
+							"streetNumber": "7803",
+							"street": "N Lincoln Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02494549",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Grand Avenue, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Madeira",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Billie Shields",
+			"display_name": "Billie",
+			"phone": "(39) 93068-1820",
+			"email": "billie-shields.5.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "98963-898",
+				"street": "Lancaster Road",
+				"number": "861",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.050985,
+				"longitude": -46.617881
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJjUGtgNEpzpQR8BGTpciExYU",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Maria Da Sucata",
+					"business_name": "Maria Da Sucata",
+					"identity": "41275092284",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "maria.da.sucata@ill-in-joke.org",
+					"phones": ["(25) 96608-8697"],
+					"website": null,
+					"started_activity_in": "2017-03-21T10:31:37.930Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Loty",
+						"number": "Mongaguá",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.140588700000002,
+						"longitude": -46.7140433
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 305.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 832.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 417.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.06,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 751.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 705.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 76.49,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 148.96,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJTTZFdsopzpQRh9uLNd813X4",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cata Tudo Reciclagem",
+					"business_name": "Cata Tudo Reciclagem",
+					"identity": "83848362000164",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cata.tudo.reciclagem@grumpy-synergy.com",
+					"phones": ["(13) 97403-9245"],
+					"website": null,
+					"started_activity_in": "2017-02-05T21:28:08.926Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "R. Pedro Batista Teixeira",
+						"number": "S/N",
+						"complement": null,
+						"district": "Balneario Regina Maria, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1214673,
+						"longitude": -46.6938957
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.49,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 360.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.42,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 946.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 255.02,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 174.19,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 291.76,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-24T06:07:03.168Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.100975,
+								"longitude": -46.699331,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311817630
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Derbyshire",
+							"streetNumber": "9663",
+							"street": "Addie Courts",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15047433",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Julius Lake, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-22T22:48:43.875Z",
+					"observations": "Cuius aperiam suppono pel cervus assentator bellicus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.069021,
+								"longitude": -46.629371,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788282499741
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Pike County",
+							"streetNumber": "5488",
+							"street": "Labadie Curve",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19515059",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Doyle Freeway, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Resíduos Orgânicos",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-20T18:24:08.232Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.132725,
+								"longitude": -46.69654,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788273925837
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Lawrence County",
+							"streetNumber": "1545",
+							"street": "Crescent Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75870759",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Okuneva Cape, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Madeira",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melba-bins.13.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Murl Schinner",
+			"display_name": "Murl",
+			"phone": "(43) 95361-2681",
+			"email": "murl-schinner.6.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "56143-037",
+				"street": "Lang Corner",
+				"number": "4747",
+				"complement": null,
+				"district": "Henry County",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.051779,
+				"longitude": -46.658974
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJh00m-GoozpQRbbFLkvdArXE",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Do André",
+					"business_name": "Ferro Velho Do André",
+					"identity": "92694057454",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.andre@simple-spring.biz",
+					"phones": ["(05) 91436-2958"],
+					"website": null,
+					"started_activity_in": "2021-11-01T10:39:06.348Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Balneario Jussara",
+						"number": "Mongaguá",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1175367,
+						"longitude": -46.6880302
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.67,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 437
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.91,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 149.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 199.32,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 278.58,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 176.96,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 108.42,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJoWZWeoknzpQRi6uIyvbXbvA",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ong Coletivo Reciclamar",
+					"business_name": "Ong Coletivo Reciclamar",
+					"identity": "22449510000183",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "ong.coletivo.reciclamar@needy-godparent.org",
+					"phones": ["(03) 90840-0316"],
+					"website": null,
+					"started_activity_in": "2019-11-24T15:00:43.610Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Dr. Luís Pereira Barreto",
+						"number": "136",
+						"complement": null,
+						"district": "Vila Vera Cruz, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1044533,
+						"longitude": -46.6395755
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 866.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.88,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 722.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 70.59,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 83.51,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 260.74,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 232.33,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 174.09,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 124.94,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-15T17:36:56.532Z",
+					"observations": "Curso aperiam comprehendo totidem.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.073408,
+								"longitude": -46.604771,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788239480254
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Logan County",
+							"streetNumber": "794",
+							"street": "Bruen Fall",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66137828",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bechtelar Courts, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-11T11:56:20.479Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.130077,
+								"longitude": -46.628138,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788263786343
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Adams County",
+							"streetNumber": "607",
+							"street": "Dwight Freeway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98893070",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mills Oval, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Veículos em Fim de Vida",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "madelyn-ebert.0.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"description": "Ademptio statim nemo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"description": "Suspendo beneficium clarus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-15T10:25:50.495Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.051533,
+								"longitude": -46.63494,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788291495747
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Tayside",
+							"streetNumber": "47313",
+							"street": "Gerhold Groves",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93001165",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schneider Common, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ludwig-dooley.3.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "madelyn-ebert.0.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Afton Becker",
+			"display_name": "Afton",
+			"phone": "(78) 91262-6820",
+			"email": "afton-becker.7.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "72136-336",
+				"street": "Rutherford Creek",
+				"number": "133",
+				"complement": null,
+				"district": "Dyfed",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.085417,
+				"longitude": -46.680473
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJERlvgNEpzpQRvGnzVclu9S0",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho",
+					"business_name": "Ferro Velho",
+					"identity": "99205601624",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho@sarcastic-contractor.com",
+					"phones": ["(93) 95538-2856"],
+					"website": null,
+					"started_activity_in": "2025-07-01T10:38:05.712Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Loty",
+						"number": "Itanhaém",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1407844,
+						"longitude": -46.7140603
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.71,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 395
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.82,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 707
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.69,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 682.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.36,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 411.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 262.81,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 265.59,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 222.46,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJA119918pzpQRxKz6lcMBNkw",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Sucatao",
+					"business_name": "Ferro Velho Sucatao",
+					"identity": "99919458147",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.sucatao@celebrated-mortise.info",
+					"phones": ["(13) 99737-1595"],
+					"website": null,
+					"started_activity_in": "2018-10-13T02:44:56.629Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Monteiro Lobato",
+						"number": "11.200",
+						"complement": null,
+						"district": "Itaguai, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.131812099999998,
+						"longitude": -46.6968904
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.64,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 256.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 143.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.63,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 997.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 269.11,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 75.52,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-06T00:36:02.103Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.052596,
+								"longitude": -46.700348,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275040246
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Shropshire",
+							"streetNumber": "812",
+							"street": "Columbus Falls",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61159753",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bridge Street, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-02T10:30:16.185Z",
+					"observations": "Denuo aggredior atque volva reiciendis pecus ambitus repudiandae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.054448,
+								"longitude": -46.634298,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293703234
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Humberside",
+							"streetNumber": "3970",
+							"street": "Lelah Oval",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21395079",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Pam Bridge, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Veículos em Fim de Vida",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-dooley.3.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Frankie Macejkovic",
+			"display_name": "Frankie",
+			"phone": "(25) 93086-7274",
+			"email": "frankie-macejkovic.8.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "15600-216",
+				"street": "Meadow Lane",
+				"number": "69554",
+				"complement": null,
+				"district": "Rutland",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.126073,
+				"longitude": -46.622301
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJW-f0BC4ozpQRBWdpZSZje2o",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "COMÉRCIO DE MATERIAIS Recicláveis",
+					"business_name": "COMÉRCIO DE MATERIAIS Recicláveis",
+					"identity": "77079745000112",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.materiais.reciclaveis@responsible-pneumonia.biz",
+					"phones": ["(63) 93237-4623"],
+					"website": null,
+					"started_activity_in": "2024-04-20T12:47:15.717Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Av. Monteiro Lobato",
+						"number": "11800",
+						"complement": null,
+						"district": "Balneario Patrimonio das Américas, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.135302700000004,
+						"longitude": -46.703880999999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.63,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 588.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.48,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 111.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 739.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 221.19,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 261.5,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 188.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJDSKJthUpzpQRLgwkqHLHQN8",
+						"rating": 1,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "FERRO VELHO M&N",
+					"business_name": "FERRO VELHO M&N",
+					"identity": "79630034921",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.m.n@mediocre-advertisement.net",
+					"phones": ["(13) 98133-2558"],
+					"website": null,
+					"started_activity_in": "2022-07-24T21:22:12.783Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Rua Antonio Huberto tortora",
+						"number": "S/N",
+						"complement": null,
+						"district": "Av. Agenor de Campos, 2652",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1168263,
+						"longitude": -46.708132899999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.51,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 387
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.97,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 143.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 712.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.71,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 150.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 809.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.7,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 909.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 203.73,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 174.97,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 85.75,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 287.56,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 174.49,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-19T09:30:49.951Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.13271,
+								"longitude": -46.72924,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788257450151
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Powys",
+							"streetNumber": "4682",
+							"street": "Norfolk Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26652262",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Central Avenue, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-26T02:51:09.037Z",
+					"observations": "Tot torqueo dolore totam venustas averto synagoga illum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.136215,
+								"longitude": -46.741827,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280541310
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Scott County",
+							"streetNumber": "484",
+							"street": "Elvira Causeway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59421431",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tony Meadows, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"description": "Cultura spiritus patrocinor nobis voluptatibus crepusculum.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"description": "Turba abscido adimpleo adversus earum censura cunabula video thema.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-25T09:02:00.844Z",
+					"observations": "Ascisco absconditus adflicto tamdiu summisse spoliatio vacuus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.073373,
+								"longitude": -46.631602,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315070176
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Franklin County",
+							"streetNumber": "858",
+							"street": "Labadie Crescent",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62176163",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Victoria Street, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "madelyn-ebert.0.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "frankie-macejkovic.8.mongagua-sp@oikos.seed",
+							"description": "Vomica maxime ulciscor stultus maiores triumphus via.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"description": "Vereor attonbitus commodo ciminatio attonbitus audacia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-12T11:06:52.390Z",
+					"observations": "Baiulus eos ea theatrum vomica pecto cetera solutio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.097383,
+								"longitude": -46.739537,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303762508
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Union County",
+							"streetNumber": "1334",
+							"street": "West Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94206597",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lindgren Rapid, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melba-bins.13.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-dooley.3.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caterina-mckenzie.1.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"description": "Surgo tabesco quae quo cervus desino demergo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"description": "Cursus magni beatae balbus abstergo depromo turpis traho virgo celo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Bo Powlowski",
+			"display_name": "Bo",
+			"phone": "(83) 95644-5856",
+			"email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "01179-717",
+				"street": "Heath Road",
+				"number": "113",
+				"complement": null,
+				"district": "Cambridgeshire",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.05966,
+				"longitude": -46.699832
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJrdZJKrMpzpQRyreaQCXNv70",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Marcelo Oliveira dos Santos",
+					"business_name": "Marcelo Oliveira dos Santos",
+					"identity": "93241760000171",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "marcelo.oliveira.dos.santos@unripe-sediment.name",
+					"phones": ["(13) 98133-2558"],
+					"website": null,
+					"started_activity_in": "2021-03-18T19:08:24.881Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Antonio Huberto tortora",
+						"number": "S/N",
+						"complement": null,
+						"district": "Av. Agenor de Campos, 2652",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.115980000000004,
+						"longitude": -46.7081932
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.6,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 739.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.62,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 257.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.59,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 600.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 145.67,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 214.97,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 54.47,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 261.44,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 102.87,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJbUTDRM8pzpQRM1xSGVKJAHE",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Marion Metais Ltda",
+					"business_name": "Marion Metais Ltda",
+					"identity": "53287782000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "marion.metais.ltda@overdue-lyre.info",
+					"phones": ["(11) 95842-9400"],
+					"website": null,
+					"started_activity_in": "2016-09-21T05:55:54.855Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "R. São Sebastião",
+						"number": "1417",
+						"complement": null,
+						"district": "Balneario Litoral Paulista, Mongaguá",
+						"city": "Mongaguá",
+						"city_ibge_id": 3531100,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1209213,
+						"longitude": -46.693885900000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.09,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 280.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 333.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 368.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.48,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 404.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.49,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 835.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.72,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 421.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 261.53,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 176.8,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 115.79,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 263.61,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Clinton Rolfson",
+			"display_name": "Clinton",
+			"phone": "(37) 95444-0227",
+			"email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "48039-806",
+				"street": "Laburnum Grove",
+				"number": "6637",
+				"complement": null,
+				"district": "Lancashire",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.110831,
+				"longitude": -46.666788
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Clay Gottlieb",
+			"display_name": "Clay",
+			"phone": "(90) 96404-3044",
+			"email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "66554-704",
+				"street": "Mayert-Hudson Squares",
+				"number": "5914",
+				"complement": null,
+				"district": "Grant County",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.056427,
+				"longitude": -46.734735
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-18T11:33:01.764Z",
+					"observations": "Ter uter substantia allatus ater non incidunt coerceo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.12826,
+								"longitude": -46.666708,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278438072
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Jackson County",
+							"streetNumber": "611",
+							"street": "Kunze Square",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45954628",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Justina Wall, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Papel / Papelão"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "madelyn-ebert.0.mongagua-sp@oikos.seed",
+							"description": "Crux amitto subseco desipio amplus advenio vorax delectatio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Luther Rempel-Heaney",
+			"display_name": "Luther",
+			"phone": "(66) 97420-4120",
+			"email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "35344-842",
+				"street": "Cherry Tree Close",
+				"number": "27680",
+				"complement": null,
+				"district": "Henry County",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.062308,
+				"longitude": -46.673843
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-27T14:16:57.756Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.074141,
+								"longitude": -46.72925,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788244462795
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "West Midlands",
+							"streetNumber": "371",
+							"street": "Leffler Plain",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52650649",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Liam Junctions, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "melba-bins.13.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Melba Bins",
+			"display_name": "Melba",
+			"phone": "(31) 91808-8499",
+			"email": "melba-bins.13.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "23666-267",
+				"street": "Swaniawski-Harvey Walk",
+				"number": "8228",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.061238,
+				"longitude": -46.617587
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-25T18:53:26.160Z",
+					"observations": "Votum defero suspendo utroque ustilo appello aptus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.041545,
+								"longitude": -46.680375,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298130334
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "West Yorkshire",
+							"streetNumber": "86897",
+							"street": "Hane Hills",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89579601",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Woodlands Close, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Papel / Papelão",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "murl-schinner.6.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-29T12:09:04.009Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.137576,
+								"longitude": -46.692289,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307091964
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Lake County",
+							"streetNumber": "16692",
+							"street": "Torphy Avenue",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87925829",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ramiro Throughway, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-02T15:27:44.511Z",
+					"observations": "Advenio laboriosam acquiro denique varietas temperantia currus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.039829,
+								"longitude": -46.703308,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788270621733
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "County Armagh",
+							"streetNumber": "257",
+							"street": "S Market Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67544541",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Manor Road, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frankie-macejkovic.8.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Renee Hirthe",
+			"display_name": "Renee",
+			"phone": "(64) 96282-4991",
+			"email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "92174-386",
+				"street": "Nikki Corners",
+				"number": "5385",
+				"complement": null,
+				"district": "Devon",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.047628,
+				"longitude": -46.696682
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Dulce Beatty",
+			"display_name": "Dulce",
+			"phone": "(49) 94807-0371",
+			"email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "64062-470",
+				"street": "Marcos Lake",
+				"number": "417",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.077678,
+				"longitude": -46.656176
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-31T18:43:39.885Z",
+					"observations": "Currus torqueo vulgivagus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.077876,
+								"longitude": -46.675399,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788256107902
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Avon",
+							"streetNumber": "6820",
+							"street": "Vena Forges",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "69685959",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aaliyah Run, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "frankie-macejkovic.8.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clay-gottlieb.11.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "renee-hirthe.14.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dulce-beatty.15.mongagua-sp@oikos.seed",
+							"description": "Omnis sunt soluta pauper spiculum cruentus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "bo-powlowski.9.mongagua-sp@oikos.seed",
+							"description": "Sequi cernuus qui colligo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Charity McGlynn",
+			"display_name": "Charity",
+			"phone": "(04) 92534-4554",
+			"email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "52164-839",
+				"street": "Strosin Flats",
+				"number": "340",
+				"complement": null,
+				"district": "Devon",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.042055,
+				"longitude": -46.624949
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-22T06:28:43.130Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.050383,
+								"longitude": -46.615204,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788255811630
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Montgomery County",
+							"streetNumber": "286",
+							"street": "Lafayette Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50896848",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Park Place, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "wade-erdman.2.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-rempel-heaney.12.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "billie-shields.5.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donald-hagenes.4.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clinton-rolfson.10.mongagua-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "afton-becker.7.mongagua-sp@oikos.seed",
+							"description": "Adsuesco textus validus verecundia blanditiis veritatis ulciscor canto atrox conicio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "charity-mcglynn.16.mongagua-sp@oikos.seed",
+							"description": "Et ab vitium teres carbo stillicidium soleo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-27T22:20:02.288Z",
+					"observations": "Excepturi maiores tamdiu.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.044868,
+								"longitude": -46.614123,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303586378
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "East Sussex",
+							"streetNumber": "316",
+							"street": "Bluebell Close",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93923270",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Cedar Street, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-02T17:22:06.957Z",
+					"observations": "Textor sui clibanus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.058109,
+								"longitude": -46.618433,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288749744
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Washington County",
+							"streetNumber": "979",
+							"street": "Streich Ways",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15084397",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jaleel Hill, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-30T02:47:36.923Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.10674,
+								"longitude": -46.714251,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309574203
+						},
+						"addresses": {
+							"city": "Mongaguá",
+							"district": "Douglas County",
+							"streetNumber": "37552",
+							"street": "Prosacco Parks",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74076573",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Barton Ports, Mongaguá - SP"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Veículos em Fim de Vida",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Roland Hirthe",
+			"display_name": "Roland",
+			"phone": "(21) 96367-8971",
+			"email": "roland-hirthe.17.mongagua-sp@oikos.seed",
+			"address": {
+				"zip_code": "09677-058",
+				"street": "Willow Street",
+				"number": "21619",
+				"complement": null,
+				"district": "Somerset",
+				"city": "Mongaguá",
+				"city_ibge_id": 3531100,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.080327,
+				"longitude": -46.659531
+			},
+			"companies": [],
+			"complaints": []
+		}
+	]
+}
