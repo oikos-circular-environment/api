@@ -1,22 +1,30 @@
 import { prisma } from "@/lib/prisma.js";
 import type {
-	CreateSupportRequest,
+	CreateSupport,
+	ModerationSeverity,
 	ModerationStatus,
-	SaveSupportRequestAttachment,
-	SupportRequest,
+	SaveSupportAttachment,
+	Support,
+	SupportEnvironment,
+	SupportType,
 } from "@/modules/moderation/dtos/moderation-dto.js";
-import type { SupportRequestsRepository } from "@/modules/moderation/repositories/support-requests-repository.js";
+import type { SupportsRepository } from "@/modules/moderation/repositories/supports-repository.js";
 
-const supportRequestInclude = {
+const supportInclude = {
 	attachments: true,
 } as const;
 
-type PrismaSupportRequestPayload = {
+type PrismaSupportPayload = {
 	id: string;
 	title: string;
 	description: string;
+	type: SupportType;
+	environment: unknown;
+	reporter_email: string | null;
 	status: ModerationStatus;
+	severity: ModerationSeverity | null;
 	created_at: Date;
+	updated_at: Date;
 	attachments: Array<{
 		id: string;
 		url: string;
@@ -26,14 +34,16 @@ type PrismaSupportRequestPayload = {
 	}>;
 };
 
-function mapSupportRequest(
-	payload: PrismaSupportRequestPayload,
-): SupportRequest {
+function mapSupport(payload: PrismaSupportPayload): Support {
 	return {
 		id: payload.id,
 		title: payload.title,
 		description: payload.description,
+		type: payload.type,
+		environment: (payload.environment as SupportEnvironment | null) ?? null,
+		reporter_email: payload.reporter_email,
 		status: payload.status,
+		severity: payload.severity,
 		attachments: payload.attachments.map((a) => ({
 			id: a.id,
 			url: a.url,
@@ -42,56 +52,58 @@ function mapSupportRequest(
 			created_at: a.created_at,
 		})),
 		created_at: payload.created_at,
+		updated_at: payload.updated_at,
 	};
 }
 
-export class PrismaSupportRequestsRepository
-	implements SupportRequestsRepository
-{
-	async create(data: CreateSupportRequest): Promise<SupportRequest> {
-		const supportRequest = await prisma.supportRequest.create({
+export class PrismaSupportsRepository implements SupportsRepository {
+	async create(data: CreateSupport): Promise<Support> {
+		const support = await prisma.support.create({
 			data: {
 				title: data.title,
 				description: data.description,
+				type: data.type,
+				environment: data.environment ?? undefined,
+				reporter_email: data.reporter_email,
 				user_id: data.user_id ?? null,
 			},
-			include: supportRequestInclude,
+			include: supportInclude,
 		});
 
-		return mapSupportRequest(supportRequest as PrismaSupportRequestPayload);
+		return mapSupport(support as PrismaSupportPayload);
 	}
 
-	async findById(supportRequestId: string): Promise<SupportRequest | null> {
-		const supportRequest = await prisma.supportRequest.findUnique({
-			where: { id: supportRequestId },
-			include: supportRequestInclude,
+	async findById(supportId: string): Promise<Support | null> {
+		const support = await prisma.support.findUnique({
+			where: { id: supportId },
+			include: supportInclude,
 		});
 
-		if (!supportRequest) return null;
+		if (!support) return null;
 
-		return mapSupportRequest(supportRequest as PrismaSupportRequestPayload);
+		return mapSupport(support as PrismaSupportPayload);
 	}
 
 	async attach(
-		supportRequestId: string,
-		data: SaveSupportRequestAttachment,
-	): Promise<SupportRequest | null> {
-		const supportRequest = await prisma.supportRequest.findUnique({
-			where: { id: supportRequestId },
+		supportId: string,
+		data: SaveSupportAttachment,
+	): Promise<Support | null> {
+		const support = await prisma.support.findUnique({
+			where: { id: supportId },
 			select: { id: true },
 		});
 
-		if (!supportRequest) return null;
+		if (!support) return null;
 
-		await prisma.supportRequestAttachment.create({
+		await prisma.supportAttachment.create({
 			data: {
-				support_request_id: supportRequestId,
+				support_id: supportId,
 				url: data.url,
 				file_name: data.file_name,
 				path: data.path,
 			},
 		});
 
-		return this.findById(supportRequestId);
+		return this.findById(supportId);
 	}
 }

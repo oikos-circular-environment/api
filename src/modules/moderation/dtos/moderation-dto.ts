@@ -1,48 +1,73 @@
 import z from "zod";
 import { safeTextSchema } from "@/modules/common/dtos/safe-text-schema.js";
+import type {
+	SupportEnvironment,
+	SupportType,
+} from "../entities/support-entity.js";
+import {
+	moderationSeveritySchema,
+	moderationStatusSchema,
+	supportAttachmentSchema,
+	supportEnvironmentSchema,
+	supportLastErrorSchema,
+	supportSchema,
+	supportTypeSchema,
+} from "../entities/support-entity.js";
 
 export type {
+	ModerationSeverity,
 	ModerationStatus,
-	SupportRequest,
-	SupportRequestAttachment,
-} from "../entities/support-request-entity.js";
+	Support,
+	SupportAttachment,
+	SupportEnvironment,
+	SupportLastError,
+	SupportType,
+} from "../entities/support-entity.js";
 export {
+	moderationSeveritySchema,
 	moderationStatusSchema,
-	supportRequestAttachmentSchema,
-	supportRequestSchema,
-} from "../entities/support-request-entity.js";
+	supportAttachmentSchema,
+	supportEnvironmentSchema,
+	supportLastErrorSchema,
+	supportSchema,
+	supportTypeSchema,
+};
 
-export const MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH = 2500;
+export const MAX_SUPPORT_DESCRIPTION_LENGTH = 2500;
 
-export const MAX_SUPPORT_REQUEST_TITLE_LENGTH = 200;
+export const MAX_SUPPORT_TITLE_LENGTH = 200;
 
-export const createSupportRequestBodySchema = z.object({
+export const createSupportBodySchema = z.object({
 	title: safeTextSchema({
 		min: 1,
-		max: MAX_SUPPORT_REQUEST_TITLE_LENGTH,
+		max: MAX_SUPPORT_TITLE_LENGTH,
 		minMessage: "title is required",
-		maxMessage: `title must be at most ${MAX_SUPPORT_REQUEST_TITLE_LENGTH} characters`,
+		maxMessage: `title must be at most ${MAX_SUPPORT_TITLE_LENGTH} characters`,
 	}),
 	description: safeTextSchema({
 		min: 1,
-		max: MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH,
+		max: MAX_SUPPORT_DESCRIPTION_LENGTH,
 		minMessage: "description is required",
-		maxMessage: `description must be at most ${MAX_SUPPORT_REQUEST_DESCRIPTION_LENGTH} characters`,
+		maxMessage: `description must be at most ${MAX_SUPPORT_DESCRIPTION_LENGTH} characters`,
 	}),
+	type: supportTypeSchema.default("SUPPORT"),
+	environment: supportEnvironmentSchema.optional(),
+	reporter_email: z.string().email().optional(),
 });
-export type CreateSupportRequestBody = z.infer<
-	typeof createSupportRequestBodySchema
->;
+export type CreateSupportBody = z.infer<typeof createSupportBodySchema>;
 
-export type CreateSupportRequest = CreateSupportRequestBody & {
+export type CreateSupport = {
+	title: string;
+	description: string;
+	type: SupportType;
+	environment?: SupportEnvironment | null;
+	reporter_email: string;
 	user_id?: string | null;
 };
 
-export const saveSupportRequestAttachmentSchema = z.object({
+export const saveSupportAttachmentSchema = z.object({
 	url: z.string().min(1, "url is required"),
 	file_name: z.string().min(1, "file_name is required"),
 	path: z.string().min(1, "path is required"),
 });
-export type SaveSupportRequestAttachment = z.infer<
-	typeof saveSupportRequestAttachmentSchema
->;
+export type SaveSupportAttachment = z.infer<typeof saveSupportAttachmentSchema>;

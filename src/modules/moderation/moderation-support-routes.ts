@@ -3,14 +3,16 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { createSupportRequestBodySchema } from "./dtos/moderation-dto.js";
-import { supportRequestSchema } from "./entities/support-request-entity.js";
-import { PrismaSupportRequestsRepository } from "./repositories/prisma/support-requests-repository-prisma.js";
 import {
-	CreateSupportRequestUseCase,
-	MAX_SUPPORT_REQUEST_FILES,
-	SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES,
-} from "./use-cases/create-support-request-use-case.js";
+	createSupportBodySchema,
+	supportSchema,
+} from "./dtos/moderation-dto.js";
+import { PrismaSupportsRepository } from "./repositories/prisma/supports-repository-prisma.js";
+import {
+	CreateSupportUseCase,
+	MAX_SUPPORT_FILES,
+	SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES,
+} from "./use-cases/create-support-use-case.js";
 
 const MODERATION_TAG = "Moderation";
 const MODERATION_SUPPORT_TAG = "Moderation / Support";
@@ -19,11 +21,11 @@ export async function moderationSupportRoutes(
 	app: FastifyInstance,
 ): Promise<void> {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
-	const supportRequestsRepository = new PrismaSupportRequestsRepository();
+	const supportsRepository = new PrismaSupportsRepository();
 	const storageProvider = makeStorageProvider();
 
-	const createSupportRequestUseCase = new CreateSupportRequestUseCase(
-		supportRequestsRepository,
+	const createSupportUseCase = new CreateSupportUseCase(
+		supportsRepository,
 		storageProvider,
 	);
 
@@ -35,10 +37,10 @@ export async function moderationSupportRoutes(
 				tags: [MODERATION_TAG, MODERATION_SUPPORT_TAG],
 				summary: "Submit a support request",
 				description:
-					"Receives a support request submission from the Suporte form (title, description and up to 5 images, 10MB each). Does not require authentication.",
+					"Receives a support submission from the Suporte form (title, description, type, environment and up to 5 images, 10MB each). Does not require authentication.",
 				consumes: ["multipart/form-data"],
 				response: {
-					200: z.object({ supportRequest: supportRequestSchema }),
+					200: z.object({ support: supportSchema }),
 					400: appErrorSchema,
 				},
 			},
@@ -54,8 +56,8 @@ export async function moderationSupportRoutes(
 			try {
 				const parts = request.parts({
 					limits: {
-						files: MAX_SUPPORT_REQUEST_FILES,
-						fileSize: SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES,
+						files: MAX_SUPPORT_FILES,
+						fileSize: SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES,
 						fields: 10,
 					},
 				});
@@ -77,16 +79,16 @@ export async function moderationSupportRoutes(
 
 				if (error instanceof FilesLimitError) {
 					throw new AppError(
-						`Support request accepts at most ${MAX_SUPPORT_REQUEST_FILES} images`,
-						"SUPPORT_REQUEST_TOO_MANY_FILES",
+						`Support accepts at most ${MAX_SUPPORT_FILES} images`,
+						"SUPPORT_TOO_MANY_FILES",
 						400,
 					);
 				}
 
 				if (error instanceof RequestFileTooLargeError) {
 					throw new AppError(
-						"Support request attachment exceeds the maximum size of 10MB",
-						"SUPPORT_REQUEST_ATTACHMENT_TOO_LARGE",
+						"Support attachment exceeds the maximum size of 10MB",
+						"SUPPORT_ATTACHMENT_TOO_LARGE",
 						400,
 					);
 				}
@@ -94,21 +96,46 @@ export async function moderationSupportRoutes(
 				throw error;
 			}
 
-			const parsed = createSupportRequestBodySchema.safeParse(fields);
+			let environment: unknown;
+			if (fields.environment !== undefined) {
+				try {
+					environment = JSON.parse(fields.environment);
+				} catch {
+					throw new AppError(
+						"environment must be valid JSON",
+						"SUPPORT_INVALID_BODY",
+						400,
+					);
+				}
+			}
+
+			const parsed = createSupportBodySchema.safeParse({
+				...fields,
+				environment,
+			});
 			if (!parsed.success) {
 				throw new AppError(
 					parsed.error.issues[0]?.message ?? "Invalid payload",
-					"SUPPORT_REQUEST_INVALID_BODY",
+					"SUPPORT_INVALID_BODY",
 					400,
 				);
 			}
 
-			const supportRequest = await createSupportRequestUseCase.execute({
+			if (!parsed.data.reporter_email) {
+				throw new AppError(
+					"reporter_email is required",
+					"SUPPORT_EMAIL_REQUIRED",
+					400,
+				);
+			}
+
+			const support = await createSupportUseCase.execute({
 				...parsed.data,
+				reporter_email: parsed.data.reporter_email,
 				files,
 			});
 
-			return reply.send({ supportRequest });
+			return reply.send({ support });
 		},
 	);
 }

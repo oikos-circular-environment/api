@@ -2,23 +2,23 @@ import { fileTypeFromBuffer } from "file-type";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
 import type {
-	CreateSupportRequestBody,
-	SupportRequest,
+	CreateSupport,
+	Support,
 } from "@/modules/moderation/dtos/moderation-dto.js";
-import type { SupportRequestsRepository } from "@/modules/moderation/repositories/support-requests-repository.js";
+import type { SupportsRepository } from "@/modules/moderation/repositories/supports-repository.js";
 
-export const SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
-export const MAX_SUPPORT_REQUEST_FILES = 5;
+export const SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES = 10 * 1024 * 1024; // 10MB
+export const MAX_SUPPORT_FILES = 5;
 
-const SUPPORT_REQUEST_ATTACHMENT_MIME_TYPES = {
+const SUPPORT_ATTACHMENT_MIME_TYPES = {
 	"image/jpeg": "jpeg",
 	"image/png": "png",
 } as const;
 
-type SupportedSupportRequestAttachmentMimeType =
-	keyof typeof SUPPORT_REQUEST_ATTACHMENT_MIME_TYPES;
+type SupportedSupportAttachmentMimeType =
+	keyof typeof SUPPORT_ATTACHMENT_MIME_TYPES;
 
-type CreateSupportRequestUseCaseRequest = CreateSupportRequestBody & {
+type CreateSupportUseCaseRequest = CreateSupport & {
 	userId?: string | null;
 	files: Array<{
 		fileName: string;
@@ -27,9 +27,9 @@ type CreateSupportRequestUseCaseRequest = CreateSupportRequestBody & {
 	}>;
 };
 
-export class CreateSupportRequestUseCase {
+export class CreateSupportUseCase {
 	constructor(
-		private readonly supportRequestsRepository: SupportRequestsRepository,
+		private readonly supportsRepository: SupportsRepository,
 		private readonly storageProvider: StorageProvider,
 	) {}
 
@@ -37,59 +37,62 @@ export class CreateSupportRequestUseCase {
 		userId,
 		title,
 		description,
+		type,
+		environment,
+		reporter_email,
 		files,
-	}: CreateSupportRequestUseCaseRequest): Promise<SupportRequest> {
-		if (files.length > MAX_SUPPORT_REQUEST_FILES) {
+	}: CreateSupportUseCaseRequest): Promise<Support> {
+		if (files.length > MAX_SUPPORT_FILES) {
 			throw new AppError(
-				`Support request accepts at most ${MAX_SUPPORT_REQUEST_FILES} images`,
-				"SUPPORT_REQUEST_TOO_MANY_FILES",
+				`Support accepts at most ${MAX_SUPPORT_FILES} images`,
+				"SUPPORT_TOO_MANY_FILES",
 				400,
 			);
 		}
 
 		for (const file of files) {
-			if (!(file.mimeType in SUPPORT_REQUEST_ATTACHMENT_MIME_TYPES)) {
+			if (!(file.mimeType in SUPPORT_ATTACHMENT_MIME_TYPES)) {
 				throw new AppError(
-					"Support request attachment type is invalid. Allowed types: jpeg, png",
-					"SUPPORT_REQUEST_ATTACHMENT_TYPE_INVALID",
+					"Support attachment type is invalid. Allowed types: jpeg, png",
+					"SUPPORT_ATTACHMENT_TYPE_INVALID",
 					400,
 				);
 			}
 
-			if (file.content.length > SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES) {
+			if (file.content.length > SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES) {
 				throw new AppError(
-					"Support request attachment exceeds the maximum size of 10MB",
-					"SUPPORT_REQUEST_ATTACHMENT_TOO_LARGE",
+					"Support attachment exceeds the maximum size of 10MB",
+					"SUPPORT_ATTACHMENT_TOO_LARGE",
 					400,
 				);
 			}
 
 			const detected = await fileTypeFromBuffer(file.content);
-			if (
-				!detected ||
-				!(detected.mime in SUPPORT_REQUEST_ATTACHMENT_MIME_TYPES)
-			) {
+			if (!detected || !(detected.mime in SUPPORT_ATTACHMENT_MIME_TYPES)) {
 				throw new AppError(
-					"Support request attachment content does not match a valid image",
-					"SUPPORT_REQUEST_ATTACHMENT_CONTENT_INVALID",
+					"Support attachment content does not match a valid image",
+					"SUPPORT_ATTACHMENT_CONTENT_INVALID",
 					400,
 				);
 			}
 		}
 
-		let supportRequest = await this.supportRequestsRepository.create({
+		let support = await this.supportsRepository.create({
 			title,
 			description,
+			type,
+			environment: environment ?? null,
+			reporter_email,
 			user_id: userId ?? null,
 		});
 
 		for (const [index, file] of files.entries()) {
 			const ext =
-				SUPPORT_REQUEST_ATTACHMENT_MIME_TYPES[
-					file.mimeType as SupportedSupportRequestAttachmentMimeType
+				SUPPORT_ATTACHMENT_MIME_TYPES[
+					file.mimeType as SupportedSupportAttachmentMimeType
 				];
 
-			const filePath = `moderation/support/${supportRequest.id}/${index}-${Date.now()}.${ext}`;
+			const filePath = `moderation/support/${support.id}/${index}-${Date.now()}.${ext}`;
 
 			const uploadResult = await this.storageProvider.uploadFile(
 				filePath,
@@ -98,34 +101,27 @@ export class CreateSupportRequestUseCase {
 
 			if (!uploadResult) {
 				throw new AppError(
-					"Failed to upload support request attachment",
-					"SUPPORT_REQUEST_ATTACHMENT_UPLOAD_FAILED",
+					"Failed to upload support attachment",
+					"SUPPORT_ATTACHMENT_UPLOAD_FAILED",
 					500,
 				);
 			}
 
 			const { url } = await this.storageProvider.getFileUrl(filePath);
 
-			const updated = await this.supportRequestsRepository.attach(
-				supportRequest.id,
-				{
-					url,
-					file_name: file.fileName,
-					path: filePath,
-				},
-			);
+			const updated = await this.supportsRepository.attach(support.id, {
+				url,
+				file_name: file.fileName,
+				path: filePath,
+			});
 
 			if (!updated) {
-				throw new AppError(
-					"Support request not found",
-					"SUPPORT_REQUEST_NOT_FOUND",
-					404,
-				);
+				throw new AppError("Support not found", "SUPPORT_NOT_FOUND", 404);
 			}
 
-			supportRequest = updated;
+			support = updated;
 		}
 
-		return supportRequest;
+		return support;
 	}
 }

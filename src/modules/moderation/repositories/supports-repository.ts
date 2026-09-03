@@ -1,16 +1,16 @@
 import type {
-	CreateSupportRequest,
-	SaveSupportRequestAttachment,
-	SupportRequest,
+	CreateSupport,
+	SaveSupportAttachment,
+	Support,
 } from "@/modules/moderation/dtos/moderation-dto.js";
 
-export interface SupportRequestsRepository {
-	create(data: CreateSupportRequest): Promise<SupportRequest>;
+export interface SupportsRepository {
+	create(data: CreateSupport): Promise<Support>;
 
-	findById(supportRequestId: string): Promise<SupportRequest | null>;
+	findById(supportId: string): Promise<Support | null>;
 
 	attach(
-		supportRequestId: string,
-		data: SaveSupportRequestAttachment,
-	): Promise<SupportRequest | null>;
+		supportId: string,
+		data: SaveSupportAttachment,
+	): Promise<Support | null>;
 }

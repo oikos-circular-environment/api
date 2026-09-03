@@ -22,11 +22,11 @@ model User {
   banned          Boolean   @default(false)
   ban_reason      String?
   ban_expires     DateTime?
-  password       String?
-  auth_source    String    @default("better_auth")
-  created_at     DateTime  @default(now())
-  updated_at     DateTime  @default(now()) @updatedAt
-  deleted_at     DateTime?
+  password        String?
+  auth_source     String    @default("better_auth")
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @default(now()) @updatedAt
+  deleted_at      DateTime?
   deletion_job_id String?
 
   profile          Profile?
@@ -34,7 +34,7 @@ model User {
   complaints       Complaint[]
   votes            ComplaintVote[]
   resolutions      ComplaintResolution[] @relation("ResolutionResolver")
-  support_requests SupportRequest[]
+  supports         Support[]
   refresh_tokens   RefreshToken[]
   accounts         Account[]
   sessions         Session[]
@@ -430,32 +430,37 @@ model ComplaintAttachment {
   @@map("complaint_attachments")
 }
 
-model SupportRequest {
-  id          String           @id @default(uuid())
-  title       String
-  description String
-  status      ModerationStatus @default(PENDING)
-  created_at  DateTime         @default(now())
+model Support {
+  id             String              @id @default(uuid())
+  title          String
+  description    String
+  type           SupportType         @default(SUPPORT)
+  status         ModerationStatus    @default(OPEN)
+  severity       ModerationSeverity?
+  environment    Json?
+  reporter_email String?
+  created_at     DateTime            @default(now())
+  updated_at     DateTime            @updatedAt
 
   user_id String?
   user    User?   @relation(fields: [user_id], references: [id], onDelete: SetNull)
 
-  attachments SupportRequestAttachment[]
+  attachments SupportAttachment[]
 
-  @@map("support_requests")
+  @@map("supports")
 }
 
-model SupportRequestAttachment {
+model SupportAttachment {
   id         String   @id @default(uuid())
   url        String
   file_name  String
   path       String
   created_at DateTime @default(now())
 
-  support_request_id String
-  support_request    SupportRequest @relation(fields: [support_request_id], references: [id], onDelete: Cascade)
+  support_id String
+  support    Support @relation(fields: [support_id], references: [id], onDelete: Cascade)
 
-  @@map("support_request_attachments")
+  @@map("support_attachments")
 }
 
 model ComplaintVote {
