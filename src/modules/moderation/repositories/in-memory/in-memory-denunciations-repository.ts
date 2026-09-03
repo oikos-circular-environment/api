@@ -19,6 +19,9 @@ type DenunciationRecord = {
 	reported_user_id: string | null;
 	latitude: number | null;
 	longitude: number | null;
+	moderated_by: string | null;
+	moderated_at: Date | null;
+	reason: string | null;
 	created_at: Date;
 	updated_at: Date;
 };
@@ -43,6 +46,7 @@ export class InMemoryDenunciationsRepository
 
 	async findMany(filters: {
 		status?: ModerationStatus;
+		severity?: ModerationSeverity;
 		cursor?: Date;
 		limit: number;
 	}): Promise<Denunciation[]> {
@@ -50,6 +54,10 @@ export class InMemoryDenunciationsRepository
 
 		if (filters.status) {
 			items = items.filter((item) => item.status === filters.status);
+		}
+
+		if (filters.severity) {
+			items = items.filter((item) => item.severity === filters.severity);
 		}
 
 		const { cursor } = filters;
@@ -94,6 +102,55 @@ export class InMemoryDenunciationsRepository
 		return this.mapDenunciation(denunciation);
 	}
 
+	async findByIdAndOwner(
+		id: string,
+		userId: string,
+	): Promise<Denunciation | null> {
+		const denunciation = this.denunciations.find(
+			(item) => item.id === id && item.reporter_user_id === userId,
+		);
+
+		if (!denunciation) return null;
+
+		return this.mapDenunciation(denunciation);
+	}
+
+	async findManyByOwner(
+		userId: string,
+		filters: { cursor?: Date; limit: number },
+	): Promise<Denunciation[]> {
+		let items = this.denunciations.filter(
+			(item) => item.reporter_user_id === userId,
+		);
+
+		const { cursor } = filters;
+		if (cursor) {
+			items = items.filter((item) => item.created_at < cursor);
+		}
+
+		items.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
+
+		return items
+			.slice(0, filters.limit)
+			.map((item) => this.mapDenunciation(item));
+	}
+
+	async update(
+		id: string,
+		data: { title?: string; description?: string },
+	): Promise<Denunciation | null> {
+		const denunciation = this.denunciations.find((item) => item.id === id);
+
+		if (!denunciation) return null;
+
+		if (data.title !== undefined) denunciation.title = data.title;
+		if (data.description !== undefined)
+			denunciation.description = data.description;
+		denunciation.updated_at = new Date();
+
+		return this.mapDenunciation(denunciation);
+	}
+
 	async create(data: CreateDenunciation): Promise<Denunciation> {
 		const now = new Date();
 		const denunciation: DenunciationRecord = {
@@ -107,6 +164,9 @@ export class InMemoryDenunciationsRepository
 			reported_user_id: data.reported_user_id ?? null,
 			latitude: data.latitude ?? null,
 			longitude: data.longitude ?? null,
+			moderated_by: null,
+			moderated_at: null,
+			reason: null,
 			created_at: now,
 			updated_at: now,
 		};
@@ -133,6 +193,9 @@ export class InMemoryDenunciationsRepository
 
 		denunciation.status = data.status;
 		denunciation.severity = data.severity ?? denunciation.severity;
+		denunciation.reason = data.reason ?? denunciation.reason;
+		denunciation.moderated_by = data.moderatedBy ?? denunciation.moderated_by;
+		denunciation.moderated_at = new Date();
 		denunciation.updated_at = new Date();
 
 		return this.mapDenunciation(denunciation);
@@ -198,6 +261,9 @@ export class InMemoryDenunciationsRepository
 					type: a.type,
 					created_at: a.created_at,
 				})),
+			moderated_by: denunciation.moderated_by,
+			moderated_at: denunciation.moderated_at,
+			reason: denunciation.reason,
 			created_at: denunciation.created_at,
 			updated_at: denunciation.updated_at,
 		};

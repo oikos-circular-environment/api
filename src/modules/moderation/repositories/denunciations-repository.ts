@@ -9,6 +9,7 @@ import type {
 export interface DenunciationsRepository {
 	findMany(filters: {
 		status?: ModerationStatus;
+		severity?: ModerationSeverity;
 		cursor?: Date;
 		limit: number;
 	}): Promise<Denunciation[]>;
@@ -19,6 +20,18 @@ export interface DenunciationsRepository {
 	): Promise<Denunciation[]>;
 
 	findById(denunciationId: string): Promise<Denunciation | null>;
+
+	findByIdAndOwner(id: string, userId: string): Promise<Denunciation | null>;
+
+	findManyByOwner(
+		userId: string,
+		filters: { cursor?: Date; limit: number },
+	): Promise<Denunciation[]>;
+
+	update(
+		id: string,
+		data: { title?: string; description?: string },
+	): Promise<Denunciation | null>;
 
 	create(data: CreateDenunciation): Promise<Denunciation>;
 

@@ -68,3 +68,39 @@ export const saveDenunciationAttachmentSchema = z.object({
 export type SaveDenunciationAttachment = z.infer<
 	typeof saveDenunciationAttachmentSchema
 >;
+
+export const getDenunciationsQuerySchema = z.object({
+	status: moderationStatusSchema.optional(),
+	severity: moderationSeveritySchema.optional(),
+	cursor: z.coerce.date().optional(),
+	limit: z.coerce.number().int().min(1).max(100).default(20),
+});
+
+export const moderateDenunciationBodySchema = z.object({
+	status: z.enum(["CLOSED", "RESOLVED"]),
+	severity: moderationSeveritySchema.optional(),
+	reason: z.string().max(2000).optional(),
+});
+
+export const updateOwnDenunciationBodySchema = z.object({
+	title: safeTextSchema({
+		min: 1,
+		max: MAX_DENUNCIATION_TITLE_LENGTH,
+		minMessage: "title is required",
+		maxMessage: `title must be at most ${MAX_DENUNCIATION_TITLE_LENGTH} characters`,
+	}).optional(),
+	description: safeTextSchema({
+		min: 1,
+		max: MAX_DENUNCIATION_DESCRIPTION_LENGTH,
+		minMessage: "description is required",
+		maxMessage: `description must be at most ${MAX_DENUNCIATION_DESCRIPTION_LENGTH} characters`,
+	}).optional(),
+});
+export type UpdateOwnDenunciationBody = z.infer<
+	typeof updateOwnDenunciationBodySchema
+>;
+
+export const paginatedDenunciationsSchema = z.object({
+	denunciations: z.array(denunciationSchema),
+	nextCursor: z.string().datetime().nullable(),
+});

@@ -24,6 +24,9 @@ type PrismaDenunciationPayload = {
 	reported_user_id: string | null;
 	latitude: number | null;
 	longitude: number | null;
+	moderated_by: string | null;
+	moderated_at: Date | null;
+	reason: string | null;
 	created_at: Date;
 	updated_at: Date;
 	attachments: Array<{
@@ -60,6 +63,9 @@ function mapDenunciation(payload: PrismaDenunciationPayload): Denunciation {
 			type: a.type,
 			created_at: a.created_at,
 		})),
+		moderated_by: payload.moderated_by,
+		moderated_at: payload.moderated_at,
+		reason: payload.reason,
 		created_at: payload.created_at,
 		updated_at: payload.updated_at,
 	};
@@ -68,12 +74,14 @@ function mapDenunciation(payload: PrismaDenunciationPayload): Denunciation {
 export class PrismaDenunciationsRepository implements DenunciationsRepository {
 	async findMany(filters: {
 		status?: ModerationStatus;
+		severity?: ModerationSeverity;
 		cursor?: Date;
 		limit: number;
 	}): Promise<Denunciation[]> {
 		const denunciations = await prisma.denunciation.findMany({
 			where: {
 				status: filters.status,
+				severity: filters.severity,
 				created_at: filters.cursor ? { lt: filters.cursor } : undefined,
 			},
 			orderBy: { created_at: "desc" },
@@ -82,7 +90,7 @@ export class PrismaDenunciationsRepository implements DenunciationsRepository {
 		});
 
 		return denunciations.map((d) =>
-			mapDenunciation(d as PrismaDenunciationPayload),
+			mapDenunciation(d as unknown as PrismaDenunciationPayload),
 		);
 	}
 
@@ -101,7 +109,7 @@ export class PrismaDenunciationsRepository implements DenunciationsRepository {
 		});
 
 		return denunciations.map((d) =>
-			mapDenunciation(d as PrismaDenunciationPayload),
+			mapDenunciation(d as unknown as PrismaDenunciationPayload),
 		);
 	}
 
@@ -113,7 +121,66 @@ export class PrismaDenunciationsRepository implements DenunciationsRepository {
 
 		if (!denunciation) return null;
 
-		return mapDenunciation(denunciation as PrismaDenunciationPayload);
+		return mapDenunciation(
+			denunciation as unknown as PrismaDenunciationPayload,
+		);
+	}
+
+	async findByIdAndOwner(
+		id: string,
+		userId: string,
+	): Promise<Denunciation | null> {
+		const denunciation = await prisma.denunciation.findFirst({
+			where: { id, reporter_user_id: userId },
+			include: denunciationInclude,
+		});
+
+		if (!denunciation) return null;
+
+		return mapDenunciation(
+			denunciation as unknown as PrismaDenunciationPayload,
+		);
+	}
+
+	async findManyByOwner(
+		userId: string,
+		filters: { cursor?: Date; limit: number },
+	): Promise<Denunciation[]> {
+		const denunciations = await prisma.denunciation.findMany({
+			where: {
+				reporter_user_id: userId,
+				created_at: filters.cursor ? { lt: filters.cursor } : undefined,
+			},
+			orderBy: { created_at: "desc" },
+			take: filters.limit,
+			include: denunciationInclude,
+		});
+
+		return denunciations.map((d) =>
+			mapDenunciation(d as unknown as PrismaDenunciationPayload),
+		);
+	}
+
+	async update(
+		id: string,
+		data: { title?: string; description?: string },
+	): Promise<Denunciation | null> {
+		const denunciation = await prisma.denunciation.findUnique({
+			where: { id },
+			select: { id: true },
+		});
+
+		if (!denunciation) return null;
+
+		await prisma.denunciation.update({
+			where: { id },
+			data: {
+				title: data.title,
+				description: data.description,
+			},
+		});
+
+		return this.findById(id);
 	}
 
 	async create(data: CreateDenunciation): Promise<Denunciation> {
@@ -130,7 +197,9 @@ export class PrismaDenunciationsRepository implements DenunciationsRepository {
 			include: denunciationInclude,
 		});
 
-		return mapDenunciation(denunciation as PrismaDenunciationPayload);
+		return mapDenunciation(
+			denunciation as unknown as PrismaDenunciationPayload,
+		);
 	}
 
 	async updateStatus(
@@ -154,6 +223,9 @@ export class PrismaDenunciationsRepository implements DenunciationsRepository {
 			data: {
 				status: data.status,
 				severity: data.severity,
+				reason: data.reason,
+				moderated_by: data.moderatedBy,
+				moderated_at: new Date(),
 			},
 		});
 

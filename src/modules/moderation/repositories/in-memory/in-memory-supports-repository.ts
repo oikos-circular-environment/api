@@ -20,6 +20,9 @@ type SupportEntityRecord = {
 	reporter_email: string;
 	status: ModerationStatus;
 	severity: ModerationSeverity | null;
+	moderated_by: string | null;
+	moderated_at: Date | null;
+	reason: string | null;
 	created_at: Date;
 	updated_at: Date;
 };
@@ -49,6 +52,9 @@ export class InMemorySupportsRepository implements SupportsRepository {
 			reporter_email: data.reporter_email,
 			status: "OPEN",
 			severity: null,
+			moderated_by: null,
+			moderated_at: null,
+			reason: null,
 			created_at: now,
 			updated_at: now,
 		};
@@ -58,10 +64,105 @@ export class InMemorySupportsRepository implements SupportsRepository {
 		return this.mapSupport(support);
 	}
 
+	async findMany(filters: {
+		status?: ModerationStatus;
+		severity?: ModerationSeverity;
+		type?: SupportType;
+		cursor?: Date;
+		limit: number;
+	}): Promise<Support[]> {
+		let items = [...this.supports];
+
+		if (filters.status) {
+			items = items.filter((item) => item.status === filters.status);
+		}
+
+		if (filters.severity) {
+			items = items.filter((item) => item.severity === filters.severity);
+		}
+
+		if (filters.type) {
+			items = items.filter((item) => item.type === filters.type);
+		}
+
+		const { cursor } = filters;
+		if (cursor) {
+			items = items.filter((item) => item.created_at < cursor);
+		}
+
+		items.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
+
+		return items.slice(0, filters.limit).map((item) => this.mapSupport(item));
+	}
+
 	async findById(supportId: string): Promise<Support | null> {
 		const support = this.supports.find((item) => item.id === supportId);
 
 		if (!support) return null;
+
+		return this.mapSupport(support);
+	}
+
+	async findByIdAndOwner(id: string, userId: string): Promise<Support | null> {
+		const support = this.supports.find(
+			(item) => item.id === id && item.user_id === userId,
+		);
+
+		if (!support) return null;
+
+		return this.mapSupport(support);
+	}
+
+	async findManyByOwner(
+		userId: string,
+		filters: { cursor?: Date; limit: number },
+	): Promise<Support[]> {
+		let items = this.supports.filter((item) => item.user_id === userId);
+
+		const { cursor } = filters;
+		if (cursor) {
+			items = items.filter((item) => item.created_at < cursor);
+		}
+
+		items.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
+
+		return items.slice(0, filters.limit).map((item) => this.mapSupport(item));
+	}
+
+	async update(
+		id: string,
+		data: { title?: string; description?: string },
+	): Promise<Support | null> {
+		const support = this.supports.find((item) => item.id === id);
+
+		if (!support) return null;
+
+		if (data.title !== undefined) support.title = data.title;
+		if (data.description !== undefined) support.description = data.description;
+		support.updated_at = new Date();
+
+		return this.mapSupport(support);
+	}
+
+	async updateStatus(
+		supportId: string,
+		data: {
+			status: ModerationStatus;
+			severity?: ModerationSeverity;
+			reason?: string;
+			moderatedBy?: string;
+		},
+	): Promise<Support | null> {
+		const support = this.supports.find((item) => item.id === supportId);
+
+		if (!support) return null;
+
+		support.status = data.status;
+		support.severity = data.severity ?? support.severity;
+		support.reason = data.reason ?? support.reason;
+		support.moderated_by = data.moderatedBy ?? support.moderated_by;
+		support.moderated_at = new Date();
+		support.updated_at = new Date();
 
 		return this.mapSupport(support);
 	}
@@ -106,6 +207,9 @@ export class InMemorySupportsRepository implements SupportsRepository {
 					path: a.path,
 					created_at: a.created_at,
 				})),
+			moderated_by: support.moderated_by,
+			moderated_at: support.moderated_at,
+			reason: support.reason,
 			created_at: support.created_at,
 			updated_at: support.updated_at,
 		};

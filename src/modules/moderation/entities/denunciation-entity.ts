@@ -41,6 +41,9 @@ export const denunciationSchema = z.object({
 	latitude: z.number().nullable(),
 	longitude: z.number().nullable(),
 	attachments: z.array(denunciationAttachmentSchema),
+	moderated_by: z.string().nullable(),
+	moderated_at: z.date().nullable(),
+	reason: z.string().nullable(),
 	created_at: z.date(),
 	updated_at: z.date(),
 });

@@ -55,6 +55,9 @@ export const supportSchema = z.object({
 	status: moderationStatusSchema,
 	severity: moderationSeveritySchema.nullable(),
 	attachments: z.array(supportAttachmentSchema),
+	moderated_by: z.string().nullable(),
+	moderated_at: z.date().nullable(),
+	reason: z.string().nullable(),
 	created_at: z.date(),
 	updated_at: z.date(),
 });

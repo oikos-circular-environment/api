@@ -71,3 +71,44 @@ export const saveSupportAttachmentSchema = z.object({
 	path: z.string().min(1, "path is required"),
 });
 export type SaveSupportAttachment = z.infer<typeof saveSupportAttachmentSchema>;
+
+export const getSupportsQuerySchema = z.object({
+	status: moderationStatusSchema.optional(),
+	severity: moderationSeveritySchema.optional(),
+	type: supportTypeSchema.optional(),
+	cursor: z.coerce.date().optional(),
+	limit: z.coerce.number().int().min(1).max(100).default(20),
+});
+
+export const moderateSupportBodySchema = z.object({
+	status: z.enum(["CLOSED", "RESOLVED"]),
+	severity: moderationSeveritySchema.optional(),
+	reason: z.string().max(2000).optional(),
+});
+
+export const updateOwnSupportBodySchema = z.object({
+	title: safeTextSchema({
+		min: 1,
+		max: MAX_SUPPORT_TITLE_LENGTH,
+		minMessage: "title is required",
+		maxMessage: `title must be at most ${MAX_SUPPORT_TITLE_LENGTH} characters`,
+	}).optional(),
+	description: safeTextSchema({
+		min: 1,
+		max: MAX_SUPPORT_DESCRIPTION_LENGTH,
+		minMessage: "description is required",
+		maxMessage: `description must be at most ${MAX_SUPPORT_DESCRIPTION_LENGTH} characters`,
+	}).optional(),
+});
+export type UpdateOwnSupportBody = z.infer<typeof updateOwnSupportBodySchema>;
+
+export const paginatedSupportsSchema = z.object({
+	supports: z.array(supportSchema),
+	nextCursor: z.string().datetime().nullable(),
+});
+
+export const getOwnQuerySchema = z.object({
+	cursor: z.string().datetime().optional(),
+	limit: z.coerce.number().int().min(1).max(100).default(20),
+});
+export type GetOwnQuery = z.infer<typeof getOwnQuerySchema>;
