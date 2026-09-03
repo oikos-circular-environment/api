@@ -1,114 +1,111 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
-import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
-import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { createSupportRequestBodySchema } from "./dtos/moderation-dto.js";
-import { supportRequestSchema } from "./entities/support-request-entity.js";
-import { PrismaSupportRequestsRepository } from "./repositories/prisma/support-requests-repository-prisma.js";
+import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
+import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
+import { requireRole } from "@/modules/common/middlewares/require-role.js";
+import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
+import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
+import { appErrorSchema } from "../common/errors/app-error.js";
 import {
-	CreateSupportRequestUseCase,
-	MAX_SUPPORT_REQUEST_FILES,
-	SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES,
-} from "./use-cases/create-support-request-use-case.js";
+	getSupportsQuerySchema,
+	moderateSupportBodySchema,
+	supportSchema,
+} from "./dtos/moderation-dto.js";
+import { PrismaSupportsRepository } from "./repositories/prisma/supports-repository-prisma.js";
+import { GetSupportUseCase } from "./use-cases/get-support-use-case.js";
+import { GetSupportsUseCase } from "./use-cases/get-supports-use-case.js";
+import { ModerateSupportUseCase } from "./use-cases/moderate-support-use-case.js";
 
-const MODERATION_TAG = "Moderation";
 const MODERATION_SUPPORT_TAG = "Moderation / Support";
 
 export async function moderationSupportRoutes(
 	app: FastifyInstance,
 ): Promise<void> {
 	const typedApp = app.withTypeProvider<ZodTypeProvider>();
-	const supportRequestsRepository = new PrismaSupportRequestsRepository();
-	const storageProvider = makeStorageProvider();
+	const authProvider = makeBetterAuthAuthProvider(auth);
+	const verifySession = createVerifySession(authProvider);
+	const requireModerator = requireRole("moderator");
+	const supportsRepository = new PrismaSupportsRepository();
 
-	const createSupportRequestUseCase = new CreateSupportRequestUseCase(
-		supportRequestsRepository,
-		storageProvider,
-	);
+	const getSupportsUseCase = new GetSupportsUseCase(supportsRepository);
+	const getSupportUseCase = new GetSupportUseCase(supportsRepository);
+	const moderateSupportUseCase = new ModerateSupportUseCase(supportsRepository);
 
-	typedApp.post(
+	typedApp.get(
 		"/moderation/support",
 		{
-			config: { public: true },
-			schema: {
-				tags: [MODERATION_TAG, MODERATION_SUPPORT_TAG],
-				summary: "Submit a support request",
+			preHandler: [verifySession, requireModerator],
+			schema: withBearerAuth({
+				tags: [MODERATION_SUPPORT_TAG],
+				summary: "List support requests",
 				description:
-					"Receives a support request submission from the Suporte form (title, description and up to 5 images, 10MB each). Does not require authentication.",
-				consumes: ["multipart/form-data"],
+					"Lists all support requests with optional filters (status, severity, type) and cursor-based pagination.",
+				querystring: getSupportsQuerySchema,
 				response: {
-					200: z.object({ supportRequest: supportRequestSchema }),
-					400: appErrorSchema,
+					200: z.object({ supports: z.array(supportSchema) }),
+					401: appErrorSchema,
+					403: appErrorSchema,
 				},
-			},
+			}),
 		},
 		async (request, reply) => {
-			const fields: Record<string, string> = {};
-			const files: Array<{
-				fileName: string;
-				mimeType: string;
-				content: Buffer;
-			}> = [];
+			const result = await getSupportsUseCase.execute(request.query);
+			return reply.send({ supports: result.supports });
+		},
+	);
 
-			try {
-				const parts = request.parts({
-					limits: {
-						files: MAX_SUPPORT_REQUEST_FILES,
-						fileSize: SUPPORT_REQUEST_ATTACHMENT_MAX_SIZE_IN_BYTES,
-						fields: 10,
-					},
-				});
-
-				for await (const part of parts) {
-					if (part.type === "file") {
-						files.push({
-							fileName: part.filename,
-							mimeType: part.mimetype,
-							content: await part.toBuffer(),
-						});
-					} else {
-						fields[part.fieldname] = String(part.value);
-					}
-				}
-			} catch (error) {
-				const { FilesLimitError, RequestFileTooLargeError } =
-					app.multipartErrors;
-
-				if (error instanceof FilesLimitError) {
-					throw new AppError(
-						`Support request accepts at most ${MAX_SUPPORT_REQUEST_FILES} images`,
-						"SUPPORT_REQUEST_TOO_MANY_FILES",
-						400,
-					);
-				}
-
-				if (error instanceof RequestFileTooLargeError) {
-					throw new AppError(
-						"Support request attachment exceeds the maximum size of 10MB",
-						"SUPPORT_REQUEST_ATTACHMENT_TOO_LARGE",
-						400,
-					);
-				}
-
-				throw error;
-			}
-
-			const parsed = createSupportRequestBodySchema.safeParse(fields);
-			if (!parsed.success) {
-				throw new AppError(
-					parsed.error.issues[0]?.message ?? "Invalid payload",
-					"SUPPORT_REQUEST_INVALID_BODY",
-					400,
-				);
-			}
-
-			const supportRequest = await createSupportRequestUseCase.execute({
-				...parsed.data,
-				files,
+	typedApp.get(
+		"/moderation/support/:id",
+		{
+			preHandler: [verifySession, requireModerator],
+			schema: withBearerAuth({
+				tags: [MODERATION_SUPPORT_TAG],
+				summary: "Get support by id",
+				params: z.object({ id: z.string() }),
+				response: {
+					200: z.object({ support: supportSchema }),
+					401: appErrorSchema,
+					403: appErrorSchema,
+					404: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const result = await getSupportUseCase.execute({
+				supportId: request.params.id,
 			});
+			return reply.send({ support: result.support });
+		},
+	);
 
-			return reply.send({ supportRequest });
+	typedApp.patch(
+		"/moderation/support/:id",
+		{
+			preHandler: [verifySession, requireModerator],
+			schema: withBearerAuth({
+				tags: [MODERATION_SUPPORT_TAG],
+				summary: "Moderate support",
+				description:
+					"Moderates a support request by changing its status and severity. Only CLOSED or RESOLVED are allowed.",
+				params: z.object({ id: z.string() }),
+				body: moderateSupportBodySchema,
+				response: {
+					200: z.object({ support: supportSchema }),
+					401: appErrorSchema,
+					403: appErrorSchema,
+					404: appErrorSchema,
+					422: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const result = await moderateSupportUseCase.execute({
+				supportId: request.params.id,
+				...request.body,
+				moderatedBy: request.authV2User!.id,
+			});
+			return reply.send({ support: result.support });
 		},
 	);
 }

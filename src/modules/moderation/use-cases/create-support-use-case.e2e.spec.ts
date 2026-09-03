@@ -48,8 +48,8 @@ async function buildMultipartPayload(
 	return { payload: Buffer.from(arrayBuffer), contentType };
 }
 
-describe("create-support-request", () => {
-	const createdSupportRequestIds: string[] = [];
+describe("create-support", () => {
+	const createdSupportIds: string[] = [];
 
 	beforeAll(async () => {
 		await app.ready();
@@ -60,19 +60,21 @@ describe("create-support-request", () => {
 	});
 
 	afterEach(async () => {
-		if (createdSupportRequestIds.length > 0) {
-			await prisma.supportRequest.deleteMany({
-				where: { id: { in: createdSupportRequestIds } },
+		if (createdSupportIds.length > 0) {
+			await prisma.support.deleteMany({
+				where: { id: { in: createdSupportIds } },
 			});
-			createdSupportRequestIds.length = 0;
+			createdSupportIds.length = 0;
 		}
 	});
 
-	it("200 — creates support request with 2 images", async () => {
+	it("200 — creates support with 2 images", async () => {
 		const { payload, contentType } = await buildMultipartPayload(
 			{
 				title: "App crashes on login",
 				description: "It crashes every time I try to log in.",
+				type: "ERROR",
+				reporter_email: "user@example.com",
 			},
 			[
 				{
@@ -90,36 +92,125 @@ describe("create-support-request", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
 
 		expect(res.statusCode).toBe(200);
 		const body = res.json();
-		expect(body.supportRequest.title).toBe("App crashes on login");
-		expect(body.supportRequest.status).toBe("PENDING");
-		expect(body.supportRequest.attachments).toHaveLength(2);
-		createdSupportRequestIds.push(body.supportRequest.id);
+		expect(body.support.title).toBe("App crashes on login");
+		expect(body.support.type).toBe("ERROR");
+		expect(body.support.status).toBe("OPEN");
+		expect(body.support.reporter_email).toBe("user@example.com");
+		expect(body.support.attachments).toHaveLength(2);
+		createdSupportIds.push(body.support.id);
 	});
 
-	it("400 — missing title and description", async () => {
-		const { payload, contentType } = await buildMultipartPayload({});
+	it("200 — defaults type to SUPPORT when omitted from the request", async () => {
+		const { payload, contentType } = await buildMultipartPayload({
+			title: "Feature idea",
+			description: "It would be nice to have dark mode.",
+			reporter_email: "user@example.com",
+		});
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
+			headers: { "content-type": contentType },
+			payload,
+		});
+
+		expect(res.statusCode).toBe(200);
+		const body = res.json();
+		expect(body.support.type).toBe("SUPPORT");
+		createdSupportIds.push(body.support.id);
+	});
+
+	it("200 — creates support with environment payload", async () => {
+		const { payload, contentType } = await buildMultipartPayload({
+			title: "Crash on submit",
+			description: "App crashes when I tap submit.",
+			type: "ERROR",
+			reporter_email: "user@example.com",
+			environment: JSON.stringify({
+				platform: "android",
+				app_version: "1.2.3",
+			}),
+		});
+
+		const res = await app.inject({
+			method: "POST",
+			url: "/v1/support",
+			headers: { "content-type": contentType },
+			payload,
+		});
+
+		expect(res.statusCode).toBe(200);
+		const body = res.json();
+		expect(body.support.environment.platform).toBe("android");
+		createdSupportIds.push(body.support.id);
+	});
+
+	it("400 — missing title and description", async () => {
+		const { payload, contentType } = await buildMultipartPayload({
+			reporter_email: "user@example.com",
+		});
+
+		const res = await app.inject({
+			method: "POST",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
 
 		expect(res.statusCode).toBe(400);
-		expect(res.json().code).toBe("SUPPORT_REQUEST_INVALID_BODY");
+		expect(res.json().code).toBe("SUPPORT_INVALID_BODY");
+	});
+
+	it("400 — missing reporter_email", async () => {
+		const { payload, contentType } = await buildMultipartPayload({
+			title: "No email",
+			description: "Sending without an email.",
+		});
+
+		const res = await app.inject({
+			method: "POST",
+			url: "/v1/support",
+			headers: { "content-type": contentType },
+			payload,
+		});
+
+		expect(res.statusCode).toBe(400);
+		expect(res.json().code).toBe("SUPPORT_EMAIL_REQUIRED");
+	});
+
+	it("400 — invalid environment JSON", async () => {
+		const { payload, contentType } = await buildMultipartPayload({
+			title: "Invalid environment",
+			description: "Sending a malformed environment field.",
+			reporter_email: "user@example.com",
+			environment: "{not-json",
+		});
+
+		const res = await app.inject({
+			method: "POST",
+			url: "/v1/support",
+			headers: { "content-type": contentType },
+			payload,
+		});
+
+		expect(res.statusCode).toBe(400);
+		expect(res.json().code).toBe("SUPPORT_INVALID_BODY");
 	});
 
 	it("400 — invalid attachment mime type", async () => {
 		const { payload, contentType } = await buildMultipartPayload(
-			{ title: "Invalid file", description: "Sending a gif." },
+			{
+				title: "Invalid file",
+				description: "Sending a gif.",
+				reporter_email: "user@example.com",
+			},
 			[
 				{
 					fileName: "animation.gif",
@@ -131,13 +222,13 @@ describe("create-support-request", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
 
 		expect(res.statusCode).toBe(400);
-		expect(res.json().code).toBe("SUPPORT_REQUEST_ATTACHMENT_TYPE_INVALID");
+		expect(res.json().code).toBe("SUPPORT_ATTACHMENT_TYPE_INVALID");
 	});
 
 	it("400 — more than 5 images", async () => {
@@ -148,24 +239,32 @@ describe("create-support-request", () => {
 		}));
 
 		const { payload, contentType } = await buildMultipartPayload(
-			{ title: "Too many files", description: "Sending too many attachments." },
+			{
+				title: "Too many files",
+				description: "Sending too many attachments.",
+				reporter_email: "user@example.com",
+			},
 			files,
 		);
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
 
 		expect(res.statusCode).toBe(400);
-		expect(res.json().code).toBe("SUPPORT_REQUEST_TOO_MANY_FILES");
+		expect(res.json().code).toBe("SUPPORT_TOO_MANY_FILES");
 	});
 
 	it("400 — attachment exceeds 10MB", async () => {
 		const { payload, contentType } = await buildMultipartPayload(
-			{ title: "Big file", description: "Sending a file too big." },
+			{
+				title: "Big file",
+				description: "Sending a file too big.",
+				reporter_email: "user@example.com",
+			},
 			[
 				{
 					fileName: "huge.png",
@@ -177,13 +276,13 @@ describe("create-support-request", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
 
 		expect(res.statusCode).toBe(400);
-		expect(res.json().code).toBe("SUPPORT_REQUEST_ATTACHMENT_TOO_LARGE");
+		expect(res.json().code).toBe("SUPPORT_ATTACHMENT_TOO_LARGE");
 	});
 
 	it("400 — attachment content does not match declared type", async () => {
@@ -191,6 +290,7 @@ describe("create-support-request", () => {
 			{
 				title: "Spoofed file",
 				description: "Declaring image/png but sending plain text.",
+				reporter_email: "user@example.com",
 			},
 			[
 				{
@@ -203,12 +303,12 @@ describe("create-support-request", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
 
 		expect(res.statusCode).toBe(400);
-		expect(res.json().code).toBe("SUPPORT_REQUEST_ATTACHMENT_CONTENT_INVALID");
+		expect(res.json().code).toBe("SUPPORT_ATTACHMENT_CONTENT_INVALID");
 	});
 });
