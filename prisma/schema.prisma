@@ -41,6 +41,9 @@ model User {
   members          Member[]
   sent_invitations Invitation[]          @relation("InvitationInviter")
 
+  reported_denunciations Denunciation[] @relation("ReporterOfDenunciations")
+  target_denunciations   Denunciation[] @relation("ReportedInDenunciations")
+
   @@map("users")
 }
 
@@ -461,6 +464,45 @@ model SupportAttachment {
   support    Support @relation(fields: [support_id], references: [id], onDelete: Cascade)
 
   @@map("support_attachments")
+}
+
+model Denunciation {
+  id             String              @id @default(uuid())
+  title          String
+  description    String
+  status         ModerationStatus    @default(OPEN)
+  severity       ModerationSeverity?
+  reporter_email String?
+  latitude       Float?
+  longitude      Float?
+  created_at     DateTime            @default(now())
+  updated_at     DateTime            @updatedAt
+
+  reporter_user_id String?
+  reporter         User?   @relation("ReporterOfDenunciations", fields: [reporter_user_id], references: [id], onDelete: SetNull)
+
+  reported_user_id String?
+  reported_user    User?   @relation("ReportedInDenunciations", fields: [reported_user_id], references: [id], onDelete: SetNull)
+
+  attachments DenunciationAttachment[]
+
+  @@map("denunciations")
+}
+
+model DenunciationAttachment {
+  id         String               @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  base64     String
+  metadata   Json?
+  type       ComplaintCaptureMode @default(PHOTO)
+  created_at DateTime             @default(now())
+
+  denunciation_id String
+  denunciation    Denunciation @relation(fields: [denunciation_id], references: [id], onDelete: Cascade)
+
+  @@map("denunciation_attachments")
 }
 
 model ComplaintVote {

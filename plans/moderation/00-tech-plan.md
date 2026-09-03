@@ -215,7 +215,7 @@ paralelismo — status abaixo é atualizado a cada ticket concluído.
 - **[x] T01** — Modelo de dados de `Support`: rename de `SupportRequest`, `type`, `user_id`,
   `reporter_email`, `environment`, status compartilhado (`OPEN|CLOSED|CANCELLED|RESOLVED`) e
   `severity`. Substitui api#60 (M04). Pré-requisito de nada, pode rodar já.
-- **[ ] T02** — Módulo `Denunciation` completo (schema, entidade, DTOs, repositório, use-cases de
+- **[x] T02** — Módulo `Denunciation` completo (schema, entidade, DTOs, repositório, use-cases de
   criação/anexo), já nascendo com o status/severity/`reporter_email` compartilhados de T01. Fecha
   api#59 (M02).
 - **[ ] T03** — Rotas do **usuário** (`/v1/support`, `/v1/denunciations`): criar (pública, extrai

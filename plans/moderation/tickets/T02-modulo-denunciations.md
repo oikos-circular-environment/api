@@ -1,6 +1,6 @@
 # T02 — Módulo `Denunciation` (denúncia interna de conteúdo/perfil)
 
-**Status:** [ ] Não iniciado
+**Status:** [x] Concluído
 **Depende de:** nada (pode rodar em paralelo a T01)
 **Módulos:** `prisma/schema.prisma`, `src/modules/moderation/`
 **Fecha:** api#59 (M02)
@@ -8,14 +8,14 @@
 
 ## Checklist
 
-- [ ] Passo 1 — `schema.prisma`: `Denunciation` + `DenunciationAttachment`
-- [ ] Passo 2 — estrutura do módulo (pastas/arquivos)
-- [ ] Passo 3 — entidade e DTOs
-- [ ] Passo 4 — `repositories/denunciations-repository.ts` (interface)
-- [ ] Passo 5 — use-cases (create, attachment, delete-attachment) + specs
-- [ ] Passo 6 — `factories/make-denunciation.ts`
-- [ ] Verificação (`tsc`, `lint`, `test`, `test:integration`) verde
-- [ ] `code-review` aprovado
+- [x] Passo 1 — `schema.prisma`: `Denunciation` + `DenunciationAttachment`
+- [x] Passo 2 — estrutura do módulo (pastas/arquivos)
+- [x] Passo 3 — entidade e DTOs
+- [x] Passo 4 — `repositories/denunciations-repository.ts` (interface)
+- [x] Passo 5 — use-cases (create, attachment, delete-attachment) + specs
+- [x] Passo 6 — `factories/make-denunciation.ts`
+- [x] Verificação (`tsc`, `lint`, `test`, `test:integration`) verde
+- [x] `code-review` aprovado (1 ajuste: desacoplado import cruzado de `complaintCaptureModeSchema`, enum próprio `denunciationAttachmentTypeSchema` local)
 
 ## Contexto
 
