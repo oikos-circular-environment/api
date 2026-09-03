@@ -218,14 +218,14 @@ paralelismo — status abaixo é atualizado a cada ticket concluído.
 - **[x] T02** — Módulo `Denunciation` completo (schema, entidade, DTOs, repositório, use-cases de
   criação/anexo), já nascendo com o status/severity/`reporter_email` compartilhados de T01. Fecha
   api#59 (M02).
-- **[ ] T03** — Rotas do **usuário** (`/v1/support`, `/v1/denunciations`): criar (pública, extrai
+- **[x] T03** — Rotas do **usuário** (`/v1/support`, `/v1/denunciations`): criar (pública, extrai
   sessão se houver), listar as próprias, ver detalhe, atualizar (enquanto `OPEN` e sem moderação),
   cancelar. Substitui o `POST /v1/moderation/support` atual. Depende de T01 e T02.
-- **[ ] T04** — Rotas de **moderação** (`/v1/moderation/support`, `/v1/moderation/denunciations`):
+- **[x] T04** — Rotas de **moderação** (`/v1/moderation/support`, `/v1/moderation/denunciations`):
   listar, ver detalhe, responder + mudar status/severidade, com trilha de auditoria
   (`moderated_by`/`moderated_at`/`reason`). Fecha api#58 (M01) e api#59 (M02) no que é gestão.
   Depende de T01 e T02.
-- **[ ] T05** — Ação "banir usuário denunciado a partir de uma denúncia" (reaproveita `BanUserUseCase`/
+- **[x] T05** — Ação "banir usuário denunciado a partir de uma denúncia" (reaproveita `BanUserUseCase`/
   `RevokeUserSessionsUseCase`), fecha o que resta de api#61 (M05). Depende de T02 e T04.
 
 Ordem de execução real: T01 → T02 → T03 → T04 → T05, sequencial (sem paralelismo).
