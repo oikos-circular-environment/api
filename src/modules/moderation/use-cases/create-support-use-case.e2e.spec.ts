@@ -92,7 +92,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -116,7 +116,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -141,7 +141,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -159,7 +159,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -176,7 +176,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -195,7 +195,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -222,7 +222,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -249,7 +249,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -276,7 +276,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
@@ -303,7 +303,7 @@ describe("create-support", () => {
 
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/moderation/support",
+			url: "/v1/support",
 			headers: { "content-type": contentType },
 			payload,
 		});
