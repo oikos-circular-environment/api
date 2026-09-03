@@ -1,7 +1,11 @@
 # T03 — Rotas do usuário: criar, listar, atualizar e cancelar seus pedidos/denúncias
 
-**Status:** [ ] Não iniciado
-**Depende de:** T01, T02
+**Status:** [ ] Não iniciado (execução interrompida pelo usuário em 2026-09-03, ~16:30 — sem
+nenhum arquivo de código tocado ainda, agente morto ainda na fase de leitura. Sessão reiniciada
+pra ativar `.claude/agents/executor.md` de verdade em vez do stand-in `general-purpose` usado em
+T01/T02. Próximo passo: retomar T03 do zero, executor real.)
+**Depende de:** T01 ✅, T02 ✅ (ambos concluídos, revisados e commitados nesta branch —
+commits `3e482ff` T01, `c6909b1` T02)
 **Módulos:** `src/modules/moderation/`
 **Substitui:** `POST /v1/moderation/support` atual (sai do prefixo `/moderation`)
 
