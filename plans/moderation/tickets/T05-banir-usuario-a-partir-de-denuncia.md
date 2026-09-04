@@ -1,17 +1,17 @@
 # T05 — Banir usuário a partir de uma denúncia
 
-**Status:** [ ] Não iniciado
+**Status:** [x] Concluído (commit `e4c223d`)
 **Depende de:** T02, T04
 **Módulos:** `src/modules/moderation/`
 **Fecha o que resta de:** api#61 (M05)
 
 ## Checklist
 
-- [ ] Passo 1 — `ModerateDenunciationBanUseCase` + spec
-- [ ] Passo 2 — rota `POST /v1/moderation/denunciations/:id/ban`
-- [ ] Verificação (`tsc`, `lint`, `test`) verde
-- [ ] `code-review` aprovado
-- [ ] `qa-runner` validou fluxo (ban + revoke + status + 403)
+- [x] Passo 1 — `ModerateDenunciationBanUseCase` + spec
+- [x] Passo 2 — rota `POST /v1/moderation/denunciations/:id/ban`
+- [x] Verificação (`tsc`, `lint`, `test`) verde
+- [x] `code-review` aprovado
+- [x] `qa-runner` validou fluxo (ban + revoke + status + 403)
 
 ## Contexto
 

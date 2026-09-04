@@ -1,9 +1,7 @@
 # T03 — Rotas do usuário: criar, listar, atualizar e cancelar seus pedidos/denúncias
 
-**Status:** [ ] Não iniciado (execução interrompida pelo usuário em 2026-09-03, ~16:30 — sem
-nenhum arquivo de código tocado ainda, agente morto ainda na fase de leitura. Sessão reiniciada
-pra ativar `.claude/agents/executor.md` de verdade em vez do stand-in `general-purpose` usado em
-T01/T02. Próximo passo: retomar T03 do zero, executor real.)
+**Status:** [x] Concluído (commit `60919c3`; registro em `moderation-routes.ts` só saiu depois,
+junto do PR #107 — ver nota abaixo)
 **Depende de:** T01 ✅, T02 ✅ (ambos concluídos, revisados e commitados nesta branch —
 commits `3e482ff` T01, `c6909b1` T02)
 **Módulos:** `src/modules/moderation/`
@@ -11,14 +9,16 @@ commits `3e482ff` T01, `c6909b1` T02)
 
 ## Checklist
 
-- [ ] Passo 1 — DTOs (`moderation-dto.ts`, `denunciations-dto.ts`)
-- [ ] Passo 2 — use-cases (8: get-own/get-own-list/update-own/cancel-own × support/denunciation) + specs
-- [ ] Passo 3 — repositórios: `findByIdAndOwner`/`findManyByOwner`/`update`
-- [ ] Passo 4 — rotas (`support-routes.ts`, `denunciations-routes.ts`)
-- [ ] Passo 5 — registro em `app.ts`/routes principal
-- [ ] Verificação (`tsc`, `lint`, `test`, `test:integration`) verde
-- [ ] `code-review` aprovado
-- [ ] `qa-runner` validou rotas (Swagger/curl)
+- [x] Passo 1 — DTOs (`moderation-dto.ts`, `denunciations-dto.ts`)
+- [x] Passo 2 — use-cases (8: get-own/get-own-list/update-own/cancel-own × support/denunciation) + specs
+- [x] Passo 3 — repositórios: `findByIdAndOwner`/`findManyByOwner`/`update`
+- [x] Passo 4 — rotas (`support-routes.ts`, `denunciations-routes.ts`)
+- [x] Passo 5 — registro em `app.ts`/routes principal (rotas ficaram implementadas mas não
+      registradas em `moderation-routes.ts` até o commit `43f8ccc`, dentro do PR #107 — 404 em
+      tudo até então)
+- [x] Verificação (`tsc`, `lint`, `test`, `test:integration`) verde
+- [x] `code-review` aprovado
+- [x] `qa-runner` validou rotas (Swagger/curl)
 
 ## Contexto
 
