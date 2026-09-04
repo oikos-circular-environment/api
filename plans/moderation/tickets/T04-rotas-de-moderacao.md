@@ -1,20 +1,23 @@
 # T04 — Rotas de moderação: listar, responder, mudar status e severidade
 
-**Status:** [ ] Não iniciado
+**Status:** [x] Concluído (commit `b3f8899`; migration da trilha de auditoria só saiu depois,
+junto do PR #107 — ver nota abaixo)
 **Depende de:** T01, T02
 **Módulos:** `prisma/schema.prisma`, `src/modules/moderation/`
 **Fecha:** api#58 (M01) e a parte de gestão de api#59 (M02)
 
 ## Checklist
 
-- [ ] Passo 1 — `schema.prisma`: auditoria (`moderated_by`/`moderated_at`/`reason`)
-- [ ] Passo 2 — repositórios: `updateStatus` com auditoria
-- [ ] Passo 3 — DTOs (query + moderate body, support e denunciation)
-- [ ] Passo 4 — use-cases (6: get-list/get-one/moderate × support/denunciation) + specs
-- [ ] Passo 5 — rotas (`moderation-support-routes.ts`, `moderation-denunciation-routes.ts`)
-- [ ] Verificação (`tsc`, `lint`, `test`, `test:integration`) verde
-- [ ] `code-review` aprovado
-- [ ] `qa-runner` validou rotas (403 sem papel, transição inválida)
+- [x] Passo 1 — `schema.prisma`: auditoria (`moderated_by`/`moderated_at`/`reason`) (colunas já
+      existiam no schema; a migration SQL correspondente só foi gerada no commit `43f8ccc`, dentro
+      do PR #107)
+- [x] Passo 2 — repositórios: `updateStatus` com auditoria
+- [x] Passo 3 — DTOs (query + moderate body, support e denunciation)
+- [x] Passo 4 — use-cases (6: get-list/get-one/moderate × support/denunciation) + specs
+- [x] Passo 5 — rotas (`moderation-support-routes.ts`, `moderation-denunciation-routes.ts`)
+- [x] Verificação (`tsc`, `lint`, `test`, `test:integration`) verde
+- [x] `code-review` aprovado
+- [x] `qa-runner` validou rotas (403 sem papel, transição inválida)
 
 ## Contexto
 
