@@ -68,7 +68,7 @@ export class CreateSupportUseCase {
 			}
 
 			const detected = await fileTypeFromBuffer(file.content);
-			if (!detected || !(detected.mime in SUPPORT_ATTACHMENT_MIME_TYPES)) {
+			if (!detected || detected.mime !== file.mimeType) {
 				throw new AppError(
 					"Support attachment content does not match a valid image",
 					"SUPPORT_ATTACHMENT_CONTENT_INVALID",

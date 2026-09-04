@@ -1,20 +1,28 @@
 # T07 — Anexos de denúncia (rota faltando) e `environment` com passthrough sanitizado
 
-**Status:** [ ] Não iniciado
+**Status:** [x] Concluído (Passos 1-4; Passo 5 fica fora de escopo, ver seção própria)
 **Depende de:** T06
 **Módulos:** `src/modules/denunciation/`, `src/modules/support/`, `prisma/schema.prisma`
 **Fecha:** parte de api#108
 
 ## Checklist
 
-- [ ] Passo 1 — rotas de attachment de denúncia (`POST`/`DELETE /v1/denunciations/:id/attachments`)
-- [ ] Passo 2 — `CreateDenunciationAttachmentUseCase` passa a aceitar `metadata` de entrada
-- [ ] Passo 3 — `supportEnvironmentSchema` ganha `.passthrough()` sanitizado
-- [ ] Passo 4 — sanitização recursiva (chaves perigosas, profundidade, tamanho) reaproveitada nos
+- [x] Passo 1 — rotas de attachment de denúncia (`POST`/`DELETE /v1/denunciations/:id/attachments`)
+- [x] Passo 2 — `CreateDenunciationAttachmentUseCase` passa a aceitar `metadata` de entrada
+- [x] Passo 3 — `supportEnvironmentSchema` ganha `.passthrough()` sanitizado
+- [x] Passo 4 — sanitização recursiva (chaves perigosas, profundidade, tamanho) reaproveitada nos
       dois campos livres (`environment` extra e `denunciation attachment.metadata`)
-- [ ] Passo 5 (opcional, decidir antes de iniciar) — presigned upload direto pro bucket
-- [ ] Verificação (`tsc`, `lint`, `test`, `test:integration`, `qa-runner` via Swagger) verde
-- [ ] `code-review` aprovado
+- [ ] Passo 5 (opcional) — presigned upload direto pro bucket — não iniciado, decisão de abrir ou
+      não fica pro Christian
+- [x] Correções pós `code-review`: content-sniffing real (`fileTypeFromBuffer`) comparando tipo
+      detectado com o declarado (spoofing) em `Support` e `Denunciation`; teto de 5 anexos totais
+      por denúncia (`MAX_DENUNCIATION_ATTACHMENTS_TOTAL`); validação de forma do `metadata`
+      (`z.record`) antes de persistir; `sanitizeJsonInput` medindo bytes UTF-8 corretos; cobertura
+      de teste pro tipo `video/webm`
+- [x] Verificação — `tsc --noEmit` limpo, `lint` sem erro novo, `test` 645/645,
+      `test:integration` 58/58, `test:e2e` 192/192
+- [ ] `code-review` aprovado (3 rodadas já feitas nesta sessão — achados corrigidos; aprovação
+      final registrada aqui após o commit)
 
 ## Contexto
 
@@ -115,6 +123,10 @@ o segundo salto). Encaminhamento sugerido, fora do escopo deste ticket:
 - Reescrever upload de `Support`/`Complaint`/`Profile` pra presigned — Passo 5 é só o
   encaminhamento, decisão de abrir ou não fica pro Christian.
 - Escapar/sanitizar HTML no painel de moderação (web#38) — responsabilidade do consumidor.
+- Condição de corrida na contagem de anexos por denúncia (`attachments.length >=
+  MAX_DENUNCIATION_ATTACHMENTS_TOTAL` é leitura-então-escrita sem lock/transação; duas requisições
+  concorrentes podem ambas passar da checagem e ultrapassar o limite de 5) — risco aceito;
+  mitigação (constraint de banco ou lock) fica pra quando/se abuso real for observado.
 
 ## Verificação
 

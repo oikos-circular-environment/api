@@ -4,6 +4,7 @@ import type { DenunciationsRepository } from "@/modules/denunciation/repositorie
 
 type Request = {
 	denunciationId: string;
+	userId: string;
 	attachmentId: string;
 };
 
@@ -13,15 +14,29 @@ export class DeleteDenunciationAttachmentUseCase {
 		private readonly storageProvider: StorageProvider,
 	) {}
 
-	async execute({ denunciationId, attachmentId }: Request): Promise<void> {
-		const denunciation =
-			await this.denunciationsRepository.findById(denunciationId);
+	async execute({
+		denunciationId,
+		userId,
+		attachmentId,
+	}: Request): Promise<void> {
+		const denunciation = await this.denunciationsRepository.findByIdAndOwner(
+			denunciationId,
+			userId,
+		);
 
 		if (!denunciation) {
 			throw new AppError(
 				"Denunciation not found",
 				"DENUNCIATION_NOT_FOUND",
 				404,
+			);
+		}
+
+		if (denunciation.status !== "OPEN") {
+			throw new AppError(
+				"Denunciation has already been moderated",
+				"DENUNCIATION_ALREADY_MODERATED",
+				422,
 			);
 		}
 

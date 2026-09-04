@@ -7,6 +7,7 @@ import { AppError, appErrorSchema } from "@/modules/common/errors/app-error.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
+import { sanitizeJsonInput } from "@/modules/common/utils/sanitize-json-input.js";
 import {
 	createSupportBodySchema,
 	getOwnQuerySchema,
@@ -129,6 +130,10 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 						400,
 					);
 				}
+
+				environment = sanitizeJsonInput(environment, {
+					errorCode: "SUPPORT_ENVIRONMENT_INVALID",
+				});
 			}
 
 			const parsed = createSupportBodySchema.safeParse({

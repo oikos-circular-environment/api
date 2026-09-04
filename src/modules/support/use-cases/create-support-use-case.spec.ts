@@ -288,4 +288,35 @@ describe("create-support-use-case", () => {
 			expect(thrownError.statusCode).toBe(400);
 		}
 	});
+
+	it("throws when declared mime type does not match the real content", async () => {
+		const supportsRepository = new InMemorySupportsRepository();
+		const storageProvider = new InMemoryStorageProvider();
+		const sut = new CreateSupportUseCase(supportsRepository, storageProvider);
+
+		let thrownError: unknown;
+		try {
+			await sut.execute({
+				title: "Mismatched mimetype",
+				description: "Declaring image/png but sending a real JPEG.",
+				type: "ERROR",
+				reporter_email: "user@example.com",
+				files: [
+					{
+						fileName: "fake.png",
+						mimeType: "image/png",
+						content: JPEG_MAGIC_BYTES,
+					},
+				],
+			});
+		} catch (error) {
+			thrownError = error;
+		}
+
+		expect(thrownError instanceof AppError).toBe(true);
+		if (thrownError instanceof AppError) {
+			expect(thrownError.code).toBe("SUPPORT_ATTACHMENT_CONTENT_INVALID");
+			expect(thrownError.statusCode).toBe(400);
+		}
+	});
 });

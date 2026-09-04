@@ -5,9 +5,12 @@ import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "@/modules/common/errors/app-error.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
+import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
+import { sanitizeJsonInput } from "@/modules/common/utils/sanitize-json-input.js";
 import {
 	createDenunciationSchema,
+	denunciationAttachmentMetadataSchema,
 	denunciationSchema,
 	getOwnQuerySchema,
 	paginatedDenunciationsSchema,
@@ -15,7 +18,13 @@ import {
 } from "./dtos/denunciations-dto.js";
 import { PrismaDenunciationsRepository } from "./repositories/prisma/denunciations-repository-prisma.js";
 import { CancelOwnDenunciationUseCase } from "./use-cases/cancel-own-denunciation-use-case.js";
+import {
+	CreateDenunciationAttachmentUseCase,
+	DENUNCIATION_ATTACHMENT_MAX_SIZE_IN_BYTES,
+	MAX_DENUNCIATION_ATTACHMENT_FILES,
+} from "./use-cases/create-denunciation-attachment-use-case.js";
 import { CreateDenunciationUseCase } from "./use-cases/create-denunciation-use-case.js";
+import { DeleteDenunciationAttachmentUseCase } from "./use-cases/delete-denunciation-attachment-use-case.js";
 import { GetOwnDenunciationUseCase } from "./use-cases/get-own-denunciation-use-case.js";
 import { GetOwnDenunciationsUseCase } from "./use-cases/get-own-denunciations-use-case.js";
 import { UpdateOwnDenunciationUseCase } from "./use-cases/update-own-denunciation-use-case.js";
@@ -31,6 +40,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 	const denunciationsRepository = new PrismaDenunciationsRepository();
+	const storageProvider = makeStorageProvider();
 
 	const createDenunciationUseCase = new CreateDenunciationUseCase(
 		denunciationsRepository,
@@ -47,6 +57,16 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 	const cancelOwnDenunciationUseCase = new CancelOwnDenunciationUseCase(
 		denunciationsRepository,
 	);
+	const createDenunciationAttachmentUseCase =
+		new CreateDenunciationAttachmentUseCase(
+			denunciationsRepository,
+			storageProvider,
+		);
+	const deleteDenunciationAttachmentUseCase =
+		new DeleteDenunciationAttachmentUseCase(
+			denunciationsRepository,
+			storageProvider,
+		);
 
 	typedApp.post(
 		"/denunciations",
@@ -226,6 +246,163 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			});
 
 			return reply.send({ denunciation });
+		},
+	);
+
+	typedApp.post(
+		"/denunciations/:id/attachments",
+		{
+			preHandler: [verifySession],
+			schema: withBearerAuth({
+				tags: [DENUNCIATIONS_TAG],
+				summary: "Upload denunciation attachment",
+				description:
+					"Uploads and attaches a file to the authenticated user's denunciation. Send one file per request.",
+				consumes: ["multipart/form-data"],
+				params: z.object({ id: z.string() }),
+				response: {
+					200: z.object({ denunciation: denunciationSchema }),
+					400: appErrorSchema,
+					401: appErrorSchema,
+					404: appErrorSchema,
+					422: appErrorSchema,
+					500: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const user = request.authV2User!;
+
+			const fields: Record<string, string> = {};
+			const files: Array<{
+				fileName: string;
+				mimeType: string;
+				content: Buffer;
+			}> = [];
+
+			try {
+				const parts = request.parts({
+					limits: {
+						files: MAX_DENUNCIATION_ATTACHMENT_FILES,
+						fileSize: DENUNCIATION_ATTACHMENT_MAX_SIZE_IN_BYTES,
+						fields: 10,
+					},
+				});
+
+				for await (const part of parts) {
+					if (part.type === "file") {
+						files.push({
+							fileName: part.filename,
+							mimeType: part.mimetype,
+							content: await part.toBuffer(),
+						});
+					} else {
+						fields[part.fieldname] = String(part.value);
+					}
+				}
+			} catch (error) {
+				const { FilesLimitError, RequestFileTooLargeError } =
+					app.multipartErrors;
+
+				if (error instanceof FilesLimitError) {
+					throw new AppError(
+						`Denunciation attachment accepts at most ${MAX_DENUNCIATION_ATTACHMENT_FILES} file`,
+						"DENUNCIATION_TOO_MANY_FILES",
+						400,
+					);
+				}
+
+				if (error instanceof RequestFileTooLargeError) {
+					throw new AppError(
+						"Denunciation attachment exceeds the maximum size of 10MB",
+						"DENUNCIATION_ATTACHMENT_TOO_LARGE",
+						400,
+					);
+				}
+
+				throw error;
+			}
+
+			const file = files[0];
+
+			if (!file) {
+				throw new AppError(
+					"Denunciation attachment file is required",
+					"DENUNCIATION_ATTACHMENT_FILE_REQUIRED",
+					400,
+				);
+			}
+
+			let metadata: Record<string, unknown> | null | undefined;
+			if (fields.metadata !== undefined) {
+				let parsedMetadata: unknown;
+				try {
+					parsedMetadata = JSON.parse(fields.metadata);
+				} catch {
+					throw new AppError(
+						"metadata must be valid JSON",
+						"DENUNCIATION_ATTACHMENT_METADATA_INVALID",
+						400,
+					);
+				}
+
+				const sanitizedMetadata = sanitizeJsonInput(parsedMetadata, {
+					errorCode: "DENUNCIATION_ATTACHMENT_METADATA_INVALID",
+				});
+
+				const parsedMetadataShape =
+					denunciationAttachmentMetadataSchema.safeParse(sanitizedMetadata);
+
+				if (!parsedMetadataShape.success) {
+					throw new AppError(
+						"metadata must be an object",
+						"DENUNCIATION_ATTACHMENT_METADATA_INVALID",
+						400,
+					);
+				}
+
+				metadata = parsedMetadataShape.data;
+			}
+
+			const denunciation = await createDenunciationAttachmentUseCase.execute({
+				denunciationId: request.params.id,
+				userId: user.id,
+				metadata,
+				file,
+			});
+
+			return reply.send({ denunciation });
+		},
+	);
+
+	typedApp.delete(
+		"/denunciations/:id/attachments/:attachmentId",
+		{
+			preHandler: [verifySession],
+			schema: withBearerAuth({
+				tags: [DENUNCIATIONS_TAG],
+				summary: "Delete denunciation attachment",
+				description:
+					"Deletes an attachment from the authenticated user's denunciation.",
+				params: z.object({ id: z.string(), attachmentId: z.string() }),
+				response: {
+					204: z.undefined(),
+					401: appErrorSchema,
+					404: appErrorSchema,
+					422: appErrorSchema,
+				},
+			}),
+		},
+		async (request, reply) => {
+			const user = request.authV2User!;
+
+			await deleteDenunciationAttachmentUseCase.execute({
+				denunciationId: request.params.id,
+				userId: user.id,
+				attachmentId: request.params.attachmentId,
+			});
+
+			return reply.status(204).send();
 		},
 	);
 }

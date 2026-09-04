@@ -57,12 +57,17 @@ export type CreateDenunciation = {
 	longitude?: number | null;
 };
 
+export const denunciationAttachmentMetadataSchema = z
+	.record(z.string(), z.unknown())
+	.nullable()
+	.optional();
+
 export const saveDenunciationAttachmentSchema = z.object({
 	url: z.string().min(1, "url is required"),
 	file_name: z.string().min(1, "file_name is required"),
 	path: z.string().min(1, "path is required"),
 	base64: z.string().min(1, "base64 is required"),
-	metadata: z.record(z.string(), z.unknown()).nullable().optional(),
+	metadata: denunciationAttachmentMetadataSchema,
 	type: denunciationAttachmentTypeSchema,
 });
 export type SaveDenunciationAttachment = z.infer<

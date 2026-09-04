@@ -1,3 +1,4 @@
+import type { Prisma } from "@/generated/prisma/client.js";
 import { prisma } from "@/lib/prisma.js";
 import type {
 	CreateSupport,
@@ -69,7 +70,9 @@ export class PrismaSupportsRepository implements SupportsRepository {
 				title: data.title,
 				description: data.description,
 				type: data.type,
-				environment: data.environment ?? undefined,
+				environment: (data.environment ?? undefined) as
+					| Prisma.InputJsonValue
+					| undefined,
 				reporter_email: data.reporter_email,
 				user_id: data.user_id ?? null,
 			},

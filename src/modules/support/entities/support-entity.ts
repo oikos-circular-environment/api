@@ -21,13 +21,15 @@ export const supportLastErrorSchema = z.object({
 });
 export type SupportLastError = z.infer<typeof supportLastErrorSchema>;
 
-export const supportEnvironmentSchema = z.object({
-	platform: z.enum(["ios", "android", "web"]),
-	app_version: z.string().max(50),
-	os_version: z.string().max(50).optional(),
-	screen_size: z.enum(["SMALL", "MEDIUM", "LARGE"]).optional(),
-	last_error: supportLastErrorSchema.optional(),
-});
+export const supportEnvironmentSchema = z
+	.object({
+		platform: z.enum(["ios", "android", "web"]),
+		app_version: z.string().max(50),
+		os_version: z.string().max(50).optional(),
+		screen_size: z.enum(["SMALL", "MEDIUM", "LARGE"]).optional(),
+		last_error: supportLastErrorSchema.optional(),
+	})
+	.passthrough();
 export type SupportEnvironment = z.infer<typeof supportEnvironmentSchema>;
 
 export const supportAttachmentSchema = z.object({
