@@ -1,0 +1,63 @@
+name: Publish SDK package
+
+on:
+  push:
+    branches: [development, production]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm install -g npm@11
+      - run: npm ci
+
+      - name: Generate OpenAPI spec
+        run: npm run sdk:spec
+
+      - name: Configure GitHub Packages registry
+        working-directory: packages/oikos-sdk
+        run: |
+          echo "@oikos-circular-environment:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump version (beta on development, release on production)
+        working-directory: packages/oikos-sdk
+        run: |
+          BASE=$(node -pe "require('./package.json').version.split('.').slice(0,2).join('.')")
+          if [ "${{ github.ref_name }}" = "production" ]; then
+            npm pkg set version="${BASE}.${{ github.run_number }}"
+          else
+            npm pkg set version="${BASE}.0-beta.${{ github.run_number }}"
+          fi
+
+      - name: Install & build
+        working-directory: packages/oikos-sdk
+        run: |
+          npm install
+          npm run generate
+          npm run build
+
+      - name: Publish (release)
+        if: github.ref_name == 'production'
+        working-directory: packages/oikos-sdk
+        run: npm publish --access restricted
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish (beta)
+        if: github.ref_name == 'development'
+        working-directory: packages/oikos-sdk
+        run: npm publish --access restricted --tag beta
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
