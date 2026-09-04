@@ -7,7 +7,6 @@ import { AppError, appErrorSchema } from "@/modules/common/errors/app-error.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
-import { sanitizeJsonInput } from "@/modules/common/utils/sanitize-json-input.js";
 import {
 	createSupportBodySchema,
 	getOwnQuerySchema,
@@ -18,10 +17,11 @@ import {
 import { PrismaSupportsRepository } from "./repositories/prisma/supports-repository-prisma.js";
 import { CancelOwnSupportUseCase } from "./use-cases/cancel-own-support-use-case.js";
 import {
-	CreateSupportUseCase,
-	MAX_SUPPORT_FILES,
+	CreateSupportAttachmentUseCase,
+	MAX_SUPPORT_ATTACHMENT_FILES,
 	SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES,
-} from "./use-cases/create-support-use-case.js";
+} from "./use-cases/create-support-attachment-use-case.js";
+import { CreateSupportUseCase } from "./use-cases/create-support-use-case.js";
 import { GetOwnSupportUseCase } from "./use-cases/get-own-support-use-case.js";
 import { GetOwnSupportsUseCase } from "./use-cases/get-own-supports-use-case.js";
 import { UpdateOwnSupportUseCase } from "./use-cases/update-own-support-use-case.js";
@@ -39,7 +39,8 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 	const supportsRepository = new PrismaSupportsRepository();
 	const storageProvider = makeStorageProvider();
 
-	const createSupportUseCase = new CreateSupportUseCase(
+	const createSupportUseCase = new CreateSupportUseCase(supportsRepository);
+	const createSupportAttachmentUseCase = new CreateSupportAttachmentUseCase(
 		supportsRepository,
 		storageProvider,
 	);
@@ -60,8 +61,8 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 				tags: [SUPPORT_TAG],
 				summary: "Submit a support request",
 				description:
-					"Receives a support submission (title, description, type, environment and up to 5 images). Authentication is optional — when authenticated, the user_id and reporter_email are extracted from the session.",
-				consumes: ["multipart/form-data"],
+					"Receives a support submission (title, description, type and environment). Authentication is optional — when authenticated, the user_id and reporter_email are extracted from the session. Use POST /support/:id/attachments to attach images afterwards.",
+				body: createSupportBodySchema,
 				response: {
 					200: z.object({ support: supportSchema }),
 					400: appErrorSchema,
@@ -69,86 +70,7 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 			},
 		},
 		async (request, reply) => {
-			const fields: Record<string, string> = {};
-			const files: Array<{
-				fileName: string;
-				mimeType: string;
-				content: Buffer;
-			}> = [];
-
-			try {
-				const parts = request.parts({
-					limits: {
-						files: MAX_SUPPORT_FILES,
-						fileSize: SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES,
-						fields: 10,
-					},
-				});
-
-				for await (const part of parts) {
-					if (part.type === "file") {
-						files.push({
-							fileName: part.filename,
-							mimeType: part.mimetype,
-							content: await part.toBuffer(),
-						});
-					} else {
-						fields[part.fieldname] = String(part.value);
-					}
-				}
-			} catch (error) {
-				const { FilesLimitError, RequestFileTooLargeError } =
-					app.multipartErrors;
-
-				if (error instanceof FilesLimitError) {
-					throw new AppError(
-						`Support accepts at most ${MAX_SUPPORT_FILES} images`,
-						"SUPPORT_TOO_MANY_FILES",
-						400,
-					);
-				}
-
-				if (error instanceof RequestFileTooLargeError) {
-					throw new AppError(
-						"Support attachment exceeds the maximum size of 10MB",
-						"SUPPORT_ATTACHMENT_TOO_LARGE",
-						400,
-					);
-				}
-
-				throw error;
-			}
-
-			let environment: unknown;
-			if (fields.environment !== undefined) {
-				try {
-					environment = JSON.parse(fields.environment);
-				} catch {
-					throw new AppError(
-						"environment must be valid JSON",
-						"SUPPORT_INVALID_BODY",
-						400,
-					);
-				}
-
-				environment = sanitizeJsonInput(environment, {
-					errorCode: "SUPPORT_ENVIRONMENT_INVALID",
-				});
-			}
-
-			const parsed = createSupportBodySchema.safeParse({
-				...fields,
-				environment,
-			});
-			if (!parsed.success) {
-				throw new AppError(
-					parsed.error.issues[0]?.message ?? "Invalid payload",
-					"SUPPORT_INVALID_BODY",
-					400,
-				);
-			}
-
-			if (!parsed.data.reporter_email) {
+			if (!request.body.reporter_email) {
 				throw new AppError(
 					"reporter_email is required",
 					"SUPPORT_EMAIL_REQUIRED",
@@ -171,10 +93,96 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 			}
 
 			const support = await createSupportUseCase.execute({
-				...parsed.data,
-				reporter_email: sessionEmail ?? parsed.data.reporter_email,
-				userId,
-				files,
+				...request.body,
+				reporter_email: sessionEmail ?? request.body.reporter_email,
+				user_id: userId,
+			});
+
+			return reply.send({ support });
+		},
+	);
+
+	typedApp.post(
+		"/support/:id/attachments",
+		{
+			config: { public: true },
+			schema: {
+				tags: [SUPPORT_TAG],
+				summary: "Upload support attachment",
+				description:
+					"Uploads and attaches an image to an existing support request. Send one file per request. No authentication required.",
+				consumes: ["multipart/form-data"],
+				params: z.object({ id: z.string() }),
+				response: {
+					200: z.object({ support: supportSchema }),
+					400: appErrorSchema,
+					404: appErrorSchema,
+					422: appErrorSchema,
+					500: appErrorSchema,
+				},
+			},
+		},
+		async (request, reply) => {
+			const files: Array<{
+				fileName: string;
+				mimeType: string;
+				content: Buffer;
+			}> = [];
+
+			try {
+				const parts = request.parts({
+					limits: {
+						files: MAX_SUPPORT_ATTACHMENT_FILES,
+						fileSize: SUPPORT_ATTACHMENT_MAX_SIZE_IN_BYTES,
+						fields: 0,
+					},
+				});
+
+				for await (const part of parts) {
+					if (part.type === "file") {
+						files.push({
+							fileName: part.filename,
+							mimeType: part.mimetype,
+							content: await part.toBuffer(),
+						});
+					}
+				}
+			} catch (error) {
+				const { FilesLimitError, RequestFileTooLargeError } =
+					app.multipartErrors;
+
+				if (error instanceof FilesLimitError) {
+					throw new AppError(
+						`Support attachment accepts at most ${MAX_SUPPORT_ATTACHMENT_FILES} file`,
+						"SUPPORT_TOO_MANY_FILES",
+						400,
+					);
+				}
+
+				if (error instanceof RequestFileTooLargeError) {
+					throw new AppError(
+						"Support attachment exceeds the maximum size of 10MB",
+						"SUPPORT_ATTACHMENT_TOO_LARGE",
+						400,
+					);
+				}
+
+				throw error;
+			}
+
+			const file = files[0];
+
+			if (!file) {
+				throw new AppError(
+					"Support attachment file is required",
+					"SUPPORT_ATTACHMENT_FILE_REQUIRED",
+					400,
+				);
+			}
+
+			const support = await createSupportAttachmentUseCase.execute({
+				supportId: request.params.id,
+				file,
 			});
 
 			return reply.send({ support });
