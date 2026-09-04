@@ -8,13 +8,13 @@ import { requireRole } from "@/modules/common/middlewares/require-role.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import { denunciationSchema } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import { PrismaDenunciationsRepository } from "@/modules/denunciation/repositories/prisma/denunciations-repository-prisma.js";
 import { BanUserUseCase } from "../users/use-cases/ban-user-use-case.js";
 import { RevokeUserSessionsUseCase } from "../users/use-cases/revoke-user-sessions-use-case.js";
 import {
 	getDenunciationsQuerySchema,
 	moderateDenunciationBodySchema,
 } from "./dtos/moderation-denunciation-dto.js";
+import { PrismaModerationDenunciationsRepository } from "./repositories/prisma/moderation-denunciations-repository-prisma.js";
 import { GetDenunciationUseCase } from "./use-cases/get-denunciation-use-case.js";
 import { GetDenunciationsUseCase } from "./use-cases/get-denunciations-use-case.js";
 import { ModerateDenunciationBanUseCase } from "./use-cases/moderate-denunciation-ban-use-case.js";
@@ -29,7 +29,7 @@ export async function moderationDenunciationsRoutes(
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 	const requireModerator = requireRole("moderator");
-	const denunciationsRepository = new PrismaDenunciationsRepository();
+	const denunciationsRepository = new PrismaModerationDenunciationsRepository();
 
 	const getDenunciationsUseCase = new GetDenunciationsUseCase(
 		denunciationsRepository,

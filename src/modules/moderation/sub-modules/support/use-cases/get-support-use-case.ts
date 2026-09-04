@@ -1,6 +1,6 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { Support } from "@/modules/support/dtos/support-dto.js";
-import type { SupportsRepository } from "@/modules/support/repositories/supports-repository.js";
+import type { ModerationSupportsRepository } from "../repositories/moderation-supports-repository.js";
 
 type GetSupportUseCaseRequest = {
 	supportId: string;
@@ -11,7 +11,9 @@ type GetSupportUseCaseResponse = {
 };
 
 export class GetSupportUseCase {
-	constructor(private readonly supportsRepository: SupportsRepository) {}
+	constructor(
+		private readonly supportsRepository: ModerationSupportsRepository,
+	) {}
 
 	async execute({
 		supportId,

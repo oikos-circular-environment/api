@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { InMemoryDenunciationsRepository } from "@/modules/denunciation/repositories/in-memory/in-memory-denunciations-repository.js";
+import { InMemoryModerationDenunciationsRepository } from "../repositories/in-memory/in-memory-moderation-denunciations-repository.js";
 import { GetDenunciationsUseCase } from "./get-denunciations-use-case.js";
 
 describe("get-denunciations-use-case", () => {
 	it("returns denunciations with default limit", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const sut = new GetDenunciationsUseCase(denunciationsRepository);
 
 		await denunciationsRepository.create({
@@ -23,7 +24,8 @@ describe("get-denunciations-use-case", () => {
 	});
 
 	it("filters by status", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const sut = new GetDenunciationsUseCase(denunciationsRepository);
 
 		const created = await denunciationsRepository.create({
@@ -45,7 +47,8 @@ describe("get-denunciations-use-case", () => {
 	});
 
 	it("filters by severity", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const sut = new GetDenunciationsUseCase(denunciationsRepository);
 
 		const created = await denunciationsRepository.create({
@@ -66,10 +69,11 @@ describe("get-denunciations-use-case", () => {
 	});
 
 	it("paginates with cursor", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const sut = new GetDenunciationsUseCase(denunciationsRepository);
 
-		const old = await denunciationsRepository.create({
+		await denunciationsRepository.create({
 			title: "Old",
 			description: "desc",
 			reporter_email: "a@test.com",

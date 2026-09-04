@@ -24,7 +24,63 @@
 - [x] Verificação — `tsc --noEmit` limpo, `lint` sem warning novo (mesmos pré-existentes, só
       relocados), `test` 626/626, `test:integration` 58/58, `test:e2e` 182/182 — mesmos números do
       PR #107, confirmando paridade de comportamento
+- [ ] Passo 7 (correção pós-revisão) — repositório de moderação isolado do repositório do usuário
+      (ver "Correção — repositório de moderação separado" abaixo)
 - [ ] `code-review` aprovado
+
+## Correção — repositório de moderação separado (revisão do Christian, pós-commit)
+
+Erro na primeira passada: `moderation/sub-modules/{support,denunciation}/` ficaram importando
+`SupportsRepository`/`PrismaSupportsRepository` e `DenunciationsRepository`/
+`PrismaDenunciationsRepository` direto de `@/modules/support/` e `@/modules/denunciation/` —
+mesma interface, mesma implementação, mesma instância. Isso reacopla os dois contextos: o
+moderador passa a depender da superfície inteira do repositório do usuário (`create`,
+`findByIdAndOwner`, `findManyByOwner`, `update`, `attach` — nenhum desses é ação de moderador) só
+pra usar `findMany`/`findById`/`updateStatus`.
+
+Correção: cada sub-module de moderação ganha **seu próprio repositório**, interface e implementação
+Prisma inteiramente à parte — sem importar `SupportsRepository`/`DenunciationsRepository` nem as
+classes `Prisma*Repository` do módulo do usuário. Mesmo tabela Postgres por baixo, duas superfícies
+de acesso diferentes, cada uma só com o que o seu contexto usa:
+
+```
+src/modules/moderation/sub-modules/support/repositories/
+  moderation-supports-repository.ts        # interface: findMany, findById, updateStatus
+  in-memory/in-memory-moderation-supports-repository.ts
+  prisma/moderation-supports-repository-prisma.ts
+
+src/modules/moderation/sub-modules/denunciation/repositories/
+  moderation-denunciations-repository.ts    # interface: findMany, findById, updateStatus
+  in-memory/in-memory-moderation-denunciations-repository.ts
+  prisma/moderation-denunciations-repository-prisma.ts
+```
+
+Levantamento do que cada use-case de moderador realmente chama hoje (não adicionar métodos além
+disso):
+
+- `GetSupportsUseCase` → `findMany`; `GetSupportUseCase` → `findById`; `ModerateSupportUseCase` →
+  `findById` + `updateStatus`.
+- `GetDenunciationsUseCase` → `findMany`; `GetDenunciationUseCase` → `findById`;
+  `ModerateDenunciationUseCase` → `findById` + `updateStatus`; `ModerateDenunciationBanUseCase` →
+  `findById` + `updateStatus` (o `BanUserUseCase`/`RevokeUserSessionsUseCase` que ele também usa já
+  são de `moderation/sub-modules/users/`, isolados — não mexer).
+
+O tipo de retorno (`Support`/`Denunciation`, a forma do dado) continua vindo de
+`@/modules/support/dtos/support-dto.js` / `@/modules/denunciation/dtos/denunciations-dto.js` — só a
+interface/classe de **repositório** (acesso a dado) fica isolada; o formato do dado em si
+(`Support`/`Denunciation`) é o contrato público do módulo dono, compartilhar o tipo não é o mesmo
+problema que compartilhar a classe de acesso. O mapeamento linha-do-banco → `Support`/`Denunciation`
+em `moderation-supports-repository-prisma.ts`/`moderation-denunciations-repository-prisma.ts` é
+próprio (não importa `mapSupport`/`mapDenunciation` de dentro de `support`/`denunciation` — mesmo
+custo de ~20 linhas duplicadas, isolamento completo é o que foi pedido).
+
+Os 7 arquivos de use-case afetados (`get-support-use-case.ts`, `get-supports-use-case.ts`,
+`moderate-support-use-case.ts`, `get-denunciation-use-case.ts`, `get-denunciations-use-case.ts`,
+`moderate-denunciation-use-case.ts`, `moderate-denunciation-ban-use-case.ts`) trocam o tipo do
+construtor pra `ModerationSupportsRepository`/`ModerationDenunciationsRepository`, e os specs
+trocam `InMemorySupportsRepository`/`InMemoryDenunciationsRepository` pelos novos in-memory de
+moderação. `moderation-support-routes.ts`/`moderation-denunciation-routes.ts` trocam
+`PrismaSupportsRepository`/`PrismaDenunciationsRepository` pelos novos `PrismaModeration*Repository`.
 
 ## Contexto
 

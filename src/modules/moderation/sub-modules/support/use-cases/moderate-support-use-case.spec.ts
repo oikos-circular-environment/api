@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemorySupportsRepository } from "@/modules/support/repositories/in-memory/in-memory-supports-repository.js";
+import { InMemoryModerationSupportsRepository } from "../repositories/in-memory/in-memory-moderation-supports-repository.js";
 import { ModerateSupportUseCase } from "./moderate-support-use-case.js";
 
 describe("moderate-support-use-case", () => {
 	it("closes a support with audit fields", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new ModerateSupportUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -31,7 +31,7 @@ describe("moderate-support-use-case", () => {
 	});
 
 	it("resolves a support", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new ModerateSupportUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -52,7 +52,7 @@ describe("moderate-support-use-case", () => {
 	});
 
 	it("throws SUPPORT_NOT_FOUND for non-existent id", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new ModerateSupportUseCase(supportsRepository);
 
 		let thrownError: unknown;
@@ -74,7 +74,7 @@ describe("moderate-support-use-case", () => {
 	});
 
 	it("throws SUPPORT_ALREADY_FINALIZED when status is CLOSED", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new ModerateSupportUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -107,7 +107,7 @@ describe("moderate-support-use-case", () => {
 	});
 
 	it("throws SUPPORT_ALREADY_FINALIZED when status is RESOLVED", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new ModerateSupportUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -140,7 +140,7 @@ describe("moderate-support-use-case", () => {
 	});
 
 	it("throws SUPPORT_ALREADY_FINALIZED when status is CANCELLED", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new ModerateSupportUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({

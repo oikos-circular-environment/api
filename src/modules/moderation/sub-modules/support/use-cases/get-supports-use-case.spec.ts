@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { InMemorySupportsRepository } from "@/modules/support/repositories/in-memory/in-memory-supports-repository.js";
+import { InMemoryModerationSupportsRepository } from "../repositories/in-memory/in-memory-moderation-supports-repository.js";
 import { GetSupportsUseCase } from "./get-supports-use-case.js";
 
 describe("get-supports-use-case", () => {
 	it("returns supports with default limit", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportsUseCase(supportsRepository);
 
 		await supportsRepository.create({
@@ -26,7 +26,7 @@ describe("get-supports-use-case", () => {
 	});
 
 	it("filters by status", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportsUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -49,7 +49,7 @@ describe("get-supports-use-case", () => {
 	});
 
 	it("filters by severity", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportsUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -71,7 +71,7 @@ describe("get-supports-use-case", () => {
 	});
 
 	it("filters by type", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportsUseCase(supportsRepository);
 
 		await supportsRepository.create({
@@ -93,10 +93,10 @@ describe("get-supports-use-case", () => {
 	});
 
 	it("paginates with cursor", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportsUseCase(supportsRepository);
 
-		const old = await supportsRepository.create({
+		await supportsRepository.create({
 			title: "Old",
 			description: "desc",
 			type: "ERROR",

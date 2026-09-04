@@ -1,8 +1,8 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { Denunciation } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import type { DenunciationsRepository } from "@/modules/denunciation/repositories/denunciations-repository.js";
 import type { BanUserUseCase } from "../../users/use-cases/ban-user-use-case.js";
 import type { RevokeUserSessionsUseCase } from "../../users/use-cases/revoke-user-sessions-use-case.js";
+import type { ModerationDenunciationsRepository } from "../repositories/moderation-denunciations-repository.js";
 
 const FINAL_STATUSES = ["CLOSED", "RESOLVED", "CANCELLED"] as const;
 
@@ -21,7 +21,7 @@ type ModerateDenunciationBanUseCaseResponse = {
 
 export class ModerateDenunciationBanUseCase {
 	constructor(
-		private readonly denunciationsRepository: DenunciationsRepository,
+		private readonly denunciationsRepository: ModerationDenunciationsRepository,
 		private readonly banUserUseCase: BanUserUseCase,
 		private readonly revokeUserSessionsUseCase: RevokeUserSessionsUseCase,
 	) {}

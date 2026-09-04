@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { InMemoryAuthProvider } from "@/modules/auth/providers/auth/in-memory/in-memory-auth-provider.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemoryDenunciationsRepository } from "@/modules/denunciation/repositories/in-memory/in-memory-denunciations-repository.js";
 import { BanUserUseCase } from "../../users/use-cases/ban-user-use-case.js";
 import { RevokeUserSessionsUseCase } from "../../users/use-cases/revoke-user-sessions-use-case.js";
+import { InMemoryModerationDenunciationsRepository } from "../repositories/in-memory/in-memory-moderation-denunciations-repository.js";
 import { ModerateDenunciationBanUseCase } from "./moderate-denunciation-ban-use-case.js";
 
 function makeModeratorHeaders() {
@@ -35,7 +35,8 @@ function makeModeratorHeaders() {
 describe("moderate-denunciation-ban-use-case", () => {
 	it("throws DENUNCIATION_NOT_FOUND for non-existent id", async () => {
 		const provider = new InMemoryAuthProvider();
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const banUserUseCase = new BanUserUseCase(provider);
 		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
@@ -65,7 +66,8 @@ describe("moderate-denunciation-ban-use-case", () => {
 
 	it("throws DENUNCIATION_ALREADY_FINALIZED when status is CLOSED", async () => {
 		const provider = new InMemoryAuthProvider();
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const banUserUseCase = new BanUserUseCase(provider);
 		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
@@ -105,7 +107,8 @@ describe("moderate-denunciation-ban-use-case", () => {
 
 	it("throws DENUNCIATION_ALREADY_FINALIZED when status is RESOLVED", async () => {
 		const provider = new InMemoryAuthProvider();
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const banUserUseCase = new BanUserUseCase(provider);
 		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
@@ -145,7 +148,8 @@ describe("moderate-denunciation-ban-use-case", () => {
 
 	it("throws DENUNCIATION_ALREADY_FINALIZED when status is CANCELLED", async () => {
 		const provider = new InMemoryAuthProvider();
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const banUserUseCase = new BanUserUseCase(provider);
 		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
@@ -184,7 +188,8 @@ describe("moderate-denunciation-ban-use-case", () => {
 
 	it("throws DENUNCIATION_HAS_NO_TARGET_USER when reported_user_id is null", async () => {
 		const provider = new InMemoryAuthProvider();
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const banUserUseCase = new BanUserUseCase(provider);
 		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
@@ -220,7 +225,8 @@ describe("moderate-denunciation-ban-use-case", () => {
 
 	it("bans user, revokes sessions, and marks denunciation RESOLVED with audit fields", async () => {
 		const { provider, prepare } = makeModeratorHeaders();
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const banUserUseCase = new BanUserUseCase(provider);
 		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(

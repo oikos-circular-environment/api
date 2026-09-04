@@ -3,7 +3,7 @@ import type {
 	ModerationSeverity,
 	Support,
 } from "@/modules/support/dtos/support-dto.js";
-import type { SupportsRepository } from "@/modules/support/repositories/supports-repository.js";
+import type { ModerationSupportsRepository } from "../repositories/moderation-supports-repository.js";
 
 const FINAL_STATUSES = ["CLOSED", "RESOLVED", "CANCELLED"] as const;
 
@@ -20,7 +20,9 @@ type ModerateSupportUseCaseResponse = {
 };
 
 export class ModerateSupportUseCase {
-	constructor(private readonly supportsRepository: SupportsRepository) {}
+	constructor(
+		private readonly supportsRepository: ModerationSupportsRepository,
+	) {}
 
 	async execute({
 		supportId,

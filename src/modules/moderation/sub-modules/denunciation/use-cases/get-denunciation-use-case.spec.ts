@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemoryDenunciationsRepository } from "@/modules/denunciation/repositories/in-memory/in-memory-denunciations-repository.js";
+import { InMemoryModerationDenunciationsRepository } from "../repositories/in-memory/in-memory-moderation-denunciations-repository.js";
 import { GetDenunciationUseCase } from "./get-denunciation-use-case.js";
 
 describe("get-denunciation-use-case", () => {
 	it("returns a denunciation by id", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const sut = new GetDenunciationUseCase(denunciationsRepository);
 
 		const created = await denunciationsRepository.create({
@@ -20,7 +21,8 @@ describe("get-denunciation-use-case", () => {
 	});
 
 	it("throws DENUNCIATION_NOT_FOUND for non-existent id", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
+		const denunciationsRepository =
+			new InMemoryModerationDenunciationsRepository();
 		const sut = new GetDenunciationUseCase(denunciationsRepository);
 
 		let thrownError: unknown;

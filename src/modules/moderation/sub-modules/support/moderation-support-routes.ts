@@ -8,11 +8,11 @@ import { requireRole } from "@/modules/common/middlewares/require-role.js";
 import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import { supportSchema } from "@/modules/support/dtos/support-dto.js";
-import { PrismaSupportsRepository } from "@/modules/support/repositories/prisma/supports-repository-prisma.js";
 import {
 	getSupportsQuerySchema,
 	moderateSupportBodySchema,
 } from "./dtos/moderation-support-dto.js";
+import { PrismaModerationSupportsRepository } from "./repositories/prisma/moderation-supports-repository-prisma.js";
 import { GetSupportUseCase } from "./use-cases/get-support-use-case.js";
 import { GetSupportsUseCase } from "./use-cases/get-supports-use-case.js";
 import { ModerateSupportUseCase } from "./use-cases/moderate-support-use-case.js";
@@ -26,7 +26,7 @@ export async function moderationSupportRoutes(
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 	const requireModerator = requireRole("moderator");
-	const supportsRepository = new PrismaSupportsRepository();
+	const supportsRepository = new PrismaModerationSupportsRepository();
 
 	const getSupportsUseCase = new GetSupportsUseCase(supportsRepository);
 	const getSupportUseCase = new GetSupportUseCase(supportsRepository);

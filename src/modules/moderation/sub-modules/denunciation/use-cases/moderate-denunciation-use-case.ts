@@ -3,7 +3,7 @@ import type {
 	Denunciation,
 	ModerationSeverity,
 } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import type { DenunciationsRepository } from "@/modules/denunciation/repositories/denunciations-repository.js";
+import type { ModerationDenunciationsRepository } from "../repositories/moderation-denunciations-repository.js";
 
 const FINAL_STATUSES = ["CLOSED", "RESOLVED", "CANCELLED"] as const;
 
@@ -21,7 +21,7 @@ type ModerateDenunciationUseCaseResponse = {
 
 export class ModerateDenunciationUseCase {
 	constructor(
-		private readonly denunciationsRepository: DenunciationsRepository,
+		private readonly denunciationsRepository: ModerationDenunciationsRepository,
 	) {}
 
 	async execute({

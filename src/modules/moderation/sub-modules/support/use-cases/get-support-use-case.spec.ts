@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { InMemorySupportsRepository } from "@/modules/support/repositories/in-memory/in-memory-supports-repository.js";
+import { InMemoryModerationSupportsRepository } from "../repositories/in-memory/in-memory-moderation-supports-repository.js";
 import { GetSupportUseCase } from "./get-support-use-case.js";
 
 describe("get-support-use-case", () => {
 	it("returns a support by id", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportUseCase(supportsRepository);
 
 		const created = await supportsRepository.create({
@@ -21,7 +21,7 @@ describe("get-support-use-case", () => {
 	});
 
 	it("throws SUPPORT_NOT_FOUND for non-existent id", async () => {
-		const supportsRepository = new InMemorySupportsRepository();
+		const supportsRepository = new InMemoryModerationSupportsRepository();
 		const sut = new GetSupportUseCase(supportsRepository);
 
 		let thrownError: unknown;

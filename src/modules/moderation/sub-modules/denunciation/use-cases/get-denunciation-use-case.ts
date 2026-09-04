@@ -1,6 +1,6 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { Denunciation } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import type { DenunciationsRepository } from "@/modules/denunciation/repositories/denunciations-repository.js";
+import type { ModerationDenunciationsRepository } from "../repositories/moderation-denunciations-repository.js";
 
 type GetDenunciationUseCaseRequest = {
 	denunciationId: string;
@@ -12,7 +12,7 @@ type GetDenunciationUseCaseResponse = {
 
 export class GetDenunciationUseCase {
 	constructor(
-		private readonly denunciationsRepository: DenunciationsRepository,
+		private readonly denunciationsRepository: ModerationDenunciationsRepository,
 	) {}
 
 	async execute({

@@ -4,7 +4,7 @@ import type {
 	Support,
 	SupportType,
 } from "@/modules/support/dtos/support-dto.js";
-import type { SupportsRepository } from "@/modules/support/repositories/supports-repository.js";
+import type { ModerationSupportsRepository } from "../repositories/moderation-supports-repository.js";
 
 type GetSupportsUseCaseRequest = {
 	status?: ModerationStatus;
@@ -19,7 +19,9 @@ type GetSupportsUseCaseResponse = {
 };
 
 export class GetSupportsUseCase {
-	constructor(private readonly supportsRepository: SupportsRepository) {}
+	constructor(
+		private readonly supportsRepository: ModerationSupportsRepository,
+	) {}
 
 	async execute({
 		status,

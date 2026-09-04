@@ -3,7 +3,7 @@ import type {
 	ModerationSeverity,
 	ModerationStatus,
 } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import type { DenunciationsRepository } from "@/modules/denunciation/repositories/denunciations-repository.js";
+import type { ModerationDenunciationsRepository } from "../repositories/moderation-denunciations-repository.js";
 
 type GetDenunciationsUseCaseRequest = {
 	status?: ModerationStatus;
@@ -18,7 +18,7 @@ type GetDenunciationsUseCaseResponse = {
 
 export class GetDenunciationsUseCase {
 	constructor(
-		private readonly denunciationsRepository: DenunciationsRepository,
+		private readonly denunciationsRepository: ModerationDenunciationsRepository,
 	) {}
 
 	async execute({
