@@ -21,10 +21,9 @@
 - [x] Passo 5 — atualizar `moderation-routes.ts` e o registro em `app.ts` (`app.ts` não mudou —
       só registra `moderationRoutes`, que por sua vez já registra os módulos novos)
 - [x] Passo 6 — mover specs junto (co-localizados, mesmo caminho do arquivo movido)
-- [x] Verificação — `tsc --noEmit` limpo, `lint` sem warning novo (mesmos pré-existentes,
-      só relocados), `test` 626/626 verde. `test:integration` não rodado nesta sessão (banco de
-      teste da sandbox não estava provisionado e `migrate:dev` apontou pro banco de dev — abortado
-      sem aplicar nada; rodar via `qa-runner`/CI antes do merge)
+- [x] Verificação — `tsc --noEmit` limpo, `lint` sem warning novo (mesmos pré-existentes, só
+      relocados), `test` 626/626, `test:integration` 58/58, `test:e2e` 182/182 — mesmos números do
+      PR #107, confirmando paridade de comportamento
 - [ ] `code-review` aprovado
 
 ## Contexto
