@@ -20,7 +20,7 @@ import {
 } from "../../dtos/auth-v2-dto.js";
 import { auth } from "../../providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "../../providers/auth/better-auth/better-auth-auth-provider.js";
-import { authUserResponseMapper } from "../../providers/auth/better-auth/mapper/auth-user-response-mapper.js";
+import { authUserWithOrganizationsResponseMapper } from "../../providers/auth/better-auth/mapper/auth-user-response-mapper.js";
 import { PrismaUserOrganizationsRepository } from "../../repositories/prisma/user-organizations-repository-prisma.js";
 import { ChangePasswordUseCase } from "../../use-cases/v2/change-password-use-case.js";
 import { GetSessionUseCase } from "../../use-cases/v2/get-session-use-case.js";
@@ -102,15 +102,7 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 			);
 			return reply.send({
 				token,
-				user: {
-					...authUserResponseMapper(user),
-					organizations: organizations.map((org) => ({
-						id: org.id,
-						company_id: org.companyId,
-						name: org.name,
-						role: org.role,
-					})),
-				},
+				user: authUserWithOrganizationsResponseMapper(user, organizations),
 			});
 		},
 	);
@@ -153,15 +145,7 @@ export async function authV2Routes(app: FastifyInstance): Promise<void> {
 				user.id,
 			);
 			return reply.send({
-				user: {
-					...authUserResponseMapper(user),
-					organizations: organizations.map((org) => ({
-						id: org.id,
-						company_id: org.companyId,
-						name: org.name,
-						role: org.role,
-					})),
-				},
+				user: authUserWithOrganizationsResponseMapper(user, organizations),
 			});
 		},
 	);

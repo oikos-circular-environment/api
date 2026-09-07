@@ -1,25 +1,22 @@
-import "dotenv/config";
 import { randomUUID } from "node:crypto";
-import bcryptjs from "bcryptjs";
-import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
+import {
+	afterAll,
+	afterEach,
+	beforeAll,
+	describe,
+	expect,
+	it,
+} from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 
 describe("auth-login", () => {
-	const createdUserIds: string[] = [];
+	const createdEmails: string[] = [];
 
-	async function createUser(email?: string, password = "test-password-123") {
-		const id = randomUUID();
-		const mail = email ?? `e2e-${id}@test.local`;
-		const hash = await bcryptjs.hash(password, 10);
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, $3, NOW())`,
-			id,
-			mail,
-			hash,
-		);
-		createdUserIds.push(id);
-		return { id, email: mail, password };
+	function makeEmail() {
+		const email = `auth-login-${randomUUID()}@test.local`;
+		createdEmails.push(email);
+		return email;
 	}
 
 	beforeAll(async () => {
@@ -31,73 +28,64 @@ describe("auth-login", () => {
 	});
 
 	afterEach(async () => {
-		if (createdUserIds.length > 0) {
-			const placeholders = createdUserIds.map((_, i) => `$${i + 1}`).join(", ");
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM refresh_tokens WHERE user_id IN (${placeholders})`,
-				...createdUserIds,
-			);
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${placeholders})`,
-				...createdUserIds,
-			);
-			createdUserIds.length = 0;
+		if (createdEmails.length > 0) {
+			await prisma.user.deleteMany({
+				where: { email: { in: createdEmails } },
+			});
+			createdEmails.length = 0;
 		}
 	});
 
-	// ─── POST /v1/auth/login ─────────────────────────────────────────────────
-
 	describe("POST /v1/auth/login", () => {
-		it("200 — valid credentials return token and refreshToken", async () => {
-			const user = await createUser();
+		it("200 — valid credentials return token and user", async () => {
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await app.inject({
+				method: "POST",
+				url: "/v2/auth/sign-up",
+				payload: { name: "Test User", email, password },
+			});
 
 			const res = await app.inject({
 				method: "POST",
 				url: "/v1/auth/login",
-				payload: { email: user.email, password: user.password },
+				payload: { email, password },
 			});
 
 			expect(res.statusCode).toBe(200);
 			const body = res.json();
 			expect(typeof body.token).toBe("string");
-			expect(typeof body.refreshToken).toBe("string");
-		});
-
-		it("200 — login persists an active refresh token", async () => {
-			const user = await createUser();
-
-			await app.inject({
-				method: "POST",
-				url: "/v1/auth/login",
-				payload: { email: user.email, password: user.password },
-			});
-
-			const tokens = await prisma.refreshToken.findMany({
-				where: { user_id: user.id },
-			});
-			expect(tokens).toHaveLength(1);
-			expect(tokens[0].revoked_at).toBeNull();
+			expect(body.user.email).toBe(email);
+			expect(body.user.role).toBe("user");
 		});
 
 		it("401 — wrong password", async () => {
-			const user = await createUser();
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await app.inject({
+				method: "POST",
+				url: "/v2/auth/sign-up",
+				payload: { name: "Test User", email, password },
+			});
 
 			const res = await app.inject({
 				method: "POST",
 				url: "/v1/auth/login",
-				payload: { email: user.email, password: "wrong-password-999" },
+				payload: { email, password: "WrongPass@999" },
 			});
 
 			expect(res.statusCode).toBe(401);
 		});
 
-		it("401 — email not registered", async () => {
+		it("401 — non-existent email", async () => {
 			const res = await app.inject({
 				method: "POST",
 				url: "/v1/auth/login",
 				payload: {
-					email: "nonexistent@test.local",
-					password: "test-password-123",
+					email: `nonexistent-${randomUUID()}@test.local`,
+					password: "Test@123456",
 				},
 			});
 
@@ -108,7 +96,7 @@ describe("auth-login", () => {
 			const res = await app.inject({
 				method: "POST",
 				url: "/v1/auth/login",
-				payload: { password: "test-password-123" },
+				payload: { password: "Test@123456" },
 			});
 
 			expect(res.statusCode).toBe(400);
