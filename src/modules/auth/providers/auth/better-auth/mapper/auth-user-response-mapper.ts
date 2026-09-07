@@ -19,3 +19,23 @@ export function authUserResponseMapper(
 		updated_at: user.updatedAt.toISOString(),
 	};
 }
+
+export function authUserWithOrganizationsResponseMapper(
+	user: AuthUser,
+	organizations: Array<{
+		id: string;
+		companyId: string | null;
+		name: string;
+		role: string;
+	}>,
+): AuthV2UserResponse {
+	return {
+		...authUserResponseMapper(user),
+		organizations: organizations.map((org) => ({
+			id: org.id,
+			company_id: org.companyId,
+			name: org.name,
+			role: org.role,
+		})),
+	};
+}
