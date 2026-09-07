@@ -210,7 +210,7 @@ Como **1º passo da execução** (agente rodando dentro de `api/`): instalar/ver
 4. **change-password v2** + testes.
 5. **forgot/reset** (EmailProvider fake) + testes.
 6. **Painel `/v2/users`** (admin: list/create/role/ban/revoke/reset/delete) + testes.
-7. *(futuro)* Resend real · 8. *(futuro)* login social · 9. *(futuro)* migrar recurso+mobile p/ v2.
+7. *(futuro)* Resend real · 8. *(futuro)* login social · 9. ~~(futuro) migrar recurso+mobile p/ v2~~ — feito em [`02-migrar-v1-para-better-auth.md`](./02-migrar-v1-para-better-auth.md) (api#115), exceto a parte mobile (repo separado).
 
 ## Decisões fechadas
 - **bcrypt custo 10** no engine v2 (greenfield; v1 segue em 6).
