@@ -2,7 +2,7 @@ import { expo } from "@better-auth/expo";
 import { compare, hash } from "bcryptjs";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import { openAPI, testUtils } from "better-auth/plugins";
+import { anonymous, openAPI, testUtils } from "better-auth/plugins";
 import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { organization } from "better-auth/plugins/organization";
@@ -135,6 +135,15 @@ export const auth = betterAuth({
 				session: {
 					fields: {
 						impersonatedBy: "impersonated_by",
+					},
+				},
+			},
+		}),
+		anonymous({
+			schema: {
+				user: {
+					fields: {
+						isAnonymous: "is_anonymous",
 					},
 				},
 			},

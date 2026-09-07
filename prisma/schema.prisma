@@ -17,6 +17,7 @@ model User {
   name            String?
   email           String    @unique
   email_verified  Boolean   @default(false)
+  is_anonymous    Boolean   @default(false)
   image           String?
   role            String    @default("user")
   banned          Boolean   @default(false)
