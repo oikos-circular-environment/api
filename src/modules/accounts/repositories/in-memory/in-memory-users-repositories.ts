@@ -61,4 +61,14 @@ export class InMemoryUsersRepository implements UsersRepository {
 		const index = this.items.findIndex((item) => item.id === userId);
 		this.items.splice(index, 1);
 	}
+
+	async updateName(userId: string, name: string) {
+		const user = this.items.find((item) => item.id === userId);
+		if (user) user.name = name;
+	}
+
+	async updateImage(userId: string, image: string | null) {
+		const user = this.items.find((item) => item.id === userId);
+		if (user) user.image = image;
+	}
 }

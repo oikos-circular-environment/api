@@ -1,3 +1,4 @@
+import type { Prisma } from "@/generated/prisma/client.js";
 import type { CreateUser, User } from "@/modules/accounts/dtos/accounts-dto.js";
 
 export interface UsersRepository {
@@ -8,4 +9,14 @@ export interface UsersRepository {
 	markAsDeleted(userId: string, deletionJobId: string): Promise<User>;
 	cancelDeletion(userId: string): Promise<User>;
 	delete(userId: string): Promise<void>;
+	updateName(
+		userId: string,
+		name: string,
+		tx?: Prisma.TransactionClient,
+	): Promise<void>;
+	updateImage(
+		userId: string,
+		image: string | null,
+		tx?: Prisma.TransactionClient,
+	): Promise<void>;
 }

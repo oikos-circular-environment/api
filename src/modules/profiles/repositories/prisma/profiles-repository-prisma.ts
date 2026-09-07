@@ -1,3 +1,4 @@
+import type { Prisma } from "@/generated/prisma/client.js";
 import { prisma } from "@/lib/prisma.js";
 import type {
 	CreateProfile,
@@ -91,14 +92,15 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return profileMapper(profile as PrismaProfileWithRelations);
 	}
 
-	async upsert(data: CreateProfile) {
+	async upsert(data: CreateProfile, tx?: Prisma.TransactionClient) {
+		const client = tx ?? prisma;
 		const payload = {
 			full_name: data.full_name,
 			display_name: data.display_name,
 			phone: data.phone,
 		};
 
-		const profile = await prisma.profile.upsert({
+		const profile = await client.profile.upsert({
 			where: { user_id: data.user_id },
 			create: { user_id: data.user_id, ...payload },
 			update: payload,
@@ -114,8 +116,13 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return mapped;
 	}
 
-	async saveProfileImage(profileId: string, data: SaveProfileImage) {
-		const currentProfile = await prisma.profile.findUnique({
+	async saveProfileImage(
+		profileId: string,
+		data: SaveProfileImage,
+		tx?: Prisma.TransactionClient,
+	) {
+		const client = tx ?? prisma;
+		const currentProfile = await client.profile.findUnique({
 			where: {
 				id: profileId,
 			},
@@ -129,7 +136,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		}
 
 		if (currentProfile.profile_image_id) {
-			await prisma.profileImage.update({
+			await client.profileImage.update({
 				where: {
 					id: currentProfile.profile_image_id,
 				},
@@ -140,8 +147,8 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 				},
 			});
 		} else {
-			await prisma.$transaction(async (tx) => {
-				const profileImage = await tx.profileImage.create({
+			const createImageAndLink = async (t: Prisma.TransactionClient) => {
+				const profileImage = await t.profileImage.create({
 					data: {
 						url: data.url,
 						file_name: data.file_name,
@@ -149,14 +156,20 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 					},
 				});
 
-				await tx.profile.update({
+				await t.profile.update({
 					where: { id: profileId },
 					data: { profile_image_id: profileImage.id },
 				});
-			});
+			};
+
+			if (tx) {
+				await createImageAndLink(tx);
+			} else {
+				await prisma.$transaction(createImageAndLink);
+			}
 		}
 
-		const updatedProfile = await prisma.profile.findUnique({
+		const updatedProfile = await client.profile.findUnique({
 			where: {
 				id: profileId,
 			},
@@ -173,8 +186,9 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 		return mappedProfile?.profile_image ?? null;
 	}
 
-	async deleteProfileImage(profileId: string) {
-		const currentProfile = await prisma.profile.findUnique({
+	async deleteProfileImage(profileId: string, tx?: Prisma.TransactionClient) {
+		const client = tx ?? prisma;
+		const currentProfile = await client.profile.findUnique({
 			where: {
 				id: profileId,
 			},
@@ -185,7 +199,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 
 		if (currentProfile) {
 			if (currentProfile.profile_image_id) {
-				await prisma.profile.update({
+				await client.profile.update({
 					where: {
 						id: profileId,
 					},
@@ -194,7 +208,7 @@ export class PrismaProfilesRepository implements ProfilesRepository {
 					},
 				});
 
-				await prisma.profileImage.delete({
+				await client.profileImage.delete({
 					where: {
 						id: currentProfile.profile_image_id,
 					},

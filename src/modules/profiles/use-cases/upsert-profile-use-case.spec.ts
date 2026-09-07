@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { InMemoryUsersRepository } from "@/modules/accounts/repositories/in-memory/in-memory-users-repositories.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import { InMemoryTransactionManager } from "@/modules/common/providers/transaction/in-memory/in-memory-transaction-manager.js";
 import {
 	makeAddress,
 	makeProfileInput,
@@ -24,10 +25,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -53,10 +56,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const initial = makeProfileInput();
@@ -85,10 +90,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -124,10 +131,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -160,10 +169,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -212,10 +223,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -248,10 +261,12 @@ describe("upsert-profile-use-case", () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const addressesRepository = new InMemoryAddressesRepository();
 		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileUseCase(
 			profilesRepository,
 			addressesRepository,
 			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -282,5 +297,66 @@ describe("upsert-profile-use-case", () => {
 
 		expect(addressesRepository.items.length).toBe(1);
 		expect(addressesRepository.items[0]?.street).toBe("Rua A");
+	});
+
+	it("syncs User.name with full_name when profile is created", async () => {
+		const profilesRepository = new InMemoryProfilesRepository();
+		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+			transactionManager,
+		);
+
+		const input = makeProfileInput();
+
+		createUser(usersRepository, input.user_id);
+
+		await sut.execute({
+			userId: input.user_id,
+			data: {
+				full_name: input.full_name,
+				display_name: input.display_name,
+				phone: input.phone,
+			},
+		});
+
+		const user = await usersRepository.findById(input.user_id);
+		expect(user?.name).toBe(input.full_name);
+	});
+
+	it("syncs User.name with full_name when profile is updated", async () => {
+		const profilesRepository = new InMemoryProfilesRepository();
+		const addressesRepository = new InMemoryAddressesRepository();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
+		const sut = new UpsertProfileUseCase(
+			profilesRepository,
+			addressesRepository,
+			usersRepository,
+			transactionManager,
+		);
+
+		const initial = makeProfileInput();
+
+		createUser(usersRepository, initial.user_id);
+		await profilesRepository.create(initial);
+
+		const updated = makeProfileInput({ user_id: initial.user_id });
+
+		await sut.execute({
+			userId: initial.user_id,
+			data: {
+				full_name: updated.full_name,
+				display_name: updated.display_name,
+				phone: updated.phone,
+			},
+		});
+
+		const user = await usersRepository.findById(initial.user_id);
+		expect(user?.name).toBe(updated.full_name);
 	});
 });

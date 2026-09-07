@@ -3,6 +3,7 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { PrismaUsersRepository } from "@/modules/accounts/repositories/prisma/users-repository-prisma.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
+import { PrismaTransactionManager } from "@/modules/common/providers/transaction/prisma/prisma-transaction-manager.js";
 import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
@@ -35,6 +36,7 @@ export async function profileRoutes(app: FastifyInstance) {
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = makeStorageProvider();
 	const usersRepository = new PrismaUsersRepository();
+	const transactionManager = new PrismaTransactionManager();
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 
@@ -42,15 +44,20 @@ export async function profileRoutes(app: FastifyInstance) {
 		profilesRepository,
 		addressesRepository,
 		usersRepository,
+		transactionManager,
 	);
 	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
 	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
+		usersRepository,
+		transactionManager,
 	);
 	const deleteProfileImageUseCase = new DeleteProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
+		usersRepository,
+		transactionManager,
 	);
 	const getProfileAddressUseCase = new GetProfileAddressUseCase(
 		profilesRepository,

@@ -76,6 +76,11 @@ describe("upsert-profile", () => {
 		expect(body.profile.full_name).toBe("Maria Silva");
 		expect(body.profile.address).not.toBeNull();
 		expect(body.profile.address.city).toBe("São Paulo");
+
+		const account = await prisma.user.findUniqueOrThrow({
+			where: { id: user.id },
+		});
+		expect(account.name).toBe("Maria Silva");
 	});
 
 	it("200 — updates existing profile", async () => {
@@ -112,6 +117,11 @@ describe("upsert-profile", () => {
 		const body = res.json();
 		expect(body.profile.full_name).toBe("Updated Name");
 		expect(body.profile.phone).toBe("11999990001");
+
+		const account = await prisma.user.findUniqueOrThrow({
+			where: { id: user.id },
+		});
+		expect(account.name).toBe("Updated Name");
 	});
 
 	it("401 — missing authorization token", async () => {

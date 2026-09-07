@@ -1,5 +1,7 @@
+import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
+import type { TransactionManager } from "@/modules/common/providers/transaction/transaction-manager.js";
 import type { ProfileImage } from "@/modules/profiles/dtos/profiles-dto.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
 
@@ -25,6 +27,8 @@ export class UpsertProfileImageUseCase {
 	constructor(
 		private readonly profilesRepository: ProfilesRepository,
 		private readonly storageProvider: StorageProvider,
+		private readonly usersRepository: UsersRepository,
+		private readonly transactionManager: TransactionManager,
 	) {}
 
 	async execute({
@@ -79,14 +83,19 @@ export class UpsertProfileImageUseCase {
 		}
 
 		const { url } = await this.storageProvider.getFileUrl(filePath);
-		const profileImage = await this.profilesRepository.saveProfileImage(
-			profile.id,
-			{
-				url,
-				file_name: file.fileName,
-				path: filePath,
-			},
-		);
+		const profileImage = await this.transactionManager.run(async (tx) => {
+			const saved = await this.profilesRepository.saveProfileImage(
+				profile.id,
+				{
+					url,
+					file_name: file.fileName,
+					path: filePath,
+				},
+				tx,
+			);
+			await this.usersRepository.updateImage(userId, url, tx);
+			return saved;
+		});
 
 		if (!profileImage) {
 			throw new AppError(
