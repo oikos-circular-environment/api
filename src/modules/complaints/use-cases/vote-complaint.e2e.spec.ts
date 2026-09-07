@@ -8,19 +8,22 @@ import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js
 describe("vote-complaint", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
+	const E2E_PASSWORD = "Test@123456";
 
 	async function createUser(
 		email?: string,
 	): Promise<{ id: string; email: string }> {
-		const userId = randomUUID();
-		const userEmail = email ?? `e2e-${userId}@test.local`;
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
-			userId,
-			userEmail,
-		);
-		createdUserIds.push(userId);
-		return { id: userId, email: userEmail };
+		const userEmail = email ?? `e2e-${randomUUID()}@test.local`;
+		await app.inject({
+			method: "POST",
+			url: "/v2/auth/sign-up",
+			payload: { name: "E2E User", email: userEmail, password: E2E_PASSWORD },
+		});
+		const user = await prisma.user.findUniqueOrThrow({
+			where: { email: userEmail },
+		});
+		createdUserIds.push(user.id);
+		return { id: user.id, email: userEmail };
 	}
 
 	async function createComplaint(ownerId: string): Promise<string> {
@@ -37,8 +40,13 @@ describe("vote-complaint", () => {
 		return c.id;
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(_userId: string, email: string): Promise<string> {
+		const res = await app.inject({
+			method: "POST",
+			url: "/v2/auth/sign-in",
+			payload: { email, password: E2E_PASSWORD },
+		});
+		return res.json().token;
 	}
 
 	beforeAll(async () => {
@@ -57,10 +65,7 @@ describe("vote-complaint", () => {
 			createdComplaintIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${createdUserIds.map((_, i) => `$${i + 1}`).join(", ")})`,
-				...createdUserIds,
-			);
+			await prisma.user.deleteMany({ where: { id: { in: createdUserIds } } });
 			createdUserIds.length = 0;
 		}
 	});
@@ -76,7 +81,7 @@ describe("vote-complaint", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+				authorization: `Bearer ${await bearerToken(voter.id, voter.email)}`,
 			},
 			payload: { vote_type: "RESOLVED" },
 		});
@@ -92,7 +97,7 @@ describe("vote-complaint", () => {
 		const owner = await createUser();
 		const voter = await createUser();
 		const complaintId = await createComplaint(owner.id);
-		const token = bearerToken(voter.id, voter.email);
+		const token = await bearerToken(voter.id, voter.email);
 
 		await app.inject({
 			method: "POST",
@@ -124,7 +129,7 @@ describe("vote-complaint", () => {
 			method: "POST",
 			url: `/v1/complaints/${randomUUID()}/votes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+				authorization: `Bearer ${await bearerToken(voter.id, voter.email)}`,
 			},
 			payload: { vote_type: "RESOLVED" },
 		});
@@ -145,7 +150,7 @@ describe("vote-complaint", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+				authorization: `Bearer ${await bearerToken(voter.id, voter.email)}`,
 			},
 			payload: { vote_type: "RESOLVED" },
 		});
@@ -167,7 +172,7 @@ describe("vote-complaint", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+				authorization: `Bearer ${await bearerToken(voter.id, voter.email)}`,
 			},
 			payload: { vote_type: "NOT_RESOLVED" },
 		});
@@ -185,7 +190,7 @@ describe("vote-complaint", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/votes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(voter.id, voter.email)}`,
+				authorization: `Bearer ${await bearerToken(voter.id, voter.email)}`,
 			},
 			payload: { vote_type: "INVALID_VALUE" },
 		});
@@ -216,7 +221,7 @@ describe("vote-complaint", () => {
 			method: "GET",
 			url: `/v1/complaints/${complaintId}/votes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(owner.id, owner.email)}`,
+				authorization: `Bearer ${await bearerToken(owner.id, owner.email)}`,
 			},
 		});
 
@@ -229,7 +234,7 @@ describe("vote-complaint", () => {
 		const owner = await createUser();
 		const voter = await createUser();
 		const complaintId = await createComplaint(owner.id);
-		const token = bearerToken(voter.id, voter.email);
+		const token = await bearerToken(voter.id, voter.email);
 
 		await app.inject({
 			method: "POST",
@@ -268,7 +273,7 @@ describe("vote-complaint", () => {
 		const owner = await createUser();
 		const voter = await createUser();
 		const complaintId = await createComplaint(owner.id);
-		const token = bearerToken(voter.id, voter.email);
+		const token = await bearerToken(voter.id, voter.email);
 
 		await app.inject({
 			method: "POST",
