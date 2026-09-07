@@ -4,7 +4,10 @@ import z from "zod";
 import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "@/modules/common/errors/app-error.js";
-import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
+import {
+	createVerifySession,
+	requireAuthUser,
+} from "@/modules/common/middlewares/verify-session.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import {
@@ -206,7 +209,7 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 			const { cursor, limit } = request.query;
 
 			const result = await getOwnSupportsUseCase.execute({
@@ -240,7 +243,7 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const support = await getOwnSupportUseCase.execute({
 				userId: user.id,
@@ -271,7 +274,7 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const support = await updateOwnSupportUseCase.execute({
 				userId: user.id,
@@ -301,7 +304,7 @@ export async function supportRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const support = await cancelOwnSupportUseCase.execute({
 				userId: user.id,

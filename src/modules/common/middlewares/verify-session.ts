@@ -35,3 +35,15 @@ export function createVerifySession(sessionReader: SessionReader) {
 		request.authV2User = result.user;
 	};
 }
+
+/**
+ * Reads the session user set by `verifySession`, throwing 401 instead of
+ * silently allowing `undefined` if a route forgets to run the preHandler.
+ */
+export function requireAuthUser(request: FastifyRequest): AuthUserLike {
+	if (!request.authV2User) {
+		throw new AppError("Unauthorized.", "UNAUTHORIZED", 401);
+	}
+
+	return request.authV2User;
+}

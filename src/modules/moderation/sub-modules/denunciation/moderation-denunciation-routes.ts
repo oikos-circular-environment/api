@@ -5,7 +5,10 @@ import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { appErrorSchema } from "@/modules/common/errors/app-error.js";
 import { requireRole } from "@/modules/common/middlewares/require-role.js";
-import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
+import {
+	createVerifySession,
+	requireAuthUser,
+} from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import { denunciationSchema } from "@/modules/denunciation/dtos/denunciations-dto.js";
 import { BanUserUseCase } from "../users/use-cases/ban-user-use-case.js";
@@ -119,7 +122,7 @@ export async function moderationDenunciationsRoutes(
 			const result = await moderateDenunciationUseCase.execute({
 				denunciationId: request.params.id,
 				...request.body,
-				moderatedBy: request.authV2User!.id,
+				moderatedBy: requireAuthUser(request).id,
 			});
 			return reply.send({ denunciation: result.denunciation });
 		},
@@ -157,7 +160,7 @@ export async function moderationDenunciationsRoutes(
 		async (request, reply) => {
 			const result = await moderateDenunciationBanUseCase.execute({
 				denunciationId: request.params.id,
-				moderatorId: request.authV2User!.id,
+				moderatorId: requireAuthUser(request).id,
 				banReason: request.body.ban_reason,
 				banExpiresIn: request.body.ban_expires_in,
 				headers: request.headers as unknown as Headers,

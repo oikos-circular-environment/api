@@ -4,7 +4,10 @@ import z from "zod";
 import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "@/modules/common/errors/app-error.js";
-import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
+import {
+	createVerifySession,
+	requireAuthUser,
+} from "@/modules/common/middlewares/verify-session.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import { sanitizeJsonInput } from "@/modules/common/utils/sanitize-json-input.js";
@@ -143,7 +146,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 			const { cursor, limit } = request.query;
 
 			const result = await getOwnDenunciationsUseCase.execute({
@@ -177,7 +180,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const denunciation = await getOwnDenunciationUseCase.execute({
 				userId: user.id,
@@ -208,7 +211,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const denunciation = await updateOwnDenunciationUseCase.execute({
 				userId: user.id,
@@ -238,7 +241,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const denunciation = await cancelOwnDenunciationUseCase.execute({
 				userId: user.id,
@@ -271,7 +274,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			const fields: Record<string, string> = {};
 			const files: Array<{
@@ -394,7 +397,7 @@ export async function denunciationRoutes(app: FastifyInstance): Promise<void> {
 			}),
 		},
 		async (request, reply) => {
-			const user = request.authV2User!;
+			const user = requireAuthUser(request);
 
 			await deleteDenunciationAttachmentUseCase.execute({
 				denunciationId: request.params.id,

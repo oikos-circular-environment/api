@@ -5,7 +5,10 @@ import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { appErrorSchema } from "@/modules/common/errors/app-error.js";
 import { requireRole } from "@/modules/common/middlewares/require-role.js";
-import { createVerifySession } from "@/modules/common/middlewares/verify-session.js";
+import {
+	createVerifySession,
+	requireAuthUser,
+} from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import { supportSchema } from "@/modules/support/dtos/support-dto.js";
 import {
@@ -103,7 +106,7 @@ export async function moderationSupportRoutes(
 			const result = await moderateSupportUseCase.execute({
 				supportId: request.params.id,
 				...request.body,
-				moderatedBy: request.authV2User!.id,
+				moderatedBy: requireAuthUser(request).id,
 			});
 			return reply.send({ support: result.support });
 		},
