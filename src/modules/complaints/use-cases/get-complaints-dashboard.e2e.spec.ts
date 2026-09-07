@@ -4,26 +4,18 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { createTestUser, loginTestUser } from "@/test/auth-test-helpers.js";
 
 describe("get-complaints-dashboard", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
-	const E2E_PASSWORD = "Test@123456";
 
 	async function createUser(
 		email?: string,
 	): Promise<{ id: string; email: string }> {
-		const userEmail = email ?? `e2e-${randomUUID()}@test.local`;
-		await app.inject({
-			method: "POST",
-			url: "/v2/auth/sign-up",
-			payload: { name: "E2E User", email: userEmail, password: E2E_PASSWORD },
-		});
-		const user = await prisma.user.findUniqueOrThrow({
-			where: { email: userEmail },
-		});
+		const user = await createTestUser(email ? { email } : undefined);
 		createdUserIds.push(user.id);
-		return { id: user.id, email: userEmail };
+		return { id: user.id, email: user.email };
 	}
 
 	async function createComplaint(
@@ -43,13 +35,9 @@ describe("get-complaints-dashboard", () => {
 		return c.id;
 	}
 
-	async function bearerToken(_userId: string, email: string): Promise<string> {
-		const res = await app.inject({
-			method: "POST",
-			url: "/v2/auth/sign-in",
-			payload: { email, password: E2E_PASSWORD },
-		});
-		return res.json().token;
+	async function bearerToken(userId: string, _email?: string): Promise<string> {
+		const { token } = await loginTestUser(userId);
+		return token;
 	}
 
 	beforeAll(async () => {

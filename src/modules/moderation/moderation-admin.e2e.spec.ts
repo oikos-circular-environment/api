@@ -3,6 +3,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { env } from "@/env/index.js";
 import { prisma } from "@/lib/prisma.js";
+import { createTestUser, loginTestUser } from "@/test/auth-test-helpers.js";
 
 const PASSWORD = "Test@123456";
 const NEW_PASSWORD = "NewPass@123456";
@@ -16,24 +17,13 @@ describe("moderation-admin", () => {
 	}
 
 	async function signUp(email: string) {
-		const res = await app.inject({
-			method: "POST",
-			url: "/v2/auth/sign-up",
-			headers: clientKeyHeader,
-			payload: { name: "Test User", email, password: PASSWORD },
-		});
-		expect(res.statusCode).toBe(201);
+		await createTestUser({ email });
 	}
 
-	async function signIn(email: string, password = PASSWORD) {
-		const res = await app.inject({
-			method: "POST",
-			url: "/v2/auth/sign-in",
-			headers: clientKeyHeader,
-			payload: { email, password },
-		});
-		expect(res.statusCode).toBe(200);
-		return res.json<{ token: string; user: { id: string } }>();
+	async function signIn(email: string) {
+		const user = await prisma.user.findUniqueOrThrow({ where: { email } });
+		const { token } = await loginTestUser(user.id);
+		return { token, user: { id: user.id } };
 	}
 
 	async function makeAdmin(email: string) {
@@ -214,7 +204,7 @@ describe("moderation-admin", () => {
 
 			const newSignInRes = await app.inject({
 				method: "POST",
-				url: "/v2/auth/sign-in",
+				url: "/auth/sign-in/email",
 				headers: clientKeyHeader,
 				payload: { email, password: NEW_PASSWORD },
 			});

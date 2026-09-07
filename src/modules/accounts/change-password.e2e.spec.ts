@@ -15,7 +15,7 @@ describe("change-password", () => {
 	async function signUp(email: string, password: string) {
 		return app.inject({
 			method: "POST",
-			url: "/v2/auth/sign-up",
+			url: "/auth/sign-up/email",
 			payload: { name: "Test User", email, password },
 		});
 	}
@@ -23,7 +23,7 @@ describe("change-password", () => {
 	async function signIn(email: string, password: string) {
 		const res = await app.inject({
 			method: "POST",
-			url: "/v2/auth/sign-in",
+			url: "/auth/sign-in/email",
 			payload: { email, password },
 		});
 		return res.json();
@@ -71,21 +71,21 @@ describe("change-password", () => {
 
 			const otherSessionRes = await app.inject({
 				method: "GET",
-				url: "/v2/auth/session",
+				url: "/auth/get-session",
 				headers: { authorization: `Bearer ${other.token}` },
 			});
 			expect(otherSessionRes.statusCode).toBe(200);
 
 			const newLoginRes = await app.inject({
 				method: "POST",
-				url: "/v2/auth/sign-in",
+				url: "/auth/sign-in/email",
 				payload: { email, password: newPassword },
 			});
 			expect(newLoginRes.statusCode).toBe(200);
 
 			const oldLoginRes = await app.inject({
 				method: "POST",
-				url: "/v2/auth/sign-in",
+				url: "/auth/sign-in/email",
 				payload: { email, password },
 			});
 			expect(oldLoginRes.statusCode).toBe(401);

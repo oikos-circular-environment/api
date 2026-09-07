@@ -8,8 +8,8 @@ import {
 	JPEG_MAGIC_BYTES,
 	PNG_MAGIC_BYTES,
 } from "@/modules/common/test/image-fixtures.js";
+import { createAuthenticatedTestUser } from "@/test/auth-test-helpers.js";
 
-const PASSWORD = "Test@123456";
 const clientKeyHeader = { "X-Client-Key": env.CLIENT_KEY_MOBILE ?? "" };
 
 function makeEmail(prefix = "denunciation-attachment") {
@@ -17,22 +17,8 @@ function makeEmail(prefix = "denunciation-attachment") {
 }
 
 async function signUpAndSignIn(email: string) {
-	const signUpRes = await app.inject({
-		method: "POST",
-		url: "/v2/auth/sign-up",
-		headers: clientKeyHeader,
-		payload: { name: "Test User", email, password: PASSWORD },
-	});
-	expect(signUpRes.statusCode).toBe(201);
-
-	const signInRes = await app.inject({
-		method: "POST",
-		url: "/v2/auth/sign-in",
-		headers: clientKeyHeader,
-		payload: { email, password: PASSWORD },
-	});
-	expect(signInRes.statusCode).toBe(200);
-	return signInRes.json<{ token: string; user: { id: string } }>();
+	const { user, token } = await createAuthenticatedTestUser({ email });
+	return { token, user: { id: user.id } };
 }
 
 type MultipartFileInput = {

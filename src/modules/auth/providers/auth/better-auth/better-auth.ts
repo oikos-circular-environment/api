@@ -2,7 +2,7 @@ import { expo } from "@better-auth/expo";
 import { compare, hash } from "bcryptjs";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import { openAPI } from "better-auth/plugins";
+import { openAPI, testUtils } from "better-auth/plugins";
 import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { organization } from "better-auth/plugins/organization";
@@ -176,5 +176,6 @@ export const auth = betterAuth({
 				},
 			},
 		}),
+		...(env.NODE_ENV === "test" ? [testUtils()] : []),
 	],
 });

@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
+import { createTestUser, loginTestUser } from "@/test/auth-test-helpers.js";
 
 describe("upsert-company-wastes", () => {
 	const createdUserIds: string[] = [];
@@ -10,19 +11,14 @@ describe("upsert-company-wastes", () => {
 	const createdWasteCategoryIds: string[] = [];
 
 	async function createUser(): Promise<{ id: string; email: string }> {
-		const id = randomUUID();
-		const email = `e2e-${id}@test.local`;
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
-			id,
-			email,
-		);
-		createdUserIds.push(id);
-		return { id, email };
+		const user = await createTestUser();
+		createdUserIds.push(user.id);
+		return { id: user.id, email: user.email };
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email?: string): Promise<string> {
+		const { token } = await loginTestUser(userId);
+		return token;
 	}
 
 	async function createCompanyViaHttp(
@@ -33,7 +29,7 @@ describe("upsert-company-wastes", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/companies",
-			headers: { authorization: `Bearer ${bearerToken(userId, email)}` },
+			headers: { authorization: `Bearer ${await bearerToken(userId, email)}` },
 			payload: {
 				identity,
 				identity_type: "CPF",
@@ -105,7 +101,9 @@ describe("upsert-company-wastes", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/wastes`,
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				wastes: [
 					{
@@ -140,7 +138,9 @@ describe("upsert-company-wastes", () => {
 		await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/wastes`,
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				wastes: [
 					{
@@ -158,7 +158,9 @@ describe("upsert-company-wastes", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/wastes`,
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: { wastes: [] },
 		});
 
@@ -178,7 +180,9 @@ describe("upsert-company-wastes", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/wastes`,
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				wastes: [
 					{
@@ -216,7 +220,9 @@ describe("upsert-company-wastes", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: `/v1/companies/${company.id}/wastes`,
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				wastes: [
 					{
@@ -249,7 +255,7 @@ describe("upsert-company-wastes", () => {
 			method: "PUT",
 			url: `/v1/companies/${company.id}/wastes`,
 			headers: {
-				authorization: `Bearer ${bearerToken(other.id, other.email)}`,
+				authorization: `Bearer ${await bearerToken(other.id, other.email)}`,
 			},
 			payload: {
 				wastes: [
