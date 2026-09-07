@@ -35,3 +35,11 @@ export function createVerifySession(sessionReader: SessionReader) {
 		request.authV2User = result.user;
 	};
 }
+
+export function requireAuthUser(request: FastifyRequest): AuthUserLike {
+	if (!request.authV2User) {
+		throw new AppError("Unauthorized.", "UNAUTHORIZED", 401);
+	}
+
+	return request.authV2User;
+}

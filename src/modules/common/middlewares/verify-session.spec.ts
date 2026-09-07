@@ -2,7 +2,7 @@ import type { FastifyRequest } from "fastify";
 import { describe, expect, it, vi } from "vitest";
 import { InMemoryAuthProvider } from "@/modules/auth/providers/auth/in-memory/in-memory-auth-provider.js";
 import { AppError } from "../errors/app-error.js";
-import { createVerifySession } from "./verify-session.js";
+import { createVerifySession, requireAuthUser } from "./verify-session.js";
 
 function makeRequest(headers: Record<string, string> = {}): FastifyRequest {
 	return {
@@ -71,5 +71,30 @@ describe("verify-session", () => {
 			code: "UNAUTHORIZED",
 			statusCode: 401,
 		});
+	});
+
+	it("requireAuthUser returns the user when authV2User is set", async () => {
+		const provider = new InMemoryAuthProvider();
+		const { user } = await provider.signUpWithPassword({
+			name: "Ada Lovelace",
+			email: "ada@example.com",
+			password: "Test@123456",
+		});
+		const request = makeRequest();
+		request.authV2User = user;
+
+		expect(requireAuthUser(request)).toBe(user);
+	});
+
+	it("requireAuthUser throws 401 when authV2User is missing", () => {
+		const request = makeRequest();
+
+		expect(() => requireAuthUser(request)).toThrow(AppError);
+		expect(() => requireAuthUser(request)).toThrowError(
+			expect.objectContaining({
+				code: "UNAUTHORIZED",
+				statusCode: 401,
+			}),
+		);
 	});
 });
