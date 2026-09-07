@@ -117,6 +117,14 @@ export const auth = betterAuth({
 			updatedAt: "updated_at",
 		},
 	},
+	advanced: {
+		database: {
+			// Every table here already has `id String @id @default(uuid())` in
+			// Prisma — defer to it instead of Better Auth's default base62 id, so
+			// every user/account/session id stays a UUID like the rest of the app.
+			generateId: false,
+		},
+	},
 	plugins: [
 		admin({
 			ac: platformAc,
