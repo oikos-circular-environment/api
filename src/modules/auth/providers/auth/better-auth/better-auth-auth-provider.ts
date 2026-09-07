@@ -44,7 +44,6 @@ export type AuthApiUser = {
 	banned?: boolean;
 	banReason?: string | null;
 	banExpires?: Date | null;
-	authSource?: string;
 };
 
 export type AuthApiSession = {
@@ -410,7 +409,6 @@ function mapUser(user: AuthApiUser): AuthUser {
 		banned: user.banned ?? false,
 		banReason: user.banReason ?? null,
 		banExpires: user.banExpires ?? null,
-		authSource: user.authSource ?? "better_auth",
 		createdAt: user.createdAt,
 		updatedAt: user.updatedAt,
 	};

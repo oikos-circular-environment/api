@@ -12,14 +12,12 @@ import {
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	changePasswordSchema,
-	createUserSchema,
 	userResponseSchema,
 } from "./dtos/accounts-dto.js";
 import { BullMQAccountDeletionJobDispatcher } from "./providers/queue/bullmq/bullmq-account-deletion-job-dispatcher.js";
 import { PrismaUsersRepository } from "./repositories/prisma/users-repository-prisma.js";
 import { CancelAccountDeletionUseCase } from "./use-cases/cancel-account-deletion-use-case.js";
 import { GetUserUseCase } from "./use-cases/get-user-use-case.js";
-import { RegisterUserUseCase } from "./use-cases/register-user-use-case.js";
 import { RequestAccountDeletionUseCase } from "./use-cases/request-account-deletion-use-case.js";
 
 function buildHeaders(request: FastifyRequest): Headers {
@@ -31,35 +29,6 @@ export async function accountRoutes(app: FastifyInstance) {
 	const authProvider = makeBetterAuthAuthProvider(auth);
 	const verifySession = createVerifySession(authProvider);
 	const changePasswordUseCase = new ChangePasswordUseCase(authProvider);
-
-	typedApp.post(
-		"/users/register",
-		{
-			schema: {
-				tags: ["Users"],
-				summary: "Register a new user",
-				description:
-					"Creates a new user account with the provided information.",
-				body: createUserSchema,
-				response: {
-					204: z.object(),
-
-					409: appErrorSchema,
-				},
-			},
-		},
-		async (request, reply) => {
-			const { email, password } = request.body;
-			const usersRepository = new PrismaUsersRepository();
-			const registerUserUseCase = new RegisterUserUseCase(usersRepository);
-			await registerUserUseCase.execute({
-				email,
-				password,
-			});
-
-			reply.status(204);
-		},
-	);
 
 	typedApp.register(async (authenticatedApp) => {
 		const typedAuth = authenticatedApp.withTypeProvider<ZodTypeProvider>();

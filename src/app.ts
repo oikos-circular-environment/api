@@ -1,7 +1,6 @@
 import fastifyBasicAuth from "@fastify/basic-auth";
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
-import fastifyJwt from "@fastify/jwt";
 import fastifyMultipart from "@fastify/multipart";
 import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
@@ -79,19 +78,6 @@ app.register(fastifySwagger, {
 		security: [{ clientKeyAuth: [] }],
 	},
 	transform: jsonSchemaTransform,
-});
-
-// Mantido para os e2e specs de companies/outros módulos, que assinam token de
-// teste com `app.jwt.sign(...)`. Não há uso em handler de produção.
-app.register(fastifyJwt, {
-	secret: env.JWT_SECRET,
-	cookie: {
-		cookieName: "refreshToken",
-		signed: false,
-	},
-	sign: {
-		expiresIn: "7d",
-	},
 });
 
 app.register(fastifyCookie);

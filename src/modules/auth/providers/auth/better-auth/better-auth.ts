@@ -33,6 +33,7 @@ export const auth = betterAuth({
 	database: prismaAdapter(prisma, { provider: "postgresql" }),
 	secret: env.BETTER_AUTH_SECRET,
 	baseURL: publicApiUrl,
+	basePath: "/auth",
 	trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS,
 	emailAndPassword: {
 		enabled: true,
@@ -77,14 +78,6 @@ export const auth = betterAuth({
 			emailVerified: "email_verified",
 			createdAt: "created_at",
 			updatedAt: "updated_at",
-		},
-		additionalFields: {
-			authSource: {
-				type: "string",
-				input: false,
-				fieldName: "auth_source",
-				defaultValue: "better_auth",
-			},
 		},
 	},
 	account: {

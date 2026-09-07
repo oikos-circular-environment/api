@@ -13,7 +13,6 @@ function createUser(usersRepository: InMemoryUsersRepository, userId: string) {
 	usersRepository.items.push({
 		id: userId,
 		email: "test@example.com",
-		password: "hashed-password",
 		created_at: new Date(),
 		deleted_at: null,
 		deletion_job_id: null,

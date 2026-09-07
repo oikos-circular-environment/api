@@ -31,7 +31,6 @@ export const authUserSchema = z.object({
 	banned: z.boolean(),
 	ban_reason: z.string().nullable(),
 	ban_expires: z.string().datetime().nullable(),
-	auth_source: z.string(),
 	created_at: z.string().datetime(),
 	updated_at: z.string().datetime(),
 	// Only /auth/sign-in/email and /auth/get-session populate this — moderation reuses the schema without it.

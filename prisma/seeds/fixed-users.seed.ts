@@ -26,7 +26,6 @@ async function upsertFixedUser(
 			name: args.name,
 			email_verified: true,
 			role: args.role,
-			auth_source: "default",
 			profile: {
 				create: {
 					full_name: args.name,

@@ -22,8 +22,6 @@ model User {
   banned          Boolean   @default(false)
   ban_reason      String?
   ban_expires     DateTime?
-  password        String?
-  auth_source     String    @default("better_auth")
   created_at      DateTime  @default(now())
   updated_at      DateTime  @default(now()) @updatedAt
   deleted_at      DateTime?
@@ -35,7 +33,6 @@ model User {
   votes            ComplaintVote[]
   resolutions      ComplaintResolution[] @relation("ResolutionResolver")
   supports         Support[]
-  refresh_tokens   RefreshToken[]
   accounts         Account[]
   sessions         Session[]
   members          Member[]
@@ -149,20 +146,6 @@ model Invitation {
 
   @@index([organization_id])
   @@map("invitations")
-}
-
-model RefreshToken {
-  id         String    @id @default(uuid())
-  jti        String    @unique
-  expires_at DateTime
-  revoked_at DateTime?
-  created_at DateTime  @default(now())
-
-  user_id String
-  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
-
-  @@index([user_id])
-  @@map("refresh_tokens")
 }
 
 model Profile {
