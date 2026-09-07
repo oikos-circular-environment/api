@@ -7,6 +7,7 @@ import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
 import { trace } from "@opentelemetry/api";
 import ScalarApiReference from "@scalar/fastify-api-reference";
+import { fromNodeHeaders } from "better-auth/node";
 import Fastify, { type FastifyBaseLogger, type FastifyRequest } from "fastify";
 import {
 	jsonSchemaTransform,
@@ -17,7 +18,7 @@ import {
 import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
 import { accountRoutes } from "./modules/accounts/account-routes.js";
-import { authRoutes } from "./modules/auth/routes/v1/auth-routes.js";
+import { auth } from "./modules/auth/providers/auth/better-auth/better-auth.js";
 import { authV2Routes } from "./modules/auth/routes/v2/auth-v2-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
@@ -80,6 +81,8 @@ app.register(fastifySwagger, {
 	transform: jsonSchemaTransform,
 });
 
+// Mantido para os e2e specs de companies/outros módulos, que assinam token de
+// teste com `app.jwt.sign(...)`. Não há uso em handler de produção.
 app.register(fastifyJwt, {
 	secret: env.JWT_SECRET,
 	cookie: {
@@ -170,9 +173,46 @@ app.after(() => {
 	});
 });
 
+// biome-ignore lint/suspicious/noExplicitAny: merging two independently-typed OpenAPI documents
+let mergedOpenApiDocument: Record<string, any> | undefined;
+
+export async function buildMergedOpenApiDocument(): Promise<void> {
+	const authSchema = await auth.api.generateOpenAPISchema();
+	const authPaths = authSchema.paths ?? {};
+	// Better Auth's generated schema keys are relative to `basePath` (e.g.
+	// `/sign-in/email`, not `/api/auth/sign-in/email`) — prefix them so the docs
+	// point at real, callable routes.
+	const prefixedAuthPaths = Object.fromEntries(
+		Object.entries(authPaths).map(([path, value]) =>
+			path.startsWith("/api/auth")
+				? [path, value]
+				: [`/api/auth${path}`, value],
+		),
+	);
+	// biome-ignore lint/suspicious/noExplicitAny: merging two independently-typed OpenAPI documents
+	const swaggerDocument = app.swagger() as Record<string, any>;
+	mergedOpenApiDocument = {
+		...swaggerDocument,
+		paths: { ...swaggerDocument.paths, ...prefixedAuthPaths },
+		components: {
+			...swaggerDocument.components,
+			schemas: {
+				...swaggerDocument.components?.schemas,
+				...authSchema.components?.schemas,
+			},
+			securitySchemes: {
+				...swaggerDocument.components?.securitySchemes,
+				...authSchema.components?.securitySchemes,
+			},
+		},
+		tags: [...(swaggerDocument.tags ?? []), ...(authSchema.tags ?? [])],
+	};
+}
+
 app.register(ScalarApiReference, {
 	routePrefix: "/docs",
 	configuration: {
+		content: () => mergedOpenApiDocument ?? app.swagger(),
 		favicon: "https://avatars.githubusercontent.com/u/276378809?s=96&v=4",
 		theme: "fastify",
 		persistAuth: true,
@@ -211,7 +251,29 @@ app.register(ScalarApiReference, {
 
 app.get("/health", () => ({ status: "ok" }));
 
-app.register(authRoutes, { prefix: "/v1" });
+app.route({
+	method: ["GET", "POST"],
+	url: "/api/auth/*",
+	async handler(request, reply) {
+		const url = new URL(
+			request.url,
+			`${request.protocol}://${request.hostname}`,
+		);
+		const headers = fromNodeHeaders(request.headers);
+		const req = new Request(url.toString(), {
+			method: request.method,
+			headers,
+			...(request.body ? { body: JSON.stringify(request.body) } : {}),
+		});
+		const response = await auth.handler(req);
+		reply.status(response.status);
+		response.headers.forEach((value, key) => {
+			reply.header(key, value);
+		});
+		return reply.send(response.body ? await response.text() : null);
+	},
+});
+
 app.register(authV2Routes, { prefix: "/v2" });
 app.register(accountRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });

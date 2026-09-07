@@ -1,6 +1,8 @@
+import { expo } from "@better-auth/expo";
 import { compare, hash } from "bcryptjs";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
+import { openAPI } from "better-auth/plugins";
 import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { organization } from "better-auth/plugins/organization";
@@ -107,7 +109,7 @@ export const auth = betterAuth({
 			userAgent: "user_agent",
 			createdAt: "created_at",
 			updatedAt: "updated_at",
-			activeOrganizationId: "active_organization_id",
+			// activeOrganizationId is mapped by the organization plugin (schema.session.fields)
 		},
 	},
 	verification: {
@@ -145,6 +147,8 @@ export const auth = betterAuth({
 			},
 		}),
 		bearer(),
+		openAPI({ disableDefaultReference: true }),
+		expo(),
 		organization({
 			ac: organizationAc,
 			creatorRole: "owner",
@@ -154,6 +158,11 @@ export const auth = betterAuth({
 				user: organizationUser,
 			},
 			schema: {
+				session: {
+					fields: {
+						activeOrganizationId: "active_organization_id",
+					},
+				},
 				organization: {
 					fields: { createdAt: "created_at", updatedAt: "updated_at" },
 				},

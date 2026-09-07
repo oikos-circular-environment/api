@@ -106,6 +106,7 @@ model Organization {
   name       String
   slug       String    @unique
   logo       String?
+  metadata   String?
   created_at DateTime  @default(now())
   updated_at DateTime?
 
