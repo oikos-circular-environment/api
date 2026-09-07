@@ -8,19 +8,22 @@ import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js
 describe("submit-resolution", () => {
 	const createdComplaintIds: string[] = [];
 	const createdUserIds: string[] = [];
+	const E2E_PASSWORD = "Test@123456";
 
 	async function createUser(
 		email?: string,
 	): Promise<{ id: string; email: string }> {
-		const userId = randomUUID();
-		const userEmail = email ?? `e2e-${userId}@test.local`;
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
-			userId,
-			userEmail,
-		);
-		createdUserIds.push(userId);
-		return { id: userId, email: userEmail };
+		const userEmail = email ?? `e2e-${randomUUID()}@test.local`;
+		await app.inject({
+			method: "POST",
+			url: "/v2/auth/sign-up",
+			payload: { name: "E2E User", email: userEmail, password: E2E_PASSWORD },
+		});
+		const user = await prisma.user.findUniqueOrThrow({
+			where: { email: userEmail },
+		});
+		createdUserIds.push(user.id);
+		return { id: user.id, email: userEmail };
 	}
 
 	async function createComplaint(ownerId: string): Promise<string> {
@@ -37,8 +40,13 @@ describe("submit-resolution", () => {
 		return c.id;
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(_userId: string, email: string): Promise<string> {
+		const res = await app.inject({
+			method: "POST",
+			url: "/v2/auth/sign-in",
+			payload: { email, password: E2E_PASSWORD },
+		});
+		return res.json().token;
 	}
 
 	beforeAll(async () => {
@@ -57,10 +65,7 @@ describe("submit-resolution", () => {
 			createdComplaintIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${createdUserIds.map((_, i) => `$${i + 1}`).join(", ")})`,
-				...createdUserIds,
-			);
+			await prisma.user.deleteMany({ where: { id: { in: createdUserIds } } });
 			createdUserIds.length = 0;
 		}
 	});
@@ -74,7 +79,7 @@ describe("submit-resolution", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "The problem was fixed by the city hall." },
 		});
@@ -92,7 +97,7 @@ describe("submit-resolution", () => {
 		const owner = await createUser();
 		const resolver = await createUser();
 		const complaintId = await createComplaint(owner.id);
-		const token = bearerToken(resolver.id, resolver.email);
+		const token = await bearerToken(resolver.id, resolver.email);
 
 		await app.inject({
 			method: "POST",
@@ -125,7 +130,7 @@ describe("submit-resolution", () => {
 			method: "POST",
 			url: `/v1/complaints/${complaintId}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "Should not be allowed." },
 		});
@@ -141,7 +146,7 @@ describe("submit-resolution", () => {
 			method: "POST",
 			url: `/v1/complaints/${randomUUID()}/resolutions`,
 			headers: {
-				authorization: `Bearer ${bearerToken(resolver.id, resolver.email)}`,
+				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
 			payload: { description: "The issue was resolved." },
 		});
