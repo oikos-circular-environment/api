@@ -23,7 +23,7 @@ function makeAuthUser(overrides: Partial<AuthUser> = {}): AuthUser {
 }
 
 function makeRequest(user?: AuthUser): FastifyRequest {
-	return { authV2User: user } as unknown as FastifyRequest;
+	return { authUser: user } as unknown as FastifyRequest;
 }
 
 describe("require-role", () => {
@@ -45,7 +45,7 @@ describe("require-role", () => {
 		});
 	});
 
-	it("throws 403 when authV2User is missing", async () => {
+	it("throws 403 when authUser is missing", async () => {
 		const requireModerator = requireRole("moderator");
 		const request = makeRequest();
 

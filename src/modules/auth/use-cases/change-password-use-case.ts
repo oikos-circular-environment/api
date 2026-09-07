@@ -1,7 +1,7 @@
 import type {
 	AuthProvider,
 	ChangePasswordInput,
-} from "../../providers/auth/auth-provider.js";
+} from "../providers/auth/auth-provider.js";
 
 export class ChangePasswordUseCase {
 	constructor(private readonly authProvider: AuthProvider) {}

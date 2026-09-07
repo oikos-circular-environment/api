@@ -1,7 +1,7 @@
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
-import { authV2UserSchema } from "@/modules/auth/dtos/auth-v2-dto.js";
+import { authUserSchema } from "@/modules/auth/dtos/auth-user-dto.js";
 import type { AuthSession } from "@/modules/auth/providers/auth/auth-provider.js";
 import { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "@/modules/auth/providers/auth/better-auth/better-auth-auth-provider.js";
@@ -177,7 +177,7 @@ export async function moderationUsersRoutes(
 				params: userAdminParamsSchema,
 				body: setRoleAdminBodySchema,
 				response: {
-					200: z.object({ user: authV2UserSchema }),
+					200: z.object({ user: authUserSchema }),
 					400: appErrorSchema,
 					401: appErrorSchema,
 					403: appErrorSchema,
@@ -205,7 +205,7 @@ export async function moderationUsersRoutes(
 				params: userAdminParamsSchema,
 				body: banUserAdminBodySchema,
 				response: {
-					200: z.object({ user: authV2UserSchema }),
+					200: z.object({ user: authUserSchema }),
 					400: appErrorSchema,
 					401: appErrorSchema,
 					403: appErrorSchema,
@@ -237,7 +237,7 @@ export async function moderationUsersRoutes(
 				description: "Removes the ban from a user.",
 				params: userAdminParamsSchema,
 				response: {
-					200: z.object({ user: authV2UserSchema }),
+					200: z.object({ user: authUserSchema }),
 					400: appErrorSchema,
 					401: appErrorSchema,
 					403: appErrorSchema,

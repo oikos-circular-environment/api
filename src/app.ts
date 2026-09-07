@@ -17,9 +17,9 @@ import {
 } from "fastify-type-provider-zod";
 import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
+import { createOpenApiDocumentMerger } from "@/lib/openapi-document.js";
 import { accountRoutes } from "./modules/accounts/account-routes.js";
 import { auth } from "./modules/auth/providers/auth/better-auth/better-auth.js";
-import { authV2Routes } from "./modules/auth/routes/v2/auth-v2-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
@@ -173,46 +173,17 @@ app.after(() => {
 	});
 });
 
-// biome-ignore lint/suspicious/noExplicitAny: merging two independently-typed OpenAPI documents
-let mergedOpenApiDocument: Record<string, any> | undefined;
+const {
+	build: buildMergedOpenApiDocument,
+	getDocument: getMergedOpenApiDocument,
+} = createOpenApiDocumentMerger(app, auth);
 
-export async function buildMergedOpenApiDocument(): Promise<void> {
-	const authSchema = await auth.api.generateOpenAPISchema();
-	const authPaths = authSchema.paths ?? {};
-	// Better Auth's generated schema keys are relative to `basePath` (e.g.
-	// `/sign-in/email`, not `/api/auth/sign-in/email`) — prefix them so the docs
-	// point at real, callable routes.
-	const prefixedAuthPaths = Object.fromEntries(
-		Object.entries(authPaths).map(([path, value]) =>
-			path.startsWith("/api/auth")
-				? [path, value]
-				: [`/api/auth${path}`, value],
-		),
-	);
-	// biome-ignore lint/suspicious/noExplicitAny: merging two independently-typed OpenAPI documents
-	const swaggerDocument = app.swagger() as Record<string, any>;
-	mergedOpenApiDocument = {
-		...swaggerDocument,
-		paths: { ...swaggerDocument.paths, ...prefixedAuthPaths },
-		components: {
-			...swaggerDocument.components,
-			schemas: {
-				...swaggerDocument.components?.schemas,
-				...authSchema.components?.schemas,
-			},
-			securitySchemes: {
-				...swaggerDocument.components?.securitySchemes,
-				...authSchema.components?.securitySchemes,
-			},
-		},
-		tags: [...(swaggerDocument.tags ?? []), ...(authSchema.tags ?? [])],
-	};
-}
+export { buildMergedOpenApiDocument };
 
 app.register(ScalarApiReference, {
 	routePrefix: "/docs",
 	configuration: {
-		content: () => mergedOpenApiDocument ?? app.swagger(),
+		content: () => getMergedOpenApiDocument(),
 		favicon: "https://avatars.githubusercontent.com/u/276378809?s=96&v=4",
 		theme: "fastify",
 		persistAuth: true,
@@ -253,7 +224,7 @@ app.get("/health", () => ({ status: "ok" }));
 
 app.route({
 	method: ["GET", "POST"],
-	url: "/api/auth/*",
+	url: "/auth/*",
 	async handler(request, reply) {
 		const url = new URL(
 			request.url,
@@ -274,7 +245,6 @@ app.route({
 	},
 });
 
-app.register(authV2Routes, { prefix: "/v2" });
 app.register(accountRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });

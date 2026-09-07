@@ -13,15 +13,15 @@ export const signInV2Schema = z.object({
 });
 export type SignInV2Input = z.infer<typeof signInV2Schema>;
 
-export const authV2OrganizationSchema = z.object({
+export const authOrganizationSchema = z.object({
 	id: z.string(),
 	company_id: z.string().nullable(),
 	name: z.string(),
 	role: z.string(),
 });
-export type AuthV2Organization = z.infer<typeof authV2OrganizationSchema>;
+export type AuthOrganization = z.infer<typeof authOrganizationSchema>;
 
-export const authV2UserSchema = z.object({
+export const authUserSchema = z.object({
 	id: z.string(),
 	email: z.string(),
 	name: z.string().nullable(),
@@ -34,14 +34,14 @@ export const authV2UserSchema = z.object({
 	auth_source: z.string(),
 	created_at: z.string().datetime(),
 	updated_at: z.string().datetime(),
-	// Only /v2/auth/sign-in and /v2/auth/session populate this — moderation reuses the schema without it.
-	organizations: z.array(authV2OrganizationSchema).optional(),
+	// Only /auth/sign-in/email and /auth/get-session populate this — moderation reuses the schema without it.
+	organizations: z.array(authOrganizationSchema).optional(),
 });
-export type AuthV2UserResponse = z.infer<typeof authV2UserSchema>;
+export type AuthUserResponse = z.infer<typeof authUserSchema>;
 
 export const signInV2ResponseSchema = z.object({
 	token: z.string(),
-	user: authV2UserSchema,
+	user: authUserSchema,
 });
 export type SignInV2Response = z.infer<typeof signInV2ResponseSchema>;
 
@@ -70,7 +70,7 @@ export const resetPasswordV2Schema = z.object({
 export type ResetPasswordV2Input = z.infer<typeof resetPasswordV2Schema>;
 
 export const sessionV2ResponseSchema = z.object({
-	user: authV2UserSchema,
+	user: authUserSchema,
 });
 export type SessionV2Response = z.infer<typeof sessionV2ResponseSchema>;
 

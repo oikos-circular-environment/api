@@ -32,7 +32,7 @@ export function createVerifySession(sessionReader: SessionReader) {
 			throw new AppError("Unauthorized.", "UNAUTHORIZED", 401);
 		}
 
-		request.authV2User = result.user;
+		request.authUser = result.user;
 	};
 }
 
@@ -41,9 +41,9 @@ export function createVerifySession(sessionReader: SessionReader) {
  * silently allowing `undefined` if a route forgets to run the preHandler.
  */
 export function requireAuthUser(request: FastifyRequest): AuthUserLike {
-	if (!request.authV2User) {
+	if (!request.authUser) {
 		throw new AppError("Unauthorized.", "UNAUTHORIZED", 401);
 	}
 
-	return request.authV2User;
+	return request.authUser;
 }

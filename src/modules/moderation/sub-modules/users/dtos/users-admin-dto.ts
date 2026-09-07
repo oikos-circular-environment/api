@@ -1,5 +1,5 @@
 import z from "zod";
-import { authV2UserSchema } from "@/modules/auth/dtos/auth-v2-dto.js";
+import { authUserSchema } from "@/modules/auth/dtos/auth-user-dto.js";
 import { profileSchema } from "@/modules/profiles/dtos/profiles-dto.js";
 
 export const listUsersAdminQuerySchema = z.object({
@@ -19,7 +19,7 @@ export type ListUsersAdminQueryInput = z.infer<
 >;
 
 export const listUsersAdminResponseSchema = z.object({
-	users: z.array(authV2UserSchema),
+	users: z.array(authUserSchema),
 	total: z.number().int(),
 	limit: z.number().int().optional(),
 	offset: z.number().int().optional(),
@@ -75,7 +75,7 @@ export const accountSummarySchema = z.object({
 export type AccountSummaryResponse = z.infer<typeof accountSummarySchema>;
 
 export const getUserAdminResponseSchema = z.object({
-	user: authV2UserSchema,
+	user: authUserSchema,
 	profile: profileSchema.nullable(),
 	accounts: z.array(accountSummarySchema),
 });

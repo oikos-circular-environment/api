@@ -3,7 +3,7 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
 import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
-import { ChangePasswordUseCase } from "../auth/use-cases/v2/change-password-use-case.js";
+import { ChangePasswordUseCase } from "../auth/use-cases/change-password-use-case.js";
 import { appErrorSchema } from "../common/errors/app-error.js";
 import {
 	createVerifySession,
