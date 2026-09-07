@@ -45,6 +45,27 @@ ou rota, rode também `npm run test:integration`/`npm run test:e2e` (sobem infra
 como concluído — isso é decisão do orquestrador após o agente `code-review` e (quando aplicável) o
 `qa-runner` validarem.
 
+**Assim que tsc/lint/test do seu ticket passarem, `git add` só os arquivos do seu escopo e
+`git commit`** (mensagem curta descrevendo o ticket) antes de reportar ao orquestrador — mesmo que
+o ticket ainda vá passar por `code-review`/`qa-runner` depois. Trabalho verificado e não commitado
+é trabalho que qualquer reset (seu ou de outro processo) apaga sem deixar rastro. Nunca dê `git
+commit --amend`, `git reset`, `git checkout -- <arquivo fora do seu escopo>`, `git clean` nem
+qualquer comando que descarte estado de arquivo que você não escreveu nesta execução — se algo saiu
+errado no seu próprio escopo, restaure só os arquivos específicos que você tocou
+(`git checkout -- <seus arquivos>` ou `git diff`/reescrever manualmente), nunca um reset geral do
+working tree. Você não sabe se há outro agente ou o orquestrador com trabalho não commitado no mesmo
+diretório.
+
+## Isolamento (responsabilidade de quem te invoca, mas assuma que já está em vigor)
+
+Este agente tem acesso a Bash e, via a chain abaixo, dispara CLIs externos com acesso irrestrito ao
+shell. **Presuma que o orquestrador sempre te invoca com `isolation: "worktree"`** (cópia
+descartável do repo, branch própria) — se não foi o caso e você perceber isso, avise no relatório
+final em vez de seguir como se estivesse isolado. Isolamento é o que garante que um comando
+destrutivo (seu, ou de um tier gratuito abaixo que "passar dos limites") só destrua a sua própria
+cópia descartável, nunca o working tree principal onde o orquestrador e outros agentes têm trabalho
+não commitado.
+
 ## Cadeia de execução: gratuito primeiro, pago só com permissão explícita
 
 Antes de implementar você mesmo, tente nesta ordem — pare no primeiro que produzir um diff
@@ -61,6 +82,13 @@ aceitável na revisão (nomes atuais do `~/.config/opencode/opencode.json` globa
 ruins na revisão, NÃO avance sozinho. Pare e devolva ao orquestrador pedindo permissão explícita,
 informando o que cada tier grátis retornou e por que falhou (erro de cota, diff ruim, timeout). Só
 prossiga pro tier 6 (ou implemente você mesmo) depois que o orquestrador confirmar autorização.
+
+**Gate igualmente obrigatório se um tier "passar dos limites" do ticket** (mexer fora dos arquivos
+listados, rodar comando destrutivo, agir fora do escopo pedido): não tente você mesmo "consertar"
+com `git reset`/`checkout` amplo — isso já causou perda de trabalho de outros agentes rodando em
+paralelo no mesmo diretório (incidente real, branch `115-migrar-login-v1-better-auth`, api#115).
+Pare, reverta só os arquivos específicos que aquele tier tocou fora do escopo (liste-os no
+relatório) e devolva ao orquestrador — nunca resete o working tree inteiro.
 
 6. `opencode run --agent opencode-go-kimi-k2.7 --format json "..."` (OpenCode Go, pago — verificar
    crédito antes, já bateu limite em sessões anteriores)
