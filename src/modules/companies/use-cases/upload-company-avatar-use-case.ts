@@ -80,11 +80,12 @@ export class UploadCompanyAvatarUseCase {
 		}
 
 		const { url } = await this.storageProvider.getFileUrl(filePath);
+		const versionedUrl = `${url}?v=${Date.now()}`;
 
 		const updatedCompany = await this.companiesRepository.uploadAvatar(
 			companyId,
 			{
-				url,
+				url: versionedUrl,
 				file_name: file.fileName,
 				path: filePath,
 			},

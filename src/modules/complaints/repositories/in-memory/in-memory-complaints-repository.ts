@@ -40,7 +40,6 @@ type AttachmentEntity = {
 	url: string;
 	file_name: string;
 	path: string;
-	base64: string;
 	metadata: Record<string, unknown> | null;
 	type: ComplaintCaptureMode;
 	created_at: Date;
@@ -62,7 +61,6 @@ type ResolutionAttachmentEntity = {
 	url: string;
 	file_name: string;
 	path: string;
-	base64: string;
 	created_at: Date;
 };
 
@@ -213,7 +211,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			metadata: data.metadata ?? null,
 			type: data.type,
 			created_at: new Date(),
@@ -355,7 +352,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					url: a.url,
 					file_name: a.file_name,
 					path: a.path,
-					base64: a.base64,
 					metadata: a.metadata,
 					type: a.type,
 					created_at: a.created_at,
@@ -568,7 +564,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			created_at: new Date(),
 		};
 		this.resolutionAttachments.push(attachment);
@@ -628,7 +623,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					url: a.url,
 					file_name: a.file_name,
 					path: a.path,
-					base64: a.base64,
 					metadata: a.metadata,
 					type: a.type,
 					created_at: a.created_at,

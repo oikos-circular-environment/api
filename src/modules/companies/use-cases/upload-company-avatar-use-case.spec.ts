@@ -54,8 +54,10 @@ describe("upload-company-avatar-use-case", () => {
 			},
 		});
 
-		expect(result.avatar?.url).toBe(
-			`https://in-memory.storage/companies/${created.id}.jpeg`,
+		expect(result.avatar?.url).toMatch(
+			new RegExp(
+				`^https://in-memory\\.storage/companies/${created.id}\\.jpeg\\?v=\\d+$`,
+			),
 		);
 		expect(result.avatar?.file_name).toBe("avatar.jpg");
 		expect(result.avatar?.path).toBe(`companies/${created.id}.jpeg`);

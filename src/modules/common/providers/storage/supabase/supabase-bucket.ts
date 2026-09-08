@@ -84,23 +84,6 @@ export class SupabaseBucket implements StorageProvider {
 		}
 	}
 
-	async convertFileToBase64(filePath: string): Promise<string> {
-		try {
-			const file = await this.supabase.storage
-				.from(this.BUCKET)
-				.download(filePath);
-			if (!file.data) throw new Error("File download returned no data");
-			const arrayBuffer = await file.data.arrayBuffer();
-			const buffer = Buffer.from(arrayBuffer);
-			return buffer.toString("base64");
-		} catch (error) {
-			if (error instanceof StorageApiError) {
-				console.error(error.toJSON());
-			}
-			throw new Error("Failed to convert file to base64");
-		}
-	}
-
 	async ping(): Promise<void> {
 		const { error } = await this.supabase.storage
 			.from(this.BUCKET)

@@ -32,7 +32,6 @@ type PrismaDenunciationPayload = {
 		url: string;
 		file_name: string;
 		path: string;
-		base64: string;
 		metadata: unknown;
 		type: DenunciationAttachment["type"];
 		created_at: Date;
@@ -56,7 +55,6 @@ function mapDenunciation(payload: PrismaDenunciationPayload): Denunciation {
 			url: a.url,
 			file_name: a.file_name,
 			path: a.path,
-			base64: a.base64,
 			metadata: (a.metadata as Record<string, unknown> | null) ?? null,
 			type: a.type,
 			created_at: a.created_at,

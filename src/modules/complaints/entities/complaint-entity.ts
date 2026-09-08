@@ -58,7 +58,6 @@ export const complaintAttachmentSchema = z.object({
 	url: z.string(),
 	file_name: z.string(),
 	path: z.string(),
-	base64: z.string(),
 	metadata: z.record(z.string(), z.unknown()).nullable(),
 	type: complaintCaptureModeSchema,
 	created_at: z.date(),

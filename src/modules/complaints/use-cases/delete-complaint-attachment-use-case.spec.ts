@@ -11,7 +11,6 @@ function makeStorageProvider(): StorageProvider {
 		deleteFile: vi.fn().mockResolvedValue(undefined),
 		getFileUrl: vi.fn(),
 		checkFileExists: vi.fn(),
-		convertFileToBase64: vi.fn(),
 		ping: vi.fn(),
 	};
 }
@@ -42,7 +41,6 @@ describe("delete-complaint-attachment-use-case", () => {
 				url: "https://example.com/photo.jpg",
 				file_name: "photo.jpg",
 				path: "complaints/abc/photo.jpg",
-				base64: "base64data",
 				metadata: null,
 				type: "PHOTO",
 			},
