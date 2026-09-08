@@ -590,7 +590,6 @@ export async function seedGeneratedCityData(prisma: PrismaClient) {
 									url,
 									file_name: att.asset_file,
 									path: storagePath,
-									base64: fileContent.toString("base64"),
 									type: att.type,
 								},
 							});

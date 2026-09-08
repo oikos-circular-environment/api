@@ -29,15 +29,5 @@ export class InMemoryStorageProvider implements StorageProvider {
 		return this.items.has(filePath);
 	}
 
-	async convertFileToBase64(filePath: string): Promise<string> {
-		const file = this.items.get(filePath);
-
-		if (!file) {
-			throw new Error("File not found");
-		}
-
-		return file.toString("base64");
-	}
-
 	async ping(): Promise<void> {}
 }
