@@ -83,7 +83,6 @@ export class AddResolutionAttachmentUseCase {
 				url,
 				file_name: file.fileName,
 				path: filePath,
-				base64: file.content.toString("base64"),
 			},
 		);
 	}

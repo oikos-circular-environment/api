@@ -96,7 +96,6 @@ describe("get-resolutions-use-case", () => {
 			url: "https://example.com/img.jpg",
 			file_name: "img.jpg",
 			path: "resolutions/img.jpg",
-			base64: "base64data",
 		});
 		const sut = new GetResolutionsUseCase(repo);
 

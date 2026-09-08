@@ -146,7 +146,6 @@ describe("account-deletion-worker", () => {
 				url: "http://storage/complaints/photo.jpg",
 				file_name: "photo.jpg",
 				path: "complaints/photo.jpg",
-				base64: "data:image/jpeg;base64,dGVzdA==",
 				type: "PHOTO",
 			},
 		});

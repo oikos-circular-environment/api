@@ -76,7 +76,6 @@ export const saveComplaintAttachmentSchema = z.object({
 	url: z.string().min(1, "url is required"),
 	file_name: z.string().min(1, "file_name is required"),
 	path: z.string().min(1, "path is required"),
-	base64: z.string().min(1, "base64 is required"),
 	metadata: z.record(z.string(), z.unknown()).nullable().optional(),
 	type: complaintCaptureModeSchema,
 });
@@ -149,7 +148,6 @@ export const publicComplaintSchema = z.object({
 export type PublicComplaint = z.infer<typeof publicComplaintSchema>;
 
 const mapAttachmentSchema = complaintAttachmentSchema.omit({
-	base64: true,
 	path: true,
 	metadata: true,
 });
@@ -201,5 +199,4 @@ export type SaveResolutionAttachment = {
 	url: string;
 	file_name: string;
 	path: string;
-	base64: string;
 };

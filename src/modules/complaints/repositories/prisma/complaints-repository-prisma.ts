@@ -43,7 +43,6 @@ type PrismaComplaintPayload = {
 		url: string;
 		file_name: string;
 		path: string;
-		base64: string;
 		metadata: unknown;
 		type: "PHOTO" | "VIDEO";
 		created_at: Date;
@@ -73,7 +72,6 @@ function mapComplaint(payload: PrismaComplaintPayload): Complaint {
 			url: a.url,
 			file_name: a.file_name,
 			path: a.path,
-			base64: a.base64,
 			metadata: (a.metadata as Record<string, unknown> | null) ?? null,
 			type: a.type,
 			created_at: a.created_at,
@@ -247,7 +245,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				url: data.url,
 				file_name: data.file_name,
 				path: data.path,
-				base64: data.base64,
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				metadata: (data.metadata ?? undefined) as any,
 				type: data.type,
@@ -433,7 +430,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				url: a.url,
 				file_name: a.file_name,
 				path: a.path,
-				base64: a.base64,
 				metadata: (a.metadata as Record<string, unknown> | null) ?? null,
 				type: a.type as "PHOTO" | "VIDEO",
 				created_at: a.created_at,
@@ -666,7 +662,6 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 				url: data.url,
 				file_name: data.file_name,
 				path: data.path,
-				base64: data.base64,
 			},
 		});
 		return {

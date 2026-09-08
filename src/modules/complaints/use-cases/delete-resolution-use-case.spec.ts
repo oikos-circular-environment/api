@@ -178,7 +178,6 @@ describe("delete-resolution-use-case", () => {
 			url: "https://img.com/a.jpg",
 			file_name: "a.jpg",
 			path: "p/a.jpg",
-			base64: "b64",
 		});
 		const sut = new DeleteResolutionUseCase(repo);
 
