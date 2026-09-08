@@ -148,6 +148,24 @@ const envSchema = z
 				});
 			}
 		}
+
+		if (data.NODE_ENV === "production") {
+			if (data.WEB_APP_URL.includes("localhost")) {
+				ctx.addIssue({
+					code: "custom",
+					message: "WEB_APP_URL must not be localhost when NODE_ENV=production",
+					path: ["WEB_APP_URL"],
+				});
+			}
+			if (data.APP_PUBLIC_URL.includes("localhost")) {
+				ctx.addIssue({
+					code: "custom",
+					message:
+						"APP_PUBLIC_URL must not be localhost when NODE_ENV=production",
+					path: ["APP_PUBLIC_URL"],
+				});
+			}
+		}
 	});
 
 const _env = envSchema.safeParse(process.env);
