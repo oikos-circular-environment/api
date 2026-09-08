@@ -1,8 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { InMemoryAuthProvider } from "@/modules/auth/providers/auth/in-memory/in-memory-auth-provider.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
-import { BanUserUseCase } from "../../users/use-cases/ban-user-use-case.js";
-import { RevokeUserSessionsUseCase } from "../../users/use-cases/revoke-user-sessions-use-case.js";
 import { InMemoryModerationDenunciationsRepository } from "../repositories/in-memory/in-memory-moderation-denunciations-repository.js";
 import { ModerateDenunciationBanUseCase } from "./moderate-denunciation-ban-use-case.js";
 
@@ -37,12 +35,9 @@ describe("moderate-denunciation-ban-use-case", () => {
 		const provider = new InMemoryAuthProvider();
 		const denunciationsRepository =
 			new InMemoryModerationDenunciationsRepository();
-		const banUserUseCase = new BanUserUseCase(provider);
-		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
 			denunciationsRepository,
-			banUserUseCase,
-			revokeUserSessionsUseCase,
+			provider,
 		);
 
 		let thrownError: unknown;
@@ -68,12 +63,9 @@ describe("moderate-denunciation-ban-use-case", () => {
 		const provider = new InMemoryAuthProvider();
 		const denunciationsRepository =
 			new InMemoryModerationDenunciationsRepository();
-		const banUserUseCase = new BanUserUseCase(provider);
-		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
 			denunciationsRepository,
-			banUserUseCase,
-			revokeUserSessionsUseCase,
+			provider,
 		);
 
 		const created = await denunciationsRepository.create({
@@ -109,12 +101,9 @@ describe("moderate-denunciation-ban-use-case", () => {
 		const provider = new InMemoryAuthProvider();
 		const denunciationsRepository =
 			new InMemoryModerationDenunciationsRepository();
-		const banUserUseCase = new BanUserUseCase(provider);
-		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
 			denunciationsRepository,
-			banUserUseCase,
-			revokeUserSessionsUseCase,
+			provider,
 		);
 
 		const created = await denunciationsRepository.create({
@@ -150,12 +139,9 @@ describe("moderate-denunciation-ban-use-case", () => {
 		const provider = new InMemoryAuthProvider();
 		const denunciationsRepository =
 			new InMemoryModerationDenunciationsRepository();
-		const banUserUseCase = new BanUserUseCase(provider);
-		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
 			denunciationsRepository,
-			banUserUseCase,
-			revokeUserSessionsUseCase,
+			provider,
 		);
 
 		const created = await denunciationsRepository.create({
@@ -190,12 +176,9 @@ describe("moderate-denunciation-ban-use-case", () => {
 		const provider = new InMemoryAuthProvider();
 		const denunciationsRepository =
 			new InMemoryModerationDenunciationsRepository();
-		const banUserUseCase = new BanUserUseCase(provider);
-		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
 			denunciationsRepository,
-			banUserUseCase,
-			revokeUserSessionsUseCase,
+			provider,
 		);
 
 		const created = await denunciationsRepository.create({
@@ -227,12 +210,9 @@ describe("moderate-denunciation-ban-use-case", () => {
 		const { provider, prepare } = makeModeratorHeaders();
 		const denunciationsRepository =
 			new InMemoryModerationDenunciationsRepository();
-		const banUserUseCase = new BanUserUseCase(provider);
-		const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(provider);
 		const sut = new ModerateDenunciationBanUseCase(
 			denunciationsRepository,
-			banUserUseCase,
-			revokeUserSessionsUseCase,
+			provider,
 		);
 
 		const { user: targetUser } = await provider.signUpWithPassword({
