@@ -60,6 +60,7 @@ app.setSerializerCompiler(serializerCompiler);
 
 app.register(fastifySwagger, {
 	openapi: {
+		openapi: "3.1.0",
 		info: {
 			title: "Oikos Documentation",
 			version: "1.0.0",
