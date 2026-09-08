@@ -87,6 +87,8 @@ export const marketCompanySchema = marketCompanyBaseSchema.extend({
 	identity_type: z.literal("CNPJ").nullable(),
 });
 export type MarketCompany = z.infer<typeof marketCompanySchema>;
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(marketCompanySchema, { id: "Market" });
 
 export const marketResponseSchema = z.object({
 	companies: z.array(marketCompanySchema),

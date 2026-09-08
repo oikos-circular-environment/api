@@ -40,3 +40,5 @@ export const profileSchema = z.object({
 	profile_image: profileImageSchema.nullable(),
 });
 export type Profile = z.infer<typeof profileSchema>;
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(profileSchema, { id: "Profile" });

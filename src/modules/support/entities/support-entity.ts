@@ -58,3 +58,5 @@ export const supportSchema = z.object({
 	updated_at: z.date(),
 });
 export type Support = z.infer<typeof supportSchema>;
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(supportSchema, { id: "Support" });

@@ -48,3 +48,5 @@ export const denunciationSchema = z.object({
 	updated_at: z.date(),
 });
 export type Denunciation = z.infer<typeof denunciationSchema>;
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(denunciationSchema, { id: "Denunciation" });
