@@ -231,6 +231,8 @@ describe("create-complaint-attachment-use-case", () => {
 			async convertFileToBase64() {
 				return "";
 			}
+
+			async ping() {}
 		}
 
 		const complaintsRepository = new InMemoryComplaintsRepository();
@@ -294,6 +296,8 @@ describe("create-complaint-attachment-use-case", () => {
 			async convertFileToBase64() {
 				return "";
 			}
+
+			async ping() {}
 		}
 
 		const complaintsRepository = new InMemoryComplaintsRepository();

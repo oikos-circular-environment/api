@@ -12,6 +12,7 @@ function makeStorageProvider(): StorageProvider {
 		getFileUrl: vi.fn(),
 		checkFileExists: vi.fn(),
 		convertFileToBase64: vi.fn(),
+		ping: vi.fn(),
 	};
 }
 
