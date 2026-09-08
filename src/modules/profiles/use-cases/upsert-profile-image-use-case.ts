@@ -83,17 +83,18 @@ export class UpsertProfileImageUseCase {
 		}
 
 		const { url } = await this.storageProvider.getFileUrl(filePath);
+		const versionedUrl = `${url}?v=${Date.now()}`;
 		const profileImage = await this.transactionManager.run(async (tx) => {
 			const saved = await this.profilesRepository.saveProfileImage(
 				profile.id,
 				{
-					url,
+					url: versionedUrl,
 					file_name: file.fileName,
 					path: filePath,
 				},
 				tx,
 			);
-			await this.usersRepository.updateImage(userId, url, tx);
+			await this.usersRepository.updateImage(userId, versionedUrl, tx);
 			return saved;
 		});
 
