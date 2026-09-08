@@ -123,7 +123,6 @@ describe("denunciations-repository-prisma", () => {
 			url: "https://storage.test/denunciations/1.png",
 			file_name: "screenshot.png",
 			path: "denunciations/1.png",
-			base64: Buffer.from("image-content").toString("base64"),
 			type: "PHOTO",
 			metadata: null,
 		});
@@ -140,7 +139,6 @@ describe("denunciations-repository-prisma", () => {
 			url: "https://storage.test/x.png",
 			file_name: "x.png",
 			path: "x.png",
-			base64: "x",
 			type: "PHOTO",
 			metadata: null,
 		});
@@ -162,7 +160,6 @@ describe("denunciations-repository-prisma", () => {
 			url: "https://storage.test/denunciations/2.png",
 			file_name: "screenshot-2.png",
 			path: "denunciations/2.png",
-			base64: Buffer.from("image-content").toString("base64"),
 			type: "PHOTO",
 			metadata: null,
 		});

@@ -32,7 +32,6 @@ type AttachmentRecord = {
 	url: string;
 	file_name: string;
 	path: string;
-	base64: string;
 	metadata: Record<string, unknown> | null;
 	type: "PHOTO" | "VIDEO";
 	created_at: Date;
@@ -217,7 +216,6 @@ export class InMemoryDenunciationsRepository
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			metadata: data.metadata ?? null,
 			type: data.type,
 			created_at: new Date(),
@@ -256,7 +254,6 @@ export class InMemoryDenunciationsRepository
 					url: a.url,
 					file_name: a.file_name,
 					path: a.path,
-					base64: a.base64,
 					metadata: a.metadata,
 					type: a.type,
 					created_at: a.created_at,

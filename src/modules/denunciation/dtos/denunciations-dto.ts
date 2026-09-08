@@ -66,7 +66,6 @@ export const saveDenunciationAttachmentSchema = z.object({
 	url: z.string().min(1, "url is required"),
 	file_name: z.string().min(1, "file_name is required"),
 	path: z.string().min(1, "path is required"),
-	base64: z.string().min(1, "base64 is required"),
 	metadata: denunciationAttachmentMetadataSchema,
 	type: denunciationAttachmentTypeSchema,
 });

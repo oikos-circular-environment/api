@@ -533,36 +533,6 @@ describe("create-denunciation-attachment-use-case", () => {
 		expect(result.attachments[0]?.url).toMatch(/\.webm$/);
 	});
 
-	it("stores the file content as base64", async () => {
-		const denunciationsRepository = new InMemoryDenunciationsRepository();
-		const storageProvider = new InMemoryStorageProvider();
-		const sut = new CreateDenunciationAttachmentUseCase(
-			denunciationsRepository,
-			storageProvider,
-		);
-
-		const created = await denunciationsRepository.create({
-			title: "Fake profile",
-			description: "This looks like a scam.",
-			reporter_email: "reporter@example.com",
-			reporter_user_id: REPORTER_USER_ID,
-		});
-
-		const result = await sut.execute({
-			denunciationId: created.id,
-			userId: REPORTER_USER_ID,
-			file: {
-				fileName: "1.jpg",
-				mimeType: "image/jpeg",
-				content: JPEG_MAGIC_BYTES,
-			},
-		});
-
-		expect(result.attachments[0]?.base64).toBe(
-			JPEG_MAGIC_BYTES.toString("base64"),
-		);
-	});
-
 	it("stores metadata when provided", async () => {
 		const denunciationsRepository = new InMemoryDenunciationsRepository();
 		const storageProvider = new InMemoryStorageProvider();

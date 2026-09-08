@@ -409,7 +409,6 @@ model ComplaintAttachment {
   url        String
   file_name  String
   path       String
-  base64     String
   metadata   Json?
   created_at DateTime @default(now())
 
@@ -492,7 +491,6 @@ model DenunciationAttachment {
   url        String
   file_name  String
   path       String
-  base64     String
   metadata   Json?
   type       ComplaintCaptureMode @default(PHOTO)
   created_at DateTime             @default(now())
@@ -545,7 +543,6 @@ model ComplaintResolutionAttachment {
   url        String
   file_name  String
   path       String
-  base64     String
   created_at DateTime @default(now())
 
   type          ComplaintCaptureMode @default(PHOTO)

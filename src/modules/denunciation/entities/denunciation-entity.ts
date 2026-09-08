@@ -20,7 +20,6 @@ export const denunciationAttachmentSchema = z.object({
 	url: z.string(),
 	file_name: z.string(),
 	path: z.string(),
-	base64: z.string(),
 	metadata: z.record(z.string(), z.unknown()).nullable(),
 	type: denunciationAttachmentTypeSchema,
 	created_at: z.date(),
