@@ -1,19 +1,26 @@
 import type { app } from "@/app.js";
 import type { auth } from "@/modules/auth/providers/auth/better-auth/better-auth.js";
 
-// Better Auth tags its core (non-plugin) endpoints "Default"; rename only
-// those to "Auth". Plugin endpoints (Organization, Admin, ...) already carry
-// their own tag and must stay untouched.
+const BETTER_AUTH_TAG = "Better Auth";
+
+// Better Auth tags its core (non-plugin) endpoints "Default"; those become the
+// bare "Better Auth" tag. Plugin endpoints (Organization, Admin, Anonymous...)
+// already carry their own tag — prefix it so every Better Auth endpoint groups
+// under "Better Auth / <plugin>" in the docs sidebar, matching this codebase's
+// existing "Category / Subcategory" tag convention (e.g. "Companies / Addresses").
 // biome-ignore lint/suspicious/noExplicitAny: reshaping Better Auth's generated OpenAPI path item
 function retagAuthOperations(pathItem: any): any {
 	return Object.fromEntries(
 		Object.entries(pathItem).map(([method, operation]) => {
 			// biome-ignore lint/suspicious/noExplicitAny: reshaping Better Auth's generated OpenAPI operation
 			const op = operation as any;
-			return [
-				method,
-				op?.tags?.includes("Default") ? { ...op, tags: ["Auth"] } : op,
-			];
+			if (!op?.tags) {
+				return [method, op];
+			}
+			const tags = op.tags.map((tag: string) =>
+				tag === "Default" ? BETTER_AUTH_TAG : `${BETTER_AUTH_TAG} / ${tag}`,
+			);
+			return [method, { ...op, tags }];
 		}),
 	);
 }
@@ -55,11 +62,8 @@ export function createOpenApiDocumentMerger(
 			},
 			tags: [
 				...(swaggerDocument.tags ?? []),
-				...(authSchema.tags ?? [])
-					.filter((tag: { name: string }) => tag.name !== "Default")
-					.filter((tag: { name: string }) => tag.name !== "Auth"),
 				{
-					name: "Auth",
+					name: BETTER_AUTH_TAG,
 					description: "Better Auth (login, sessão, organizações)",
 				},
 			],
