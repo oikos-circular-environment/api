@@ -14,8 +14,8 @@ describe("account-deletion-worker", () => {
 	): Promise<string> {
 		const userId = randomUUID();
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at, deleted_at, deletion_job_id)
-			 VALUES ($1, $2, 'hashed', NOW(), $3, $4)`,
+			`INSERT INTO users (id, email, created_at, deleted_at, deletion_job_id)
+			 VALUES ($1, $2, NOW(), $3, $4)`,
 			userId,
 			`deletion-test-${userId}@integration.test`,
 			overrides?.deleted_at ?? null,
