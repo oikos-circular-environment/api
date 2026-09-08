@@ -6,13 +6,24 @@ import { makeStorageProvider } from "@/modules/common/providers/storage/make-sto
 const CHECK_TIMEOUT_MS = 2000;
 
 const checkResultSchema = z.object({
-	status: z.enum(["up", "down", "disabled"]),
-	latencyMs: z.number().optional(),
-	error: z.string().optional(),
+	status: z
+		.enum(["up", "down", "disabled"])
+		.describe(
+			"up: resource reachable. down: check failed or timed out. disabled: resource not configured (e.g. no REDIS_URL).",
+		),
+	latencyMs: z.number().optional().describe("Check duration in milliseconds."),
+	error: z
+		.string()
+		.optional()
+		.describe("Failure reason, present when status is down."),
 });
 
 export const healthCheckResponseSchema = z.object({
-	status: z.enum(["ok", "degraded"]),
+	status: z
+		.enum(["ok", "degraded"])
+		.describe(
+			"ok: database and storage are up. degraded: database or storage check failed (redis being down or disabled does not affect this).",
+		),
 	checks: z.object({
 		database: checkResultSchema,
 		redis: checkResultSchema,
