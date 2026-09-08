@@ -1,0 +1,5761 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:52:25.373Z",
+		"city": "Alvorada",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Beau Fadel",
+			"display_name": "Beau",
+			"phone": "(62) 94139-5811",
+			"email": "beau-fadel.0.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "34578-312",
+				"street": "Britney Pike",
+				"number": "49009",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.021562,
+				"longitude": -51.044939
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJUxhLXnafGZUR5JGq6Pfkf8c",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Comércio de metais reciclando o mundo",
+					"business_name": "Comércio de metais reciclando o mundo",
+					"identity": "58954945000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.metais.reciclando.o.mundo@equatorial-vestment.biz",
+					"phones": ["(51) 98057-4935"],
+					"website": null,
+					"started_activity_in": "2020-06-09T23:16:51.297Z",
+					"address": {
+						"zip_code": "94853-250",
+						"street": "Av. Frederico Dihl",
+						"number": "4578",
+						"complement": null,
+						"district": "Aparecida, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0314141,
+						"longitude": -51.0534776
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 587.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.24,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 860
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.09,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 541.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.01,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 496.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 149.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 167.16,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 208.04,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 92.68,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJvf_tpKB1GZURfnmU3Af1nM8",
+						"rating": 1,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem de Metais",
+					"business_name": "Reciclagem de Metais",
+					"identity": "73255139000150",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.de.metais@tall-summer.info",
+					"phones": ["(51) 99872-4017"],
+					"website": null,
+					"started_activity_in": "2025-10-21T08:50:08.163Z",
+					"address": {
+						"zip_code": "94838-330",
+						"street": "R. Júlio de Castilhos",
+						"number": "S/N",
+						"complement": null,
+						"district": "Piratini, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.011212800000003,
+						"longitude": -51.041016199999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "00:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 236
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.41,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 169.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 258.68,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 145.88,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 165,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 277.35,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 292.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 165.34,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-16T10:00:39.874Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.96781,
+								"longitude": -51.078603,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788359879063
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Franklin County",
+							"streetNumber": "53924",
+							"street": "Noah Valley",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30116555",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Merle Dam, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"description": "Cumque sublime enim.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"description": "Adduco coepi demitto recusandae sperno comedo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Darian Cartwright",
+			"display_name": "Darian",
+			"phone": "(23) 93220-1574",
+			"email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "03791-297",
+				"street": "Kohler Summit",
+				"number": "7559",
+				"complement": null,
+				"district": "Dyfed",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.968095,
+				"longitude": -51.027189
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJY7kZ3AF0GZUR9tftds9CW9c",
+						"rating": 4.6,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Trade Brasil Recicle",
+					"business_name": "Trade Brasil Recicle",
+					"identity": "90597524000102",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "trade.brasil.recicle@grim-airmail.com",
+					"phones": ["(51) 3469-0906"],
+					"website": "https://tradebrasilrecicle.com.br/",
+					"started_activity_in": "2020-06-04T16:23:58.790Z",
+					"address": {
+						"zip_code": "94910-170",
+						"street": "R. Papa João XXIII",
+						"number": "1121",
+						"complement": null,
+						"district": "Vila Cachoeirinha, Cachoeirinha",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9592201,
+						"longitude": -51.0942304
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.07,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 883.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.78,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 390
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 85.3,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 59.38,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 140.19,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 70.46,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJXyM_1MqfGZURC6lkyhkbHDc",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "T.s Reciclagem",
+					"business_name": "T.s Reciclagem",
+					"identity": "28539536000107",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "t.s.reciclagem@cultivated-hose.info",
+					"phones": ["(92) 92236-9291"],
+					"website": null,
+					"started_activity_in": "2018-04-14T13:23:12.493Z",
+					"address": {
+						"zip_code": "94855-510",
+						"street": "Av. Nossa Sra. Aparecida",
+						"number": "286",
+						"complement": null,
+						"district": "Aparecida, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.036489399999997,
+						"longitude": -51.0538039
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 779.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.46,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 288.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.63,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 806.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 234.68,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 159.76,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-24T15:10:39.308Z",
+					"observations": "Tamdiu delibero solio charisma.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.03932,
+								"longitude": -51.010914,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788348309804
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Lawrence County",
+							"streetNumber": "70222",
+							"street": "N 3rd Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "83284137",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gutkowski Green, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Mineral / Lubrificante",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Katie Sanford",
+			"display_name": "Katie",
+			"phone": "(13) 96500-4211",
+			"email": "katie-sanford.2.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "74565-044",
+				"street": "Reichert Plaza",
+				"number": "2005",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.047217,
+				"longitude": -51.063235
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJEZI1e8h1GZURsiI7tyQBShM",
+						"rating": 5,
+						"types": [
+							"association_or_organization",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Biorecicle Alvorada",
+					"business_name": "Biorecicle Alvorada",
+					"identity": "24468028000116",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "biorecicle.alvorada@warlike-expansion.org",
+					"phones": ["(51) 98648-5515"],
+					"website": null,
+					"started_activity_in": "2020-07-31T22:49:56.176Z",
+					"address": {
+						"zip_code": "94828-090",
+						"street": "R. Baronesa do Gravataí",
+						"number": "103",
+						"complement": null,
+						"district": "Maria Regina, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9891128,
+						"longitude": -51.06443350000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 845.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.33,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 648.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 988.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 130.05,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 220.3,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 177.29,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 177.6,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 232.63,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJqbGNXod1GZURXoVbrEUJmp4",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecosul comércio de Metais",
+					"business_name": "Ecosul comércio de Metais",
+					"identity": "93249773000197",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecosul.comercio.de.metais@excellent-sticker.info",
+					"phones": ["(51) 98207-9158"],
+					"website": null,
+					"started_activity_in": "2024-04-19T10:34:41.642Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Av. Pres. Getúlio Vargas",
+						"number": "S/N",
+						"complement": null,
+						"district": "Maria Regina, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0016546,
+						"longitude": -51.0309047
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 878.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.57,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 177.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 164.73,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 267.31,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 63.4,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 118.06,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 246.15,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 51.07,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-05T16:04:44.117Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.997819,
+								"longitude": -51.028808,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298819389
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Strathclyde",
+							"streetNumber": "972",
+							"street": "Bogisich Motorway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91453001",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reanna Trace, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Vidro", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Clarence Lind",
+			"display_name": "Clarence",
+			"phone": "(31) 90065-6105",
+			"email": "clarence-lind.3.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "18226-634",
+				"street": "Casandra Freeway",
+				"number": "89360",
+				"complement": null,
+				"district": "Nottinghamshire",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.023458,
+				"longitude": -51.064882
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJsxOV3951GZURi80QIywbmuA",
+						"rating": 2,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Silva Recycling",
+					"business_name": "Silva Recycling",
+					"identity": "02003825000195",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "silva.recycling@ajar-hovercraft.biz",
+					"phones": ["(51) 98648-5449"],
+					"website": null,
+					"started_activity_in": "2022-08-21T03:43:54.512Z",
+					"address": {
+						"zip_code": "94852-490",
+						"street": "R. Bento Martins",
+						"number": "18",
+						"complement": null,
+						"district": "Piratini, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.004156799999997,
+						"longitude": -51.0517421
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.05,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 235.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.84,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 361.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 797.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.72,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 601.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.02,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 112
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 54.39,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 269.98,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJtdeR1wh1GZURBx2zqhiLU0c",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucatas Rodrigues, \"não faço coletas\"",
+					"business_name": "Sucatas Rodrigues, \"não faço coletas\"",
+					"identity": "50679523000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucatas.rodrigues.nao.faco.coletas@shameless-tinderbox.org",
+					"phones": ["(51) 99835-2971"],
+					"website": null,
+					"started_activity_in": "2022-10-18T06:48:04.568Z",
+					"address": {
+						"zip_code": "94836-000",
+						"street": "Av. Pres. Getúlio Vargas",
+						"number": "5720",
+						"complement": null,
+						"district": "Tijuca, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.005866,
+						"longitude": -51.045494999999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.34,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 872
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.48,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 415.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 495.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 438.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 143.41,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 255.76,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-02T03:31:43.928Z",
+					"observations": "Eius cohibeo quia delibero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.030601,
+								"longitude": -51.062365,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286785471
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Franklin County",
+							"streetNumber": "624",
+							"street": "S Main Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84959691",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Katie Lights, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Vidro",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"description": "Voveo sum sint aperte attollo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-05T12:27:43.695Z",
+					"observations": "Cedo arma trepide curatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.973883,
+								"longitude": -51.042054,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279439216
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "West Glamorgan",
+							"streetNumber": "470",
+							"street": "Gretchen Highway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57782881",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jeffrey Path, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Metal / Alumínio",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ronald Skiles",
+			"display_name": "Ronald",
+			"phone": "(70) 90528-6501",
+			"email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "25615-272",
+				"street": "Eula Estates",
+				"number": "850",
+				"complement": null,
+				"district": "Scott County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.031218,
+				"longitude": -51.006449
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJKcXMomp1GZURKdeidW-aE5Q",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem do polaco",
+					"business_name": "Reciclagem do polaco",
+					"identity": "27099860000180",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.polaco@far-off-earth.name",
+					"phones": ["(51) 98678-7445"],
+					"website": null,
+					"started_activity_in": "2024-01-16T04:53:09.525Z",
+					"address": {
+						"zip_code": "94820-060",
+						"street": "Av. Beira Rio",
+						"number": "953",
+						"complement": null,
+						"district": "Sumaré, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9850508,
+						"longitude": -51.088411199999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 103.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.21,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 740.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.98,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 899.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 230.83,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 216.89,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 193.15,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJh_F3Jp91GZURliryKCl-RHQ",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JG Recicla",
+					"business_name": "JG Recicla",
+					"identity": "54905778000179",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jg.recicla@submissive-alert.biz",
+					"phones": ["(51) 99322-8731"],
+					"website": "https://www.jgrecicla.com.br/",
+					"started_activity_in": "2024-03-10T01:42:27.887Z",
+					"address": {
+						"zip_code": "94818-550",
+						"street": "R. Pedro Carneiro Pereira",
+						"number": "280",
+						"complement": null,
+						"district": "Estância Grande, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.003397699999997,
+						"longitude": -51.0585142
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.09,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 844.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 912.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 869.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 593.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 156.87,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 238.03,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 131.55,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-19T14:14:05.332Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.036989,
+								"longitude": -51.061927,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318658808
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Grampian",
+							"streetNumber": "9000",
+							"street": "Murazik Key",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03334107",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reichert Trail, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"description": "Aufero atque vulticulus coadunatio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "clarence-lind.3.alvorada-rs@oikos.seed",
+							"description": "Culpo decens basium.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Eugene Lemke",
+			"display_name": "Eugene",
+			"phone": "(97) 92332-0286",
+			"email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "73266-590",
+				"street": "Dale Street",
+				"number": "309",
+				"complement": null,
+				"district": "Wayne County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.989587,
+				"longitude": -50.949213
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJxwOWKgh1GZUR7S9nqyL-dQk",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JR Recicla ️",
+					"business_name": "JR Recicla ️",
+					"identity": "65169542000138",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jr.recicla@jagged-cope.com",
+					"phones": ["(51) 98941-9235"],
+					"website": "https://instagram.com/jr_recicla?igshid=YmMyMTA2M2Y=",
+					"started_activity_in": "2017-11-10T18:56:25.232Z",
+					"address": {
+						"zip_code": "94852-010",
+						"street": "R. Maurício Cardoso",
+						"number": "N° 405",
+						"complement": null,
+						"district": "Tijuca, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.004724699999997,
+						"longitude": -51.0471818
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 576.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.55,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 610
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 130.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.8,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 967.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 848.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 376.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 225.86,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 81.19,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 96.43,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 229.08,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 132.6,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJA00ioi91GZURGoWqM2BYCAU",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Preserva Infinity",
+					"business_name": "Preserva Infinity",
+					"identity": "25578959000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "preserva.infinity@responsible-prohibition.info",
+					"phones": ["(51) 98156-9060"],
+					"website": null,
+					"started_activity_in": "2020-04-30T09:40:32.681Z",
+					"address": {
+						"zip_code": "94853-250",
+						"street": "Av. Frederico Dihl",
+						"number": "1970",
+						"complement": null,
+						"district": "2",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.017122299999997,
+						"longitude": -51.070584
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.2,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 602.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.63,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 353.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.39,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 601.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 381.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.42,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 605.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.6,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 313
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 135.25,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 137.05,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 67.6,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-19T03:05:38.531Z",
+					"observations": "Allatus virga occaecati vitiosus totam unus cumque aiunt curto adhuc.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.987592,
+								"longitude": -51.006742,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325214170
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Clark County",
+							"streetNumber": "46761",
+							"street": "Doyle-O'Conner Spurs",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94884477",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clarence Road, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"description": "Aptus vir vorago accommodo aliquam alioqui denuo tabula ante.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"description": "Doloremque placeat damno aperiam crustulum adinventitias vesco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-23T20:54:02.457Z",
+					"observations": "Solium terra totidem tunc adsidue.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.97798,
+								"longitude": -51.010919,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788345255889
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Merseyside",
+							"streetNumber": "90651",
+							"street": "Greenway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66163423",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Anderson Light, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"description": "Ullus totidem defluo audentia turba neque beneficium.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"description": "Cogito creta tutamen umerus comes tabella aggero cotidie angelus teres.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-22T06:30:48.423Z",
+					"observations": "Amitto sponte trans cruciamentum patrocinor pectus adsum voveo sortitus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.040999,
+								"longitude": -51.0068,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308085623
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "West Yorkshire",
+							"streetNumber": "269",
+							"street": "Boyle Point",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "38833307",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hilll Trace, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Veículos em Fim de Vida",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-08T18:16:49.184Z",
+					"observations": "Caries ustilo arcesso tutis spoliatio adamo verto veritas atrocitas vorax.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.006975,
+								"longitude": -51.071268,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347461606
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Nottinghamshire",
+							"streetNumber": "56462",
+							"street": "Champlin Corners",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51738001",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Walter Streets, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"description": "Vel vox averto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"description": "Curto veritatis alii cernuus adeptio illum solum ascit conservo ascisco.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Vicente Lockman",
+			"display_name": "Vicente",
+			"phone": "(77) 91283-1505",
+			"email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "90410-773",
+				"street": "Church View",
+				"number": "44127",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.022659,
+				"longitude": -50.969811
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJmxn0chd1GZURERbFlV_Qm4s",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JS Metais",
+					"business_name": "JS Metais",
+					"identity": "60750698000194",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "js.metais@dark-horde.info",
+					"phones": ["(51) 98586-5734"],
+					"website": null,
+					"started_activity_in": "2025-10-29T14:18:51.003Z",
+					"address": {
+						"zip_code": "94820-060",
+						"street": "Av. Beira Rio",
+						"number": "81",
+						"complement": null,
+						"district": "Passo do Feijó, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.995640599999998,
+						"longitude": -51.0880795
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 65.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.56,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 993.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 763.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 841.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.51,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 246.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 167.28,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 223.3,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 129.86,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 52.43,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 143.84,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJxdOJBoqfGZUR6NyKcYfLJq0",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "MTS COMÉRCIO DE RECICLÁVEIS",
+					"business_name": "MTS COMÉRCIO DE RECICLÁVEIS",
+					"identity": "71643168000163",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mts.comercio.de.reciclaveis@able-community.info",
+					"phones": ["(51) 98526-2081"],
+					"website": "http://mudetransformesustente.com.br/",
+					"started_activity_in": "2020-07-15T11:52:43.817Z",
+					"address": {
+						"zip_code": "94853-250",
+						"street": "Av. Frederico Dihl",
+						"number": "3977",
+						"complement": null,
+						"district": "Aparecida, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0258941,
+						"longitude": -51.058972700000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.01,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 607.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.69,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 662.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 843.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.92,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 278.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 56.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 220.38,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 192.08,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 79.67,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 71.84,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 221.4,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-31T19:00:10.048Z",
+					"observations": "Aiunt supplanto sunt cibus chirographum terreo atrox spiritus amicitia avaritia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.984598,
+								"longitude": -51.042675,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295820303
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Powys",
+							"streetNumber": "470",
+							"street": "King Point",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61873684",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Effertz Lake, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-lind.3.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"description": "Vulgaris odit audio suggero summisse.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"description": "Decretum volup universe vomica denuo tamen verus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Maxime Leuschke",
+			"display_name": "Maxime",
+			"phone": "(77) 99211-7104",
+			"email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "93245-138",
+				"street": "Johnathan Road",
+				"number": "66641",
+				"complement": null,
+				"district": "Wayne County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.050946,
+				"longitude": -50.984688
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJH48NxUZ1GZUR8fe_shmQE3I",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Estar top reciclagem ♻️",
+					"business_name": "Estar top reciclagem ♻️",
+					"identity": "10082636000183",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "estar.top.reciclagem@calculating-haircut.org",
+					"phones": ["(51) 98187-4317"],
+					"website": null,
+					"started_activity_in": "2018-08-06T21:29:39.520Z",
+					"address": {
+						"zip_code": "94834-228",
+						"street": "R. Vista Alegre",
+						"number": "695",
+						"complement": null,
+						"district": "Maria Regina, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.994135099999998,
+						"longitude": -51.044376199999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.37,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 137.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.74,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 554.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.23,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 786.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.34,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 240.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.56,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 984.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 697.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 199.92,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 272.78,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 296.56,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 165.65,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 168.06,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 183.1,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJv-he6i10GZURxBXXuUjon64",
+						"rating": 4.6,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucapel",
+					"business_name": "Sucapel",
+					"identity": "61066849000152",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucapel@lovable-husband.org",
+					"phones": ["(51) 3483-7017"],
+					"website": "http://www.sucapel.com.br/",
+					"started_activity_in": "2024-01-07T11:31:28.192Z",
+					"address": {
+						"zip_code": "94820-040",
+						"street": "R. Anita Garibaldi",
+						"number": "668",
+						"complement": null,
+						"district": "Sumaré, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9876921,
+						"longitude": -51.0868736
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 526.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.76,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 853.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 945.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.88,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 593.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.24,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 695.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 213.58,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 79.65,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 124.28,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 223.42,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 126.34,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-22T10:53:36.802Z",
+					"observations": "Soluta ascit ad nesciunt absconditus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.005772,
+								"longitude": -51.039427,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285780775
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Essex",
+							"streetNumber": "48438",
+							"street": "Runte Motorway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50027685",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bettye Forks, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-29T04:42:36.706Z",
+					"observations": "Crapula vester trucido abbas averto solvo viduo tres sursum valens.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.00924,
+								"longitude": -51.049713,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279298798
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Johnson County",
+							"streetNumber": "753",
+							"street": "E 8th Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "83004787",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Karl Fall, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-22T04:25:58.218Z",
+					"observations": "Aro coepi abduco patruus casso voluptatum traho victoria.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.959098,
+								"longitude": -51.053002,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329002771
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Clwyd",
+							"streetNumber": "717",
+							"street": "Schulist Dale",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74224684",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jamarcus Roads, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Angie Gutmann",
+			"display_name": "Angie",
+			"phone": "(55) 90239-1269",
+			"email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "31277-196",
+				"street": "Woodlands Close",
+				"number": "105",
+				"complement": null,
+				"district": "County Londonderry",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.027127,
+				"longitude": -51.020223
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJw1vRn7JoGZURVJJocRUqnWM",
+						"rating": 4.4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cobec Comércio de Metálicos",
+					"business_name": "Cobec Comércio de Metálicos",
+					"identity": "10282315000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cobec.comercio.de.metalicos@blind-designation.org",
+					"phones": ["(51) 3453-4272"],
+					"website": "http://www.cobecmetalicos.com.br/",
+					"started_activity_in": "2026-07-28T19:57:29.879Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Zap ( 51",
+						"number": "S/N",
+						"complement": null,
+						"district": "92008.3385",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.978968599999995,
+						"longitude": -51.0227587
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.39,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 375.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 875.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.16,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 921.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 244.66,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 248.31,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 124.53,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 114,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 243.96,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJQ13iYwV1GZURpF1Td5LIorA",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sul Óleo",
+					"business_name": "Sul Óleo",
+					"identity": "03925844000131",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sul.oleo@blushing-procurement.org",
+					"phones": ["(51) 99767-7910"],
+					"website": null,
+					"started_activity_in": "2021-10-23T23:47:25.809Z",
+					"address": {
+						"zip_code": "91175-250",
+						"street": "R. Santa Rosário Gonçalves",
+						"number": "7",
+						"complement": null,
+						"district": "Santa Rosa de Lima, Porto Alegre",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.987075599999997,
+						"longitude": -51.0926149
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "20:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.9,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 275.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.84,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 991.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.81,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 10.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 556.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.58,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 537.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.7,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 207.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 153.26,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 262.72,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 68.28,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-20T13:13:38.140Z",
+					"observations": "Demulceo tumultus patrocinor quibusdam defaeco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.986471,
+								"longitude": -51.010173,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307934950
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Henry County",
+							"streetNumber": "92420",
+							"street": "Schumm-Moore Islands",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53425550",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brook Road, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-lind.3.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"description": "Accusamus corona asporto depulso aqua vomica astrum vesica sonitus conatus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-24T09:28:10.290Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.968153,
+								"longitude": -50.97916,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278558885
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Oxfordshire",
+							"streetNumber": "80930",
+							"street": "Prohaska-Considine Mews",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57185450",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Madison Street, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Resíduos Orgânicos",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-06T14:51:27.069Z",
+					"observations": "Perferendis solium uxor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.011485,
+								"longitude": -51.033929,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344496964
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Berkshire",
+							"streetNumber": "5242",
+							"street": "Schmidt Keys",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70680479",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "D'Amore Forks, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clarence-lind.3.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"description": "Tamen eos calamitas.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Cordie Durgan",
+			"display_name": "Cordie",
+			"phone": "(59) 97650-5651",
+			"email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "42455-204",
+				"street": "W Walnut Street",
+				"number": "91137",
+				"complement": null,
+				"district": "County Londonderry",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.977299,
+				"longitude": -51.01516
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJSXxZulZ1GZUR2G3wPOcSd4s",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ecopoint",
+					"business_name": "ecopoint",
+					"identity": "63173139000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecopoint@weekly-yogurt.com",
+					"phones": ["(83) 99090-6488"],
+					"website": null,
+					"started_activity_in": "2024-08-10T09:08:15.459Z",
+					"address": {
+						"zip_code": "94810-001",
+						"street": "Av. Pres. Getúlio Vargas",
+						"number": "8526",
+						"complement": null,
+						"district": "Distrito Industrial, Alvorada",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.999398600000003,
+						"longitude": -51.020215799999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.69,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 664.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 320.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 405.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 786.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.17,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 707.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 880.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 208.23,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 277.06,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJNSsTPPYLGZURKvMsKT-6y4w",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ijiplast",
+					"business_name": "Ijiplast",
+					"identity": "73401825000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ijiplast@crazy-prohibition.net",
+					"phones": ["(51) 99966-9054"],
+					"website": null,
+					"started_activity_in": "2024-08-03T18:52:27.405Z",
+					"address": {
+						"zip_code": "94190-000",
+						"street": "R. Bernardo Joaquim Ferreira",
+						"number": "1557",
+						"complement": null,
+						"district": "Parque dos Anjos, Gravataí",
+						"city": "Alvorada",
+						"city_ibge_id": 4300604,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.962671,
+						"longitude": -50.975822799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 689.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.48,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 393.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.64,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 594.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.38,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 714.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.7,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 541.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 191.79,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 281.11,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Gloria Borer",
+			"display_name": "Gloria",
+			"phone": "(82) 97176-8832",
+			"email": "gloria-borer.10.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "01355-614",
+				"street": "Willow Close",
+				"number": "9154",
+				"complement": null,
+				"district": "Gwent",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.979316,
+				"longitude": -51.092941
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-14T22:59:30.439Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.019339,
+								"longitude": -50.94853,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330745203
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Cumbria",
+							"streetNumber": "107",
+							"street": "Marcia Crescent",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88474121",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Morar Mission, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-16T09:39:17.103Z",
+					"observations": "Solium suggero expedita.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.967197,
+								"longitude": -50.974535,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327109156
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Gwent",
+							"streetNumber": "26855",
+							"street": "Johnson Creek",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86547919",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Otis Pine, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"description": "Pauci depraedor quae viridis defetiscor dens deporto.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"description": "Virgo conicio summopere creta.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Melanie Schmeler",
+			"display_name": "Melanie",
+			"phone": "(51) 98831-5461",
+			"email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "33254-167",
+				"street": "Violet Forest",
+				"number": "57689",
+				"complement": null,
+				"district": "Clay County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.036778,
+				"longitude": -51.074568
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-24T08:13:51.583Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.982238,
+								"longitude": -50.986047,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320549868
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "West Midlands",
+							"streetNumber": "963",
+							"street": "Haley Plaza",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45158478",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Orlando Gateway, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Sandra Bailey",
+			"display_name": "Sandra",
+			"phone": "(40) 94196-5188",
+			"email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "70512-428",
+				"street": "Batz Place",
+				"number": "830",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.963275,
+				"longitude": -50.998151
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Allan Russel",
+			"display_name": "Allan",
+			"phone": "(08) 96207-0047",
+			"email": "allan-russel.13.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "43162-393",
+				"street": "Franecki Shoals",
+				"number": "220",
+				"complement": null,
+				"district": "Adams County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.020232,
+				"longitude": -51.046021
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-20T16:44:50.255Z",
+					"observations": "Avarus circumvenio abeo talio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.024278,
+								"longitude": -51.006652,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788357397234
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "County Tyrone",
+							"streetNumber": "548",
+							"street": "Luther Unions",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54317449",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N 1st Street, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clarence-lind.3.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-06T02:18:17.699Z",
+					"observations": "Tam bos tubineus adiuvo traho.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.048008,
+								"longitude": -50.992129,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788328634742
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Wayne County",
+							"streetNumber": "72202",
+							"street": "Bath Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47930068",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rodrick Camp, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Zane Johns",
+			"display_name": "Zane",
+			"phone": "(90) 92999-0981",
+			"email": "zane-johns.14.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "93754-489",
+				"street": "Bergnaum Passage",
+				"number": "980",
+				"complement": null,
+				"district": "Carroll County",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.989116,
+				"longitude": -50.966216
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-24T01:53:04.703Z",
+					"observations": "Aurum venustas pauci.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.984423,
+								"longitude": -50.956294,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321376964
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Jefferson County",
+							"streetNumber": "6276",
+							"street": "Bergstrom Highway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93550944",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ludie Ridge, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "angie-gutmann.8.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"description": "Ocer aer toties alveus trucido aedificium absens.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"description": "Admiratio succurro aufero conforto verto necessitatibus vacuus illo aeternus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-31T17:48:17.530Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.051309,
+								"longitude": -50.979431,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321828560
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Douglas County",
+							"streetNumber": "706",
+							"street": "Carlton Ville",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30333528",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Sidings, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Pilhas e Baterias",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cordie-durgan.9.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "allan-russel.13.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"description": "Audentia considero cruciamentum strenuus conqueror clibanus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-26T03:05:33.606Z",
+					"observations": "Tristis tonsor amoveo utroque terra attonbitus corona.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.964288,
+								"longitude": -51.012464,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788299789062
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "County Antrim",
+							"streetNumber": "102",
+							"street": "Makenna Bypass",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43258936",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rhiannon Common, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melanie-schmeler.11.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katie-sanford.2.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxime-leuschke.7.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darian-cartwright.1.alvorada-rs@oikos.seed",
+							"description": "Laborum textus vel deprimo coadunatio commodi calco sit sed.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-07T21:32:17.793Z",
+					"observations": "Defendo velum mollitia supellex vergo pauper necessitatibus consectetur conitor vinculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.990924,
+								"longitude": -50.990168,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287889479
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Lake County",
+							"streetNumber": "86617",
+							"street": "Market Square",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79896581",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lawrence Street, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vicente-lockman.6.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eugene-lemke.5.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clarence-lind.3.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Antwan Ruecker",
+			"display_name": "Antwan",
+			"phone": "(19) 91621-2082",
+			"email": "antwan-ruecker.15.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "09876-213",
+				"street": "Benton Orchard",
+				"number": "164",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.994264,
+				"longitude": -50.949108
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-17T12:52:49.394Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.049472,
+								"longitude": -50.980916,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788277077251
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Buckinghamshire",
+							"streetNumber": "5431",
+							"street": "Sporer Islands",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34471111",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Elinor Mountain, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gloria-borer.10.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sabrina-price.17.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beau-fadel.0.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandra-bailey.12.alvorada-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-04T18:03:11.248Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.962313,
+								"longitude": -51.058487,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346064419
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Grampian",
+							"streetNumber": "36612",
+							"street": "Joe Place",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52010476",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ryan Passage, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Veículos em Fim de Vida",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Melisa Brakus",
+			"display_name": "Melisa",
+			"phone": "(47) 96110-0622",
+			"email": "melisa-brakus.16.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "32161-412",
+				"street": "White Mall",
+				"number": "414",
+				"complement": null,
+				"district": "Grampian",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.028563,
+				"longitude": -51.053147
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Sabrina Price",
+			"display_name": "Sabrina",
+			"phone": "(70) 99877-0130",
+			"email": "sabrina-price.17.alvorada-rs@oikos.seed",
+			"address": {
+				"zip_code": "58188-980",
+				"street": "Cummings Prairie",
+				"number": "4376",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Alvorada",
+				"city_ibge_id": 4300604,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.986095,
+				"longitude": -51.091674
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-23T12:14:39.920Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.008765,
+								"longitude": -51.045515,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309572254
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Wiltshire",
+							"streetNumber": "7796",
+							"street": "Miles Hill",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36937734",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Krajcik Ramp, Alvorada - RS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "zane-johns.14.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-16T19:30:32.861Z",
+					"observations": "Pax aetas solitudo odio turba vinitor cruciamentum eveniet censura.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.984693,
+								"longitude": -51.057916,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788351914493
+						},
+						"addresses": {
+							"city": "Alvorada",
+							"district": "Carroll County",
+							"streetNumber": "1906",
+							"street": "Irma Light",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02480228",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Swift Turnpike, Alvorada - RS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Madeira",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "ronald-skiles.4.alvorada-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

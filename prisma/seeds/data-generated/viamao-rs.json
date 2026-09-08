@@ -1,0 +1,5532 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:52:16.922Z",
+		"city": "Viamão",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Fannie Goodwin",
+			"display_name": "Fannie",
+			"phone": "(00) 94001-8008",
+			"email": "fannie-goodwin.0.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "94426-975",
+				"street": "Misael Drive",
+				"number": "265",
+				"complement": null,
+				"district": "Buckinghamshire",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.000628,
+				"longitude": -50.980123
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJO50Zy3CfGZURP8EczhuKWDo",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Nova Forma",
+					"business_name": "Reciclagem Nova Forma",
+					"identity": "06804412000160",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.nova.forma@vivid-postbox.name",
+					"phones": ["(51) 3435-1083"],
+					"website": "https://www.facebook.com/Reciclagem-Nova-Forma-203213160014050/?fref=ts",
+					"started_activity_in": "2020-05-07T22:46:05.279Z",
+					"address": {
+						"zip_code": "94415-780",
+						"street": "n°1244",
+						"number": "S/N",
+						"complement": null,
+						"district": "Av. Figueira, 780",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.052846000000002,
+						"longitude": -51.024257
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.62,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 352.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.08,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 849.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 249.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.87,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 893.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.42,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 100.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.94,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 950.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 163.64,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 285.04,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 165.98,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 199.72,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 209.76,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 275.46,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ778kpY6ZGZURT0KW9J3k6uQ",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Coleta e Recicla amigos do bem",
+					"business_name": "Coleta e Recicla amigos do bem",
+					"identity": "30348527000172",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "coleta.e.recicla.amigos.do.bem@descriptive-onset.com",
+					"phones": ["(51) 99869-1162"],
+					"website": null,
+					"started_activity_in": "2022-10-13T02:47:49.523Z",
+					"address": {
+						"zip_code": "94430-304",
+						"street": "Rua 2 irmãos",
+						"number": "35",
+						"complement": null,
+						"district": "Valença, Viamão",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.085378700000003,
+						"longitude": -51.0169306
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.14,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 265.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.52,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 428.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 176.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.2,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 108
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 248.91,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 50.47,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 288.6,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 153.09,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 208.84,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 108.52,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-17T03:46:16.031Z",
+					"observations": "Cohors coadunatio qui eveniet tametsi adaugeo approbo condico taedium deinde.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.014217,
+								"longitude": -50.99632,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788324304873
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Grant County",
+							"streetNumber": "70930",
+							"street": "Waterloo Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78085581",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "St Andrew's Road, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "denis-o-kon.16.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carla-schmitt-purdy.9.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Omar Padberg-Spencer",
+			"display_name": "Omar",
+			"phone": "(73) 94233-4913",
+			"email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "56857-001",
+				"street": "S 2nd Street",
+				"number": "140",
+				"complement": null,
+				"district": "Lothian",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.152619,
+				"longitude": -50.946019
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ648ehHx2GZURDVCb8DOPRnk",
+						"rating": 4.1,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto DMLU -",
+					"business_name": "Ecoponto DMLU -",
+					"identity": "25137402000163",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.dmlu@enchanting-best-seller.name",
+					"phones": ["(77) 98006-3752"],
+					"website": null,
+					"started_activity_in": "2026-08-18T07:51:47.686Z",
+					"address": {
+						"zip_code": "91160-241",
+						"street": "Av. Bernardino Silveira Amorim",
+						"number": "2261",
+						"complement": null,
+						"district": "Santa Rosa de Lima, Porto Alegre",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0003359,
+						"longitude": -51.1061183
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 674.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 355.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.47,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 860.9
+						},
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 1.63,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 688.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 281.81,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 124.91,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 186.11,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 271.95,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 65.16,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJUxhLXnafGZUR5JGq6Pfkf8c",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Comércio de metais reciclando o mundo",
+					"business_name": "Comércio de metais reciclando o mundo",
+					"identity": "73043349000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.metais.reciclando.o.mundo@hairy-tentacle.name",
+					"phones": ["(51) 98057-4935"],
+					"website": null,
+					"started_activity_in": "2021-07-08T11:38:11.033Z",
+					"address": {
+						"zip_code": "94853-250",
+						"street": "Av. Frederico Dihl",
+						"number": "4578",
+						"complement": null,
+						"district": "Aparecida, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0314141,
+						"longitude": -51.0534776
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 816.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.06,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 97
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.53,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 836.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.59,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 911
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 250.18,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 96.36,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 235.32,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 243.81,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 214.82,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-27T08:39:53.537Z",
+					"observations": "Undique dolorem venustas colligo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.058554,
+								"longitude": -50.955768,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309345138
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Derbyshire",
+							"streetNumber": "536",
+							"street": "South View",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77065585",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alvin Fords, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Veículos em Fim de Vida",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "denis-o-kon.16.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "henry-bosco.8.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rose Kiehn",
+			"display_name": "Rose",
+			"phone": "(25) 97104-1828",
+			"email": "rose-kiehn.2.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "86517-078",
+				"street": "Ruth Expressway",
+				"number": "33057",
+				"complement": null,
+				"district": "Tyne and Wear",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.093531,
+				"longitude": -50.959844
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJB2q6Rvq7Z0cRlVlXhXwQ2iE",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem do Sete",
+					"business_name": "Reciclagem do Sete",
+					"identity": "28372764000127",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.sete@experienced-statue.info",
+					"phones": ["(51) 99123-9838"],
+					"website": null,
+					"started_activity_in": "2017-05-17T19:15:31.526Z",
+					"address": {
+						"zip_code": "94475-500",
+						"street": "Av. Plácido Mottin",
+						"number": "2589",
+						"complement": null,
+						"district": "Cecília, Viamão",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.059575700000003,
+						"longitude": -51.0931435
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.61,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 71.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 937.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 551.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.88,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 372.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 270.29,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 152.56,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJvf_tpKB1GZURfnmU3Af1nM8",
+						"rating": 1,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem de Metais",
+					"business_name": "Reciclagem de Metais",
+					"identity": "66907516000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.de.metais@closed-hepatitis.com",
+					"phones": ["(51) 99872-4017"],
+					"website": null,
+					"started_activity_in": "2025-04-24T20:29:58.546Z",
+					"address": {
+						"zip_code": "94838-330",
+						"street": "R. Júlio de Castilhos",
+						"number": "S/N",
+						"complement": null,
+						"district": "Piratini, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.011212800000003,
+						"longitude": -51.041016199999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "00:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.72,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 526.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.77,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 426.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.27,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 581.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 571.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 199.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.4,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 880.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 71.95,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 109.98,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 66.63,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 233.78,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 140.3,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 222.28,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-03T09:24:00.904Z",
+					"observations": "Audacia quas pectus ancilla harum defero caste.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.003455,
+								"longitude": -51.006913,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327414980
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Union County",
+							"streetNumber": "66282",
+							"street": "Devante Way",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34078177",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kristine Trail, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "pete-halvorson.14.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Laron Durgan",
+			"display_name": "Laron",
+			"phone": "(35) 96275-4897",
+			"email": "laron-durgan.3.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "25640-856",
+				"street": "Dach Pine",
+				"number": "1074",
+				"complement": null,
+				"district": "Union County",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.154286,
+				"longitude": -51.002535
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJXyM_1MqfGZURC6lkyhkbHDc",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "T.s Reciclagem",
+					"business_name": "T.s Reciclagem",
+					"identity": "72087758000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "t.s.reciclagem@optimistic-relative.name",
+					"phones": ["(58) 92441-2163"],
+					"website": null,
+					"started_activity_in": "2018-05-15T01:38:22.808Z",
+					"address": {
+						"zip_code": "94855-510",
+						"street": "Av. Nossa Sra. Aparecida",
+						"number": "286",
+						"complement": null,
+						"district": "Aparecida, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.036489399999997,
+						"longitude": -51.0538039
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 389.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 277.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.77,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 365.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 456.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 969.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 87.14,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 165.77,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 249.14,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 80.66,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJqbGNXod1GZURXoVbrEUJmp4",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecosul comércio de Metais",
+					"business_name": "Ecosul comércio de Metais",
+					"identity": "88434173000169",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecosul.comercio.de.metais@some-lamp.biz",
+					"phones": ["(51) 98207-9158"],
+					"website": null,
+					"started_activity_in": "2018-01-20T14:45:38.003Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Av. Pres. Getúlio Vargas",
+						"number": "S/N",
+						"complement": null,
+						"district": "Maria Regina, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0016546,
+						"longitude": -51.0309047
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.9,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 470.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.97,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 659.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.2,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 793.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 815.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 143.79,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 138.42,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-18T03:57:01.785Z",
+					"observations": "Magni atavus cauda accommodo certus ciminatio tenax delego cilicium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.147628,
+								"longitude": -51.072247,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275220042
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "County Antrim",
+							"streetNumber": "354",
+							"street": "Ottis Turnpike",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57534366",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tyrese Manor, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "abraham-sporer-cole.12.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-16T23:34:10.570Z",
+					"observations": "Cohibeo amplexus sophismata titulus constans.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.073733,
+								"longitude": -51.055203,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306863857
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Devon",
+							"streetNumber": "157",
+							"street": "Lind Mills",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02136820",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Church Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "jamar-bergstrom.7.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gerardo-howe.15.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-19T20:36:22.767Z",
+					"observations": "Defleo tolero civitas occaecati acies.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.158813,
+								"longitude": -51.116646,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349269655
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Fayette County",
+							"streetNumber": "587",
+							"street": "Peter Wells",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92394881",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "School Road, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Brooke Gusikowski",
+			"display_name": "Brooke",
+			"phone": "(85) 95622-4644",
+			"email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "93908-016",
+				"street": "Miller-Witting Crossroad",
+				"number": "308",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.089629,
+				"longitude": -50.941345
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJsxOV3951GZURi80QIywbmuA",
+						"rating": 2,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Silva Recycling",
+					"business_name": "Silva Recycling",
+					"identity": "47343619000162",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "silva.recycling@impossible-offset.org",
+					"phones": ["(51) 98648-5449"],
+					"website": null,
+					"started_activity_in": "2025-01-16T14:05:08.455Z",
+					"address": {
+						"zip_code": "94852-490",
+						"street": "R. Bento Martins",
+						"number": "18",
+						"complement": null,
+						"district": "Piratini, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.004156799999997,
+						"longitude": -51.0517421
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 860.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.7,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 182.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.27,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 490.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.82,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 815.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 150.02,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 117.5,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 79.78,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 74.25,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJFRzLo9SjGZURYV0IjZj5dOc",
+						"rating": 5,
+						"types": [
+							"transportation_service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "GREENWOOD RECICLAGEM DE MADEIRA E LOGISTICA REVERSA",
+					"business_name": "GREENWOOD RECICLAGEM DE MADEIRA E LOGISTICA REVERSA",
+					"identity": "10331758000166",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "greenwood.reciclagem.de.madeira.e.logistica.reversa@gracious-reconsideration.biz",
+					"phones": ["(51) 99777-5757"],
+					"website": null,
+					"started_activity_in": "2017-09-17T19:10:18.276Z",
+					"address": {
+						"zip_code": "94430-800",
+						"street": "Rod. Tapir Rocha",
+						"number": "13283",
+						"complement": null,
+						"district": "Fiuza, Viamão",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0994192,
+						"longitude": -50.978545499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.68,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 466.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 394
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.46,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 843.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.8,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 347.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 170.36,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 177.15,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-27T18:24:34.766Z",
+					"observations": "Depopulo admoveo dolor spoliatio terra crinis testimonium voco soluta ciminatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.117488,
+								"longitude": -51.036174,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308819468
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Wiltshire",
+							"streetNumber": "7388",
+							"street": "Harriet Dale",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61270565",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jacobs Rapids, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Plástico"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "henry-bosco.8.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pete-halvorson.14.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-09T08:25:21.141Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.06702,
+								"longitude": -51.113777,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349163005
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Hancock County",
+							"streetNumber": "741",
+							"street": "Jacobson Ranch",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84060774",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Antoinette Ramp, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lyle Hyatt",
+			"display_name": "Lyle",
+			"phone": "(94) 94917-8666",
+			"email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "68765-587",
+				"street": "Johnson Heights",
+				"number": "51707",
+				"complement": null,
+				"district": "Cheshire",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.997363,
+				"longitude": -50.936432
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJtdeR1wh1GZURBx2zqhiLU0c",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucatas Rodrigues, \"não faço coletas\"",
+					"business_name": "Sucatas Rodrigues, \"não faço coletas\"",
+					"identity": "93620688000193",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucatas.rodrigues.nao.faco.coletas@qualified-corral.com",
+					"phones": ["(51) 99835-2971"],
+					"website": null,
+					"started_activity_in": "2022-01-24T01:51:27.002Z",
+					"address": {
+						"zip_code": "94836-000",
+						"street": "Av. Pres. Getúlio Vargas",
+						"number": "5720",
+						"complement": null,
+						"district": "Tijuca, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.005866,
+						"longitude": -51.045494999999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 325.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.58,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 970
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.39,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 448.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.39,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 18.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.25,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 186.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 175.58,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 97.84,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 100.24,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 274.31,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 166,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 135.88,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJkWhArSKfGZUR595Vbrs9DCU",
+						"rating": 5,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclale",
+					"business_name": "Reciclale",
+					"identity": "94390523000135",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclale@aggressive-almighty.org",
+					"phones": ["(51) 99606-9102"],
+					"website": null,
+					"started_activity_in": "2017-10-01T04:53:41.880Z",
+					"address": {
+						"zip_code": "94416-310",
+						"street": "Av. E",
+						"number": "186",
+						"complement": null,
+						"district": "São cristovão, Viamão",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.057194100000004,
+						"longitude": -51.0191271
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.18,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 323.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.14,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 521.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.75,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 492
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.67,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 963.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 196.02,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 259.87,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 212.66,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-25T21:52:48.820Z",
+					"observations": "Considero paens sed veritatis amet concedo quam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.166385,
+								"longitude": -50.961083,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285532863
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Gloucestershire",
+							"streetNumber": "64010",
+							"street": "E 6th Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62841187",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W 5th Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Veículos em Fim de Vida",
+						"Plástico"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Cassie Rippin",
+			"display_name": "Cassie",
+			"phone": "(89) 97843-7532",
+			"email": "cassie-rippin.6.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "80994-458",
+				"street": "Rigoberto Cliffs",
+				"number": "108",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.095269,
+				"longitude": -50.982722
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ6xZaBT2fGZURtkiGkxjqbiM",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "🔌♻️ Mendes Coleta de Eletrônicos",
+					"business_name": "🔌♻️ Mendes Coleta de Eletrônicos",
+					"identity": "93628443000102",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mendes.coleta.de.eletronicos@jubilant-skyline.info",
+					"phones": ["(51) 98955-8321"],
+					"website": null,
+					"started_activity_in": "2017-07-17T00:16:16.418Z",
+					"address": {
+						"zip_code": "91250-087",
+						"street": "R. José Hilário Retamozo",
+						"number": "251",
+						"complement": null,
+						"district": "Rubem Berta, Porto Alegre",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0271878,
+						"longitude": -51.101785
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.78,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 107.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.63,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 629.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 746.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.2,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 671.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 950
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.7,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 474
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 138.98,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 60.93,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJd6bZ5z2ZGZURL9vUTeB_d34",
+						"rating": 4.5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Eccoglass Reciclagem de Vidros Ltda",
+					"business_name": "Eccoglass Reciclagem de Vidros Ltda",
+					"identity": "85015103000188",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "eccoglass.reciclagem.de.vidros.ltda@lazy-whack.info",
+					"phones": ["(51) 98131-2414"],
+					"website": null,
+					"started_activity_in": "2022-10-25T16:40:53.840Z",
+					"address": {
+						"zip_code": "94430-280",
+						"street": "Estr. dos Cunhas",
+						"number": "1959",
+						"complement": null,
+						"district": "Fiuza, Viamão",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.099769499999997,
+						"longitude": -51.0478218
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.78,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 108
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.67,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 17.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 232.41,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 142.31,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-03T14:56:25.427Z",
+					"observations": "Occaecati itaque avaritia delego ratione.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.163269,
+								"longitude": -50.981614,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304472912
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Shropshire",
+							"streetNumber": "12765",
+							"street": "Boyle Shore",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66329441",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Jackson Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "minnie-mann.17.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "al-jones.13.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pete-halvorson.14.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"description": "Sapiente deleo dolor aeneus cur doloremque.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-17T20:16:03.393Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.186349,
+								"longitude": -51.069315,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315797889
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Leicestershire",
+							"streetNumber": "196",
+							"street": "Goyette Station",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35667199",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Medhurst-McClure Key, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Papel / Papelão"
+					],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "pete-halvorson.14.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "frida-beier.11.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "fannie-goodwin.0.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-22T11:22:32.523Z",
+					"observations": "Complectus sulum talus accommodo stella admiratio depereo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.074008,
+								"longitude": -51.00403,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309360644
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Bedfordshire",
+							"streetNumber": "16174",
+							"street": "Ed Walks",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61806777",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kilback Forges, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carla-schmitt-purdy.9.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fannie-goodwin.0.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "henry-bosco.8.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "abraham-sporer-cole.12.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "minnie-mann.17.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "denis-o-kon.16.viamao-rs@oikos.seed",
+							"description": "Caelestis sperno caritas crustulum deinde talio bellum alius.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-03-17T10:43:20.573Z",
+					"observations": "Cruentus tepidus subito pecco capillus theatrum corporis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.0775,
+								"longitude": -50.971941,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330309277
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Tayside",
+							"streetNumber": "64073",
+							"street": "Stoney Lane",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91857813",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Court Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "al-jones.13.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gerardo-howe.15.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "denis-o-kon.16.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "minnie-mann.17.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"description": "Alienus brevis aggredior cohors sustineo speciosus utique coniecto.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-12T21:34:20.104Z",
+					"observations": "Desipio careo maxime tam velociter titulus natus usus tergeo calculus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.119829,
+								"longitude": -50.918669,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308802718
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Essex",
+							"streetNumber": "493",
+							"street": "Glennie Plain",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98298613",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Emily Trail, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jamar-bergstrom.7.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "denis-o-kon.16.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fannie-goodwin.0.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "abraham-sporer-cole.12.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "al-jones.13.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "minnie-mann.17.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "al-jones.13.viamao-rs@oikos.seed",
+							"description": "Varius benevolentia totam.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jamar Bergstrom",
+			"display_name": "Jamar",
+			"phone": "(84) 96948-1138",
+			"email": "jamar-bergstrom.7.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "11478-362",
+				"street": "Alexandra Road",
+				"number": "89804",
+				"complement": null,
+				"district": "Tayside",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.107661,
+				"longitude": -50.929904
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJA00ioi91GZURGoWqM2BYCAU",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Preserva Infinity",
+					"business_name": "Preserva Infinity",
+					"identity": "39305156000116",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "preserva.infinity@enchanting-conservation.net",
+					"phones": ["(51) 98156-9060"],
+					"website": null,
+					"started_activity_in": "2025-08-01T07:18:20.070Z",
+					"address": {
+						"zip_code": "94853-250",
+						"street": "Av. Frederico Dihl",
+						"number": "1970",
+						"complement": null,
+						"district": "2",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.017122299999997,
+						"longitude": -51.070584
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 119.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.48,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 711.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 258.7,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 247.58,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.18,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 288.97,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 101.28,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJh_F3Jp91GZURliryKCl-RHQ",
+						"rating": 4.7,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JG Recicla",
+					"business_name": "JG Recicla",
+					"identity": "35015102000165",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jg.recicla@needy-necklace.com",
+					"phones": ["(51) 99322-8731"],
+					"website": "https://www.jgrecicla.com.br/",
+					"started_activity_in": "2026-04-26T22:24:21.389Z",
+					"address": {
+						"zip_code": "94818-550",
+						"street": "R. Pedro Carneiro Pereira",
+						"number": "280",
+						"complement": null,
+						"district": "Estância Grande, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.003397699999997,
+						"longitude": -51.0585142
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.3,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 221.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 864.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 372.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.04,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 397.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 242.88,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 67.95,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 149.71,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-27T11:44:09.951Z",
+					"observations": "Patrocinor approbo vulpes utpote arcesso carbo cattus combibo cavus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.154423,
+								"longitude": -51.103631,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306924239
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Norfolk",
+							"streetNumber": "6017",
+							"street": "S Park Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "24727254",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Herman-Funk Lane, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Embalagens Contaminadas",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gerardo-howe.15.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "al-jones.13.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Henry Bosco",
+			"display_name": "Henry",
+			"phone": "(70) 91912-5544",
+			"email": "henry-bosco.8.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "80152-119",
+				"street": "Church Path",
+				"number": "406",
+				"complement": null,
+				"district": "Lee County",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.078617,
+				"longitude": -50.923731
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJxwOWKgh1GZUR7S9nqyL-dQk",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JR Recicla ️",
+					"business_name": "JR Recicla ️",
+					"identity": "19360265000129",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jr.recicla@speedy-pillow.com",
+					"phones": ["(51) 98941-9235"],
+					"website": "https://instagram.com/jr_recicla?igshid=YmMyMTA2M2Y=",
+					"started_activity_in": "2017-08-09T04:55:30.542Z",
+					"address": {
+						"zip_code": "94852-010",
+						"street": "R. Maurício Cardoso",
+						"number": "N° 405",
+						"complement": null,
+						"district": "Tijuca, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.004724699999997,
+						"longitude": -51.0471818
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.53,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 777.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.68,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 719.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 571.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 183.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.51,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 527.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 209.7,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 151.11,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 238.38,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 62.22,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 130.87,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 148.24,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJKw0Xv16ZGZURUNoNLybe4Hw",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Senax",
+					"business_name": "Reciclagem Senax",
+					"identity": "51389275000108",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.senax@mad-goat.biz",
+					"phones": ["(34) 90384-3591"],
+					"website": null,
+					"started_activity_in": "2019-08-02T05:43:46.025Z",
+					"address": {
+						"zip_code": "94465-000",
+						"street": "Estr. Berico José Bernardes",
+						"number": "3606",
+						"complement": null,
+						"district": "Planalto, Viamão",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.126269699999998,
+						"longitude": -51.091802799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.26,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 582.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.43,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 858.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 84.78,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 231.78,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 218.03,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 287.11,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 234.76,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-20T20:28:06.732Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.022612,
+								"longitude": -50.974202,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278404157
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Nottinghamshire",
+							"streetNumber": "9417",
+							"street": "Lynette Orchard",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47363631",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Marcia Gardens, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-29T15:13:28.691Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.173303,
+								"longitude": -50.909411,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788334816474
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Perry County",
+							"streetNumber": "618",
+							"street": "Natalie Key",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08775802",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Elm Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "denis-o-kon.16.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"description": "Adamo alienus ascit dedico pauci arceo tantillus.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"description": "Custodia delibero ab apud adnuo convoco.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-10T13:44:38.447Z",
+					"observations": "Qui tamdiu aro suppellex delectatio aestivus caste officia cruentus cimentarius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.042686,
+								"longitude": -50.965909,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279794561
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Kent",
+							"streetNumber": "67498",
+							"street": "N Lincoln Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12101257",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tod Harbors, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Metal / Alumínio",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "abraham-sporer-cole.12.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Carla Schmitt-Purdy",
+			"display_name": "Carla",
+			"phone": "(00) 92740-6615",
+			"email": "carla-schmitt-purdy.9.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "59727-424",
+				"street": "MacGyver Wells",
+				"number": "52147",
+				"complement": null,
+				"district": "Marshall County",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.121624,
+				"longitude": -50.958695
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJxdOJBoqfGZUR6NyKcYfLJq0",
+						"rating": 4.8,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "MTS COMÉRCIO DE RECICLÁVEIS",
+					"business_name": "MTS COMÉRCIO DE RECICLÁVEIS",
+					"identity": "67851279000198",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mts.comercio.de.reciclaveis@multicolored-bowling.org",
+					"phones": ["(51) 98526-2081"],
+					"website": "http://mudetransformesustente.com.br/",
+					"started_activity_in": "2022-03-09T16:30:46.479Z",
+					"address": {
+						"zip_code": "94853-250",
+						"street": "Av. Frederico Dihl",
+						"number": "3977",
+						"complement": null,
+						"district": "Aparecida, Alvorada",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0258941,
+						"longitude": -51.058972700000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.07,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 140.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.44,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 198.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 98.13,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 155.5,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 60.39,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJV94LiiGfGZUR8NCz37qki_s",
+						"rating": 4.3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto",
+					"business_name": "Ecoponto",
+					"identity": "44808602000145",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto@excellent-reach.info",
+					"phones": ["(51) 3045-4780"],
+					"website": "https://www.facebook.com/ecopontoviamao/",
+					"started_activity_in": "2019-03-26T21:34:35.244Z",
+					"address": {
+						"zip_code": "94440-000",
+						"street": "Jardim Krahe",
+						"number": "Viamão",
+						"complement": null,
+						"district": "RS, , Brasil",
+						"city": "Viamão",
+						"city_ibge_id": 4323002,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0776441,
+						"longitude": -51.0489501
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Pilhas e Baterias",
+							"description": "Coleta de resíduos: Pilhas e Baterias",
+							"price": 1.96,
+							"unit": "KG",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 300.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.89,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 855.5
+						},
+						{
+							"name": "Lâmpadas",
+							"description": "Coleta de resíduos: Lâmpadas",
+							"price": 4.62,
+							"unit": "KG",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 184.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.83,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 433
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 134.77,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 273.57,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Lâmpadas",
+							"description": "Serviço de coleta e transporte de Lâmpadas",
+							"price": 181.09,
+							"unit": "UNIT",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 148.68,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-24T05:17:12.205Z",
+					"observations": "Articulus thorax deripio utor spero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.174629,
+								"longitude": -51.006698,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788352938961
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Perry County",
+							"streetNumber": "48209",
+							"street": "Nancy Garden",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93987638",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "South View, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "jamar-bergstrom.7.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Magnolia Boyle",
+			"display_name": "Magnolia",
+			"phone": "(68) 97482-8259",
+			"email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "97918-932",
+				"street": "Rowan Close",
+				"number": "5610",
+				"complement": null,
+				"district": "Cornwall",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.165598,
+				"longitude": -51.097373
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-12T23:40:17.614Z",
+					"observations": "Thermae canis vulariter.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.041352,
+								"longitude": -50.963913,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297389187
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Buckinghamshire",
+							"streetNumber": "54601",
+							"street": "Boyer Fords",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28316156",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Main, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-31T16:09:10.237Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.023464,
+								"longitude": -50.937525,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788360191300
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Devon",
+							"streetNumber": "70192",
+							"street": "Mill Lane",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76592367",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Fahey Pine, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "frida-beier.11.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carla-schmitt-purdy.9.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-19T17:11:25.941Z",
+					"observations": "Ademptio curatio certe urbanus tricesimus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.110336,
+								"longitude": -51.101292,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788359280432
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Douglas County",
+							"streetNumber": "2394",
+							"street": "Zulauf Haven",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23375857",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Commercial Road, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "fannie-goodwin.0.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Frida Beier",
+			"display_name": "Frida",
+			"phone": "(80) 94042-4806",
+			"email": "frida-beier.11.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "92377-583",
+				"street": "Gulgowski Avenue",
+				"number": "954",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.195203,
+				"longitude": -50.999749
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Abraham Sporer-Cole",
+			"display_name": "Abraham",
+			"phone": "(76) 93271-8005",
+			"email": "abraham-sporer-cole.12.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "14879-089",
+				"street": "Derby Road",
+				"number": "883",
+				"complement": null,
+				"district": "Cornwall",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.168019,
+				"longitude": -50.974294
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-23T01:07:10.364Z",
+					"observations": "Tabernus timidus velut vicinus nam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.05315,
+								"longitude": -51.009897,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326091029
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Mid Glamorgan",
+							"streetNumber": "55039",
+							"street": "Roob Spring",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90992182",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tyrell Villages, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Veículos em Fim de Vida",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Al Jones",
+			"display_name": "Al",
+			"phone": "(25) 91731-3951",
+			"email": "al-jones.13.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "08898-144",
+				"street": "N Franklin Street",
+				"number": "377",
+				"complement": null,
+				"district": "Rutland",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.182479,
+				"longitude": -51.098477
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-30T01:42:33.828Z",
+					"observations": "Abstergo verbera tempora crustulum caterva capitulus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.11782,
+								"longitude": -51.03992,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307050356
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Union County",
+							"streetNumber": "99116",
+							"street": "Joseph Parkway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23132757",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schimmel Shoals, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-28T22:55:32.090Z",
+					"observations": "Tum volva cupio crudelis cupiditate abeo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.011517,
+								"longitude": -50.927246,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788300371291
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Cambridgeshire",
+							"streetNumber": "85620",
+							"street": "Christian Route",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47818646",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lansdowne Road, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Resíduos Orgânicos",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "minnie-mann.17.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frida-beier.11.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jamar-bergstrom.7.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"description": "Solus conturbo verto apto laudantium clam ait ciminatio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-26T00:47:09.868Z",
+					"observations": "Adulescens bonus canis conforto ascit creator capitulus sint vinculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.001243,
+								"longitude": -51.00814,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342051364
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Scott County",
+							"streetNumber": "24857",
+							"street": "Gladys Inlet",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55909408",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cherry Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Veículos em Fim de Vida",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Pete Halvorson",
+			"display_name": "Pete",
+			"phone": "(99) 90961-0492",
+			"email": "pete-halvorson.14.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "26254-978",
+				"street": "Daugherty Underpass",
+				"number": "68084",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.01614,
+				"longitude": -51.047214
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-23T17:28:55.728Z",
+					"observations": "Antepono currus arca articulus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.042491,
+								"longitude": -50.949525,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320355636
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Merseyside",
+							"streetNumber": "96522",
+							"street": "Gibson Camp",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76577251",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wesley Trafficway, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "al-jones.13.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carla-schmitt-purdy.9.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "henry-bosco.8.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "laron-durgan.3.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "minnie-mann.17.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gerardo-howe.15.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "frida-beier.11.viamao-rs@oikos.seed",
+							"description": "Speculum argumentum strues sunt tremo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"description": "Earum laborum succedo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Gerardo Howe",
+			"display_name": "Gerardo",
+			"phone": "(18) 97495-5170",
+			"email": "gerardo-howe.15.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "97461-614",
+				"street": "Schumm Harbor",
+				"number": "70437",
+				"complement": null,
+				"district": "Cambridgeshire",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.028751,
+				"longitude": -51.093888
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-16T15:20:13.088Z",
+					"observations": "Antiquus assentator uxor capitulus creo audacia magni audentia sto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.114189,
+								"longitude": -50.916397,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788277771226
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Durham",
+							"streetNumber": "8705",
+							"street": "Arianna Creek",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "17504093",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lake Drive, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Eletroeletrônicos (REEE)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jamar-bergstrom.7.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Denis O'Kon",
+			"display_name": "Denis",
+			"phone": "(80) 93593-1596",
+			"email": "denis-o-kon.16.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "88152-935",
+				"street": "Xzavier Brooks",
+				"number": "46788",
+				"complement": null,
+				"district": "Fayette County",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.133483,
+				"longitude": -50.997244
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-06T05:24:59.142Z",
+					"observations": "Certus suppellex aliqua.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.177858,
+								"longitude": -50.950497,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788324119868
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Morgan County",
+							"streetNumber": "175",
+							"street": "Roob Tunnel",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56792086",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S College Street, Viamão - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gerardo-howe.15.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "henry-bosco.8.viamao-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "brooke-gusikowski.4.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-12T21:42:18.139Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.127829,
+								"longitude": -51.087826,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292463118
+						},
+						"addresses": {
+							"city": "Viamão",
+							"district": "Lancashire",
+							"streetNumber": "742",
+							"street": "Lake Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52641559",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Prospect Avenue, Viamão - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "carla-schmitt-purdy.9.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rose-kiehn.2.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "magnolia-boyle.10.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "omar-padberg-spencer.1.viamao-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lyle-hyatt.5.viamao-rs@oikos.seed",
+							"description": "Advenio vilis vox summisse tactus arguo cervus acervus coadunatio rerum.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "cassie-rippin.6.viamao-rs@oikos.seed",
+							"description": "Defaeco porro tubineus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Minnie Mann",
+			"display_name": "Minnie",
+			"phone": "(45) 90201-5238",
+			"email": "minnie-mann.17.viamao-rs@oikos.seed",
+			"address": {
+				"zip_code": "29266-405",
+				"street": "Corkery Manors",
+				"number": "941",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Viamão",
+				"city_ibge_id": 4323002,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.186091,
+				"longitude": -50.980469
+			},
+			"companies": [],
+			"complaints": []
+		}
+	]
+}

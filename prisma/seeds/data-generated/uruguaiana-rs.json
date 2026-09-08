@@ -1,0 +1,5766 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:51:12.429Z",
+		"city": "Uruguaiana",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Kristopher Casper",
+			"display_name": "Kristopher",
+			"phone": "(28) 98049-5179",
+			"email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "46884-146",
+				"street": "Marisa Row",
+				"number": "507",
+				"complement": null,
+				"district": "Rutland",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.768913,
+				"longitude": -57.087944
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJTbSNuW5FU5QR0FfuLWNpTb8",
+						"rating": 3.7,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sul Metais Reciclagem",
+					"business_name": "Sul Metais Reciclagem",
+					"identity": "22328498000159",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sul.metais.reciclagem@elderly-hepatitis.info",
+					"phones": ["(55) 99698-4477"],
+					"website": "https://www.facebook.com/Sul-Metais-Reciclagem-106583038531454",
+					"started_activity_in": "2016-10-20T07:32:58.005Z",
+					"address": {
+						"zip_code": "97510-460",
+						"street": "R. Roberto Kraemer",
+						"number": "4181",
+						"complement": null,
+						"district": "Cabo Luís Quevedo, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7772161,
+						"longitude": -57.1082797
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.19,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 237.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.37,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 134.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 264.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.05,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 954.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.16,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 582.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 250.46,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 133.3,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ3X7NnhJbU5QRBVH_XYAVVxs",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM CAMPEIRA Matriz",
+					"business_name": "RECICLAGEM CAMPEIRA Matriz",
+					"identity": "71605694000139",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.campeira.matriz@light-igloo.name",
+					"phones": ["(55) 99948-0163"],
+					"website": null,
+					"started_activity_in": "2020-05-14T05:31:03.618Z",
+					"address": {
+						"zip_code": "97500-610",
+						"street": "R. Gregório Beheregaray",
+						"number": "3993",
+						"complement": null,
+						"district": "Ipiranga, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7664466,
+						"longitude": -57.073069700000005
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.76,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 875.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.27,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 933.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.46,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 239.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.89,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 918.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.91,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 443.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 58.55,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 72.16,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 77.24,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 89.4,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Flo Muller",
+			"display_name": "Flo",
+			"phone": "(94) 99713-7475",
+			"email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "72631-463",
+				"street": "Jennie Station",
+				"number": "7379",
+				"complement": null,
+				"district": "Hamilton County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.768756,
+				"longitude": -57.064772
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJMbEZpSRbU5QRmUJ54i5HRt0",
+						"rating": 4.1,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM CATITO - URUGUAIANA/RS",
+					"business_name": "RECICLAGEM CATITO - URUGUAIANA/RS",
+					"identity": "32230328000190",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.catito.uruguaiana.rs@blushing-merit.org",
+					"phones": ["(55) 99607-0415"],
+					"website": "https://www.guiauruguaiana.com/reciclagem-catito-uruguaiana-rs",
+					"started_activity_in": "2024-09-27T21:02:14.479Z",
+					"address": {
+						"zip_code": "97509-740",
+						"street": "Ac. Mal. Setembrino de Carvalho",
+						"number": "882",
+						"complement": null,
+						"district": "Ipiranga, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.781160800000002,
+						"longitude": -57.0570179
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 161.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.7,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 403.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.52,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 50
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.39,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 92.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 87.34,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 292.6,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJQRaxsrZbU5QR78O5JVETD1I",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "REICICLAGEM",
+					"business_name": "REICICLAGEM",
+					"identity": "51971191000170",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reiciclagem@junior-scratch.org",
+					"phones": ["(55) 99985-9306"],
+					"website": null,
+					"started_activity_in": "2017-06-02T05:33:20.357Z",
+					"address": {
+						"zip_code": "97501-640",
+						"street": "R. Gen. Câmara",
+						"number": "1073",
+						"complement": null,
+						"district": "Centro, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.748916799999996,
+						"longitude": -57.0830373
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.98,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 150.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 491.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.22,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 174.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 148.2,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 285.64,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 143.93,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 123.23,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 182.26,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-18T22:46:57.402Z",
+					"observations": "Ustulo spes creber despecto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.751889,
+								"longitude": -57.038203,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788313847053
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Cornwall",
+							"streetNumber": "265",
+							"street": "Regina Hills",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66676877",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Lincoln Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"description": "Articulus vereor ubi accedo apud tenax contego assentator appello.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Gertrude Russel",
+			"display_name": "Gertrude",
+			"phone": "(21) 93251-7721",
+			"email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "01166-612",
+				"street": "Hoeger Light",
+				"number": "264",
+				"complement": null,
+				"district": "Norfolk",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.791994,
+				"longitude": -57.05641
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJIzSLQ7hbU5QR37-M97N6wqY",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Fronteirametais",
+					"business_name": "Fronteirametais",
+					"identity": "71889763000183",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "fronteirametais@mean-finger.org",
+					"phones": ["(55) 99976-1410"],
+					"website": null,
+					"started_activity_in": "2020-01-12T14:22:02.810Z",
+					"address": {
+						"zip_code": "97507-380",
+						"street": "Av senador silveira Martins",
+						"number": "2074",
+						"complement": null,
+						"district": "Centro, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.755887199999997,
+						"longitude": -57.0931475
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.06,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 726.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 886.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.65,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 12.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 115.14,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 209.69,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJqfe3g_1aU5QRX7V_Zi1kdWA",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Fronteira Metais",
+					"business_name": "Fronteira Metais",
+					"identity": "56274318000115",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "fronteira.metais@some-cinema.com",
+					"phones": ["(55) 3411-4963"],
+					"website": null,
+					"started_activity_in": "2023-03-17T00:31:04.359Z",
+					"address": {
+						"zip_code": "97500-410",
+						"street": "Av",
+						"number": "S/N",
+						"complement": null,
+						"district": "Ac. Mal. Setembrino de Carvalho, 2642",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.780071,
+						"longitude": -57.064491999999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 136.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.62,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 995.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.11,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 81.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 118.9,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 75.23,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 252.27,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 282.83,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 219.97,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 67,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Marco Upton",
+			"display_name": "Marco",
+			"phone": "(59) 91569-7023",
+			"email": "marco-upton.3.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "68423-405",
+				"street": "Pleasant Street",
+				"number": "829",
+				"complement": null,
+				"district": "Grant County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.770983,
+				"longitude": -57.047753
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ5cLySb1bU5QRYvOeLJaguyY",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ACMRU - ASSOCIACAO DOS CATADORES DE MATERIAIS RECICLAVEIS DE URUGUAIANA",
+					"business_name": "ACMRU - ASSOCIACAO DOS CATADORES DE MATERIAIS RECICLAVEIS DE URUGUAIANA",
+					"identity": "53908951000120",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "acmru.associacao.dos.catadores.de.materiais.reciclaveis.de.uruguaiana@subdued-league.org",
+					"phones": ["(15) 96942-6789"],
+					"website": null,
+					"started_activity_in": "2020-11-30T08:54:22.748Z",
+					"address": {
+						"zip_code": "97509-206",
+						"street": "R. Vinte e Um de Abril",
+						"number": "44",
+						"complement": null,
+						"district": "União das Vilas, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.786730499999997,
+						"longitude": -57.064329699999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 463.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 945.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.58,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 91.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.66,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 380.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.55,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 511
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 163.5,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 289.27,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJgVY9zllbU5QRrFl3ly6n804",
+						"rating": 4.9,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Refrigeração Central",
+					"business_name": "Refrigeração Central",
+					"identity": "22695695000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "refrigeracao.central@zesty-forager.net",
+					"phones": ["(55) 3402-7519"],
+					"website": null,
+					"started_activity_in": "2018-08-01T19:12:47.164Z",
+					"address": {
+						"zip_code": "97502-748",
+						"street": "R. Gen. Hipólito",
+						"number": "3086",
+						"complement": null,
+						"district": "São Miguel, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.764024199999998,
+						"longitude": -57.082502
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.16,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 365.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.95,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 486.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.59,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 840.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 574.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.15,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 709.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 183.34,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 233.74,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 165.35,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 235.04,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 53.5,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 109.71,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-10T19:38:47.840Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.79738,
+								"longitude": -57.038582,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316855605
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Avon",
+							"streetNumber": "1949",
+							"street": "Cleve Cliff",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52669181",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Johnson Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dale Stroman",
+			"display_name": "Dale",
+			"phone": "(93) 99019-2323",
+			"email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "98635-523",
+				"street": "Erdman Common",
+				"number": "7908",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.756758,
+				"longitude": -57.111631
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJU7M2MwVbU5QRH9N7Vm3BQms",
+						"rating": 4.3,
+						"types": [
+							"manufacturer",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "VF Comércio de Metais",
+					"business_name": "VF Comércio de Metais",
+					"identity": "25872490000147",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "vf.comercio.de.metais@helpless-meadow.info",
+					"phones": ["(55) 3413-1324"],
+					"website": null,
+					"started_activity_in": "2021-04-11T17:56:23.595Z",
+					"address": {
+						"zip_code": "97500-580",
+						"street": "R. Santos Dumont",
+						"number": "1417",
+						"complement": null,
+						"district": "Cidade Alegria, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.780326799999997,
+						"longitude": -57.0651855
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.06,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 138.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.84,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 859.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 395.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.71,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 139.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.94,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 242
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 944.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 290.52,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 243.72,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 188.85,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 163.8,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 61.27,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJKaxU6JVbU5QR6-gOS-d4MlY",
+						"rating": 5,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Auto Peças e Reciclagem Carlinhos Valau",
+					"business_name": "Auto Peças e Reciclagem Carlinhos Valau",
+					"identity": "18459809000141",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "auto.pecas.e.reciclagem.carlinhos.valau@hefty-tectonics.biz",
+					"phones": ["(55) 99907-2323"],
+					"website": null,
+					"started_activity_in": "2020-11-06T06:41:05.290Z",
+					"address": {
+						"zip_code": "97507-696",
+						"street": "R. Padre Anchieta",
+						"number": "203",
+						"complement": null,
+						"district": "Vila Julia, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.773464,
+						"longitude": -57.0759447
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.83,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 225.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.81,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 335.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.98,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 201
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.43,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 750.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 125.52,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 65.43,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 161.3,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 149.25,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-25T23:12:00.540Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.788439,
+								"longitude": -57.038557,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788358690939
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Lee County",
+							"streetNumber": "65833",
+							"street": "Dach Drive",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90802057",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Funk Mountains, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Lâmpadas",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"description": "Termes caries deficio delibero sunt.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"description": "Solio tot tamisium abundans aeger possimus modi cito.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Wilbert Hayes",
+			"display_name": "Wilbert",
+			"phone": "(55) 93086-4709",
+			"email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "31670-091",
+				"street": "Margie Cliff",
+				"number": "54515",
+				"complement": null,
+				"district": "Oxfordshire",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.781903,
+				"longitude": -57.078897
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJfxPTO1pbU5QRWkSavrp7ojU",
+						"rating": 5,
+						"types": [
+							"manufacturer",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Fundição Reciclar",
+					"business_name": "Fundição Reciclar",
+					"identity": "57414691000197",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "fundicao.reciclar@whole-validity.com",
+					"phones": ["(55) 99689-9783"],
+					"website": "http://www.fundicaoreciclar.com.br/",
+					"started_activity_in": "2022-12-30T06:29:15.286Z",
+					"address": {
+						"zip_code": "97501-584",
+						"street": "Galeria do Pescador",
+						"number": "S/N",
+						"complement": null,
+						"district": "R. Duque de Caxias, 1364",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.751644699999996,
+						"longitude": -57.0866501
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.19,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 595.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.23,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 780.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.56,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 268.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.83,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 450.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 457.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.71,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 431.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 247.51,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 202.25,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 186.38,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 283.48,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 110.43,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 151.26,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJfxZyFKdbU5QRT1C1OP7_-3c",
+						"rating": 4.7,
+						"types": ["store", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cdv-Rudi",
+					"business_name": "Cdv-Rudi",
+					"identity": "59143863000160",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cdv.rudi@grizzled-seafood.net",
+					"phones": ["(66) 98902-6044"],
+					"website": null,
+					"started_activity_in": "2022-03-08T10:03:44.553Z",
+					"address": {
+						"zip_code": "97505-160",
+						"street": "Av. Miguel Bárbara",
+						"number": "S/N",
+						"complement": null,
+						"district": "Jóquei Clube, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.762945,
+						"longitude": -57.054575
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 735.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.25,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 581.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.81,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 429.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.67,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 104.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 125.49,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 135.89,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 121.79,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-28T10:40:02.963Z",
+					"observations": "Circumvenio vigor trucido acquiro tui creo varietas trado delibero vero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.768404,
+								"longitude": -57.104079,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330393790
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "County Armagh",
+							"streetNumber": "5343",
+							"street": "Center Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71283902",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nathaniel Path, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"description": "Ea voluptatem aequus consectetur tero.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"description": "Volubilis adhaero tepidus video credo infit campana magni vestigium.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Martina Nader",
+			"display_name": "Martina",
+			"phone": "(25) 97535-1847",
+			"email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "54788-717",
+				"street": "The Woodlands",
+				"number": "9588",
+				"complement": null,
+				"district": "Lawrence County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.757521,
+				"longitude": -57.083291
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJOcOM2BZbU5QRGEW0BUcX154",
+						"rating": 2.6,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CDV TC -DETRAN RS",
+					"business_name": "CDV TC -DETRAN RS",
+					"identity": "64962563000143",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cdv.tc.detran.rs@cool-hygienic.net",
+					"phones": ["(55) 99645-4998"],
+					"website": null,
+					"started_activity_in": "2025-08-01T18:33:16.873Z",
+					"address": {
+						"zip_code": "97504-130",
+						"street": "R. 15 de Novembro",
+						"number": "4988",
+						"complement": null,
+						"district": "Rio Branco, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7838465,
+						"longitude": -57.089200299999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.5,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 264.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 879
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 150.28,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 98.77,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 179.76,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 281.32,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 240.92,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJQzYzmcZbU5QRaCdBgOnN1Vs",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Metal Pontes",
+					"business_name": "Metal Pontes",
+					"identity": "74908264000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "metal.pontes@comfortable-gym.info",
+					"phones": ["(55) 99667-1539"],
+					"website": null,
+					"started_activity_in": "2020-12-04T07:49:02.617Z",
+					"address": {
+						"zip_code": "97503-316",
+						"street": "R. Mal. Deodoro",
+						"number": "2455",
+						"complement": null,
+						"district": "Boa vista, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7615114,
+						"longitude": -57.0958299
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.27,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 59.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.58,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 589.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 217.51,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 250.63,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-26T19:07:17.713Z",
+					"observations": "Adulatio vociferor clamo aveho universe commodi cavus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.791132,
+								"longitude": -57.098327,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788333780869
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "2559",
+							"street": "Macejkovic Key",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98429607",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Terence Points, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-05T05:13:55.371Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.789145,
+								"longitude": -57.111051,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342582938
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Lincolnshire",
+							"streetNumber": "6184",
+							"street": "Hester Ford",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02417001",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Morissette Glens, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"description": "Sunt supplanto tero sunt neque.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-28T19:56:35.607Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.793318,
+								"longitude": -57.052766,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314433806
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Surrey",
+							"streetNumber": "652",
+							"street": "Kenny Meadow",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "27555320",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Pine Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "marco-upton.3.uruguaiana-rs@oikos.seed",
+							"description": "Harum adulatio deleo valens basium auctus uterque sufficio valens.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-03T20:52:16.588Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.795958,
+								"longitude": -57.042177,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319251292
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Fife",
+							"streetNumber": "79166",
+							"street": "Royce Knolls",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74418079",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reichel Spur, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Loma Langworth",
+			"display_name": "Loma",
+			"phone": "(01) 96737-8442",
+			"email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "28592-496",
+				"street": "Hawthorn Close",
+				"number": "6285",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.748677,
+				"longitude": -57.067221
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJdbTxaP9aU5QRG55kbfsnfpQ",
+						"rating": 3.8,
+						"types": ["corporate_office", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucata do cachito",
+					"business_name": "Sucata do cachito",
+					"identity": "81810900557",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "sucata.do.cachito@hard-to-find-pleasure.name",
+					"phones": ["(55) 3413-5077"],
+					"website": null,
+					"started_activity_in": "2025-05-04T14:07:20.354Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Ac. Mal. Setembrino de Carvalho",
+						"number": "2246-2286",
+						"complement": null,
+						"district": "Jardim do Salso, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.780792199999997,
+						"longitude": -57.0570716
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.56,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 736.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.5,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 523.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 526.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 102.14,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 282.47,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJF9pAHT1bU5QRH77FIabcHV0",
+						"rating": 4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sulata Ribeiro",
+					"business_name": "Sulata Ribeiro",
+					"identity": "42836892000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sulata.ribeiro@wilted-stump.name",
+					"phones": ["(55) 3413-1641"],
+					"website": null,
+					"started_activity_in": "2019-08-31T18:29:21.330Z",
+					"address": {
+						"zip_code": "97500-591",
+						"street": "R. Sete de Setembro",
+						"number": "3920",
+						"complement": null,
+						"district": "Centro, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7473921,
+						"longitude": -57.0817816
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.95,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 31.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.58,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 53
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.38,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 340.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.12,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 513.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.18,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 526.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 59.17,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 262.18,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 291.59,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-24T21:22:58.881Z",
+					"observations": "Cupiditas valde ipsam talis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.755383,
+								"longitude": -57.103165,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347753320
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Perry County",
+							"streetNumber": "35869",
+							"street": "Veterans Memorial Drive",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "46530476",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W 2nd Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Plástico",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Bill Breitenberg",
+			"display_name": "Bill",
+			"phone": "(81) 93461-5811",
+			"email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "23768-394",
+				"street": "Dare Street",
+				"number": "283",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.787069,
+				"longitude": -57.053439
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJpaacIG1bU5QRnBXcUS2eZ4I",
+						"rating": 4.4,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Uruguaiana Auto Peças Ltda",
+					"business_name": "Uruguaiana Auto Peças Ltda",
+					"identity": "62255265000198",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "uruguaiana.auto.pecas.ltda@flawless-fog.org",
+					"phones": ["(55) 3412-2356"],
+					"website": null,
+					"started_activity_in": "2021-05-24T19:18:41.856Z",
+					"address": {
+						"zip_code": "97502-295",
+						"street": "R. Dr. Maia",
+						"number": "3979",
+						"complement": null,
+						"district": "São João, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7593838,
+						"longitude": -57.0732721
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.63,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 977.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.67,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 279.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 665.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 694.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.05,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 79.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 211.48,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 273.91,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 93.66,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 124.86,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ1XOJx-ZbU5QRE6iCSI1TnoQ",
+						"rating": 4.6,
+						"types": [
+							"building_materials_store",
+							"store",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "FERRAGEM FRONTEIRA - URUGUAIANA/RS",
+					"business_name": "FERRAGEM FRONTEIRA - URUGUAIANA/RS",
+					"identity": "59838558000193",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ferragem.fronteira.uruguaiana.rs@bossy-pile.net",
+					"phones": ["(55) 3402-2575"],
+					"website": "https://chamaki.online/ferragem-fronteira-uruguaiana-rs",
+					"started_activity_in": "2025-10-20T20:12:53.104Z",
+					"address": {
+						"zip_code": "97501-614",
+						"street": "Vasco Alves",
+						"number": "S/N",
+						"complement": null,
+						"district": "Esquina",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.749802699999996,
+						"longitude": -57.083755399999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "14:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.46,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 240.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.03,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 395.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.69,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 606.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.22,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 135.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 372.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 52.91,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 214.96,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 211.18,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 202.94,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-30T21:51:45.217Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.763187,
+								"longitude": -57.105778,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321832853
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "County Londonderry",
+							"streetNumber": "19626",
+							"street": "Manuel Garden",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89677054",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Woodside, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-14T18:51:43.652Z",
+					"observations": "Ustulo comptus timidus earum varietas torrens optio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.777225,
+								"longitude": -57.105059,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308250082
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Suffolk",
+							"streetNumber": "6659",
+							"street": "Kuhn Lodge",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68287534",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Elisa Estate, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-28T22:14:39.035Z",
+					"observations": "Suus rem patior testimonium iure amita tantum tonsor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.764478,
+								"longitude": -57.044428,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788351319238
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Buckinghamshire",
+							"streetNumber": "5998",
+							"street": "Yundt-Blick Lodge",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "40170609",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Fahey Glen, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Eletroeletrônicos (REEE)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"description": "Pel vinitor thymbra defendo subnecto dignissimos.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jeremiah Bergstrom",
+			"display_name": "Jeremiah",
+			"phone": "(76) 91651-0819",
+			"email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "47869-753",
+				"street": "Depot Street",
+				"number": "437",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.769282,
+				"longitude": -57.082524
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJK7M4rjlbU5QRfguGUfRwYa0",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Leonardo Larrossa & Cia",
+					"business_name": "Leonardo Larrossa & Cia",
+					"identity": "07256843000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "leonardo.larrossa.cia@lively-settler.net",
+					"phones": ["(55) 3413-8771"],
+					"website": null,
+					"started_activity_in": "2024-01-22T21:31:34.947Z",
+					"address": {
+						"zip_code": "97500-510",
+						"street": "R. 15 de Novembro",
+						"number": "2131",
+						"complement": null,
+						"district": "Centro, Uruguaiana",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7586049,
+						"longitude": -57.0877742
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.65,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 305.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.71,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 651.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 183.77,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 175.01,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 172.62,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 167.7,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Stoltenberg LLC Reciclagem",
+					"business_name": "Stoltenberg LLC Reciclagem",
+					"identity": "54296601000112",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Ruben_Marquardt@second-hand-ectoderm.com",
+					"phones": ["(95) 93327-8879"],
+					"website": null,
+					"started_activity_in": "2022-06-21T05:01:03.443Z",
+					"address": {
+						"zip_code": "18446-642",
+						"street": "W Front Street",
+						"number": "85025",
+						"complement": null,
+						"district": "Cumbria",
+						"city": "Uruguaiana",
+						"city_ibge_id": 4322400,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.797077,
+						"longitude": -57.073977
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.22,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 276.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 274.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 541.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 283
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 176.11,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 291.67,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-11T03:09:13.183Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.794212,
+								"longitude": -57.07488,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788343275758
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Gwent",
+							"streetNumber": "12540",
+							"street": "E Walnut Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26459814",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Benny Hills, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Metal / Alumínio",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"description": "Atavus adsuesco color urbanus cometes derelinquo ventosus succedo cras.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Janiya Greenfelder",
+			"display_name": "Janiya",
+			"phone": "(82) 91443-7493",
+			"email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "88157-979",
+				"street": "The Mews",
+				"number": "42302",
+				"complement": null,
+				"district": "Dyfed",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.796795,
+				"longitude": -57.088959
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-06T19:27:54.313Z",
+					"observations": "Tantillus tero derideo ex caste.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.772406,
+								"longitude": -57.054759,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309561386
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Cheshire",
+							"streetNumber": "4769",
+							"street": "Kuvalis Springs",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28106592",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Della Parkways, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-upton.3.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"description": "Defluo atrox vehemens aurum turpis adamo acsi varietas carbo cavus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-03-14T14:55:45.355Z",
+					"observations": "Cervus quo tenetur concido dolor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.744286,
+								"longitude": -57.111977,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320924476
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Union County",
+							"streetNumber": "9873",
+							"street": "Jon Neck",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48839022",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clyde Tunnel, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-21T03:31:11.056Z",
+					"observations": "Abduco antiquus corrupti dolorem decor eveniet vulnero delectus curiositas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.756562,
+								"longitude": -57.081973,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788302507413
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Johnson County",
+							"streetNumber": "2757",
+							"street": "Franklin Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77131805",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Harold Green, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "marco-upton.3.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"description": "Sunt apostolus cribro surculus omnis clarus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Patricia Farrell",
+			"display_name": "Patricia",
+			"phone": "(20) 91858-3405",
+			"email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "97216-418",
+				"street": "Durward Divide",
+				"number": "468",
+				"complement": null,
+				"district": "Norfolk",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.789312,
+				"longitude": -57.079492
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-01T10:05:03.363Z",
+					"observations": "Ascit magni unde peccatus consuasor arcesso.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.778877,
+								"longitude": -57.044668,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788357217179
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Grant County",
+							"streetNumber": "86152",
+							"street": "Vivianne Divide",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80394224",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Ridgeway, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"description": "Vereor cubicularis aequus aptus perferendis paulatim cribro doloribus cresco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-09-02T03:42:01.798Z",
+					"observations": "Aliqua tactus culpa clamo necessitatibus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.745628,
+								"longitude": -57.105247,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321908237
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Northumberland",
+							"streetNumber": "454",
+							"street": "Cade Radial",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "29557260",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reichel Brooks, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-upton.3.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"description": "Tero patria vehemens degero aestivus commemoro cruentus atavus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Caroline Muller-Kris",
+			"display_name": "Caroline",
+			"phone": "(09) 97348-7874",
+			"email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "51209-120",
+				"street": "Angie Cliff",
+				"number": "1814",
+				"complement": null,
+				"district": "Derbyshire",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.777468,
+				"longitude": -57.041835
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-13T08:25:38.213Z",
+					"observations": "Admoneo tactus tenetur laborum absque.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.794678,
+								"longitude": -57.060248,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788274869806
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Norfolk",
+							"streetNumber": "6479",
+							"street": "Howe Inlet",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55212980",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maurine Radial, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-12T06:05:32.971Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.798343,
+								"longitude": -57.085179,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326709513
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Logan County",
+							"streetNumber": "64093",
+							"street": "Lake Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39724041",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wolff-Stehr Meadows, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-10T11:30:27.391Z",
+					"observations": "Vilitas tamquam conforto tripudio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.748053,
+								"longitude": -57.078754,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303421646
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Leicestershire",
+							"streetNumber": "3977",
+							"street": "Duke Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "17850745",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Muller Drive, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Lâmpadas",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "loma-langworth.7.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-09T20:01:31.438Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.795556,
+								"longitude": -57.060461,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288404303
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Crawford County",
+							"streetNumber": "14602",
+							"street": "Natalie Bypass",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91596529",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lehner Squares, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Maureen Klein",
+			"display_name": "Maureen",
+			"phone": "(67) 93376-7033",
+			"email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "19492-053",
+				"street": "West View",
+				"number": "11969",
+				"complement": null,
+				"district": "Lancashire",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.755143,
+				"longitude": -57.076726
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-05T04:49:45.447Z",
+					"observations": "Synagoga trepide curia condico spiculum cogito.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.757999,
+								"longitude": -57.075198,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312228391
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Warwickshire",
+							"streetNumber": "428",
+							"street": "Grant Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86273715",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lang Path, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bill-breitenberg.8.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"description": "Vaco trans desparatus curriculum demens annus usus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"description": "Annus animus at.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Kendra Gislason",
+			"display_name": "Kendra",
+			"phone": "(59) 94892-9279",
+			"email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "11374-121",
+				"street": "Hills Stream",
+				"number": "46139",
+				"complement": null,
+				"district": "Monroe County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.770114,
+				"longitude": -57.112724
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-31T11:40:05.974Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.791957,
+								"longitude": -57.037081,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788323675018
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Fife",
+							"streetNumber": "958",
+							"street": "Selena Track",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76012911",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Station Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Madeira", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gertrude-russel.2.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "martina-nader.6.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"description": "Textus cursus strues decretum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-15T05:09:51.123Z",
+					"observations": "Ceno volva acerbitas suus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.775226,
+								"longitude": -57.105751,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329862474
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Warren County",
+							"streetNumber": "156",
+							"street": "Grady Shore",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "04975704",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Littel Extensions, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-24T01:33:40.152Z",
+					"observations": "Patrocinor provident aureus infit debeo victoria cur vae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.778683,
+								"longitude": -57.074701,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307811027
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "West Yorkshire",
+							"streetNumber": "390",
+							"street": "Stamm Course",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15580639",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Johnson Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jarod Mosciski-McKenzie",
+			"display_name": "Jarod",
+			"phone": "(45) 98797-8190",
+			"email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "27762-892",
+				"street": "Al Lakes",
+				"number": "93574",
+				"complement": null,
+				"district": "South Yorkshire",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.775311,
+				"longitude": -57.059415
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Wava Schowalter",
+			"display_name": "Wava",
+			"phone": "(50) 92122-8317",
+			"email": "wava-schowalter.16.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "18518-720",
+				"street": "Gustavo Lights",
+				"number": "95480",
+				"complement": null,
+				"district": "Wayne County",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.78528,
+				"longitude": -57.06584
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-08T20:37:45.933Z",
+					"observations": "Libero clementia fugit cur cohaero quisquam super bestia bestia conforto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.769314,
+								"longitude": -57.086551,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306785070
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Greater Manchester",
+							"streetNumber": "40029",
+							"street": "Oakfield Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00454595",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schneider Trace, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-25T18:25:12.799Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.751139,
+								"longitude": -57.086672,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349468274
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Leicestershire",
+							"streetNumber": "474",
+							"street": "Koelpin Rapid",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42211285",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Johnson Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Plástico",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "patricia-farrell.11.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "janiya-greenfelder.10.uruguaiana-rs@oikos.seed",
+							"description": "Tandem odio conscendo vestigium.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-31T09:01:35.220Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.77993,
+								"longitude": -57.097211,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788332816986
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Lancashire",
+							"streetNumber": "482",
+							"street": "Schuster-Bashirian Fords",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08246829",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kirlin Corners, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Resíduos Orgânicos",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wilbert-hayes.5.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jarod-mosciski-mckenzie.15.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-gislason.14.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeremiah-bergstrom.9.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+							"description": "Toties aiunt aliqua damno cruciamentum curatio tracto vicissitudo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "flo-muller.1.uruguaiana-rs@oikos.seed",
+							"description": "Alveus dedecor ceno defetiscor compono deludo via amor adfero tabernus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Grant Thiel",
+			"display_name": "Grant",
+			"phone": "(30) 96641-3906",
+			"email": "grant-thiel.17.uruguaiana-rs@oikos.seed",
+			"address": {
+				"zip_code": "42479-433",
+				"street": "Durgan Burgs",
+				"number": "3711",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Uruguaiana",
+				"city_ibge_id": 4322400,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.793721,
+				"longitude": -57.054741
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-04T11:29:24.418Z",
+					"observations": "Magnam succedo atrocitas vociferor consequuntur viriliter conatus atque suus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.776659,
+								"longitude": -57.086683,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298479563
+						},
+						"addresses": {
+							"city": "Uruguaiana",
+							"district": "Nottinghamshire",
+							"streetNumber": "486",
+							"street": "Schmidt Groves",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09505001",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stehr Street, Uruguaiana - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Embalagens Contaminadas",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "maureen-klein.13.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dale-stroman.4.uruguaiana-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristopher-casper.0.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "caroline-muller-kris.12.uruguaiana-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

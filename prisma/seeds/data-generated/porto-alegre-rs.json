@@ -1,0 +1,5584 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:51:41.292Z",
+		"city": "Porto Alegre",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Michele Kuhn",
+			"display_name": "Michele",
+			"phone": "(46) 90928-5477",
+			"email": "michele-kuhn.0.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "26539-663",
+				"street": "W Front Street",
+				"number": "31552",
+				"complement": null,
+				"district": "Devon",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.977633,
+				"longitude": -51.127726
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJNcy5EwB7GZUR6fWGIwGLRZo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Gomes Reciclagem",
+					"business_name": "Gomes Reciclagem",
+					"identity": "95967940000160",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "gomes.reciclagem@grounded-steak.net",
+					"phones": ["(51) 99272-9197"],
+					"website": null,
+					"started_activity_in": "2019-05-17T17:18:35.999Z",
+					"address": {
+						"zip_code": "92200-190",
+						"street": "R. Barão de Mauá",
+						"number": "1826",
+						"complement": null,
+						"district": "Rio Branco, Canoas",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.966618599999997,
+						"longitude": -51.1950667
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.26,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 254
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 457
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 432.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 458.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.95,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 367.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 674.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 169.29,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 231.36,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 78.15,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 263.69,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 189.6,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJd3hOnRSCGZURyv2YoAWiyjA",
+						"rating": 4.4,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem São Vicente",
+					"business_name": "Reciclagem São Vicente",
+					"identity": "71584287000192",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.sao.vicente@intelligent-printer.info",
+					"phones": ["(51) 98616-6865"],
+					"website": null,
+					"started_activity_in": "2019-08-12T15:28:53.937Z",
+					"address": {
+						"zip_code": "91910-530",
+						"street": "R. Cel. Massot",
+						"number": "405",
+						"complement": null,
+						"district": "Cristal, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.1002944,
+						"longitude": -51.2437452
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.93,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 486.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.63,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 789.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.64,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 814
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 702.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.27,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 118.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 172.81,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 169.92,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 184.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 209.19,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 297.24,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-25T12:34:13.182Z",
+					"observations": "Voluptatem victoria solus carcer.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.2008,
+								"longitude": -51.168178,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281563032
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Nottinghamshire",
+							"streetNumber": "20701",
+							"street": "Woodside",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91647490",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Railway Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rusty-kirlin.12.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "donnell-nitzsche.11.porto-alegre-rs@oikos.seed",
+							"description": "Usque ulterius sollicito curo turba voluptate convoco repellat claudeo trans.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Franklin Leuschke",
+			"display_name": "Franklin",
+			"phone": "(21) 96100-5820",
+			"email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "65072-508",
+				"street": "Vicarage Lane",
+				"number": "85433",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.160079,
+				"longitude": -51.176015
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJg0ssb9OFGZURX0O9dUQqaSM",
+						"rating": 4.9,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Lc Mendes Reciclagem",
+					"business_name": "Lc Mendes Reciclagem",
+					"identity": "93223493000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "lc.mendes.reciclagem@kooky-linseed.name",
+					"phones": ["(51) 3266-4616"],
+					"website": null,
+					"started_activity_in": "2022-07-08T05:03:24.805Z",
+					"address": {
+						"zip_code": "91781-010",
+						"street": "Av. Principal da Ponta Grossa",
+						"number": "947/949",
+						"complement": null,
+						"district": "Ponta Grossa, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.1803007,
+						"longitude": -51.185875599999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.3,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 643.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.72,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 445.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.66,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 749.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.73,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 374
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.58,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 204
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 132.16,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 221.97,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 53.57,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 78.87,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 154.52,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ5X3m7RpxGZURoZkGN82vQuQ",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Pindaré",
+					"business_name": "Reciclagem Pindaré",
+					"identity": "24105683000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.pindare@nervous-riser.com",
+					"phones": ["(60) 94042-8059"],
+					"website": null,
+					"started_activity_in": "2024-04-02T00:37:03.208Z",
+					"address": {
+						"zip_code": "92120-090",
+						"street": "R. Lajeado",
+						"number": "1963",
+						"complement": null,
+						"district": "Niterói, Canoas",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.959957000000003,
+						"longitude": -51.1718641
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 923.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.82,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 358.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.6,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 62.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 284.17,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 53.15,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 165.3,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 85.76,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 58.24,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 224.06,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-30T09:47:51.189Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.107406,
+								"longitude": -51.11572,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293078434
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Monroe County",
+							"streetNumber": "70282",
+							"street": "Lee Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75481989",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Harber Valleys, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Medicamentos",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-27T02:28:51.914Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.192393,
+								"longitude": -51.094357,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344912889
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "County Fermanagh",
+							"streetNumber": "260",
+							"street": "Pagac Centers",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49995424",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ardella Crest, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Embalagens Contaminadas",
+						"Borracha / Pneus"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nestor-predovic-collier.10.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-09T15:51:17.264Z",
+					"observations": "Ocer alias surgo defungo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.110518,
+								"longitude": -51.202452,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788282078655
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Central",
+							"streetNumber": "23039",
+							"street": "Norfolk Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52026067",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dooley Fork, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lamar-beer.3.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lyric Beahan",
+			"display_name": "Lyric",
+			"phone": "(74) 94015-2510",
+			"email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "14170-197",
+				"street": "St John's Road",
+				"number": "60275",
+				"complement": null,
+				"district": "Central",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.093817,
+				"longitude": -51.266271
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJcaH2jOV7GZUREhrKGobxqa4",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem do alemão",
+					"business_name": "Reciclagem do alemão",
+					"identity": "51843617000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.alemao@talkative-corporation.info",
+					"phones": ["(15) 93884-0856"],
+					"website": null,
+					"started_activity_in": "2018-09-16T16:07:34.774Z",
+					"address": {
+						"zip_code": "90230-010",
+						"street": "R. Voluntários da Pátria",
+						"number": "S/N",
+						"complement": null,
+						"district": "Farrapos, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9858255,
+						"longitude": -51.2019258
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 652.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.37,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 898.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.68,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 613.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 509.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 122.13,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 80.31,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 158.83,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 187.55,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 185.55,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJz0zbqkRxGZURZRa_ONxcbew",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "SBR Reciclagem Canoas",
+					"business_name": "SBR Reciclagem Canoas",
+					"identity": "20981226000128",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sbr.reciclagem.canoas@accurate-bandwidth.name",
+					"phones": ["(51) 3475-3923"],
+					"website": "http://www.sbrreciclagem.com.br/",
+					"started_activity_in": "2017-06-10T19:53:39.075Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Niterói",
+						"number": "Canoas",
+						"complement": null,
+						"district": "RS, Brasil",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.958655200000003,
+						"longitude": -51.1523463
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "16:45"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "16:45"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "16:45"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "16:45"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 870.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.91,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 578.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.96,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 316.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.01,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 492.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 63.35,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 120.16,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 246.12,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 190.86,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 70.05,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-19T00:24:53.554Z",
+					"observations": "Suus crudelis ipsam aspicio depraedor amoveo allatus amplexus suadeo cogo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.025614,
+								"longitude": -51.154472,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292852641
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Northumberland",
+							"streetNumber": "534",
+							"street": "Myrtle Land",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95167044",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beatty Points, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-10T10:54:36.151Z",
+					"observations": "Nostrum pauper cultura turpis vester expedita tersus angulus cetera corpus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.156451,
+								"longitude": -51.24293,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309461693
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Warren County",
+							"streetNumber": "3921",
+							"street": "Felipe Fall",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36286679",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clinton Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Construção Civil e Demolição (RCD)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rusty-kirlin.12.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-05T14:15:59.958Z",
+					"observations": "Amplitudo abbas anser.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.21453,
+								"longitude": -51.225451,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353394486
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Suffolk",
+							"streetNumber": "665",
+							"street": "Chapel Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90060843",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Orn Via, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Borracha / Pneus",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carli-torp.9.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "michele-kuhn.0.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nestor-predovic-collier.10.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lamar-beer.3.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"description": "Absconditus arguo textus tredecim deserunt depono quidem decet tonsor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "michele-kuhn.0.porto-alegre-rs@oikos.seed",
+							"description": "Caput stips tricesimus cum ullus vulgo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lamar Beer",
+			"display_name": "Lamar",
+			"phone": "(28) 97309-6231",
+			"email": "lamar-beer.3.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "49327-543",
+				"street": "Cedar Street",
+				"number": "2774",
+				"complement": null,
+				"district": "Fayette County",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.050618,
+				"longitude": -51.191069
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ_fKoXQCdGZURKg1Z85eEkVo",
+						"rating": 5,
+						"types": [
+							"storage",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Ipiranga",
+					"business_name": "Reciclagem Ipiranga",
+					"identity": "02316337000138",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.ipiranga@similar-cork.org",
+					"phones": ["(51) 98444-0234"],
+					"website": "http://www.instagram.com/recicla_ipiranga/",
+					"started_activity_in": "2024-02-13T10:51:13.436Z",
+					"address": {
+						"zip_code": "91440-026",
+						"street": "Av. Ipiranga",
+						"number": "10500",
+						"complement": null,
+						"district": "Jardim Carvalho, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.066849899999994,
+						"longitude": -51.1471148
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.76,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 725.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.89,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 765.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.61,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 237.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 349.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.69,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 690.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 271.94,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 241.73,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 96.83,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJzcCLdgB7GZURgczcLmgLrJI",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem MN",
+					"business_name": "Reciclagem MN",
+					"identity": "32867201000187",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.mn@informal-napkin.com",
+					"phones": ["(61) 93625-3990"],
+					"website": null,
+					"started_activity_in": "2023-09-26T12:42:14.913Z",
+					"address": {
+						"zip_code": "92200-450",
+						"street": "R. Montenegro",
+						"number": "69",
+						"complement": null,
+						"district": "Rio Branco, Canoas",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9617506,
+						"longitude": -51.191063799999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "21:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.61,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 179.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 5,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 369.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.53,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 94.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.71,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 669.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.55,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 950.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 130.55,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 217.86,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 59.66,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 164.14,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 164.28,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 58.43,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-04T21:59:29.720Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.047952,
+								"longitude": -51.214847,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287256568
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Lawrence County",
+							"streetNumber": "89226",
+							"street": "E Cedar Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43854113",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Deckow Passage, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Madeira",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elsa-wiza.15.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "michele-kuhn.0.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-08T18:55:51.292Z",
+					"observations": "Carus sophismata degusto ab vociferor asper cuppedia cauda theatrum admoveo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.995302,
+								"longitude": -51.089983,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325434112
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Gwynedd County",
+							"streetNumber": "145",
+							"street": "Bechtelar Motorway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39703553",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bailey Lodge, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Borracha / Pneus"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-13T05:35:11.616Z",
+					"observations": "Trucido decet temperantia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.987038,
+								"longitude": -51.251236,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788360169386
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Gwynedd County",
+							"streetNumber": "7630",
+							"street": "N Broadway Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53523707",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chestnut Close, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Mineral / Lubrificante",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Alejandro Gerhold",
+			"display_name": "Alejandro",
+			"phone": "(55) 98534-0782",
+			"email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "22289-305",
+				"street": "E Franklin Street",
+				"number": "761",
+				"complement": null,
+				"district": "Adams County",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.034942,
+				"longitude": -51.175563
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJE6esKvp5GZURRPCjvmxxFSA",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Centro de Educação Ambiental e Reciclagem Popular Vila dos Papeleiros",
+					"business_name": "Centro de Educação Ambiental e Reciclagem Popular Vila dos Papeleiros",
+					"identity": "49380895000126",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "centro.de.educacao.ambiental.e.reciclagem.popular.vila.dos.papeleiros@sweet-contrail.name",
+					"phones": ["(51) 99428-5888"],
+					"website": "https://centrosama.com.br/",
+					"started_activity_in": "2020-07-12T22:22:53.350Z",
+					"address": {
+						"zip_code": "90220-160",
+						"street": "R. Gaspar Martins",
+						"number": "41",
+						"complement": null,
+						"district": "Floresta, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.019648699999994,
+						"longitude": -51.21385490000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.32,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 571.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 808
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.58,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 365.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.83,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 138.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 266.08,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 269.27,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 294.12,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 290.83,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 279.74,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 77.85,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJp0HBqambGZURaOOZMM7a7d0",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM DE LOS SANTOS",
+					"business_name": "RECICLAGEM DE LOS SANTOS",
+					"identity": "46249123000161",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.de.los.santos@intent-catalyst.name",
+					"phones": ["(51) 98470-6032"],
+					"website": null,
+					"started_activity_in": "2024-04-24T19:15:43.831Z",
+					"address": {
+						"zip_code": "91790-876",
+						"street": "Ac M1 Nucleo Esperanca",
+						"number": "48",
+						"complement": null,
+						"district": "Restinga, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.1556519,
+						"longitude": -51.1350455
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "19:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "19:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "19:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "19:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "19:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.92,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 286.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.54,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 27
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 233.55,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 112.52,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 181.87,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 217.93,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 251.8,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 249.19,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Imelda Macejkovic",
+			"display_name": "Imelda",
+			"phone": "(58) 90893-5884",
+			"email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "55070-338",
+				"street": "Dariana Fall",
+				"number": "510",
+				"complement": null,
+				"district": "Oxfordshire",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.137599,
+				"longitude": -51.168395
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJPR3NMU95GZURUBCHvajIsFw",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem e Brick PACTO/POAoiii",
+					"business_name": "Reciclagem e Brick PACTO/POAoiii",
+					"identity": "22782969000102",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.e.brick.pacto.poaoiii@unsightly-loyalty.com",
+					"phones": ["(51) 99454-2748"],
+					"website": null,
+					"started_activity_in": "2026-01-17T07:07:06.623Z",
+					"address": {
+						"zip_code": "90240-210",
+						"street": "R. Simão Kappel",
+						"number": "521",
+						"complement": null,
+						"district": "Navegantes, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.997910899999997,
+						"longitude": -51.1998884
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.84,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 547.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.84,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 610
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.81,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 49.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.38,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 306.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 290.48,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 270.42,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 110.65,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 253.46,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 264.74,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 285.22,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJuX0Cr5t3GZUR5qiP68o1_8Q",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Aparas abiana Reciclagem",
+					"business_name": "Aparas abiana Reciclagem",
+					"identity": "01240455000147",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "aparas.abiana.reciclagem@whispered-trick.net",
+					"phones": ["(51) 98475-7321"],
+					"website": null,
+					"started_activity_in": "2020-05-27T18:54:45.316Z",
+					"address": {
+						"zip_code": "91420-690",
+						"street": "R. Santa Isabel",
+						"number": "753",
+						"complement": null,
+						"district": "Bom Jesus, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.047311299999997,
+						"longitude": -51.165241699999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.33,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 806.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 696.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.74,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 287.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 167.26,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 163.9,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Traci Effertz",
+			"display_name": "Traci",
+			"phone": "(35) 97394-0553",
+			"email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "66107-566",
+				"street": "Retha Valley",
+				"number": "148",
+				"complement": null,
+				"district": "Somerset",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.075613,
+				"longitude": -51.192641
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ0bXFNgB5GZURrdZmo5IBaLE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclando pela vida",
+					"business_name": "Reciclando pela vida",
+					"identity": "11162098000108",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclando.pela.vida@soulful-hippodrome.com",
+					"phones": ["(51) 98036-8730"],
+					"website": null,
+					"started_activity_in": "2025-10-05T17:37:17.604Z",
+					"address": {
+						"zip_code": "90035-002",
+						"street": "Floresta",
+						"number": "Porto Alegre",
+						"complement": null,
+						"district": "RS, , Brasil",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0196955,
+						"longitude": -51.2157227
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 635.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 17
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.68,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 743.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.5,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 97.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 611.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 93.41,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 199.45,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 224.91,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJo4_A_Rp6GZUR9Jhzhck5-4k",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Global Recicla - Global Com. de Materiais Recicláveis Ltda",
+					"business_name": "Global Recicla - Global Com. de Materiais Recicláveis Ltda",
+					"identity": "96410706000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "global.recicla.global.com.de.materiais.reciclaveis.ltda@discrete-cleaner.name",
+					"phones": ["(51) 3398-1070"],
+					"website": "http://www.globalrecicla.com.br/",
+					"started_activity_in": "2021-08-20T11:42:59.940Z",
+					"address": {
+						"zip_code": "90250-070",
+						"street": "R. Padre Maximiliano Kolbe",
+						"number": "207",
+						"complement": null,
+						"district": "Humaitá, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.981539299999998,
+						"longitude": -51.1921664
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 546.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.92,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 486.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 110.68,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 240.98,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-14T10:49:24.401Z",
+					"observations": "Versus solium aperio cena creptio deprimo voluptatibus suasoria urbanus trado.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.189995,
+								"longitude": -51.10802,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325232694
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "County Down",
+							"streetNumber": "49689",
+							"street": "Klocko-Zieme Skyway",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14156735",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hudson Glen, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Mineral / Lubrificante",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Reba Carroll",
+			"display_name": "Reba",
+			"phone": "(01) 96670-2490",
+			"email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "24861-316",
+				"street": "Kuhlman Union",
+				"number": "216",
+				"complement": null,
+				"district": "Lake County",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.095606,
+				"longitude": -51.154946
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJLf8x35l5GZURdPCc6RCUkRg",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Aparas Guarise",
+					"business_name": "Aparas Guarise",
+					"identity": "94875622000107",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "aparas.guarise@proud-captain.name",
+					"phones": ["(51) 3346-2056"],
+					"website": null,
+					"started_activity_in": "2025-08-19T10:10:41.957Z",
+					"address": {
+						"zip_code": "90030-000",
+						"street": "R. Voluntários da Pátria",
+						"number": "2128",
+						"complement": null,
+						"district": "Floresta, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.0146227,
+						"longitude": -51.212295499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.74,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 580.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.01,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 192.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.86,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 161.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.27,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 352.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 630.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.16,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 350
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 148.12,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 168.86,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJt7duyCWdGZURuj1XxrbJaU0",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Mf reciclagem ♻️",
+					"business_name": "Mf reciclagem ♻️",
+					"identity": "27698735000197",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mf.reciclagem@favorite-fellow.name",
+					"phones": ["(51) 99556-9111"],
+					"website": null,
+					"started_activity_in": "2018-01-23T03:02:47.380Z",
+					"address": {
+						"zip_code": "91787-368",
+						"street": "Estr. Afonso Lourenço Mariante",
+						"number": "2346",
+						"complement": null,
+						"district": "Belém Velho, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.111038599999997,
+						"longitude": -51.156282399999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "14:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.74,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 395.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 143.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.48,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 519.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.4,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 599.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.02,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 42.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 93.74,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 251.86,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 298.05,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-25T12:19:25.555Z",
+					"observations": "Volva viscus totus suspendo adopto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.972171,
+								"longitude": -51.176852,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344768326
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "7317",
+							"street": "Della Villages",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96196425",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clay Divide, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "michele-kuhn.0.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Taylor Stehr",
+			"display_name": "Taylor",
+			"phone": "(35) 98654-9451",
+			"email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "38396-935",
+				"street": "Reinger Course",
+				"number": "5156",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.023893,
+				"longitude": -51.150371
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJeyx9RgB5GZURucKd8baJc-Q",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Unidade de reciclagem anjos da ecologia",
+					"business_name": "Unidade de reciclagem anjos da ecologia",
+					"identity": "13096519000167",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "unidade.de.reciclagem.anjos.da.ecologia@unruly-testimonial.com",
+					"phones": ["(51) 99013-9939"],
+					"website": null,
+					"started_activity_in": "2020-05-09T02:23:46.194Z",
+					"address": {
+						"zip_code": "90035-004",
+						"street": "R. Ramiro Barcelos",
+						"number": "29",
+						"complement": null,
+						"district": "Floresta, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.019992199999997,
+						"longitude": -51.215461399999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.82,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 530.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 234.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.99,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 279
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.73,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 45.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 87.43,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 107.96,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ4RHhTSt5GZURpD9lLI14ILI",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Grupo Recicla - Unidade de Blendagem POA",
+					"business_name": "Grupo Recicla - Unidade de Blendagem POA",
+					"identity": "91407851000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "grupo.recicla.unidade.de.blendagem.poa@limited-rust.org",
+					"phones": ["(51) 3041-4000"],
+					"website": "https://www.gruporecicla.com.br/",
+					"started_activity_in": "2018-11-29T20:25:44.880Z",
+					"address": {
+						"zip_code": "90200-001",
+						"street": "Av. dos Estados",
+						"number": "1383",
+						"complement": null,
+						"district": "Anchieta, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.9863754,
+						"longitude": -51.179741
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.54,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 831.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 296.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 186.3,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 130.52,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 264.47,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 64.08,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 221.27,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 119.31,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-03T09:14:45.085Z",
+					"observations": "Cupiditate caritas cupressus adopto non.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.995175,
+								"longitude": -51.254539,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325357446
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "North Yorkshire",
+							"streetNumber": "636",
+							"street": "Krajcik Creek",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08121693",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Dell, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-11T16:56:41.547Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.185831,
+								"longitude": -51.261021,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293638546
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Cumbria",
+							"streetNumber": "6610",
+							"street": "Windsor Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30152517",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brown Court, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lamar-beer.3.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elsa-wiza.15.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rusty-kirlin.12.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carli-torp.9.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nestor-predovic-collier.10.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"description": "Textilis solitudo repellat varietas coniecto conspergo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "elsa-wiza.15.porto-alegre-rs@oikos.seed",
+							"description": "Tendo decet vinco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Carli Torp",
+			"display_name": "Carli",
+			"phone": "(19) 91243-5955",
+			"email": "carli-torp.9.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "11970-483",
+				"street": "Gordon Street",
+				"number": "320",
+				"complement": null,
+				"district": "Cheshire",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.028591,
+				"longitude": -51.096098
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJt1wKA9WDGZUR0Yjk6mqa2XE",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "S RECICLAGEM",
+					"business_name": "S RECICLAGEM",
+					"identity": "72269675000141",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "s.reciclagem@antique-premise.name",
+					"phones": ["(51) 98158-3186"],
+					"website": null,
+					"started_activity_in": "2017-03-17T05:04:14.643Z",
+					"address": {
+						"zip_code": "91755-050",
+						"street": "Av. Juca Batista",
+						"number": "2528",
+						"complement": null,
+						"district": "Campo Novo, Porto Alegre",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.147720200000002,
+						"longitude": -51.203925999999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.87,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 107.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 144.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 97.45,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 127.8,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 63.12,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 283.39,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 204.38,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 87.29,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJB2q6Rvq7Z0cRlVlXhXwQ2iE",
+						"rating": 4.8,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem do Sete",
+					"business_name": "Reciclagem do Sete",
+					"identity": "60005188000192",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.sete@secret-other.info",
+					"phones": ["(51) 99123-9838"],
+					"website": null,
+					"started_activity_in": "2024-04-12T09:54:46.931Z",
+					"address": {
+						"zip_code": "94475-500",
+						"street": "Av. Plácido Mottin",
+						"number": "2589",
+						"complement": null,
+						"district": "Cecília, Viamão",
+						"city": "Porto Alegre",
+						"city_ibge_id": 4314902,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -30.059575700000003,
+						"longitude": -51.0931435
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 450
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 643.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.3,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 805.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.14,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 786.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 270.89,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 202.8,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 190.94,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 118.13,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-04T15:04:46.254Z",
+					"observations": "Quibusdam celebrer vesco circumvenio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.225095,
+								"longitude": -51.145737,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319967898
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Lancashire",
+							"streetNumber": "632",
+							"street": "N Pearl Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93974961",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Roel Trace, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "donnell-nitzsche.11.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rusty-kirlin.12.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Nestor Predovic-Collier",
+			"display_name": "Nestor",
+			"phone": "(90) 98348-3284",
+			"email": "nestor-predovic-collier.10.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "73032-620",
+				"street": "Common Lane",
+				"number": "73058",
+				"complement": null,
+				"district": "Dumfries and Galloway",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.247043,
+				"longitude": -51.228234
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-17T00:28:14.579Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.14695,
+								"longitude": -51.162738,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346826641
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Gloucestershire",
+							"streetNumber": "11113",
+							"street": "Brendan Springs",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84984890",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kutch Circle, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Madeira",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Donnell Nitzsche",
+			"display_name": "Donnell",
+			"phone": "(61) 90316-3018",
+			"email": "donnell-nitzsche.11.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "33472-553",
+				"street": "Donnelly Gardens",
+				"number": "289",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.094265,
+				"longitude": -51.26251
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-06T09:54:04.109Z",
+					"observations": "Caelestis adfero summa suscipit titulus alias artificiose.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.164177,
+								"longitude": -51.11543,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304254050
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Powys",
+							"streetNumber": "2399",
+							"street": "Harvey Plaza",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "16987850",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Washington Boulevard, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rusty Kirlin",
+			"display_name": "Rusty",
+			"phone": "(57) 95474-1217",
+			"email": "rusty-kirlin.12.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "44265-759",
+				"street": "Bednar Loaf",
+				"number": "6492",
+				"complement": null,
+				"district": "West Sussex",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.961066,
+				"longitude": -51.228532
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-25T18:35:57.183Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.987236,
+								"longitude": -51.142853,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788332452420
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Lawrence County",
+							"streetNumber": "29160",
+							"street": "Oak Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37719143",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Willow Close, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Madeira",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-27T19:47:56.533Z",
+					"observations": "Venio spoliatio patruus amicitia decretum cruentus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.118618,
+								"longitude": -51.13305,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275432354
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Suffolk",
+							"streetNumber": "54456",
+							"street": "Ova Tunnel",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05600398",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "King Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "michele-kuhn.0.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rene Kuhlman",
+			"display_name": "Rene",
+			"phone": "(79) 96658-0588",
+			"email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "48177-796",
+				"street": "Willard Forks",
+				"number": "560",
+				"complement": null,
+				"district": "Bedfordshire",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.983735,
+				"longitude": -51.22318
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-22T23:19:58.669Z",
+					"observations": "Vomer virgo ventosus subiungo suspendo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.019429,
+								"longitude": -51.117063,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280620932
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "County Londonderry",
+							"streetNumber": "584",
+							"street": "Dale Keys",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64335765",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hessel Viaduct, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-16T10:50:44.221Z",
+					"observations": "Repellat vivo iure depopulo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.175599,
+								"longitude": -51.129984,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788291502395
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Strathclyde",
+							"streetNumber": "9048",
+							"street": "The Laurels",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81128702",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Delfina Corner, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-14T17:36:18.451Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.167671,
+								"longitude": -51.139298,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280428784
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Herefordshire",
+							"streetNumber": "66318",
+							"street": "Frontage Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21052492",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chapel Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "elsa-wiza.15.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-10T14:46:16.287Z",
+					"observations": "Arguo absque ventosus arbustum censura.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.091031,
+								"longitude": -51.266083,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320679196
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Dorset",
+							"streetNumber": "93120",
+							"street": "Richmond Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66514648",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dibbert Camp, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "donnell-nitzsche.11.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lyric-beahan.2.porto-alegre-rs@oikos.seed",
+							"description": "Sequi deserunt suscipio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Dejah Nikolaus",
+			"display_name": "Dejah",
+			"phone": "(20) 95051-7805",
+			"email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "77503-363",
+				"street": "Guadalupe Port",
+				"number": "41267",
+				"complement": null,
+				"district": "Central",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.982897,
+				"longitude": -51.219252
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-06T04:35:42.320Z",
+					"observations": "Suscipit ultra via balbus texo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.08825,
+								"longitude": -51.214878,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312746469
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Kent",
+							"streetNumber": "8255",
+							"street": "Meadow Lane",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71239695",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Von Divide, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Elsa Wiza",
+			"display_name": "Elsa",
+			"phone": "(23) 98368-7669",
+			"email": "elsa-wiza.15.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "36990-546",
+				"street": "O'Conner Skyway",
+				"number": "3523",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -30.086196,
+				"longitude": -51.196593
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-23T03:41:06.983Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.067773,
+								"longitude": -51.223598,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276261056
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "West Midlands",
+							"streetNumber": "30472",
+							"street": "Silver Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54344237",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kutch Fall, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Eletroeletrônicos (REEE)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rene-kuhlman.13.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carli-torp.9.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-15T21:59:46.495Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.002445,
+								"longitude": -51.100064,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318910642
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Norfolk",
+							"streetNumber": "9864",
+							"street": "N Broad Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "13611015",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Don Crest, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rusty-kirlin.12.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alejandro-gerhold.4.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-13T10:08:56.940Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.980356,
+								"longitude": -51.189698,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327179654
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "South Yorkshire",
+							"streetNumber": "7848",
+							"street": "Woodland Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25376017",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lee Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "donnell-nitzsche.11.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nestor-predovic-collier.10.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "franklin-leuschke.1.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lamar-beer.3.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "taylor-stehr.8.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carli-torp.9.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "imelda-macejkovic.5.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dejah-nikolaus.14.porto-alegre-rs@oikos.seed",
+							"description": "Tantillus concedo audio acsi callide.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "carli-torp.9.porto-alegre-rs@oikos.seed",
+							"description": "Comitatus attollo maxime collum aurum sordeo sopor arx ventus urbanus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Kristie Crooks",
+			"display_name": "Kristie",
+			"phone": "(19) 95039-3358",
+			"email": "kristie-crooks.16.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "47205-823",
+				"street": "Farm Close",
+				"number": "824",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.98414,
+				"longitude": -51.229007
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-28T17:23:48.681Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.024729,
+								"longitude": -51.147337,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275224602
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Madison County",
+							"streetNumber": "23146",
+							"street": "South Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25561675",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Field Lane, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Pilhas e Baterias",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-29T19:11:31.348Z",
+					"observations": "Bis carbo voluptatum cavus carcer quod.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.143881,
+								"longitude": -51.208857,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788345235130
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Worcestershire",
+							"streetNumber": "7728",
+							"street": "W 5th Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25672011",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Walnut Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rowan Krajcik",
+			"display_name": "Rowan",
+			"phone": "(75) 93884-2482",
+			"email": "rowan-krajcik.17.porto-alegre-rs@oikos.seed",
+			"address": {
+				"zip_code": "05664-285",
+				"street": "Prohaska-Wolff Parkways",
+				"number": "346",
+				"complement": null,
+				"district": "Mid Glamorgan",
+				"city": "Porto Alegre",
+				"city_ibge_id": 4314902,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.978039,
+				"longitude": -51.128132
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-21T18:53:38.734Z",
+					"observations": "Creo antiquus communis conor volva decretum commodo corrumpo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -30.004917,
+								"longitude": -51.200681,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287976568
+						},
+						"addresses": {
+							"city": "Porto Alegre",
+							"district": "Northumberland",
+							"streetNumber": "6690",
+							"street": "Clemmie Track",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47752333",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Third Street, Porto Alegre - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "reba-carroll.7.porto-alegre-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "traci-effertz.6.porto-alegre-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

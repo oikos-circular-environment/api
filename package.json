@@ -33,6 +33,7 @@
 		"seed": "tsx prisma/seeds/index.ts",
 		"cli": "tsx cli/index.ts",
 		"seed:prod": "tsx scripts/seed-prod.ts",
+		"fix:prod-attachments": "tsx scripts/fix-prod-complaint-attachments.ts",
 		"client-key:create": "tsx scripts/client-key-create.ts",
 		"sdk:spec": "tsx --env-file=.env.test scripts/generate-openapi-spec.ts",
 		"minio:console": "xdg-open http://localhost:9001",

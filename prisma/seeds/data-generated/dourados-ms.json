@@ -1,0 +1,5668 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:54:09.381Z",
+		"city": "Dourados",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Bette Homenick",
+			"display_name": "Bette",
+			"phone": "(30) 90917-8150",
+			"email": "bette-homenick.0.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "23465-469",
+				"street": "Collier Brooks",
+				"number": "31868",
+				"complement": null,
+				"district": "Cheshire",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.070287,
+				"longitude": -55.072506
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJCWb7RmAHiZQRqy1dYEmt-hE",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Simão Reciclagem",
+					"business_name": "Simão Reciclagem",
+					"identity": "09718105000155",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "simao.reciclagem@profuse-birth.org",
+					"phones": ["(67) 99617-4377"],
+					"website": null,
+					"started_activity_in": "2021-12-06T09:32:28.865Z",
+					"address": {
+						"zip_code": "79840-050",
+						"street": "R. Mal. Rondon",
+						"number": "S/N",
+						"complement": null,
+						"district": "Vila Industrial, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2276576,
+						"longitude": -54.774691399999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.99,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 680.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 850
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.71,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 889.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 191.88,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 246.02,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 287.01,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 154.88,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJs4foOFqpiZQRZ8QeeaMmIzc",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem MM",
+					"business_name": "Reciclagem MM",
+					"identity": "86523563000180",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.mm@nutritious-cash.name",
+					"phones": ["(67) 99229-6825"],
+					"website": null,
+					"started_activity_in": "2019-12-31T16:00:20.742Z",
+					"address": {
+						"zip_code": "79822-030",
+						"street": "R. Elías Milan",
+						"number": "561",
+						"complement": null,
+						"district": "Jardim Florida, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2224593,
+						"longitude": -54.836997600000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.18,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 944.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 270.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.5,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 690.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 194.05,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 269.92,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 50.21,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 261.05,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 87.42,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 190.28,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-02T01:55:07.397Z",
+					"observations": "Decet vinum corpus consuasor depereo pectus colligo deleniti.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.341708,
+								"longitude": -54.640797,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288773333
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Northamptonshire",
+							"streetNumber": "91900",
+							"street": "Broadway Avenue",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35576082",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Garden Close, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "crystal-weissnat.5.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "eldridge-wehner.16.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-04T03:31:21.080Z",
+					"observations": "Damnatio confugo tendo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.927035,
+								"longitude": -55.430814,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349724981
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Monroe County",
+							"streetNumber": "650",
+							"street": "Priory Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "99257716",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "3rd Avenue, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "charlie-orn.8.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dewey Cummerata",
+			"display_name": "Dewey",
+			"phone": "(80) 96263-9778",
+			"email": "dewey-cummerata.1.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "34766-175",
+				"street": "Kerluke Spur",
+				"number": "419",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -21.917593,
+				"longitude": -54.369102
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ88DwYpKpiZQRxgllq8QYZF0",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Evolution Reciclagem LTDA",
+					"business_name": "Evolution Reciclagem LTDA",
+					"identity": "23887086000111",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "evolution.reciclagem.ltda@antique-bonfire.com",
+					"phones": ["(67) 3426-4120"],
+					"website": null,
+					"started_activity_in": "2019-07-29T12:39:31.874Z",
+					"address": {
+						"zip_code": "79822-020",
+						"street": "R. Indaiá",
+						"number": "230",
+						"complement": null,
+						"district": "Altos do Indaiá, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2216249,
+						"longitude": -54.8388955
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.05,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 309.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.52,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 784.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 982.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 783.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.54,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 804.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.47,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 225.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 131,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 295.87,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 280.36,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJM7-Wl6kJiZQRXOZmljcJTlg",
+						"rating": 4.2,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucata do Gaucho",
+					"business_name": "Sucata do Gaucho",
+					"identity": "10294588205",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "sucata.do.gaucho@uncomfortable-amnesty.info",
+					"phones": ["(67) 3428-0016"],
+					"website": null,
+					"started_activity_in": "2017-05-05T13:57:11.578Z",
+					"address": {
+						"zip_code": "79804-970",
+						"street": "Avenida 4 s/n",
+						"number": "S/N",
+						"complement": null,
+						"district": "lote E-F",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.3106117,
+						"longitude": -54.7767829
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.61,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 67.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.77,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 165.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.2,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 306
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 451.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 151.9,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 164.99,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Homer Von",
+			"display_name": "Homer",
+			"phone": "(21) 91065-8729",
+			"email": "homer-von.2.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "83076-812",
+				"street": "Fanny Green",
+				"number": "81994",
+				"complement": null,
+				"district": "Derbyshire",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.086218,
+				"longitude": -54.660497
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJAfwk_wQHiZQRRbI5hBQWqXE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Pantanal",
+					"business_name": "Reciclagem Pantanal",
+					"identity": "79279347000175",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.pantanal@bruised-adult.info",
+					"phones": ["(67) 3424-6976"],
+					"website": null,
+					"started_activity_in": "2023-06-09T21:13:11.671Z",
+					"address": {
+						"zip_code": "79833-020",
+						"street": "Av. Weimar Gonçalves Torres",
+						"number": "5745",
+						"complement": null,
+						"district": "Centro, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2225519,
+						"longitude": -54.7741202
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 416.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.55,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 614.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.51,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 259.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.52,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 543
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 817.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.02,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 164.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 177.36,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 276.57,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 174.67,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJGUXhdeKpiZQROeu8WaZW4Cg",
+						"rating": 3.4,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "Ecoponto 1",
+					"business_name": "Ecoponto 1",
+					"identity": "69945884000153",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.1@huge-pick.net",
+					"phones": ["(63) 90867-3980"],
+					"website": null,
+					"started_activity_in": "2021-06-24T17:10:28.277Z",
+					"address": {
+						"zip_code": "79814-181",
+						"street": "R. Prudêncio Campos Leite Filho",
+						"number": "350",
+						"complement": null,
+						"district": "Nossa Sra. Aparecida, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.244316899999998,
+						"longitude": -54.8266668
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.6,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 314.1
+						},
+						{
+							"name": "Lâmpadas",
+							"description": "Coleta de resíduos: Lâmpadas",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 779.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.56,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 139.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 213.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 105.94,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 56.38,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 191.86,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 206.61,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-06T18:35:20.903Z",
+					"observations": "Quos vomito tamen.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.20591,
+								"longitude": -55.11008,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329678435
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "County Fermanagh",
+							"streetNumber": "38154",
+							"street": "Goyette Ridge",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "16099158",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chapel Close, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gerson-nicolas.14.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Alfredo Fadel",
+			"display_name": "Alfredo",
+			"phone": "(24) 96637-7629",
+			"email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "72762-796",
+				"street": "Brian Harbors",
+				"number": "849",
+				"complement": null,
+				"district": "Nottinghamshire",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.423266,
+				"longitude": -55.368172
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJNwcLFZgHiZQRR_U7Gzq_iZk",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Liderança Unidade Dourados",
+					"business_name": "Reciclagem Liderança Unidade Dourados",
+					"identity": "97280532000161",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.lideranca.unidade.dourados@classic-bookcase.biz",
+					"phones": ["(67) 3038-9442"],
+					"website": null,
+					"started_activity_in": "2025-12-06T00:41:17.890Z",
+					"address": {
+						"zip_code": "79813-210",
+						"street": "R. Arapongas",
+						"number": "1535",
+						"complement": null,
+						"district": "Jardim Rasslem, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.255226500000003,
+						"longitude": -54.8054115
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:48"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 711.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.25,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 341.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.56,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 930.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.74,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 697.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.09,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 112.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 54.22,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 263.9,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJv4T0up2piZQR_v_AUc_OulM",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Eco ponto 3",
+					"business_name": "Eco ponto 3",
+					"identity": "41921081000140",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "eco.ponto.3@unrealistic-illusion.net",
+					"phones": ["(56) 95595-9560"],
+					"website": null,
+					"started_activity_in": "2022-05-14T20:41:43.835Z",
+					"address": {
+						"zip_code": "79822-641",
+						"street": "R. Rio Tibre",
+						"number": "1905",
+						"complement": null,
+						"district": "Altos do Alvorada, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2437838,
+						"longitude": -54.833555999999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.77,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 85.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.69,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 868.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.39,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 19.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.36,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 816.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.33,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 696.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.15,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 457
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 78.79,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 233.41,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 228.46,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 125.02,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 296.16,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 287.25,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-26T13:26:27.087Z",
+					"observations": "Summopere coaegresco sumo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.920035,
+								"longitude": -54.701076,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788284567508
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Marshall County",
+							"streetNumber": "9072",
+							"street": "South Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23177925",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "15th Street, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eldridge-wehner.16.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathan-stiedemann.13.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"description": "Ullam creta conor mollitia aliquam sequi thalassinus repellat.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-03T03:58:45.284Z",
+					"observations": "Crudelis aspicio patruus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.282152,
+								"longitude": -54.316263,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330183623
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Shropshire",
+							"streetNumber": "45227",
+							"street": "Richmond Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49459072",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Norman Common, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Óleo Mineral / Lubrificante",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "eldridge-wehner.16.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmine-klocko.12.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-weissnat.5.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charlie-orn.8.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandy-botsford.15.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kara-price-renner.17.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"description": "Sui denego patrocinor cariosus odio summisse argentum.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+							"description": "Cupressus denuncio expedita tersus desparatus accommodo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-15T01:43:29.604Z",
+					"observations": "Vox suadeo sursum aegrotatio vinitor dedecor patior coniuratio consequuntur.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.988583,
+								"longitude": -55.441205,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788274816487
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "North Yorkshire",
+							"streetNumber": "46116",
+							"street": "Dane Crossroad",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36510850",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Victoria Place, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "charlie-orn.8.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Betsy Runolfsson",
+			"display_name": "Betsy",
+			"phone": "(59) 99387-6732",
+			"email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "73110-730",
+				"street": "Vance Crescent",
+				"number": "941",
+				"complement": null,
+				"district": "Avon",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.41817,
+				"longitude": -55.499611
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ0VD4J-ypiZQRDA5HW4PV9SQ",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "PRA Posto de Recebimento Avançado",
+					"business_name": "PRA Posto de Recebimento Avançado",
+					"identity": "80873700000120",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "pra.posto.de.recebimento.avancado@feline-luck.name",
+					"phones": ["(67) 99958-6228"],
+					"website": "https://www.facebook.com/Programa-Recicla-Coleta-Seletiva-110800934080726/?ref=page_internal",
+					"started_activity_in": "2019-03-10T19:02:11.365Z",
+					"address": {
+						"zip_code": "79812-160",
+						"street": "R. Noca Dauzaker",
+						"number": "925",
+						"complement": null,
+						"district": "Jardim Água Boa, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.247291099999998,
+						"longitude": -54.8078022
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 521.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.51,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 598.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 803.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.57,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 735.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.7,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 832.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 68.83,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 112.27,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 257.3,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 158.37,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 251.94,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 254.99,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJtVomEkgJiZQR6W4bkxjaQ_s",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Rodrigo Sucatão",
+					"business_name": "Rodrigo Sucatão",
+					"identity": "77828436000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rodrigo.sucatao@pretty-almighty.biz",
+					"phones": ["(67) 99249-7106"],
+					"website": null,
+					"started_activity_in": "2018-01-07T16:15:14.935Z",
+					"address": {
+						"zip_code": "79837-316",
+						"street": "R. Perdiz",
+						"number": "2005",
+						"complement": null,
+						"district": "Esplanada, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2687348,
+						"longitude": -54.758712
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.47,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 689.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 529.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.32,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 242.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.15,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 825.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 20.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 73.32,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 188.11,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 137.78,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-19T04:57:32.867Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.244383,
+								"longitude": -54.349248,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788358416199
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Worcestershire",
+							"streetNumber": "5604",
+							"street": "Church Path",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47424022",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kris-Kiehn Underpass, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-weissnat.5.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-15T13:27:44.771Z",
+					"observations": "Totam suscipio causa.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.078348,
+								"longitude": -54.596586,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788322469767
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Greene County",
+							"streetNumber": "6537",
+							"street": "Prosacco Extensions",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51969920",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Waters Forges, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Crystal Weissnat",
+			"display_name": "Crystal",
+			"phone": "(22) 92977-5314",
+			"email": "crystal-weissnat.5.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "73534-265",
+				"street": "Swift Row",
+				"number": "5505",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.414784,
+				"longitude": -55.444726
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJrd72wnoGiZQRk7jFf5GtD-k",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Seletiva Resíduos Industriais",
+					"business_name": "Seletiva Resíduos Industriais",
+					"identity": "03804089000137",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "seletiva.residuos.industriais@tasty-gerbil.biz",
+					"phones": ["(67) 3427-7727"],
+					"website": "http://seletiva.ind.br/",
+					"started_activity_in": "2018-01-13T03:41:20.691Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Rod. Aparecido de Souza Breguedo",
+						"number": "S/N",
+						"complement": null,
+						"district": "São Pedro, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.205544,
+						"longitude": -54.707001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 392
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.43,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 114.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.2,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 629
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 138.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.06,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 204.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 112.55,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 133.79,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJoyWcGPepiZQR5Nn9NNeY4NM",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Central Reciclados",
+					"business_name": "Central Reciclados",
+					"identity": "61296348000162",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "central.reciclados@gruesome-illusion.net",
+					"phones": ["(67) 99694-6167"],
+					"website": null,
+					"started_activity_in": "2026-05-15T01:57:47.820Z",
+					"address": {
+						"zip_code": "79816-488",
+						"street": "Ao lado da Sanesul",
+						"number": "S/N",
+						"complement": null,
+						"district": "R. Orozimbo Gonçalves de Castro, s/N",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2946411,
+						"longitude": -54.8228861
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.78,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 961.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.9,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 105.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 59.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 396
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 181.58,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 156.48,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 111.49,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 108.81,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 85.09,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 137.29,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-19T02:21:57.823Z",
+					"observations": "Copiose brevis autem vesper animus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.355262,
+								"longitude": -54.512443,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788341665788
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Norfolk",
+							"streetNumber": "8321",
+							"street": "S Chestnut Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91413373",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Fisher Causeway, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sandy-botsford.15.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kathryne Lemke",
+			"display_name": "Kathryne",
+			"phone": "(98) 95351-3474",
+			"email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "57882-397",
+				"street": "Morar Square",
+				"number": "40755",
+				"complement": null,
+				"district": "Clwyd",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -21.975308,
+				"longitude": -54.331084
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJRbmqz54HiZQRCez1g5OaCA4",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclo MS",
+					"business_name": "Reciclo MS",
+					"identity": "38608639000127",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclo.ms@substantial-disadvantage.net",
+					"phones": ["(67) 99187-8463"],
+					"website": "https://www.instagram.com/recicloms/",
+					"started_activity_in": "2018-12-25T10:02:43.138Z",
+					"address": {
+						"zip_code": "79843-010",
+						"street": "Alameda Oeste",
+						"number": "7300",
+						"complement": null,
+						"district": "Jardim Alhambra, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.229688799999998,
+						"longitude": -54.740525299999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 65.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.87,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 242.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 140,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 248.19,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJt6JJgMoHiZQRnrP7K7X7XsI",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": true,
+						"synthetic": false
+					},
+					"corporate_name": "EcoPonto - Reciclagem de Materiais Eletrônicos e outros",
+					"business_name": "EcoPonto - Reciclagem de Materiais Eletrônicos e outros",
+					"identity": "99528500000168",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "ecoponto.reciclagem.de.materiais.eletronicos.e.outros@blushing-premium.org",
+					"phones": ["(67) 99985-7249"],
+					"website": null,
+					"started_activity_in": "2020-07-30T07:23:57.243Z",
+					"address": {
+						"zip_code": "79833-160",
+						"street": "R. Ponta Porã",
+						"number": "6791",
+						"complement": null,
+						"district": "Jardim Maracana, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2138256,
+						"longitude": -54.765273199999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.53,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 560
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.47,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 321.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 249.54,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 236.83,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 157.5,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-05T12:00:35.949Z",
+					"observations": "Vinco infit xiphias utrimque suus subnecto carcer vox tepidus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.055045,
+								"longitude": -54.799794,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329747580
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "East Sussex",
+							"streetNumber": "9795",
+							"street": "Effertz Forest",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14874114",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Albert Road, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-01T01:59:59.027Z",
+					"observations": "Speculum succurro desipio eos coepi maxime.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.246998,
+								"longitude": -54.33954,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319088407
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Union County",
+							"streetNumber": "946",
+							"street": "Wolf Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26858046",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mayer Fords, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-cummerata.1.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dixie Nader",
+			"display_name": "Dixie",
+			"phone": "(00) 92254-6595",
+			"email": "dixie-nader.7.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "81969-092",
+				"street": "Cary Union",
+				"number": "214",
+				"complement": null,
+				"district": "Union County",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.04564,
+				"longitude": -54.707628
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJs8gJFBSpiZQRJMhyZlYVvQI",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Boa União",
+					"business_name": "Ferro Velho Boa União",
+					"identity": "81458208710",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.boa.uniao@partial-supplier.org",
+					"phones": ["(67) 99964-9880"],
+					"website": null,
+					"started_activity_in": "2021-05-07T09:37:06.609Z",
+					"address": {
+						"zip_code": "79814-430",
+						"street": "R. São Francisco",
+						"number": "908",
+						"complement": null,
+						"district": "Jardim Italia, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2432075,
+						"longitude": -54.817755
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 905.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.68,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 34.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 277.68,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 73.83,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 178.12,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 196.92,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJoy2GwXoGiZQRMkTu_YXEAtQ",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Md Ferro Velho",
+					"business_name": "Md Ferro Velho",
+					"identity": "59465485578",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "md.ferro.velho@aching-cassava.name",
+					"phones": ["(67) 98116-0100"],
+					"website": "https://www.facebook.com/MDFERROVELHOX/",
+					"started_activity_in": "2019-12-11T07:11:03.020Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "São Pedro",
+						"number": "Dourados",
+						"complement": null,
+						"district": "MS, Brasil",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2053883,
+						"longitude": -54.707094
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "12:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 175.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 611.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.05,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 155.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.29,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 131
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 236.22,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 266.76,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 170.35,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-25T19:52:39.978Z",
+					"observations": "Volva cometes thesis sortitus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.141417,
+								"longitude": -55.226248,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317394020
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Warren County",
+							"streetNumber": "74756",
+							"street": "Fore Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44180304",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dicki Branch, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Medicamentos"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-cummerata.1.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathan-stiedemann.13.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charlie-orn.8.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"description": "Dens ulterius aperio placeat subvenio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-17T19:42:38.991Z",
+					"observations": "Vesco esse adiuvo fugiat terreo absens veritatis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.912588,
+								"longitude": -54.487196,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788310900344
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Montgomery County",
+							"streetNumber": "42062",
+							"street": "Lime Grove",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12526915",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Werner Walks, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sandy-botsford.15.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charlie-orn.8.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kara-price-renner.17.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-cummerata.1.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eldridge-wehner.16.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "oma-parisian.9.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"description": "Numquam spoliatio canis.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"description": "Verecundia subito maxime vivo demulceo thalassinus cras video vaco uter.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Charlie Orn",
+			"display_name": "Charlie",
+			"phone": "(21) 94273-2591",
+			"email": "charlie-orn.8.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "84629-329",
+				"street": "S 7th Street",
+				"number": "67257",
+				"complement": null,
+				"district": "County Antrim",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.084882,
+				"longitude": -55.458409
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJJY-3LSWoiZQRB27zuA6DWnc",
+						"rating": 4.4,
+						"types": [
+							"association_or_organization",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "AGECOLD",
+					"business_name": "AGECOLD",
+					"identity": "34937367000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "agecold@unrealistic-fax.biz",
+					"phones": ["(67) 98448-9828"],
+					"website": null,
+					"started_activity_in": "2023-05-14T09:06:37.102Z",
+					"address": {
+						"zip_code": "79810-120",
+						"street": "R. Pedro Rigotti",
+						"number": "S/N",
+						"complement": null,
+						"district": "Vila Sulmat, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.231623199999998,
+						"longitude": -54.796169299999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.66,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 554.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 256.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 590.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.66,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 895.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 543.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 219.08,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 123.48,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 151.17,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 259.03,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 177.94,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJK5Xm338HiZQRDUyFSzjkkX4",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM OLIVEIRA",
+					"business_name": "RECICLAGEM OLIVEIRA",
+					"identity": "17322691000142",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.oliveira@untried-trench.biz",
+					"phones": ["(55) 94948-6540"],
+					"website": null,
+					"started_activity_in": "2021-06-16T23:53:09.536Z",
+					"address": {
+						"zip_code": "79831-010",
+						"street": "R. Izzat Bussuan",
+						"number": "4177",
+						"complement": null,
+						"district": "Vila Rosa, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2150128,
+						"longitude": -54.7850834
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 380
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.9,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 838.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 199.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 26.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.04,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 491.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.35,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 961.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 76.88,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 252.59,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 172.1,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 111.18,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 155.89,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-25T00:29:03.101Z",
+					"observations": "Spiculum ventosus crepusculum tricesimus ascit defaeco vereor vito tumultus solio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.13024,
+								"longitude": -54.653895,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788355967809
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Adams County",
+							"streetNumber": "67158",
+							"street": "Ken Terrace",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25440305",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Conroy Way, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Construção Civil e Demolição (RCD)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carmine-klocko.12.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-20T07:54:19.602Z",
+					"observations": "Acervus et collum decerno.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.938848,
+								"longitude": -54.881384,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295161546
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "County Tyrone",
+							"streetNumber": "22920",
+							"street": "Charlene Trail",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00799452",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bennett Harbors, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Oma Parisian",
+			"display_name": "Oma",
+			"phone": "(06) 98987-6264",
+			"email": "oma-parisian.9.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "92818-424",
+				"street": "New Lane",
+				"number": "461",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.289483,
+				"longitude": -55.134674
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJc0w6T0ioiZQRhu94YpIkaH4",
+						"rating": 4.6,
+						"types": [
+							"electronics_store",
+							"supplier",
+							"store",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Refil Reciclagem de Cartuchos",
+					"business_name": "Refil Reciclagem de Cartuchos",
+					"identity": "84213600000128",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "refil.reciclagem.de.cartuchos@nautical-gallery.info",
+					"phones": ["(67) 3422-0207"],
+					"website": null,
+					"started_activity_in": "2019-12-27T12:07:26.179Z",
+					"address": {
+						"zip_code": "79804-040",
+						"street": "R. Dr. Nelson Araújo",
+						"number": "199",
+						"complement": null,
+						"district": "Centro, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2304475,
+						"longitude": -54.8091764
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 757.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 228.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 236.44,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 163.56,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 256.81,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJp0yjVZ8HiZQRvPvCLU_4sQ4",
+						"rating": 4.2,
+						"types": [
+							"moving_company",
+							"shipping_service",
+							"transportation_service",
+							"consultant",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Vencedora Ambiental",
+					"business_name": "Vencedora Ambiental",
+					"identity": "52797301000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "vencedora.ambiental@gigantic-retention.info",
+					"phones": ["(67) 3424-1580"],
+					"website": null,
+					"started_activity_in": "2018-09-07T22:53:18.142Z",
+					"address": {
+						"zip_code": "79833-520",
+						"street": "R. Filinto Müller",
+						"number": "1050",
+						"complement": null,
+						"district": "Jardim Santa Maria, Dourados",
+						"city": "Dourados",
+						"city_ibge_id": 5003702,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2195362,
+						"longitude": -54.761938
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.99,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 652.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.3,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 570
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 157.73,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 249.02,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 129.85,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 269.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 139.67,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-01T02:24:58.308Z",
+					"observations": "Valde inflammatio allatus adiuvo paulatim.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.186518,
+								"longitude": -54.761476,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314578413
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Norfolk",
+							"streetNumber": "524",
+							"street": "Labadie Heights",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "31722807",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dolores Causeway, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Eletroeletrônicos (REEE)",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-weissnat.5.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmine-klocko.12.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-19T12:55:51.440Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.12658,
+								"longitude": -54.493019,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308937768
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Dorset",
+							"streetNumber": "573",
+							"street": "Cedar Grove",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96336314",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hill Road, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-11T22:43:31.187Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.286641,
+								"longitude": -54.880405,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279640504
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Lee County",
+							"streetNumber": "3745",
+							"street": "Reyes Dam",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22780004",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gerhold Gardens, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dewey-cummerata.1.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Deshaun Gerlach",
+			"display_name": "Deshaun",
+			"phone": "(69) 92512-5622",
+			"email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "55550-493",
+				"street": "Botsford Plain",
+				"number": "7280",
+				"complement": null,
+				"district": "Lee County",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.340685,
+				"longitude": -54.595411
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-16T14:14:14.274Z",
+					"observations": "Denique temptatio stultus depulso tandem vero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.239852,
+								"longitude": -54.955039,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788336258534
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Morgan County",
+							"streetNumber": "5635",
+							"street": "June Shoal",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63111525",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hane Alley, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "June Effertz",
+			"display_name": "June",
+			"phone": "(77) 93124-4154",
+			"email": "june-effertz.11.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "43252-576",
+				"street": "Ernest Port",
+				"number": "439",
+				"complement": null,
+				"district": "Marshall County",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -21.932799,
+				"longitude": -55.173756
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-06T12:04:10.061Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.414128,
+								"longitude": -54.735449,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788336248638
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Pike County",
+							"streetNumber": "300",
+							"street": "Ola Lights",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45325487",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N 3rd Street, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Pilhas e Baterias",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-22T00:22:39.190Z",
+					"observations": "Totus vomer accusamus votum tener denuncio cauda.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.150624,
+								"longitude": -54.899838,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346375330
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Washington County",
+							"streetNumber": "341",
+							"street": "Una Hills",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77111286",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 14th Street, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Carmine Klocko",
+			"display_name": "Carmine",
+			"phone": "(52) 94734-5573",
+			"email": "carmine-klocko.12.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "68214-866",
+				"street": "Stewart Spurs",
+				"number": "5804",
+				"complement": null,
+				"district": "Cleveland",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -21.908092,
+				"longitude": -54.958738
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-11T12:26:32.419Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.03938,
+								"longitude": -54.856103,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308808403
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "South Glamorgan",
+							"streetNumber": "34316",
+							"street": "Drake Fork",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "66546156",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "O'Reilly Route, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-17T20:30:23.025Z",
+					"observations": "Voveo aro abeo clementia bestia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.080572,
+								"longitude": -54.780476,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788296118136
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Clwyd",
+							"streetNumber": "885",
+							"street": "The Grove",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "72221485",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alanis Overpass, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kara-price-renner.17.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandy-botsford.15.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-19T10:43:35.560Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.167942,
+								"longitude": -54.630752,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788360436217
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Perry County",
+							"streetNumber": "4881",
+							"street": "Herman Square",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "38833254",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Pine Street, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "crystal-weissnat.5.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gerson-nicolas.14.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathan-stiedemann.13.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "oma-parisian.9.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"description": "Sollers abstergo umbra assentator.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Nathan Stiedemann",
+			"display_name": "Nathan",
+			"phone": "(45) 99610-8416",
+			"email": "nathan-stiedemann.13.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "04342-593",
+				"street": "Schumm Spurs",
+				"number": "459",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.304779,
+				"longitude": -54.681559
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Gerson Nicolas",
+			"display_name": "Gerson",
+			"phone": "(19) 93056-9433",
+			"email": "gerson-nicolas.14.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "13506-280",
+				"street": "Sheila Fords",
+				"number": "566",
+				"complement": null,
+				"district": "Scott County",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.242161,
+				"longitude": -55.093566
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-30T23:57:31.862Z",
+					"observations": "Angustus candidus bos callide rem tertius verbum amet apparatus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.881166,
+								"longitude": -55.139076,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788355836294
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Avon",
+							"streetNumber": "362",
+							"street": "Shelly Ports",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03181318",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cheyenne Meadow, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-16T23:50:44.471Z",
+					"observations": "Decretum atque quia voluptatibus apparatus amiculum pariatur suppellex arbitro.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.247443,
+								"longitude": -55.185999,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317007649
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "West Sussex",
+							"streetNumber": "34256",
+							"street": "Noah Cliff",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "07941424",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hoppe Trace, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kara-price-renner.17.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Sandy Botsford",
+			"display_name": "Sandy",
+			"phone": "(29) 97622-3113",
+			"email": "sandy-botsford.15.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "02039-303",
+				"street": "Lily Fields",
+				"number": "80158",
+				"complement": null,
+				"district": "Devon",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -21.94755,
+				"longitude": -55.488644
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-09T12:25:13.380Z",
+					"observations": "Pax sperno tam tempora acsi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.333942,
+								"longitude": -54.358046,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788283242327
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Lincoln County",
+							"streetNumber": "16537",
+							"street": "E State Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "11391437",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clarence Haven, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kara-price-renner.17.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "charlie-orn.8.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eldridge-wehner.16.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kathryne-lemke.6.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmine-klocko.12.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "homer-von.2.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "june-effertz.11.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "oma-parisian.9.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nathan-stiedemann.13.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"description": "Coruscus volutabrum censura uxor cursim acsi ars perspiciatis sordeo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alfredo-fadel.3.dourados-ms@oikos.seed",
+							"description": "Uxor tabernus conitor.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-30T07:54:01.936Z",
+					"observations": "Verto contigo vulnero depopulo nostrum arbor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.369152,
+								"longitude": -54.653714,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329135526
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Union County",
+							"streetNumber": "76739",
+							"street": "Hessel Fall",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30654612",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Main Road, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "deshaun-gerlach.10.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bette-homenick.0.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Eldridge Wehner",
+			"display_name": "Eldridge",
+			"phone": "(14) 90909-5351",
+			"email": "eldridge-wehner.16.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "88987-521",
+				"street": "Stiedemann Fords",
+				"number": "30542",
+				"complement": null,
+				"district": "Dorset",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.253346,
+				"longitude": -54.909499
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Kara Price-Renner",
+			"display_name": "Kara",
+			"phone": "(78) 97485-8797",
+			"email": "kara-price-renner.17.dourados-ms@oikos.seed",
+			"address": {
+				"zip_code": "42465-074",
+				"street": "Pinfold Lane",
+				"number": "919",
+				"complement": null,
+				"district": "Cumbria",
+				"city": "Dourados",
+				"city_ibge_id": 5003702,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.273861,
+				"longitude": -54.318248
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-25T05:33:19.727Z",
+					"observations": "Doloremque vicissitudo antea.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -21.905811,
+								"longitude": -55.073175,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315395009
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Union County",
+							"streetNumber": "78733",
+							"street": "Kiley Haven",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47382620",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Turcotte Meadow, Dourados - MS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Papel / Papelão",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "carmine-klocko.12.dourados-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sandy-botsford.15.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-24T19:41:20.800Z",
+					"observations": "Tamquam neque vicissitudo veritatis animi adipiscor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.070508,
+								"longitude": -55.507004,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788343916683
+						},
+						"addresses": {
+							"city": "Dourados",
+							"district": "Henry County",
+							"streetNumber": "420",
+							"street": "Green Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34752231",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Old Military Road, Dourados - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sandy-botsford.15.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dixie-nader.7.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "betsy-runolfsson.4.dourados-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

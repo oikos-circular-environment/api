@@ -1,0 +1,5500 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:53:22.396Z",
+		"city": "Sapucaia do Sul",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Terrance Lueilwitz",
+			"display_name": "Terrance",
+			"phone": "(70) 97100-4098",
+			"email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "83735-158",
+				"street": "E 9th Street",
+				"number": "34584",
+				"complement": null,
+				"district": "Essex",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.80698,
+				"longitude": -51.17547
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ_dMWKT5vGZUR_J0BvdjBYq8",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Império Comércio de Metais",
+					"business_name": "Império Comércio de Metais",
+					"identity": "20705032000108",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "imperio.comercio.de.metais@failing-instructor.org",
+					"phones": ["(51) 98126-5185"],
+					"website": "https://www.instagram.com/imperiometais_?igsh=cjIwcWI3c2pmZDVs&utm_source=qr",
+					"started_activity_in": "2019-10-21T03:21:21.611Z",
+					"address": {
+						"zip_code": "93228-250",
+						"street": "RS 118",
+						"number": "S/N",
+						"complement": null,
+						"district": "R. São Benedito, 37",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.845991200000004,
+						"longitude": -51.1409186
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.33,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 235.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.48,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 954.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.96,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 283.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 141.69,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 102.02,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 299.72,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 200.22,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJsdeFNIRlGZURw4bRmEoFPVg",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "New Recycling",
+					"business_name": "New Recycling",
+					"identity": "96566752000193",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "new.recycling@cuddly-almighty.net",
+					"phones": ["(51) 3509-2895"],
+					"website": "https://www.newrecycling.com.br/",
+					"started_activity_in": "2024-10-31T00:23:54.125Z",
+					"address": {
+						"zip_code": "93020-566",
+						"street": "Av. Getúlio Vargas",
+						"number": "2008",
+						"complement": null,
+						"district": "Fião, São Leopoldo",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.777081900000002,
+						"longitude": -51.1550478
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 153.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.48,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 973.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 892.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.53,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 157.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.65,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 836.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.85,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 131
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 110.32,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 127.4,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 59.22,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Demarcus Schiller",
+			"display_name": "Demarcus",
+			"phone": "(93) 96787-3060",
+			"email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "41480-191",
+				"street": "Greenholt Ford",
+				"number": "849",
+				"complement": null,
+				"district": "Berkshire",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.813073,
+				"longitude": -51.162976
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJX_dnPwBvGZURO_cAuwGtJv0",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Reis",
+					"business_name": "Reciclagem Reis",
+					"identity": "45278337000101",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.reis@tangible-roadway.com",
+					"phones": ["(57) 96073-6188"],
+					"website": null,
+					"started_activity_in": "2026-01-14T12:36:58.629Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "BR-116",
+						"number": "174",
+						"complement": null,
+						"district": "Novo Esteio, Esteio",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.8458212,
+						"longitude": -51.1776402
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.36,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 479.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.2,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 171.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.14,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 769.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.27,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 644.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 144.64,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 267.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJj9zWY6lvGZURCSKoj4j8RaQ",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Eloum Pallets e Reciclagem LTDA",
+					"business_name": "Eloum Pallets e Reciclagem LTDA",
+					"identity": "92483559000138",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "eloum.pallets.e.reciclagem.ltda@minor-muscat.org",
+					"phones": ["(51) 98148-3800"],
+					"website": "http://eloum.com.br/",
+					"started_activity_in": "2025-02-17T00:33:51.110Z",
+					"address": {
+						"zip_code": "93270-010",
+						"street": "Av. Independência",
+						"number": "3100",
+						"complement": null,
+						"district": "Novo Esteio, Esteio",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.8435915,
+						"longitude": -51.177764599999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 366.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 45.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 124.22,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 232.32,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 143.86,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 147.17,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-16T20:24:11.535Z",
+					"observations": "Via desino copia defetiscor canis sollers sunt id argentum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.850194,
+								"longitude": -51.158202,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788357399117
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Hertfordshire",
+							"streetNumber": "366",
+							"street": "Mandy Flats",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35044106",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "State Road, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-31T09:03:55.611Z",
+					"observations": "Tonsor trado tonsor claro velum tamquam crustulum ab bestia complectus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.85891,
+								"longitude": -51.167167,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326609242
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Norfolk",
+							"streetNumber": "767",
+							"street": "Neil Crossroad",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95785421",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schaden Glens, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Medicamentos",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Sylvester Gutmann",
+			"display_name": "Sylvester",
+			"phone": "(06) 97432-1205",
+			"email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "06806-369",
+				"street": "Mable Green",
+				"number": "214",
+				"complement": null,
+				"district": "Tyne and Wear",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.812663,
+				"longitude": -51.194758
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJtQLZpENuGZURqWtw9G5FtE8",
+						"rating": 4.3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cootre",
+					"business_name": "Cootre",
+					"identity": "47578921000108",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cootre@questionable-verve.net",
+					"phones": ["(51) 99218-0492"],
+					"website": null,
+					"started_activity_in": "2023-06-16T15:30:41.831Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Av. Luiz Pasteur",
+						"number": "7275",
+						"complement": null,
+						"district": "Parque Primavera, Esteio",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.859538399999998,
+						"longitude": -51.120169600000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.86,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 584.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 953.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 727.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.22,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 768.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 246.73,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 234.18,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 90.1,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ03fG7dJvGZURg6nMjUhVU9g",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "DF COMÉRCIO DE METAIS",
+					"business_name": "DF COMÉRCIO DE METAIS",
+					"identity": "30010485000165",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "df.comercio.de.metais@robust-reach.biz",
+					"phones": ["(51) 99867-2524"],
+					"website": null,
+					"started_activity_in": "2025-01-12T09:01:19.088Z",
+					"address": {
+						"zip_code": "93226-392",
+						"street": "Av. Coronel Theodomiro Porto da Fonseca",
+						"number": "548",
+						"complement": null,
+						"district": "Apto 1",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.8435949,
+						"longitude": -51.143221499999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 153.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 86.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.65,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 984.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.44,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 199.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.8,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 739.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 703
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 255.66,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 117.92,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 165,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 96.34,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-14T16:40:06.697Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.840107,
+								"longitude": -51.109991,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788334993814
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Pike County",
+							"streetNumber": "942",
+							"street": "Glen Shoals",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10831308",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Geovanny Squares, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Madeira", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-11T18:58:52.772Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.857816,
+								"longitude": -51.147033,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297265421
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Derbyshire",
+							"streetNumber": "482",
+							"street": "Felipe Loop",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10936421",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bahringer Rapids, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kent-fritsch.4.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Alioqui ascit magni perspiciatis victus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-22T17:20:23.602Z",
+					"observations": "Virgo cubitum adiuvo desolo tenetur depraedor ultra attonbitus vesco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.790495,
+								"longitude": -51.110911,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788332871653
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Morgan County",
+							"streetNumber": "811",
+							"street": "Medhurst Rue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32116058",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Sylvan Underpass, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "floyd-dicki.13.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lauren-legros.5.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Sonitus averto antepono statim caritas cunabula vestrum cena.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jasmine Kihn",
+			"display_name": "Jasmine",
+			"phone": "(24) 99464-6727",
+			"email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "34694-729",
+				"street": "Gloucester Road",
+				"number": "91056",
+				"complement": null,
+				"district": "Warren County",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.798512,
+				"longitude": -51.100571
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJhzLLqUBvGZURjLB4S08NtyU",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecc Menezes",
+					"business_name": "Ecc Menezes",
+					"identity": "76823603000155",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecc.menezes@vengeful-gift.name",
+					"phones": ["(51) 99711-1229"],
+					"website": null,
+					"started_activity_in": "2025-12-12T01:41:17.346Z",
+					"address": {
+						"zip_code": "93260-360",
+						"street": "RS-118",
+						"number": "2277",
+						"complement": null,
+						"district": "Tamandaré, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.836312,
+						"longitude": -51.1587458
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.91,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 160
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.43,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 836.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.39,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 576
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 225.53,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 129.68,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 190.14,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJofn0FHVvGZURBVZZpAct6c0",
+						"rating": 4.5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Satler",
+					"business_name": "Reciclagem Satler",
+					"identity": "59892069000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.satler@writhing-doorpost.com",
+					"phones": ["(51) 98507-6607"],
+					"website": null,
+					"started_activity_in": "2019-12-06T10:01:50.398Z",
+					"address": {
+						"zip_code": "93285-400",
+						"street": "R. Camões",
+						"number": "124",
+						"complement": null,
+						"district": "São José, Esteio",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.8593451,
+						"longitude": -51.1601066
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.21,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 958
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.28,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 875.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 849.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.7,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 518
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 161.24,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 170.37,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-16T12:58:52.793Z",
+					"observations": "Amitto stillicidium magni.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.807389,
+								"longitude": -51.081392,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319126171
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "South Glamorgan",
+							"streetNumber": "57201",
+							"street": "Willis Passage",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64672229",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Main, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-24T23:21:18.621Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.825361,
+								"longitude": -51.167156,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317819320
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Jackson County",
+							"streetNumber": "39580",
+							"street": "Nelson Falls",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81622429",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rogers Underpass, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "floyd-dicki.13.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kent Fritsch",
+			"display_name": "Kent",
+			"phone": "(55) 97077-3147",
+			"email": "kent-fritsch.4.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "47514-885",
+				"street": "Deborah Place",
+				"number": "3283",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.783508,
+				"longitude": -51.073901
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJae_8ajtvGZURVD3wPQCmB7k",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Cooperativa Cooprevive",
+					"business_name": "Cooperativa Cooprevive",
+					"identity": "56100139000161",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "cooperativa.cooprevive@bustling-godfather.info",
+					"phones": ["(51) 99795-0640"],
+					"website": null,
+					"started_activity_in": "2025-07-04T07:35:59.370Z",
+					"address": {
+						"zip_code": "93234-076",
+						"street": "R. das Maos Dadas",
+						"number": "490",
+						"complement": null,
+						"district": "Novo Horizonte, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.856564300000002,
+						"longitude": -51.0976442
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 688.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.39,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 99.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.67,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 284.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.78,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 335.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.25,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 955.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 471.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 193.57,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 117.04,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJZb37GEJuGZURDEYtQ3BGIdM",
+						"rating": 4.6,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Recividro",
+					"business_name": "Recividro",
+					"identity": "47461177000159",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "recividro@experienced-decision.com",
+					"phones": ["(51) 3451-5179"],
+					"website": "https://www.recividro.com.br/",
+					"started_activity_in": "2022-08-30T20:46:05.318Z",
+					"address": {
+						"zip_code": "93228-180",
+						"street": "Av. Luiz Pasteur",
+						"number": "7676",
+						"complement": null,
+						"district": "Valderez, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.8600323,
+						"longitude": -51.117854799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.38,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 717.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.47,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 708.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 470.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.6,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 360.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 15
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.64,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 689
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 179.08,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 70.76,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 70.36,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-14T07:28:37.676Z",
+					"observations": "Ago laborum architecto ago verumtamen delectus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.834226,
+								"longitude": -51.119253,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788351743830
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Staffordshire",
+							"streetNumber": "913",
+							"street": "Bradford Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26048572",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oberbrunner Parkway, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-11T04:56:12.242Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.802096,
+								"longitude": -51.182831,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326250782
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Shropshire",
+							"streetNumber": "22322",
+							"street": "Marvin Trace",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87577834",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "MacGyver Ramp, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lauren Legros",
+			"display_name": "Lauren",
+			"phone": "(92) 93437-8512",
+			"email": "lauren-legros.5.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "33016-740",
+				"street": "Bedford Road",
+				"number": "8633",
+				"complement": null,
+				"district": "Hertfordshire",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.822137,
+				"longitude": -51.104375
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJwbbblIdvGZUR9AZwTMWM3x4",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro velho B.N",
+					"business_name": "Ferro velho B.N",
+					"identity": "78367309561",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.b.n@grave-impostor.name",
+					"phones": ["(90) 97114-3444"],
+					"website": null,
+					"started_activity_in": "2018-08-23T05:50:59.144Z",
+					"address": {
+						"zip_code": "93226-370",
+						"street": "Av. República",
+						"number": "409",
+						"complement": null,
+						"district": "Nova Sapucaia, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.844062500000003,
+						"longitude": -51.1420336
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 109.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.58,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 345.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.21,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 495.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 143.72,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 279.64,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 64.3,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJp-yPPhpvGZURwcqisnDGYq4",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JL Sucatas",
+					"business_name": "JL Sucatas",
+					"identity": "46619022000135",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jl.sucatas@sparse-flint.com",
+					"phones": ["(51) 98689-0811"],
+					"website": null,
+					"started_activity_in": "2018-04-02T06:58:45.164Z",
+					"address": {
+						"zip_code": "93226-420",
+						"street": "R. Ângelo Batista de Matos",
+						"number": "156",
+						"complement": null,
+						"district": "Capão da Cruz, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.8421865,
+						"longitude": -51.146452599999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "07:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "07:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "07:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "07:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "07:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.44,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 802.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.87,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 949.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.17,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 111.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 383.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.4,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 933.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 976.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 257.75,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 254.85,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 93.61,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 275.76,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-07T00:00:16.504Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.776603,
+								"longitude": -51.087389,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303525581
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Tayside",
+							"streetNumber": "41182",
+							"street": "Alvis Corner",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64819612",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Prosacco Forge, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Trenton Volkman",
+			"display_name": "Trenton",
+			"phone": "(02) 94441-0618",
+			"email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "97153-333",
+				"street": "Cronin Row",
+				"number": "63796",
+				"complement": null,
+				"district": "Washington County",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.79061,
+				"longitude": -51.086827
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJlbPHPGpuGZUR6Unx_fT7DIY",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Am Sucatas",
+					"business_name": "Am Sucatas",
+					"identity": "83996502000141",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "am.sucatas@wasteful-extent.net",
+					"phones": ["(79) 96473-8146"],
+					"website": null,
+					"started_activity_in": "2026-06-04T13:46:53.686Z",
+					"address": {
+						"zip_code": "93230-390",
+						"street": "RS-118",
+						"number": "7533",
+						"complement": null,
+						"district": "Boa Vista, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.858014400000002,
+						"longitude": -51.1186201
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.07,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 51.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 806.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 110.8,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 114.17,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 134.39,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 65.73,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 226.46,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJhyuRhghnGZURyYosG4eFSaY",
+						"rating": 3,
+						"types": [
+							"storage",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "MJ Ferro velho e reciclagem",
+					"business_name": "MJ Ferro velho e reciclagem",
+					"identity": "59012269415",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "mj.ferro.velho.e.reciclagem@rusty-duffel.biz",
+					"phones": ["(51) 98979-1591"],
+					"website": null,
+					"started_activity_in": "2019-09-10T06:34:56.911Z",
+					"address": {
+						"zip_code": "93212-190",
+						"street": "Est. Particular",
+						"number": "S/N",
+						"complement": null,
+						"district": "Fortuna, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.807882099999997,
+						"longitude": -51.1838659
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 69.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.87,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 116
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 287.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 179.65,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 186.41,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 268.07,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 219.22,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 109.81,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Jimmie Crist",
+			"display_name": "Jimmie",
+			"phone": "(63) 98187-3482",
+			"email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "08477-243",
+				"street": "Williamson Dale",
+				"number": "58769",
+				"complement": null,
+				"district": "Berkshire",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.867259,
+				"longitude": -51.162388
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJk569QgBpGZURxgeGzIcgfnI",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem do alemão",
+					"business_name": "Reciclagem do alemão",
+					"identity": "42735042000110",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.alemao@impassioned-cardboard.biz",
+					"phones": ["(08) 95826-0453"],
+					"website": null,
+					"started_activity_in": "2017-06-24T19:46:58.635Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Av. José Joaquim",
+						"number": "S/N",
+						"complement": null,
+						"district": "Piratini, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.811950399999994,
+						"longitude": -51.158729699999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.46,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 534.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.82,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 102.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 71.89,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 176.42,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 68.55,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-Vv9WT5vGZURzTCdbi17FW8",
+						"rating": 4.9,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Schmitt comércio de metais",
+					"business_name": "Schmitt comércio de metais",
+					"identity": "34185091000107",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "schmitt.comercio.de.metais@long-term-maintainer.biz",
+					"phones": ["(51) 99983-6745"],
+					"website": "https://schmittmetais.com.br/",
+					"started_activity_in": "2025-12-31T17:53:03.284Z",
+					"address": {
+						"zip_code": "93226-450",
+						"street": "Av. Luiz Pasteur",
+						"number": "2580",
+						"complement": null,
+						"district": "Tamandaré, Esteio",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.837188799999996,
+						"longitude": -51.1552419
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.24,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 557.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 242.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 439.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 873.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 643
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 982.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 297.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 222.75,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 110.87,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 129.85,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-31T05:30:47.827Z",
+					"observations": "Ustulo decens uter.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.85157,
+								"longitude": -51.140248,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295175743
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Leicestershire",
+							"streetNumber": "1907",
+							"street": "Carlton Ports",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59686830",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stanton Port, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Óleo Mineral / Lubrificante",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-09T23:39:32.338Z",
+					"observations": "Conor tempora terminatio timor id antea vehemens.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.828731,
+								"longitude": -51.141145,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279480095
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Polk County",
+							"streetNumber": "6722",
+							"street": "Glover Haven",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77248774",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Raynor Views, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Borracha / Pneus"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Elinore Heidenreich",
+			"display_name": "Elinore",
+			"phone": "(85) 91259-4978",
+			"email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "38866-728",
+				"street": "Vicki Radial",
+				"number": "2079",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.806228,
+				"longitude": -51.114622
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJMfRsQZhvGZURh2lYPooWVQY",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucatas Oliveira",
+					"business_name": "Sucatas Oliveira",
+					"identity": "53077614000138",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucatas.oliveira@red-makeover.net",
+					"phones": ["(51) 99810-3029"],
+					"website": null,
+					"started_activity_in": "2019-06-30T11:12:02.765Z",
+					"address": {
+						"zip_code": "93224-100",
+						"street": "R. Germano Hauschild",
+						"number": "S/N",
+						"complement": null,
+						"district": "Camboim, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.836287799999997,
+						"longitude": -51.138926899999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 521.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 292.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 271.49,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 63.98,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 246.57,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 263.31,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 203.2,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJfXy1SwBpGZURqopKuLE9DyQ",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem EMR",
+					"business_name": "Reciclagem EMR",
+					"identity": "16974447000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.emr@outlandish-wilderness.biz",
+					"phones": ["(00) 99089-7990"],
+					"website": null,
+					"started_activity_in": "2018-04-03T18:22:07.101Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Estr. José Joaquim",
+						"number": "S/N",
+						"complement": null,
+						"district": "Piratini, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.811950399999994,
+						"longitude": -51.158683800000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 14.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.81,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 819.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.62,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 26.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.97,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 125.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 176.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 969.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 69.42,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 118.01,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-17T21:28:37.190Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.827985,
+								"longitude": -51.191895,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788323584360
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Jefferson County",
+							"streetNumber": "7527",
+							"street": "N Jackson Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19167259",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Forest Village, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "floyd-dicki.13.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Cumque absorbeo contego delicate annus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-31T22:22:38.397Z",
+					"observations": "Vulticulus arca vester volutabrum aggero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.859317,
+								"longitude": -51.178666,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788322003008
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Logan County",
+							"streetNumber": "8062",
+							"street": "Kuhlman Spurs",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "33447547",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jewel Walk, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lauren-legros.5.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-13T14:52:22.167Z",
+					"observations": "Verecundia laudantium absens bellum varius aestas sponte spiculum facilis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.791694,
+								"longitude": -51.186175,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308871048
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Jackson County",
+							"streetNumber": "35116",
+							"street": "Anya Walk",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48255234",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "State Avenue, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-17T03:27:44.647Z",
+					"observations": "Cervus verumtamen usitas aggero vester pauper cedo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.865464,
+								"longitude": -51.168588,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327036193
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Lancashire",
+							"streetNumber": "701",
+							"street": "West Lights",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14532592",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Marie Rest, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "floyd-dicki.13.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Nobis rerum surgo adimpleo apto ventito canis esse aspernatur.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Cetera neque caput corrumpo sol possimus arbustum deorsum tripudio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-12T19:05:39.063Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.795678,
+								"longitude": -51.100107,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788338888863
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Hancock County",
+							"streetNumber": "863",
+							"street": "Mueller Mountain",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98344776",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Matt Point, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eleanor-ferry.10.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kent-fritsch.4.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Viscus aveho atrox subito denique commodo.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Dedico sunt unde validus textor traho umbra suppellex velociter utpote.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Fredy Morar",
+			"display_name": "Fredy",
+			"phone": "(68) 97639-4019",
+			"email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "48980-153",
+				"street": "Church Street",
+				"number": "5600",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.793994,
+				"longitude": -51.108331
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJFY_MeLFvGZURqYG-UNwbhgk",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Multióleo - Coleta de óleo de cozinha",
+					"business_name": "Multióleo - Coleta de óleo de cozinha",
+					"identity": "61546520000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "multioleo.coleta.de.oleo.de.cozinha@jittery-gazebo.com",
+					"phones": ["(51) 98464-3880"],
+					"website": null,
+					"started_activity_in": "2021-11-14T05:09:45.230Z",
+					"address": {
+						"zip_code": "93230-000",
+						"street": "R. Clóvis Ely",
+						"number": "392",
+						"complement": null,
+						"district": "Boa Vista, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.851332399999997,
+						"longitude": -51.12573570000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.11,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 867
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.23,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 147.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.72,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 855.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.62,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 892.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 176.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 262.61,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 202.04,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 124.14,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 245.64,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJs8NWhrJoGZUR64jy3s9qPy8",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM E SUCATAS BRASIL",
+					"business_name": "RECICLAGEM E SUCATAS BRASIL",
+					"identity": "87103256000102",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.e.sucatas.brasil@dismal-guard.com",
+					"phones": ["(57) 94961-0808"],
+					"website": null,
+					"started_activity_in": "2020-07-18T19:55:23.434Z",
+					"address": {
+						"zip_code": "93214-290",
+						"street": "R. Primo Vachi",
+						"number": "104",
+						"complement": null,
+						"district": "Vacchi, Sapucaia do Sul",
+						"city": "Sapucaia do Sul",
+						"city_ibge_id": 4320008,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.822115399999998,
+						"longitude": -51.1684901
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.63,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 315.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.75,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 489.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 83.36,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 76.75,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 150.51,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 62.47,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 203.86,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-22T12:38:18.576Z",
+					"observations": "Creo vacuus supplanto quibusdam ascisco tumultus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.804754,
+								"longitude": -51.126249,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347452338
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Fayette County",
+							"streetNumber": "1230",
+							"street": "Janiya Lock",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37658538",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Christie Lane, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Eletroeletrônicos (REEE)",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eleanor-ferry.10.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Magnam accusator aegre uredo magnam.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Eleanor Ferry",
+			"display_name": "Eleanor",
+			"phone": "(19) 98894-5219",
+			"email": "eleanor-ferry.10.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "52560-649",
+				"street": "N Court Street",
+				"number": "226",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.848369,
+				"longitude": -51.088079
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-20T05:21:36.439Z",
+					"observations": "Capto turba asperiores commemoro.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.788815,
+								"longitude": -51.156595,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298599887
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Lancashire",
+							"streetNumber": "540",
+							"street": "Kelly Pass",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80240163",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Spring Gardens, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kent-fritsch.4.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jimmie-crist.7.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lauren-legros.5.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Assentator somniculosus clamo vilitas debilito caecus est vergo vestrum sopor.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Explicabo amet studio strenuus architecto sufficio accusator decretum numquam votum.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-03-22T06:40:13.386Z",
+					"observations": "Beneficium viscus auxilium magnam terminatio capio adsidue utor studio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.86753,
+								"longitude": -51.151177,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788328232474
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Surrey",
+							"streetNumber": "7872",
+							"street": "N Center Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55588698",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tara Stream, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ettie Leffler",
+			"display_name": "Ettie",
+			"phone": "(72) 91086-8046",
+			"email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "15804-426",
+				"street": "Nicholaus Circles",
+				"number": "290",
+				"complement": null,
+				"district": "Lothian",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.795467,
+				"longitude": -51.097247
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-18T10:27:52.801Z",
+					"observations": "Cubicularis maiores quam acquiro.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.832151,
+								"longitude": -51.190877,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321283451
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Monroe County",
+							"streetNumber": "304",
+							"street": "Evalyn Flat",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "18950659",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "West Street, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Resíduos Orgânicos",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-31T00:34:09.911Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.785954,
+								"longitude": -51.081496,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340304324
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Mid Glamorgan",
+							"streetNumber": "1654",
+							"street": "Bryce Brooks",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80999127",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Christie Trace, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Lâmpadas"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "floyd-dicki.13.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eleanor-ferry.10.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Venio confido absorbeo vix aestivus velit.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Christy Littel",
+			"display_name": "Christy",
+			"phone": "(10) 96722-7982",
+			"email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "84154-697",
+				"street": "Preston Spur",
+				"number": "8459",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.856088,
+				"longitude": -51.173678
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-16T16:46:35.607Z",
+					"observations": "Bis arbitro id tenuis peior subvenio terminatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.81463,
+								"longitude": -51.080811,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297334988
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Kent",
+							"streetNumber": "29164",
+							"street": "Krystal Glens",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55480706",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jonathan Ways, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Vidro", "Lâmpadas"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lauren-legros.5.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-04T23:46:29.125Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.856355,
+								"longitude": -51.139596,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285541688
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Avon",
+							"streetNumber": "523",
+							"street": "St Mary's Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "35063487",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bill Points, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Têxtil / Roupas / Tecidos",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Floyd Dicki",
+			"display_name": "Floyd",
+			"phone": "(00) 96954-1082",
+			"email": "floyd-dicki.13.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "44463-634",
+				"street": "S Broad Street",
+				"number": "502",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.815861,
+				"longitude": -51.154731
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-24T13:58:58.647Z",
+					"observations": "Validus et torrens usus decerno atrox nam antepono condico thymbra.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.78026,
+								"longitude": -51.069065,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329831491
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "17585",
+							"street": "S Walnut Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81115814",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rolando Terrace, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "christy-littel.12.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kent-fritsch.4.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ettie-leffler.11.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Caste nam video vigilo accedo autem demonstro vulpes.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "demarcus-schiller.1.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Accusantium cerno solum animi.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Alfred Wiegand",
+			"display_name": "Alfred",
+			"phone": "(41) 96301-3513",
+			"email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "91730-731",
+				"street": "Pagac Squares",
+				"number": "78805",
+				"complement": null,
+				"district": "Pike County",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.796546,
+				"longitude": -51.147052
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-10T23:41:19.621Z",
+					"observations": "Enim dedico supra adimpleo qui succedo speciosus subnecto aestus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.822862,
+								"longitude": -51.097299,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788354822654
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Kent",
+							"streetNumber": "8787",
+							"street": "Castle Close",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43365868",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Raina Falls, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Eletroeletrônicos (REEE)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-18T00:00:37.594Z",
+					"observations": "Uxor debeo altus suscipio vesco volaticus laborum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.837408,
+								"longitude": -51.108173,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293563227
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Isle of Wight",
+							"streetNumber": "526",
+							"street": "Sporer Run",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41665063",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "McDermott Plaza, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-13T14:04:14.369Z",
+					"observations": "Vigilo antepono accedo terror expedita adfero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.833839,
+								"longitude": -51.116829,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788356449811
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Essex",
+							"streetNumber": "5951",
+							"street": "Ethelyn Ways",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90170859",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Central Avenue, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trenton-volkman.6.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eleanor-ferry.10.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "fredy-morar.9.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Victus vomito cariosus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Delores Breitenberg",
+			"display_name": "Delores",
+			"phone": "(54) 90455-2683",
+			"email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "33572-995",
+				"street": "Paxton Squares",
+				"number": "9077",
+				"complement": null,
+				"district": "Hamilton County",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.824343,
+				"longitude": -51.136697
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-18T07:00:36.393Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.788582,
+								"longitude": -51.110665,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788322319688
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "Scott County",
+							"streetNumber": "49673",
+							"street": "Pennsylvania Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67001549",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stoney Lane, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jasmine-kihn.3.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eleanor-ferry.10.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alfred-wiegand.14.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elinore-heidenreich.8.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sylvester-gutmann.2.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "delores-breitenberg.15.sapucaia-do-sul-rs@oikos.seed",
+							"description": "Beatae cunae arto coepi terga ascit.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Bernice Kris",
+			"display_name": "Bernice",
+			"phone": "(84) 98139-1954",
+			"email": "bernice-kris.16.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "62218-959",
+				"street": "Albert Square",
+				"number": "65893",
+				"complement": null,
+				"district": "Clwyd",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.84393,
+				"longitude": -51.14571
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-04T15:51:17.644Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.835273,
+								"longitude": -51.118204,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297434059
+						},
+						"addresses": {
+							"city": "Sapucaia do Sul",
+							"district": "County Down",
+							"streetNumber": "825",
+							"street": "Marta Lights",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32710345",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Vicky Cliff, Sapucaia do Sul - RS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "terrance-lueilwitz.0.sapucaia-do-sul-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Roosevelt Bahringer",
+			"display_name": "Roosevelt",
+			"phone": "(59) 90359-1513",
+			"email": "roosevelt-bahringer.17.sapucaia-do-sul-rs@oikos.seed",
+			"address": {
+				"zip_code": "52375-986",
+				"street": "Orchard Drive",
+				"number": "33980",
+				"complement": null,
+				"district": "Henry County",
+				"city": "Sapucaia do Sul",
+				"city_ibge_id": 4320008,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.786101,
+				"longitude": -51.076949
+			},
+			"companies": [],
+			"complaints": []
+		}
+	]
+}
