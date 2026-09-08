@@ -11,7 +11,7 @@ describe("denunciations-repository-prisma", () => {
 	async function insertUser(): Promise<string> {
 		const userId = randomUUID();
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			`test-${userId}@integration.test`,
 		);
