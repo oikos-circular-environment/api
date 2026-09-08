@@ -23,6 +23,7 @@ class FailingStorageProvider implements StorageProvider {
 	async convertFileToBase64(): Promise<string> {
 		return "";
 	}
+	async ping(): Promise<void> {}
 }
 
 async function createSupport(supportsRepository: InMemorySupportsRepository) {

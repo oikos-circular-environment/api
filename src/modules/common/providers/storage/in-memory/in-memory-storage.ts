@@ -38,4 +38,6 @@ export class InMemoryStorageProvider implements StorageProvider {
 
 		return file.toString("base64");
 	}
+
+	async ping(): Promise<void> {}
 }

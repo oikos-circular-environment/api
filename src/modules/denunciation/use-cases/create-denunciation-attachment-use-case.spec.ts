@@ -361,6 +361,8 @@ describe("create-denunciation-attachment-use-case", () => {
 			async convertFileToBase64() {
 				return "";
 			}
+
+			async ping() {}
 		}
 
 		const denunciationsRepository = new InMemoryDenunciationsRepository();
@@ -612,6 +614,8 @@ describe("create-denunciation-attachment-use-case", () => {
 			async convertFileToBase64() {
 				return "";
 			}
+
+			async ping() {}
 		}
 
 		const denunciationsRepository = new InMemoryDenunciationsRepository();

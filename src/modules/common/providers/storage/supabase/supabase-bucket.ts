@@ -100,4 +100,14 @@ export class SupabaseBucket implements StorageProvider {
 			throw new Error("Failed to convert file to base64");
 		}
 	}
+
+	async ping(): Promise<void> {
+		const { error } = await this.supabase.storage
+			.from(this.BUCKET)
+			.list("", { limit: 1 });
+
+		if (error) {
+			throw error;
+		}
+	}
 }

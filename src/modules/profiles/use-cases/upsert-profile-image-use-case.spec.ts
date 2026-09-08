@@ -264,6 +264,8 @@ describe("upsert-profile-image-use-case", () => {
 			async convertFileToBase64() {
 				return "";
 			}
+
+			async ping() {}
 		}
 
 		const storageProvider = new UploadFailStorageProvider();

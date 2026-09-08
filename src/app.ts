@@ -20,6 +20,7 @@ import { serverLogger } from "@/lib/logger.js";
 import { createOpenApiDocumentMerger } from "@/lib/openapi-document.js";
 import { accountRoutes } from "./modules/accounts/account-routes.js";
 import { auth } from "./modules/auth/providers/auth/better-auth/better-auth.js";
+import { healthRoutes } from "./modules/common/health/health-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
@@ -213,7 +214,7 @@ app.register(ScalarApiReference, {
 	},
 });
 
-app.get("/health", () => ({ status: "ok" }));
+app.register(healthRoutes);
 
 app.route({
 	method: ["GET", "POST"],

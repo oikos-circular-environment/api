@@ -1,6 +1,7 @@
 import {
 	DeleteObjectCommand,
 	GetObjectCommand,
+	HeadBucketCommand,
 	HeadObjectCommand,
 	PutObjectCommand,
 	S3Client,
@@ -90,5 +91,9 @@ export class MinioBucket implements StorageProvider {
 
 		const bytes = await response.Body.transformToByteArray();
 		return Buffer.from(bytes).toString("base64");
+	}
+
+	async ping(): Promise<void> {
+		await this.client.send(new HeadBucketCommand({ Bucket: this.bucket }));
 	}
 }

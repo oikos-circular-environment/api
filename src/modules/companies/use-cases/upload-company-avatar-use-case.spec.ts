@@ -21,6 +21,7 @@ class UploadFailStorageProvider implements StorageProvider {
 	async convertFileToBase64() {
 		return "";
 	}
+	async ping() {}
 }
 
 class UploadAvatarReturnsNullRepository extends InMemoryCompaniesRepository {
