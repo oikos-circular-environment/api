@@ -11,8 +11,6 @@ import {
 } from "@/modules/common/middlewares/verify-session.js";
 import { withBearerAuth } from "@/modules/common/types/openapi-security.js";
 import { denunciationSchema } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import { BanUserUseCase } from "../users/use-cases/ban-user-use-case.js";
-import { RevokeUserSessionsUseCase } from "../users/use-cases/revoke-user-sessions-use-case.js";
 import {
 	getDenunciationsQuerySchema,
 	moderateDenunciationBodySchema,
@@ -43,12 +41,9 @@ export async function moderationDenunciationsRoutes(
 	const moderateDenunciationUseCase = new ModerateDenunciationUseCase(
 		denunciationsRepository,
 	);
-	const banUserUseCase = new BanUserUseCase(authProvider);
-	const revokeUserSessionsUseCase = new RevokeUserSessionsUseCase(authProvider);
 	const moderateDenunciationBanUseCase = new ModerateDenunciationBanUseCase(
 		denunciationsRepository,
-		banUserUseCase,
-		revokeUserSessionsUseCase,
+		authProvider,
 	);
 
 	typedApp.get(

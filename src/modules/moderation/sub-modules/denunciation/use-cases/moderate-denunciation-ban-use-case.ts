@@ -1,7 +1,6 @@
+import type { AuthProvider } from "@/modules/auth/providers/auth/auth-provider.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { Denunciation } from "@/modules/denunciation/dtos/denunciations-dto.js";
-import type { BanUserUseCase } from "../../users/use-cases/ban-user-use-case.js";
-import type { RevokeUserSessionsUseCase } from "../../users/use-cases/revoke-user-sessions-use-case.js";
 import type { ModerationDenunciationsRepository } from "../repositories/moderation-denunciations-repository.js";
 
 const FINAL_STATUSES = ["CLOSED", "RESOLVED", "CANCELLED"] as const;
@@ -22,8 +21,7 @@ type ModerateDenunciationBanUseCaseResponse = {
 export class ModerateDenunciationBanUseCase {
 	constructor(
 		private readonly denunciationsRepository: ModerationDenunciationsRepository,
-		private readonly banUserUseCase: BanUserUseCase,
-		private readonly revokeUserSessionsUseCase: RevokeUserSessionsUseCase,
+		private readonly authProvider: AuthProvider,
 	) {}
 
 	async execute({
@@ -64,7 +62,7 @@ export class ModerateDenunciationBanUseCase {
 			);
 		}
 
-		const user = await this.banUserUseCase.execute(
+		const user = await this.authProvider.banUser(
 			{
 				userId: denunciation.reported_user_id,
 				banReason,
@@ -73,8 +71,8 @@ export class ModerateDenunciationBanUseCase {
 			headers,
 		);
 
-		await this.revokeUserSessionsUseCase.execute(
-			denunciation.reported_user_id,
+		await this.authProvider.revokeUserSessions(
+			{ userId: denunciation.reported_user_id },
 			headers,
 		);
 
