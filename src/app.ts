@@ -28,7 +28,12 @@ import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
 
-const CLIENT_KEY_EXEMPT_PREFIXES = ["/health", "/docs", "/bullboard"];
+const CLIENT_KEY_EXEMPT_PREFIXES = [
+	"/health",
+	"/docs",
+	"/bullboard",
+	"/storage",
+];
 
 function isExemptFromClientKey(url: string): boolean {
 	return CLIENT_KEY_EXEMPT_PREFIXES.some((prefix) => url.startsWith(prefix));
