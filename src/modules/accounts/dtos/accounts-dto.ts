@@ -25,3 +25,9 @@ export type ChangePasswordInput = z.infer<typeof changePasswordSchema>;
 
 export type { User } from "../entities/user-entity.js";
 export { userSchema } from "../entities/user-entity.js";
+
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(changePasswordSchema, { id: "AccountsChangePassword" });
+z.globalRegistry.add(createUserSchema, { id: "AccountsCreateUser" });
+z.globalRegistry.add(userResponseSchema, { id: "AccountsUserResponse" });

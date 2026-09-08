@@ -195,3 +195,50 @@ export const companyProfileSchema = companySchema.extend({
 	services: companyServicesSchema,
 });
 export type CompanyProfile = z.infer<typeof companyProfileSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(businessHourTimeSlotInputSchema, {
+	id: "CompaniesBusinessHourTimeSlotUpsertInput",
+});
+z.globalRegistry.add(businessHourUpsertInputSchema, {
+	id: "CompaniesBusinessHourUpsertInput",
+});
+z.globalRegistry.add(companyBusinessHoursValidationSchema, {
+	id: "CompaniesCompanyBusinessHoursValidation",
+});
+z.globalRegistry.add(companyGeneralRegistrationValidationSchema, {
+	id: "CompaniesCompanyGeneralRegistrationValidation",
+});
+z.globalRegistry.add(companyProfileSchema, { id: "CompaniesCompanyProfile" });
+z.globalRegistry.add(companyServiceInputSchema, {
+	id: "CompaniesCompanyServiceUpsertInput",
+});
+z.globalRegistry.add(companyServicesValidationSchema, {
+	id: "CompaniesCompanyServicesValidation",
+});
+z.globalRegistry.add(companyWasteInputSchema, {
+	id: "CompaniesCompanyWasteUpsertInput",
+});
+z.globalRegistry.add(companyWastesValidationSchema, {
+	id: "CompaniesCompanyWastesValidation",
+});
+z.globalRegistry.add(createCompanyAddressSchema, {
+	id: "CompaniesCreateCompanyAddress",
+});
+z.globalRegistry.add(createCompanySchema, { id: "CompaniesCreateCompany" });
+z.globalRegistry.add(updateCompanyAddressSchema, {
+	id: "CompaniesUpdateCompanyAddress",
+});
+z.globalRegistry.add(updateCompanySchema, { id: "CompaniesUpdateCompany" });
+z.globalRegistry.add(upsertCompanyAddressSchema, {
+	id: "CompaniesUpsertCompanyAddress",
+});
+z.globalRegistry.add(upsertCompanyBusinessHoursSchema, {
+	id: "CompaniesUpsertCompanyBusinessHours",
+});
+z.globalRegistry.add(upsertCompanyServicesSchema, {
+	id: "CompaniesUpsertCompanyServices",
+});
+z.globalRegistry.add(upsertCompanyWastesSchema, {
+	id: "CompaniesUpsertCompanyWastes",
+});

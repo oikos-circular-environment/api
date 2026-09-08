@@ -30,3 +30,6 @@ export const companySchema = z.object({
 	updated_at: z.date(),
 });
 export type Company = z.infer<typeof companySchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(companySchema, { id: "CompaniesCompany" });

@@ -56,3 +56,16 @@ export {
 	profileImageSchema,
 	profileSchema,
 } from "../entities/profile-entity.js";
+
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(createAddressSchema, { id: "ProfilesCreateAddress" });
+z.globalRegistry.add(createProfileSchema, { id: "ProfilesCreateProfile" });
+z.globalRegistry.add(saveProfileImageSchema, {
+	id: "ProfilesSaveProfileImage",
+});
+z.globalRegistry.add(updateAddressSchema, { id: "ProfilesUpdateAddress" });
+z.globalRegistry.add(updateProfileSchema, { id: "ProfilesUpdateProfile" });
+z.globalRegistry.add(uploadProfileImageSchema, {
+	id: "ProfilesUploadProfileImage",
+});

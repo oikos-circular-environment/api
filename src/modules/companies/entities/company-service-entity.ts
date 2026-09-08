@@ -17,3 +17,7 @@ export const companyServiceSchema = z.object({
 export type CompanyService = z.infer<typeof companyServiceSchema>;
 
 export const companyServicesSchema = z.array(companyServiceSchema);
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(companyServiceSchema, { id: "CompaniesCompanyService" });
+z.globalRegistry.add(companyServicesSchema, { id: "CompaniesCompanyServices" });

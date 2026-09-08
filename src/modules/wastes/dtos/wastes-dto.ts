@@ -1,4 +1,4 @@
-import type z from "zod";
+import z from "zod";
 import { wasteCategorySchema } from "../entities/waste-entity.js";
 
 export const wasteCategorySummarySchema = wasteCategorySchema.omit({
@@ -18,3 +18,9 @@ export {
 	wasteCategorySchema,
 	wasteSubcategorySchema,
 } from "../entities/waste-entity.js";
+
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(wasteCategorySummarySchema, {
+	id: "WastesWasteCategorySummary",
+});

@@ -48,3 +48,12 @@ export const denunciationSchema = z.object({
 	updated_at: z.date(),
 });
 export type Denunciation = z.infer<typeof denunciationSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(denunciationAttachmentSchema, {
+	id: "DenunciationDenunciationAttachment",
+});
+z.globalRegistry.add(denunciationAttachmentTypeSchema, {
+	id: "DenunciationDenunciationAttachmentType",
+});
+z.globalRegistry.add(denunciationSchema, { id: "DenunciationDenunciation" });

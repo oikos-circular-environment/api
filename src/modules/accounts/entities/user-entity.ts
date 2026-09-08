@@ -14,3 +14,7 @@ export const userSchema = z.object({
 	deletion_job_id: z.string().nullable(),
 });
 export type User = z.infer<typeof userSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(passwordFieldSchema, { id: "AccountsPasswordField" });
+z.globalRegistry.add(userSchema, { id: "AccountsUser" });

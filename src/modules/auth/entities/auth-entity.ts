@@ -6,3 +6,6 @@ export const authUserSchema = z.object({
 	password: z.string().min(6, "Password must be at least 6 characters long"),
 });
 export type AuthUser = z.infer<typeof authUserSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(authUserSchema, { id: "AuthAuthUser" });

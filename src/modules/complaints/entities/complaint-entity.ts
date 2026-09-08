@@ -133,3 +133,28 @@ export const complaintVoteSchema = z.object({
 	updated_at: z.date(),
 });
 export type ComplaintVote = z.infer<typeof complaintVoteSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(complaintAttachmentSchema, {
+	id: "ComplaintsComplaintAttachment",
+});
+z.globalRegistry.add(complaintCaptureModeSchema, {
+	id: "ComplaintsComplaintCaptureMode",
+});
+z.globalRegistry.add(complaintCategorySchema, {
+	id: "ComplaintsComplaintCategory",
+});
+z.globalRegistry.add(complaintSchema, { id: "ComplaintsComplaint" });
+z.globalRegistry.add(complaintStatusSchema, {
+	id: "ComplaintsComplaintStatus",
+});
+z.globalRegistry.add(complaintVoteSchema, { id: "ComplaintsComplaintVote" });
+z.globalRegistry.add(complaintVoteTypeSchema, {
+	id: "ComplaintsComplaintVoteType",
+});
+z.globalRegistry.add(complaintsSchema, { id: "ComplaintsComplaints" });
+z.globalRegistry.add(geospatialSchema, { id: "ComplaintsGeospatial" });
+z.globalRegistry.add(resolutionAttachmentSchema, {
+	id: "ComplaintsResolutionAttachment",
+});
+z.globalRegistry.add(resolutionSchema, { id: "ComplaintsResolution" });

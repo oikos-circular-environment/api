@@ -10,6 +10,7 @@ import { fromNodeHeaders } from "better-auth/node";
 import Fastify, { type FastifyBaseLogger, type FastifyRequest } from "fastify";
 import {
 	jsonSchemaTransform,
+	jsonSchemaTransformObject,
 	serializerCompiler,
 	validatorCompiler,
 	type ZodTypeProvider,
@@ -83,6 +84,7 @@ app.register(fastifySwagger, {
 		security: [{ clientKeyAuth: [] }],
 	},
 	transform: jsonSchemaTransform,
+	transformObject: jsonSchemaTransformObject,
 });
 
 app.register(fastifyCookie);

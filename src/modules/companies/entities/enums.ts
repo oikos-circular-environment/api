@@ -33,3 +33,9 @@ export const measurementSchema = z.enum([
 	"ML",
 ]);
 export type Measurement = z.infer<typeof measurementSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(companyTypeSchema, { id: "CompaniesCompanyType" });
+z.globalRegistry.add(dayOfWeekSchema, { id: "CompaniesDayOfWeek" });
+z.globalRegistry.add(identityTypeSchema, { id: "CompaniesIdentityType" });
+z.globalRegistry.add(measurementSchema, { id: "CompaniesMeasurement" });

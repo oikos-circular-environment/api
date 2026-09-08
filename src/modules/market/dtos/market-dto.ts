@@ -93,3 +93,10 @@ export const marketResponseSchema = z.object({
 	next_cursor: z.string().nullable(),
 });
 export type MarketResponse = z.infer<typeof marketResponseSchema>;
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(marketCompanyRecordSchema, {
+	id: "MarketMarketCompanyRecord",
+});
+z.globalRegistry.add(marketCompanySchema, { id: "MarketMarketCompany" });
+z.globalRegistry.add(marketResponseSchema, { id: "MarketMarketResponse" });

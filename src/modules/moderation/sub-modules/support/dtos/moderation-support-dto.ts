@@ -18,3 +18,8 @@ export const moderateSupportBodySchema = z.object({
 	severity: moderationSeveritySchema.optional(),
 	reason: z.string().max(2000).optional(),
 });
+// Registers each schema above as a named OpenAPI component (Models tab in
+// Scalar) instead of inlined-per-operation JSON Schema.
+z.globalRegistry.add(moderateSupportBodySchema, {
+	id: "ModerationSubModulesSupportModerateSupportBody",
+});
