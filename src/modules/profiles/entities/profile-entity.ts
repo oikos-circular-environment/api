@@ -40,8 +40,5 @@ export const profileSchema = z.object({
 	profile_image: profileImageSchema.nullable(),
 });
 export type Profile = z.infer<typeof profileSchema>;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(addressSchema, { id: "ProfilesAddress" });
-z.globalRegistry.add(profileImageSchema, { id: "ProfilesProfileImage" });
-z.globalRegistry.add(profileSchema, { id: "ProfilesProfile" });
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(profileSchema, { id: "Profile" });

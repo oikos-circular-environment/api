@@ -17,8 +17,3 @@ export const companyValidationSchema = z.object({
 	services: z.boolean(),
 });
 export type CompanyValidation = z.infer<typeof companyValidationSchema>;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(companyValidationSchema, {
-	id: "CompaniesCompanyValidation",
-});

@@ -97,29 +97,3 @@ export const listUserSessionsAdminResponseSchema = z.object({
 export type ListUserSessionsAdminResponse = z.infer<
 	typeof listUserSessionsAdminResponseSchema
 >;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(accountSummarySchema, {
-	id: "ModerationSubModulesUsersAccountSummary",
-});
-z.globalRegistry.add(banUserAdminBodySchema, {
-	id: "ModerationSubModulesUsersBanUserAdminBody",
-});
-z.globalRegistry.add(createUserAdminBodySchema, {
-	id: "ModerationSubModulesUsersCreateUserAdminBody",
-});
-z.globalRegistry.add(getUserAdminResponseSchema, {
-	id: "ModerationSubModulesUsersGetUserAdminResponse",
-});
-z.globalRegistry.add(listUserSessionsAdminResponseSchema, {
-	id: "ModerationSubModulesUsersListUserSessionsAdminResponse",
-});
-z.globalRegistry.add(listUsersAdminResponseSchema, {
-	id: "ModerationSubModulesUsersListUsersAdminResponse",
-});
-z.globalRegistry.add(resetPasswordAdminBodySchema, {
-	id: "ModerationSubModulesUsersResetPasswordAdminBody",
-});
-z.globalRegistry.add(setRoleAdminBodySchema, {
-	id: "ModerationSubModulesUsersSetRoleAdminBody",
-});

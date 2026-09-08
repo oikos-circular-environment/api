@@ -46,13 +46,24 @@ export function createOpenApiDocumentMerger(
 		);
 		// biome-ignore lint/suspicious/noExplicitAny: merging two independently-typed OpenAPI documents
 		const swaggerDocument = fastifyApp.swagger() as Record<string, any>;
+		// Only response entities are registered in the Zod registry (see the
+		// `z.globalRegistry.add` calls next to each entity schema) — never
+		// request DTOs — so the Models tab reads like Better Auth's: one
+		// named model per domain entity, nothing else. fastify-type-provider-zod
+		// still emits a "<Name>Input" pair for each registered schema regardless;
+		// drop those, they're unreferenced by any request.
+		const appSchemas = Object.fromEntries(
+			Object.entries(swaggerDocument.components?.schemas ?? {}).filter(
+				([name]) => !name.endsWith("Input"),
+			),
+		);
 		mergedDocument = {
 			...swaggerDocument,
 			paths: { ...swaggerDocument.paths, ...prefixedAuthPaths },
 			components: {
 				...swaggerDocument.components,
 				schemas: {
-					...swaggerDocument.components?.schemas,
+					...appSchemas,
 					...authSchema.components?.schemas,
 				},
 				securitySchemes: {

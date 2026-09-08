@@ -27,6 +27,3 @@ export class AppError extends Error {
 		};
 	}
 }
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(appErrorSchema, { id: "CommonAppError" });

@@ -58,14 +58,5 @@ export const supportSchema = z.object({
 	updated_at: z.date(),
 });
 export type Support = z.infer<typeof supportSchema>;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(supportAttachmentSchema, {
-	id: "SupportSupportAttachment",
-});
-z.globalRegistry.add(supportEnvironmentSchema, {
-	id: "SupportSupportEnvironment",
-});
-z.globalRegistry.add(supportLastErrorSchema, { id: "SupportSupportLastError" });
-z.globalRegistry.add(supportSchema, { id: "SupportSupport" });
-z.globalRegistry.add(supportTypeSchema, { id: "SupportSupportType" });
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(supportSchema, { id: "Support" });

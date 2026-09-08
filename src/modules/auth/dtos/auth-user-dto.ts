@@ -96,27 +96,3 @@ export const verifyEmailV2ResponseSchema = z.object({
 	message: z.string(),
 });
 export type VerifyEmailV2Response = z.infer<typeof verifyEmailV2ResponseSchema>;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(authOrganizationSchema, { id: "AuthAuthOrganization" });
-z.globalRegistry.add(authUserSchema, { id: "AuthUserResponse" });
-z.globalRegistry.add(changePasswordV2Schema, { id: "AuthChangePasswordV2" });
-z.globalRegistry.add(forgotPasswordV2ResponseSchema, {
-	id: "AuthForgotPasswordV2Response",
-});
-z.globalRegistry.add(forgotPasswordV2Schema, { id: "AuthForgotPasswordV2" });
-z.globalRegistry.add(resetPasswordV2Schema, { id: "AuthResetPasswordV2" });
-z.globalRegistry.add(sendVerificationEmailV2ResponseSchema, {
-	id: "AuthSendVerificationEmailV2Response",
-});
-z.globalRegistry.add(sendVerificationEmailV2Schema, {
-	id: "AuthSendVerificationEmailV2",
-});
-z.globalRegistry.add(sessionV2ResponseSchema, { id: "AuthSessionV2Response" });
-z.globalRegistry.add(signInV2ResponseSchema, { id: "AuthSignInV2Response" });
-z.globalRegistry.add(signInV2Schema, { id: "AuthSignInV2" });
-z.globalRegistry.add(signUpV2Schema, { id: "AuthSignUpV2" });
-z.globalRegistry.add(verifyEmailV2ResponseSchema, {
-	id: "AuthVerifyEmailV2Response",
-});
-z.globalRegistry.add(verifyEmailV2Schema, { id: "AuthVerifyEmailV2" });

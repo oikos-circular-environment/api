@@ -29,9 +29,5 @@ export const wasteCategorySchema = z.object({
 	subcategories: z.array(wasteSubcategorySchema),
 });
 export type WasteCategory = z.infer<typeof wasteCategorySchema>;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(hazardLevelSchema, { id: "WastesHazardLevel" });
-z.globalRegistry.add(subcategoryTypeSchema, { id: "WastesSubcategoryType" });
-z.globalRegistry.add(wasteCategorySchema, { id: "WastesWasteCategory" });
-z.globalRegistry.add(wasteSubcategorySchema, { id: "WastesWasteSubcategory" });
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(wasteCategorySchema, { id: "WasteCategory" });

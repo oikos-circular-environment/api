@@ -98,17 +98,3 @@ export const getOwnQuerySchema = z.object({
 	limit: z.coerce.number().int().min(1).max(100).default(20),
 });
 export type GetOwnQuery = z.infer<typeof getOwnQuerySchema>;
-// Registers each schema above as a named OpenAPI component (Models tab in
-// Scalar) instead of inlined-per-operation JSON Schema.
-z.globalRegistry.add(createSupportBodySchema, {
-	id: "SupportCreateSupportBody",
-});
-z.globalRegistry.add(paginatedSupportsSchema, {
-	id: "SupportPaginatedSupports",
-});
-z.globalRegistry.add(saveSupportAttachmentSchema, {
-	id: "SupportSaveSupportAttachment",
-});
-z.globalRegistry.add(updateOwnSupportBodySchema, {
-	id: "SupportUpdateOwnSupportBody",
-});
