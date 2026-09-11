@@ -58,7 +58,7 @@ describe("submit-resolution", () => {
 		}
 	});
 
-	it("204 — creates resolution and persists to DB", async () => {
+	it("201 — creates resolution and persists to DB", async () => {
 		const owner = await createUser();
 		const resolver = await createUser();
 		const complaintId = await createComplaint(owner.id);
@@ -72,13 +72,15 @@ describe("submit-resolution", () => {
 			payload: { description: "The problem was fixed by the city hall." },
 		});
 
-		expect(res.statusCode).toBe(204);
+		expect(res.statusCode).toBe(201);
+		expect(res.json().id).toBeDefined();
 
 		const inDb = await prisma.complaintResolution.findFirst({
 			where: { complaint_id: complaintId, resolver_user_id: resolver.id },
 		});
 		expect(inDb).not.toBeNull();
 		expect(inDb?.description).toBe("The problem was fixed by the city hall.");
+		expect(inDb?.id).toBe(res.json().id);
 	});
 
 	it("422 — RESOLUTION_ALREADY_EXISTS when same user submits twice", async () => {

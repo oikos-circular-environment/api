@@ -105,7 +105,7 @@ export interface ComplaintsRepository {
 		userId: string,
 		complaintId: string,
 		data: SubmitResolution,
-	): Promise<void>;
+	): Promise<{ id: string }>;
 
 	updateResolution(
 		userId: string,
@@ -113,7 +113,7 @@ export interface ComplaintsRepository {
 		data: SubmitResolution,
 	): Promise<void>;
 
-	deleteResolutionByUser(userId: string, complaintId: string): Promise<void>;
+	deleteResolutionById(resolutionId: string): Promise<void>;
 
 	deleteComplaintAttachment(
 		userId: string,
