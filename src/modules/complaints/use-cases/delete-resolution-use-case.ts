@@ -1,12 +1,12 @@
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { ComplaintsRepository } from "@/modules/complaints/repositories/complaints-repository.js";
 
-type Request = { userId: string; complaintId: string };
+type Request = { userId: string; complaintId: string; resolutionId: string };
 
 export class DeleteResolutionUseCase {
 	constructor(private readonly complaintsRepository: ComplaintsRepository) {}
 
-	async execute({ userId, complaintId }: Request): Promise<void> {
+	async execute({ userId, complaintId, resolutionId }: Request): Promise<void> {
 		const complaint =
 			await this.complaintsRepository.findPublicComplaintById(complaintId);
 
@@ -19,15 +19,16 @@ export class DeleteResolutionUseCase {
 		}
 
 		const resolution =
-			await this.complaintsRepository.findResolutionByUserAndComplaint(
-				userId,
-				complaintId,
-			);
+			await this.complaintsRepository.findResolutionById(resolutionId);
 
-		if (!resolution) {
+		if (
+			!resolution ||
+			resolution.complaint_id !== complaintId ||
+			resolution.resolver_user_id !== userId
+		) {
 			throw new AppError("Resolution not found", "RESOLUTION_NOT_FOUND", 404);
 		}
 
-		await this.complaintsRepository.deleteResolutionByUser(userId, complaintId);
+		await this.complaintsRepository.deleteResolutionById(resolutionId);
 	}
 }

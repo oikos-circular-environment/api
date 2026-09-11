@@ -5,6 +5,7 @@ import type { ComplaintsRepository } from "@/modules/complaints/repositories/com
 type Request = {
 	userId: string;
 	complaintId: string;
+	resolutionId: string;
 	attachmentId: string;
 };
 
@@ -14,14 +15,20 @@ export class DeleteResolutionAttachmentUseCase {
 		private readonly storageProvider: StorageProvider,
 	) {}
 
-	async execute({ userId, complaintId, attachmentId }: Request): Promise<void> {
+	async execute({
+		userId,
+		complaintId,
+		resolutionId,
+		attachmentId,
+	}: Request): Promise<void> {
 		const resolution =
-			await this.complaintsRepository.findResolutionByUserAndComplaint(
-				userId,
-				complaintId,
-			);
+			await this.complaintsRepository.findResolutionById(resolutionId);
 
-		if (!resolution) {
+		if (
+			!resolution ||
+			resolution.complaint_id !== complaintId ||
+			resolution.resolver_user_id !== userId
+		) {
 			throw new AppError("Resolution not found", "RESOLUTION_NOT_FOUND", 404);
 		}
 
@@ -30,7 +37,7 @@ export class DeleteResolutionAttachmentUseCase {
 				complaintId,
 				userId,
 			);
-		const userResolution = resolutions.find((r) => r.id === resolution.id);
+		const userResolution = resolutions.find((r) => r.id === resolutionId);
 		const attachment = userResolution?.attachments.find(
 			(a) => a.id === attachmentId,
 		);
@@ -44,12 +51,12 @@ export class DeleteResolutionAttachmentUseCase {
 		}
 
 		await this.storageProvider.deleteFile(
-			`complaint-resolutions/${resolution.id}/${attachmentId}`,
+			`complaint-resolutions/${resolutionId}/${attachmentId}`,
 		);
 
 		await this.complaintsRepository.deleteResolutionAttachment(
 			userId,
-			resolution.id,
+			resolutionId,
 			attachmentId,
 		);
 	}

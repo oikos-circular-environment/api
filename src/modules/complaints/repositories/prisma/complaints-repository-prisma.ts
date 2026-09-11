@@ -617,15 +617,17 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		userId: string,
 		complaintId: string,
 		data: SubmitResolution,
-	): Promise<void> {
-		await prisma.complaintResolution.create({
+	): Promise<{ id: string }> {
+		const resolution = await prisma.complaintResolution.create({
 			data: {
 				complaint_id: complaintId,
 				resolver_user_id: userId,
 				description: data.description,
 				company_id: data.company_id ?? null,
 			},
+			select: { id: true },
 		});
+		return resolution;
 	}
 
 	async updateResolution(
@@ -642,12 +644,9 @@ export class PrismaComplaintsRepository implements ComplaintsRepository {
 		});
 	}
 
-	async deleteResolutionByUser(
-		userId: string,
-		complaintId: string,
-	): Promise<void> {
-		await prisma.complaintResolution.deleteMany({
-			where: { complaint_id: complaintId, resolver_user_id: userId },
+	async deleteResolutionById(resolutionId: string): Promise<void> {
+		await prisma.complaintResolution.delete({
+			where: { id: resolutionId },
 		});
 	}
 

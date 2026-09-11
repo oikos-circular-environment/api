@@ -509,7 +509,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		userId: string,
 		complaintId: string,
 		data: SubmitResolution,
-	): Promise<void> {
+	): Promise<{ id: string }> {
 		const resolution: ResolutionEntity = {
 			id: randomUUID(),
 			complaint_id: complaintId,
@@ -520,6 +520,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			updated_at: new Date(),
 		};
 		this.resolutions.push(resolution);
+		return { id: resolution.id };
 	}
 
 	async updateResolution(
@@ -537,15 +538,9 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		}
 	}
 
-	async deleteResolutionByUser(
-		userId: string,
-		complaintId: string,
-	): Promise<void> {
-		const index = this.resolutions.findIndex(
-			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
-		);
+	async deleteResolutionById(resolutionId: string): Promise<void> {
+		const index = this.resolutions.findIndex((r) => r.id === resolutionId);
 		if (index !== -1) {
-			const resolutionId = this.resolutions[index]?.id;
 			this.resolutions.splice(index, 1);
 			this.resolutionAttachments = this.resolutionAttachments.filter(
 				(a) => a.resolution_id !== resolutionId,

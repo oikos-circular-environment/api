@@ -80,7 +80,7 @@ describe("delete-resolution", () => {
 
 		const res = await app.inject({
 			method: "DELETE",
-			url: `/v1/complaints/${complaintId}/resolutions`,
+			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 			headers: {
 				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
@@ -98,11 +98,11 @@ describe("delete-resolution", () => {
 		const owner = await createUser();
 		const resolver = await createUser();
 		const complaintId = await createComplaint(owner.id);
-		await createResolution(resolver.id, complaintId);
+		const resolutionId = await createResolution(resolver.id, complaintId);
 
 		const res = await app.inject({
 			method: "DELETE",
-			url: `/v1/complaints/${complaintId}/resolutions`,
+			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 			headers: {
 				authorization: `Bearer ${await bearerToken(owner.id, owner.email)}`,
 			},
@@ -115,7 +115,7 @@ describe("delete-resolution", () => {
 	it("422 — COMPLAINT_CLOSED when complaint is RESOLVED", async () => {
 		const resolver = await createUser();
 		const complaintId = await createComplaint(resolver.id);
-		await createResolution(resolver.id, complaintId);
+		const resolutionId = await createResolution(resolver.id, complaintId);
 		await prisma.complaint.update({
 			where: { id: complaintId },
 			data: { status: "RESOLVED" },
@@ -123,7 +123,7 @@ describe("delete-resolution", () => {
 
 		const res = await app.inject({
 			method: "DELETE",
-			url: `/v1/complaints/${complaintId}/resolutions`,
+			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 			headers: {
 				authorization: `Bearer ${await bearerToken(resolver.id, resolver.email)}`,
 			},
@@ -136,11 +136,11 @@ describe("delete-resolution", () => {
 	it("401 — missing authorization token", async () => {
 		const resolver = await createUser();
 		const complaintId = await createComplaint(resolver.id);
-		await createResolution(resolver.id, complaintId);
+		const resolutionId = await createResolution(resolver.id, complaintId);
 
 		const res = await app.inject({
 			method: "DELETE",
-			url: `/v1/complaints/${complaintId}/resolutions`,
+			url: `/v1/complaints/${complaintId}/resolutions/${resolutionId}`,
 		});
 
 		expect(res.statusCode).toBe(401);

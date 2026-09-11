@@ -439,7 +439,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				params: z.object({ id: z.uuid() }),
 				body: submitResolutionSchema,
 				response: {
-					204: z.undefined(),
+					201: z.object({ id: z.uuid() }),
 					401: appErrorSchema,
 					404: appErrorSchema,
 					422: appErrorSchema,
@@ -448,12 +448,12 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 		},
 		async (request, reply) => {
 			const userId = requireAuthUser(request).id;
-			await submitResolutionUseCase.execute({
+			const resolution = await submitResolutionUseCase.execute({
 				userId,
 				complaintId: request.params.id,
 				data: request.body,
 			});
-			return reply.status(204).send();
+			return reply.status(201).send({ id: resolution.id });
 		},
 	);
 
@@ -486,14 +486,14 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 
 	typedApp.delete(
-		"/complaints/:id/resolutions",
+		"/complaints/:id/resolutions/:resolutionId",
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Delete my resolution",
 				description:
-					"Deletes the authenticated user's resolution for this complaint.",
-				params: z.object({ id: z.uuid() }),
+					"Deletes one of the authenticated user's resolutions for this complaint.",
+				params: z.object({ id: z.uuid(), resolutionId: z.uuid() }),
 				response: {
 					204: z.undefined(),
 					401: appErrorSchema,
@@ -507,13 +507,14 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			await deleteResolutionUseCase.execute({
 				userId,
 				complaintId: request.params.id,
+				resolutionId: request.params.resolutionId,
 			});
 			return reply.status(204).send();
 		},
 	);
 
 	typedApp.post(
-		"/complaints/:id/resolutions/attachments",
+		"/complaints/:id/resolutions/:resolutionId/attachments",
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
@@ -521,7 +522,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 				description:
 					"Uploads an image to the authenticated user's resolution for this complaint.",
 				consumes: ["multipart/form-data"],
-				params: z.object({ id: z.uuid() }),
+				params: z.object({ id: z.uuid(), resolutionId: z.uuid() }),
 				response: {
 					200: z.object({ attachment: resolutionAttachmentSchema }),
 					400: appErrorSchema,
@@ -546,6 +547,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			const attachment = await addResolutionAttachmentUseCase.execute({
 				userId,
 				complaintId: request.params.id,
+				resolutionId: request.params.resolutionId,
 				file: {
 					fileName: file.filename,
 					mimeType: file.mimetype,
@@ -558,12 +560,16 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 	);
 
 	typedApp.delete(
-		"/complaints/:id/resolutions/attachments/:attachmentId",
+		"/complaints/:id/resolutions/:resolutionId/attachments/:attachmentId",
 		{
 			schema: withBearerAuth({
 				tags: [COMPLAINTS_RESOLUTIONS_TAG],
 				summary: "Delete resolution attachment",
-				params: z.object({ id: z.uuid(), attachmentId: z.uuid() }),
+				params: z.object({
+					id: z.uuid(),
+					resolutionId: z.uuid(),
+					attachmentId: z.uuid(),
+				}),
 				response: {
 					204: z.undefined(),
 					401: appErrorSchema,
@@ -576,6 +582,7 @@ export async function complaintRoutes(app: FastifyInstance): Promise<void> {
 			await deleteResolutionAttachmentUseCase.execute({
 				userId,
 				complaintId: request.params.id,
+				resolutionId: request.params.resolutionId,
 				attachmentId: request.params.attachmentId,
 			});
 			return reply.status(204).send();

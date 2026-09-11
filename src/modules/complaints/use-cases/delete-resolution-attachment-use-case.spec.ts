@@ -29,7 +29,9 @@ describe("delete-resolution-attachment-use-case", () => {
 				geospatial: makeGeospatial(),
 			},
 		});
-		await new SubmitResolutionUseCase(repo).execute({
+		const { id: resolutionId } = await new SubmitResolutionUseCase(
+			repo,
+		).execute({
 			userId: userBId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
@@ -40,6 +42,7 @@ describe("delete-resolution-attachment-use-case", () => {
 		).execute({
 			userId: userBId,
 			complaintId: complaint.id,
+			resolutionId,
 			file: validFile,
 		});
 		const sut = new DeleteResolutionAttachmentUseCase(repo, storage);
@@ -47,6 +50,7 @@ describe("delete-resolution-attachment-use-case", () => {
 		await sut.execute({
 			userId: userBId,
 			complaintId: complaint.id,
+			resolutionId,
 			attachmentId: attachment.id,
 		});
 
@@ -73,6 +77,43 @@ describe("delete-resolution-attachment-use-case", () => {
 			sut.execute({
 				userId: userBId,
 				complaintId: complaint.id,
+				resolutionId: randomUUID(),
+				attachmentId: "any-id",
+			}),
+		).rejects.toThrow(
+			expect.objectContaining({ code: "RESOLUTION_NOT_FOUND" }),
+		);
+	});
+
+	it("throws 404 when resolution belongs to another user", async () => {
+		const userAId = randomUUID();
+		const userBId = randomUUID();
+		const userCId = randomUUID();
+		const repo = new InMemoryComplaintsRepository();
+		const storage = new InMemoryStorageProvider();
+		const complaint = await new CreateComplaintUseCase(repo).execute({
+			userId: userAId,
+			data: {
+				date: new Date(),
+				waste_category_ids: ["waste-category-id"],
+				observations: null,
+				geospatial: makeGeospatial(),
+			},
+		});
+		const { id: resolutionId } = await new SubmitResolutionUseCase(
+			repo,
+		).execute({
+			userId: userBId,
+			complaintId: complaint.id,
+			data: { description: "Resolvido" },
+		});
+		const sut = new DeleteResolutionAttachmentUseCase(repo, storage);
+
+		await expect(
+			sut.execute({
+				userId: userCId,
+				complaintId: complaint.id,
+				resolutionId,
 				attachmentId: "any-id",
 			}),
 		).rejects.toThrow(
@@ -94,7 +135,9 @@ describe("delete-resolution-attachment-use-case", () => {
 				geospatial: makeGeospatial(),
 			},
 		});
-		await new SubmitResolutionUseCase(repo).execute({
+		const { id: resolutionId } = await new SubmitResolutionUseCase(
+			repo,
+		).execute({
 			userId: userBId,
 			complaintId: complaint.id,
 			data: { description: "Resolvido" },
@@ -105,6 +148,7 @@ describe("delete-resolution-attachment-use-case", () => {
 			sut.execute({
 				userId: userBId,
 				complaintId: complaint.id,
+				resolutionId,
 				attachmentId: "non-existent-attachment",
 			}),
 		).rejects.toThrow(
