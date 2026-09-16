@@ -3,7 +3,9 @@ import { PrismaPg } from "@prisma/adapter-pg";
 import { env } from "../../src/env/index.js";
 import { PrismaClient } from "../../src/generated/prisma/client.js";
 import { seedGeneratedCityData } from "./data-generated.js";
+import { seedDenunciation } from "./denunciation.seed.js";
 import { seedFixedUsers } from "./fixed-users.seed.js";
+import { seedSupport } from "./support.seed.js";
 import { seedWasteCategories } from "./waste-categories.seed.js";
 
 const adapter = new PrismaPg({ connectionString: env.DATABASE_URL });
@@ -17,6 +19,8 @@ async function seed() {
 	// já no banco — sem isso, cai para CITIZEN_ONLY (comportamento correto,
 	// não é erro).
 	await seedGeneratedCityData(prisma);
+	await seedSupport(prisma);
+	await seedDenunciation(prisma);
 }
 
 seed()
