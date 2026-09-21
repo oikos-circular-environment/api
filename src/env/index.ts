@@ -8,7 +8,6 @@ const envSchema = z
 			.enum(["trace", "debug", "info", "warn", "error", "fatal"])
 			.default("info"),
 		PRISMA_QUERY_LOG: z.coerce.boolean().default(false),
-		JWT_SECRET: z.string(),
 		DATABASE_URL: z.string(),
 
 		STORAGE_PROVIDER: z.enum(["minio", "supabase"]).default("minio"),

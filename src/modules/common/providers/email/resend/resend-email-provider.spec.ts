@@ -16,7 +16,6 @@ describe("resend-email-provider", () => {
 			"EMAIL_PROVIDER",
 			"RESEND_API_KEY",
 			"RESEND_FROM_EMAIL",
-			"JWT_SECRET",
 			"DATABASE_URL",
 			"BETTER_AUTH_SECRET",
 			"REDIS_URL",
@@ -34,7 +33,6 @@ describe("resend-email-provider", () => {
 		process.env.EMAIL_PROVIDER = "resend";
 		process.env.RESEND_API_KEY = "test-api-key";
 		process.env.RESEND_FROM_EMAIL = "from@example.com";
-		process.env.JWT_SECRET = "test-jwt-secret";
 		process.env.DATABASE_URL = "postgresql://test:test@localhost:5432/test";
 		process.env.BETTER_AUTH_SECRET = "test-better-auth-secret-0123456789abcdef";
 		process.env.REDIS_URL = "redis://localhost:6379/0";
