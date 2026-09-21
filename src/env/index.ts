@@ -198,12 +198,20 @@ export function getMinioConfig(): {
 	};
 }
 
-export function getCorsAllowedOrigins(): string[] {
-	return (
+const LOCAL_ORIGIN_PATTERN =
+	/^https?:\/\/(localhost|local-oikos|local-api)(:\d+)?$/;
+
+export function getCorsAllowedOrigins(): (string | RegExp)[] {
+	const configured =
 		env.CORS_ALLOWED_ORIGINS?.split(",")
 			.map((origin) => origin.trim())
-			.filter(Boolean) ?? []
-	);
+			.filter(Boolean) ?? [];
+
+	if (env.NODE_ENV === "production") {
+		return configured;
+	}
+
+	return [...configured, LOCAL_ORIGIN_PATTERN];
 }
 
 export function getSupabaseConfig(): {
