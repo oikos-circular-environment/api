@@ -8,7 +8,6 @@ const envSchema = z
 			.enum(["trace", "debug", "info", "warn", "error", "fatal"])
 			.default("info"),
 		PRISMA_QUERY_LOG: z.coerce.boolean().default(false),
-		JWT_SECRET: z.string(),
 		DATABASE_URL: z.string(),
 
 		STORAGE_PROVIDER: z.enum(["minio", "supabase"]).default("minio"),
@@ -148,6 +147,24 @@ const envSchema = z
 				});
 			}
 		}
+
+		if (data.NODE_ENV === "production") {
+			if (data.WEB_APP_URL.includes("localhost")) {
+				ctx.addIssue({
+					code: "custom",
+					message: "WEB_APP_URL must not be localhost when NODE_ENV=production",
+					path: ["WEB_APP_URL"],
+				});
+			}
+			if (data.APP_PUBLIC_URL.includes("localhost")) {
+				ctx.addIssue({
+					code: "custom",
+					message:
+						"APP_PUBLIC_URL must not be localhost when NODE_ENV=production",
+					path: ["APP_PUBLIC_URL"],
+				});
+			}
+		}
 	});
 
 const _env = envSchema.safeParse(process.env);
@@ -180,12 +197,20 @@ export function getMinioConfig(): {
 	};
 }
 
-export function getCorsAllowedOrigins(): string[] {
-	return (
+const LOCAL_ORIGIN_PATTERN =
+	/^https?:\/\/(localhost|local-oikos|local-api)(:\d+)?$/;
+
+export function getCorsAllowedOrigins(): (string | RegExp)[] {
+	const configured =
 		env.CORS_ALLOWED_ORIGINS?.split(",")
 			.map((origin) => origin.trim())
-			.filter(Boolean) ?? []
-	);
+			.filter(Boolean) ?? [];
+
+	if (env.NODE_ENV === "production") {
+		return configured;
+	}
+
+	return [...configured, LOCAL_ORIGIN_PATTERN];
 }
 
 export function getSupabaseConfig(): {

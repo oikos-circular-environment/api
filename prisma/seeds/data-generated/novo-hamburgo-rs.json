@@ -1,0 +1,5769 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:52:39.651Z",
+		"city": "Novo Hamburgo",
+		"state_code": "RS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Jessica Larson",
+			"display_name": "Jessica",
+			"phone": "(02) 91036-7366",
+			"email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "94609-059",
+				"street": "Pine Grove",
+				"number": "534",
+				"complement": null,
+				"district": "Essex",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.767845,
+				"longitude": -51.098687
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJMYzXEgBpGZURYO1hixVkHZE",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Rafa Sucatas",
+					"business_name": "Rafa Sucatas",
+					"identity": "57816808000169",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rafa.sucatas@grubby-teammate.biz",
+					"phones": ["(56) 90117-8624"],
+					"website": null,
+					"started_activity_in": "2024-12-22T21:27:52.608Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "R. Olga Benário Prestes",
+						"number": "282",
+						"complement": null,
+						"district": "Santos Dumont, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.746397899999998,
+						"longitude": -51.1394936
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "00:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.78,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 514.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.2,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 251.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 923.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.75,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 518.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.61,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 348.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 256.94,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 91.96,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 210.5,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 164.93,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 139.97,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 125.33,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJe3BP3jVpGZURB2AKDJuDSBo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ecofab Reciclagem",
+					"business_name": "Ecofab Reciclagem",
+					"identity": "85040090000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ecofab.reciclagem@lively-aftermath.name",
+					"phones": ["(51) 99791-9785"],
+					"website": null,
+					"started_activity_in": "2023-01-27T15:31:41.806Z",
+					"address": {
+						"zip_code": "93025-360",
+						"street": "R. Orquídeas",
+						"number": "05",
+						"complement": null,
+						"district": "Vicentina, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7710123,
+						"longitude": -51.1727436
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.73,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 91
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.85,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 180.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.72,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 334.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.89,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 877.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 134.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.18,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 839.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 197.04,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 53.48,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 168.43,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 97.17,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-29T11:25:58.824Z",
+					"observations": "Triumphus vitium deduco suasoria.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.770044,
+								"longitude": -51.025511,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788302707982
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Washington County",
+							"streetNumber": "205",
+							"street": "Somerset Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19580294",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Farm Close, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"description": "Circumvenio vilitas stipes qui urbanus provident amor delicate delinquo cattus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-12T16:53:55.006Z",
+					"observations": "Decet dapifer accusamus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.80553,
+								"longitude": -50.987727,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308061273
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Calhoun County",
+							"streetNumber": "9163",
+							"street": "Blick Orchard",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10309894",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lime Grove, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-09T08:02:49.353Z",
+					"observations": "Neque vel beatae dapifer arguo bellicus casus cresco suus cogito.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.793272,
+								"longitude": -51.10981,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344154954
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Scott County",
+							"streetNumber": "43699",
+							"street": "E Franklin Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80660150",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bert Coves, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Miguel Zieme",
+			"display_name": "Miguel",
+			"phone": "(69) 97945-3553",
+			"email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "56061-850",
+				"street": "York Street",
+				"number": "732",
+				"complement": null,
+				"district": "Hampshire",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.699199,
+				"longitude": -51.08529
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJL6m62UFpGZURIbg0pg--D8s",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem da Antena",
+					"business_name": "Reciclagem da Antena",
+					"identity": "68554869000111",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.da.antena@naughty-fit.org",
+					"phones": ["(55) 99605-2141"],
+					"website": null,
+					"started_activity_in": "2024-06-28T17:12:15.944Z",
+					"address": {
+						"zip_code": "93130-300",
+						"street": "R. Farrapos",
+						"number": "140",
+						"complement": null,
+						"district": "Campina, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.748709400000003,
+						"longitude": -51.1565994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.09,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 353.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 334.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.78,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 764
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.15,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 557.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 929.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.27,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 578.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 63.51,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 86.68,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ8e82id1BGZUR_icJsMHf9uo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem garcia",
+					"business_name": "Reciclagem garcia",
+					"identity": "09897585000169",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.garcia@victorious-hawk.info",
+					"phones": ["(51) 99724-6272"],
+					"website": null,
+					"started_activity_in": "2022-04-09T12:31:37.427Z",
+					"address": {
+						"zip_code": "93544-350",
+						"street": "R. Assis Barreto da Costa",
+						"number": "324",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.699353799999997,
+						"longitude": -51.0903412
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.06,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 523
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 686.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.15,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 114.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.05,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 894.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.89,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 996.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 57.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 95.16,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 170.59,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 182.41,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-18T17:07:41.774Z",
+					"observations": "Adfectus cruentus villa ars ocer cursus curvo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.827299,
+								"longitude": -50.982573,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306909828
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "County Londonderry",
+							"streetNumber": "8400",
+							"street": "W Division Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56033944",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Murazik Canyon, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Borracha / Pneus",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Alexzander Jerde",
+			"display_name": "Alexzander",
+			"phone": "(30) 90489-5852",
+			"email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "93911-524",
+				"street": "Lincoln Road",
+				"number": "561",
+				"complement": null,
+				"district": "Berkshire",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.740107,
+				"longitude": -50.955337
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJwTc2sYlDGZUR5UU0DLKowvY",
+						"rating": 4.8,
+						"types": ["corporate_office", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Silva",
+					"business_name": "Reciclagem Silva",
+					"identity": "26958509000135",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.silva@utter-rim.biz",
+					"phones": ["(51) 99839-8079"],
+					"website": "http://globo.com/",
+					"started_activity_in": "2026-08-30T21:50:03.721Z",
+					"address": {
+						"zip_code": "93537-050",
+						"street": "R. Ver. Carlos Emílio Koling",
+						"number": "393",
+						"complement": null,
+						"district": "São Jorge, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.6719875,
+						"longitude": -51.098476999999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 27.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.45,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 508.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.61,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 622.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.64,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 854.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.2,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 933.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 715.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 297.8,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 52.08,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 126.67,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJU5zJQ15DGZUROHRCv4buUIo",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JL Reciclagem NH",
+					"business_name": "JL Reciclagem NH",
+					"identity": "46079471000138",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jl.reciclagem.nh@impractical-meander.info",
+					"phones": ["(51) 99493-7304"],
+					"website": null,
+					"started_activity_in": "2021-03-24T23:12:39.409Z",
+					"address": {
+						"zip_code": "93415-530",
+						"street": "R. Guilherme Growermann",
+						"number": "760",
+						"complement": null,
+						"district": "Rondônia, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.703869299999997,
+						"longitude": -51.1171625
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 944.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.96,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 502.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 797.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.48,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 295.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 81.01,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 109.02,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 242.72,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 108.6,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 143.38,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-02T09:34:39.504Z",
+					"observations": "Surculus crebro tersus apud excepturi balbus harum aut calcar caput.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.786583,
+								"longitude": -51.041177,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788336517854
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Strathclyde",
+							"streetNumber": "61377",
+							"street": "W Center Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79318331",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Windermere Road, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Vidro", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-02T23:30:47.413Z",
+					"observations": "Assumenda delectus et constans cras at tabella comptus charisma similique.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.710187,
+								"longitude": -51.175225,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319553828
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "North Yorkshire",
+							"streetNumber": "44717",
+							"street": "Ryan Prairie",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "11504828",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Blair Underpass, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"description": "Supra defero aer pariatur cibus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Paul Ruecker",
+			"display_name": "Paul",
+			"phone": "(50) 92155-8974",
+			"email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "61946-658",
+				"street": "Long Lane",
+				"number": "50324",
+				"complement": null,
+				"district": "Oxfordshire",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.646159,
+				"longitude": -50.94491
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJq4vGzaRDGZURc7nlb1xREsU",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem - Ebenezer",
+					"business_name": "Reciclagem - Ebenezer",
+					"identity": "30400129000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.ebenezer@profuse-hydrant.net",
+					"phones": ["(51) 99324-4098"],
+					"website": null,
+					"started_activity_in": "2025-10-22T14:18:33.556Z",
+					"address": {
+						"zip_code": "93113-220",
+						"street": "Av. Arnaldo Pereira da Silva",
+						"number": "198",
+						"complement": null,
+						"district": "Santos Dumont, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7364152,
+						"longitude": -51.1488537
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.26,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 269.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.2,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 39.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.4,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 245.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 851
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 435.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 753.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 126.99,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 244.54,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 172.18,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 185.53,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 164.89,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJDf3QA9xDGZUR0CzDprkrb6c",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "3R Reciclagem de Residuos Ltda",
+					"business_name": "3R Reciclagem de Residuos Ltda",
+					"identity": "28649670000152",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "3r.reciclagem.de.residuos.ltda@separate-halt.info",
+					"phones": ["(51) 99946-6650"],
+					"website": null,
+					"started_activity_in": "2023-07-04T05:49:02.994Z",
+					"address": {
+						"zip_code": "93546-000",
+						"street": "R. Bartolomeu de Gusmão",
+						"number": "2110",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.6949597,
+						"longitude": -51.0994265
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:15"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.63,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 776.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.83,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 965.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.22,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 276
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.62,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 49.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.56,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 163.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 56.28,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 96.72,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 277.58,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 171.3,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 220.07,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-23T13:35:59.049Z",
+					"observations": "Voluptatum vobis anser amplitudo paulatim crustulum trado ara.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.773038,
+								"longitude": -51.121377,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788339461336
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Mid Glamorgan",
+							"streetNumber": "801",
+							"street": "Hermiston Way",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39753788",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ron Motorway, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Construção Civil e Demolição (RCD)",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Patricia Brakus",
+			"display_name": "Patricia",
+			"phone": "(81) 95443-3451",
+			"email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "06338-240",
+				"street": "N Elm Street",
+				"number": "59084",
+				"complement": null,
+				"district": "Logan County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.774098,
+				"longitude": -51.057879
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJmzXiH7ZDGZURy_nnlJxep0s",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ADM Recicla - Compra e Venda de Plásticos",
+					"business_name": "ADM Recicla - Compra e Venda de Plásticos",
+					"identity": "77714494000109",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "adm.recicla.compra.e.venda.de.plasticos@giving-pressure.name",
+					"phones": ["(51) 99645-1441"],
+					"website": null,
+					"started_activity_in": "2017-02-25T15:02:41.246Z",
+					"address": {
+						"zip_code": "93534-620",
+						"street": "R. Jaboti",
+						"number": "541",
+						"complement": null,
+						"district": "São Jorge, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.666922299999996,
+						"longitude": -51.1029966
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.35,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 878.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 518.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.47,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 297.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 261.92,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 299.81,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 102.28,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 185.3,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 120.64,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 168.78,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ_5OyyGxpGZURqzUZynJz4Ns",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Metais Fuhr",
+					"business_name": "Metais Fuhr",
+					"identity": "21287557000125",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "metais.fuhr@concrete-fibre.biz",
+					"phones": ["(51) 98255-8703"],
+					"website": null,
+					"started_activity_in": "2023-06-12T12:35:20.783Z",
+					"address": {
+						"zip_code": "93130-060",
+						"street": "R. Jacob Blauth Netto",
+						"number": "136",
+						"complement": null,
+						"district": "Campina, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.746738299999997,
+						"longitude": -51.152145000000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.38,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1000
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.3,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 827.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.2,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 185.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.05,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 643.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 210.72,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 149.89,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 146.81,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 237.21,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 213.42,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 110.27,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-24T13:21:31.408Z",
+					"observations": "Sordeo depopulo neque.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.762678,
+								"longitude": -51.10697,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287776557
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Highlands and Islands",
+							"streetNumber": "5396",
+							"street": "Parisian Hills",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90530356",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maybell Drive, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-lindgren.9.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"description": "Audio verumtamen comes cattus amitto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"description": "Uredo tumultus sperno.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Frank Lockman",
+			"display_name": "Frank",
+			"phone": "(33) 94199-1019",
+			"email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "20708-536",
+				"street": "Bahringer Light",
+				"number": "58056",
+				"complement": null,
+				"district": "Pike County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.638271,
+				"longitude": -51.135793
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJWyRnICdBGZURy3Zc2b-UzPo",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Pioneira Recicladora de Materiais da Construção Civil",
+					"business_name": "Pioneira Recicladora de Materiais da Construção Civil",
+					"identity": "80164762000162",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "pioneira.recicladora.de.materiais.da.construcao.civil@devoted-custom.info",
+					"phones": ["(51) 99617-8953"],
+					"website": null,
+					"started_activity_in": "2025-09-16T23:56:37.981Z",
+					"address": {
+						"zip_code": "93542-590",
+						"street": "Av. Reynaldo Kayser",
+						"number": "5000",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.676292200000002,
+						"longitude": -51.0882023
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.5,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 917.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.83,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 327.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 495.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 691
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 758.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.77,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 283.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 123.36,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 270.84,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 193.96,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 248.56,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 204.24,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 243.39,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ6UmuRkZDGZURMtQhTvFCF88",
+						"rating": 4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JS comércio de sucatas",
+					"business_name": "JS comércio de sucatas",
+					"identity": "51640559000117",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "js.comercio.de.sucatas@aggressive-innovation.com",
+					"phones": ["(75) 90901-8640"],
+					"website": null,
+					"started_activity_in": "2016-12-12T02:37:52.183Z",
+					"address": {
+						"zip_code": "93546-550",
+						"street": "R. Bananal",
+						"number": "1123",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.701668799999997,
+						"longitude": -51.1014682
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.86,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 842.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 919.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.99,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 423.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 255.31,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 236,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 289.83,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 262.61,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 59.53,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 177.37,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-01T00:56:40.518Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.78245,
+								"longitude": -51.002468,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293299799
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Pike County",
+							"streetNumber": "25079",
+							"street": "Dawn Haven",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37349019",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Satterfield Gateway, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-16T18:15:01.594Z",
+					"observations": "Vilis dolorem baiulus sodalitas vae spoliatio amita sumptus vicissitudo deleo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.789289,
+								"longitude": -51.008821,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788313226967
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "County Armagh",
+							"streetNumber": "776",
+							"street": "Yundt Streets",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15902569",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aniya Brook, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"description": "Comis nobis canto officia arbor substantia cui vester.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"description": "Dolorum curso vergo sublime cibus desparatus adamo tubineus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-08T05:16:29.724Z",
+					"observations": "Defungo cogito stips eum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.797443,
+								"longitude": -50.934472,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303660552
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Jackson County",
+							"streetNumber": "30571",
+							"street": "Trycia Viaduct",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78507077",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jerald Haven, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Eletroeletrônicos (REEE)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexis-lindgren.9.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Richmond Wilderman",
+			"display_name": "Richmond",
+			"phone": "(09) 98303-4981",
+			"email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "47492-428",
+				"street": "Park Road",
+				"number": "9493",
+				"complement": null,
+				"district": "West Midlands",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.780559,
+				"longitude": -51.144762
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJsdeFNIRlGZURw4bRmEoFPVg",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "New Recycling",
+					"business_name": "New Recycling",
+					"identity": "42898082000183",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "new.recycling@french-honesty.info",
+					"phones": ["(51) 3509-2895"],
+					"website": "https://www.newrecycling.com.br/",
+					"started_activity_in": "2026-05-23T04:15:13.147Z",
+					"address": {
+						"zip_code": "93020-566",
+						"street": "Av. Getúlio Vargas",
+						"number": "2008",
+						"complement": null,
+						"district": "Fião, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.777081900000002,
+						"longitude": -51.1550478
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.86,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 273.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.29,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 456.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 229.28,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 96.69,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJN0JyNABpGZURTwzzKKw9WWM",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem souza",
+					"business_name": "Reciclagem souza",
+					"identity": "31028476000164",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.souza@biodegradable-fibre.info",
+					"phones": ["(51) 99552-1280"],
+					"website": null,
+					"started_activity_in": "2017-03-12T15:54:41.638Z",
+					"address": {
+						"zip_code": "93052-230",
+						"street": "R. Afonso Schafer",
+						"number": "S/N",
+						"complement": null,
+						"district": "Feitoria, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7460018,
+						"longitude": -51.100896
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "06:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.54,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 581.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.5,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 824.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.44,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 34.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 846.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 160.25,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 152.36,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-18T18:11:21.199Z",
+					"observations": "Vigilo ut ratione tam centum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.672257,
+								"longitude": -50.954465,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788274678844
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Cheshire",
+							"streetNumber": "96424",
+							"street": "Runte Ridges",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06038165",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Koch Hills, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-19T13:16:43.540Z",
+					"observations": "Appositus defleo despecto aeneus aestus perspiciatis aperiam odit arx cedo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.807523,
+								"longitude": -51.169462,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288940553
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "East Sussex",
+							"streetNumber": "232",
+							"street": "Pennsylvania Avenue",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61590093",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Seth Inlet, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Resíduos Orgânicos",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"description": "Urbs solus arbitro surgo illo deludo sollicito thermae claudeo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"description": "Vinum taceo villa tempus adversus arto charisma ustulo voveo sint.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-18T22:50:51.573Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.715378,
+								"longitude": -51.01565,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317908665
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Staffordshire",
+							"streetNumber": "82344",
+							"street": "Tiana Inlet",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56489392",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Adams Street, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-21T18:51:56.412Z",
+					"observations": "Deprimo cerno cohibeo assentator votum reprehenderit curtus traho caste cruciamentum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.723148,
+								"longitude": -51.017694,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308390006
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Lake County",
+							"streetNumber": "3983",
+							"street": "1st Street",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78908082",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lake Road, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Papel / Papelão",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-lindgren.9.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"description": "Curatio amissio voluntarius ascisco aptus crinis spero curriculum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Meaghan Harvey-Greenholt",
+			"display_name": "Meaghan",
+			"phone": "(48) 92928-9454",
+			"email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "54662-925",
+				"street": "Emerald Rapid",
+				"number": "51116",
+				"complement": null,
+				"district": "Powys",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.79195,
+				"longitude": -51.106891
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJSRkYCZBBGZUReSnZoES82Vg",
+						"rating": 1,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "MJP RECICLAGEM",
+					"business_name": "MJP RECICLAGEM",
+					"identity": "86519036000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mjp.reciclagem@coarse-bid.info",
+					"phones": ["(51) 99817-9757"],
+					"website": "http://mjpreciclagem.weebly.com/",
+					"started_activity_in": "2024-01-01T13:32:29.842Z",
+					"address": {
+						"zip_code": "93542-883",
+						"street": "R. Tomás Feltes Engel",
+						"number": "S/N",
+						"complement": null,
+						"district": "Marisol, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.691675200000002,
+						"longitude": -51.0778726
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "06:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.28,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 226.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.09,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 961.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.34,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 628.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.6,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 61
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.63,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 17.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.53,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 170.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 165.54,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 208.05,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 147.82,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 243.52,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 239.74,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJuQNWLt9rGZUR3fYDXVGxsO8",
+						"rating": 4.4,
+						"types": ["corporate_office", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Usina de Reciclagem Pavani",
+					"business_name": "Usina de Reciclagem Pavani",
+					"identity": "28935434000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "usina.de.reciclagem.pavani@worthy-taro.biz",
+					"phones": ["(51) 3037-7514"],
+					"website": "https://www.usinapavani.com.br/",
+					"started_activity_in": "2020-06-17T01:17:46.781Z",
+					"address": {
+						"zip_code": "93046-490",
+						"street": "R. Jacob Wilers",
+						"number": "240",
+						"complement": null,
+						"district": "Lot. Parque Recreio, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7740606,
+						"longitude": -51.093801299999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.87,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 618.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.61,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 272.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 85.69,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 144.66,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Gordon Welch",
+			"display_name": "Gordon",
+			"phone": "(12) 91419-7770",
+			"email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "81336-967",
+				"street": "S Franklin Street",
+				"number": "978",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.758645,
+				"longitude": -50.992067
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJdw6qMG5oGZURvTnz4ZrF7Zo",
+						"rating": 4.4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "DNC Comércio de Papel",
+					"business_name": "DNC Comércio de Papel",
+					"identity": "35847564000149",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "dnc.comercio.de.papel@ample-recovery.info",
+					"phones": ["(51) 3590-4155"],
+					"website": "http://www.dncpapeis.com.br/",
+					"started_activity_in": "2026-08-03T22:46:48.795Z",
+					"address": {
+						"zip_code": "93025-280",
+						"street": "R. Taiti",
+						"number": "370",
+						"complement": null,
+						"district": "Vicentina, São Leopoldo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.772168899999997,
+						"longitude": -51.1680881
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.38,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 27.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 604.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.88,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 962.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 318.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 278.79,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 196.74,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 63.53,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 277.47,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 204.78,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 288.14,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ8RUK3T1DGZURXTMMq6rollM",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ACERT Reciclagem",
+					"business_name": "ACERT Reciclagem",
+					"identity": "55591419000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "acert.reciclagem@proud-clamp.com",
+					"phones": ["(51) 99516-7590"],
+					"website": null,
+					"started_activity_in": "2020-06-04T05:35:20.079Z",
+					"address": {
+						"zip_code": "93546-605",
+						"street": "R. João Darci de Vargas",
+						"number": "15",
+						"complement": null,
+						"district": "Canudos, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.704928700000004,
+						"longitude": -51.1027716
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.11,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 657.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.47,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 503
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.16,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 718.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 966.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 122.17,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 144.96,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 224.15,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 214.47,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 223.55,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 124.15,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-23T00:07:16.967Z",
+					"observations": "Repellendus adfero sub deripio tondeo depromo deserunt utpote fugit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.756567,
+								"longitude": -51.121338,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788305990961
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Suffolk",
+							"streetNumber": "1440",
+							"street": "Baumbach Track",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67267282",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chapel Street, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"description": "Voco crur ars deporto cura.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Alexis Lindgren",
+			"display_name": "Alexis",
+			"phone": "(42) 97986-7060",
+			"email": "alexis-lindgren.9.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "95768-641",
+				"street": "S Central Avenue",
+				"number": "1005",
+				"complement": null,
+				"district": "Adams County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.64681,
+				"longitude": -51.143582
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJl0KdLto_GZUR-al2VHpyV20",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sustentare Eco Recicler",
+					"business_name": "Sustentare Eco Recicler",
+					"identity": "97013235000150",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sustentare.eco.recicler@triangular-cheetah.info",
+					"phones": ["(51) 99842-7809"],
+					"website": "https://www.instagram.com/sustentare_eco_recicler?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+					"started_activity_in": "2024-04-24T03:07:14.659Z",
+					"address": {
+						"zip_code": "93806-054",
+						"street": "R. Borges de Medeiros",
+						"number": "S/N",
+						"complement": null,
+						"district": "Sapiranga, RS, , Brasil",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.645208900000004,
+						"longitude": -51.0108889
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.68,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 790.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.43,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 454.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.33,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 261.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 267.16,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 84.11,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 102.5,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 291.92,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJFbF8UfNBGZURAj9a0j6aRIY",
+						"rating": 4.3,
+						"types": [
+							"local_government_office",
+							"government_office",
+							"consultant",
+							"association_or_organization",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ambientaliza soluções ambientais",
+					"business_name": "ambientaliza soluções ambientais",
+					"identity": "97573187000154",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ambientaliza.solucoes.ambientais@that-flood.info",
+					"phones": ["(51) 98187-9304"],
+					"website": null,
+					"started_activity_in": "2022-03-27T00:18:25.147Z",
+					"address": {
+						"zip_code": "93420-010",
+						"street": "R. Leopoldo Wasun",
+						"number": "900",
+						"complement": null,
+						"district": "Santo Afonso, Novo Hamburgo",
+						"city": "Novo Hamburgo",
+						"city_ibge_id": 4313409,
+						"state": "Rio Grande do Sul",
+						"state_ibge_id": 43,
+						"state_code": "RS",
+						"latitude": -29.7368047,
+						"longitude": -51.134656899999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.66,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 344.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.62,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 116.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.43,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 292.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 183.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 227.33,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 279.98,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 213.57,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 254.96,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 221.44,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 69.31,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-05T15:53:47.801Z",
+					"observations": "Totam voluntarius urbs sursum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.700053,
+								"longitude": -51.025993,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340054717
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "County Tyrone",
+							"streetNumber": "48510",
+							"street": "Michele Cliffs",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "69875698",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Keebler Garden, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-08T21:47:08.528Z",
+					"observations": "Sono demergo quasi demonstro valde defetiscor considero damno.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.827622,
+								"longitude": -51.173832,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788359482777
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Somerset",
+							"streetNumber": "53703",
+							"street": "Louis Orchard",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15558815",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beahan Spring, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"description": "Alveus turba valeo sunt ducimus damno deficio in succedo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"description": "Pax tergiversatio vero temporibus acquiro cervus aeneus strenuus creber.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-02T15:57:08.084Z",
+					"observations": "Angustus texo delectatio auditor alo coadunatio cimentarius inflammatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.662618,
+								"longitude": -51.170994,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788332773131
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Gwent",
+							"streetNumber": "8306",
+							"street": "Cruickshank Key",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92317996",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Angelica Dam, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Frederick Corwin",
+			"display_name": "Frederick",
+			"phone": "(52) 96221-6361",
+			"email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "03888-682",
+				"street": "Spring Gardens",
+				"number": "49028",
+				"complement": null,
+				"district": "Perry County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.793449,
+				"longitude": -50.979669
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-09T08:44:46.807Z",
+					"observations": "Coniecto ea tenetur vociferor arbor delicate textor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.76089,
+								"longitude": -51.144512,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349893032
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Hampshire",
+							"streetNumber": "6293",
+							"street": "Norbert Views",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44161628",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Fadel Way, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Plástico",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Brad Lesch",
+			"display_name": "Brad",
+			"phone": "(80) 90849-6296",
+			"email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "90566-169",
+				"street": "Cummings-Hauck Mills",
+				"number": "1542",
+				"complement": null,
+				"district": "Cumbria",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.662151,
+				"longitude": -51.138816
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-31T20:43:52.079Z",
+					"observations": "Labore umquam acidus taceo texo sed auctus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.669937,
+								"longitude": -51.11902,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294460521
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Surrey",
+							"streetNumber": "6441",
+							"street": "Viviane Wells",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42847505",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bins Avenue, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-30T07:42:05.221Z",
+					"observations": "Sortitus totam creptio arceo defessus vesper corporis concido.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.827104,
+								"longitude": -50.979359,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319350377
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Union County",
+							"streetNumber": "5848",
+							"street": "Jenkins Manors",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42894038",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Purdy Trail, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-30T10:15:42.177Z",
+					"observations": "Quisquam defendo victus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.791067,
+								"longitude": -50.995269,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788345527104
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Gwent",
+							"streetNumber": "623",
+							"street": "Skyline Drive",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09617732",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Marcia Drives, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Papel / Papelão",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kaylee Tremblay",
+			"display_name": "Kaylee",
+			"phone": "(62) 94452-5771",
+			"email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "09851-202",
+				"street": "Abernathy Course",
+				"number": "62461",
+				"complement": null,
+				"district": "County Antrim",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.722293,
+				"longitude": -51.016755
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-14T09:20:05.363Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.697855,
+								"longitude": -50.935087,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315547477
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Bedfordshire",
+							"streetNumber": "7758",
+							"street": "Meghan Shores",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54557300",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beech Grove, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Medicamentos",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-lindgren.9.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"description": "Bis avarus autem vilitas acquiro ducimus absque hic decretum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"description": "Dolorem vulgus suppellex.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Frankie Dietrich",
+			"display_name": "Frankie",
+			"phone": "(60) 95645-0334",
+			"email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "83970-960",
+				"street": "Lindsay Place",
+				"number": "94824",
+				"complement": null,
+				"district": "Cleveland",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.724179,
+				"longitude": -51.108115
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Maxine Fay",
+			"display_name": "Maxine",
+			"phone": "(61) 96209-3010",
+			"email": "maxine-fay.14.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "16507-854",
+				"street": "Prohaska Dam",
+				"number": "632",
+				"complement": null,
+				"district": "Fayette County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.76808,
+				"longitude": -51.059528
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-10T02:42:18.705Z",
+					"observations": "Atrox canonicus doloremque talis claro at reprehenderit damnatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.729274,
+								"longitude": -50.944992,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788335490797
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Lawrence County",
+							"streetNumber": "38522",
+							"street": "Shields Land",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51035113",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kutch Plaza, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-09T21:50:49.682Z",
+					"observations": "Tergeo valde constans vulpes.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.703802,
+								"longitude": -51.163493,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316668549
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Franklin County",
+							"streetNumber": "4060",
+							"street": "Bruen Haven",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "83265556",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Boehm Hill, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Wm Schmidt",
+			"display_name": "Wm",
+			"phone": "(41) 94417-1067",
+			"email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "14212-956",
+				"street": "Mohr-Schuster Prairie",
+				"number": "4122",
+				"complement": null,
+				"district": "Union County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.67206,
+				"longitude": -51.150726
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-24T05:15:11.789Z",
+					"observations": "Aedificium deserunt maxime soleo quis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.775163,
+								"longitude": -51.046268,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276625727
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "County Tyrone",
+							"streetNumber": "22824",
+							"street": "Waverley Road",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53852285",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jaskolski Mountain, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxine-fay.14.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"description": "Somnus deficio caecus curatio vaco ascit peccatus complectus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"description": "Aequus derelinquo comprehendo desino acies bestia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-28T08:12:37.793Z",
+					"observations": "Suspendo reiciendis vigilo comis tristis currus statim odit careo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.641328,
+								"longitude": -51.01345,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788335520661
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Douglas County",
+							"streetNumber": "34435",
+							"street": "Rodger Extension",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58649197",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gorczany Springs, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Tara Waelchi",
+			"display_name": "Tara",
+			"phone": "(19) 91892-0487",
+			"email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "41930-408",
+				"street": "Lucia Ferry",
+				"number": "946",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.712376,
+				"longitude": -51.148143
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-17T13:51:21.075Z",
+					"observations": "Nemo cribro admoneo caveo alii comitatus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.738092,
+								"longitude": -51.099689,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340031741
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Avon",
+							"streetNumber": "5861",
+							"street": "Gutmann Wells",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41794282",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Pamela Keys, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Lâmpadas", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frankie-dietrich.13.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-zieme.1.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "meaghan-harvey-greenholt.7.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexis-lindgren.9.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gordon-welch.8.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "wm-schmidt.15.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"description": "Convoco caecus cupio laudantium surgo victus arbitro libero ex.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "frank-lockman.5.novo-hamburgo-rs@oikos.seed",
+							"description": "Toties astrum tamdiu depono demens peccatus appono confido contra summa.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Dannie Yundt",
+			"display_name": "Dannie",
+			"phone": "(52) 98021-6857",
+			"email": "dannie-yundt.17.novo-hamburgo-rs@oikos.seed",
+			"address": {
+				"zip_code": "03874-456",
+				"street": "Gilbert Viaduct",
+				"number": "68049",
+				"complement": null,
+				"district": "Washington County",
+				"city": "Novo Hamburgo",
+				"city_ibge_id": 4313409,
+				"state": "Rio Grande do Sul",
+				"state_ibge_id": 43,
+				"state_code": "RS",
+				"latitude": -29.809869,
+				"longitude": -51.103875
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-12T18:06:27.189Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -29.692844,
+								"longitude": -50.980833,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788331311096
+						},
+						"addresses": {
+							"city": "Novo Hamburgo",
+							"district": "Montgomery County",
+							"streetNumber": "87484",
+							"street": "Johnson Forges",
+							"region": "RS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15654317",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kassulke-Schulist Flats, Novo Hamburgo - RS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kaylee-tremblay.12.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paul-ruecker.3.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jessica-larson.0.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexzander-jerde.2.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frederick-corwin.10.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tara-waelchi.16.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brad-lesch.11.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "patricia-brakus.4.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maxine-fay.14.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maxine-fay.14.novo-hamburgo-rs@oikos.seed",
+							"description": "Soleo non verbum dens tutamen addo denuo tabella.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "richmond-wilderman.6.novo-hamburgo-rs@oikos.seed",
+							"description": "Capio custodia quidem.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		}
+	]
+}

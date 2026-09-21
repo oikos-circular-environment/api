@@ -1,0 +1,5450 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:25:59.163Z",
+		"city": "Itanhaém",
+		"state_code": "SP",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Tina Gibson",
+			"display_name": "Tina",
+			"phone": "(68) 94081-4123",
+			"email": "tina-gibson.0.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "18383-831",
+				"street": "Batz Islands",
+				"number": "4364",
+				"complement": null,
+				"district": "Carroll County",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.103483,
+				"longitude": -46.816262
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ4SnvFiAq0JQRDNnsrSsoXwo",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Olizam Os Reis Da Reciclagem",
+					"business_name": "Olizam Os Reis Da Reciclagem",
+					"identity": "30478037000190",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "olizam.os.reis.da.reciclagem@helpful-impostor.name",
+					"phones": ["(64) 96910-3030"],
+					"website": null,
+					"started_activity_in": "2023-07-08T23:21:49.247Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Av. Marginal",
+						"number": "S/N",
+						"complement": null,
+						"district": "Itanhaem, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.2337906,
+						"longitude": -46.9018084
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.38,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 990.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 84.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 295
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.21,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 579
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.46,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 847.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.84,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 153.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 190.2,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 165.64,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 261.34,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 142.77,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 154.85,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 238.16,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJj72X0XkrzpQRYZjqfVZi8Hg",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Start Reciclagem",
+					"business_name": "Start Reciclagem",
+					"identity": "76399228000168",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "start.reciclagem@exalted-legend.net",
+					"phones": ["(13) 99689-2180"],
+					"website": null,
+					"started_activity_in": "2018-07-27T02:42:36.484Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Av. Cabuçu",
+						"number": "601",
+						"complement": null,
+						"district": "Suarão, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1608615,
+						"longitude": -46.7645093
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 672.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 837.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 306.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 212.46,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 250.48,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 245.48,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 164.04,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 202.97,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 53.25,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-09T17:24:37.398Z",
+					"observations": "Dedico tergum defendo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.186342,
+								"longitude": -46.910383,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281727613
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Cheshire",
+							"streetNumber": "5237",
+							"street": "Homenick Mount",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79660823",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Iliana Rest, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Deion Padberg",
+			"display_name": "Deion",
+			"phone": "(80) 93512-0493",
+			"email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "72684-496",
+				"street": "Krajcik Walks",
+				"number": "6512",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.195206,
+				"longitude": -46.92102
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ0yHgNwApzpQRpGhmlK-bt7A",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Asucataria Reciclagem Eletrônica",
+					"business_name": "Asucataria Reciclagem Eletrônica",
+					"identity": "28739036000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "asucataria.reciclagem.eletronica@another-numeracy.com",
+					"phones": ["(45) 97185-7984"],
+					"website": null,
+					"started_activity_in": "2018-02-07T20:01:49.876Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "R. Padre Theodoro Ratisbonne",
+						"number": "6427",
+						"complement": null,
+						"district": "Jardim Suarão",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.154861699999998,
+						"longitude": -46.741569999999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 76
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.76,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 725.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 960.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 124.86,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 228.34,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 269.51,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 182.42,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 57.52,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJmxti3yEq0JQRksyszzYyqGk",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CMR Comércio De Materiais Recicláveis",
+					"business_name": "CMR Comércio De Materiais Recicláveis",
+					"identity": "44902075000133",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cmr.comercio.de.materiais.reciclaveis@charming-hospitalization.net",
+					"phones": ["(13) 97423-1801"],
+					"website": null,
+					"started_activity_in": "2018-02-23T14:51:57.679Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Av. Marginal",
+						"number": "360-460",
+						"complement": null,
+						"district": "São Pedro, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.2321432,
+						"longitude": -46.8992484
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 975.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.17,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 191.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.67,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 262.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.24,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 884.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.51,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 337.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 70.87,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 137.79,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 229.06,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 174.24,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-20T12:38:59.974Z",
+					"observations": "Stultus defleo clibanus demum sunt quibusdam caecus vomer sequi angulus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.190416,
+								"longitude": -46.746621,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276988016
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Greene County",
+							"streetNumber": "27329",
+							"street": "Alma Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01958342",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Main, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Eletroeletrônicos (REEE)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peter-walker.5.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lilly-lockman.11.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dawson-predovic.10.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jon-roberts.12.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "penny-grant.6.itanhaem-sp@oikos.seed",
+							"description": "Claudeo sint tabernus appositus tyrannus vacuus blanditiis quidem inflammatio stillicidium.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "April Hettinger",
+			"display_name": "April",
+			"phone": "(02) 96520-2668",
+			"email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "03813-607",
+				"street": "Bednar Wall",
+				"number": "208",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.1863,
+				"longitude": -46.893825
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJQ1B7MGUr0JQRIydg63_gt5g",
+						"rating": 4.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Renova Sucatas ( Ferro velho)",
+					"business_name": "Renova Sucatas ( Ferro velho)",
+					"identity": "59535789384",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "renova.sucatas.ferro.velho@tender-provision.net",
+					"phones": ["(11) 92231-0064"],
+					"website": "https://wa.me/message/U2OBYDF2TWFCE1",
+					"started_activity_in": "2025-07-21T21:18:32.584Z",
+					"address": {
+						"zip_code": "11749-566",
+						"street": "R. Durval Costa",
+						"number": "230",
+						"complement": null,
+						"district": "Bopiranga, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.2172286,
+						"longitude": -46.8708283
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "15:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.86,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 259
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.45,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 704.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.24,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 230.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.82,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 794.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.27,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 692.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 54.38,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 114.03,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJAaTgs1LVz5QRBSpnIQoue5k",
+						"rating": 4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RCE Comércio de Materiais Recicláveis",
+					"business_name": "RCE Comércio de Materiais Recicláveis",
+					"identity": "68228412000117",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rce.comercio.de.materiais.reciclaveis@indolent-availability.com",
+					"phones": ["(13) 3422-6195"],
+					"website": null,
+					"started_activity_in": "2018-04-08T09:13:41.049Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Estr. Gentil Peres",
+						"number": "S/N",
+						"complement": null,
+						"district": "Jardim Umuarama, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1784764,
+						"longitude": -46.8255608
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.28,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 224.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.25,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 692.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 56.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.95,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 219.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 173.19,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 88.05,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 153.34,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-30T04:16:45.600Z",
+					"observations": "Tempus commodo territo strues cena vir territo animus quo compono.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.215874,
+								"longitude": -46.803749,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788238543924
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Lee County",
+							"streetNumber": "348",
+							"street": "Dixie Pines",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55893142",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Felicia Highway, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "orie-leannon.15.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Wallace Zulauf",
+			"display_name": "Wallace",
+			"phone": "(71) 97429-9974",
+			"email": "wallace-zulauf.3.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "39549-849",
+				"street": "Jonathon Ramp",
+				"number": "7696",
+				"complement": null,
+				"district": "Wayne County",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.245356,
+				"longitude": -46.902669
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJawq5PuQpzpQRVu9b9VnGSN4",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Grillo Reciclagem",
+					"business_name": "Grillo Reciclagem",
+					"identity": "53875812000147",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "grillo.reciclagem@unruly-skyline.info",
+					"phones": ["(13) 99658-8919"],
+					"website": null,
+					"started_activity_in": "2021-11-10T23:40:03.229Z",
+					"address": {
+						"zip_code": "11730-000",
+						"street": "Estrada da cachoreira",
+						"number": "414",
+						"complement": null,
+						"district": "Jardim Primavera, Mongaguá",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.113914599999998,
+						"longitude": -46.7125889
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 292.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.09,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 514.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 217.19,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 248.66,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJGd2VaVcr0JQRhYu95-PNQnA",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucataria novos tempos",
+					"business_name": "Sucataria novos tempos",
+					"identity": "04984555000176",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucataria.novos.tempos@actual-traditionalism.info",
+					"phones": ["(13) 98106-1382"],
+					"website": null,
+					"started_activity_in": "2018-10-14T21:29:26.349Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Av marginal da rodovia",
+						"number": "8861",
+						"complement": null,
+						"district": "Bopiranga, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.2189703,
+						"longitude": -46.8756479
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.95,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 536
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.17,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 920.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.3,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 280.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.06,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 98.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.11,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 961.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 222.79,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 179.03,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 88.54,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Matt Frami",
+			"display_name": "Matt",
+			"phone": "(46) 95033-8448",
+			"email": "matt-frami.4.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "06067-410",
+				"street": "Doris Points",
+				"number": "5681",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.157968,
+				"longitude": -46.764543
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ-5v19gPV0ZQRxvXLptwRdD8",
+						"rating": 4.9,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "PIT STOP Ferro e Aço",
+					"business_name": "PIT STOP Ferro e Aço",
+					"identity": "73944806000101",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "pit.stop.ferro.e.aco@lean-scaffold.info",
+					"phones": ["(13) 99689-2180"],
+					"website": "http://www.pitstopferroeaco.com/",
+					"started_activity_in": "2025-07-30T01:43:47.540Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "R. Emídio de Souza",
+						"number": "723",
+						"complement": null,
+						"district": "Satélite, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.174051,
+						"longitude": -46.777296199999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 139
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.13,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 805
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.09,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 885.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 335.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.15,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 193.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 298.82,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 259.57,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJAYUuyZsrzpQRu8jdv3gKs_8",
+						"rating": 4,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Marciano reciclagem",
+					"business_name": "Marciano reciclagem",
+					"identity": "55107928000161",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "marciano.reciclagem@diligent-excess.net",
+					"phones": ["(13) 99748-9699"],
+					"website": null,
+					"started_activity_in": "2026-04-15T22:17:53.613Z",
+					"address": {
+						"zip_code": "11743-290",
+						"street": "Rua Eliza fornanciari",
+						"number": "S/N",
+						"complement": null,
+						"district": "R. Joaquim Rasga, 41",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1630902,
+						"longitude": -46.7967969
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.09,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 340.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.97,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 867.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.85,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 845.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.88,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 334
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.66,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 206.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 867.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 213.37,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 290.81,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-07T19:20:23.358Z",
+					"observations": "Culpo textor carpo doloremque adversus vigor optio voco patruus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.215094,
+								"longitude": -46.916927,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788291464852
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Marshall County",
+							"streetNumber": "64210",
+							"street": "Commercial Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59854292",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Raynor Union, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "tina-gibson.0.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-22T12:24:19.731Z",
+					"observations": "Cubo quos caput.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.21632,
+								"longitude": -46.745907,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788283931133
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Logan County",
+							"streetNumber": "1165",
+							"street": "Shawna Islands",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67181020",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Main, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "penny-grant.6.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-23T11:13:13.827Z",
+					"observations": "Baiulus charisma uter delectatio velociter ustulo veritatis ceno.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.147545,
+								"longitude": -46.93234,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788245451772
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Clay County",
+							"streetNumber": "42060",
+							"street": "N 1st Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76616698",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Allison Point, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "orie-leannon.15.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "penny-grant.6.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lilly-lockman.11.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wallace-zulauf.3.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"description": "Uredo clibanus vestigium solitudo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "jon-roberts.12.itanhaem-sp@oikos.seed",
+							"description": "Alii speciosus architecto curtus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-21T14:05:50.627Z",
+					"observations": "Tendo possimus victus cubitum carcer peior vesco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.198761,
+								"longitude": -46.766284,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280959743
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "County Antrim",
+							"streetNumber": "767",
+							"street": "Glover Bypass",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05041924",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chestnut Close, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Medicamentos",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Peter Walker",
+			"display_name": "Peter",
+			"phone": "(40) 94214-9411",
+			"email": "peter-walker.5.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "80010-137",
+				"street": "Dare Tunnel",
+				"number": "96385",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.221219,
+				"longitude": -46.747073
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJveDEKCXV0ZQRM4KDNEDX2Ig",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucatas Moreira",
+					"business_name": "Sucatas Moreira",
+					"identity": "54636765000141",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucatas.moreira@overdue-cake.com",
+					"phones": ["(11) 95174-1913"],
+					"website": null,
+					"started_activity_in": "2026-07-24T01:05:36.597Z",
+					"address": {
+						"zip_code": "11742-504",
+						"street": "Av. Rio de Janeiro",
+						"number": "261",
+						"complement": null,
+						"district": "Nova Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1667946,
+						"longitude": -46.7646084
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.09,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 585.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.42,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 768.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 5,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 833.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 528.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.16,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 348.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.21,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 312.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 269.67,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 144.63,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 256.21,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 199.19,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 157.26,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 64.36,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJw69Dy64r0JQRecfz1pMZmVs",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem do Japa",
+					"business_name": "Reciclagem do Japa",
+					"identity": "38917133000108",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.japa@wee-ice-cream.biz",
+					"phones": ["(13) 97419-8235"],
+					"website": null,
+					"started_activity_in": "2025-04-19T05:27:08.811Z",
+					"address": {
+						"zip_code": "11749-682",
+						"street": "R. Sessenta",
+						"number": "8529",
+						"complement": null,
+						"district": "Bopiranga, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.216599,
+						"longitude": -46.8719779
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.09,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 876.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 480.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 204.1,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 142.33,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 249.52,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 51.17,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-15T04:10:03.216Z",
+					"observations": "Advoco arceo minus cognatus comis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.115982,
+								"longitude": -46.758353,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304123686
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Essex",
+							"streetNumber": "230",
+							"street": "Debbie Cliffs",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36564833",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cali Stravenue, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-20T04:51:57.801Z",
+					"observations": "Deputo attonbitus convoco arbor adipisci cruciamentum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.177613,
+								"longitude": -46.813675,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788282731849
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "North Yorkshire",
+							"streetNumber": "7018",
+							"street": "Rusty Forks",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81934802",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lubowitz Extension, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Penny Grant",
+			"display_name": "Penny",
+			"phone": "(40) 91257-7360",
+			"email": "penny-grant.6.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "37685-268",
+				"street": "Federico Keys",
+				"number": "371",
+				"complement": null,
+				"district": "Devon",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.110381,
+				"longitude": -46.765191
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJg6OkeGcrzpQR4rzPgYyS0Kw",
+						"rating": 4.5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM DO MICHEL",
+					"business_name": "RECICLAGEM DO MICHEL",
+					"identity": "31602174000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.do.michel@awful-premium.com",
+					"phones": ["(13) 3426-7383"],
+					"website": null,
+					"started_activity_in": "2017-03-19T18:46:17.459Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "R. Rita Prado da Silva",
+						"number": "423",
+						"complement": null,
+						"district": "Oásis, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1652938,
+						"longitude": -46.7877426
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 20.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.68,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 921.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.07,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 389.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.26,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 825.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.29,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 698.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 127.59,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 76.23,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJuVwYeu0rzpQREOAk_oootWA",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "EA Recicly Comércio de Sucatas",
+					"business_name": "EA Recicly Comércio de Sucatas",
+					"identity": "67855883000192",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ea.recicly.comercio.de.sucatas@aged-hyphenation.name",
+					"phones": ["(13) 98140-3097"],
+					"website": null,
+					"started_activity_in": "2017-03-22T00:15:08.824Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Av. José Batista Campos",
+						"number": "1315",
+						"complement": null,
+						"district": "Oásis, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1697357,
+						"longitude": -46.7855322
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.13,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 342.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 932
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 153.2,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 119.4,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-29T21:46:35.981Z",
+					"observations": "Allatus reprehenderit verecundia tracto causa voluptatem defungo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.167096,
+								"longitude": -46.799066,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788262941335
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Pike County",
+							"streetNumber": "4763",
+							"street": "Chester Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93424850",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "6th Avenue, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Vidro",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wallace-zulauf.3.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dax Weissnat",
+			"display_name": "Dax",
+			"phone": "(37) 90592-3747",
+			"email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "79080-343",
+				"street": "Zemlak Islands",
+				"number": "285",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.182171,
+				"longitude": -46.764435
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJiR1IorcrzpQRumH3bpxrRTI",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "reciclaitanhaem",
+					"business_name": "reciclaitanhaem",
+					"identity": "05993268000195",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclaitanhaem@proper-diver.name",
+					"phones": ["(13) 3427-6470"],
+					"website": null,
+					"started_activity_in": "2024-05-19T16:32:46.495Z",
+					"address": {
+						"zip_code": "11170-000",
+						"street": "Rua João Andrade Júnior",
+						"number": "400",
+						"complement": null,
+						"district": "Oásis, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.167926200000004,
+						"longitude": -46.7887171
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 710.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.95,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 605.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.02,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 307.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 240.9,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 148.37,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 174.64,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 164.69,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJZ8Km-YYqzpQRw6csNrHb95g",
+						"rating": 3.3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CooperSolReciclando",
+					"business_name": "CooperSolReciclando",
+					"identity": "27676034000157",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "coopersolreciclando@thorny-chairperson.biz",
+					"phones": ["(13) 3427-6470"],
+					"website": "https://www2.itanhaem.sp.gov.br/2022/10/31/coopersol-coleta-lixo-reciclavel-na-porta-das-casas-cadastradas/",
+					"started_activity_in": "2017-02-19T04:00:05.117Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Rua João Andrade Júnior",
+						"number": "400",
+						"complement": null,
+						"district": "Oásis, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1678709,
+						"longitude": -46.7888753
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.55,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 701.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 53.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 251.78,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 288.11,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 166.28,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 212.07,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 129.8,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-21T22:02:01.544Z",
+					"observations": "Odio optio contigo tergiversatio argumentum adinventitias.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.251212,
+								"longitude": -46.803704,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788244425970
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Tayside",
+							"streetNumber": "3569",
+							"street": "Debbie Club",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "13175653",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Yolanda Views, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Luther Brakus",
+			"display_name": "Luther",
+			"phone": "(17) 91333-3025",
+			"email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "57218-795",
+				"street": "S Monroe Street",
+				"number": "48378",
+				"complement": null,
+				"district": "Adams County",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.16628,
+				"longitude": -46.856147
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJb9rHN_bV0ZQRpQLKwURHkBw",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Sucatas Itanhaém",
+					"business_name": "Sucatas Itanhaém",
+					"identity": "58804806000112",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sucatas.itanhaem@uniform-pendant.info",
+					"phones": ["(80) 92417-4770"],
+					"website": null,
+					"started_activity_in": "2023-09-19T09:39:12.415Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "R. José Manoel Lorenzo Leiro",
+						"number": "100",
+						"complement": null,
+						"district": "Nova Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1648212,
+						"longitude": -46.7611743
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.85,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 822.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.77,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 522.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 166.93,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 148.22,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 86.42,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJyxA2btMrzpQRR08XkyMuvgY",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Re Fashion",
+					"business_name": "Re Fashion",
+					"identity": "96479740000121",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "re.fashion@potable-bathhouse.name",
+					"phones": ["(24) 98234-0307"],
+					"website": null,
+					"started_activity_in": "2022-11-27T15:26:28.931Z",
+					"address": {
+						"zip_code": "11743-452",
+						"street": "R. Maria Del Carmen Rodriguez Duran",
+						"number": "228",
+						"complement": null,
+						"district": "Guapura, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.1509319,
+						"longitude": -46.7947595
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.37,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 26.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.51,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 354.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 47
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.44,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 591.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.43,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 125.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.36,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 968.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 230.77,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 94.23,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 228.74,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 125.17,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-27T09:22:06.620Z",
+					"observations": "Una crepusculum magni aspicio armarium peior cresco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.127829,
+								"longitude": -46.931661,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306591469
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Tyne and Wear",
+							"streetNumber": "9008",
+							"street": "Laurie Via",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87527366",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jeromy Grove, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Plástico",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-05T15:30:08.929Z",
+					"observations": "Candidus vulticulus vacuus tamen cunabula carus totus avaritia summisse.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.137762,
+								"longitude": -46.739525,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788263335528
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Douglas County",
+							"streetNumber": "980",
+							"street": "Billy Mount",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "71922478",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 4th Avenue, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "orie-leannon.15.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jon-roberts.12.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maryam-bergstrom.17.itanhaem-sp@oikos.seed",
+							"description": "Vinco spectaculum colligo barba volubilis vilitas aestivus carus quod aeger.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "tina-gibson.0.itanhaem-sp@oikos.seed",
+							"description": "Volva ipsam cernuus ulciscor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Brandy Mills",
+			"display_name": "Brandy",
+			"phone": "(00) 90611-4049",
+			"email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "10080-932",
+				"street": "N High Street",
+				"number": "1965",
+				"complement": null,
+				"district": "South Yorkshire",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.115012,
+				"longitude": -46.717554
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJr9xrQGAr0JQRFqxWNRfvXxU",
+						"rating": 3.5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Comercio de sucatas bopiranga",
+					"business_name": "Comercio de sucatas bopiranga",
+					"identity": "47064743000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.sucatas.bopiranga@sore-nudge.com",
+					"phones": ["(13) 99171-6692"],
+					"website": null,
+					"started_activity_in": "2021-06-11T12:42:12.869Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Av. Albert Sabin",
+						"number": "S/N",
+						"complement": null,
+						"district": "Bopiranga, Itanhaém",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.2248609,
+						"longitude": -46.865819200000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.92,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 694.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.82,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 724.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.01,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 34.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 188.75,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 220.22,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 209.47,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 96.98,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 230.21,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 64.86,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJjUGtgNEpzpQR8BGTpciExYU",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Maria Da Sucata",
+					"business_name": "Maria Da Sucata",
+					"identity": "90177195592",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "maria.da.sucata@pushy-fishery.com",
+					"phones": ["(31) 94191-8346"],
+					"website": null,
+					"started_activity_in": "2023-08-10T16:27:22.460Z",
+					"address": {
+						"zip_code": "11740-000",
+						"street": "Loty",
+						"number": "Mongaguá",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "Itanhaém",
+						"city_ibge_id": 3522109,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.140588700000002,
+						"longitude": -46.7140433
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 280.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.42,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 470.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.48,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 88
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.29,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 335.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 243.31,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 51.7,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-01T01:08:13.820Z",
+					"observations": "Crustulum ustilo decretum tum volo repellendus strues cruciamentum textor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.242217,
+								"longitude": -46.925693,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788289191256
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Henry County",
+							"streetNumber": "97495",
+							"street": "Adams Avenue",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "07342218",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Union Street, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Pilhas e Baterias",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dawson Predovic",
+			"display_name": "Dawson",
+			"phone": "(46) 98052-1853",
+			"email": "dawson-predovic.10.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "42898-326",
+				"street": "Langworth Spring",
+				"number": "8453",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.169856,
+				"longitude": -46.781505
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-19T00:29:10.778Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.113648,
+								"longitude": -46.806855,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788250363520
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "East Sussex",
+							"streetNumber": "441",
+							"street": "Maryam Stravenue",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25234223",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mary Street, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "wallace-zulauf.3.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jon-roberts.12.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-23T01:17:52.888Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.177028,
+								"longitude": -46.908069,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788247834269
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Fife",
+							"streetNumber": "63445",
+							"street": "Pound Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67098399",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rae Fields, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lilly Lockman",
+			"display_name": "Lilly",
+			"phone": "(79) 97603-5645",
+			"email": "lilly-lockman.11.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "91968-629",
+				"street": "E 14th Street",
+				"number": "3129",
+				"complement": null,
+				"district": "Tayside",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.129838,
+				"longitude": -46.778131
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-28T14:46:49.182Z",
+					"observations": "Aegrotatio aut timor tego compono victoria alioqui.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.20225,
+								"longitude": -46.736316,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788310313594
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Marshall County",
+							"streetNumber": "5105",
+							"street": "Schumm Green",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "46547483",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schumm Ranch, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jon Roberts",
+			"display_name": "Jon",
+			"phone": "(38) 96215-7042",
+			"email": "jon-roberts.12.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "02167-510",
+				"street": "Merle Greens",
+				"number": "535",
+				"complement": null,
+				"district": "Grampian",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.213293,
+				"longitude": -46.716434
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-26T14:28:00.291Z",
+					"observations": "Vesper timor cur atavus sapiente patrocinor una.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.200048,
+								"longitude": -46.790643,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788235244099
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Suffolk",
+							"streetNumber": "11554",
+							"street": "Rectory Close",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23038181",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Main Avenue, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lilly-lockman.11.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Maureen Harber",
+			"display_name": "Maureen",
+			"phone": "(93) 92503-2703",
+			"email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "29834-787",
+				"street": "Beer Ford",
+				"number": "1093",
+				"complement": null,
+				"district": "County Down",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.139011,
+				"longitude": -46.756664
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-23T21:59:55.686Z",
+					"observations": "Nam eaque vicinus arx mollitia adiuvo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.142415,
+								"longitude": -46.778435,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788244208192
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Herefordshire",
+							"streetNumber": "9286",
+							"street": "Ledner Place",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02655393",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ora Ford, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-04T05:14:52.275Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.190564,
+								"longitude": -46.872563,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788254360816
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Tayside",
+							"streetNumber": "5620",
+							"street": "Reynolds Landing",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57119974",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Orchard Street, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Adrien Homenick",
+			"display_name": "Adrien",
+			"phone": "(15) 96010-6601",
+			"email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "06031-970",
+				"street": "Richmond Close",
+				"number": "145",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.207734,
+				"longitude": -46.891983
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-14T08:56:43.679Z",
+					"observations": "Depromo confugo vallum deserunt repellendus et trado quas vulgus socius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.150402,
+								"longitude": -46.880871,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788265930965
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Surrey",
+							"streetNumber": "9559",
+							"street": "Ezra Gardens",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78421800",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Doyle Path, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Papel / Papelão"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "orie-leannon.15.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lilly-lockman.11.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"description": "Id argentum textilis deleniti creptio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-11T11:48:01.176Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.189982,
+								"longitude": -46.739545,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788301850375
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Herefordshire",
+							"streetNumber": "693",
+							"street": "W Union Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "73366677",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brakus Plains, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "penny-grant.6.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"description": "Consuasor tempore eius.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-28T02:04:18.329Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.239667,
+								"longitude": -46.749071,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788256590961
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Warwickshire",
+							"streetNumber": "711",
+							"street": "Green Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "40962938",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bernier Bridge, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Óleo Mineral / Lubrificante",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Orie Leannon",
+			"display_name": "Orie",
+			"phone": "(93) 99552-4232",
+			"email": "orie-leannon.15.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "84001-577",
+				"street": "Dion Skyway",
+				"number": "88832",
+				"complement": null,
+				"district": "Nottinghamshire",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.250423,
+				"longitude": -46.866109
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-21T14:49:39.535Z",
+					"observations": "Id tenuis coma modi vorax maxime aufero iure ducimus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.202434,
+								"longitude": -46.936074,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278434994
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Johnson County",
+							"streetNumber": "19481",
+							"street": "Gorczany Shoal",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "17572277",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gussie Glens, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maryam-bergstrom.17.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peter-walker.5.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lilly-lockman.11.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dawson-predovic.10.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "maryam-bergstrom.17.itanhaem-sp@oikos.seed",
+							"description": "Deporto tunc curatio laborum sodalitas cattus comes.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+							"description": "Adipisci communis cursim decipio unus cogito amo laudantium demoror.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-07T22:55:40.860Z",
+					"observations": "Amoveo capto textilis rerum combibo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.177777,
+								"longitude": -46.732715,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788260077035
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Lothian",
+							"streetNumber": "7072",
+							"street": "Barbara Run",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01018603",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Grand Avenue, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ross VonRueden",
+			"display_name": "Ross",
+			"phone": "(62) 90190-2778",
+			"email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "44485-006",
+				"street": "Chapel Street",
+				"number": "79727",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.113579,
+				"longitude": -46.759571
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-11T05:47:00.945Z",
+					"observations": "Ago argumentum adinventitias undique amitto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.191,
+								"longitude": -46.878785,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318865997
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Borders",
+							"streetNumber": "2503",
+							"street": "Terry Harbors",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70956369",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hudson Islands, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Pilhas e Baterias",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"description": "Officiis repudiandae vulgivagus ustulo vitiosus vulgus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Maryam Bergstrom",
+			"display_name": "Maryam",
+			"phone": "(01) 96754-2798",
+			"email": "maryam-bergstrom.17.itanhaem-sp@oikos.seed",
+			"address": {
+				"zip_code": "20326-543",
+				"street": "Cedar Avenue",
+				"number": "956",
+				"complement": null,
+				"district": "Borders",
+				"city": "Itanhaém",
+				"city_ibge_id": 3522109,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -24.22559,
+				"longitude": -46.940501
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-07T02:35:52.599Z",
+					"observations": "Subvenio attero bardus damnatio tristis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.187023,
+								"longitude": -46.910318,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318871754
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Scott County",
+							"streetNumber": "206",
+							"street": "Pearl Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62103102",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Long Lane, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "adrien-homenick.14.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-21T21:21:36.821Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.151637,
+								"longitude": -46.787833,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315958968
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Crawford County",
+							"streetNumber": "5944",
+							"street": "Smith Union",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19626698",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Shanie Mall, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "peter-walker.5.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-09T07:39:08.033Z",
+					"observations": "Tero capto caelum delibero annus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.239222,
+								"longitude": -46.83989,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303217501
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "Lothian",
+							"streetNumber": "242",
+							"street": "South Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85077551",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Renner Passage, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Madeira", "Lâmpadas", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deion-padberg.1.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "luther-brakus.8.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "orie-leannon.15.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dax-weissnat.7.itanhaem-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-04T00:58:11.650Z",
+					"observations": "Tristis architecto verbera.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.246642,
+								"longitude": -46.831447,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788244945592
+						},
+						"addresses": {
+							"city": "Itanhaém",
+							"district": "County Londonderry",
+							"streetNumber": "832",
+							"street": "Blanda Junction",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75115142",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gary Forges, Itanhaém - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jon-roberts.12.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brandy-mills.9.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ross-vonrueden.16.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "peter-walker.5.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "april-hettinger.2.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "wallace-zulauf.3.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "matt-frami.4.itanhaem-sp@oikos.seed",
+							"description": "Autus crapula sortitus volup exercitationem triduana comes cultellus vis vestrum.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "maureen-harber.13.itanhaem-sp@oikos.seed",
+							"description": "Deripio tardus urbanus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		}
+	]
+}

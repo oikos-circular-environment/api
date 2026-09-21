@@ -1,3 +1,4 @@
+import type { Prisma } from "@/generated/prisma/client.js";
 import type {
 	CreateProfile,
 	Profile,
@@ -11,10 +12,14 @@ export interface ProfilesRepository {
 	findByUserId(userId: string): Promise<Profile | null>;
 	create(data: CreateProfile): Promise<Profile>;
 	update(id: string, data: UpdateProfile): Promise<Profile | null>;
-	upsert(data: CreateProfile): Promise<Profile>;
+	upsert(data: CreateProfile, tx?: Prisma.TransactionClient): Promise<Profile>;
 	saveProfileImage(
 		profileId: string,
 		data: SaveProfileImage,
+		tx?: Prisma.TransactionClient,
 	): Promise<ProfileImage | null>;
-	deleteProfileImage(profileId: string): Promise<void>;
+	deleteProfileImage(
+		profileId: string,
+		tx?: Prisma.TransactionClient,
+	): Promise<void>;
 }

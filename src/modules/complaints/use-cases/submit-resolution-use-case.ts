@@ -15,7 +15,11 @@ export class SubmitResolutionUseCase {
 		private readonly companyChecker?: CompanyOwnershipChecker,
 	) {}
 
-	async execute({ userId, complaintId, data }: Request): Promise<void> {
+	async execute({
+		userId,
+		complaintId,
+		data,
+	}: Request): Promise<{ id: string }> {
 		const complaint =
 			await this.complaintsRepository.findPublicComplaintById(complaintId);
 
@@ -56,6 +60,10 @@ export class SubmitResolutionUseCase {
 			);
 		}
 
-		await this.complaintsRepository.submitResolution(userId, complaintId, data);
+		return this.complaintsRepository.submitResolution(
+			userId,
+			complaintId,
+			data,
+		);
 	}
 }

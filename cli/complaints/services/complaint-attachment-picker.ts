@@ -5,12 +5,14 @@ import type { ComplaintAttachmentSeed } from "../entities/complaint-seed.js";
 
 export const ASSETS_DIR = resolve("cli/assets");
 
-/** A maioria das denúncias tem pelo menos 1 foto — poucas têm 0 ou 3. */
+/**
+ * Toda denúncia precisa nascer com pelo menos 1 foto — nenhuma denúncia real
+ * existe sem imagem anexada, então 0 nunca é uma opção aqui.
+ */
 const ATTACHMENT_COUNT_DISTRIBUTION = [
-	{ value: 0, weight: 10 },
-	{ value: 1, weight: 60 },
+	{ value: 1, weight: 65 },
 	{ value: 2, weight: 25 },
-	{ value: 3, weight: 5 },
+	{ value: 3, weight: 10 },
 ];
 
 function listAssetFiles(): string[] {
@@ -19,7 +21,7 @@ function listAssetFiles(): string[] {
 		.sort();
 }
 
-/** Escolhe 0-3 imagens de exemplo de `cli/assets/`, sem repetir arquivo na mesma denúncia. */
+/** Escolhe 1-3 imagens de exemplo de `cli/assets/`, sem repetir arquivo na mesma denúncia. */
 export class ComplaintAttachmentPicker {
 	private readonly assetFiles: string[];
 

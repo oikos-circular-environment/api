@@ -1,0 +1,5606 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:54:31.516Z",
+		"city": "Nova Andradina",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Nils Jacobs",
+			"display_name": "Nils",
+			"phone": "(98) 95382-3685",
+			"email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "97931-559",
+				"street": "Claremont Road",
+				"number": "711",
+				"complement": null,
+				"district": "Union County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.258568,
+				"longitude": -53.364769
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJq_VnS7x9jpQRrDkAgtbgbRc",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Campiteli Ambiental",
+					"business_name": "Campiteli Ambiental",
+					"identity": "64980898000194",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "campiteli.ambiental@troubled-vestment.org",
+					"phones": ["(67) 99945-9639"],
+					"website": "http://www.facebook.com/campiteliambiental",
+					"started_activity_in": "2019-12-17T03:56:30.593Z",
+					"address": {
+						"zip_code": "79750-000",
+						"street": "R. José Aparecido da Silva",
+						"number": "S/N",
+						"complement": null,
+						"district": "Nova Andradina, MS, , Brasil",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2765784,
+						"longitude": -53.3619943
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.25,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 275.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.81,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 212.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.78,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 975.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 837.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.06,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 535.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 293.53,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 167.26,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 259.29,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 185.59,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 136.29,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJJYbjZwZ9jpQRikn92RgJuPQ",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "BH Soluções Recicláveis",
+					"business_name": "BH Soluções Recicláveis",
+					"identity": "71228712000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "bh.solucoes.reciclaveis@petty-marketplace.info",
+					"phones": ["(67) 99877-1201"],
+					"website": null,
+					"started_activity_in": "2026-08-12T20:52:36.782Z",
+					"address": {
+						"zip_code": "79750-000",
+						"street": "Rua Projetada D",
+						"number": "118",
+						"complement": null,
+						"district": "Jardim Itália, Nova Andradina",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2604665,
+						"longitude": -53.3348166
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.75,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 117.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.55,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 82.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.37,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 709.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 516.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.87,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 930
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.62,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 240
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 292.29,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 199.34,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 227.84,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 232.63,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Heath Hand",
+			"display_name": "Heath",
+			"phone": "(37) 96100-8172",
+			"email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "56816-076",
+				"street": "Lonny Fields",
+				"number": "16426",
+				"complement": null,
+				"district": "Hamilton County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.228953,
+				"longitude": -53.329916
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJI1VBDPl9jpQRSaUkJdYPEBo",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Gabriel Metais",
+					"business_name": "Gabriel Metais",
+					"identity": "98736353000159",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "gabriel.metais@ignorant-descendant.net",
+					"phones": ["(67) 3441-4920"],
+					"website": null,
+					"started_activity_in": "2017-06-26T07:08:17.153Z",
+					"address": {
+						"zip_code": "79750-000",
+						"street": "R. Walter Hubacher",
+						"number": "2389",
+						"complement": null,
+						"district": "Centro, Nova Andradina",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2571945,
+						"longitude": -53.3569374
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.04,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 39.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.86,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 759.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 133.49,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 131.32,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJm5rRGMl9jpQRMVCvzBmEU-A",
+						"rating": 4.5,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"point_of_interest",
+							"service",
+							"store",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RC comércio de metais comprador de latinhas",
+					"business_name": "RC comércio de metais comprador de latinhas",
+					"identity": "48277495000127",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rc.comercio.de.metais.comprador.de.latinhas@prime-jacket.info",
+					"phones": ["(67) 99844-4587"],
+					"website": null,
+					"started_activity_in": "2019-11-09T09:55:44.808Z",
+					"address": {
+						"zip_code": "79750-000",
+						"street": "R. Francisco de Assis Reinaldth",
+						"number": "2277",
+						"complement": null,
+						"district": "Cristo Rei, Nova Andradina",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.253070299999997,
+						"longitude": -53.3607691
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "16:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:15"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.08,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 955
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.34,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 367.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 161.33,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 103.49,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 75.96,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-15T03:12:52.222Z",
+					"observations": "Ventito arbustum creator.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.220165,
+								"longitude": -53.36466,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788296016783
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Berkshire",
+							"streetNumber": "490",
+							"street": "Kamren Meadows",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44615719",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Maple Street, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ayla-jerde.9.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"description": "Communis sol caries vomica denuncio thorax repellendus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Kiarra Wintheiser",
+			"display_name": "Kiarra",
+			"phone": "(92) 99780-2826",
+			"email": "kiarra-wintheiser.2.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "81484-738",
+				"street": "Baumbach Manor",
+				"number": "451",
+				"complement": null,
+				"district": "Hampshire",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.263871,
+				"longitude": -53.354391
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ9cay_LZ9jpQR5EHDt_YI6-k",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho São Carlos",
+					"business_name": "Ferro Velho São Carlos",
+					"identity": "09724037878",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.sao.carlos@sticky-cappelletti.name",
+					"phones": ["(67) 3441-1838"],
+					"website": null,
+					"started_activity_in": "2018-02-13T01:27:43.774Z",
+					"address": {
+						"zip_code": "79750-000",
+						"street": "R. Redentor",
+						"number": "1147",
+						"complement": null,
+						"district": "Centro, Nova Andradina",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.2492135,
+						"longitude": -53.3454212
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.62,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 976.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 673.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.5,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 594.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 254.31,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 145.26,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 195.33,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 59.12,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 274.92,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 191.12,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJI1GV4-B8jpQRNW1XIu_xjIQ",
+						"rating": 4,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Sena",
+					"business_name": "Ferro Velho Sena",
+					"identity": "05088622996",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.sena@incomparable-shark.org",
+					"phones": ["(67) 3441-2575"],
+					"website": null,
+					"started_activity_in": "2022-01-24T12:23:03.819Z",
+					"address": {
+						"zip_code": "79750-000",
+						"street": "Av. Antônio Joaquim de Moura Andrade",
+						"number": "S/N",
+						"complement": null,
+						"district": "Nova Andradina, MS, , Brasil",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.232460200000002,
+						"longitude": -53.335750399999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.94,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 423.9
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.41,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 558.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.39,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 969
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.02,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 564.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.07,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 502.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.11,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 769.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 274.74,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 114.07,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 244.13,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 146.97,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 157.52,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Alexa Hilpert",
+			"display_name": "Alexa",
+			"phone": "(83) 92695-8939",
+			"email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "98061-430",
+				"street": "Cherry Tree Close",
+				"number": "6138",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.219646,
+				"longitude": -53.337785
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lebsack - Crooks Reciclagem",
+					"business_name": "Lebsack - Crooks Reciclagem",
+					"identity": "60771635000114",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Jared14@cautious-descendant.biz",
+					"phones": ["(32) 99548-9342"],
+					"website": null,
+					"started_activity_in": "2025-11-05T21:07:31.893Z",
+					"address": {
+						"zip_code": "62433-051",
+						"street": "Lula Mill",
+						"number": "659",
+						"complement": null,
+						"district": "Borders",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.250063,
+						"longitude": -53.36489
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 374.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.35,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 713
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 701.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.28,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 626.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.68,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 981.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 932.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 203.6,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 258.69,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 58.89,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 66.86,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Emard Group Reciclagem",
+					"business_name": "Emard Group Reciclagem",
+					"identity": "92914907000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Ciara_OHara@perfumed-husband.org",
+					"phones": ["(01) 96309-5468"],
+					"website": null,
+					"started_activity_in": "2025-05-03T06:59:58.380Z",
+					"address": {
+						"zip_code": "84961-558",
+						"street": "Bashirian Fork",
+						"number": "846",
+						"complement": null,
+						"district": "Mid Glamorgan",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.277211,
+						"longitude": -53.321649
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 796.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.42,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 317.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 746.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 185.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.71,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 576.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.76,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 50.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 66.14,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 124.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 177.36,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 150.15,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 156.24,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 219.02,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-03T23:40:04.476Z",
+					"observations": "Consequatur sum auditor versus ambitus xiphias avarus correptius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.22588,
+								"longitude": -53.330732,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788331624012
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "County Fermanagh",
+							"streetNumber": "542",
+							"street": "Frontage Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34191901",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Graham Centers, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Eletroeletrônicos (REEE)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kiarra-wintheiser.2.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"description": "Doloribus quo deporto confido rem cubo vinum coaegresco sortitus civis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-11T00:01:47.881Z",
+					"observations": "Accommodo aeneus cras aestivus ager animi thema adflicto pecto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.246818,
+								"longitude": -53.326045,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342829827
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Lancashire",
+							"streetNumber": "74024",
+							"street": "Cruickshank Junctions",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75891631",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Field Close, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bruce-stoltenberg.13.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ayla-jerde.9.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+							"description": "Clibanus auctor claro surculus adsidue adopto qui ciminatio summopere.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+							"description": "Reiciendis aro arbitro adulatio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Derrick Koss",
+			"display_name": "Derrick",
+			"phone": "(39) 96982-6887",
+			"email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "48890-552",
+				"street": "Franecki Rapids",
+				"number": "6600",
+				"complement": null,
+				"district": "Suffolk",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.226405,
+				"longitude": -53.32002
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Littel - Hills Reciclagem",
+					"business_name": "Littel - Hills Reciclagem",
+					"identity": "42844551920",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Dorothy43@flawless-louse.com",
+					"phones": ["(12) 93455-5149"],
+					"website": null,
+					"started_activity_in": "2021-12-10T14:19:48.721Z",
+					"address": {
+						"zip_code": "19648-751",
+						"street": "Zackary Lock",
+						"number": "64005",
+						"complement": null,
+						"district": "Scott County",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.234553,
+						"longitude": -53.365309
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.65,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 515.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.65,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 583.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.21,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 911.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 138.46,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 204.53,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 254.51,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 204.02,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 191.02,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Auer, Torp and Kozey Reciclagem",
+					"business_name": "Auer, Torp and Kozey Reciclagem",
+					"identity": "09156509000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Rosie.Mohr@likable-lamp.info",
+					"phones": ["(41) 98670-8403"],
+					"website": null,
+					"started_activity_in": "2022-10-26T22:46:30.970Z",
+					"address": {
+						"zip_code": "87924-932",
+						"street": "Brekke Hills",
+						"number": "69135",
+						"complement": null,
+						"district": "Clwyd",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.263284,
+						"longitude": -53.32385
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.36,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 718.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.52,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 345.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.6,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 154.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.92,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 209.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 276.74,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 209.4,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-02T02:16:22.154Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.272567,
+								"longitude": -53.358624,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275143877
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Marion County",
+							"streetNumber": "73225",
+							"street": "Meadow Way",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12986371",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oscar Pike, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-13T10:27:00.577Z",
+					"observations": "Victoria deprecator cibo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.276246,
+								"longitude": -53.318058,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788355306377
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Highlands and Islands",
+							"streetNumber": "607",
+							"street": "Jane Radial",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39847718",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Skyla Lane, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Nels Legros",
+			"display_name": "Nels",
+			"phone": "(99) 96118-6623",
+			"email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "19707-955",
+				"street": "Monroe Street",
+				"number": "165",
+				"complement": null,
+				"district": "Montgomery County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.225829,
+				"longitude": -53.338911
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Koch - Cormier Reciclagem",
+					"business_name": "Koch - Cormier Reciclagem",
+					"identity": "18018616841",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Regina_Watsica@shadowy-pneumonia.biz",
+					"phones": ["(61) 90318-6439"],
+					"website": null,
+					"started_activity_in": "2026-07-30T07:46:15.139Z",
+					"address": {
+						"zip_code": "28915-446",
+						"street": "Schneider Park",
+						"number": "653",
+						"complement": null,
+						"district": "Borders",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.235395,
+						"longitude": -53.331813
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 814.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.52,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 223.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 159.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.3,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 465.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.27,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 26.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 67.72,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 140.39,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Wolf - Cruickshank Reciclagem",
+					"business_name": "Wolf - Cruickshank Reciclagem",
+					"identity": "65193182720",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Shayne_McDermott@scratchy-cinema.biz",
+					"phones": ["(44) 92868-4651"],
+					"website": null,
+					"started_activity_in": "2020-10-03T05:08:59.255Z",
+					"address": {
+						"zip_code": "70103-442",
+						"street": "Nicholas Burgs",
+						"number": "24571",
+						"complement": null,
+						"district": "Durham",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.228296,
+						"longitude": -53.337194
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.2,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 931.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.66,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 364.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 231.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.37,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 223
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.16,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 217.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.17,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 285.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 51.52,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 115.93,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 273.8,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 228.3,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 52.28,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 164.18,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Carmelo Hand",
+			"display_name": "Carmelo",
+			"phone": "(89) 90593-1177",
+			"email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "68550-961",
+				"street": "Elsa Estates",
+				"number": "6808",
+				"complement": null,
+				"district": "Somerset",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.280778,
+				"longitude": -53.367027
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Dickinson - Beatty Reciclagem",
+					"business_name": "Dickinson - Beatty Reciclagem",
+					"identity": "37182829000162",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Mabel_Smith82@slight-vibration.org",
+					"phones": ["(03) 98677-8364"],
+					"website": null,
+					"started_activity_in": "2023-06-24T21:26:36.338Z",
+					"address": {
+						"zip_code": "11252-239",
+						"street": "Tower Road",
+						"number": "4559",
+						"complement": null,
+						"district": "Berkshire",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.259258,
+						"longitude": -53.319431
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.65,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 965.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.86,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 775.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 260.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 171.15,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 254.62,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kling Inc Reciclagem",
+					"business_name": "Kling Inc Reciclagem",
+					"identity": "16722392651",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Simone42@frilly-nerve.biz",
+					"phones": ["(79) 98173-7454"],
+					"website": null,
+					"started_activity_in": "2022-10-24T18:27:47.496Z",
+					"address": {
+						"zip_code": "18127-536",
+						"street": "Conn-Nikolaus Dale",
+						"number": "5993",
+						"complement": null,
+						"district": "Rutland",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.213005,
+						"longitude": -53.337857
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.17,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 513.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.61,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 986.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.5,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 551.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 22.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.76,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 306.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 226.15,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 195.12,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 215.71,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 67.35,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 62.53,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-05T22:13:46.335Z",
+					"observations": "Corpus terreo vomica defleo testimonium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.22696,
+								"longitude": -53.35846,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788282439723
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Lincoln County",
+							"streetNumber": "59704",
+							"street": "Hodkiewicz Forges",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49885090",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Market Place, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Papel / Papelão", "Vidro"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Antonia White",
+			"display_name": "Antonia",
+			"phone": "(53) 98762-3584",
+			"email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "05113-381",
+				"street": "Teri Ramp",
+				"number": "6263",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.241311,
+				"longitude": -53.332632
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Carroll-Morar Inc Reciclagem",
+					"business_name": "Carroll-Morar Inc Reciclagem",
+					"identity": "94041245000100",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Benedict_Kshlerin62@old-fashioned-eternity.name",
+					"phones": ["(68) 94750-4677"],
+					"website": null,
+					"started_activity_in": "2024-12-01T10:46:10.501Z",
+					"address": {
+						"zip_code": "38359-660",
+						"street": "Senger Groves",
+						"number": "93093",
+						"complement": null,
+						"district": "Polk County",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.239298,
+						"longitude": -53.370555
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 625.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.42,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 861
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.92,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 740.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.37,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 571.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 129.01,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 124.08,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 284.79,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 205.36,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 62.56,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hammes, Kovacek and Labadie Reciclagem",
+					"business_name": "Hammes, Kovacek and Labadie Reciclagem",
+					"identity": "86108985000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Peyton80@dazzling-reorganisation.name",
+					"phones": ["(58) 99784-1155"],
+					"website": null,
+					"started_activity_in": "2022-05-30T00:51:15.767Z",
+					"address": {
+						"zip_code": "38741-240",
+						"street": "Birch Avenue",
+						"number": "32411",
+						"complement": null,
+						"district": "Scott County",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.233419,
+						"longitude": -53.356783
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 906.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.64,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 855.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.68,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 184.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.87,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 626.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 394.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 137.62,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 210.55,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 170.75,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 50.62,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 155.37,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-22T12:35:04.623Z",
+					"observations": "Praesentium turpis antea ars vester fugiat.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.224216,
+								"longitude": -53.32275,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342555947
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Dorset",
+							"streetNumber": "8729",
+							"street": "Bernhard Trace",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76602133",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Waino Ferry, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kiarra-wintheiser.2.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bruce-stoltenberg.13.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dawson-anderson.12.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"description": "Solium nihil cauda vitae.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"description": "Centum cito illum corrumpo tabula clam molestiae unde possimus brevis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-22T12:16:15.496Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.244876,
+								"longitude": -53.330545,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330313993
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "West Yorkshire",
+							"streetNumber": "774",
+							"street": "Emard-Abshire Pike",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91247455",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E River Road, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Papel / Papelão",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ayla-jerde.9.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"description": "Vester sequi acer timor capillus pauci unde asperiores coadunatio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "kiarra-wintheiser.2.nova-andradina-ms@oikos.seed",
+							"description": "Eveniet ambitus voluptatem vigor carus amor magnam virga adsum.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Blaze Dietrich-Lubowitz",
+			"display_name": "Blaze",
+			"phone": "(16) 95732-8028",
+			"email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "33973-810",
+				"street": "Greenville Road",
+				"number": "7022",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.270466,
+				"longitude": -53.353864
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Cormier, Dooley and Ferry Reciclagem",
+					"business_name": "Cormier, Dooley and Ferry Reciclagem",
+					"identity": "07421213000136",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Marie_Oberbrunner@alive-allocation.net",
+					"phones": ["(60) 93633-0194"],
+					"website": null,
+					"started_activity_in": "2024-04-09T17:37:20.251Z",
+					"address": {
+						"zip_code": "54571-058",
+						"street": "Wisozk Skyway",
+						"number": "86389",
+						"complement": null,
+						"district": "Rutland",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.230218,
+						"longitude": -53.333467
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 915
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 770.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.95,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 434.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.55,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 242.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 499.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 70.09,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 175.29,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Connelly Inc Reciclagem",
+					"business_name": "Connelly Inc Reciclagem",
+					"identity": "80561805000143",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Rebekah.Lebsack61@likable-joy.name",
+					"phones": ["(87) 93288-0058"],
+					"website": null,
+					"started_activity_in": "2022-10-08T01:15:56.839Z",
+					"address": {
+						"zip_code": "72887-429",
+						"street": "Hickle Junction",
+						"number": "8215",
+						"complement": null,
+						"district": "County Tyrone",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.276984,
+						"longitude": -53.321397
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 227.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.95,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 797.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.42,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 617.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 210.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 232.11,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 175.47,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-28T18:35:59.202Z",
+					"observations": "Venustas suscipio ex spargo placeat rerum terreo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.280487,
+								"longitude": -53.370322,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788305806941
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Rutland",
+							"streetNumber": "59739",
+							"street": "Boyle Garden",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93247312",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Emma Hills, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "bruce-stoltenberg.13.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dawson-anderson.12.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-29T23:52:06.534Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.244648,
+								"longitude": -53.337048,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276764957
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Clay County",
+							"streetNumber": "4121",
+							"street": "Donnelly Station",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22319877",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Steve Ville, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ayla Jerde",
+			"display_name": "Ayla",
+			"phone": "(32) 98514-3569",
+			"email": "ayla-jerde.9.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "32469-627",
+				"street": "Wintheiser Route",
+				"number": "1402",
+				"complement": null,
+				"district": "Lee County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.276255,
+				"longitude": -53.349757
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kautzer Inc Reciclagem",
+					"business_name": "Kautzer Inc Reciclagem",
+					"identity": "21288333000138",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Jerome52@squeaky-decision.net",
+					"phones": ["(92) 99296-1662"],
+					"website": null,
+					"started_activity_in": "2019-09-15T02:23:22.798Z",
+					"address": {
+						"zip_code": "55433-608",
+						"street": "S Monroe Street",
+						"number": "78768",
+						"complement": null,
+						"district": "Jackson County",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.233255,
+						"longitude": -53.32645
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.09,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 943.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.82,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 828
+						},
+						{
+							"name": "Construção Civil e Demolição (RCD)",
+							"description": "Coleta de resíduos: Construção Civil e Demolição (RCD)",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 380
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.68,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 539.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.33,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 406.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.11,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 47.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 293.82,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 141.13,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Quitzon, Hermann and Thiel Reciclagem",
+					"business_name": "Quitzon, Hermann and Thiel Reciclagem",
+					"identity": "17277612000129",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Morris.Hodkiewicz69@yellowish-privilege.info",
+					"phones": ["(10) 94339-5585"],
+					"website": null,
+					"started_activity_in": "2019-10-29T11:58:02.661Z",
+					"address": {
+						"zip_code": "91007-670",
+						"street": "S Main",
+						"number": "236",
+						"complement": null,
+						"district": "Somerset",
+						"city": "Nova Andradina",
+						"city_ibge_id": 5006200,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -22.278297,
+						"longitude": -53.337047
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.23,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 373.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.59,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 972.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 895.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 134.2,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 56.69,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 135.91,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 91,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 53.38,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 157.84,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-01T04:58:56.065Z",
+					"observations": "Stips adfero deludo incidunt dignissimos.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.271608,
+								"longitude": -53.368026,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308817669
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Durham",
+							"streetNumber": "7600",
+							"street": "Boyd Route",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01650231",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Main Street, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Verona Wisoky",
+			"display_name": "Verona",
+			"phone": "(63) 92300-9816",
+			"email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "71820-570",
+				"street": "Gloucester Road",
+				"number": "23559",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.24922,
+				"longitude": -53.334399
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-26T19:26:52.399Z",
+					"observations": "Antea deinde adiuvo dolore utilis iste eveniet aptus caput.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.224101,
+								"longitude": -53.325858,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788360515566
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "South Yorkshire",
+							"streetNumber": "92621",
+							"street": "The Poplars",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22165864",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alexandra Road, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Joanny Schowalter",
+			"display_name": "Joanny",
+			"phone": "(41) 95229-8496",
+			"email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "64351-437",
+				"street": "Lynne Rapids",
+				"number": "30216",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.225635,
+				"longitude": -53.331502
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-04T18:36:53.795Z",
+					"observations": "Suus quidem tardus comitatus tremo cupiditas substantia tamquam ascisco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.280467,
+								"longitude": -53.321321,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327618985
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Morgan County",
+							"streetNumber": "5341",
+							"street": "Mattie Circle",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15006111",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wilderman Glen, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Madeira",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bruce-stoltenberg.13.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ayla-jerde.9.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dawson-anderson.12.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"description": "Territo vacuus adaugeo tremo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-29T06:09:43.132Z",
+					"observations": "Umbra corona tendo summopere tolero voluptas tabernus auxilium dolorum constans.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.239902,
+								"longitude": -53.318224,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788354518401
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Cumbria",
+							"streetNumber": "6768",
+							"street": "Farrell Divide",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09904794",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N High Street, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Borracha / Pneus",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dawson Anderson",
+			"display_name": "Dawson",
+			"phone": "(98) 94862-3685",
+			"email": "dawson-anderson.12.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "61031-060",
+				"street": "Ellen Dale",
+				"number": "492",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.2594,
+				"longitude": -53.336674
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-02T19:35:08.557Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.276579,
+								"longitude": -53.366016,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294720979
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "County Fermanagh",
+							"streetNumber": "6492",
+							"street": "Braulio Terrace",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06853422",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Goldner Neck, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Óleo Mineral / Lubrificante",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Bruce Stoltenberg",
+			"display_name": "Bruce",
+			"phone": "(57) 95602-4976",
+			"email": "bruce-stoltenberg.13.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "50674-762",
+				"street": "Reichel Oval",
+				"number": "4893",
+				"complement": null,
+				"district": "South Yorkshire",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.224125,
+				"longitude": -53.3572
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-29T19:35:49.487Z",
+					"observations": "Utor tendo conculco sum tenus ait advenio apud paulatim viscus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.256775,
+								"longitude": -53.359058,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285823380
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "West Sussex",
+							"streetNumber": "944",
+							"street": "Geneva Views",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "80643820",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hilll Estates, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ayla-jerde.9.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-14T23:37:09.294Z",
+					"observations": "Thema desipio derelinquo volaticus tum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.270632,
+								"longitude": -53.32182,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788334538865
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Hamilton County",
+							"streetNumber": "72874",
+							"street": "June Loaf",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94738940",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Spruce Street, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-30T02:23:03.755Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.259228,
+								"longitude": -53.33365,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316772966
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Logan County",
+							"streetNumber": "53418",
+							"street": "Flora Wells",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51389763",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Manuel Walk, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Borracha / Pneus",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-09T09:41:33.641Z",
+					"observations": "Ratione voluptas denego fuga adaugeo bene.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.259155,
+								"longitude": -53.347327,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349703401
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Calhoun County",
+							"streetNumber": "66996",
+							"street": "Kent Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98484057",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Swaniawski Shore, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-08T07:07:54.083Z",
+					"observations": "Advoco comedo statim soleo tracto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.216511,
+								"longitude": -53.3531,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314785553
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Cheshire",
+							"streetNumber": "96484",
+							"street": "McKenzie Shores",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26540795",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Paula Grove, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Medicamentos",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"description": "Cubo expedita delego apparatus suggero cauda arcesso sumo vorago mollitia.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+							"description": "Demo speculum abeo adeptio patrocinor laudantium adfectus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-12T00:12:50.980Z",
+					"observations": "Conqueror bardus tumultus thymbra calco solitudo abbas terreo arbitro crepusculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.225572,
+								"longitude": -53.361869,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788283510934
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Calhoun County",
+							"streetNumber": "294",
+							"street": "South Avenue",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65222614",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Laburnum Grove, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-11T19:16:40.429Z",
+					"observations": "Natus thorax creber aperiam iste abduco temporibus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.238162,
+								"longitude": -53.351254,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276057763
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "South Yorkshire",
+							"streetNumber": "45588",
+							"street": "Julie Loaf",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36936458",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schumm Pine, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Hildegard Haley",
+			"display_name": "Hildegard",
+			"phone": "(30) 93401-8848",
+			"email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "93893-841",
+				"street": "New Road",
+				"number": "74914",
+				"complement": null,
+				"district": "Buckinghamshire",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.22514,
+				"longitude": -53.324026
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-15T00:47:41.053Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.212065,
+								"longitude": -53.330474,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788351195414
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "West Glamorgan",
+							"streetNumber": "5441",
+							"street": "Church Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "08933462",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Melanie Ports, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-10T20:14:10.954Z",
+					"observations": "Sunt totam synagoga dolore verus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.273653,
+								"longitude": -53.342852,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315489544
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Calhoun County",
+							"streetNumber": "92407",
+							"street": "Clinton Mission",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "07333543",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reichel Causeway, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bruce-stoltenberg.13.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kiarra-wintheiser.2.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "blaze-dietrich-lubowitz.8.nova-andradina-ms@oikos.seed",
+							"description": "Clarus theatrum comburo spes vereor beatae.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-07-20T01:01:59.694Z",
+					"observations": "Theologus aut vorago ceno ambitus subnecto vetus cohaero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.222936,
+								"longitude": -53.355878,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288750155
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "County Armagh",
+							"streetNumber": "85335",
+							"street": "Littel Hollow",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "75856303",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Amely Junctions, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "verona-wisoky.10.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Paxton Rath",
+			"display_name": "Paxton",
+			"phone": "(33) 93369-7295",
+			"email": "paxton-rath.15.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "78997-539",
+				"street": "The Avenue",
+				"number": "7437",
+				"complement": null,
+				"district": "Jackson County",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.248418,
+				"longitude": -53.351056
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-14T03:50:59.235Z",
+					"observations": "Cariosus sol cauda deficio tam accendo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.23652,
+								"longitude": -53.368174,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344559325
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Warren County",
+							"streetNumber": "2466",
+							"street": "Bruce Coves",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26016827",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jerde Orchard, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "nels-legros.5.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "antonia-white.7.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heath-hand.1.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+							"description": "Annus venustas spoliatio autus subito pel talio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "alexa-hilpert.3.nova-andradina-ms@oikos.seed",
+							"description": "Vivo esse altus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-04T20:54:07.741Z",
+					"observations": "Concedo modi alter texo defetiscor adopto bardus ter coaegresco sponte.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.232036,
+								"longitude": -53.337401,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307818591
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Hampshire",
+							"streetNumber": "94687",
+							"street": "Nyah Fields",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61479201",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Pine Close, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-03T03:43:09.278Z",
+					"observations": "Aestas cubicularis corpus suscipio neque tergum conventus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.275219,
+								"longitude": -53.325669,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312816418
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Hancock County",
+							"streetNumber": "1833",
+							"street": "Sauer Overpass",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62735364",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "St Andrews Close, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Embalagens Contaminadas",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dawson-anderson.12.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carmelo-hand.6.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-03T09:59:09.606Z",
+					"observations": "Blandior termes ultra somniculosus bardus crepusculum stipes.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.222041,
+								"longitude": -53.354418,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346739273
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Lincoln County",
+							"streetNumber": "66109",
+							"street": "E 6th Avenue",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "38051977",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chestnut Grove, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "joanny-schowalter.11.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-24T07:27:21.613Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -22.238746,
+								"longitude": -53.32404,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353675685
+						},
+						"addresses": {
+							"city": "Nova Andradina",
+							"district": "Isle of Wight",
+							"streetNumber": "2151",
+							"street": "S Railroad Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30535747",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Franklin Street, Nova Andradina - MS"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Borracha / Pneus",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "hildegard-haley.14.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nils-jacobs.0.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "derrick-koss.4.nova-andradina-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rosario Haley",
+			"display_name": "Rosario",
+			"phone": "(28) 99483-5751",
+			"email": "rosario-haley.16.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "51645-696",
+				"street": "Nader Common",
+				"number": "4788",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.27165,
+				"longitude": -53.325636
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Emerson Wintheiser",
+			"display_name": "Emerson",
+			"phone": "(02) 96600-0415",
+			"email": "emerson-wintheiser.17.nova-andradina-ms@oikos.seed",
+			"address": {
+				"zip_code": "16781-013",
+				"street": "Lorenza Fort",
+				"number": "3913",
+				"complement": null,
+				"district": "Somerset",
+				"city": "Nova Andradina",
+				"city_ibge_id": 5006200,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -22.23118,
+				"longitude": -53.34722
+			},
+			"companies": [],
+			"complaints": []
+		}
+	]
+}

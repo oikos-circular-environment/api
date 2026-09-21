@@ -1,34 +1,29 @@
-import "dotenv/config";
 import { randomUUID } from "node:crypto";
-import bcryptjs from "bcryptjs";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 
 describe("change-password", () => {
-	const createdUserIds: string[] = [];
+	const createdEmails: string[] = [];
 
-	async function createUser(password = "current-password-123") {
-		const id = randomUUID();
-		const email = `e2e-${id}@test.local`;
-		const hash = await bcryptjs.hash(password, 6);
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, $3, NOW())`,
-			id,
-			email,
-			hash,
-		);
-		createdUserIds.push(id);
-		return { id, email, password };
+	function makeEmail() {
+		const email = `change-password-${randomUUID()}@test.local`;
+		createdEmails.push(email);
+		return email;
 	}
 
-	async function login(
-		email: string,
-		password: string,
-	): Promise<{ token: string; refreshToken: string }> {
+	async function signUp(email: string, password: string) {
+		return app.inject({
+			method: "POST",
+			url: "/auth/sign-up/email",
+			payload: { name: "Test User", email, password },
+		});
+	}
+
+	async function signIn(email: string, password: string) {
 		const res = await app.inject({
 			method: "POST",
-			url: "/v1/auth/login",
+			url: "/auth/sign-in/email",
 			payload: { email, password },
 		});
 		return res.json();
@@ -43,117 +38,86 @@ describe("change-password", () => {
 	});
 
 	afterEach(async () => {
-		if (createdUserIds.length > 0) {
-			const placeholders = createdUserIds.map((_, i) => `$${i + 1}`).join(", ");
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM refresh_tokens WHERE user_id IN (${placeholders})`,
-				...createdUserIds,
-			);
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${placeholders})`,
-				...createdUserIds,
-			);
-			createdUserIds.length = 0;
+		if (createdEmails.length > 0) {
+			await prisma.user.deleteMany({
+				where: { email: { in: createdEmails } },
+			});
+			createdEmails.length = 0;
 		}
 	});
 
-	// ─── PATCH /v1/users/me/change-password ──────────────────────────────────
-
 	describe("PATCH /v1/users/me/change-password", () => {
-		it("200 — changes the password, returns a new pair and revokes other sessions", async () => {
-			const user = await createUser();
-			// Two devices: one whose session we keep, one that must be dropped.
-			const current = await login(user.email, user.password);
-			const other = await login(user.email, user.password);
+		it("204 — changes the password and keeps other sessions valid", async () => {
+			const email = makeEmail();
+			const password = "Test@123456";
+			const newPassword = "NewPass@123456";
+
+			await signUp(email, password);
+			const current = await signIn(email, password);
+			const other = await signIn(email, password);
 
 			const res = await app.inject({
 				method: "PATCH",
 				url: "/v1/users/me/change-password",
 				headers: { authorization: `Bearer ${current.token}` },
 				payload: {
-					current_password: user.password,
-					new_password: "brand-new-password-456",
+					current_password: password,
+					new_password: newPassword,
 				},
 			});
 
-			expect(res.statusCode).toBe(200);
-			const body = res.json();
-			expect(typeof body.token).toBe("string");
-			expect(typeof body.refreshToken).toBe("string");
+			expect(res.statusCode).toBe(204);
+			expect(res.payload).toBe("");
 
-			// The other device's refresh token no longer works.
-			const otherRefresh = await app.inject({
-				method: "PATCH",
-				url: "/v1/auth/refresh",
-				payload: { refreshToken: other.refreshToken },
+			const otherSessionRes = await app.inject({
+				method: "GET",
+				url: "/auth/get-session",
+				headers: { authorization: `Bearer ${other.token}` },
 			});
-			expect(otherRefresh.statusCode).toBe(401);
+			expect(otherSessionRes.statusCode).toBe(200);
 
-			// The freshly issued refresh token works.
-			const newRefresh = await app.inject({
-				method: "PATCH",
-				url: "/v1/auth/refresh",
-				payload: { refreshToken: body.refreshToken },
-			});
-			expect(newRefresh.statusCode).toBe(200);
-
-			// The new password authenticates; the old one does not.
-			const relogin = await app.inject({
+			const newLoginRes = await app.inject({
 				method: "POST",
-				url: "/v1/auth/login",
-				payload: { email: user.email, password: "brand-new-password-456" },
+				url: "/auth/sign-in/email",
+				payload: { email, password: newPassword },
 			});
-			expect(relogin.statusCode).toBe(200);
+			expect(newLoginRes.statusCode).toBe(200);
 
-			const oldLogin = await app.inject({
+			const oldLoginRes = await app.inject({
 				method: "POST",
-				url: "/v1/auth/login",
-				payload: { email: user.email, password: user.password },
+				url: "/auth/sign-in/email",
+				payload: { email, password },
 			});
-			expect(oldLogin.statusCode).toBe(401);
+			expect(oldLoginRes.statusCode).toBe(401);
 		});
 
 		it("401 — wrong current password", async () => {
-			const user = await createUser();
-			const { token } = await login(user.email, user.password);
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await signUp(email, password);
+			const { token } = await signIn(email, password);
 
 			const res = await app.inject({
 				method: "PATCH",
 				url: "/v1/users/me/change-password",
 				headers: { authorization: `Bearer ${token}` },
 				payload: {
-					current_password: "wrong-password-999",
-					new_password: "brand-new-password-456",
+					current_password: "WrongPass@123456",
+					new_password: "NewPass@123456",
 				},
 			});
 
 			expect(res.statusCode).toBe(401);
 		});
 
-		it("422 — new password equals the current one", async () => {
-			const user = await createUser();
-			const { token } = await login(user.email, user.password);
-
-			const res = await app.inject({
-				method: "PATCH",
-				url: "/v1/users/me/change-password",
-				headers: { authorization: `Bearer ${token}` },
-				payload: {
-					current_password: user.password,
-					new_password: user.password,
-				},
-			});
-
-			expect(res.statusCode).toBe(422);
-		});
-
-		it("401 — without an access token", async () => {
+		it("401 — without a session token", async () => {
 			const res = await app.inject({
 				method: "PATCH",
 				url: "/v1/users/me/change-password",
 				payload: {
-					current_password: "current-password-123",
-					new_password: "brand-new-password-456",
+					current_password: "Test@123456",
+					new_password: "NewPass@123456",
 				},
 			});
 
@@ -161,14 +125,20 @@ describe("change-password", () => {
 		});
 
 		it("400 — new password shorter than 6 chars rejected by schema", async () => {
-			const user = await createUser();
-			const { token } = await login(user.email, user.password);
+			const email = makeEmail();
+			const password = "Test@123456";
+
+			await signUp(email, password);
+			const { token } = await signIn(email, password);
 
 			const res = await app.inject({
 				method: "PATCH",
 				url: "/v1/users/me/change-password",
 				headers: { authorization: `Bearer ${token}` },
-				payload: { current_password: user.password, new_password: "123" },
+				payload: {
+					current_password: password,
+					new_password: "123",
+				},
 			});
 
 			expect(res.statusCode).toBe(400);

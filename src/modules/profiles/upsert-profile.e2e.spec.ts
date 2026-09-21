@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
+import { createTestUser, loginTestUser } from "@/test/auth-test-helpers.js";
 
 describe("upsert-profile", () => {
 	const createdUserIds: string[] = [];
@@ -10,19 +11,14 @@ describe("upsert-profile", () => {
 	async function createUser(
 		email?: string,
 	): Promise<{ id: string; email: string }> {
-		const userId = randomUUID();
-		const userEmail = email ?? `e2e-${userId}@test.local`;
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
-			userId,
-			userEmail,
-		);
-		createdUserIds.push(userId);
-		return { id: userId, email: userEmail };
+		const user = await createTestUser(email ? { email } : undefined);
+		createdUserIds.push(user.id);
+		return { id: user.id, email: user.email };
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email?: string): Promise<string> {
+		const { token } = await loginTestUser(userId);
+		return token;
 	}
 
 	beforeAll(async () => {
@@ -50,7 +46,9 @@ describe("upsert-profile", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: "/v1/profiles",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				full_name: "Maria Silva",
 				display_name: `maria-${randomUUID().slice(0, 8)}`,
@@ -78,6 +76,11 @@ describe("upsert-profile", () => {
 		expect(body.profile.full_name).toBe("Maria Silva");
 		expect(body.profile.address).not.toBeNull();
 		expect(body.profile.address.city).toBe("São Paulo");
+
+		const account = await prisma.user.findUniqueOrThrow({
+			where: { id: user.id },
+		});
+		expect(account.name).toBe("Maria Silva");
 	});
 
 	it("200 — updates existing profile", async () => {
@@ -87,7 +90,9 @@ describe("upsert-profile", () => {
 		await app.inject({
 			method: "PUT",
 			url: "/v1/profiles",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				full_name: "Original Name",
 				display_name: displayName,
@@ -98,7 +103,9 @@ describe("upsert-profile", () => {
 		const res = await app.inject({
 			method: "PUT",
 			url: "/v1/profiles",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				full_name: "Updated Name",
 				display_name: displayName,
@@ -110,6 +117,11 @@ describe("upsert-profile", () => {
 		const body = res.json();
 		expect(body.profile.full_name).toBe("Updated Name");
 		expect(body.profile.phone).toBe("11999990001");
+
+		const account = await prisma.user.findUniqueOrThrow({
+			where: { id: user.id },
+		});
+		expect(account.name).toBe("Updated Name");
 	});
 
 	it("401 — missing authorization token", async () => {

@@ -1,6 +1,6 @@
 import {
 	DeleteObjectCommand,
-	GetObjectCommand,
+	HeadBucketCommand,
 	HeadObjectCommand,
 	PutObjectCommand,
 	S3Client,
@@ -76,19 +76,7 @@ export class MinioBucket implements StorageProvider {
 		}
 	}
 
-	async convertFileToBase64(filePath: string): Promise<string> {
-		const response = await this.client.send(
-			new GetObjectCommand({
-				Bucket: this.bucket,
-				Key: filePath,
-			}),
-		);
-
-		if (!response.Body) {
-			throw new Error("File not found");
-		}
-
-		const bytes = await response.Body.transformToByteArray();
-		return Buffer.from(bytes).toString("base64");
+	async ping(): Promise<void> {
+		await this.client.send(new HeadBucketCommand({ Bucket: this.bucket }));
 	}
 }

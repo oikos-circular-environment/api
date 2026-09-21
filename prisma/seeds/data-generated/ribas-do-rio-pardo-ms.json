@@ -1,0 +1,5572 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:53:59.418Z",
+		"city": "Ribas do Rio Pardo",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Garret Beahan",
+			"display_name": "Garret",
+			"phone": "(07) 90854-2115",
+			"email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "25465-125",
+				"street": "Murphy Alley",
+				"number": "21764",
+				"complement": null,
+				"district": "County Londonderry",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.453259,
+				"longitude": -53.759844
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Bahringer LLC Reciclagem",
+					"business_name": "Bahringer LLC Reciclagem",
+					"identity": "12656528000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Jarrod_Huel40@sunny-testing.info",
+					"phones": ["(79) 93428-0149"],
+					"website": null,
+					"started_activity_in": "2017-02-06T18:43:52.788Z",
+					"address": {
+						"zip_code": "80720-298",
+						"street": "Gleason Oval",
+						"number": "2966",
+						"complement": null,
+						"district": "Wayne County",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.451229,
+						"longitude": -53.759872
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.84,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 765.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.53,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 758
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.41,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 605.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.56,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 447.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.82,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 165.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 145.78,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 291.3,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 276.38,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 170.6,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 137.05,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 156.14,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Crona, Parker and Collins Reciclagem",
+					"business_name": "Crona, Parker and Collins Reciclagem",
+					"identity": "63906425207",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Jerrell.Orn-Larkin81@eminent-fax.biz",
+					"phones": ["(30) 97763-1601"],
+					"website": null,
+					"started_activity_in": "2019-12-25T12:27:50.902Z",
+					"address": {
+						"zip_code": "22154-367",
+						"street": "N Union Street",
+						"number": "8024",
+						"complement": null,
+						"district": "Wiltshire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.450821,
+						"longitude": -53.759066
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.8,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 750.9
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.44,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 252.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 427.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.86,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 202.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.46,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 512.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.85,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 868.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 123.47,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 136.25,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 149.8,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 208.53,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 136.12,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 127.98,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-24T23:23:57.972Z",
+					"observations": "Beatae velit ab vereor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.452119,
+								"longitude": -53.760462,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342116592
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "County Fermanagh",
+							"streetNumber": "75599",
+							"street": "Wellington Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91301822",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Annetta Circles, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Embalagens Contaminadas",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "myles-hoeger.5.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-11T20:43:09.126Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451613,
+								"longitude": -53.760528,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285709002
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Tyne and Wear",
+							"streetNumber": "2538",
+							"street": "Richmond Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "33647188",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ara Ridge, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Shirley Reilly",
+			"display_name": "Shirley",
+			"phone": "(28) 97363-5950",
+			"email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "63798-924",
+				"street": "E River Road",
+				"number": "65306",
+				"complement": null,
+				"district": "Fayette County",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.452555,
+				"longitude": -53.758958
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Pfannerstill, Armstrong and Boyle Reciclagem",
+					"business_name": "Pfannerstill, Armstrong and Boyle Reciclagem",
+					"identity": "04800602000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Yessenia11@remarkable-ravioli.org",
+					"phones": ["(44) 92384-7940"],
+					"website": null,
+					"started_activity_in": "2020-08-19T08:44:36.683Z",
+					"address": {
+						"zip_code": "28812-921",
+						"street": "Hodkiewicz Radial",
+						"number": "34143",
+						"complement": null,
+						"district": "Tyne and Wear",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.451183,
+						"longitude": -53.759863
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.9,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 82.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.71,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 336.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.12,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 381.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.68,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 255.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 442.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.55,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 860
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 111.7,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 155.42,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 122.94,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 285.36,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 92.44,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 250.83,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Pagac Group Reciclagem",
+					"business_name": "Pagac Group Reciclagem",
+					"identity": "50150509000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Kristy_Jast51@weird-independence.net",
+					"phones": ["(08) 93608-6109"],
+					"website": null,
+					"started_activity_in": "2019-06-20T00:44:33.120Z",
+					"address": {
+						"zip_code": "27969-622",
+						"street": "Mayer Fork",
+						"number": "169",
+						"complement": null,
+						"district": "Strathclyde",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452107,
+						"longitude": -53.758823
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 533.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.34,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 229
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 834.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 663.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.74,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 841.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 202.7,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 276.9,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 110.84,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 129.41,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 68.15,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-28T18:05:40.522Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451077,
+								"longitude": -53.760539,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340350665
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Greater Manchester",
+							"streetNumber": "342",
+							"street": "Water Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02198733",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W North Street, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Plástico",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-10T03:20:27.490Z",
+					"observations": "Eos aequitas uterque cuppedia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451232,
+								"longitude": -53.759385,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788302255641
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Cambridgeshire",
+							"streetNumber": "234",
+							"street": "Leroy Garden",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26984959",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hodkiewicz Park, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ricky Botsford",
+			"display_name": "Ricky",
+			"phone": "(98) 92274-4390",
+			"email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "13208-494",
+				"street": "Bogan Camp",
+				"number": "5241",
+				"complement": null,
+				"district": "Powys",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.45073,
+				"longitude": -53.76083
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Satterfield LLC Reciclagem",
+					"business_name": "Satterfield LLC Reciclagem",
+					"identity": "24666400000107",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Jacqueline_Padberg77@intrepid-lady.biz",
+					"phones": ["(14) 98018-1522"],
+					"website": null,
+					"started_activity_in": "2018-06-29T05:18:13.142Z",
+					"address": {
+						"zip_code": "89120-301",
+						"street": "Cromwell Road",
+						"number": "3345",
+						"complement": null,
+						"district": "Fife",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.453217,
+						"longitude": -53.758943
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.44,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 315.1
+						},
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 1,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 615.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 235.07,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 244.72,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Pacocha, Emmerich and Swift Reciclagem",
+					"business_name": "Pacocha, Emmerich and Swift Reciclagem",
+					"identity": "01787977820",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Erwin.Homenick@complete-lifestyle.name",
+					"phones": ["(26) 94250-0611"],
+					"website": null,
+					"started_activity_in": "2017-10-11T04:31:40.837Z",
+					"address": {
+						"zip_code": "83580-542",
+						"street": "E Washington Avenue",
+						"number": "933",
+						"complement": null,
+						"district": "Washington County",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.453085,
+						"longitude": -53.760971
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.31,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 91.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.37,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 207.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 390
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 677.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 295.84,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 190.94,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 161.58,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-14T11:31:39.387Z",
+					"observations": "Tergum acer tandem antiquus adaugeo tepidus decipio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.453239,
+								"longitude": -53.760756,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316322316
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Morgan County",
+							"streetNumber": "446",
+							"street": "Bedford Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65318406",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mante Skyway, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Louie Bashirian",
+			"display_name": "Louie",
+			"phone": "(41) 94485-7314",
+			"email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "41840-255",
+				"street": "Murphy Meadows",
+				"number": "432",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.45107,
+				"longitude": -53.759301
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Blick - Considine Reciclagem",
+					"business_name": "Blick - Considine Reciclagem",
+					"identity": "75073061942",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Chad24@formal-manner.org",
+					"phones": ["(76) 90916-6332"],
+					"website": null,
+					"started_activity_in": "2017-07-08T10:39:17.265Z",
+					"address": {
+						"zip_code": "95247-181",
+						"street": "Stewart Shore",
+						"number": "5431",
+						"complement": null,
+						"district": "Lancashire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.45119,
+						"longitude": -53.758814
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.77,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 821.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.59,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 43.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.65,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 64.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.25,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 856.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 83.57,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 168.66,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 272.01,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 196.16,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Schaden, Wehner and Paucek Reciclagem",
+					"business_name": "Schaden, Wehner and Paucek Reciclagem",
+					"identity": "28674441000198",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Alma_Kessler60@optimal-cuckoo.com",
+					"phones": ["(76) 95990-0125"],
+					"website": null,
+					"started_activity_in": "2025-02-18T19:30:12.455Z",
+					"address": {
+						"zip_code": "07162-328",
+						"street": "William Street",
+						"number": "22314",
+						"complement": null,
+						"district": "Somerset",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.451126,
+						"longitude": -53.759199
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.6,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 140.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 491
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 282.83,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 116.6,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 91.64,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 148.13,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-06T15:45:01.749Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.45281,
+								"longitude": -53.761008,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312218739
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "South Glamorgan",
+							"streetNumber": "10176",
+							"street": "Ziemann Underpass",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79398324",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Franklin Street, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-23T13:47:33.468Z",
+					"observations": "Sordeo asperiores theca aureus adinventitias adficio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.452923,
+								"longitude": -53.760819,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311780642
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Douglas County",
+							"streetNumber": "7719",
+							"street": "Boyle Lodge",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20430088",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aufderhar Highway, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Lâmpadas",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Katelynn Fadel",
+			"display_name": "Katelynn",
+			"phone": "(61) 94611-4989",
+			"email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "59147-063",
+				"street": "Veronica Shores",
+				"number": "5730",
+				"complement": null,
+				"district": "Avon",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.452297,
+				"longitude": -53.759289
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Cremin Inc Reciclagem",
+					"business_name": "Cremin Inc Reciclagem",
+					"identity": "19449746000105",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Mitchel_Kiehn@stained-backbone.info",
+					"phones": ["(99) 94702-9225"],
+					"website": null,
+					"started_activity_in": "2024-03-04T00:15:01.285Z",
+					"address": {
+						"zip_code": "64167-367",
+						"street": "Schulist Spurs",
+						"number": "637",
+						"complement": null,
+						"district": "Derbyshire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452998,
+						"longitude": -53.758903
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.28,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 540.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 949.7
+						},
+						{
+							"name": "Lâmpadas",
+							"description": "Coleta de resíduos: Lâmpadas",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 274.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 102.4,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 91.11,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 65.68,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Feest - Upton Reciclagem",
+					"business_name": "Feest - Upton Reciclagem",
+					"identity": "34883422000174",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Jared0@lumbering-sock.biz",
+					"phones": ["(11) 97570-9676"],
+					"website": null,
+					"started_activity_in": "2018-07-31T21:06:56.335Z",
+					"address": {
+						"zip_code": "63593-980",
+						"street": "Lancaster Road",
+						"number": "938",
+						"complement": null,
+						"district": "Derbyshire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452439,
+						"longitude": -53.760909
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 669.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.55,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 394.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.27,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 197.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 743.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.34,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 902.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 134.04,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 52.87,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 263.21,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 108.76,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 84.92,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-13T09:32:42.362Z",
+					"observations": "Abstergo tabula sumo thymbra adamo aegrotatio alveus tantum templum atrox.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451566,
+								"longitude": -53.759127,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788351371043
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Somerset",
+							"streetNumber": "65228",
+							"street": "Hall Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25358033",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wellington Street, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-15T05:53:51.993Z",
+					"observations": "Volubilis crastinus triumphus veniam admiratio tergeo labore.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451265,
+								"longitude": -53.75912,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306791778
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Cambridgeshire",
+							"streetNumber": "989",
+							"street": "Abel Hollow",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55476515",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Daphne Path, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "myles-hoeger.5.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "shaun-kris.16.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Comis perspiciatis id.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Myles Hoeger",
+			"display_name": "Myles",
+			"phone": "(81) 99039-5864",
+			"email": "myles-hoeger.5.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "20172-074",
+				"street": "Salvador Motorway",
+				"number": "54256",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451049,
+				"longitude": -53.761159
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Renner and Sons Reciclagem",
+					"business_name": "Renner and Sons Reciclagem",
+					"identity": "17448930000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Neal_Ward79@spiffy-accountability.info",
+					"phones": ["(99) 97944-2351"],
+					"website": null,
+					"started_activity_in": "2019-10-24T20:13:21.336Z",
+					"address": {
+						"zip_code": "99546-285",
+						"street": "Alfredo Burgs",
+						"number": "60992",
+						"complement": null,
+						"district": "Humberside",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.453,
+						"longitude": -53.760511
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 42.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 854.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.84,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 666.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 64.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 113.98,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 297.17,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 152.63,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 106.08,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 50.76,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 260.24,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Wintheiser, Parker and Farrell-Pagac Reciclagem",
+					"business_name": "Wintheiser, Parker and Farrell-Pagac Reciclagem",
+					"identity": "56463148000117",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Itzel86@sarcastic-wear.biz",
+					"phones": ["(38) 94978-4184"],
+					"website": null,
+					"started_activity_in": "2022-11-25T11:43:26.912Z",
+					"address": {
+						"zip_code": "25828-065",
+						"street": "7th Street",
+						"number": "966",
+						"complement": null,
+						"district": "Marshall County",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.451443,
+						"longitude": -53.760842
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.57,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 953.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 118.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.57,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 753.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.12,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 985.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.5,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 303.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 838.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 159.97,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 287.82,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 270.12,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 276,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 290.72,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 293.81,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-28T01:08:22.802Z",
+					"observations": "Suffoco defetiscor tot alter textus spero torrens thymum depono aggredior.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451694,
+								"longitude": -53.761246,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788300087534
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Bedfordshire",
+							"streetNumber": "457",
+							"street": "Charles Shoals",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92137342",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Funk Mount, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Vidro",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-24T11:06:29.693Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451432,
+								"longitude": -53.759665,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312668910
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Lothian",
+							"streetNumber": "47122",
+							"street": "Noah Causeway",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43267587",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jenkins Parks, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Madeira",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Renee Mueller",
+			"display_name": "Renee",
+			"phone": "(38) 95323-6930",
+			"email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "10442-469",
+				"street": "Finn Mall",
+				"number": "4592",
+				"complement": null,
+				"district": "Essex",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451486,
+				"longitude": -53.758863
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Ernser LLC Reciclagem",
+					"business_name": "Ernser LLC Reciclagem",
+					"identity": "13801822000113",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Zoe.Stanton@super-polyester.net",
+					"phones": ["(43) 91334-7777"],
+					"website": null,
+					"started_activity_in": "2018-11-17T09:52:00.792Z",
+					"address": {
+						"zip_code": "51376-136",
+						"street": "O'Conner Hill",
+						"number": "528",
+						"complement": null,
+						"district": "Borders",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.453256,
+						"longitude": -53.761412
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.58,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 635.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.14,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 408.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 167.55,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 203.23,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 284.53,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 87.83,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 92.96,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 113.5,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Bechtelar - Reinger Reciclagem",
+					"business_name": "Bechtelar - Reinger Reciclagem",
+					"identity": "05652097000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Bianka.Hintz@insecure-sanity.com",
+					"phones": ["(41) 95767-2231"],
+					"website": null,
+					"started_activity_in": "2017-11-11T13:05:46.685Z",
+					"address": {
+						"zip_code": "46508-795",
+						"street": "Deborah Via",
+						"number": "7777",
+						"complement": null,
+						"district": "Derbyshire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452041,
+						"longitude": -53.760967
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 411.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.74,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 204.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 659.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.81,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 193.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 845.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 257.12,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 272.5,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 134.56,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 282.31,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-22T02:31:29.652Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.452665,
+								"longitude": -53.759793,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788348185041
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Somerset",
+							"streetNumber": "8521",
+							"street": "Manor Drive",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88081216",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Collier Squares, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-20T09:22:35.361Z",
+					"observations": "Ancilla talio valeo pariatur.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.453185,
+								"longitude": -53.75937,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353844389
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Franklin County",
+							"streetNumber": "44549",
+							"street": "Frederick Route",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55553135",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Amelia Rapids, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Melyssa Crona",
+			"display_name": "Melyssa",
+			"phone": "(11) 96375-4040",
+			"email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "87043-442",
+				"street": "St John's Road",
+				"number": "3585",
+				"complement": null,
+				"district": "Avon",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.452486,
+				"longitude": -53.759056
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Heaney Group Reciclagem",
+					"business_name": "Heaney Group Reciclagem",
+					"identity": "80148985000136",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Tiffany_Baumbach@submissive-sand.com",
+					"phones": ["(73) 94935-4642"],
+					"website": null,
+					"started_activity_in": "2021-10-23T10:02:03.439Z",
+					"address": {
+						"zip_code": "35287-389",
+						"street": "Beech Grove",
+						"number": "8860",
+						"complement": null,
+						"district": "Borders",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452569,
+						"longitude": -53.761382
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.4,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 959.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 187
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.6,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 214.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 422.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 190.54,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 137.76,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "O'Connell - Kemmer Reciclagem",
+					"business_name": "O'Connell - Kemmer Reciclagem",
+					"identity": "06304791000120",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Ana3@near-peninsula.biz",
+					"phones": ["(48) 93397-9672"],
+					"website": null,
+					"started_activity_in": "2025-04-11T08:57:30.911Z",
+					"address": {
+						"zip_code": "17959-977",
+						"street": "Franklin Avenue",
+						"number": "677",
+						"complement": null,
+						"district": "Mid Glamorgan",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452063,
+						"longitude": -53.761062
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.04,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 102
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.49,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 867.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.22,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 795.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 71.35,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 237.08,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 267.49,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-10T03:20:46.765Z",
+					"observations": "Stillicidium at coerceo termes vitium aperte trans ultio color.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.452684,
+								"longitude": -53.760373,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788350071253
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Union County",
+							"streetNumber": "246",
+							"street": "Clarence Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86797507",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kulas Manors, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Embalagens Contaminadas",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-kris.16.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Valeo varius vita vehemens cruciamentum adulatio porro voluptatum toties aetas.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-15T01:10:16.955Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.452752,
+								"longitude": -53.759427,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788332690658
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Greater Manchester",
+							"streetNumber": "517",
+							"street": "Guy Isle",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89425340",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Citlalli Trail, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ruthie Ferry",
+			"display_name": "Ruthie",
+			"phone": "(82) 94438-5660",
+			"email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "90344-854",
+				"street": "Glen Springs",
+				"number": "345",
+				"complement": null,
+				"district": "Berkshire",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.45197,
+				"longitude": -53.758817
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Breitenberg, Roob and Williamson Reciclagem",
+					"business_name": "Breitenberg, Roob and Williamson Reciclagem",
+					"identity": "12474794000104",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Jeremiah63@hungry-season.org",
+					"phones": ["(50) 97402-1539"],
+					"website": null,
+					"started_activity_in": "2019-04-11T04:18:42.618Z",
+					"address": {
+						"zip_code": "64025-824",
+						"street": "Larson-Padberg Ridges",
+						"number": "261",
+						"complement": null,
+						"district": "Carroll County",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.452441,
+						"longitude": -53.761385
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.28,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 122.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.25,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 962.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 648.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 94.33,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 231.88,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 234.06,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 288.67,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 172.28,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 73.95,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Harris, Romaguera and Rippin Reciclagem",
+					"business_name": "Harris, Romaguera and Rippin Reciclagem",
+					"identity": "69779776630",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Malcolm_Predovic40@avaricious-bakeware.org",
+					"phones": ["(03) 94239-3717"],
+					"website": null,
+					"started_activity_in": "2024-01-29T02:19:07.807Z",
+					"address": {
+						"zip_code": "70361-308",
+						"street": "Valentina Fords",
+						"number": "584",
+						"complement": null,
+						"district": "Worcestershire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.451379,
+						"longitude": -53.759365
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.13,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 391.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 849.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 160.8,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 84.86,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-01T00:45:35.017Z",
+					"observations": "Stabilis tumultus molestiae sed vae tero quidem nam subito cultellus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451844,
+								"longitude": -53.760968,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788325543033
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Northamptonshire",
+							"streetNumber": "35706",
+							"street": "Doug Mount",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05976027",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Emmett Forge, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-27T01:19:49.386Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451292,
+								"longitude": -53.761259,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315857178
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Wayne County",
+							"streetNumber": "7729",
+							"street": "Herzog Pike",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89484104",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Quinton Vista, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-kris.16.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "myles-hoeger.5.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Alienus clibanus traho callide sulum apostolus rerum damno quisquam tredecim.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Defleo speciosus crustulum acceptus acer fuga causa.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-30T18:27:42.976Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.45263,
+								"longitude": -53.758827,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353151319
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Warren County",
+							"streetNumber": "12284",
+							"street": "W Pine Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92599153",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Berge Manors, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-24T22:20:04.034Z",
+					"observations": "Deporto absorbeo casso.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451142,
+								"longitude": -53.760708,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788322994081
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Dorset",
+							"streetNumber": "20337",
+							"street": "Crystal Alley",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "33007397",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kuhn Lakes, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "myles-hoeger.5.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Winfield Willms",
+			"display_name": "Winfield",
+			"phone": "(55) 91064-8615",
+			"email": "winfield-willms.9.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "97833-835",
+				"street": "Rutherford Glen",
+				"number": "62173",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451004,
+				"longitude": -53.759608
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Jacobson - Kuvalis Reciclagem",
+					"business_name": "Jacobson - Kuvalis Reciclagem",
+					"identity": "31441234000106",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Arnoldo_Ernser-Trantow61@nifty-gripper.biz",
+					"phones": ["(69) 93040-7118"],
+					"website": null,
+					"started_activity_in": "2021-09-12T11:36:11.442Z",
+					"address": {
+						"zip_code": "44407-049",
+						"street": "Third Avenue",
+						"number": "7890",
+						"complement": null,
+						"district": "Jefferson County",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.451477,
+						"longitude": -53.758983
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.5,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 483.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.25,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 275.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.98,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 430
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 55.06,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 272.06,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Gleason - Haley Reciclagem",
+					"business_name": "Gleason - Haley Reciclagem",
+					"identity": "19777341000104",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Bennie61@victorious-lawmaker.info",
+					"phones": ["(43) 97880-8360"],
+					"website": null,
+					"started_activity_in": "2020-12-26T06:21:41.313Z",
+					"address": {
+						"zip_code": "75974-603",
+						"street": "Willis Motorway",
+						"number": "124",
+						"complement": null,
+						"district": "Leicestershire",
+						"city": "Ribas do Rio Pardo",
+						"city_ibge_id": 5007109,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.450841,
+						"longitude": -53.759349
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.54,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 797.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 735.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 56.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 110.71,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 129.98,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 199.81,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 147.74,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 184.35,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-04T06:46:34.780Z",
+					"observations": "Adinventitias corrigo supra creber necessitatibus sursum agnosco cerno canonicus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451018,
+								"longitude": -53.759027,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330389728
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Clay County",
+							"streetNumber": "34274",
+							"street": "Reichert Mill",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92920385",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Water Street, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Louvenia Gorczany",
+			"display_name": "Louvenia",
+			"phone": "(26) 95497-3005",
+			"email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "37215-364",
+				"street": "Tara Mission",
+				"number": "269",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451043,
+				"longitude": -53.760227
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-20T11:12:17.201Z",
+					"observations": "Quas acervus tondeo culpa sophismata desipio caries minus vis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.450901,
+								"longitude": -53.7592,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318226857
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Lincoln County",
+							"streetNumber": "98527",
+							"street": "Smitham Park",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "93777624",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nichole Roads, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "winfield-willms.9.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Coerceo dolorum aufero tabernus animi.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Absque depraedor tenuis velut cupressus audeo vinum sed uter.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Silvia Ratke",
+			"display_name": "Silvia",
+			"phone": "(72) 97327-8977",
+			"email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "61616-998",
+				"street": "Alfred Street",
+				"number": "55703",
+				"complement": null,
+				"district": "Leicestershire",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451868,
+				"longitude": -53.759299
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-23T09:37:03.087Z",
+					"observations": "Concedo compello eveniet abduco commodo atrocitas ager.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451469,
+								"longitude": -53.760956,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311353779
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Marshall County",
+							"streetNumber": "6062",
+							"street": "Larkin Causeway",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "73215399",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Chestnut Street, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-16T20:57:46.176Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451484,
+								"longitude": -53.759424,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297619558
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Lee County",
+							"streetNumber": "791",
+							"street": "Ronaldo Greens",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21854325",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N 5th Street, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-kris.16.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Atque tergum demoror debeo civitas dignissimos abutor aranea explicabo.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Tabella catena sophismata tactus campana cohors.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Sidney Parisian",
+			"display_name": "Sidney",
+			"phone": "(18) 95354-7018",
+			"email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "04069-558",
+				"street": "Center Avenue",
+				"number": "30050",
+				"complement": null,
+				"district": "South Glamorgan",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.453285,
+				"longitude": -53.760247
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Lela Nikolaus",
+			"display_name": "Lela",
+			"phone": "(78) 96051-4656",
+			"email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "84840-313",
+				"street": "Bosco Row",
+				"number": "48440",
+				"complement": null,
+				"district": "Perry County",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.452139,
+				"longitude": -53.761034
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Marguerite O'Conner",
+			"display_name": "Marguerite",
+			"phone": "(39) 99363-6033",
+			"email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "46155-831",
+				"street": "Lemuel Terrace",
+				"number": "4117",
+				"complement": null,
+				"district": "Hamilton County",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.452228,
+				"longitude": -53.760706
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-14T04:48:51.493Z",
+					"observations": "Tabernus stipes attero circumvenio depromo atrox titulus tertius talus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.453171,
+								"longitude": -53.760013,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321964332
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Cheshire",
+							"streetNumber": "9855",
+							"street": "The Dell",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79813315",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kamren Field, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas", "Medicamentos"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Bud Gislason",
+			"display_name": "Bud",
+			"phone": "(07) 95209-6241",
+			"email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "34017-435",
+				"street": "Dolly Cliff",
+				"number": "4649",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451314,
+				"longitude": -53.759087
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-21T16:31:57.408Z",
+					"observations": "Vis succurro xiphias voluntarius.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451235,
+								"longitude": -53.759138,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304617530
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Hertfordshire",
+							"streetNumber": "890",
+							"street": "E 12th Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10643302",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Atlantic Avenue, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Plástico", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Shaun Kris",
+			"display_name": "Shaun",
+			"phone": "(17) 95447-0203",
+			"email": "shaun-kris.16.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "32006-326",
+				"street": "Bell Lane",
+				"number": "95919",
+				"complement": null,
+				"district": "Union County",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.45212,
+				"longitude": -53.759546
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-12T12:01:48.735Z",
+					"observations": "Cruentus deprimo audeo demergo amet vomito avarus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.453264,
+								"longitude": -53.760989,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788323172094
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Hancock County",
+							"streetNumber": "895",
+							"street": "15th Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "77825805",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kunde Station, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida", "Plástico"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lela-nikolaus.13.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-18T18:55:40.978Z",
+					"observations": "Nulla summa crinis inventore comitatus calculus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.451055,
+								"longitude": -53.759457,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788331100370
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Monroe County",
+							"streetNumber": "31361",
+							"street": "Effertz Shores",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28142796",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Carlee Crest, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Embalagens Contaminadas",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "winfield-willms.9.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Soluta vesco chirographum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Spero adficio audacia agnitio vulticulus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-16T12:14:15.728Z",
+					"observations": "Adiuvo ducimus tyrannus abutor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.452282,
+								"longitude": -53.76092,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788300263315
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "West Yorkshire",
+							"streetNumber": "582",
+							"street": "Middle Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "30857399",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Broadway Avenue, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Lâmpadas",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "myles-hoeger.5.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Sponte sub avaritia clamo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Debeo adinventitias paulatim ventus abstergo ullus curso voluntarius ab.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Floy Schaefer",
+			"display_name": "Floy",
+			"phone": "(96) 99704-3874",
+			"email": "floy-schaefer.17.ribas-do-rio-pardo-ms@oikos.seed",
+			"address": {
+				"zip_code": "21636-729",
+				"street": "Hills Grove",
+				"number": "9489",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Ribas do Rio Pardo",
+				"city_ibge_id": 5007109,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.451271,
+				"longitude": -53.759482
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-06T08:02:30.815Z",
+					"observations": "Creta arcesso correptius vespillo umbra totam debilito artificiose suffoco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.453044,
+								"longitude": -53.759817,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788291938392
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Franklin County",
+							"streetNumber": "3942",
+							"street": "Klocko-Towne Port",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01828486",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cormier Manor, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sidney-parisian.12.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-kris.16.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "garret-beahan.0.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bud-gislason.15.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Thymum tepidus amiculum commodi sono.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Ad cognomen solvo aedificium valetudo capillus supplanto sum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-02T17:18:28.972Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.453014,
+								"longitude": -53.760517,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327145818
+						},
+						"addresses": {
+							"city": "Ribas do Rio Pardo",
+							"district": "Greene County",
+							"streetNumber": "5998",
+							"street": "Chestnut Close",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56332328",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ash Close, Ribas do Rio Pardo - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "louie-bashirian.3.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "renee-mueller.6.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "louvenia-gorczany.10.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "silvia-ratke.11.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "katelynn-fadel.4.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ricky-botsford.2.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "melyssa-crona.7.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ruthie-ferry.8.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "shirley-reilly.1.ribas-do-rio-pardo-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "marguerite-o-conner.14.ribas-do-rio-pardo-ms@oikos.seed",
+							"description": "Curvo defessus valens decumbo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		}
+	]
+}

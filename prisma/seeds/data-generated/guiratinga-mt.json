@@ -1,0 +1,5430 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:22:03.652Z",
+		"city": "Guiratinga",
+		"state_code": "MT",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Maiya Schultz",
+			"display_name": "Maiya",
+			"phone": "(18) 97205-2841",
+			"email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "46592-563",
+				"street": "Gutmann Falls",
+				"number": "11963",
+				"complement": null,
+				"district": "South Yorkshire",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.34507,
+				"longitude": -53.776355
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "King - Walsh Reciclagem",
+					"business_name": "King - Walsh Reciclagem",
+					"identity": "25250055000180",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Wilma56@whopping-godparent.net",
+					"phones": ["(75) 91542-8265"],
+					"website": null,
+					"started_activity_in": "2022-04-24T06:31:03.812Z",
+					"address": {
+						"zip_code": "66859-479",
+						"street": "A Street",
+						"number": "8105",
+						"complement": null,
+						"district": "West Sussex",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.343977,
+						"longitude": -53.766695
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.81,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 795.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.26,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 517
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.5,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 607.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.72,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 384.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.86,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 73.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.13,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 90.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 176.27,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 175.35,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 132.67,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 228.49,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 241.77,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Runolfsson-Barrows - Wehner-Wintheiser Reciclagem",
+					"business_name": "Runolfsson-Barrows - Wehner-Wintheiser Reciclagem",
+					"identity": "67328486000162",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Edyth99@formal-gown.info",
+					"phones": ["(81) 94385-2656"],
+					"website": null,
+					"started_activity_in": "2024-05-18T22:55:54.856Z",
+					"address": {
+						"zip_code": "06247-045",
+						"street": "Buford Common",
+						"number": "575",
+						"complement": null,
+						"district": "Lancashire",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.34551,
+						"longitude": -53.768936
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.03,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 572
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 276.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.8,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 528.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 161.47,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 284.47,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 224.78,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 78.77,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 215.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-02T22:43:23.615Z",
+					"observations": "Tres tabella crastinus vel.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.3428,
+								"longitude": -53.772264,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303942320
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Union County",
+							"streetNumber": "968",
+							"street": "Priory Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "17650336",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Perry Lakes, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Têxtil / Roupas / Tecidos",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Akeem Casper",
+			"display_name": "Akeem",
+			"phone": "(04) 98090-6143",
+			"email": "akeem-casper.1.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "86806-622",
+				"street": "Corwin Terrace",
+				"number": "483",
+				"complement": null,
+				"district": "Morgan County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345479,
+				"longitude": -53.772511
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Gerhold LLC Reciclagem",
+					"business_name": "Gerhold LLC Reciclagem",
+					"identity": "88673679000120",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Sadie_Dickinson11@whimsical-stool.info",
+					"phones": ["(68) 90582-5610"],
+					"website": null,
+					"started_activity_in": "2023-12-16T08:17:21.494Z",
+					"address": {
+						"zip_code": "12380-124",
+						"street": "Krajcik-Ward Street",
+						"number": "54926",
+						"complement": null,
+						"district": "Powys",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.345853,
+						"longitude": -53.762186
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.07,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 394.5
+						},
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 3.73,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 473.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 243.85,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 190,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lemke, Beatty and Schulist Reciclagem",
+					"business_name": "Lemke, Beatty and Schulist Reciclagem",
+					"identity": "18687482000165",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Josh_Cummerata12@steep-starboard.com",
+					"phones": ["(63) 96146-5886"],
+					"website": null,
+					"started_activity_in": "2019-11-03T13:08:46.773Z",
+					"address": {
+						"zip_code": "44452-452",
+						"street": "Turner Valley",
+						"number": "688",
+						"complement": null,
+						"district": "County Fermanagh",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.343605,
+						"longitude": -53.761683
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.15,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 231.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.55,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 479.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.56,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 186.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.3,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 555.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 982.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.72,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 461.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 198.41,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 291,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 156.41,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 138.43,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-05T00:41:28.956Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345303,
+								"longitude": -53.774959,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788301571465
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Gloucestershire",
+							"streetNumber": "69100",
+							"street": "16th Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21614808",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maple Avenue, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Madeira",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-25T04:31:09.820Z",
+					"observations": "Vorago adulescens cibus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345766,
+								"longitude": -53.77599,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788290445572
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Logan County",
+							"streetNumber": "1199",
+							"street": "Duke Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74536951",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Kathleen Mill, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "valerie-funk.10.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marge-kris.2.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"description": "Ex ait adstringo thalassinus viridis cumque cultura aliquam validus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-27T19:13:30.399Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.343815,
+								"longitude": -53.764364,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788239059176
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Dorset",
+							"streetNumber": "989",
+							"street": "The Laurels",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "32496698",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Trevor Turnpike, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Marge Kris",
+			"display_name": "Marge",
+			"phone": "(98) 97672-6375",
+			"email": "marge-kris.2.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "24993-036",
+				"street": "St Andrew's Road",
+				"number": "92269",
+				"complement": null,
+				"district": "Gwent",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345647,
+				"longitude": -53.766705
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Nicolas LLC Reciclagem",
+					"business_name": "Nicolas LLC Reciclagem",
+					"identity": "46345168000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Howard_OKeefe3@slight-harp.name",
+					"phones": ["(30) 92425-3174"],
+					"website": null,
+					"started_activity_in": "2019-03-08T00:13:16.885Z",
+					"address": {
+						"zip_code": "85849-530",
+						"street": "Damion Terrace",
+						"number": "6818",
+						"complement": null,
+						"district": "Lothian",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.34383,
+						"longitude": -53.77633
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.74,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 44.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.62,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 722.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 236.67,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 182.03,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 158.44,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 249.16,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Breitenberg, Feeney and Herzog Reciclagem",
+					"business_name": "Breitenberg, Feeney and Herzog Reciclagem",
+					"identity": "50125380000169",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Geo18@shameful-hunt.biz",
+					"phones": ["(59) 93813-7604"],
+					"website": null,
+					"started_activity_in": "2025-09-11T11:30:19.539Z",
+					"address": {
+						"zip_code": "80343-730",
+						"street": "Alan Rapids",
+						"number": "999",
+						"complement": null,
+						"district": "Madison County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.343228,
+						"longitude": -53.762975
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.41,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 886.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 884.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 78.45,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 259.71,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 169.12,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 292.3,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 159.22,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 110.15,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Randolph Paucek-Botsford",
+			"display_name": "Randolph",
+			"phone": "(33) 92086-8083",
+			"email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "73836-217",
+				"street": "Marie Locks",
+				"number": "4443",
+				"complement": null,
+				"district": "Crawford County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.343242,
+				"longitude": -53.761339
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Fritsch, Cremin and Wyman Reciclagem",
+					"business_name": "Fritsch, Cremin and Wyman Reciclagem",
+					"identity": "13739688000178",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Fredy.Robel51@pitiful-dulcimer.com",
+					"phones": ["(14) 98987-4158"],
+					"website": null,
+					"started_activity_in": "2024-06-30T21:39:10.826Z",
+					"address": {
+						"zip_code": "59348-671",
+						"street": "Center Road",
+						"number": "994",
+						"complement": null,
+						"district": "Kent",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.343026,
+						"longitude": -53.765255
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.97,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 494
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.1,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 283.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.7,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 652.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 76.57,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 50.52,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 181.73,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 125.77,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 171.63,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 163.27,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Waelchi - Boyle Reciclagem",
+					"business_name": "Waelchi - Boyle Reciclagem",
+					"identity": "15434843000173",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Ervin.Dickinson@warm-tomatillo.net",
+					"phones": ["(12) 97634-5911"],
+					"website": null,
+					"started_activity_in": "2025-05-11T00:18:21.995Z",
+					"address": {
+						"zip_code": "65433-706",
+						"street": "Wolf Loaf",
+						"number": "498",
+						"complement": null,
+						"district": "Douglas County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.345815,
+						"longitude": -53.768942
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 580.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.24,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 821.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.75,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 124.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 752
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 259.27,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 95.57,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-14T11:08:22.467Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.34339,
+								"longitude": -53.765265,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275421234
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "West Yorkshire",
+							"streetNumber": "7439",
+							"street": "Glebe Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15195174",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Daugherty Squares, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Plástico",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "valerie-funk.10.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-06T08:43:36.774Z",
+					"observations": "Praesentium alienus clarus aegre aduro tenuis tot.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345048,
+								"longitude": -53.759824,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295008146
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "North Yorkshire",
+							"streetNumber": "911",
+							"street": "Oakfield Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50426864",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Middle Street, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Vidro",
+						"Madeira"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Darrion Glover",
+			"display_name": "Darrion",
+			"phone": "(27) 98843-0701",
+			"email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "14648-528",
+				"street": "Fadel Village",
+				"number": "4945",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.344627,
+				"longitude": -53.762282
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lynch and Sons Reciclagem",
+					"business_name": "Lynch and Sons Reciclagem",
+					"identity": "35257824000126",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Melisa52@immediate-legend.biz",
+					"phones": ["(60) 91095-5443"],
+					"website": null,
+					"started_activity_in": "2025-11-03T09:48:13.784Z",
+					"address": {
+						"zip_code": "10298-946",
+						"street": "Fourth Avenue",
+						"number": "321",
+						"complement": null,
+						"district": "Gwent",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.345018,
+						"longitude": -53.763567
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.55,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 43.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 521.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.13,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 507.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 118.27,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 94.49,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Quigley, Block and Pouros Reciclagem",
+					"business_name": "Quigley, Block and Pouros Reciclagem",
+					"identity": "02140051000144",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Jaylin.Hermann88@upright-challenge.net",
+					"phones": ["(22) 97157-6106"],
+					"website": null,
+					"started_activity_in": "2023-06-05T11:48:28.812Z",
+					"address": {
+						"zip_code": "00870-211",
+						"street": "Daniel Lane",
+						"number": "24663",
+						"complement": null,
+						"district": "Grampian",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.342753,
+						"longitude": -53.763277
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.38,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 392.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.87,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 274.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.77,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 31.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.91,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 266
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.94,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 267.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 809.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 52.31,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 263.66,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-22T12:20:30.669Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.34331,
+								"longitude": -53.762464,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308053002
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Hamilton County",
+							"streetNumber": "69755",
+							"street": "Kristian Parkway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79870044",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hegmann Key, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Opal Wolff",
+			"display_name": "Opal",
+			"phone": "(53) 95492-3246",
+			"email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "03123-098",
+				"street": "Kassulke Lock",
+				"number": "280",
+				"complement": null,
+				"district": "Dyfed",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.343913,
+				"longitude": -53.772937
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Corwin, Lehner and Reynolds Reciclagem",
+					"business_name": "Corwin, Lehner and Reynolds Reciclagem",
+					"identity": "72483694000176",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Heidi.Ankunding93@spirited-pillbox.net",
+					"phones": ["(67) 90775-1075"],
+					"website": null,
+					"started_activity_in": "2020-06-06T07:15:22.772Z",
+					"address": {
+						"zip_code": "25365-099",
+						"street": "W Jefferson Street",
+						"number": "657",
+						"complement": null,
+						"district": "Jackson County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.344981,
+						"longitude": -53.765053
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.82,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 308.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.78,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 762.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 291.51,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 217.37,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 294.41,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 227.61,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "O'Kon-Reinger, Hahn and Flatley Reciclagem",
+					"business_name": "O'Kon-Reinger, Hahn and Flatley Reciclagem",
+					"identity": "89455415437",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Isabelle.Leuschke34@afraid-secret.info",
+					"phones": ["(50) 95555-3884"],
+					"website": null,
+					"started_activity_in": "2026-03-01T14:31:23.811Z",
+					"address": {
+						"zip_code": "50381-723",
+						"street": "O'Keefe Pike",
+						"number": "473",
+						"complement": null,
+						"district": "Oxfordshire",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.344984,
+						"longitude": -53.764144
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.49,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 224.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 316.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.19,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 114.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 241.8,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 200.23,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-22T13:40:02.395Z",
+					"observations": "Depereo urbanus maiores.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345839,
+								"longitude": -53.767615,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788240740619
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Tayside",
+							"streetNumber": "8142",
+							"street": "South Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78672249",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gorczany Meadow, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eula-farrell.7.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+							"description": "Attollo curia deserunt appono vinculum denuncio deduco vergo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-26T09:26:33.143Z",
+					"observations": "Adulatio complectus summopere curtus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.342677,
+								"longitude": -53.772623,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788240527760
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Nottinghamshire",
+							"streetNumber": "620",
+							"street": "West Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15024679",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Park Street, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Veículos em Fim de Vida",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-ziemann.13.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"description": "Vulnus cernuus culpa sol cupressus ventus iusto desidero maxime.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"description": "Venustas bardus ademptio subiungo vinitor.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Tom Gleichner",
+			"display_name": "Tom",
+			"phone": "(82) 92836-0078",
+			"email": "tom-gleichner.6.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "12162-467",
+				"street": "Nya Lodge",
+				"number": "5030",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.343516,
+				"longitude": -53.774021
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Terry, Bashirian and Zemlak Reciclagem",
+					"business_name": "Terry, Bashirian and Zemlak Reciclagem",
+					"identity": "27517833000180",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Marjorie87@pastel-discourse.info",
+					"phones": ["(95) 90297-2669"],
+					"website": null,
+					"started_activity_in": "2018-08-07T16:28:29.560Z",
+					"address": {
+						"zip_code": "98099-312",
+						"street": "Tracey Street",
+						"number": "382",
+						"complement": null,
+						"district": "Devon",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.344107,
+						"longitude": -53.776267
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.75,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 458.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.18,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 587.8
+						},
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 4.4,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 297.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.77,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 581.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 337.3
+						},
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 2.27,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 346.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 66.3,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Construção Civil e Demolição (RCD)",
+							"description": "Serviço de coleta e transporte de Construção Civil e Demolição (RCD)",
+							"price": 113.65,
+							"unit": "UNIT",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 204.93,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 62.36,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 185.8,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Heidenreich - Reinger Reciclagem",
+					"business_name": "Heidenreich - Reinger Reciclagem",
+					"identity": "42533514000152",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Damien87@unlawful-extension.net",
+					"phones": ["(05) 97502-2757"],
+					"website": null,
+					"started_activity_in": "2016-11-05T16:45:50.995Z",
+					"address": {
+						"zip_code": "38965-156",
+						"street": "Cummerata Villages",
+						"number": "6995",
+						"complement": null,
+						"district": "Hampshire",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.344611,
+						"longitude": -53.763422
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.55,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 220
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.17,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 493.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 106.91,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 279.71,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 86.48,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-08T06:27:26.358Z",
+					"observations": "Statim dedico cado adipiscor eveniet capto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345358,
+								"longitude": -53.766871,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788300263796
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Montgomery County",
+							"streetNumber": "7045",
+							"street": "Willow Drive",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45616508",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "O'Connell Lane, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Medicamentos",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-22T23:00:10.733Z",
+					"observations": "Appositus crur tum tabgo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.34544,
+								"longitude": -53.769552,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788313240142
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Lee County",
+							"streetNumber": "7348",
+							"street": "N 3rd Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01078707",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Grant Street, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "marge-kris.2.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-31T20:35:00.007Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.346,
+								"longitude": -53.770784,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788268066252
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Adams County",
+							"streetNumber": "488",
+							"street": "Somerset Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28976184",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ezekiel Square, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Eula Farrell",
+			"display_name": "Eula",
+			"phone": "(85) 94112-2883",
+			"email": "eula-farrell.7.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "92091-185",
+				"street": "E 7th Street",
+				"number": "8780",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345248,
+				"longitude": -53.77695
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Boyle LLC Reciclagem",
+					"business_name": "Boyle LLC Reciclagem",
+					"identity": "88699280000119",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Jeffery_Wehner86@velvety-custody.biz",
+					"phones": ["(80) 94364-2915"],
+					"website": null,
+					"started_activity_in": "2021-04-20T16:32:04.269Z",
+					"address": {
+						"zip_code": "61133-228",
+						"street": "Deckow Knolls",
+						"number": "64350",
+						"complement": null,
+						"district": "Jefferson County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.34285,
+						"longitude": -53.764076
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 638.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 39.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 241
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.97,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 593.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 661.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.65,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 530.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 297.66,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 56.33,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hilpert Inc Reciclagem",
+					"business_name": "Hilpert Inc Reciclagem",
+					"identity": "24143576000176",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Elsie.OHara@smart-roundabout.org",
+					"phones": ["(11) 98778-3124"],
+					"website": null,
+					"started_activity_in": "2022-11-23T16:10:36.646Z",
+					"address": {
+						"zip_code": "06513-164",
+						"street": "Tom Cape",
+						"number": "68753",
+						"complement": null,
+						"district": "Hamilton County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.344403,
+						"longitude": -53.768799
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 431.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 66.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 53.32,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 185.56,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 214.61,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 251.49,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 150.47,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-09T03:44:06.374Z",
+					"observations": "Consequuntur universe quibusdam stipes coma.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.343694,
+								"longitude": -53.766101,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303757543
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "County Antrim",
+							"streetNumber": "3133",
+							"street": "Ratke Creek",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42531773",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rick Parkway, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Resíduos Orgânicos",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "tom-gleichner.6.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "akeem-casper.1.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-ziemann.13.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"description": "Eius cognatus deleniti ver vigilo tum tredecim venustas cuius.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"description": "Doloribus vere aequus paulatim talis supellex tondeo benigne.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-18T08:36:52.498Z",
+					"observations": "Stultus defluo fugiat atrox vacuus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.342752,
+								"longitude": -53.764869,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788265950578
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Jefferson County",
+							"streetNumber": "8401",
+							"street": "Nellie Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "47682053",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "North Lane, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Eletroeletrônicos (REEE)",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "valerie-funk.10.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rosalia Koepp",
+			"display_name": "Rosalia",
+			"phone": "(93) 96019-7682",
+			"email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "62919-996",
+				"street": "Beech Grove",
+				"number": "5205",
+				"complement": null,
+				"district": "Lothian",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345162,
+				"longitude": -53.776045
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kuhic - Leuschke Reciclagem",
+					"business_name": "Kuhic - Leuschke Reciclagem",
+					"identity": "24006495889",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Aaron.Kutch0@well-lit-airman.org",
+					"phones": ["(21) 92699-1187"],
+					"website": null,
+					"started_activity_in": "2024-12-24T08:23:18.971Z",
+					"address": {
+						"zip_code": "99359-671",
+						"street": "Station Street",
+						"number": "10176",
+						"complement": null,
+						"district": "West Midlands",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.345755,
+						"longitude": -53.768439
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.5,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 19.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.55,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 642.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 974.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 279.06,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 180.54,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 176.25,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 223.49,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 150,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 176.18,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "VonRueden - Kuhlman Reciclagem",
+					"business_name": "VonRueden - Kuhlman Reciclagem",
+					"identity": "59738975247",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Kaycee.Bosco18@appropriate-pension.biz",
+					"phones": ["(29) 91795-1558"],
+					"website": null,
+					"started_activity_in": "2025-02-18T18:14:14.603Z",
+					"address": {
+						"zip_code": "75069-930",
+						"street": "Nancy Row",
+						"number": "43053",
+						"complement": null,
+						"district": "Cornwall",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.345938,
+						"longitude": -53.776062
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.58,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 902
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.45,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 439.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 144.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.81,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 134.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 208.89,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 104.47,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 84.54,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 150.45,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 264.88,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-04T15:39:59.249Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.342683,
+								"longitude": -53.761411,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788269605460
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Tayside",
+							"streetNumber": "65162",
+							"street": "Howe-Pollich Ramp",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06886036",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Christine Park, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marge-kris.2.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-18T03:21:00.900Z",
+					"observations": "Depopulo tracto tonsor ventito aufero adflicto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.344093,
+								"longitude": -53.776444,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275737018
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Greater Manchester",
+							"streetNumber": "417",
+							"street": "Ronnie Corners",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65613137",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Main, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Pilhas e Baterias",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "akeem-casper.1.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"description": "Molestiae animus eum subnecto damno defluo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"description": "Ager tribuo terebro cariosus adipiscor cattus pecco urbanus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-07T16:01:48.819Z",
+					"observations": "Calculus statua possimus acceptus contego provident arto tego acceptus thymbra.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.343886,
+								"longitude": -53.762345,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292112218
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Wiltshire",
+							"streetNumber": "6446",
+							"street": "Grange Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49606938",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Erdman Junction, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Borracha / Pneus"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "eula-farrell.7.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Elsie Harvey",
+			"display_name": "Elsie",
+			"phone": "(97) 92669-8489",
+			"email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "29632-925",
+				"street": "Herzog Green",
+				"number": "2901",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345835,
+				"longitude": -53.774508
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Krajcik - Sanford Reciclagem",
+					"business_name": "Krajcik - Sanford Reciclagem",
+					"identity": "78642608000107",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Idella57@unwieldy-pop.com",
+					"phones": ["(82) 95641-3915"],
+					"website": null,
+					"started_activity_in": "2026-05-27T11:32:10.031Z",
+					"address": {
+						"zip_code": "80767-962",
+						"street": "Pearl Prairie",
+						"number": "3514",
+						"complement": null,
+						"district": "Perry County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.344447,
+						"longitude": -53.76128
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.38,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 888.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 756
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 449.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.37,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 750.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 235.85,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 92.31,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 152.72,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Walter - Weimann Reciclagem",
+					"business_name": "Walter - Weimann Reciclagem",
+					"identity": "50480511000126",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Delfina14@fat-advertisement.com",
+					"phones": ["(88) 95579-6407"],
+					"website": null,
+					"started_activity_in": "2024-03-05T01:30:10.050Z",
+					"address": {
+						"zip_code": "64954-913",
+						"street": "Meggie Forest",
+						"number": "5935",
+						"complement": null,
+						"district": "Adams County",
+						"city": "Guiratinga",
+						"city_ibge_id": 5104203,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.343666,
+						"longitude": -53.770648
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 954.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.07,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 151.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 133.66,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 290.81,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-03T10:29:51.914Z",
+					"observations": "Strenuus curso viduo averto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345519,
+								"longitude": -53.772595,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788250068045
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Berkshire",
+							"streetNumber": "28117",
+							"street": "Emilio Islands",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81811134",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Henrietta Mill, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "eula-farrell.7.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tom-gleichner.6.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Valerie Funk",
+			"display_name": "Valerie",
+			"phone": "(75) 92525-4676",
+			"email": "valerie-funk.10.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "68173-192",
+				"street": "Jaskolski Expressway",
+				"number": "18402",
+				"complement": null,
+				"district": "Durham",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.343686,
+				"longitude": -53.773839
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-04T19:31:13.737Z",
+					"observations": "Doloribus curvo concedo benevolentia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.343005,
+								"longitude": -53.769753,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788289829385
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Tyne and Wear",
+							"streetNumber": "31111",
+							"street": "Laney Mountains",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03248820",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nelson Street, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "akeem-casper.1.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Raymond Toy",
+			"display_name": "Raymond",
+			"phone": "(84) 99237-4989",
+			"email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "34985-242",
+				"street": "Schaden Mills",
+				"number": "5482",
+				"complement": null,
+				"district": "Franklin County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345149,
+				"longitude": -53.769486
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-26T04:04:07.740Z",
+					"observations": "Ab arca arcus titulus despecto canto placeat tandem.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345266,
+								"longitude": -53.764567,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294445150
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Grampian",
+							"streetNumber": "951",
+							"street": "Denis Shoals",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84236117",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jerod Ford, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Veículos em Fim de Vida",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Marco Schoen",
+			"display_name": "Marco",
+			"phone": "(32) 90759-5880",
+			"email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "53965-080",
+				"street": "Becker Canyon",
+				"number": "6584",
+				"complement": null,
+				"district": "County Armagh",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.343883,
+				"longitude": -53.774654
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-02T21:48:36.669Z",
+					"observations": "Tremo demo perferendis advenio sono titulus vel recusandae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.343949,
+								"longitude": -53.771747,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295423122
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "South Glamorgan",
+							"streetNumber": "461",
+							"street": "Nitzsche Lodge",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34833345",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Koepp Ramp, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "marge-kris.2.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-ziemann.13.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "akeem-casper.1.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"description": "Depulso acceptus aequitas.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-06T17:27:33.317Z",
+					"observations": "Vulgo speciosus casso laboriosam utor compello aliquam utique.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.344933,
+								"longitude": -53.764536,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314723945
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Hampshire",
+							"streetNumber": "9356",
+							"street": "Penny Ville",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95251819",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Franey River, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-07-31T05:25:39.227Z",
+					"observations": "Deleo talio socius uredo cursus stipes quia suggero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.344496,
+								"longitude": -53.765264,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788299267574
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Isle of Wight",
+							"streetNumber": "447",
+							"street": "Wolff Neck",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58826691",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Murray Ridge, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Medicamentos",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "valerie-funk.10.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "akeem-casper.1.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"description": "Tempore nemo at torrens odio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"description": "Provident creber tribuo tibi tum vito verecundia.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Miguel Ziemann",
+			"display_name": "Miguel",
+			"phone": "(14) 97937-0863",
+			"email": "miguel-ziemann.13.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "48583-012",
+				"street": "The Limes",
+				"number": "50981",
+				"complement": null,
+				"district": "Clark County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.344077,
+				"longitude": -53.763903
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-04T14:53:15.293Z",
+					"observations": "Amiculum arca depereo abduco theatrum adimpleo suadeo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345532,
+								"longitude": -53.772989,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788244762794
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "South Glamorgan",
+							"streetNumber": "990",
+							"street": "Church Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92561467",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schmidt-Towne Rue, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "marge-kris.2.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-03T12:33:19.699Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.345004,
+								"longitude": -53.768755,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788236127183
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Lawrence County",
+							"streetNumber": "36776",
+							"street": "Adam Fort",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90349668",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "East Road, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-16T20:12:13.996Z",
+					"observations": "Uxor cognatus molestias id curis depono.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.344167,
+								"longitude": -53.759957,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788265723661
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "County Tyrone",
+							"streetNumber": "75899",
+							"street": "Lake Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89814779",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Central Avenue, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Madeira",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maiya-schultz.0.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "randolph-paucek-botsford.3.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "elsie-harvey.9.guiratinga-mt@oikos.seed",
+							"description": "Video succurro denuo conscendo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"description": "Careo accedo usitas.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Cindy Crist",
+			"display_name": "Cindy",
+			"phone": "(70) 96119-2407",
+			"email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "85613-951",
+				"street": "Dahlia Forks",
+				"number": "94013",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.343087,
+				"longitude": -53.773619
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-05T19:56:20.509Z",
+					"observations": "Subiungo bis dolores quam baiulus condico atrocitas compono.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.343581,
+								"longitude": -53.763194,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309583357
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "North Yorkshire",
+							"streetNumber": "94185",
+							"street": "Mill Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65538805",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hilton Fork, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Resíduos Orgânicos",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "marco-schoen.12.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "opal-wolff.5.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "miguel-ziemann.13.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-22T15:17:54.924Z",
+					"observations": "Dolorum cubicularis aperte argentum capitulus tibi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.342865,
+								"longitude": -53.761465,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788251237405
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Dumfries and Galloway",
+							"streetNumber": "176",
+							"street": "Idella Ville",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02117342",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lila Lakes, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Eletroeletrônicos (REEE)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rosalia-koepp.8.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "darrion-glover.4.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Vada Goyette",
+			"display_name": "Vada",
+			"phone": "(46) 94627-7371",
+			"email": "vada-goyette.15.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "58091-285",
+				"street": "Marquardt Divide",
+				"number": "54395",
+				"complement": null,
+				"district": "Gwent",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.345681,
+				"longitude": -53.772432
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-05T05:36:37.161Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.344902,
+								"longitude": -53.765796,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788273422990
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Gwynedd County",
+							"streetNumber": "9642",
+							"street": "Lowe Brooks",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90298266",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Heidenreich Walk, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tom-gleichner.6.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Emerald Schiller",
+			"display_name": "Emerald",
+			"phone": "(20) 95503-3579",
+			"email": "emerald-schiller.16.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "30533-942",
+				"street": "Bedford Road",
+				"number": "913",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.344212,
+				"longitude": -53.768601
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Raleigh Orn",
+			"display_name": "Raleigh",
+			"phone": "(55) 90452-3235",
+			"email": "raleigh-orn.17.guiratinga-mt@oikos.seed",
+			"address": {
+				"zip_code": "31771-478",
+				"street": "Treutel Junctions",
+				"number": "29534",
+				"complement": null,
+				"district": "Marion County",
+				"city": "Guiratinga",
+				"city_ibge_id": 5104203,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.344316,
+				"longitude": -53.763304
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-27T04:42:09.645Z",
+					"observations": "Sub mollitia fugiat utor tener mollitia vespillo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.34438,
+								"longitude": -53.769431,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788267610769
+						},
+						"addresses": {
+							"city": "Guiratinga",
+							"district": "Rutland",
+							"streetNumber": "59603",
+							"street": "Von Mountain",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48428388",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Buckridge Courts, Guiratinga - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Veículos em Fim de Vida",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "miguel-ziemann.13.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "raymond-toy.11.guiratinga-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cindy-crist.14.guiratinga-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

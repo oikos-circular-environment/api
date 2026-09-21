@@ -15,7 +15,7 @@ describe("submit-resolution-use-case", () => {
 	async function createUser(): Promise<string> {
 		const userId = randomUUID();
 		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
+			`INSERT INTO users (id, email, created_at) VALUES ($1, $2, NOW())`,
 			userId,
 			`submit-res-test-${userId}@integration.test`,
 		);

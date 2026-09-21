@@ -1,24 +1,26 @@
 import fastifyBasicAuth from "@fastify/basic-auth";
 import fastifyCookie from "@fastify/cookie";
 import { fastifyCors } from "@fastify/cors";
-import fastifyJwt from "@fastify/jwt";
 import fastifyMultipart from "@fastify/multipart";
 import fastifyRateLimit from "@fastify/rate-limit";
 import { fastifySwagger } from "@fastify/swagger";
 import { trace } from "@opentelemetry/api";
 import ScalarApiReference from "@scalar/fastify-api-reference";
+import { fromNodeHeaders } from "better-auth/node";
 import Fastify, { type FastifyBaseLogger, type FastifyRequest } from "fastify";
 import {
 	jsonSchemaTransform,
+	jsonSchemaTransformObject,
 	serializerCompiler,
 	validatorCompiler,
 	type ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env, getCorsAllowedOrigins } from "@/env/index.js";
 import { serverLogger } from "@/lib/logger.js";
+import { createOpenApiDocumentMerger } from "@/lib/openapi-document.js";
 import { accountRoutes } from "./modules/accounts/account-routes.js";
-import { authRoutes } from "./modules/auth/routes/v1/auth-routes.js";
-import { authV2Routes } from "./modules/auth/routes/v2/auth-v2-routes.js";
+import { auth } from "./modules/auth/providers/auth/better-auth/better-auth.js";
+import { healthRoutes } from "./modules/common/health/health-routes.js";
 import { createVerifyClientKey } from "./modules/common/middlewares/verify-client-key.js";
 import { companyRoutes } from "./modules/companies/company-routes.js";
 import { complaintRoutes } from "./modules/complaints/complaint-routes.js";
@@ -28,7 +30,12 @@ import { profileRoutes } from "./modules/profiles/profile-routes.js";
 import { storageRoutes } from "./modules/storage/storage-routes.js";
 import { wasteCategoriesRoutes } from "./modules/wastes/waste-categories-routes.js";
 
-const CLIENT_KEY_EXEMPT_PREFIXES = ["/health", "/docs", "/bullboard"];
+const CLIENT_KEY_EXEMPT_PREFIXES = [
+	"/health",
+	"/docs",
+	"/bullboard",
+	"/storage",
+];
 
 function isExemptFromClientKey(url: string): boolean {
 	return CLIENT_KEY_EXEMPT_PREFIXES.some((prefix) => url.startsWith(prefix));
@@ -53,6 +60,7 @@ app.setSerializerCompiler(serializerCompiler);
 
 app.register(fastifySwagger, {
 	openapi: {
+		openapi: "3.1.0",
 		info: {
 			title: "Oikos Documentation",
 			version: "1.0.0",
@@ -78,17 +86,7 @@ app.register(fastifySwagger, {
 		security: [{ clientKeyAuth: [] }],
 	},
 	transform: jsonSchemaTransform,
-});
-
-app.register(fastifyJwt, {
-	secret: env.JWT_SECRET,
-	cookie: {
-		cookieName: "refreshToken",
-		signed: false,
-	},
-	sign: {
-		expiresIn: "7d",
-	},
+	transformObject: jsonSchemaTransformObject,
 });
 
 app.register(fastifyCookie);
@@ -170,9 +168,17 @@ app.after(() => {
 	});
 });
 
+const {
+	build: buildMergedOpenApiDocument,
+	getDocument: getMergedOpenApiDocument,
+} = createOpenApiDocumentMerger(app, auth);
+
+export { buildMergedOpenApiDocument };
+
 app.register(ScalarApiReference, {
 	routePrefix: "/docs",
 	configuration: {
+		content: () => getMergedOpenApiDocument(),
 		favicon: "https://avatars.githubusercontent.com/u/276378809?s=96&v=4",
 		theme: "fastify",
 		persistAuth: true,
@@ -209,10 +215,31 @@ app.register(ScalarApiReference, {
 	},
 });
 
-app.get("/health", () => ({ status: "ok" }));
+app.register(healthRoutes);
 
-app.register(authRoutes, { prefix: "/v1" });
-app.register(authV2Routes, { prefix: "/v2" });
+app.route({
+	method: ["GET", "POST"],
+	url: "/auth/*",
+	async handler(request, reply) {
+		const url = new URL(
+			request.url,
+			`${request.protocol}://${request.hostname}`,
+		);
+		const headers = fromNodeHeaders(request.headers);
+		const req = new Request(url.toString(), {
+			method: request.method,
+			headers,
+			...(request.body ? { body: JSON.stringify(request.body) } : {}),
+		});
+		const response = await auth.handler(req);
+		reply.status(response.status);
+		response.headers.forEach((value, key) => {
+			reply.header(key, value);
+		});
+		return reply.send(response.body ? await response.text() : null);
+	},
+});
+
 app.register(accountRoutes, { prefix: "/v1" });
 app.register(profileRoutes, { prefix: "/v1" });
 app.register(companyRoutes, { prefix: "/v1" });

@@ -4,6 +4,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { createTestUser, loginTestUser } from "@/test/auth-test-helpers.js";
 
 describe("create-complaint", () => {
 	const createdComplaintIds: string[] = [];
@@ -13,15 +14,9 @@ describe("create-complaint", () => {
 	async function createUser(
 		email?: string,
 	): Promise<{ id: string; email: string }> {
-		const userId = randomUUID();
-		const userEmail = email ?? `e2e-${userId}@test.local`;
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
-			userId,
-			userEmail,
-		);
-		createdUserIds.push(userId);
-		return { id: userId, email: userEmail };
+		const user = await createTestUser(email ? { email } : undefined);
+		createdUserIds.push(user.id);
+		return { id: user.id, email: user.email };
 	}
 
 	async function createWasteCategory(): Promise<string> {
@@ -36,8 +31,9 @@ describe("create-complaint", () => {
 		return category.id;
 	}
 
-	function bearerToken(userId: string, email: string): string {
-		return app.jwt.sign({ sub: userId, user: { id: userId, email } });
+	async function bearerToken(userId: string, _email?: string): Promise<string> {
+		const { token } = await loginTestUser(userId);
+		return token;
 	}
 
 	beforeAll(async () => {
@@ -62,10 +58,7 @@ describe("create-complaint", () => {
 			createdCategoryIds.length = 0;
 		}
 		if (createdUserIds.length > 0) {
-			await prisma.$executeRawUnsafe(
-				`DELETE FROM users WHERE id IN (${createdUserIds.map((_, i) => `$${i + 1}`).join(", ")})`,
-				...createdUserIds,
-			);
+			await prisma.user.deleteMany({ where: { id: { in: createdUserIds } } });
 			createdUserIds.length = 0;
 		}
 	});
@@ -77,7 +70,9 @@ describe("create-complaint", () => {
 		const res = await app.inject({
 			method: "POST",
 			url: "/v1/complaints",
-			headers: { authorization: `Bearer ${bearerToken(user.id, user.email)}` },
+			headers: {
+				authorization: `Bearer ${await bearerToken(user.id, user.email)}`,
+			},
 			payload: {
 				date: new Date().toISOString(),
 				geospatial: makeGeospatial(),

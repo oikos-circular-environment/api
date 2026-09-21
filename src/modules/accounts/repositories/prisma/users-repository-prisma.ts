@@ -1,3 +1,4 @@
+import type { Prisma } from "@/generated/prisma/client.js";
 import type { UserCreateInput } from "@/generated/prisma/models.js";
 import { prisma } from "@/lib/prisma.js";
 import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
@@ -23,19 +24,8 @@ export class PrismaUsersRepository implements UsersRepository {
 		return user;
 	}
 
-	async findByIdWithPassword(id: string) {
-		const user = await prisma.user.findUnique({
-			where: { id },
-			select: { id: true, email: true, password: true },
-		});
-
-		return user;
-	}
-
 	async create(data: UserCreateInput) {
-		const user = await prisma.user.create({
-			data: { ...data, auth_source: "default" },
-		});
+		const user = await prisma.user.create({ data });
 
 		return user;
 	}
@@ -64,14 +54,26 @@ export class PrismaUsersRepository implements UsersRepository {
 		return user;
 	}
 
-	async updatePassword(userId: string, passwordHash: string) {
-		await prisma.user.update({
-			where: { id: userId },
-			data: { password: passwordHash },
-		});
-	}
-
 	async delete(userId: string) {
 		await prisma.user.delete({ where: { id: userId } });
+	}
+
+	async updateName(
+		userId: string,
+		name: string,
+		tx?: Prisma.TransactionClient,
+	) {
+		await (tx ?? prisma).user.update({ where: { id: userId }, data: { name } });
+	}
+
+	async updateImage(
+		userId: string,
+		image: string | null,
+		tx?: Prisma.TransactionClient,
+	) {
+		await (tx ?? prisma).user.update({
+			where: { id: userId },
+			data: { image },
+		});
 	}
 }

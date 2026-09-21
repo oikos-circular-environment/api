@@ -12,5 +12,5 @@ export interface StorageProvider {
 	deleteFile: (filePath: string) => Promise<void>;
 	getFileUrl: (filePath: string) => Promise<{ url: string }>;
 	checkFileExists: (filePath: string) => Promise<boolean>;
-	convertFileToBase64: (filePath: string) => Promise<string>;
+	ping: () => Promise<void>;
 }

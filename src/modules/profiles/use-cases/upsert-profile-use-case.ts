@@ -1,5 +1,6 @@
 import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
+import type { TransactionManager } from "@/modules/common/providers/transaction/transaction-manager.js";
 import type {
 	CreateAddress,
 	CreateProfile,
@@ -20,6 +21,7 @@ export class UpsertProfileUseCase {
 		private readonly profilesRepository: ProfilesRepository,
 		private readonly addressesRepository: AddressesRepository,
 		private readonly usersRepository: UsersRepository,
+		private readonly transactionManager: TransactionManager,
 	) {}
 
 	async execute({
@@ -34,9 +36,13 @@ export class UpsertProfileUseCase {
 
 		const { address: addressData, ...profileData } = data;
 
-		const profile = await this.profilesRepository.upsert({
-			...profileData,
-			user_id: userId,
+		const profile = await this.transactionManager.run(async (tx) => {
+			const upserted = await this.profilesRepository.upsert(
+				{ ...profileData, user_id: userId },
+				tx,
+			);
+			await this.usersRepository.updateName(userId, profileData.full_name, tx);
+			return upserted;
 		});
 
 		if (addressData) {

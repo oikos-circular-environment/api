@@ -17,16 +17,15 @@ model User {
   name            String?
   email           String    @unique
   email_verified  Boolean   @default(false)
+  is_anonymous    Boolean   @default(false)
   image           String?
   role            String    @default("user")
   banned          Boolean   @default(false)
   ban_reason      String?
   ban_expires     DateTime?
-  password       String?
-  auth_source    String    @default("better_auth")
-  created_at     DateTime  @default(now())
-  updated_at     DateTime  @default(now()) @updatedAt
-  deleted_at     DateTime?
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @default(now()) @updatedAt
+  deleted_at      DateTime?
   deletion_job_id String?
 
   profile          Profile?
@@ -34,12 +33,17 @@ model User {
   complaints       Complaint[]
   votes            ComplaintVote[]
   resolutions      ComplaintResolution[] @relation("ResolutionResolver")
-  support_requests SupportRequest[]
-  refresh_tokens   RefreshToken[]
+  supports         Support[]
   accounts         Account[]
   sessions         Session[]
   members          Member[]
   sent_invitations Invitation[]          @relation("InvitationInviter")
+
+  reported_denunciations Denunciation[] @relation("ReporterOfDenunciations")
+  target_denunciations   Denunciation[] @relation("ReportedInDenunciations")
+
+  moderated_supports     Support[]       @relation("ModeratedSupports")
+  moderated_denunciations Denunciation[] @relation("ModeratedDenunciations")
 
   @@map("users")
 }
@@ -100,6 +104,7 @@ model Organization {
   name       String
   slug       String    @unique
   logo       String?
+  metadata   String?
   created_at DateTime  @default(now())
   updated_at DateTime?
 
@@ -142,20 +147,6 @@ model Invitation {
 
   @@index([organization_id])
   @@map("invitations")
-}
-
-model RefreshToken {
-  id         String    @id @default(uuid())
-  jti        String    @unique
-  expires_at DateTime
-  revoked_at DateTime?
-  created_at DateTime  @default(now())
-
-  user_id String
-  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
-
-  @@index([user_id])
-  @@map("refresh_tokens")
 }
 
 model Profile {
@@ -418,7 +409,6 @@ model ComplaintAttachment {
   url        String
   file_name  String
   path       String
-  base64     String
   metadata   Json?
   created_at DateTime @default(now())
 
@@ -430,32 +420,85 @@ model ComplaintAttachment {
   @@map("complaint_attachments")
 }
 
-model SupportRequest {
-  id          String           @id @default(uuid())
-  title       String
-  description String
-  status      ModerationStatus @default(PENDING)
-  created_at  DateTime         @default(now())
+model Support {
+  id             String              @id @default(uuid())
+  title          String
+  description    String
+  type           SupportType         @default(SUPPORT)
+  status         ModerationStatus    @default(OPEN)
+  severity       ModerationSeverity?
+  environment    Json?
+  reporter_email String?
+  moderated_by   String?
+  moderated_at   DateTime?
+  reason         String?
+  created_at     DateTime            @default(now())
+  updated_at     DateTime            @updatedAt
 
   user_id String?
   user    User?   @relation(fields: [user_id], references: [id], onDelete: SetNull)
 
-  attachments SupportRequestAttachment[]
+  moderator User? @relation("ModeratedSupports", fields: [moderated_by], references: [id], onDelete: SetNull)
 
-  @@map("support_requests")
+  attachments SupportAttachment[]
+
+  @@map("supports")
 }
 
-model SupportRequestAttachment {
+model SupportAttachment {
   id         String   @id @default(uuid())
   url        String
   file_name  String
   path       String
   created_at DateTime @default(now())
 
-  support_request_id String
-  support_request    SupportRequest @relation(fields: [support_request_id], references: [id], onDelete: Cascade)
+  support_id String
+  support    Support @relation(fields: [support_id], references: [id], onDelete: Cascade)
 
-  @@map("support_request_attachments")
+  @@map("support_attachments")
+}
+
+model Denunciation {
+  id             String              @id @default(uuid())
+  title          String
+  description    String
+  status         ModerationStatus    @default(OPEN)
+  severity       ModerationSeverity?
+  reporter_email String?
+  latitude       Float?
+  longitude      Float?
+  moderated_by   String?
+  moderated_at   DateTime?
+  reason         String?
+  created_at     DateTime            @default(now())
+  updated_at     DateTime            @updatedAt
+
+  reporter_user_id String?
+  reporter         User?   @relation("ReporterOfDenunciations", fields: [reporter_user_id], references: [id], onDelete: SetNull)
+
+  reported_user_id String?
+  reported_user    User?   @relation("ReportedInDenunciations", fields: [reported_user_id], references: [id], onDelete: SetNull)
+
+  moderator User? @relation("ModeratedDenunciations", fields: [moderated_by], references: [id], onDelete: SetNull)
+
+  attachments DenunciationAttachment[]
+
+  @@map("denunciations")
+}
+
+model DenunciationAttachment {
+  id         String               @id @default(uuid())
+  url        String
+  file_name  String
+  path       String
+  metadata   Json?
+  type       ComplaintCaptureMode @default(PHOTO)
+  created_at DateTime             @default(now())
+
+  denunciation_id String
+  denunciation    Denunciation @relation(fields: [denunciation_id], references: [id], onDelete: Cascade)
+
+  @@map("denunciation_attachments")
 }
 
 model ComplaintVote {
@@ -500,7 +543,6 @@ model ComplaintResolutionAttachment {
   url        String
   file_name  String
   path       String
-  base64     String
   created_at DateTime @default(now())
 
   type          ComplaintCaptureMode @default(PHOTO)

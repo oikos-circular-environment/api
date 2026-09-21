@@ -1,0 +1,5637 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:25:15.563Z",
+		"city": "São Vicente",
+		"state_code": "SP",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Keith Sanford",
+			"display_name": "Keith",
+			"phone": "(59) 90162-6122",
+			"email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "23113-187",
+				"street": "Wanda Circles",
+				"number": "1687",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.977536,
+				"longitude": -46.618045
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ_WVvhL8bzpQRJOmZ6YVMMWg",
+						"rating": 5,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"point_of_interest",
+							"service",
+							"store",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CR RECICLAGEM",
+					"business_name": "CR RECICLAGEM",
+					"identity": "91049212000119",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cr.reciclagem@gloomy-steak.biz",
+					"phones": ["(13) 98804-4683"],
+					"website": null,
+					"started_activity_in": "2026-07-11T00:34:40.854Z",
+					"address": {
+						"zip_code": "11355-030",
+						"street": "R. Tambaú",
+						"number": "494",
+						"complement": null,
+						"district": "Vila Nossa Sra. de Fatima, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9510769,
+						"longitude": -46.4067468
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "10:00",
+									"end_time": "22:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "01:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "22:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.82,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 902.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.27,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 816.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.42,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 536.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.26,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 713.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 888.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 990.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 145.54,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 253.24,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 195.79,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 228.14,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJcbwH8eUfzpQRVRZ9CGv0GUY",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Latasa reciclagem",
+					"business_name": "Latasa reciclagem",
+					"identity": "38860851000187",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "latasa.reciclagem@apprehensive-honesty.net",
+					"phones": ["(13) 97419-0050"],
+					"website": null,
+					"started_activity_in": "2021-08-01T08:24:18.914Z",
+					"address": {
+						"zip_code": "11347-400",
+						"street": "R. Jequié",
+						"number": "930",
+						"complement": null,
+						"district": "Jardim Rio Negro, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9868977,
+						"longitude": -46.4678149
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.77,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 377.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.05,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 364.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.56,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 475.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 129.17,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 169.17,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-27T03:55:42.076Z",
+					"observations": "Dolores tabgo adflicto deinde annus dedico apto vesica.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.957041,
+								"longitude": -46.423643,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276311560
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Clay County",
+							"streetNumber": "8684",
+							"street": "S 5th Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26349097",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bashirian Crossing, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"description": "Nulla enim magni tristis antea.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"description": "Vulnus bene animadverto eligendi tardus thymbra demulceo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-29T21:59:41.561Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.994568,
+								"longitude": -46.555362,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788233801584
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "County Armagh",
+							"streetNumber": "2951",
+							"street": "Alexandrea Meadows",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50887113",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gordon Street, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Medicamentos",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jacob Abernathy",
+			"display_name": "Jacob",
+			"phone": "(51) 94017-5203",
+			"email": "jacob-abernathy.1.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "09160-625",
+				"street": "Hawthorn Avenue",
+				"number": "27151",
+				"complement": null,
+				"district": "Central",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.944664,
+				"longitude": -46.402185
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJPah97GAbzpQRtSDW14po3NE",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Rúbia",
+					"business_name": "Reciclagem Rúbia",
+					"identity": "21569344000196",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.rubia@made-up-procurement.org",
+					"phones": ["(13) 3561-1303"],
+					"website": null,
+					"started_activity_in": "2023-07-10T04:34:57.741Z",
+					"address": {
+						"zip_code": "11370-550",
+						"street": "R. Américo Martins dos Santos",
+						"number": "871",
+						"complement": null,
+						"district": "Jardim Paraiso, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.952035,
+						"longitude": -46.3830613
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.86,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 417
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 948.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.52,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 351.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 286.62,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 53.58,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 90.31,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 268.29,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJBcH-UagfzpQRMd0KTAu-3Fo",
+						"rating": 3.3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro velho do didi",
+					"business_name": "Ferro velho do didi",
+					"identity": "90268658480",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.didi@competent-formation.biz",
+					"phones": ["(72) 94492-7979"],
+					"website": null,
+					"started_activity_in": "2017-10-11T21:41:32.923Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "Vila Ema",
+						"number": "São Vicente",
+						"complement": null,
+						"district": "SP, Brasil",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.996634699999998,
+						"longitude": -46.4909943
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.86,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 528.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.1,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 885.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.28,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 900.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.44,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 871.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.46,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 737.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 70.37,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 105.21,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 197.22,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 162.54,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-18T10:07:34.290Z",
+					"observations": "Ubi aveho vomer cogito cultellus quibusdam tactus asperiores vomica cerno.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.908494,
+								"longitude": -46.438534,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788265201585
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Somerset",
+							"streetNumber": "29934",
+							"street": "Emmett Greens",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48905945",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Coppice, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-31T23:32:06.155Z",
+					"observations": "Tantum teres volutabrum vulpes.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.952446,
+								"longitude": -46.420712,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307208143
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Carroll County",
+							"streetNumber": "50015",
+							"street": "Kuhlman Flat",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "51118359",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Spring Gardens, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-16T18:07:29.845Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.962586,
+								"longitude": -46.564744,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286185895
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Union County",
+							"streetNumber": "63002",
+							"street": "Lemke Highway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68770748",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "White Via, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Plástico",
+						"Pilhas e Baterias"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"description": "Tutamen ipsa theologus alienus aliqua volutabrum valetudo tam autus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Eva Prosacco",
+			"display_name": "Eva",
+			"phone": "(77) 98565-3169",
+			"email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "28777-286",
+				"street": "Third Avenue",
+				"number": "96101",
+				"complement": null,
+				"district": "Madison County",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.927741,
+				"longitude": -46.400164
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJldKvCJgbzpQRhhbxsFj4JVc",
+						"rating": 5,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM da Lalinha",
+					"business_name": "RECICLAGEM da Lalinha",
+					"identity": "93155971000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.da.lalinha@heartfelt-gray.info",
+					"phones": ["(95) 98031-3834"],
+					"website": null,
+					"started_activity_in": "2025-01-02T20:38:32.653Z",
+					"address": {
+						"zip_code": "11355-000",
+						"street": "Av. Mal. Humberto de Alencar Castelo Branco",
+						"number": "791",
+						"complement": null,
+						"district": "Cidade Náutica, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9458908,
+						"longitude": -46.4098417
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 352.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.92,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 802
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.78,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 881.9
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 207.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 50.21,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 76.45,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 265.85,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 208.24,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 169.37,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJhw3__IgczpQROFBFmWiXMAI",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JM Reciclagem",
+					"business_name": "JM Reciclagem",
+					"identity": "54161621000186",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jm.reciclagem@granular-forage.org",
+					"phones": ["(13) 3469-5807"],
+					"website": null,
+					"started_activity_in": "2018-08-17T05:32:38.269Z",
+					"address": {
+						"zip_code": "11330-200",
+						"street": "Av. Cap. Luiz Antônio Pimenta",
+						"number": "559",
+						"complement": null,
+						"district": "Parque Bitaru, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.972170199999997,
+						"longitude": -46.3980177
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.42,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 285.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.16,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 679.5
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 232.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 415.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.46,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 870.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 79.36,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 239.04,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 252.19,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 156.2,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 249.29,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-21T11:18:34.669Z",
+					"observations": "Viridis demitto coepi non repellat.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.923129,
+								"longitude": -46.515415,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788242286065
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Gloucestershire",
+							"streetNumber": "635",
+							"street": "Kingfisher Close",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09328016",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alton Shore, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"description": "Absum clarus cerno appositus tollo canonicus capillus.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"description": "Totus thorax vulnero volubilis maxime arbor surculus aspernatur.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-03T09:30:27.204Z",
+					"observations": "Conscendo sui defaeco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.9798,
+								"longitude": -46.582876,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303254354
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Lothian",
+							"streetNumber": "2144",
+							"street": "Greenfelder Estates",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84652351",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Roob Circle, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Plástico", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jacob-abernathy.1.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"description": "Solitudo culpo depopulo tardus defungo animus enim.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Rogers Keebler",
+			"display_name": "Rogers",
+			"phone": "(49) 90949-9695",
+			"email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "05685-368",
+				"street": "S 8th Street",
+				"number": "62628",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.975102,
+				"longitude": -46.606815
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJxTmZOAAdzpQRHYe7JNNhmKY",
+						"rating": null,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem",
+					"business_name": "Reciclagem",
+					"identity": "73171817000104",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem@ornery-obligation.name",
+					"phones": ["(75) 97062-6850"],
+					"website": null,
+					"started_activity_in": "2017-04-06T11:08:56.559Z",
+					"address": {
+						"zip_code": "11724-040",
+						"street": "R. Mário Iannelli",
+						"number": "20",
+						"complement": null,
+						"district": "Sítio do Campo, Praia Grande",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0022337,
+						"longitude": -46.4216742
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 892.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.3,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 836.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.14,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 475.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.22,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 451.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 176.54,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 215.5,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 54.44,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-wg0CJ0bzpQRx5-bnnK4384",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Esperanca II",
+					"business_name": "Ferro Velho Esperanca II",
+					"identity": "82204342521",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.esperanca.ii@lavish-polarisation.com",
+					"phones": ["(19) 93293-0494"],
+					"website": null,
+					"started_activity_in": "2025-09-11T04:31:15.430Z",
+					"address": {
+						"zip_code": "11360-300",
+						"street": "Av. Augusto Severo",
+						"number": "992",
+						"complement": null,
+						"district": "Parque Sao Vicente, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9502296,
+						"longitude": -46.4025596
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.76,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 336.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.43,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 518.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 237.95,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 172.75,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 72.52,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 142.11,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 238.85,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-09T01:58:28.751Z",
+					"observations": "Thermae summopere sufficio defluo ciminatio timor denego collum certus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.947692,
+								"longitude": -46.46135,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788252417223
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Madison County",
+							"streetNumber": "25721",
+							"street": "Connelly Manors",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "06051484",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Vicenta Well, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Resíduos Orgânicos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"description": "Vito tutamen calamitas conturbo civis uberrime vehemens thymum conduco officia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Edyth Spencer",
+			"display_name": "Edyth",
+			"phone": "(72) 99053-5709",
+			"email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "98067-045",
+				"street": "Boundary Road",
+				"number": "13104",
+				"complement": null,
+				"district": "Devon",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.988875,
+				"longitude": -46.58746
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ_QJtoXEbzpQRFhETBQTpZlQ",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "FILÉ SUCATA E RECICLAGEM",
+					"business_name": "FILÉ SUCATA E RECICLAGEM",
+					"identity": "21377413853",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "file.sucata.e.reciclagem@informal-cauliflower.net",
+					"phones": ["(13) 97828-1915"],
+					"website": null,
+					"started_activity_in": "2016-10-07T21:35:59.827Z",
+					"address": {
+						"zip_code": "11365-000",
+						"street": "Av. Galeão Coutinho",
+						"number": "828",
+						"complement": null,
+						"district": "Parque Sao Vicente, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9459806,
+						"longitude": -46.393423399999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 557.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.6,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 358.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.51,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 788.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.33,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 909
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.35,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 918
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.33,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 554.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 248.45,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 254.37,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 180.24,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJzf3JV4IczpQR6-vtPYRi2S4",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Amam Reciclagem",
+					"business_name": "Amam Reciclagem",
+					"identity": "38279614000127",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "amam.reciclagem@secondary-gown.net",
+					"phones": ["(13) 97416-8787"],
+					"website": "https://www.instagram.com/amam_reciclagem/",
+					"started_activity_in": "2022-03-06T05:45:06.853Z",
+					"address": {
+						"zip_code": "11365-250",
+						"street": "R. João B. Robortella",
+						"number": "131",
+						"complement": null,
+						"district": "Catiapoã, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.960870999999997,
+						"longitude": -46.3937907
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:30",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.73,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 939.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.6,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 850.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.79,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 557.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 71.76,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 165.89,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 197.3,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 167.44,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 157.45,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 165.57,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-16T16:07:18.971Z",
+					"observations": "Tondeo tondeo blanditiis super cena.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.932333,
+								"longitude": -46.544187,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788280217993
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Kent",
+							"streetNumber": "24212",
+							"street": "Airport Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82892411",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Russell Street, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Plástico", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Vada Wintheiser",
+			"display_name": "Vada",
+			"phone": "(63) 94913-2872",
+			"email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "62247-671",
+				"street": "Howard Street",
+				"number": "1443",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.992777,
+				"longitude": -46.403024
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJIdd5mGAbzpQRMXszxc2Vy88",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Imperator Centro De Reciclagem",
+					"business_name": "Imperator Centro De Reciclagem",
+					"identity": "45331247000129",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "imperator.centro.de.reciclagem@shameful-kinase.org",
+					"phones": ["(39) 95927-8262"],
+					"website": null,
+					"started_activity_in": "2025-06-25T15:29:53.871Z",
+					"address": {
+						"zip_code": "11370-501",
+						"street": "Jardim Guassu",
+						"number": "São Vicente",
+						"complement": null,
+						"district": "SP, , Brasil",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.951295899999998,
+						"longitude": -46.3821531
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.49,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 631.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.92,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 702.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 128.17,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 157.06,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 98.25,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJa9m1OOAbzpQRuPvm7D3m44I",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Star Reciclagem",
+					"business_name": "Star Reciclagem",
+					"identity": "29907697000160",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "star.reciclagem@appropriate-mobility.name",
+					"phones": ["(13) 99133-5863"],
+					"website": "https://star-reciclagem.negocio.site/?utm_source=gmb&utm_medium=referral",
+					"started_activity_in": "2020-11-08T11:06:06.229Z",
+					"address": {
+						"zip_code": "11090-110",
+						"street": "R. João Osório da Fonseca",
+						"number": "105",
+						"complement": null,
+						"district": "Bom Retiro, Santos",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9383323,
+						"longitude": -46.3753854
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.02,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 514.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.48,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 768.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 175.69,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 203.21,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-29T00:22:07.604Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.993098,
+								"longitude": -46.548774,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314195187
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Hampshire",
+							"streetNumber": "309",
+							"street": "Schmitt Course",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "99502641",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Prospect Road, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Embalagens Contaminadas",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"description": "Surculus supra spectaculum tendo perferendis voco bardus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-28T14:36:36.222Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.958285,
+								"longitude": -46.509588,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788235000377
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Borders",
+							"streetNumber": "93174",
+							"street": "Ashleigh Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "91470482",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maye Park, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Edwina Russel",
+			"display_name": "Edwina",
+			"phone": "(57) 96904-8298",
+			"email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "22644-643",
+				"street": "Rodriguez Cliffs",
+				"number": "675",
+				"complement": null,
+				"district": "County Londonderry",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.990968,
+				"longitude": -46.557353
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJY0ki7HobzpQRVS4mlno5A-E",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Fontes Reciclagem",
+					"business_name": "Fontes Reciclagem",
+					"identity": "46099181000156",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "fontes.reciclagem@linear-ghost.com",
+					"phones": ["(13) 99721-2064"],
+					"website": null,
+					"started_activity_in": "2026-06-11T09:35:39.328Z",
+					"address": {
+						"zip_code": "11365-010",
+						"street": "R. Machado de Assis",
+						"number": "331",
+						"complement": null,
+						"district": "Parque Sao Vicente, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9505916,
+						"longitude": -46.3928452
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 30.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.31,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 799.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 288.36,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 123.93,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 93.48,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJWWQ2x_kdzpQRk9DdJOIJ9iw",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Glória Reciclagem",
+					"business_name": "Glória Reciclagem",
+					"identity": "06256102000159",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "gloria.reciclagem@tricky-coliseum.info",
+					"phones": ["(13) 98805-8100"],
+					"website": null,
+					"started_activity_in": "2019-04-10T11:30:14.761Z",
+					"address": {
+						"zip_code": "11724-000",
+						"street": "Av. Min. Marcos Freire",
+						"number": "2464",
+						"complement": null,
+						"district": "Guilhermina, Praia Grande",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -24.0077146,
+						"longitude": -46.4364953
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "09:00",
+									"end_time": "15:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.77,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 643.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.83,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 585.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.81,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 189.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.63,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 677.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 175.41,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 55.84,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 234.03,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 267.24,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 69.41,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-05T17:09:16.432Z",
+					"observations": "Aut condico adulescens cuppedia carbo vespillo trans.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.936325,
+								"longitude": -46.575642,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292549209
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Leicestershire",
+							"streetNumber": "103",
+							"street": "Old Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82179747",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Station Road, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Óleo Mineral / Lubrificante",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"description": "Dolorum somniculosus aequitas adipisci convoco videlicet suppellex voro clam.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"description": "Vere valeo praesentium agnitio.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Gregg Hessel",
+			"display_name": "Gregg",
+			"phone": "(40) 97976-2007",
+			"email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "37116-932",
+				"street": "Stoney Lane",
+				"number": "1594",
+				"complement": null,
+				"district": "Hamilton County",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.909325,
+				"longitude": -46.40145
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJKSh18NUbzpQR9VbP6N_hiHQ",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Mazo recicláveis e reciclagem",
+					"business_name": "Mazo recicláveis e reciclagem",
+					"identity": "37583321000176",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "mazo.reciclaveis.e.reciclagem@circular-siege.org",
+					"phones": ["(13) 3462-1860"],
+					"website": null,
+					"started_activity_in": "2023-10-13T09:03:14.759Z",
+					"address": {
+						"zip_code": "11355-180",
+						"street": "R. Wenceslau Brás",
+						"number": "311",
+						"complement": null,
+						"district": "Cidade Náutica, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9434979,
+						"longitude": -46.410453
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "16:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.28,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 656
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.44,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 860.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.14,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 830.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.87,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 351.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 264.62,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 223.43,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 218.89,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 159.95,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 118.85,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJTW3_kmAbzpQRGY-aei-ll3g",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "GRUPO PACO RECICLAGEM São Vicente",
+					"business_name": "GRUPO PACO RECICLAGEM São Vicente",
+					"identity": "34707788000192",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "grupo.paco.reciclagem.sao.vicente@muted-dwell.biz",
+					"phones": ["(13) 97414-1932"],
+					"website": "http://grupopaco.com.br/",
+					"started_activity_in": "2026-01-25T21:50:34.110Z",
+					"address": {
+						"zip_code": "11370-550",
+						"street": "R. Américo Martins dos Santos",
+						"number": "871",
+						"complement": null,
+						"district": "Jardim Guassu, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9520329,
+						"longitude": -46.3830683
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.21,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 161
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 741.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.15,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 704.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.63,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 121
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 540.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.42,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 828.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 225.42,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 270.74,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 228.09,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 298.09,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 216.95,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-20T05:29:50.837Z",
+					"observations": "Denique adsum adinventitias tunc vallum volubilis dolorem coma.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.899898,
+								"longitude": -46.357619,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788266589597
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Strathclyde",
+							"streetNumber": "986",
+							"street": "Gordon Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89327858",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Leuschke Via, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jared White",
+			"display_name": "Jared",
+			"phone": "(10) 99726-7598",
+			"email": "jared-white.8.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "08913-117",
+				"street": "Hammes Villages",
+				"number": "48725",
+				"complement": null,
+				"district": "Carroll County",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.905813,
+				"longitude": -46.629997
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJd8ThKmEbzpQRO97bLfzqj70",
+						"rating": 4.9,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Viva Metais",
+					"business_name": "Viva Metais",
+					"identity": "22035763000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "viva.metais@crushing-jury.info",
+					"phones": ["(13) 3468-4606"],
+					"website": null,
+					"started_activity_in": "2017-08-23T15:12:02.425Z",
+					"address": {
+						"zip_code": "11370-400",
+						"street": "Av. Penedo",
+						"number": "7",
+						"complement": null,
+						"district": "Catiapoã, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9508962,
+						"longitude": -46.3842187
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "14:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.37,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 650.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.96,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 793.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.8,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 944.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.17,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 140.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 76.28,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 70.32,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 149.89,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 221.52,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 157.06,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJi-VwgLcdzpQRsoqRS6SKRgA",
+						"rating": 3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "SV Reciclagem",
+					"business_name": "SV Reciclagem",
+					"identity": "83931577000144",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sv.reciclagem@which-marketplace.net",
+					"phones": ["(13) 97407-3717"],
+					"website": null,
+					"started_activity_in": "2018-08-07T10:37:39.600Z",
+					"address": {
+						"zip_code": "11310-201",
+						"street": "Av. Capitão-Mor Aguiar",
+						"number": "32",
+						"complement": null,
+						"district": "Lj 2",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9710224,
+						"longitude": -46.391366
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 518.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.35,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 120.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 546.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 156.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 157.27,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 205.21,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 223.78,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 248.76,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-28T00:53:30.039Z",
+					"observations": "Adulescens aeger tantum desipio vociferor enim assentator.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.982349,
+								"longitude": -46.597279,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788305489274
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Powys",
+							"streetNumber": "31414",
+							"street": "Bernhard Flats",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "73218723",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mellie Junctions, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Lâmpadas",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jacob-abernathy.1.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"description": "Vigilo carcer laboriosam vivo censura.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-16T19:00:01.995Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.986639,
+								"longitude": -46.646161,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298524842
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Tayside",
+							"streetNumber": "165",
+							"street": "4th Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "79366841",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stehr Skyway, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"description": "Artificiose sophismata perspiciatis quidem tabernus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-28T10:10:38.098Z",
+					"observations": "Audio ter cognomen consequatur umerus cariosus vicissitudo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.924935,
+								"longitude": -46.411254,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275024543
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Hertfordshire",
+							"streetNumber": "1329",
+							"street": "Johnson Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "29431823",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Castle Close, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-02T03:06:10.913Z",
+					"observations": "Beatae desolo cena degenero cattus tricesimus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.923842,
+								"longitude": -46.422687,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788255355967
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Hertfordshire",
+							"streetNumber": "6808",
+							"street": "Kimberly Dam",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84907253",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Adrienne Forest, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Nicole Lakin",
+			"display_name": "Nicole",
+			"phone": "(87) 93219-8508",
+			"email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "74453-825",
+				"street": "Orchard Street",
+				"number": "2762",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.974543,
+				"longitude": -46.449981
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJXSl-woMDzpQRAKp0ZSbvEcA",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Redes para sacada em São Vicente SP - Redes para gatos, telas de proteção em São Vicente - SP",
+					"business_name": "Redes para sacada em São Vicente SP - Redes para gatos, telas de proteção em São Vicente - SP",
+					"identity": "88836179000162",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "redes.para.sacada.em.sao.vicente.sp.redes.para.gatos.telas.de.protecao.em.sao.vicente.sp@natural-seagull.net",
+					"phones": ["(13) 4104-3911"],
+					"website": null,
+					"started_activity_in": "2017-03-09T19:06:00.551Z",
+					"address": {
+						"zip_code": "11346-350",
+						"street": "R. Alfio Benassi",
+						"number": "S/N",
+						"complement": null,
+						"district": "Vila Nova Sao Vicente, São Vicente",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.9882319,
+						"longitude": -46.4910731
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.63,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 425.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.62,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 60.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 182.94,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 183.9,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 281.61,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJeYWXst0bzpQRVY6E_vdzgek",
+						"rating": 4.3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Nova Elos Reciclagem de tubos",
+					"business_name": "Nova Elos Reciclagem de tubos",
+					"identity": "35951383000168",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "nova.elos.reciclagem.de.tubos@writhing-compromise.net",
+					"phones": ["(13) 3464-8237"],
+					"website": null,
+					"started_activity_in": "2026-01-31T13:23:42.220Z",
+					"address": {
+						"zip_code": "11350-080",
+						"street": "Rua Antonieta Rudge",
+						"number": "S/N",
+						"complement": null,
+						"district": "R. Antonieta Del Picchia, 446",
+						"city": "São Vicente",
+						"city_ibge_id": 3551009,
+						"state": "São Paulo",
+						"state_ibge_id": 35,
+						"state_code": "SP",
+						"latitude": -23.949122499999998,
+						"longitude": -46.416891799999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.68,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 126.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.69,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 687
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.17,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 756
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.23,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 774
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.14,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 676.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 161.91,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 241.6,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 113.35,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 149.58,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Beth Buckridge",
+			"display_name": "Beth",
+			"phone": "(56) 90229-8653",
+			"email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "83169-075",
+				"street": "Margaretta Burgs",
+				"number": "52030",
+				"complement": null,
+				"district": "Northamptonshire",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.984668,
+				"longitude": -46.387315
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Bret Greenholt",
+			"display_name": "Bret",
+			"phone": "(26) 93899-6978",
+			"email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "88428-325",
+				"street": "Mulberry Street",
+				"number": "6327",
+				"complement": null,
+				"district": "Warwickshire",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.944525,
+				"longitude": -46.612147
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-26T06:18:40.076Z",
+					"observations": "Appono adipiscor cur placeat optio suppono textor depono compello cunae.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.95738,
+								"longitude": -46.493025,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788265427555
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Tyne and Wear",
+							"streetNumber": "388",
+							"street": "Alejandro Common",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68203605",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gavin Meadow, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Têxtil / Roupas / Tecidos",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"description": "Adinventitias carcer cognomen sui uxor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"description": "Volup theologus inventore ter.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Micah Walsh-Dibbert",
+			"display_name": "Micah",
+			"phone": "(14) 97321-0446",
+			"email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "02785-525",
+				"street": "Natasha Glens",
+				"number": "47627",
+				"complement": null,
+				"district": "South Glamorgan",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.912765,
+				"longitude": -46.430095
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Nicolas Emard",
+			"display_name": "Nicolas",
+			"phone": "(48) 93884-3706",
+			"email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "26543-182",
+				"street": "The Coppice",
+				"number": "78075",
+				"complement": null,
+				"district": "South Yorkshire",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.919711,
+				"longitude": -46.369116
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-29T15:40:33.897Z",
+					"observations": "Delinquo sed thymbra audeo curso optio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.958503,
+								"longitude": -46.628377,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317492450
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Lawrence County",
+							"streetNumber": "146",
+							"street": "O'Reilly Centers",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48058556",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Celia Points, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-01T11:28:51.655Z",
+					"observations": "Textus conservo vos crastinus dignissimos defero admoneo tandem.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.999313,
+								"longitude": -46.450445,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279259958
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Leicestershire",
+							"streetNumber": "215",
+							"street": "Pouros Manors",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "31772823",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Anderson Flats, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Borracha / Pneus",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"description": "Calco crustulum vomica comminor vomito arma.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"description": "Sortitus cunabula aetas tres summa aspernatur sequi caries arto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Enrique Harber",
+			"display_name": "Enrique",
+			"phone": "(63) 94689-1972",
+			"email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "56189-530",
+				"street": "E Broadway",
+				"number": "6315",
+				"complement": null,
+				"district": "Greater Manchester",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.92134,
+				"longitude": -46.502473
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-18T10:12:03.919Z",
+					"observations": "Solitudo statim statua coaegresco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.921083,
+								"longitude": -46.521401,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788259780985
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "North Yorkshire",
+							"streetNumber": "6018",
+							"street": "Post Road",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86242929",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gerson Extensions, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-17T23:58:02.609Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.951109,
+								"longitude": -46.396152,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298681412
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Suffolk",
+							"streetNumber": "731",
+							"street": "Alfred Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "19115413",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jennie Centers, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"description": "Verumtamen adulescens sub repellendus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"description": "Canto tabgo adaugeo vapulus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Delia Runolfsdottir",
+			"display_name": "Delia",
+			"phone": "(00) 95644-1255",
+			"email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "85074-832",
+				"street": "Birch Close",
+				"number": "492",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.982595,
+				"longitude": -46.514575
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-18T07:17:31.393Z",
+					"observations": "Provident doloribus pauci.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.902828,
+								"longitude": -46.550874,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295333998
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Lancashire",
+							"streetNumber": "219",
+							"street": "Cumberland Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09878345",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Williamson Ranch, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Vidro",
+						"Construção Civil e Demolição (RCD)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jacob-abernathy.1.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-24T19:50:28.071Z",
+					"observations": "Aeneus crur solum circumvenio debilito accedo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -24.00631,
+								"longitude": -46.395806,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788267262526
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Avon",
+							"streetNumber": "3406",
+							"street": "Broad Street",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "84531216",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Vivianne Loop, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jacob-abernathy.1.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"description": "Beatus torqueo illo atqui cruentus odio speculum nemo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-12T12:24:03.078Z",
+					"observations": "Utique aestivus atrox voluptatem capillus cohaero amet.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.980242,
+								"longitude": -46.641078,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788276981654
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Shropshire",
+							"streetNumber": "17990",
+							"street": "Kingsway",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53364408",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Heath Road, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Shaun Aufderhar",
+			"display_name": "Shaun",
+			"phone": "(07) 91613-8426",
+			"email": "shaun-aufderhar.16.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "20761-848",
+				"street": "Mann Ferry",
+				"number": "751",
+				"complement": null,
+				"district": "Pike County",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.975926,
+				"longitude": -46.431893
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-09T07:37:21.897Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.982602,
+								"longitude": -46.401008,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294014097
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Morgan County",
+							"streetNumber": "875",
+							"street": "New Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68721603",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Washington Avenue, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-27T13:51:51.613Z",
+					"observations": "Canis adfectus ciminatio succedo videlicet valetudo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.990473,
+								"longitude": -46.404161,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315717333
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Union County",
+							"streetNumber": "83605",
+							"street": "Moss Lane",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44621057",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "4th Avenue, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Têxtil / Roupas / Tecidos",
+						"Lâmpadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "enrique-harber.14.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicole-lakin.9.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edwina-russel.6.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eva-prosacco.2.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beth-buckridge.10.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rogers-keebler.3.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gregg-hessel.7.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "delia-runolfsdottir.15.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "micah-walsh-dibbert.12.sao-vicente-sp@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "bret-greenholt.11.sao-vicente-sp@oikos.seed",
+							"description": "Caveo asporto validus arca in demitto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"description": "Supplanto rerum cetera textilis tabula damnatio cunae confugo arx.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-01T07:02:14.896Z",
+					"observations": "Celer defungo bellum aut.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.925889,
+								"longitude": -46.637246,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788291529159
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Surrey",
+							"streetNumber": "3491",
+							"street": "Leroy Fall",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42533567",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "15th Street, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ernesto Nicolas-Heaney",
+			"display_name": "Ernesto",
+			"phone": "(70) 94393-4683",
+			"email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+			"address": {
+				"zip_code": "49029-685",
+				"street": "N Central Avenue",
+				"number": "9951",
+				"complement": null,
+				"district": "Lincolnshire",
+				"city": "São Vicente",
+				"city_ibge_id": 3551009,
+				"state": "São Paulo",
+				"state_ibge_id": 35,
+				"state_code": "SP",
+				"latitude": -23.905751,
+				"longitude": -46.457436
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-05T03:33:47.052Z",
+					"observations": "Vulgivagus molestiae altus talis caries terminatio thalassinus voluptatem optio verbum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.947803,
+								"longitude": -46.605743,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285234222
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "Oxfordshire",
+							"streetNumber": "3664",
+							"street": "Mill Close",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50824950",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Murray Pike, São Vicente - SP"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "keith-sanford.0.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "edyth-spencer.4.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "vada-wintheiser.5.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jared-white.8.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nicolas-emard.13.sao-vicente-sp@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ernesto-nicolas-heaney.17.sao-vicente-sp@oikos.seed",
+							"description": "Sopor causa amita arguo carbo minus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-24T18:24:08.181Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -23.918507,
+								"longitude": -46.580101,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295735881
+						},
+						"addresses": {
+							"city": "São Vicente",
+							"district": "County Antrim",
+							"streetNumber": "1931",
+							"street": "Valentina Knolls",
+							"region": "SP",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55819749",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Henrietta Manors, São Vicente - SP"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

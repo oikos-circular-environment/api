@@ -8,7 +8,6 @@ export type AuthUser = {
 	banned: boolean;
 	banReason: string | null;
 	banExpires: Date | null;
-	authSource: string;
 	createdAt: Date;
 	updatedAt: Date;
 };

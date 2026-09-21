@@ -25,21 +25,10 @@ export class InMemoryUsersRepository implements UsersRepository {
 		return user;
 	}
 
-	async findByIdWithPassword(id: string) {
-		const user = this.items.find((item) => item.id === id);
-
-		if (!user) {
-			return null;
-		}
-
-		return { id: user.id, email: user.email, password: user.password };
-	}
-
 	async create(data: CreateUser) {
 		const user: User = {
 			id: randomUUID(),
 			email: data.email,
-			password: data.password,
 			created_at: new Date(),
 			deleted_at: null,
 			deletion_job_id: null,
@@ -68,13 +57,18 @@ export class InMemoryUsersRepository implements UsersRepository {
 		return this.items[index];
 	}
 
-	async updatePassword(userId: string, passwordHash: string) {
-		const index = this.items.findIndex((item) => item.id === userId);
-		this.items[index].password = passwordHash;
-	}
-
 	async delete(userId: string) {
 		const index = this.items.findIndex((item) => item.id === userId);
 		this.items.splice(index, 1);
+	}
+
+	async updateName(userId: string, name: string) {
+		const user = this.items.find((item) => item.id === userId);
+		if (user) user.name = name;
+	}
+
+	async updateImage(userId: string, image: string | null) {
+		const user = this.items.find((item) => item.id === userId);
+		if (user) user.image = image;
 	}
 }

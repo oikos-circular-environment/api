@@ -1,0 +1,5753 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:53:56.103Z",
+		"city": "Sidrolândia",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Federico Kessler",
+			"display_name": "Federico",
+			"phone": "(81) 99061-0579",
+			"email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "41115-367",
+				"street": "Broad Street",
+				"number": "4141",
+				"complement": null,
+				"district": "Monroe County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.953887,
+				"longitude": -54.953195
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJnZ0ygYSlh5QRitBKNled6js",
+						"rating": 4.7,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Soro Ferro Velho",
+					"business_name": "Soro Ferro Velho",
+					"identity": "10703832794",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "soro.ferro.velho@concerned-meadow.net",
+					"phones": ["(95) 93570-7889"],
+					"website": null,
+					"started_activity_in": "2025-12-14T01:35:03.132Z",
+					"address": {
+						"zip_code": "79170-000",
+						"street": "R. Espírito Santo",
+						"number": "1890",
+						"complement": null,
+						"district": "Centro, Sidrolândia",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.9336868,
+						"longitude": -54.969758299999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": []
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.96,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 75
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 400.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.86,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 435.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 935
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 429.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 142.38,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 59.54,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ59BWdX-vh5QRilDNHxbo8Yg",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "M.A. Reciclagem",
+					"business_name": "M.A. Reciclagem",
+					"identity": "91506864000135",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "m.a.reciclagem@fantastic-cop-out.com",
+					"phones": ["(67) 99908-5520"],
+					"website": "http://www.mareciclagemms.com.br/",
+					"started_activity_in": "2019-09-06T06:43:02.689Z",
+					"address": {
+						"zip_code": "79170-000",
+						"street": "R. da Aviação",
+						"number": "149",
+						"complement": null,
+						"district": "São Bento, Sidrolândia",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.9352698,
+						"longitude": -54.9584109
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 231.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.82,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 584.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.12,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 610.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.3,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 436.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.88,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 638.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.61,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 923.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 143.73,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 63.42,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 63.09,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-08T08:02:41.707Z",
+					"observations": "Acquiro cohaero ustilo aspernatur voluptatibus ducimus cupio debilito verto comminor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.947402,
+								"longitude": -54.967262,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788351188328
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "North Yorkshire",
+							"streetNumber": "3033",
+							"street": "W 9th Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95561647",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Donnelly-D'Amore Stream, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Veículos em Fim de Vida",
+						"Madeira"
+					],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Deven Wyman",
+			"display_name": "Deven",
+			"phone": "(06) 95524-2540",
+			"email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "26908-276",
+				"street": "Hoppe Estates",
+				"number": "5454",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.924506,
+				"longitude": -54.966965
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJt2on4Ravh5QRRl9wtr4pDR8",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "São Mateus Reciclagem | Sidrolândia MS",
+					"business_name": "São Mateus Reciclagem | Sidrolândia MS",
+					"identity": "70001589000128",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "sao.mateus.reciclagem.sidrolandia.ms@unknown-mousse.name",
+					"phones": ["(67) 99694-9745"],
+					"website": "https://www.instagram.com/donizete.t.araujo?igsh=MjZxYmI3dW1wNjQ3",
+					"started_activity_in": "2019-06-13T00:01:55.385Z",
+					"address": {
+						"zip_code": "79170-000",
+						"street": "R. Dr. Costa Marques",
+						"number": "279",
+						"complement": null,
+						"district": "Pindorama, Sidrolândia",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.9461169,
+						"longitude": -54.9602563
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.65,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 19.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.71,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 748.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.23,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 627
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.43,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 633.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 165.76,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 82.19,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 114.34,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 52.06,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 223.77,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Dibbert Inc Reciclagem",
+					"business_name": "Dibbert Inc Reciclagem",
+					"identity": "18652479000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Brad_Dietrich@enraged-knight.com",
+					"phones": ["(97) 98196-7850"],
+					"website": null,
+					"started_activity_in": "2018-02-17T01:06:25.189Z",
+					"address": {
+						"zip_code": "46106-385",
+						"street": "Lindgren-Feil Skyway",
+						"number": "49848",
+						"complement": null,
+						"district": "Dyfed",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.946774,
+						"longitude": -54.950029
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.48,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 346.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.66,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 46.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 231.12,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 216.54,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 241.31,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 52.97,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 199.5,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-16T08:19:23.127Z",
+					"observations": "Cohaero crudelis vomer eius nostrum vacuus spiritus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.939911,
+								"longitude": -54.972986,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315031662
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Highlands and Islands",
+							"streetNumber": "6265",
+							"street": "Heidenreich Streets",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88409659",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Madilyn Mill, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"description": "Suasoria thorax caries advenio terror damno claudeo vito absens.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"description": "Caritas ullam confero cruciamentum audio quaerat abeo molestias suscipio animus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-28T15:25:17.439Z",
+					"observations": "Adnuo corpus amiculum ver acceptus terminatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.943227,
+								"longitude": -54.951924,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278663571
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "County Down",
+							"streetNumber": "2024",
+							"street": "Bramley Close",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "72545095",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Second Avenue, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"description": "Tabula dedecor usque suffoco templum aiunt clamo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Alex Gutmann",
+			"display_name": "Alex",
+			"phone": "(75) 90007-7730",
+			"email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "96163-952",
+				"street": "Tami Roads",
+				"number": "1106",
+				"complement": null,
+				"district": "Hamilton County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.924924,
+				"longitude": -54.963676
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Bahringer-Heaney Inc Reciclagem",
+					"business_name": "Bahringer-Heaney Inc Reciclagem",
+					"identity": "81916289000195",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Alphonso29@troubled-lift.org",
+					"phones": ["(25) 92264-0276"],
+					"website": null,
+					"started_activity_in": "2020-08-14T09:39:34.051Z",
+					"address": {
+						"zip_code": "34038-750",
+						"street": "Marquardt Mission",
+						"number": "20150",
+						"complement": null,
+						"district": "Isle of Wight",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.918805,
+						"longitude": -54.96704
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 262.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 877.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 283.06,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 211.42,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 201.73,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 165.94,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 215.21,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 191.15,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Labadie, Johns and Kshlerin Reciclagem",
+					"business_name": "Labadie, Johns and Kshlerin Reciclagem",
+					"identity": "41710036000146",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Malika_Raynor@hospitable-barge.biz",
+					"phones": ["(69) 96771-9569"],
+					"website": null,
+					"started_activity_in": "2018-03-08T19:28:59.005Z",
+					"address": {
+						"zip_code": "34938-014",
+						"street": "Ollie Wall",
+						"number": "40935",
+						"complement": null,
+						"district": "Somerset",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.923991,
+						"longitude": -54.951915
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.34,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 789.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 827.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.8,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 241.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 104.93,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 182,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 130.33,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 291.26,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 199.73,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Sadie Steuber",
+			"display_name": "Sadie",
+			"phone": "(97) 94076-7525",
+			"email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "30561-200",
+				"street": "Polly Cove",
+				"number": "43300",
+				"complement": null,
+				"district": "Grant County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.933529,
+				"longitude": -54.971121
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "McKenzie, Collier and Mayer Reciclagem",
+					"business_name": "McKenzie, Collier and Mayer Reciclagem",
+					"identity": "31757005000197",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Griffin15@glass-phrase.biz",
+					"phones": ["(37) 96219-8916"],
+					"website": null,
+					"started_activity_in": "2021-08-16T04:49:53.884Z",
+					"address": {
+						"zip_code": "16851-693",
+						"street": "Marguerite Parkways",
+						"number": "619",
+						"complement": null,
+						"district": "Tyne and Wear",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.955476,
+						"longitude": -54.949563
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.01,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 533
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.63,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 121.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.41,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 406
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 187.4
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.76,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 143.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 208.34,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 297.29,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 179.88,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 235.73,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 266.81,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 91.62,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lesch - Price Reciclagem",
+					"business_name": "Lesch - Price Reciclagem",
+					"identity": "68681533681",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Antonetta41@outlandish-independence.info",
+					"phones": ["(62) 95415-2159"],
+					"website": null,
+					"started_activity_in": "2023-05-21T20:14:14.716Z",
+					"address": {
+						"zip_code": "50671-032",
+						"street": "W 10th Street",
+						"number": "441",
+						"complement": null,
+						"district": "Franklin County",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.953557,
+						"longitude": -54.955984
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 762
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.97,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 812.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.69,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 591.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.28,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 926.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.34,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 532.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.04,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 787.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 294.6,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 184.19,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 168.2,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 291.67,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 155.68,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-29T06:17:01.094Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.926531,
+								"longitude": -54.971291,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788306468517
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Hertfordshire",
+							"streetNumber": "909",
+							"street": "S Broad Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02673425",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hills Locks, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-26T04:01:28.597Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.930651,
+								"longitude": -54.968032,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788323547986
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Strathclyde",
+							"streetNumber": "2659",
+							"street": "Talbot Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54487399",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Purdy Shoals, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Natalie Barrows",
+			"display_name": "Natalie",
+			"phone": "(41) 90689-7594",
+			"email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "32732-077",
+				"street": "Prosacco Skyway",
+				"number": "612",
+				"complement": null,
+				"district": "Dorset",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.925304,
+				"longitude": -54.97566
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lehner, Von and Kulas Reciclagem",
+					"business_name": "Lehner, Von and Kulas Reciclagem",
+					"identity": "08394978819",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Brenna.Walter35@male-lid.biz",
+					"phones": ["(12) 96631-5131"],
+					"website": null,
+					"started_activity_in": "2018-05-06T18:27:18.375Z",
+					"address": {
+						"zip_code": "93617-400",
+						"street": "Auer Parks",
+						"number": "5207",
+						"complement": null,
+						"district": "County Fermanagh",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.942286,
+						"longitude": -54.96365
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 298.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.37,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 512.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.84,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 960.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.16,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 620.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 55.29,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 206.87,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 186.38,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 283.8,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Wisoky, Schmidt and Monahan Reciclagem",
+					"business_name": "Wisoky, Schmidt and Monahan Reciclagem",
+					"identity": "79654965000158",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Ray_Kulas92@rosy-minority.net",
+					"phones": ["(92) 99403-8254"],
+					"website": null,
+					"started_activity_in": "2022-12-25T01:04:01.069Z",
+					"address": {
+						"zip_code": "41336-684",
+						"street": "Charles Street",
+						"number": "740",
+						"complement": null,
+						"district": "Cheshire",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.933631,
+						"longitude": -54.958786
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.63,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 259
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.71,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 156.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.14,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 851.9
+						},
+						{
+							"name": "Pilhas e Baterias",
+							"description": "Coleta de resíduos: Pilhas e Baterias",
+							"price": 1.6,
+							"unit": "KG",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 200.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 166.58,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 169.1,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 201.58,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 94.82,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 207.57,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-24T04:29:11.058Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.949763,
+								"longitude": -54.971499,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353917703
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Henry County",
+							"streetNumber": "82205",
+							"street": "North Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01276424",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Westfield Road, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"description": "Terra cupiditate capto aduro quo brevis cruentus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"description": "Suus delectatio coniecto cogito terebro consequuntur ventito.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-24T17:10:38.133Z",
+					"observations": "Sonitus quo varietas thesaurus error demulceo utilis calculus iste.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.955403,
+								"longitude": -54.97025,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327547058
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Washington County",
+							"streetNumber": "531",
+							"street": "Rico Unions",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85978721",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Isidro Corner, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Medicamentos",
+						"Lâmpadas"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"description": "Fugit spargo creator ipsa nostrum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"description": "Corrupti vigilo custodia.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Kendra Torp",
+			"display_name": "Kendra",
+			"phone": "(75) 96745-2285",
+			"email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "32367-089",
+				"street": "Anastacio Ports",
+				"number": "21684",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.94666,
+				"longitude": -54.973468
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Reichert, Abernathy-Runte and Turner-Gottlieb Reciclagem",
+					"business_name": "Reichert, Abernathy-Runte and Turner-Gottlieb Reciclagem",
+					"identity": "62079612263",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Theresia.Daniel32@wordy-haircut.name",
+					"phones": ["(21) 99700-5979"],
+					"website": null,
+					"started_activity_in": "2018-04-06T22:48:03.480Z",
+					"address": {
+						"zip_code": "09158-484",
+						"street": "South View",
+						"number": "5726",
+						"complement": null,
+						"district": "East Sussex",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.9347,
+						"longitude": -54.964872
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.94,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 811.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.52,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 905.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 909.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.12,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 442.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.89,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 757.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 150.4,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 262.34,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 279.61,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 182.3,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 107.22,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 150.6,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Pagac, Mills and Heller Reciclagem",
+					"business_name": "Pagac, Mills and Heller Reciclagem",
+					"identity": "41317604520",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Wm.Ernser@wobbly-colon.net",
+					"phones": ["(38) 93337-0660"],
+					"website": null,
+					"started_activity_in": "2023-05-06T22:38:41.170Z",
+					"address": {
+						"zip_code": "80872-563",
+						"street": "Howard Dam",
+						"number": "598",
+						"complement": null,
+						"district": "Clark County",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.941229,
+						"longitude": -54.957096
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.49,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 30.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.26,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 935.6
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.99,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 217.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.35,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 817.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.82,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 401
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 79.73,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 71.61,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-25T05:44:25.384Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.938342,
+								"longitude": -54.969281,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316965992
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Gloucestershire",
+							"streetNumber": "3442",
+							"street": "Bud Knoll",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53283518",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bednar Track, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"description": "Ulciscor abundans totus cubitum vix aspicio clamo cupressus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-05T06:47:09.300Z",
+					"observations": "Tunc aiunt administratio perspiciatis delibero.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.924325,
+								"longitude": -54.954408,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788335373346
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Perry County",
+							"streetNumber": "366",
+							"street": "Eldon Valleys",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70614327",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Church Close, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-22T06:15:02.284Z",
+					"observations": "Cura in deporto consuasor thymbra angelus statim inflammatio defessus inflammatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.920151,
+								"longitude": -54.965277,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788283230441
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Cumbria",
+							"streetNumber": "87042",
+							"street": "Einar Mill",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "18796066",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cleveland Street, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "maud-donnelly.15.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"description": "Absum custodia spiritus audeo bibo adaugeo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-01T13:43:50.406Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.94737,
+								"longitude": -54.958471,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788338900506
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Marshall County",
+							"streetNumber": "9151",
+							"street": "Brook Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00737278",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E Maple Street, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"description": "Terror thermae beatus adamo voluptates umquam cometes.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Clark Howell",
+			"display_name": "Clark",
+			"phone": "(45) 96255-0315",
+			"email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "45797-622",
+				"street": "Victoria Springs",
+				"number": "423",
+				"complement": null,
+				"district": "Cleveland",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.937492,
+				"longitude": -54.97115
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Schoen - Rogahn Reciclagem",
+					"business_name": "Schoen - Rogahn Reciclagem",
+					"identity": "85930279000165",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Tricia37@front-deck.net",
+					"phones": ["(63) 96058-8046"],
+					"website": null,
+					"started_activity_in": "2021-11-28T00:38:55.649Z",
+					"address": {
+						"zip_code": "76239-701",
+						"street": "Maggio Via",
+						"number": "343",
+						"complement": null,
+						"district": "Northamptonshire",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.93282,
+						"longitude": -54.961228
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.18,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 526.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.88,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 163.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.83,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 185.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 273.98,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 95.34,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 61.02,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 217.6,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 262.26,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Blick Group Reciclagem",
+					"business_name": "Blick Group Reciclagem",
+					"identity": "42917925000141",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Chaz.Little@white-availability.name",
+					"phones": ["(82) 95112-9619"],
+					"website": null,
+					"started_activity_in": "2020-10-18T16:44:33.308Z",
+					"address": {
+						"zip_code": "10626-074",
+						"street": "Sauer Parkways",
+						"number": "62479",
+						"complement": null,
+						"district": "Douglas County",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.953488,
+						"longitude": -54.953106
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.17,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 372.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.58,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 298.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 109.33,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 62.64,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-17T04:06:23.071Z",
+					"observations": "Benevolentia cubitum thymum barba.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.933862,
+								"longitude": -54.971075,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788283631134
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Fife",
+							"streetNumber": "96982",
+							"street": "Sierra Hill",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54136607",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Calista Extension, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-05T11:47:30.674Z",
+					"observations": "Debeo viridis inflammatio deputo aurum tabesco tabula uter audacia.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.93759,
+								"longitude": -54.948994,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788337873678
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Wiltshire",
+							"streetNumber": "5224",
+							"street": "Stanley Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74336803",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Beth Islands, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Têxtil / Roupas / Tecidos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Gloria Haley",
+			"display_name": "Gloria",
+			"phone": "(39) 91047-7381",
+			"email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "58877-260",
+				"street": "Honeysuckle Close",
+				"number": "995",
+				"complement": null,
+				"district": "Lee County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.943198,
+				"longitude": -54.97303
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Batz, Ondricka and Fritsch Reciclagem",
+					"business_name": "Batz, Ondricka and Fritsch Reciclagem",
+					"identity": "24947372000198",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Demond_Jones66@sandy-summer.biz",
+					"phones": ["(04) 93162-8601"],
+					"website": null,
+					"started_activity_in": "2020-07-05T15:20:20.062Z",
+					"address": {
+						"zip_code": "19531-596",
+						"street": "Greenholt Neck",
+						"number": "9513",
+						"complement": null,
+						"district": "Marshall County",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.928292,
+						"longitude": -54.974085
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 203.2
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.65,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 41.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 263.13,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 153.96,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Schamberger - Borer Reciclagem",
+					"business_name": "Schamberger - Borer Reciclagem",
+					"identity": "88508662000118",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Charles_Swift@sweet-bin.org",
+					"phones": ["(03) 92853-8645"],
+					"website": null,
+					"started_activity_in": "2025-07-12T05:48:51.192Z",
+					"address": {
+						"zip_code": "97694-495",
+						"street": "Stamm-Stehr Track",
+						"number": "35910",
+						"complement": null,
+						"district": "Cumbria",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.940878,
+						"longitude": -54.966123
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.37,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 693.1
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.26,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 203.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.69,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 784.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.78,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 966.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.74,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 48.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 99.82,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 294.8,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 271.5,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 65.1,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 196.51,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 150.11,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Tyrell Hauck",
+			"display_name": "Tyrell",
+			"phone": "(30) 93708-8089",
+			"email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "47254-716",
+				"street": "Dooley Rapids",
+				"number": "419",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.954259,
+				"longitude": -54.963907
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Wuckert Inc Reciclagem",
+					"business_name": "Wuckert Inc Reciclagem",
+					"identity": "31953090000169",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Leon_Hayes66@admired-ravioli.org",
+					"phones": ["(50) 95608-9845"],
+					"website": null,
+					"started_activity_in": "2018-01-24T06:32:56.741Z",
+					"address": {
+						"zip_code": "12413-445",
+						"street": "Fay Plains",
+						"number": "649",
+						"complement": null,
+						"district": "Adams County",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.945277,
+						"longitude": -54.958257
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.45,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 904.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.75,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 923.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.6,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 233.3
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.66,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 808.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.05,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 970.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.75,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 58.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 146.17,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 259.02,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 197.7,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 246.48,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 227.18,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 79.9,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Abernathy, Bailey and Stokes Reciclagem",
+					"business_name": "Abernathy, Bailey and Stokes Reciclagem",
+					"identity": "31546556000101",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Lauren.Barrows30@somber-concentration.com",
+					"phones": ["(10) 90491-4902"],
+					"website": null,
+					"started_activity_in": "2022-01-19T05:32:06.936Z",
+					"address": {
+						"zip_code": "83178-327",
+						"street": "Norberto Ramp",
+						"number": "53174",
+						"complement": null,
+						"district": "East Sussex",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.917066,
+						"longitude": -54.963133
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 3.23,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 391.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.94,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 756.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 291.89,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 201.62,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-18T01:13:31.712Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.937501,
+								"longitude": -54.955606,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788336450857
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Powys",
+							"streetNumber": "7152",
+							"street": "Cremin Mews",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "04496904",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Howell Well, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"description": "Aut tabgo colligo cupressus amita atavus accusantium deserunt decerno denuncio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-11T04:24:45.064Z",
+					"observations": "Barba sumptus arbustum sublime dolore taedium aegre cursus decumbo angulus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.919746,
+								"longitude": -54.966444,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317389208
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Suffolk",
+							"streetNumber": "93803",
+							"street": "S Broad Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42380305",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clayton Mount, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"description": "Cur solvo sapiente clibanus dignissimos agnosco adeo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Trevor Klocko",
+			"display_name": "Trevor",
+			"phone": "(77) 95678-5626",
+			"email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "29988-380",
+				"street": "Tom Keys",
+				"number": "192",
+				"complement": null,
+				"district": "Borders",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.917435,
+				"longitude": -54.96642
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Watsica - Gislason Reciclagem",
+					"business_name": "Watsica - Gislason Reciclagem",
+					"identity": "19805453000113",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Lenore88@vain-backbone.net",
+					"phones": ["(46) 91125-0734"],
+					"website": null,
+					"started_activity_in": "2023-12-14T01:19:26.314Z",
+					"address": {
+						"zip_code": "14851-472",
+						"street": "Abshire Courts",
+						"number": "4781",
+						"complement": null,
+						"district": "Hertfordshire",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.917863,
+						"longitude": -54.955313
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.7,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 885
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 5,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 156.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.16,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 185.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.15,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 903
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.36,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 431.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 299.76,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 250.43,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 183.3,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 92.38,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 229.32,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Bahringer - Wilderman Reciclagem",
+					"business_name": "Bahringer - Wilderman Reciclagem",
+					"identity": "78790902238",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Fernando.Parker@unwieldy-dish.net",
+					"phones": ["(16) 95647-9521"],
+					"website": null,
+					"started_activity_in": "2024-07-29T21:29:36.214Z",
+					"address": {
+						"zip_code": "10632-221",
+						"street": "Schoen Tunnel",
+						"number": "80792",
+						"complement": null,
+						"district": "Lee County",
+						"city": "Sidrolândia",
+						"city_ibge_id": 5007901,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.930938,
+						"longitude": -54.97016
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.3,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 210.1
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.11,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 863.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.54,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 168.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.78,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 154.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 96.79,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 176.39,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 144.4,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-25T06:18:16.907Z",
+					"observations": "Theologus vicinus terra supellex demum absum patria.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.937774,
+								"longitude": -54.961601,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288095936
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Wayne County",
+							"streetNumber": "74352",
+							"street": "Shari Mills",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45413758",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Branson Pass, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Beatrice Goldner",
+			"display_name": "Beatrice",
+			"phone": "(15) 90002-6881",
+			"email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "39842-868",
+				"street": "State Road",
+				"number": "203",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.94873,
+				"longitude": -54.973115
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Alton Thiel",
+			"display_name": "Alton",
+			"phone": "(13) 99404-5117",
+			"email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "75044-926",
+				"street": "Hirthe Walks",
+				"number": "80472",
+				"complement": null,
+				"district": "Madison County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.935929,
+				"longitude": -54.960204
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-09T07:09:36.809Z",
+					"observations": "Atrocitas labore crudelis victus constans.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.923129,
+								"longitude": -54.950773,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788341857374
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Warwickshire",
+							"streetNumber": "87522",
+							"street": "Blind Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "72579921",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W 14th Street, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-15T13:21:11.996Z",
+					"observations": "Venio tripudio torqueo coerceo stultus appello temptatio comis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.932718,
+								"longitude": -54.971088,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788318573177
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Gwynedd County",
+							"streetNumber": "11816",
+							"street": "Deanna Point",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21517735",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Church Street, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Jalyn Crist",
+			"display_name": "Jalyn",
+			"phone": "(39) 96541-6503",
+			"email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "88264-118",
+				"street": "Dare River",
+				"number": "696",
+				"complement": null,
+				"district": "Clay County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.947384,
+				"longitude": -54.97468
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-30T06:16:58.051Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.937267,
+								"longitude": -54.955243,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329426904
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Merseyside",
+							"streetNumber": "40423",
+							"street": "Kuhn Corner",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52187451",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Roberto Corner, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "maud-donnelly.15.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"description": "Custodia audax communis quisquam sustineo adulatio cernuus comitatus.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"description": "Umerus sufficio umbra cavus bestia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-20T17:21:42.755Z",
+					"observations": "Verbum conqueror arcus id attero speciosus cariosus adeptio ciminatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.9198,
+								"longitude": -54.969694,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788354549103
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Montgomery County",
+							"streetNumber": "4840",
+							"street": "Goyette Manors",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "50236256",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Joann Point, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-17T19:35:55.659Z",
+					"observations": "Cur ullus acsi color.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.955551,
+								"longitude": -54.953294,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286953142
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Devon",
+							"streetNumber": "4576",
+							"street": "Keeling Ville",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "53696732",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Gibson Ville, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Construção Civil e Demolição (RCD)",
+						"Medicamentos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-26T01:36:01.200Z",
+					"observations": "Atrocitas aeneus conforto conturbo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.947762,
+								"longitude": -54.958548,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788274628125
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Somerset",
+							"streetNumber": "64146",
+							"street": "Market Place",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88159656",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hyatt Orchard, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Celestino Hane",
+			"display_name": "Celestino",
+			"phone": "(38) 94469-9716",
+			"email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "53198-246",
+				"street": "Alma Street",
+				"number": "7632",
+				"complement": null,
+				"district": "Mid Glamorgan",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.917267,
+				"longitude": -54.955229
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-12-09T02:36:56.931Z",
+					"observations": "Aequitas appello dapifer sum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.933977,
+								"longitude": -54.951662,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788285819675
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Lincoln County",
+							"streetNumber": "24753",
+							"street": "Rodrigo Drives",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "61702709",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bernhard Islands, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "alton-thiel.11.sidrolandia-ms@oikos.seed",
+							"description": "Callide decipio absum aperio claustrum ea.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-03T01:27:29.594Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.925878,
+								"longitude": -54.972244,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353720333
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "County Antrim",
+							"streetNumber": "2886",
+							"street": "Moor Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86611757",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Don Dam, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Declan Gislason",
+			"display_name": "Declan",
+			"phone": "(00) 90525-0839",
+			"email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "09215-092",
+				"street": "Patience Hill",
+				"number": "6438",
+				"complement": null,
+				"district": "Henry County",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.919559,
+				"longitude": -54.971586
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-24T19:01:23.506Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.937928,
+								"longitude": -54.969659,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316764345
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Northamptonshire",
+							"streetNumber": "9524",
+							"street": "E 2nd Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15002356",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Willow Drive, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "deven-wyman.1.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kendra-torp.5.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "clark-howell.6.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "trevor-klocko.9.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "maud-donnelly.15.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+							"description": "Tubineus commodo ascisco studio cado amor alii repellat.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "gloria-haley.7.sidrolandia-ms@oikos.seed",
+							"description": "Theologus arcus alias adeptio sordeo sed video vitiosus creber.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Maud Donnelly",
+			"display_name": "Maud",
+			"phone": "(25) 98465-5726",
+			"email": "maud-donnelly.15.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "68484-129",
+				"street": "Brook Street",
+				"number": "50000",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.931305,
+				"longitude": -54.971109
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-26T05:35:26.953Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.955371,
+								"longitude": -54.950691,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316851458
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "County Down",
+							"streetNumber": "886",
+							"street": "Brook Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65662217",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Grand Avenue, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "declan-gislason.14.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-23T21:02:53.040Z",
+					"observations": "Debeo esse adfectus conor cimentarius texo stabilis angulus calamitas allatus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.931297,
+								"longitude": -54.962214,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788277327988
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Lawrence County",
+							"streetNumber": "8634",
+							"street": "Boehm Pass",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62394189",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Darryl Track, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Pilhas e Baterias",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "celestino-hane.13.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Brent Schulist-Gutkowski",
+			"display_name": "Brent",
+			"phone": "(46) 98491-4855",
+			"email": "brent-schulist-gutkowski.16.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "30041-116",
+				"street": "Douglas Road",
+				"number": "8790",
+				"complement": null,
+				"district": "Surrey",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.951799,
+				"longitude": -54.971231
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-04T12:29:26.147Z",
+					"observations": "Terebro trado creo assumenda comminor dens.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.949368,
+								"longitude": -54.97084,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281640336
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Jefferson County",
+							"streetNumber": "161",
+							"street": "Gorczany Points",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54166054",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Park Avenue, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "beatrice-goldner.10.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-20T06:33:15.430Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.923734,
+								"longitude": -54.968698,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788284476628
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Gwent",
+							"streetNumber": "838",
+							"street": "Oberbrunner Fort",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52692791",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Donnie Hollow, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "federico-kessler.0.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sadie-steuber.3.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "alex-gutmann.2.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrell-hauck.8.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "natalie-barrows.4.sidrolandia-ms@oikos.seed",
+							"description": "Curso inflammatio abduco tolero sto tabesco.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Stewart Grant",
+			"display_name": "Stewart",
+			"phone": "(99) 94491-7371",
+			"email": "stewart-grant.17.sidrolandia-ms@oikos.seed",
+			"address": {
+				"zip_code": "14239-193",
+				"street": "Carla Burgs",
+				"number": "35832",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Sidrolândia",
+				"city_ibge_id": 5007901,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.928843,
+				"longitude": -54.953106
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-24T18:24:54.466Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.942014,
+								"longitude": -54.974266,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788278394257
+						},
+						"addresses": {
+							"city": "Sidrolândia",
+							"district": "Rutland",
+							"streetNumber": "59556",
+							"street": "Mayer Landing",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05494225",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ambrose Fork, Sidrolândia - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "jalyn-crist.12.sidrolandia-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

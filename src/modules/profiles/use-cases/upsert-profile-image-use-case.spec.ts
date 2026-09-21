@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
+import { InMemoryUsersRepository } from "@/modules/accounts/repositories/in-memory/in-memory-users-repositories.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import { InMemoryStorageProvider } from "@/modules/common/providers/storage/in-memory/in-memory-storage.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
+import { InMemoryTransactionManager } from "@/modules/common/providers/transaction/in-memory/in-memory-transaction-manager.js";
 import { makeProfileInput } from "@/modules/profiles/factories/make-profile.js";
 import { InMemoryProfilesRepository } from "@/modules/profiles/repositories/in-memory/in-memory-profiles-repositories.js";
 import { UpsertProfileImageUseCase } from "./upsert-profile-image-use-case.js";
@@ -10,9 +12,13 @@ describe("upsert-profile-image-use-case", () => {
 	it("creates a profile image using jpeg file", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -40,9 +46,13 @@ describe("upsert-profile-image-use-case", () => {
 	it("deletes old file and uploads new one when extension changes", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -76,9 +86,13 @@ describe("upsert-profile-image-use-case", () => {
 	it("deletes old file and uploads new one when same extension", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -110,9 +124,13 @@ describe("upsert-profile-image-use-case", () => {
 	it("throws when profile does not exist", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -144,9 +162,13 @@ describe("upsert-profile-image-use-case", () => {
 	it("throws when image type is invalid", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -182,9 +204,13 @@ describe("upsert-profile-image-use-case", () => {
 	it("throws when image exceeds 10MB", async () => {
 		const profilesRepository = new InMemoryProfilesRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -238,12 +264,18 @@ describe("upsert-profile-image-use-case", () => {
 			async convertFileToBase64() {
 				return "";
 			}
+
+			async ping() {}
 		}
 
 		const storageProvider = new UploadFailStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -283,9 +315,13 @@ describe("upsert-profile-image-use-case", () => {
 
 		const profilesRepository = new SaveProfileImageFailRepository();
 		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
 		const sut = new UpsertProfileImageUseCase(
 			profilesRepository,
 			storageProvider,
+			usersRepository,
+			transactionManager,
 		);
 
 		const input = makeProfileInput();
@@ -314,5 +350,40 @@ describe("upsert-profile-image-use-case", () => {
 			expect(thrownError.code).toBe("PROFILE_IMAGE_SAVE_FAILED");
 			expect(thrownError.statusCode).toBe(500);
 		}
+	});
+
+	it("syncs User.image with the uploaded image URL", async () => {
+		const profilesRepository = new InMemoryProfilesRepository();
+		const storageProvider = new InMemoryStorageProvider();
+		const usersRepository = new InMemoryUsersRepository();
+		const transactionManager = new InMemoryTransactionManager();
+		const sut = new UpsertProfileImageUseCase(
+			profilesRepository,
+			storageProvider,
+			usersRepository,
+			transactionManager,
+		);
+
+		const input = makeProfileInput();
+		await profilesRepository.create(input);
+		usersRepository.items.push({
+			id: input.user_id,
+			email: "test@example.com",
+			created_at: new Date(),
+			deleted_at: null,
+			deletion_job_id: null,
+		});
+
+		const result = await sut.execute({
+			userId: input.user_id,
+			file: {
+				fileName: "avatar.jpeg",
+				mimeType: "image/jpeg",
+				content: Buffer.from("jpeg-image-content"),
+			},
+		});
+
+		const user = await usersRepository.findById(input.user_id);
+		expect(user?.image).toBe(result.url);
 	});
 });

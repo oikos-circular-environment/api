@@ -1,5 +1,7 @@
 # Suporte a Refresh Token para Mobile (sem cookies)
 
+> **Superseded (api#115):** `/v1/auth/login` e `/v1/auth/refresh` agora delegam pro better-auth e não seguem mais este contrato (sem `refreshToken`, sem rotação — ver [`better-auth/02-migrar-v1-para-better-auth.md`](./better-auth/02-migrar-v1-para-better-auth.md)). Documento mantido só como histórico do contrato antigo.
+
 ## Contexto
 
 A API usa cookies HTTP-only para o refresh token, o que funciona em browsers mas não em apps mobile (iOS/Android). Clientes mobile armazenam tokens em Keychain/Keystore e os enviam via request body. Esta mudança unifica o suporte para web e mobile sem endpoints separados.

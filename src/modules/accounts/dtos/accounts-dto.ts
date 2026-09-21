@@ -14,7 +14,6 @@ export const createUserSchema = userSchema
 export type CreateUser = z.infer<typeof createUserSchema>;
 
 export const userResponseSchema = userSchema.omit({
-	password: true,
 	deletion_job_id: true,
 });
 

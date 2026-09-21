@@ -4,6 +4,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { app } from "@/app.js";
 import { prisma } from "@/lib/prisma.js";
 import { makeGeospatial } from "@/modules/complaints/factories/make-complaint.js";
+import { createTestUser } from "@/test/auth-test-helpers.js";
 
 describe("get-complaints-map", () => {
 	const createdComplaintIds: string[] = [];
@@ -16,15 +17,9 @@ describe("get-complaints-map", () => {
 	async function createUser(
 		email?: string,
 	): Promise<{ id: string; email: string }> {
-		const userId = randomUUID();
-		const userEmail = email ?? `e2e-${userId}@test.local`;
-		await prisma.$executeRawUnsafe(
-			`INSERT INTO users (id, email, password, created_at) VALUES ($1, $2, 'hashed', NOW())`,
-			userId,
-			userEmail,
-		);
-		createdUserIds.push(userId);
-		return { id: userId, email: userEmail };
+		const user = await createTestUser(email ? { email } : undefined);
+		createdUserIds.push(user.id);
+		return { id: user.id, email: user.email };
 	}
 
 	async function createComplaint(ownerId: string): Promise<string> {

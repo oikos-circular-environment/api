@@ -2,7 +2,7 @@ import type { FastifyRequest } from "fastify";
 import { describe, expect, it, vi } from "vitest";
 import { InMemoryAuthProvider } from "@/modules/auth/providers/auth/in-memory/in-memory-auth-provider.js";
 import { AppError } from "../errors/app-error.js";
-import { createVerifySession } from "./verify-session.js";
+import { createVerifySession, requireAuthUser } from "./verify-session.js";
 
 function makeRequest(headers: Record<string, string> = {}): FastifyRequest {
 	return {
@@ -12,7 +12,7 @@ function makeRequest(headers: Record<string, string> = {}): FastifyRequest {
 }
 
 describe("verify-session", () => {
-	it("attaches request.authV2User when session is valid", async () => {
+	it("attaches request.authUser when session is valid", async () => {
 		const provider = new InMemoryAuthProvider();
 		const verifySession = createVerifySession(provider);
 		const { token } = await provider.signUpWithPassword({
@@ -24,8 +24,8 @@ describe("verify-session", () => {
 
 		await verifySession(request);
 
-		expect(request.authV2User).toBe(provider.users[0]);
-		expect(request.authV2User?.role).toBe("user");
+		expect(request.authUser).toBe(provider.users[0]);
+		expect(request.authUser?.role).toBe("user");
 	});
 
 	it("throws 401 when authorization header is missing", async () => {
@@ -71,5 +71,30 @@ describe("verify-session", () => {
 			code: "UNAUTHORIZED",
 			statusCode: 401,
 		});
+	});
+
+	it("requireAuthUser returns the user when authUser is set", async () => {
+		const provider = new InMemoryAuthProvider();
+		const { user } = await provider.signUpWithPassword({
+			name: "Ada Lovelace",
+			email: "ada@example.com",
+			password: "Test@123456",
+		});
+		const request = makeRequest();
+		request.authUser = user;
+
+		expect(requireAuthUser(request)).toBe(user);
+	});
+
+	it("requireAuthUser throws 401 when authUser is missing", () => {
+		const request = makeRequest();
+
+		expect(() => requireAuthUser(request)).toThrow(AppError);
+		expect(() => requireAuthUser(request)).toThrowError(
+			expect.objectContaining({
+				code: "UNAUTHORIZED",
+				statusCode: 401,
+			}),
+		);
 	});
 });

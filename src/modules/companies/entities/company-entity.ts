@@ -30,3 +30,5 @@ export const companySchema = z.object({
 	updated_at: z.date(),
 });
 export type Company = z.infer<typeof companySchema>;
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(companySchema, { id: "Company" });

@@ -1,4 +1,4 @@
-import { app } from "./app.js";
+import { app, buildMergedOpenApiDocument } from "./app.js";
 import { env } from "./env/index.js";
 
 if (process.env.REDIS_URL) {
@@ -13,17 +13,16 @@ if (process.env.REDIS_URL) {
 	createAccountDeletionWorker();
 }
 
-app
-	.listen({
-		host: "0.0.0.0",
-		port: env.PORT,
-	})
-	.then(() => {
-		console.log(`Server is running on http://localhost:${env.PORT}`);
-		console.log(
-			`API documentation available at http://localhost:${env.PORT}/docs`,
-		);
-	});
+await app.ready();
+await buildMergedOpenApiDocument();
+
+await app.listen({
+	host: "0.0.0.0",
+	port: env.PORT,
+});
+
+console.log(`Server is running on http://localhost:${env.PORT}`);
+console.log(`API documentation available at http://localhost:${env.PORT}/docs`);
 
 // Graceful shutdown: fecha o Fastify antes de encerrar o processo,
 // dando ao SDK OTel (src/lib/otel.ts) tempo para fazer flush dos spans pendentes.

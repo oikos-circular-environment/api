@@ -68,7 +68,6 @@ export async function upsertUser(
 	const created = await prisma.user.create({
 		data: {
 			email: user.email,
-			auth_source: "default",
 			profile: {
 				create: {
 					full_name: user.full_name,

@@ -18,6 +18,7 @@ type AllowedMimeType = keyof typeof ALLOWED_MIME_TYPES;
 type Request = {
 	userId: string;
 	complaintId: string;
+	resolutionId: string;
 	file: { fileName: string; mimeType: string; content: Buffer };
 };
 
@@ -30,15 +31,17 @@ export class AddResolutionAttachmentUseCase {
 	async execute({
 		userId,
 		complaintId,
+		resolutionId,
 		file,
 	}: Request): Promise<ResolutionAttachment> {
 		const resolution =
-			await this.complaintsRepository.findResolutionByUserAndComplaint(
-				userId,
-				complaintId,
-			);
+			await this.complaintsRepository.findResolutionById(resolutionId);
 
-		if (!resolution) {
+		if (
+			!resolution ||
+			resolution.complaint_id !== complaintId ||
+			resolution.resolver_user_id !== userId
+		) {
 			throw new AppError("Resolution not found", "RESOLUTION_NOT_FOUND", 404);
 		}
 
@@ -83,7 +86,6 @@ export class AddResolutionAttachmentUseCase {
 				url,
 				file_name: file.fileName,
 				path: filePath,
-				base64: file.content.toString("base64"),
 			},
 		);
 	}

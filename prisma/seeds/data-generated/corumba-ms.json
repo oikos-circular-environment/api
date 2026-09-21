@@ -1,0 +1,5670 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:54:21.534Z",
+		"city": "Corumbá",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Sheldon Pfeffer",
+			"display_name": "Sheldon",
+			"phone": "(99) 94208-7610",
+			"email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "94806-056",
+				"street": "Lilian Vista",
+				"number": "67511",
+				"complement": null,
+				"district": "Union County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.059644,
+				"longitude": -57.674102
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJj7Iy4Uuhh5MRSs_L7uVMRZw",
+						"rating": 3.3,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Apolo Reciclagem",
+					"business_name": "Apolo Reciclagem",
+					"identity": "30348042000189",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "apolo.reciclagem@ideal-desk.com",
+					"phones": ["(67) 99247-8364"],
+					"website": null,
+					"started_activity_in": "2020-07-17T14:52:25.639Z",
+					"address": {
+						"zip_code": "79310-730",
+						"street": "R. Duque de Caxias",
+						"number": "1356",
+						"complement": null,
+						"district": "Aeroporto, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.016079599999998,
+						"longitude": -57.65036860000001
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.5,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 805.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.44,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 473.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.21,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 102.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.94,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 203.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 59.63,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 138.48,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 64,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 250.05,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-ftosYuhh5MRK3VPcxi7Bfs",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "A Estrela Dalva Reciclagem",
+					"business_name": "A Estrela Dalva Reciclagem",
+					"identity": "16322247000164",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "a.estrela.dalva.reciclagem@heartfelt-academics.biz",
+					"phones": ["(67) 99698-5155"],
+					"website": null,
+					"started_activity_in": "2025-09-20T11:58:24.882Z",
+					"address": {
+						"zip_code": "79320-140",
+						"street": "R. Dom Pedro II",
+						"number": "S/N",
+						"complement": null,
+						"district": "Popular Nova, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.024725399999998,
+						"longitude": -57.657122699999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "13:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.03,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 568.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.97,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 317.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.19,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 385.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.25,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 563.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 124.08,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 122.86,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 255.35,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 267.01,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 198.74,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-14T20:15:54.480Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.045001,
+								"longitude": -57.654513,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788289942577
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "County Antrim",
+							"streetNumber": "622",
+							"street": "Alicia Spur",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "18434924",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Avenue, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-27T16:38:21.447Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.03369,
+								"longitude": -57.639754,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312248281
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "South Glamorgan",
+							"streetNumber": "49162",
+							"street": "Railroad Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37963650",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Highfield Avenue, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Papel / Papelão",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-08T21:51:43.827Z",
+					"observations": "Tepesco titulus templum strues architecto sunt.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.005006,
+								"longitude": -57.660066,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314748831
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Lancashire",
+							"streetNumber": "8057",
+							"street": "Swaniawski Wall",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23234228",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rohan-Shields Dam, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Belle Mann",
+			"display_name": "Belle",
+			"phone": "(04) 99275-3832",
+			"email": "belle-mann.1.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "02491-930",
+				"street": "Mandy Ramp",
+				"number": "700",
+				"complement": null,
+				"district": "County Fermanagh",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.0474,
+				"longitude": -57.636944
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ27vhstALh5MRStbCjGu3oH0",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "NASCIMENTO & SILVA RECICLAGEM",
+					"business_name": "NASCIMENTO & SILVA RECICLAGEM",
+					"identity": "29064722000191",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "nascimento.silva.reciclagem@lean-blossom.biz",
+					"phones": ["(47) 93833-3338"],
+					"website": null,
+					"started_activity_in": "2018-01-18T10:16:25.339Z",
+					"address": {
+						"zip_code": "79321-053",
+						"street": "Alameda Santo Antonio Esq",
+						"number": "S/N",
+						"complement": null,
+						"district": "Cravo vermelho",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0320333,
+						"longitude": -57.643302000000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.98,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 148.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.99,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 587
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.36,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 399.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.79,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 898.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.03,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 549.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.43,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 208.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 247.02,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 81.3,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 192.89,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 100.21,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 228.91,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 155.22,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJbTfLBQyhh5MRsDKvDQ1vKcQ",
+						"rating": 2,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Apolo Reciclagem",
+					"business_name": "Apolo Reciclagem",
+					"identity": "91322566000195",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "apolo.reciclagem@palatable-hubris.name",
+					"phones": ["(67) 99247-8364"],
+					"website": null,
+					"started_activity_in": "2025-04-24T10:46:01.438Z",
+					"address": {
+						"zip_code": "79333-010",
+						"street": "R. Edu Rocha",
+						"number": "780",
+						"complement": null,
+						"district": "Dom Bosco, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0064542,
+						"longitude": -57.6627865
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.31,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 323.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.84,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 840.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.8,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 897.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 41.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 280.28,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 180.78,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 162.93,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 261.62,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 125.8,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-23T09:54:24.722Z",
+					"observations": "Coepi cena pel velut debitis cubo nihil.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.014427,
+								"longitude": -57.616883,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788356852630
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Lincoln County",
+							"streetNumber": "85129",
+							"street": "W 4th Avenue",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92643733",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lyle Road, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Metal / Alumínio",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "brennon-wilkinson.5.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-09T07:15:43.762Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.054377,
+								"longitude": -57.655066,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297914469
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Douglas County",
+							"streetNumber": "19537",
+							"street": "E River Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10167437",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mertz Summit, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-24T03:19:29.481Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -18.996479,
+								"longitude": -57.672209,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788346181262
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Borders",
+							"streetNumber": "1130",
+							"street": "Marcos Mountains",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "87028175",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Richmond Road, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Metal / Alumínio", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Lisa Dickens",
+			"display_name": "Lisa",
+			"phone": "(30) 99205-8895",
+			"email": "lisa-dickens.2.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "56250-623",
+				"street": "S Jefferson Street",
+				"number": "90276",
+				"complement": null,
+				"district": "West Sussex",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.043488,
+				"longitude": -57.666421
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJfeWcq1enh5MROobRaAAgxxM",
+						"rating": 3.8,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Centro De Reciclagem Paulista",
+					"business_name": "Centro De Reciclagem Paulista",
+					"identity": "58163289000140",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "centro.de.reciclagem.paulista@anguished-interviewer.info",
+					"phones": ["(67) 99208-4975"],
+					"website": null,
+					"started_activity_in": "2024-11-01T02:12:10.519Z",
+					"address": {
+						"zip_code": "79310-730",
+						"street": "R. Duque de Caxias",
+						"number": "414",
+						"complement": null,
+						"district": "Aeroporto, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0169093,
+						"longitude": -57.6531246
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.4,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 627.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.44,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 577.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.56,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 875.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.33,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 796.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 207.36,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 98.2,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 155.35,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJG441ok6hh5MRkkYBkostPgo",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Centro de Reciclagem Apollo Corumbá ltda",
+					"business_name": "Centro de Reciclagem Apollo Corumbá ltda",
+					"identity": "70898553000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "centro.de.reciclagem.apollo.corumba.ltda@torn-fat.info",
+					"phones": ["(67) 99861-8499"],
+					"website": null,
+					"started_activity_in": "2018-11-18T02:57:41.693Z",
+					"address": {
+						"zip_code": "79320-060",
+						"street": "R. Duque de Caxias",
+						"number": "07",
+						"complement": null,
+						"district": "Aeroporto, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0225016,
+						"longitude": -57.6702161
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.58,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 365.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 158.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.64,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 431
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.09,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 143.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 255.38,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 129.04,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-05T17:34:12.739Z",
+					"observations": "Damno abstergo solvo sordeo cupressus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.058983,
+								"longitude": -57.655567,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326329277
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Devon",
+							"streetNumber": "57117",
+							"street": "May Corners",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88155209",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Causeway, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Flora Larkin",
+			"display_name": "Flora",
+			"phone": "(14) 90139-6491",
+			"email": "flora-larkin.3.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "16167-878",
+				"street": "Hilpert Shore",
+				"number": "5764",
+				"complement": null,
+				"district": "Union County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.019053,
+				"longitude": -57.622669
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ9-LFAWWhh5MRocx3-gIG_hI",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Rm reciclagem",
+					"business_name": "Rm reciclagem",
+					"identity": "00933893000128",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rm.reciclagem@roasted-fishery.biz",
+					"phones": ["(67) 99603-5062"],
+					"website": null,
+					"started_activity_in": "2016-10-10T13:17:28.805Z",
+					"address": {
+						"zip_code": "00000-000",
+						"street": "R. 7 de Setembro",
+						"number": "S/N",
+						"complement": null,
+						"district": "Cristo Redentor, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0227942,
+						"longitude": -57.648246799999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "05:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.48,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 306.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.19,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 359.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 264.5,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 296.29,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 54.62,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 140.98,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJbevjNQELh5MRqsJT0TUQo_8",
+						"rating": 4.5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM ARAUJO",
+					"business_name": "RECICLAGEM ARAUJO",
+					"identity": "41196724000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.araujo@far-off-trash.com",
+					"phones": ["(67) 99960-3835"],
+					"website": "https://www.facebook.com/share/14hZt53F5de/?mibextid=wwXIfr",
+					"started_activity_in": "2022-12-22T12:51:17.043Z",
+					"address": {
+						"zip_code": "79310-020",
+						"street": "R. Da Alegria",
+						"number": "S/N",
+						"complement": null,
+						"district": "Maria Leite, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0167589,
+						"longitude": -57.616112799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "11:30"
+								},
+								{
+									"start_time": "13:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.52,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 894.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.82,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 398.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 386.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.19,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 677.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 754.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 131.89,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 254.27,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 57.57,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 129.11,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-30T19:52:20.497Z",
+					"observations": "Cuius cometes aeneus nemo voro creo tenus cunctatio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.049633,
+								"longitude": -57.638375,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311929553
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "West Yorkshire",
+							"streetNumber": "27032",
+							"street": "Wiza Walk",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "21095343",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jast Courts, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Veículos em Fim de Vida",
+						"Pilhas e Baterias"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-30T08:32:55.472Z",
+					"observations": "Commodi surgo nisi cilicium nulla quisquam turba degero clarus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.055841,
+								"longitude": -57.666143,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288359972
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Essex",
+							"streetNumber": "342",
+							"street": "Oaklands",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96437008",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Howard Road, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Eletroeletrônicos (REEE)",
+						"Borracha / Pneus",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reymundo-roberts.16.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lisa-dickens.2.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"description": "Architecto templum beatus vestrum spiculum corrigo utilis cumque.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jim Mosciski",
+			"display_name": "Jim",
+			"phone": "(76) 93662-3796",
+			"email": "jim-mosciski.4.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "69143-470",
+				"street": "W Center Street",
+				"number": "681",
+				"complement": null,
+				"district": "Scott County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.05687,
+				"longitude": -57.654662
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJPx6O1pwKh5MRJBVCHP4DnsM",
+						"rating": 5,
+						"types": ["point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RECICLAGEM SÃO JORGE",
+					"business_name": "RECICLAGEM SÃO JORGE",
+					"identity": "37545786000132",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.sao.jorge@wobbly-chairperson.com",
+					"phones": ["(83) 93278-5508"],
+					"website": null,
+					"started_activity_in": "2024-03-31T05:07:45.949Z",
+					"address": {
+						"zip_code": "79311-060",
+						"street": "R. Minas Gerais",
+						"number": "17",
+						"complement": null,
+						"district": "Cristo Redentor, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.022785199999998,
+						"longitude": -57.6408504
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.87,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 202.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.95,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 404.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.21,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 262.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.5,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 266.3
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.42,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 274.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.76,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 220.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 63.73,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 62.3,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 112.92,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 286.98,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 162.87,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 269.96,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJyWQOqAehh5MRpc5YzxUoIjQ",
+						"rating": 4.2,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho e Centro de Reciclagem Nossa Senhora Aparecida",
+					"business_name": "Ferro Velho e Centro de Reciclagem Nossa Senhora Aparecida",
+					"identity": "36751381786",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.e.centro.de.reciclagem.nossa.senhora.aparecida@outlandish-decongestant.biz",
+					"phones": ["(67) 3232-9270"],
+					"website": null,
+					"started_activity_in": "2021-11-18T06:50:15.220Z",
+					"address": {
+						"zip_code": "79332-050",
+						"street": "R. Joaquim Murtinho",
+						"number": "495-301",
+						"complement": null,
+						"district": "Aeroporto, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.007309499999998,
+						"longitude": -57.6446745
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.71,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 243.4
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.36,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 319.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 580
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.62,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 599.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.78,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 866.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 157.4,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 230.79,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-17T04:51:08.307Z",
+					"observations": "Quo ab defluo coniuratio conduco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.057808,
+								"longitude": -57.632653,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286924846
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Jackson County",
+							"streetNumber": "432",
+							"street": "Ramiro Pass",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82149179",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Center Street, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Lâmpadas",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-18T00:10:24.617Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.005826,
+								"longitude": -57.64057,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788314065502
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "County Fermanagh",
+							"streetNumber": "646",
+							"street": "Lehner Mills",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "42425681",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "11th Street, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Vidro", "Eletroeletrônicos (REEE)"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lisa-dickens.2.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-21T15:00:40.767Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.053085,
+								"longitude": -57.620248,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788277733106
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Greater Manchester",
+							"streetNumber": "390",
+							"street": "Blanda Path",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78480800",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Delia Ramp, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Brennon Wilkinson",
+			"display_name": "Brennon",
+			"phone": "(51) 99240-8468",
+			"email": "brennon-wilkinson.5.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "72548-636",
+				"street": "Aiyana Summit",
+				"number": "9862",
+				"complement": null,
+				"district": "Rutland",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.010816,
+				"longitude": -57.621689
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJnTGKnYmgh5MRarzscT2FaFk",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "ABCD Reciclagem",
+					"business_name": "ABCD Reciclagem",
+					"identity": "35208656000189",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "abcd.reciclagem@minor-reconsideration.name",
+					"phones": ["(67) 99965-4441"],
+					"website": null,
+					"started_activity_in": "2025-06-23T04:47:45.957Z",
+					"address": {
+						"zip_code": "79332-110",
+						"street": "R. Edu Rocha",
+						"number": "1317",
+						"complement": null,
+						"district": "Aeroporto, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.013048299999998,
+						"longitude": -57.6600072
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.24,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 680.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.36,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 984.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.6,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 945.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 503.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 269.1,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 253.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 293.71,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 257.93,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJLz4VaH0Kh5MRKXEE4BhifGQ",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Manuel Fernandes de Carvalho Pereira",
+					"business_name": "Manuel Fernandes de Carvalho Pereira",
+					"identity": "64026080000137",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "manuel.fernandes.de.carvalho.pereira@celebrated-scholarship.biz",
+					"phones": ["(67) 3231-4445"],
+					"website": null,
+					"started_activity_in": "2025-11-27T15:38:10.966Z",
+					"address": {
+						"zip_code": "79310-040",
+						"street": "R. Nossa Sra. Fátima",
+						"number": "11",
+						"complement": null,
+						"district": "Maria Leite, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0099438,
+						"longitude": -57.6338778
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.95,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 345.7
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.81,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 186.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 57.28,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 200.05,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 155.94,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-08-20T03:21:25.633Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.05088,
+								"longitude": -57.620913,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788359764007
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "South Glamorgan",
+							"streetNumber": "7281",
+							"street": "Leannon Fords",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49942501",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Roman Road, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "flora-larkin.3.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lisa-dickens.2.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"description": "Vulticulus utroque attollo defleo absconditus deprimo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-25T18:32:28.724Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.007565,
+								"longitude": -57.640051,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309994992
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Durham",
+							"streetNumber": "7729",
+							"street": "Princess Trace",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59645966",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Annie Greens, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Medicamentos",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lisa-dickens.2.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"description": "Capitulus sto voluptatibus vinco.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Whitney Dietrich",
+			"display_name": "Whitney",
+			"phone": "(40) 92492-4125",
+			"email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "27360-021",
+				"street": "Joyce Ville",
+				"number": "90385",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.045548,
+				"longitude": -57.61785
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ7z34jpKhh5MRd_VHNHa2LW4",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "MS RECICLE CORUMBÁ",
+					"business_name": "MS RECICLE CORUMBÁ",
+					"identity": "78526471000125",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ms.recicle.corumba@defensive-term.com",
+					"phones": ["(67) 99228-0366"],
+					"website": null,
+					"started_activity_in": "2025-08-15T21:29:20.471Z",
+					"address": {
+						"zip_code": "79310-730",
+						"street": "R. Duque de Caxias",
+						"number": "414",
+						"complement": null,
+						"district": "Aeroporto, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0169093,
+						"longitude": -57.6531247
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 755.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 589.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.41,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 795.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.97,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 809.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 116.06,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 162.38,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 180.1,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJcSYVW-sKh5MRLwmcQSrQBVM",
+						"rating": 4.4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Granha Ligas",
+					"business_name": "Granha Ligas",
+					"identity": "25481815000160",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "granha.ligas@ample-bend.com",
+					"phones": ["(32) 3373-4232"],
+					"website": "https://granhaligas.com/",
+					"started_activity_in": "2020-05-31T19:57:49.749Z",
+					"address": {
+						"zip_code": "79370-000",
+						"street": "R. Rui Barbosa",
+						"number": "2",
+						"complement": null,
+						"district": "Industrial, Corumbá",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0241947,
+						"longitude": -57.620269799999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.82,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 508.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.33,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 862.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.16,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 428.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 614.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.85,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 903.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 176.34,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 71.71,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 244.58,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 138.81,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-26T23:47:52.088Z",
+					"observations": "Tersus claustrum cura vobis absorbeo viduo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.050424,
+								"longitude": -57.622387,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788308992308
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "County Tyrone",
+							"streetNumber": "23213",
+							"street": "Wyman Orchard",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "52796304",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bednar Junction, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-10T03:30:29.703Z",
+					"observations": "Crebro thorax suscipio custodia vito arceo acer cursus comitatus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.04547,
+								"longitude": -57.677137,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303064757
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Northamptonshire",
+							"streetNumber": "44938",
+							"street": "Matilda Corner",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "44348028",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tennyson Road, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-10T19:28:32.458Z",
+					"observations": "Auditor adiuvo curo terror clam consequatur impedit fugit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.02461,
+								"longitude": -57.621492,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281163809
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Marion County",
+							"streetNumber": "19074",
+							"street": "Water Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26892253",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Westfield Road, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Borracha / Pneus",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reymundo-roberts.16.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+							"description": "Damnatio balbus vociferor.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"description": "Atrox crudelis cogo assentator auctus toties custodia charisma antea.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Amber Stokes",
+			"display_name": "Amber",
+			"phone": "(91) 94942-6590",
+			"email": "amber-stokes.7.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "02640-905",
+				"street": "Norfolk Road",
+				"number": "341",
+				"complement": null,
+				"district": "West Yorkshire",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.035622,
+				"longitude": -57.668158
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJxwCSVQALh5MRFc-KL98IPfU",
+						"rating": null,
+						"types": [
+							"shipping_service",
+							"transportation_service",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem ♻️ RN LIMA ♻️",
+					"business_name": "Reciclagem ♻️ RN LIMA ♻️",
+					"identity": "70816171000179",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.rn.lima@immaculate-wedding.biz",
+					"phones": ["(42) 93094-9728"],
+					"website": null,
+					"started_activity_in": "2021-06-27T00:21:05.182Z",
+					"address": {
+						"zip_code": "79370-000",
+						"street": "Guaicurus",
+						"number": "Corumbá",
+						"complement": null,
+						"district": "MS, , Brasil",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.0519159,
+						"longitude": -57.635028899999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.2,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 728.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.94,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 13.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.7,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 68.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.29,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 105.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.67,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 926.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 218.78,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 69.11,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 218.96,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 210.05,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hessel and Sons Reciclagem",
+					"business_name": "Hessel and Sons Reciclagem",
+					"identity": "40973752106",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Alyssa42@purple-operating.info",
+					"phones": ["(42) 90835-3358"],
+					"website": null,
+					"started_activity_in": "2022-09-19T03:47:29.615Z",
+					"address": {
+						"zip_code": "94860-071",
+						"street": "Feest Shore",
+						"number": "43543",
+						"complement": null,
+						"district": "Jackson County",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.021136,
+						"longitude": -57.664748
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.45,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 976.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.77,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 701.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.53,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 11
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.81,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 91.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.24,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 455.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.17,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 522.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 232.53,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 149.05,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-09T19:31:53.832Z",
+					"observations": "Candidus sto quas thymbra comptus atque traho vita perferendis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.00604,
+								"longitude": -57.63557,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788354948218
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Clark County",
+							"streetNumber": "493",
+							"street": "West Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01450518",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ash Street, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"description": "Desipio carcer clibanus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"description": "Anser arx sequi substantia certus soluta distinctio demitto peior.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Pattie Emmerich",
+			"display_name": "Pattie",
+			"phone": "(68) 91509-2542",
+			"email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "32683-858",
+				"street": "Rath Ports",
+				"number": "28967",
+				"complement": null,
+				"district": "West Glamorgan",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -18.997566,
+				"longitude": -57.633135
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "White Group Reciclagem",
+					"business_name": "White Group Reciclagem",
+					"identity": "15979990000129",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Emmett.Ferry@evil-bungalow.org",
+					"phones": ["(87) 98559-5651"],
+					"website": null,
+					"started_activity_in": "2021-10-21T12:10:15.894Z",
+					"address": {
+						"zip_code": "68837-961",
+						"street": "Wunsch-Smith Plain",
+						"number": "297",
+						"complement": null,
+						"district": "Scott County",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.014189,
+						"longitude": -57.626608
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.46,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 250.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.31,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 592.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 81.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 218.09,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 269.06,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 291.35,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 77.49,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 62.69,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Swift - Adams Reciclagem",
+					"business_name": "Swift - Adams Reciclagem",
+					"identity": "91355502000190",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Andre.Witting66@scaly-coliseum.biz",
+					"phones": ["(65) 99797-7112"],
+					"website": null,
+					"started_activity_in": "2018-12-28T05:30:50.290Z",
+					"address": {
+						"zip_code": "04663-529",
+						"street": "Marian Fork",
+						"number": "5874",
+						"complement": null,
+						"district": "Adams County",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.033618,
+						"longitude": -57.643383
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 422.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 2.33,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 893.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.59,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 300.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 296.45,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 106.06,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 75.41,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-21T14:08:48.930Z",
+					"observations": "Degusto cui bibo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.0378,
+								"longitude": -57.668639,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788315241591
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Warwickshire",
+							"streetNumber": "7720",
+							"street": "Becker Cliff",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67919361",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Market Street, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Connie Marquardt",
+			"display_name": "Connie",
+			"phone": "(70) 97888-2777",
+			"email": "connie-marquardt.9.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "91655-965",
+				"street": "Dietrich Glen",
+				"number": "1193",
+				"complement": null,
+				"district": "Lake County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.04101,
+				"longitude": -57.641868
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hirthe - Cronin Reciclagem",
+					"business_name": "Hirthe - Cronin Reciclagem",
+					"identity": "79240482000107",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Byron5@limited-sticker.biz",
+					"phones": ["(82) 92579-6547"],
+					"website": null,
+					"started_activity_in": "2020-06-15T09:25:13.108Z",
+					"address": {
+						"zip_code": "81738-730",
+						"street": "Cora Creek",
+						"number": "69317",
+						"complement": null,
+						"district": "Hamilton County",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.016071,
+						"longitude": -57.646619
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.92,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 754.3
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 177.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 101
+						},
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 3.56,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 478
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 297.81,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 73.43,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 132.64,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 168.08,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 200.97,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 231.28,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Howell - Price Reciclagem",
+					"business_name": "Howell - Price Reciclagem",
+					"identity": "63322872505",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Carl34@potable-attraction.com",
+					"phones": ["(47) 91790-3106"],
+					"website": null,
+					"started_activity_in": "2020-09-21T01:53:21.498Z",
+					"address": {
+						"zip_code": "13871-923",
+						"street": "E Central Avenue",
+						"number": "36817",
+						"complement": null,
+						"district": "Jefferson County",
+						"city": "Corumbá",
+						"city_ibge_id": 5003207,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.019131,
+						"longitude": -57.635671
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 127
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.46,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 959.9
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.23,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 14
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 510.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.22,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 270.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.22,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 101.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 244.9,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 189.2,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 227.98,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 180.24,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-26T18:35:50.610Z",
+					"observations": "Triumphus demoror quasi comburo soluta.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.02571,
+								"longitude": -57.648043,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311961980
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Cambridgeshire",
+							"streetNumber": "455",
+							"street": "S 5th Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "48354558",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jimmie Forks, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reymundo-roberts.16.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dewey Lakin",
+			"display_name": "Dewey",
+			"phone": "(19) 91035-4648",
+			"email": "dewey-lakin.10.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "76582-721",
+				"street": "Jairo Points",
+				"number": "838",
+				"complement": null,
+				"district": "Jackson County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.035829,
+				"longitude": -57.616109
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Israel Ziemann",
+			"display_name": "Israel",
+			"phone": "(58) 95025-1177",
+			"email": "israel-ziemann.11.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "64420-511",
+				"street": "West Road",
+				"number": "87638",
+				"complement": null,
+				"district": "East Sussex",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.013672,
+				"longitude": -57.630836
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-15T23:11:09.191Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.012147,
+								"longitude": -57.631638,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303705841
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Lee County",
+							"streetNumber": "74717",
+							"street": "Margarete Freeway",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70918302",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Ryan Curve, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus",
+						"Plástico"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lisa-dickens.2.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "reymundo-roberts.16.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "brennon-wilkinson.5.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flora-larkin.3.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"description": "Pauci tui adinventitias tutis barba reiciendis dolorum vomer tabula ver.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"description": "Despecto claustrum velit.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-25T07:19:45.159Z",
+					"observations": "Dedecor vicissitudo assumenda dolorum vigor depromo absum beneficium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.051544,
+								"longitude": -57.620235,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281505934
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Cumbria",
+							"streetNumber": "372",
+							"street": "Runte Dale",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "76153082",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schuster Rue, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "reymundo-roberts.16.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Benny Nienow",
+			"display_name": "Benny",
+			"phone": "(58) 96685-4523",
+			"email": "benny-nienow.12.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "17151-840",
+				"street": "Schamberger Radial",
+				"number": "5483",
+				"complement": null,
+				"district": "Cleveland",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -18.997387,
+				"longitude": -57.624101
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-09T18:23:06.558Z",
+					"observations": "Campana autus at causa cresco varietas voveo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.020652,
+								"longitude": -57.632255,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788277030796
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Montgomery County",
+							"streetNumber": "977",
+							"street": "Wren Close",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14758723",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lind Trace, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jim-mosciski.4.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flora-larkin.3.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lisa-dickens.2.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"description": "Nam beneficium curso pax patior stabilis curtus quo vir audax.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"description": "Concedo tutamen altus abundans curatio cruciamentum consequuntur amor defluo assentator.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-26T09:02:56.989Z",
+					"observations": "Bis spiculum thesis compello approbo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.002746,
+								"longitude": -57.656637,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788305724057
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Morgan County",
+							"streetNumber": "283",
+							"street": "Muller Landing",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "23131333",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Walnut Street, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Hector Jacobi",
+			"display_name": "Hector",
+			"phone": "(29) 96674-5469",
+			"email": "hector-jacobi.13.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "60634-810",
+				"street": "Morissette Street",
+				"number": "5271",
+				"complement": null,
+				"district": "Cheshire",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.00772,
+				"longitude": -57.619436
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-02T12:48:38.666Z",
+					"observations": "Atavus curtus coerceo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.059373,
+								"longitude": -57.629018,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330051135
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Logan County",
+							"streetNumber": "87215",
+							"street": "Jon Manor",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "72026697",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Nikolaus Shore, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Veículos em Fim de Vida",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Marty Halvorson",
+			"display_name": "Marty",
+			"phone": "(56) 91757-4781",
+			"email": "marty-halvorson.14.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "68227-319",
+				"street": "Park Crescent",
+				"number": "4399",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.041926,
+				"longitude": -57.626546
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-01T15:31:49.238Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.01,
+								"longitude": -57.658945,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788327380513
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Clark County",
+							"streetNumber": "78925",
+							"street": "Orchard Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "88934296",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Danny Divide, Corumbá - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Construção Civil e Demolição (RCD)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-11T12:46:46.577Z",
+					"observations": "Una crustulum desparatus comminor commemoro blandior vir.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.055934,
+								"longitude": -57.67591,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788336908401
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Nottinghamshire",
+							"streetNumber": "548",
+							"street": "The Dell",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "97471052",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lowe Villages, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "pattie-emmerich.8.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kay Hammes",
+			"display_name": "Kay",
+			"phone": "(33) 92521-2508",
+			"email": "kay-hammes.15.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "51079-588",
+				"street": "Boyer Parkways",
+				"number": "1256",
+				"complement": null,
+				"district": "Perry County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.037555,
+				"longitude": -57.620547
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Reymundo Roberts",
+			"display_name": "Reymundo",
+			"phone": "(94) 93282-5122",
+			"email": "reymundo-roberts.16.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "50477-004",
+				"street": "Spencer Trace",
+				"number": "34589",
+				"complement": null,
+				"district": "Scott County",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.019983,
+				"longitude": -57.637125
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-13T14:31:37.552Z",
+					"observations": "Voro attollo socius adeptio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.037617,
+								"longitude": -57.630536,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288103893
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Cambridgeshire",
+							"streetNumber": "5264",
+							"street": "Keeling Passage",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20885182",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Broadway Street, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "flora-larkin.3.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "hector-jacobi.13.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"description": "Carcer vinco desipio creo vox volaticus cotidie.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "flora-larkin.3.corumba-ms@oikos.seed",
+							"description": "Tamisium solum magnam cado colo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-12-25T10:43:22.987Z",
+					"observations": "Capio concido creber vito tempus reiciendis subnecto uterque conqueror subiungo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.048447,
+								"longitude": -57.657504,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788331715112
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Carroll County",
+							"streetNumber": "157",
+							"street": "O'Conner Burg",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65942403",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Central Avenue, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Vidro", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "flora-larkin.3.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sheldon-pfeffer.0.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dewey-lakin.10.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "israel-ziemann.11.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "whitney-dietrich.6.corumba-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "marty-halvorson.14.corumba-ms@oikos.seed",
+							"description": "Ipsam suasoria tonsor voluptatibus laudantium tamdiu vado.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-09T07:26:49.015Z",
+					"observations": "Perspiciatis currus demoror asporto virga ducimus adficio delectatio mollitia apto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.004203,
+								"longitude": -57.640969,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788290963417
+						},
+						"addresses": {
+							"city": "Corumbá",
+							"district": "Hertfordshire",
+							"streetNumber": "9438",
+							"street": "Estelle Key",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "68706352",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Israel Corner, Corumbá - MS"
+						}
+					},
+					"waste_category_names": ["Madeira", "Lâmpadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "amber-stokes.7.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jim-mosciski.4.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kay-hammes.15.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "benny-nienow.12.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.17.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "connie-marquardt.9.corumba-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jim-mosciski.4.corumba-ms@oikos.seed",
+							"description": "Coniuratio aveho tribuo.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "belle-mann.1.corumba-ms@oikos.seed",
+							"description": "Curiositas viduo aureus decimus rem.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Elijah Russel",
+			"display_name": "Elijah",
+			"phone": "(15) 97609-9975",
+			"email": "elijah-russel.17.corumba-ms@oikos.seed",
+			"address": {
+				"zip_code": "71521-403",
+				"street": "Bruen Mill",
+				"number": "1131",
+				"complement": null,
+				"district": "Cleveland",
+				"city": "Corumbá",
+				"city_ibge_id": 5003207,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.060616,
+				"longitude": -57.653512
+			},
+			"companies": [],
+			"complaints": []
+		}
+	]
+}

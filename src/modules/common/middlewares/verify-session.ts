@@ -11,7 +11,6 @@ export type AuthUserLike = {
 	banned: boolean;
 	banReason: string | null;
 	banExpires: Date | null;
-	authSource: string;
 	createdAt: Date;
 	updatedAt: Date;
 };
@@ -32,6 +31,18 @@ export function createVerifySession(sessionReader: SessionReader) {
 			throw new AppError("Unauthorized.", "UNAUTHORIZED", 401);
 		}
 
-		request.authV2User = result.user;
+		request.authUser = result.user;
 	};
+}
+
+/**
+ * Reads the session user set by `verifySession`, throwing 401 instead of
+ * silently allowing `undefined` if a route forgets to run the preHandler.
+ */
+export function requireAuthUser(request: FastifyRequest): AuthUserLike {
+	if (!request.authUser) {
+		throw new AppError("Unauthorized.", "UNAUTHORIZED", 401);
+	}
+
+	return request.authUser;
 }

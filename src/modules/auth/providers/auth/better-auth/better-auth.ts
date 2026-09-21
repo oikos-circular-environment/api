@@ -1,6 +1,8 @@
+import { expo } from "@better-auth/expo";
 import { compare, hash } from "bcryptjs";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
+import { anonymous, openAPI, testUtils } from "better-auth/plugins";
 import { admin } from "better-auth/plugins/admin";
 import { bearer } from "better-auth/plugins/bearer";
 import { organization } from "better-auth/plugins/organization";
@@ -31,6 +33,7 @@ export const auth = betterAuth({
 	database: prismaAdapter(prisma, { provider: "postgresql" }),
 	secret: env.BETTER_AUTH_SECRET,
 	baseURL: publicApiUrl,
+	basePath: "/auth",
 	trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS,
 	emailAndPassword: {
 		enabled: true,
@@ -76,14 +79,6 @@ export const auth = betterAuth({
 			createdAt: "created_at",
 			updatedAt: "updated_at",
 		},
-		additionalFields: {
-			authSource: {
-				type: "string",
-				input: false,
-				fieldName: "auth_source",
-				defaultValue: "better_auth",
-			},
-		},
 	},
 	account: {
 		fields: {
@@ -107,7 +102,7 @@ export const auth = betterAuth({
 			userAgent: "user_agent",
 			createdAt: "created_at",
 			updatedAt: "updated_at",
-			activeOrganizationId: "active_organization_id",
+			// activeOrganizationId is mapped by the organization plugin (schema.session.fields)
 		},
 	},
 	verification: {
@@ -115,6 +110,14 @@ export const auth = betterAuth({
 			expiresAt: "expires_at",
 			createdAt: "created_at",
 			updatedAt: "updated_at",
+		},
+	},
+	advanced: {
+		database: {
+			// Every table here already has `id String @id @default(uuid())` in
+			// Prisma — defer to it instead of Better Auth's default base62 id, so
+			// every user/account/session id stays a UUID like the rest of the app.
+			generateId: false,
 		},
 	},
 	plugins: [
@@ -136,7 +139,18 @@ export const auth = betterAuth({
 				},
 			},
 		}),
+		anonymous({
+			schema: {
+				user: {
+					fields: {
+						isAnonymous: "is_anonymous",
+					},
+				},
+			},
+		}),
 		bearer(),
+		openAPI({ disableDefaultReference: true }),
+		expo(),
 		organization({
 			ac: organizationAc,
 			creatorRole: "owner",
@@ -146,6 +160,11 @@ export const auth = betterAuth({
 				user: organizationUser,
 			},
 			schema: {
+				session: {
+					fields: {
+						activeOrganizationId: "active_organization_id",
+					},
+				},
 				organization: {
 					fields: { createdAt: "created_at", updatedAt: "updated_at" },
 				},
@@ -166,5 +185,6 @@ export const auth = betterAuth({
 				},
 			},
 		}),
+		...(env.NODE_ENV === "test" ? [testUtils()] : []),
 	],
 });

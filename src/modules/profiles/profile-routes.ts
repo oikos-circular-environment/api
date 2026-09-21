@@ -3,8 +3,14 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 import { PrismaUsersRepository } from "@/modules/accounts/repositories/prisma/users-repository-prisma.js";
 import { makeStorageProvider } from "@/modules/common/providers/storage/make-storage-provider.js";
+import { PrismaTransactionManager } from "@/modules/common/providers/transaction/prisma/prisma-transaction-manager.js";
+import { auth } from "../auth/providers/auth/better-auth/better-auth.js";
+import { makeBetterAuthAuthProvider } from "../auth/providers/auth/better-auth/better-auth-auth-provider.js";
 import { AppError, appErrorSchema } from "../common/errors/app-error.js";
-import { verifyJwt } from "../common/middlewares/verify-jwt.js";
+import {
+	createVerifySession,
+	requireAuthUser,
+} from "../common/middlewares/verify-session.js";
 import { withBearerAuth } from "../common/types/openapi-security.js";
 import {
 	addressSchema,
@@ -30,20 +36,28 @@ export async function profileRoutes(app: FastifyInstance) {
 	const addressesRepository = new PrismaAddressesRepository();
 	const storageProvider = makeStorageProvider();
 	const usersRepository = new PrismaUsersRepository();
+	const transactionManager = new PrismaTransactionManager();
+	const authProvider = makeBetterAuthAuthProvider(auth);
+	const verifySession = createVerifySession(authProvider);
 
 	const upsertProfileUseCase = new UpsertProfileUseCase(
 		profilesRepository,
 		addressesRepository,
 		usersRepository,
+		transactionManager,
 	);
 	const getProfileUseCase = new GetProfileUseCase(profilesRepository);
 	const upsertProfileImageUseCase = new UpsertProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
+		usersRepository,
+		transactionManager,
 	);
 	const deleteProfileImageUseCase = new DeleteProfileImageUseCase(
 		profilesRepository,
 		storageProvider,
+		usersRepository,
+		transactionManager,
 	);
 	const getProfileAddressUseCase = new GetProfileAddressUseCase(
 		profilesRepository,
@@ -51,7 +65,7 @@ export async function profileRoutes(app: FastifyInstance) {
 	);
 
 	typedApp.addHook("onRequest", async (request) => {
-		await verifyJwt(request);
+		await verifySession(request);
 	});
 
 	typedApp.put(
@@ -79,7 +93,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.user.sub;
+			const userId = requireAuthUser(request).id;
 			const profile = await upsertProfileUseCase.execute({
 				userId,
 				data: request.body,
@@ -105,7 +119,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.user.sub;
+			const userId = requireAuthUser(request).id;
 			const profile = await getProfileUseCase.execute({ userId });
 
 			return reply.send({
@@ -133,7 +147,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.user.sub;
+			const userId = requireAuthUser(request).id;
 			const file = await request.file();
 
 			if (!file) {
@@ -180,7 +194,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.user.sub;
+			const userId = requireAuthUser(request).id;
 			await deleteProfileImageUseCase.execute({ userId });
 
 			return reply.status(202).send(null);
@@ -204,7 +218,7 @@ export async function profileRoutes(app: FastifyInstance) {
 			}),
 		},
 		async (request, reply) => {
-			const userId = request.user.sub;
+			const userId = requireAuthUser(request).id;
 			const address = await getProfileAddressUseCase.execute({ userId });
 
 			return reply.send({

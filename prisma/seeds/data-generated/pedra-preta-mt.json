@@ -1,0 +1,5575 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T03:22:02.059Z",
+		"city": "Pedra Preta",
+		"state_code": "MT",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Althea Bauch",
+			"display_name": "Althea",
+			"phone": "(44) 94725-3583",
+			"email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "40634-207",
+				"street": "Leonard Bridge",
+				"number": "533",
+				"complement": null,
+				"district": "Hancock County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.621561,
+				"longitude": -54.46084
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ5dxS-sS8eZMRPm2GMArsj5M",
+						"rating": 3.9,
+						"types": [
+							"car_repair",
+							"point_of_interest",
+							"service",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho do Hélio",
+					"business_name": "Ferro Velho do Hélio",
+					"identity": "59088508100",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.do.helio@unwritten-icebreaker.net",
+					"phones": ["(81) 95176-7318"],
+					"website": null,
+					"started_activity_in": "2018-03-14T11:21:47.533Z",
+					"address": {
+						"zip_code": "78795-000",
+						"street": "Unnamed Road",
+						"number": "S/N",
+						"complement": null,
+						"district": "Chácaras Altos de Pedra Preta, Pedra Preta",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.6093708,
+						"longitude": -54.4912074
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.29,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 623.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.51,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 242.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.78,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 908.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 179.79,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 154.76,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 297.37,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 166.66,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ88fWe82ieZMRHQ7NcpzgKgM",
+						"rating": 4.9,
+						"types": [
+							"auto_parts_store",
+							"car_repair",
+							"store",
+							"service",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Ferro Velho Pedra Preta",
+					"business_name": "Ferro Velho Pedra Preta",
+					"identity": "87054675274",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "ferro.velho.pedra.preta@short-term-legislature.name",
+					"phones": ["(66) 99958-8783"],
+					"website": "https://www.facebook.com/profile.php?id=100007532085095",
+					"started_activity_in": "2025-05-19T12:19:31.111Z",
+					"address": {
+						"zip_code": "78795-000",
+						"street": "R. Trinta e Um de Março",
+						"number": "300",
+						"complement": null,
+						"district": "Lot. Pedra Preta, Pedra Preta",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.6199183,
+						"longitude": -54.466524
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.59,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 192.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.72,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 72
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 312
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 667.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.15,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 774.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.85,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 837.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 182.4,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 134.16,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 106.12,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 97.43,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-26T06:03:38.685Z",
+					"observations": "Corrupti facere vero creo desino appono cursus sit totus pax.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.610234,
+								"longitude": -54.491295,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788263391918
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Greater Manchester",
+							"streetNumber": "6798",
+							"street": "Annette Summit",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96409978",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 12th Street, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Lâmpadas",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-21T16:39:55.344Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.620918,
+								"longitude": -54.456658,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788281808890
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Shropshire",
+							"streetNumber": "2456",
+							"street": "Adrienne Brooks",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37447603",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "University Drive, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "anna-stark.17.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "chadrick-rippin.9.pedra-preta-mt@oikos.seed",
+							"description": "Votum video statim depraedor agnitio vester tandem aperio crepusculum.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Shania Gutmann",
+			"display_name": "Shania",
+			"phone": "(18) 92422-3421",
+			"email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "80919-085",
+				"street": "Pouros Course",
+				"number": "158",
+				"complement": null,
+				"district": "Somerset",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.606601,
+				"longitude": -54.464423
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Zulauf and Sons Reciclagem",
+					"business_name": "Zulauf and Sons Reciclagem",
+					"identity": "67099455000187",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Olivia61@black-steak.biz",
+					"phones": ["(72) 94323-8817"],
+					"website": null,
+					"started_activity_in": "2017-05-04T01:31:55.766Z",
+					"address": {
+						"zip_code": "55803-798",
+						"street": "Jacobson Flat",
+						"number": "5101",
+						"complement": null,
+						"district": "Northumberland",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.611082,
+						"longitude": -54.474543
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.34,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 581
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.39,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 439.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.97,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 276.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 58.52,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 203.85,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Stoltenberg, Mayert and Rolfson Reciclagem",
+					"business_name": "Stoltenberg, Mayert and Rolfson Reciclagem",
+					"identity": "21946767000188",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Bobby_Stracke@snoopy-publicity.name",
+					"phones": ["(67) 93397-2528"],
+					"website": null,
+					"started_activity_in": "2023-02-04T04:24:33.094Z",
+					"address": {
+						"zip_code": "33943-998",
+						"street": "Stuart Village",
+						"number": "133",
+						"complement": null,
+						"district": "Fayette County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.603324,
+						"longitude": -54.490811
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.46,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 60.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.68,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 588.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.31,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 141.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 537.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 61.48,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 232.71,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 199.27,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 299.51,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 131.81,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-29T13:16:24.424Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.606247,
+								"longitude": -54.457366,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788244889397
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "County Fermanagh",
+							"streetNumber": "28866",
+							"street": "Jubilee Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01481655",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Donnelly Underpass, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Thalia Ullrich",
+			"display_name": "Thalia",
+			"phone": "(99) 98423-2840",
+			"email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "43985-158",
+				"street": "Nedra Wall",
+				"number": "99514",
+				"complement": null,
+				"district": "County Fermanagh",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.617968,
+				"longitude": -54.492409
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Williamson Inc Reciclagem",
+					"business_name": "Williamson Inc Reciclagem",
+					"identity": "75056847000197",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Deangelo.Lebsack@dead-digit.name",
+					"phones": ["(81) 95867-7475"],
+					"website": null,
+					"started_activity_in": "2024-09-19T21:41:54.310Z",
+					"address": {
+						"zip_code": "62178-602",
+						"street": "Hackett Cliffs",
+						"number": "15053",
+						"complement": null,
+						"district": "Warren County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.624912,
+						"longitude": -54.468064
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.69,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 956.4
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.54,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 171.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.22,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 105
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.78,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 67.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.85,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 308.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 214.42,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 83.39,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 282.91,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 125.9,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 257.93,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 152.94,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Will, Terry and Predovic Reciclagem",
+					"business_name": "Will, Terry and Predovic Reciclagem",
+					"identity": "57829086000187",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Gail.Ledner@authentic-rule.info",
+					"phones": ["(25) 96284-9384"],
+					"website": null,
+					"started_activity_in": "2022-05-05T01:19:30.372Z",
+					"address": {
+						"zip_code": "03598-830",
+						"street": "Weber Ridge",
+						"number": "8993",
+						"complement": null,
+						"district": "South Yorkshire",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.628815,
+						"longitude": -54.460958
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 0.59,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 118.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.95,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 314
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.98,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 257.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.93,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 826.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.08,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 562.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.65,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 339
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 107.42,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 167.16,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 283.03,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 298.61,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Olaf Daugherty",
+			"display_name": "Olaf",
+			"phone": "(58) 92993-2361",
+			"email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "08388-840",
+				"street": "Meaghan Fields",
+				"number": "1283",
+				"complement": null,
+				"district": "Cheshire",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.629843,
+				"longitude": -54.476994
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Turcotte - Weber Reciclagem",
+					"business_name": "Turcotte - Weber Reciclagem",
+					"identity": "80242672000142",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Darrell.Kreiger8@hairy-tapioca.com",
+					"phones": ["(03) 94759-1668"],
+					"website": null,
+					"started_activity_in": "2020-08-19T18:49:24.015Z",
+					"address": {
+						"zip_code": "31191-286",
+						"street": "Welch-Gorczany Pass",
+						"number": "7670",
+						"complement": null,
+						"district": "County Tyrone",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.626798,
+						"longitude": -54.490817
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.89,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 729.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.12,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 247.9
+						},
+						{
+							"name": "Resíduos Orgânicos",
+							"description": "Coleta de resíduos: Resíduos Orgânicos",
+							"price": 1.74,
+							"unit": "KG",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 691.3
+						},
+						{
+							"name": "Construção Civil e Demolição (RCD)",
+							"description": "Coleta de resíduos: Construção Civil e Demolição (RCD)",
+							"price": 2.28,
+							"unit": "KG",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 73.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.35,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 224.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 168.97,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 114.26,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Resíduos Orgânicos",
+							"description": "Serviço de coleta e transporte de Resíduos Orgânicos",
+							"price": 129.02,
+							"unit": "UNIT",
+							"waste_category_name": "Resíduos Orgânicos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 172.33,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Harris, Kozey and Berge Reciclagem",
+					"business_name": "Harris, Kozey and Berge Reciclagem",
+					"identity": "66496241000181",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Milton.Hane-Feest34@vast-ocelot.com",
+					"phones": ["(12) 93901-8677"],
+					"website": null,
+					"started_activity_in": "2026-04-09T12:25:38.734Z",
+					"address": {
+						"zip_code": "38041-667",
+						"street": "Moen Freeway",
+						"number": "5549",
+						"complement": null,
+						"district": "Cleveland",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.619314,
+						"longitude": -54.456773
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.2,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 841.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 429
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 600.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.55,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 505.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.84,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 121.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 257.88,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 168.58,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 160.32,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-04T14:02:24.904Z",
+					"observations": "Defungo degusto accendo patria aspicio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.61186,
+								"longitude": -54.460492,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788263356378
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "County Tyrone",
+							"streetNumber": "61461",
+							"street": "Bergnaum Flats",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54337688",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Adelle Corner, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "frances-waelchi.13.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "anna-stark.17.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+							"description": "Testimonium suscipio teres acies uter conventus titulus victus.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Zion Armstrong",
+			"display_name": "Zion",
+			"phone": "(30) 98300-1374",
+			"email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "44138-317",
+				"street": "Castle Lane",
+				"number": "470",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.623318,
+				"longitude": -54.454727
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Zboncak - Nader Reciclagem",
+					"business_name": "Zboncak - Nader Reciclagem",
+					"identity": "20585441022",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Brooke56@spotless-disclosure.com",
+					"phones": ["(06) 91151-9988"],
+					"website": null,
+					"started_activity_in": "2024-02-13T03:56:52.124Z",
+					"address": {
+						"zip_code": "56707-108",
+						"street": "Goodwin Center",
+						"number": "563",
+						"complement": null,
+						"district": "Fife",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.616095,
+						"longitude": -54.466024
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.46,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 903.5
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.48,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 702.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.09,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 76.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.04,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 475.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 296.45,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 213.54,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 52.4,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 140,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 151.47,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 182.59,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kohler - Hahn Reciclagem",
+					"business_name": "Kohler - Hahn Reciclagem",
+					"identity": "67710294000116",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Georgiana_Douglas54@cute-ribbon.name",
+					"phones": ["(68) 93796-4658"],
+					"website": null,
+					"started_activity_in": "2021-07-20T17:33:58.498Z",
+					"address": {
+						"zip_code": "91775-457",
+						"street": "Walker Tunnel",
+						"number": "905",
+						"complement": null,
+						"district": "Highlands and Islands",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.606349,
+						"longitude": -54.470437
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.07,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 338.3
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.27,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 880.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 260.75,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 177.77,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 170.54,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 71.23,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 67.81,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-03-05T09:35:56.273Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.6072,
+								"longitude": -54.463146,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788270128114
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "County Londonderry",
+							"streetNumber": "71192",
+							"street": "Haley-Fisher Point",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94180766",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W Central Avenue, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-05T09:51:05.696Z",
+					"observations": "Arto dignissimos adsum eos quo clam averto nostrum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.607811,
+								"longitude": -54.473455,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788295692795
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "West Sussex",
+							"streetNumber": "6182",
+							"street": "Rozella Dale",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12643544",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wendy Extensions, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Embalagens Contaminadas",
+						"Borracha / Pneus",
+						"Papel / Papelão"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "chadrick-rippin.9.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-25T11:49:13.815Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.616309,
+								"longitude": -54.46151,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788317596928
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Powys",
+							"streetNumber": "2110",
+							"street": "Florida Track",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "85803280",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Crooks Overpass, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Terri Blanda",
+			"display_name": "Terri",
+			"phone": "(71) 92478-2480",
+			"email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "64256-843",
+				"street": "Nicola Ramp",
+				"number": "12371",
+				"complement": null,
+				"district": "Scott County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.615969,
+				"longitude": -54.496797
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Kerluke, Boehm and O'Kon Reciclagem",
+					"business_name": "Kerluke, Boehm and O'Kon Reciclagem",
+					"identity": "59068580400",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Jaleel.Fadel-Stokes58@similar-cop-out.biz",
+					"phones": ["(09) 95438-6202"],
+					"website": null,
+					"started_activity_in": "2020-03-05T19:20:11.722Z",
+					"address": {
+						"zip_code": "13667-924",
+						"street": "Chapel Street",
+						"number": "2693",
+						"complement": null,
+						"district": "Avon",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.613035,
+						"longitude": -54.487424
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.62,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 30.1
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.62,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 850.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.16,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 327.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 168.01,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 271.14,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 110.56,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 55.15,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Schamberger Group Reciclagem",
+					"business_name": "Schamberger Group Reciclagem",
+					"identity": "22882574000173",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Modesto64@grimy-warming.info",
+					"phones": ["(63) 95588-6977"],
+					"website": null,
+					"started_activity_in": "2023-06-13T01:08:25.876Z",
+					"address": {
+						"zip_code": "65552-839",
+						"street": "First Street",
+						"number": "3922",
+						"complement": null,
+						"district": "Surrey",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.618105,
+						"longitude": -54.490584
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.19,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 792.1
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.07,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 233.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 227.88,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 240,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 79.72,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 118.79,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-30T07:24:16.328Z",
+					"observations": "Ducimus pecus cui utrum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.606511,
+								"longitude": -54.491854,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298911206
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Montgomery County",
+							"streetNumber": "23908",
+							"street": "Broadway",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28707481",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Strosin Trafficway, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Madeira",
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-23T18:42:26.184Z",
+					"observations": "Appositus amplexus cursim culpa confido basium una.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.624183,
+								"longitude": -54.47083,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275401870
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "East Sussex",
+							"streetNumber": "1204",
+							"street": "Cathy Pine",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "94300472",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jimmie Pine, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Rachael Trantow",
+			"display_name": "Rachael",
+			"phone": "(74) 94401-9902",
+			"email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "83240-261",
+				"street": "N State Street",
+				"number": "865",
+				"complement": null,
+				"district": "Cumbria",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.626219,
+				"longitude": -54.479327
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lindgren, Walter and Emard Reciclagem",
+					"business_name": "Lindgren, Walter and Emard Reciclagem",
+					"identity": "95383457623",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Felix.Pfeffer32@frivolous-handover.org",
+					"phones": ["(47) 94816-0977"],
+					"website": null,
+					"started_activity_in": "2020-09-24T01:34:20.628Z",
+					"address": {
+						"zip_code": "04111-921",
+						"street": "Nicholas Mills",
+						"number": "9943",
+						"complement": null,
+						"district": "Clay County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.609302,
+						"longitude": -54.461074
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 571.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 186.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.22,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 24.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.33,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 690.5
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.24,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 931.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.32,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 10.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 87.9,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 290.18,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Mohr - Stoltenberg Reciclagem",
+					"business_name": "Mohr - Stoltenberg Reciclagem",
+					"identity": "30673495000180",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Karelle_Bergnaum@cluttered-essence.name",
+					"phones": ["(27) 94103-4875"],
+					"website": null,
+					"started_activity_in": "2026-07-09T21:16:57.680Z",
+					"address": {
+						"zip_code": "29217-743",
+						"street": "Ernestine Station",
+						"number": "9254",
+						"complement": null,
+						"district": "Crawford County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.617802,
+						"longitude": -54.469148
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.17,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 672.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.54,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 583.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.57,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 143.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 140.3,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 163.63,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 210.34,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 244.64,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-19T03:51:41.523Z",
+					"observations": "Summisse arceo absorbeo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.625283,
+								"longitude": -54.454501,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788269327748
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Dorset",
+							"streetNumber": "649",
+							"street": "S Union Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "59815380",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Quarry Lane, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Vidro", "Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-15T18:17:06.147Z",
+					"observations": "Umbra inventore eveniet delectatio ante tredecim spes civis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.617246,
+								"longitude": -54.470257,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788253683977
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Lincoln County",
+							"streetNumber": "990",
+							"street": "Kessler Rue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28550063",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Blake Burg, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-05T06:01:47.962Z",
+					"observations": "Tot crebro infit varietas tubineus tres.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.623267,
+								"longitude": -54.464231,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788274382221
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "East Sussex",
+							"streetNumber": "856",
+							"street": "Langosh Plaza",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "02871172",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "W High Street, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-lynch.15.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"description": "Ubi demulceo degero solus territo certus corrupti cohibeo vinco vitiosus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-01-25T02:14:13.145Z",
+					"observations": "Bibo adopto territo harum sursum amplitudo crepusculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.606266,
+								"longitude": -54.473088,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788299146308
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Merseyside",
+							"streetNumber": "97299",
+							"street": "Buckingham Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "55181372",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Oxford Road, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Medicamentos",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "frances-waelchi.13.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "landen-mcdermott.11.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+							"description": "Aliqua caelestis depopulo.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "chadrick-rippin.9.pedra-preta-mt@oikos.seed",
+							"description": "Fugiat cado benigne titulus adamo adsidue vilicus iste tego aeternus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Frances Ortiz-Kertzmann",
+			"display_name": "Frances",
+			"phone": "(88) 95879-7001",
+			"email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "80622-078",
+				"street": "W Jefferson Street",
+				"number": "977",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.623546,
+				"longitude": -54.460387
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hermann - Bosco Reciclagem",
+					"business_name": "Hermann - Bosco Reciclagem",
+					"identity": "88617150000190",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Archibald95@content-cook.info",
+					"phones": ["(71) 98811-6554"],
+					"website": null,
+					"started_activity_in": "2018-06-23T23:42:24.928Z",
+					"address": {
+						"zip_code": "68642-889",
+						"street": "First Street",
+						"number": "32593",
+						"complement": null,
+						"district": "Devon",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.604077,
+						"longitude": -54.491054
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.37,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 805.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.28,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 212.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.41,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 375.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.74,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 954.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 231.42,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 229.13,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 131.54,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 254.83,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hermiston Inc Reciclagem",
+					"business_name": "Hermiston Inc Reciclagem",
+					"identity": "00721595000174",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Leta_Herzog20@speedy-fold.net",
+					"phones": ["(83) 90209-8541"],
+					"website": null,
+					"started_activity_in": "2024-03-12T12:07:06.140Z",
+					"address": {
+						"zip_code": "57390-496",
+						"street": "Third Street",
+						"number": "95770",
+						"complement": null,
+						"district": "Grant County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.613983,
+						"longitude": -54.485506
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.92,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 134.8
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.86,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 650.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.63,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 722.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 640.9
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 219.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.53,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 531.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 100.2,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 183.35,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 59.59,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 212.44,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 86.81,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Avis Blick",
+			"display_name": "Avis",
+			"phone": "(45) 96421-8165",
+			"email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "61812-748",
+				"street": "Cow Lane",
+				"number": "861",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.611118,
+				"longitude": -54.489289
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Luettgen, Larkin and Ziemann Reciclagem",
+					"business_name": "Luettgen, Larkin and Ziemann Reciclagem",
+					"identity": "16176938201",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Keaton.Doyle@vibrant-safe.net",
+					"phones": ["(71) 96810-3721"],
+					"website": null,
+					"started_activity_in": "2017-03-16T08:32:39.849Z",
+					"address": {
+						"zip_code": "45012-593",
+						"street": "E Broadway Street",
+						"number": "3563",
+						"complement": null,
+						"district": "Herefordshire",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.605553,
+						"longitude": -54.495398
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.91,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 312.9
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.2,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 590.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 299.74,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 210.1,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 146.5,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 56.01,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 286.75,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Ernser - Walsh Reciclagem",
+					"business_name": "Ernser - Walsh Reciclagem",
+					"identity": "31544007000106",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Tara34@drab-seafood.org",
+					"phones": ["(79) 94613-0851"],
+					"website": null,
+					"started_activity_in": "2021-01-27T09:38:23.204Z",
+					"address": {
+						"zip_code": "19855-493",
+						"street": "Camron Center",
+						"number": "756",
+						"complement": null,
+						"district": "Montgomery County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.608159,
+						"longitude": -54.493118
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.24,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 619.8
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.99,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 440.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.64,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 706.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 296.24,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 277.69,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-11-09T15:45:34.523Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.603743,
+								"longitude": -54.493421,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788267675245
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Hancock County",
+							"streetNumber": "500",
+							"street": "S Pine Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56110648",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Claude Parkways, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Plástico", "Veículos em Fim de Vida"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "anna-stark.17.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"description": "Voluptates calamitas cras.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"description": "Virgo suscipit corrigo vivo comitatus caritas turbo ager.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-10T21:12:39.812Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.62363,
+								"longitude": -54.475907,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788289474340
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Gwent",
+							"streetNumber": "29816",
+							"street": "Altenwerth Light",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "92690972",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Mews, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante", "Madeira"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-08T00:21:14.853Z",
+					"observations": "Caritas adipisci autus ipsam aer crepusculum infit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.617609,
+								"longitude": -54.463126,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788290186020
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "South Glamorgan",
+							"streetNumber": "4643",
+							"street": "Mayert-Gulgowski Crossroad",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "45208199",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Deja Motorway, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Chadrick Rippin",
+			"display_name": "Chadrick",
+			"phone": "(83) 98430-1676",
+			"email": "chadrick-rippin.9.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "02985-800",
+				"street": "Katheryn Alley",
+				"number": "785",
+				"complement": null,
+				"district": "Jefferson County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.617392,
+				"longitude": -54.478898
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Dicki, Bergstrom and Barrows Reciclagem",
+					"business_name": "Dicki, Bergstrom and Barrows Reciclagem",
+					"identity": "52146631376",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Florence.Stroman@normal-instruction.biz",
+					"phones": ["(26) 91914-7972"],
+					"website": null,
+					"started_activity_in": "2017-12-02T02:39:34.771Z",
+					"address": {
+						"zip_code": "01827-443",
+						"street": "Jules Extensions",
+						"number": "188",
+						"complement": null,
+						"district": "Herefordshire",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.619913,
+						"longitude": -54.483578
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 145.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 44.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 128.8
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.34,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 287.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.12,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 24.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.27,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 258
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 146.55,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 72.46,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 138.06,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 129.25,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Terry, Kreiger and Klocko Reciclagem",
+					"business_name": "Terry, Kreiger and Klocko Reciclagem",
+					"identity": "13281475000145",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Nellie35@awesome-pharmacopoeia.info",
+					"phones": ["(87) 91285-5842"],
+					"website": null,
+					"started_activity_in": "2019-06-16T20:43:55.300Z",
+					"address": {
+						"zip_code": "40902-894",
+						"street": "Beier Valleys",
+						"number": "704",
+						"complement": null,
+						"district": "Pike County",
+						"city": "Pedra Preta",
+						"city_ibge_id": 5106372,
+						"state": "Mato Grosso",
+						"state_ibge_id": 51,
+						"state_code": "MT",
+						"latitude": -16.628452,
+						"longitude": -54.49296
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.64,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 337.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.78,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 100.6
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.65,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 567.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 445.5
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.45,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 119.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.1,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 998.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 273.05,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 299.29,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 298.49,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 145.07,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 204.63,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 262.15,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-09-29T00:02:08.434Z",
+					"observations": "Vorax crastinus usus tredecim.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.608593,
+								"longitude": -54.493993,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788250093973
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Berkshire",
+							"streetNumber": "52024",
+							"street": "Oxford Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "29415975",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dewey Knolls, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-18T07:50:23.325Z",
+					"observations": "Aspicio velit pauper venustas coadunatio solium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.608269,
+								"longitude": -54.482354,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788252951462
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "South Yorkshire",
+							"streetNumber": "801",
+							"street": "Chapel Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54925225",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Goldner Walks, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Medicamentos",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "frances-waelchi.13.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-lynch.15.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "landen-mcdermott.11.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"description": "Demonstro coerceo conculco patruus acer.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+							"description": "Ullam neque defessus surgo caute suspendo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-04-20T01:07:38.053Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.607554,
+								"longitude": -54.480114,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788286931837
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Lawrence County",
+							"streetNumber": "1631",
+							"street": "Brando Prairie",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43082282",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "E 8th Street, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kevon Cartwright",
+			"display_name": "Kevon",
+			"phone": "(91) 97297-3564",
+			"email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "51597-077",
+				"street": "McCullough Rapid",
+				"number": "838",
+				"complement": null,
+				"district": "Greene County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.619843,
+				"longitude": -54.459295
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-22T06:57:47.769Z",
+					"observations": "Cuppedia qui voluptatum aer.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.611632,
+								"longitude": -54.482313,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788264680189
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Morgan County",
+							"streetNumber": "958",
+							"street": "Alonzo Centers",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57833030",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Cormier Station, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Landen McDermott",
+			"display_name": "Landen",
+			"phone": "(01) 93363-1067",
+			"email": "landen-mcdermott.11.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "53887-315",
+				"street": "Fritsch Ferry",
+				"number": "33460",
+				"complement": null,
+				"district": "Durham",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.615645,
+				"longitude": -54.465691
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-03T07:08:44.237Z",
+					"observations": "Vos solium charisma baiulus iusto amicitia nemo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.615876,
+								"longitude": -54.464891,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788270290249
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Central",
+							"streetNumber": "1199",
+							"street": "S Jefferson Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "78330596",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Darryl Brooks, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-lynch.15.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "anna-stark.17.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"description": "Tremo alias arx.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "frances-waelchi.13.pedra-preta-mt@oikos.seed",
+							"description": "Nostrum repellat dolorem vicinus super.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Sherman Lesch",
+			"display_name": "Sherman",
+			"phone": "(56) 95108-7645",
+			"email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "18951-721",
+				"street": "Herman Circle",
+				"number": "61772",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.626898,
+				"longitude": -54.495367
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-14T07:17:54.674Z",
+					"observations": "Cupio tactus comparo damnatio astrum censura.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.608242,
+								"longitude": -54.470717,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788258564775
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Worcestershire",
+							"streetNumber": "308",
+							"street": "W Grand Avenue",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "22504399",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Old State Road, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Madeira",
+						"Eletroeletrônicos (REEE)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Frances Waelchi",
+			"display_name": "Frances",
+			"phone": "(16) 98802-9522",
+			"email": "frances-waelchi.13.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "02354-565",
+				"street": "Woodside Road",
+				"number": "4498",
+				"complement": null,
+				"district": "Shropshire",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.621486,
+				"longitude": -54.464555
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-24T00:08:02.449Z",
+					"observations": "Ulterius catena in thermae numquam sumptus cubo combibo commodo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.605073,
+								"longitude": -54.473962,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788284033236
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Kent",
+							"streetNumber": "5323",
+							"street": "Mount Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "82203610",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Lancaster Road, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Resíduos Orgânicos",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "shania-gutmann.1.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "anna-stark.17.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "landen-mcdermott.11.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "sonja-lynch.15.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"description": "Aptus culpa spiculum certus utilis.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"description": "Creta demens ciminatio causa tenuis vomer.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-06-16T18:51:36.026Z",
+					"observations": "Alienus conor tero supra tamisium possimus acsi.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.608191,
+								"longitude": -54.473195,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788248595714
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Hampshire",
+							"streetNumber": "256",
+							"street": "Karl Cliff",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62486650",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Tonya Hollow, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Kenton Graham",
+			"display_name": "Kenton",
+			"phone": "(87) 91237-2154",
+			"email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "93199-737",
+				"street": "Patience Crest",
+				"number": "7422",
+				"complement": null,
+				"district": "County Armagh",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.629273,
+				"longitude": -54.458063
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-31T09:09:12.695Z",
+					"observations": "Thema concido odit consequatur pel contabesco.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.61029,
+								"longitude": -54.485563,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788293517695
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Powys",
+							"streetNumber": "9711",
+							"street": "Gordon Road",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "65091617",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jaskolski Street, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "landen-mcdermott.11.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"description": "Uredo triduana curso adhaero tenuis toties audio degero censura vorago.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "frances-waelchi.13.pedra-preta-mt@oikos.seed",
+							"description": "Adeo comedo virtus velit baiulus addo provident solium solutio.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Sonja Lynch",
+			"display_name": "Sonja",
+			"phone": "(19) 94743-5715",
+			"email": "sonja-lynch.15.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "02437-819",
+				"street": "Theodore Rue",
+				"number": "6498",
+				"complement": null,
+				"district": "Monroe County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.605983,
+				"longitude": -54.463409
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Jeannette Kuphal",
+			"display_name": "Jeannette",
+			"phone": "(06) 98950-9771",
+			"email": "jeannette-kuphal.16.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "23508-798",
+				"street": "Adrian Orchard",
+				"number": "12969",
+				"complement": null,
+				"district": "Northumberland",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.628626,
+				"longitude": -54.46482
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-06T14:49:56.498Z",
+					"observations": "Censura administratio assentator eum abscido conqueror baiulus perferendis beatae utique.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.615489,
+								"longitude": -54.476193,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788237364550
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Cumbria",
+							"streetNumber": "438",
+							"street": "North Street",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20169861",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Marcia Club, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Madeira", "Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-08T02:06:45.582Z",
+					"observations": "Abeo eligendi vulgo aegre cui absconditus illo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.614071,
+								"longitude": -54.493336,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788307668178
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Cumbria",
+							"streetNumber": "6996",
+							"street": "Corkery Radial",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "60935997",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Eldon Terrace, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "chadrick-rippin.9.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sonja-lynch.15.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "olaf-daugherty.3.pedra-preta-mt@oikos.seed",
+							"description": "Dicta cribro earum illo.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"description": "Vulnus delibero tyrannus aperio tero pectus arbitro sursum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Anna Stark",
+			"display_name": "Anna",
+			"phone": "(14) 90263-7858",
+			"email": "anna-stark.17.pedra-preta-mt@oikos.seed",
+			"address": {
+				"zip_code": "98264-865",
+				"street": "Rodriguez Terrace",
+				"number": "358",
+				"complement": null,
+				"district": "Calhoun County",
+				"city": "Pedra Preta",
+				"city_ibge_id": 5106372,
+				"state": "Mato Grosso",
+				"state_ibge_id": 51,
+				"state_code": "MT",
+				"latitude": -16.621705,
+				"longitude": -54.476424
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-09-25T18:45:22.446Z",
+					"observations": "Cribro verbera arto facere.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.629282,
+								"longitude": -54.496556,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788249559824
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "County Tyrone",
+							"streetNumber": "4553",
+							"street": "Lucie Shores",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25804921",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Abshire Gardens, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Metal / Alumínio"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kevon-cartwright.10.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "avis-blick.8.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "sherman-lesch.12.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "rachael-trantow.6.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "landen-mcdermott.11.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kenton-graham.14.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "terri-blanda.5.pedra-preta-mt@oikos.seed",
+							"description": "Temporibus calco canto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"description": "Socius nihil capio socius.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-09T11:20:55.359Z",
+					"observations": "Summa vorago adaugeo iste provident solitudo pectus voluptatibus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.609855,
+								"longitude": -54.491484,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788241650092
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Strathclyde",
+							"streetNumber": "150",
+							"street": "Lockman Mews",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "39706197",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hodkiewicz Passage, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "althea-bauch.0.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-02T21:58:42.453Z",
+					"observations": "Verecundia tabesco aveho cursim deleniti agnosco accusantium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -16.628193,
+								"longitude": -54.461421,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788302507275
+						},
+						"addresses": {
+							"city": "Pedra Preta",
+							"district": "Highlands and Islands",
+							"streetNumber": "341",
+							"street": "Field Close",
+							"region": "MT",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "46828244",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Geoffrey Keys, Pedra Preta - MT"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "frances-ortiz-kertzmann.7.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "thalia-ullrich.2.pedra-preta-mt@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "zion-armstrong.4.pedra-preta-mt@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

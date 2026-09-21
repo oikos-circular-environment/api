@@ -29,3 +29,5 @@ export const wasteCategorySchema = z.object({
 	subcategories: z.array(wasteSubcategorySchema),
 });
 export type WasteCategory = z.infer<typeof wasteCategorySchema>;
+// Named OpenAPI component so it shows up in Scalar's Models tab, like Better Auth's entities.
+z.globalRegistry.add(wasteCategorySchema, { id: "WasteCategory" });

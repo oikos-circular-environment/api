@@ -7,7 +7,8 @@ export const passwordFieldSchema = z
 export const userSchema = z.object({
 	id: z.string(),
 	email: z.email("Invalid email address"),
-	password: passwordFieldSchema.nullable(),
+	name: z.string().nullish(),
+	image: z.string().nullish(),
 	created_at: z.date(),
 	deleted_at: z.date().nullable(),
 	deletion_job_id: z.string().nullable(),

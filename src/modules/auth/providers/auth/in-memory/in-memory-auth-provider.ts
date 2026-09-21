@@ -74,7 +74,6 @@ export class InMemoryAuthProvider implements AuthProvider {
 			banned: false,
 			banReason: null,
 			banExpires: null,
-			authSource: "better_auth",
 			createdAt: new Date(),
 			updatedAt: new Date(),
 		};
@@ -275,7 +274,6 @@ export class InMemoryAuthProvider implements AuthProvider {
 			banned: false,
 			banReason: null,
 			banExpires: null,
-			authSource: "better_auth",
 			createdAt: new Date(),
 			updatedAt: new Date(),
 		};

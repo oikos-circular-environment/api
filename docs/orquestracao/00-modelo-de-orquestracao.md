@@ -21,14 +21,18 @@ A ordem é sempre do mais barato para o mais caro. Sobe de tier só quando o tie
 falha de verdade.
 
 ```
-opencode/big-pickle  →  google/gemini-3.6-flash  →  opencode/deepseek-v4-flash-free
-                     →  opencode-go/kimi-k2.7-code  →  claude
-       (free)                  (cota/pago)                  (pago)         (reserva)
+opencode-big-pickle  →  opencode-muse-spark-1.2  →  opencode-mimo-v2.5  →  opencode-hy3
+                     →  omniroute-omini-free-tier  →  opencode-go-kimi-k2.7  →  claude
+                              (free)                                (pago)      (reserva)
 ```
 
-**Exceção de roteamento:** task que precisa ler muito arquivo de uma vez começa direto no
-`gemini-3.6-flash` — janela de contexto grande resolve num passo o que um modelo de
-contexto curto faria em vários, e o total sai mais barato mesmo com o token custando mais.
+> **Atualizado 2026-09-03:** nomenclatura revisada em 2026-08-27 (globalmente, registrado em
+> `mobile/docs/agent-architecture.md` §9, nunca refletido aqui até agora) — aliases genéricos
+> `oikos-exec*` viraram nomes `provedor-modelo`. `google/gemini-3.6-flash` (`oikos-exec-gemini`)
+> foi **removido por completo** da cadeia e da config global — instável, cota compartilhada,
+> travava no meio da task (ver "Reprovações em execução real" em `01-custo-e-tempo.md` e a memória
+> do usuário sobre isso). A exceção de roteamento por contexto grande que existia com ele deixou
+> de se aplicar; não há hoje um tier equivalente de janela grande na cadeia.
 
 ### Critérios de escalonamento
 
@@ -69,16 +73,20 @@ poluir o diff das features.
 
 | Preset | Modelo | Permissão |
 |---|---|---|
-| `oikos-exec` | `opencode/big-pickle` | edit + bash |
-| `oikos-exec-gemini` | `google/gemini-3.6-flash` | edit + bash |
-| `oikos-exec-alt` | `opencode/deepseek-v4-flash-free` | edit + bash |
-| `oikos-exec-go` | `opencode-go/kimi-k2.7-code` | edit + bash |
-| `oikos-review` | `opencode/ling-3.0-tiny-free` | read-only |
+| `opencode-big-pickle` | `opencode/big-pickle` | edit + bash |
+| `opencode-muse-spark-1.2` | `opencode/muse-spark-1.2-contributor-free` | edit + bash |
+| `opencode-mimo-v2.5` | `opencode/mimo-v2.5-free` | edit + bash |
+| `opencode-hy3` | `opencode/hy3-free` | edit + bash |
+| `omniroute-omini-free-tier` | combo custom OmniRoute (round-robin, ver `mobile/docs/agent-architecture.md` §9) | edit + bash |
+| `opencode-go-kimi-k2.7` | `opencode-go/kimi-k2.7-code` | edit + bash (pago) |
+| `oikos-review` | revisor read-only | read-only |
 | `oikos-text` | `ollama/qwen2.5-coder:3b` | sem ferramentas (inviável, ver acima) |
 
-Os prompts dos presets estão em `~/.config/opencode/prompt/`. Eles reforçam: orientação
-por `graphify query` antes de grep, zero comentário explicativo, SOLID com serviço
-externo atrás de interface, e proibição de merge/push em `development` e `production`.
+Cada preset referencia seu prompt por path **relativo** (`{file:./prompt/oikos-exec.md}`) no
+`opencode.json` global — resolvido pelo cwd de onde `opencode run` executa, então o prompt
+efetivo é sempre `.opencode/prompt/*.md` **deste repo** (não um prompt global compartilhado).
+Reforçam: orientação por `graphify query` antes de grep, zero comentário explicativo, SOLID com
+serviço externo atrás de interface, e proibição de merge/push em `development` e `production`.
 
 Convenções de repo (testes em inglês, `describe` kebab-case, in-memory em teste unitário)
 não são repetidas no prompt: o opencode lê `AGENTS.md` sozinho.
@@ -90,7 +98,7 @@ orca-ide orchestration run-create --objective "<épico>" --json
 orca-ide orchestration task-create --spec "<task>" [--deps '["<task_anterior>"]'] --json
 
 orca-ide terminal create --worktree id:<repo>::<path> \
-  --title "<task>" --command "opencode --agent oikos-exec" --json
+  --title "<task>" --command "opencode --agent opencode-big-pickle" --json
 orca-ide terminal wait --terminal <handle> --for tui-idle --timeout-ms 120000 --json
 orca-ide orchestration dispatch --task <task_id> --to <handle> --inject --json
 

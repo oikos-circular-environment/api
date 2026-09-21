@@ -55,7 +55,21 @@ enum ComplaintVoteType {
 }
 
 enum ModerationStatus {
-  PENDING
-  APPROVED
-  REJECTED
+  OPEN
+  CLOSED
+  CANCELLED
+  RESOLVED
+}
+
+enum ModerationSeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum SupportType {
+  ERROR
+  SUPPORT
+  IMPROVEMENT
 }

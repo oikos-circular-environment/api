@@ -1,0 +1,5501 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:53:45.810Z",
+		"city": "Campo Grande",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Darrick Huels",
+			"display_name": "Darrick",
+			"phone": "(11) 99568-0220",
+			"email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "37266-388",
+				"street": "William Street",
+				"number": "6104",
+				"complement": null,
+				"district": "County Armagh",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.515079,
+				"longitude": -54.591988
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJpZcNjVfvhpQRMrFssAIG3iU",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Caetano",
+					"business_name": "Reciclagem Caetano",
+					"identity": "09613289000199",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.caetano@entire-consistency.com",
+					"phones": ["(67) 99273-6709"],
+					"website": null,
+					"started_activity_in": "2018-01-09T02:59:12.102Z",
+					"address": {
+						"zip_code": "79062-165",
+						"street": "R. Abunã",
+						"number": "38",
+						"complement": null,
+						"district": "Itamaracá, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5092589,
+						"longitude": -54.56342
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "21:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "21:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.09,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 305.9
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.56,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 766.4
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.8,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 310.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.2,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 48.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 290.79,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 66.88,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 272,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 100.19,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 94.32,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJu6fmXf3nhpQRXf1X-u1A48U",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "CL Reciclagem",
+					"business_name": "CL Reciclagem",
+					"identity": "14836590000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "cl.reciclagem@pale-aircraft.net",
+					"phones": ["(67) 98404-3091"],
+					"website": null,
+					"started_activity_in": "2025-03-13T09:09:17.253Z",
+					"address": {
+						"zip_code": "79104-690",
+						"street": "R. Setenta",
+						"number": "1330",
+						"complement": null,
+						"district": "Vila Nova Campo Grande, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.4700003,
+						"longitude": -54.6916492
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.56,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 105.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.38,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 131.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 153.86,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 171.96,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 133.31,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 265.04,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 181.29,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Ismael Lebsack",
+			"display_name": "Ismael",
+			"phone": "(35) 91553-6396",
+			"email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "64905-456",
+				"street": "Medhurst Pass",
+				"number": "256",
+				"complement": null,
+				"district": "Staffordshire",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.434143,
+				"longitude": -54.723407
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJY2tNmZ7lhpQRw7XL_LbNPSk",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem NF | Compra de Metais - Alumínio - Ferro - Sucatas",
+					"business_name": "Reciclagem NF | Compra de Metais - Alumínio - Ferro - Sucatas",
+					"identity": "07273181000179",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.nf.compra.de.metais.aluminio.ferro.sucatas@funny-steak.net",
+					"phones": ["(67) 98143-6055"],
+					"website": null,
+					"started_activity_in": "2023-01-12T13:33:28.107Z",
+					"address": {
+						"zip_code": "79073-116",
+						"street": "R. Gumercindo Leite",
+						"number": "100",
+						"complement": null,
+						"district": "Jardim Los Angeles, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5585644,
+						"longitude": -54.619194699999994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.83,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 76.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 641.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 274.86,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 123.07,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 244.89,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 158.52,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-zpqAoPvhpQRIdgJEWCvXUk",
+						"rating": 3.7,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Santa Ana",
+					"business_name": "Reciclagem Santa Ana",
+					"identity": "66826139000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.santa.ana@majestic-lotion.name",
+					"phones": ["(67) 99161-8669"],
+					"website": null,
+					"started_activity_in": "2024-01-15T12:38:49.160Z",
+					"address": {
+						"zip_code": "79071-090",
+						"street": "R. Francisco Martins de Souza",
+						"number": "23",
+						"complement": null,
+						"district": "Jardim Colibri, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.529483199999998,
+						"longitude": -54.610041900000006
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "05:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "05:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 959.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.99,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 38.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 145.01,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 209.44,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 239.87,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 80.38,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 268.83,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-29T05:11:29.122Z",
+					"observations": "Fugiat cunae argentum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.424408,
+								"longitude": -54.601717,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287716592
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Hampshire",
+							"streetNumber": "868",
+							"street": "Middle Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34264621",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maureen Prairie, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Embalagens Contaminadas",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-09T07:22:45.837Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.542968,
+								"longitude": -54.75402,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788352538380
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Warwickshire",
+							"streetNumber": "7002",
+							"street": "Lenna Ports",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00239345",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hessel Prairie, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-wunsch.15.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"description": "Curis quia stips excepturi valde taceo beatus volutabrum animi spero.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-04T21:47:12.202Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.432862,
+								"longitude": -54.698785,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788304459726
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Hertfordshire",
+							"streetNumber": "3887",
+							"street": "Maple Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03188638",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Meadows, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"description": "Currus vos avarus voluntarius.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"description": "Arceo terreo minima temperantia.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lennie Strosin",
+			"display_name": "Lennie",
+			"phone": "(42) 92238-1024",
+			"email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "14132-896",
+				"street": "E 3rd Street",
+				"number": "3536",
+				"complement": null,
+				"district": "Lincoln County",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.579068,
+				"longitude": -54.62315
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJoynHpAzDhpQRpjJOHA6DCuI",
+						"rating": 4.4,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "KSL RECICLAGEM",
+					"business_name": "KSL RECICLAGEM",
+					"identity": "33336349000158",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "ksl.reciclagem@wretched-bran.info",
+					"phones": ["(67) 99192-4807"],
+					"website": null,
+					"started_activity_in": "2019-03-06T22:11:22.983Z",
+					"address": {
+						"zip_code": "79032-302",
+						"street": "R. Marquês de Herval",
+						"number": "N°4420",
+						"complement": null,
+						"district": "Nova Lima, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.395486299999998,
+						"longitude": -54.5804342
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.84,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 530.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.94,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 98.9
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.82,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 875.9
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.87,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 840.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 157.05,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 184.29,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 67.72,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 60.72,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 149.63,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 217.66,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJuY-u81vlhpQRnVGP-XSFziA",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "PRIMOS RECICLAGEM",
+					"business_name": "PRIMOS RECICLAGEM",
+					"identity": "38456500000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "primos.reciclagem@lucky-other.biz",
+					"phones": ["(81) 91038-7669"],
+					"website": null,
+					"started_activity_in": "2020-08-29T03:56:09.627Z",
+					"address": {
+						"zip_code": "79073-030",
+						"street": "R. Patrocínio",
+						"number": "885",
+						"complement": null,
+						"district": "Jardim Centro Oeste, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5530195,
+						"longitude": -54.6161623
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 277.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.45,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 659
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.91,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 477.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 95
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 73.91,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 152.06,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 203.29,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 169.84,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 187.98,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-12-22T08:29:18.794Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.501699,
+								"longitude": -54.514786,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788277255098
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Herefordshire",
+							"streetNumber": "8434",
+							"street": "River Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "31718444",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Wilhelm Inlet, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-15T08:11:37.976Z",
+					"observations": "Stipes tres capitulus trans exercitationem vulgivagus unde vulpes.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.400128,
+								"longitude": -54.541223,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347520178
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Johnson County",
+							"streetNumber": "14211",
+							"street": "Paucek Shore",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81507760",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Zboncak-Goyette Coves, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-10-03T10:26:11.327Z",
+					"observations": "Illum vindico desolo consectetur tribuo ratione explicabo cur.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.444636,
+								"longitude": -54.624626,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275104481
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Hertfordshire",
+							"streetNumber": "14553",
+							"street": "Heather Close",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36813330",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Martin Luther King Drive, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Metal / Alumínio",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "mack-auer.9.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+							"description": "Via argumentum dolorem.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Heidi Mann",
+			"display_name": "Heidi",
+			"phone": "(73) 96255-3699",
+			"email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "25222-514",
+				"street": "Lenora Crossroad",
+				"number": "68066",
+				"complement": null,
+				"district": "Nottinghamshire",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.493906,
+				"longitude": -54.571848
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJa9-vcuPphpQRLMGaIbp6DgQ",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Santos",
+					"business_name": "Reciclagem Santos",
+					"identity": "07952865000105",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.santos@another-comparison.com",
+					"phones": ["(67) 99348-2034"],
+					"website": null,
+					"started_activity_in": "2019-01-17T18:11:12.985Z",
+					"address": {
+						"zip_code": "79045-060",
+						"street": "R. Andrade Neves",
+						"number": "30",
+						"complement": null,
+						"district": "Jardim Noroeste, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.450855999999998,
+						"longitude": -54.523396999999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.83,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 944.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.88,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 334.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.47,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 624.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 261.97,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 147,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 296.6,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 254.05,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJNRpuFdjlhpQRJjT17rnLoqA",
+						"rating": 4.3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Comércio de Metais Paraná",
+					"business_name": "Comércio de Metais Paraná",
+					"identity": "31887276000167",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "comercio.de.metais.parana@puzzled-icebreaker.info",
+					"phones": ["(67) 99162-8060"],
+					"website": null,
+					"started_activity_in": "2020-06-05T09:40:08.057Z",
+					"address": {
+						"zip_code": "79092-250",
+						"street": "Av. Manoel Joaquim de Moraes",
+						"number": "S/N",
+						"complement": null,
+						"district": "Jardim Leblon, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5045564,
+						"longitude": -54.6586441
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.55,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 257.7
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 254.4
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.85,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 386.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 118.11,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 113.77,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 222.14,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 257.77,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 77.7,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Lucia Lemke",
+			"display_name": "Lucia",
+			"phone": "(55) 95984-2339",
+			"email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "03984-018",
+				"street": "Mount Pleasant",
+				"number": "70546",
+				"complement": null,
+				"district": "Herefordshire",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.38839,
+				"longitude": -54.707996
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJUSXwL9bnhpQRVrQ3ROBR5fg",
+						"rating": 4.6,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Recipel Materiais Recicláveis Campo Grande",
+					"business_name": "Recipel Materiais Recicláveis Campo Grande",
+					"identity": "48489678000106",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "recipel.materiais.reciclaveis.campo.grande@whimsical-deer.net",
+					"phones": ["(67) 98135-6174"],
+					"website": null,
+					"started_activity_in": "2018-07-24T08:22:13.920Z",
+					"address": {
+						"zip_code": "79118-051",
+						"street": "R. do Seminário",
+						"number": "258",
+						"complement": null,
+						"district": "Jardim seminário, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.436716699999998,
+						"longitude": -54.623868699999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.95,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 459.9
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.15,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 922.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 269.74,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 118.98,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 263.88,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 183.88,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 75.36,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 225,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJJZQbjzXvhpQRLtOfI8eVcaM",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Colecta Reciclagem e Gestão Plena de Resíduos",
+					"business_name": "Colecta Reciclagem e Gestão Plena de Resíduos",
+					"identity": "94117967000100",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "colecta.reciclagem.e.gestao.plena.de.residuos@liquid-event.com",
+					"phones": ["(67) 3042-3388"],
+					"website": "http://colecta.eco.br/",
+					"started_activity_in": "2022-12-25T07:41:30.395Z",
+					"address": {
+						"zip_code": "79042-880",
+						"street": "R. Francisco Galvão Paim",
+						"number": "1709",
+						"complement": null,
+						"district": "Lot. Cristo Redentor, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.499429199999998,
+						"longitude": -54.5600904
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 205.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.03,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 325.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.34,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 689.2
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.31,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 218.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.98,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 591.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.45,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 940.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 123.31,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 205.29,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 112.61,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 77.86,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 222.2,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 270.75,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-16T17:14:23.805Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.379888,
+								"longitude": -54.670875,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320299961
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Perry County",
+							"streetNumber": "1938",
+							"street": "Vicarage Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49430133",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Emilia Ridges, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Plástico", "Óleo Mineral / Lubrificante"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-wunsch.15.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"description": "Praesentium porro ad thorax utique ciminatio velit aptus peccatus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-09-13T13:02:04.929Z",
+					"observations": "Odio tricesimus audeo harum viriliter auditor ara adinventitias arguo earum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.450609,
+								"longitude": -54.518607,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788329887640
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Rutland",
+							"streetNumber": "1224",
+							"street": "Woodside",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20714312",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "N Oak Street, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Medicamentos",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Evan Balistreri",
+			"display_name": "Evan",
+			"phone": "(55) 99682-8742",
+			"email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "19324-290",
+				"street": "Bryant Prairie",
+				"number": "73701",
+				"complement": null,
+				"district": "Union County",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.550406,
+				"longitude": -54.574002
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ20Q0b0XnhpQRH9-DSwGuxF0",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JJ Reciclagem",
+					"business_name": "JJ Reciclagem",
+					"identity": "46196872000178",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jj.reciclagem@charming-elevator.com",
+					"phones": ["(67) 99178-4010"],
+					"website": null,
+					"started_activity_in": "2017-07-14T06:13:26.995Z",
+					"address": {
+						"zip_code": "79103-180",
+						"street": "R. Guaimbe",
+						"number": "47",
+						"complement": null,
+						"district": "Vila Silvia Regina, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.4485238,
+						"longitude": -54.6798929
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.7,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 357
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 2.66,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 522.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 839.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 1.75,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 147.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 165.85,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 117.47,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 197.51,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 261.61,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ_Z5pTRvlhpQRdZ_YfP4_lOw",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JP metais",
+					"business_name": "JP metais",
+					"identity": "39068690000156",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jp.metais@naughty-ribbon.name",
+					"phones": ["(67) 98449-2678"],
+					"website": null,
+					"started_activity_in": "2020-12-05T07:25:40.548Z",
+					"address": {
+						"zip_code": "79070-140",
+						"street": "R. Ana Luísa de Souza",
+						"number": "2107",
+						"complement": null,
+						"district": "Pioneiros, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5222913,
+						"longitude": -54.6224018
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.08,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 26
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 209.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.24,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 114.5
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.14,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 702.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.61,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 753
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 145.95,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 227.75,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 114.41,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-23T14:43:40.335Z",
+					"observations": "Adnuo ratione sufficio acceptus tunc.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.446685,
+								"longitude": -54.604202,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788349408220
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Northamptonshire",
+							"streetNumber": "1194",
+							"street": "Brook Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54351819",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reynolds Cliffs, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Resíduos Orgânicos"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-wunsch.15.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"description": "Tremo praesentium tracto nihil qui vaco reiciendis comes debilito coepi.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jesus Keebler",
+			"display_name": "Jesus",
+			"phone": "(79) 91576-9623",
+			"email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "00078-623",
+				"street": "Oak Street",
+				"number": "4844",
+				"complement": null,
+				"district": "Powys",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.406264,
+				"longitude": -54.515235
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJC6-mK2rphpQRHRO0X_imYdE",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Noroeste",
+					"business_name": "Reciclagem Noroeste",
+					"identity": "10755905000125",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.noroeste@possible-hoof.name",
+					"phones": ["(67) 99174-8655"],
+					"website": null,
+					"started_activity_in": "2026-05-23T09:09:58.783Z",
+					"address": {
+						"zip_code": "79045-120",
+						"street": "R. Indianápolis",
+						"number": "2021",
+						"complement": null,
+						"district": "Jardim Noroeste, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.4612181,
+						"longitude": -54.531961599999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 605.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.3,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 704.7
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.26,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 672.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.44,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 924.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.78,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 86.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 81.89,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 93.77,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 217.71,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 61.87,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJXe1B9S3nhpQR8us0Pt_yLRM",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Maidana",
+					"business_name": "Reciclagem Maidana",
+					"identity": "14825160000184",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.maidana@odd-napkin.info",
+					"phones": ["(67) 99175-3911"],
+					"website": null,
+					"started_activity_in": "2022-06-27T06:39:15.413Z",
+					"address": {
+						"zip_code": "79115-560",
+						"street": "R. São Domingos",
+						"number": "75",
+						"complement": null,
+						"district": "Vila Manoel Taveira, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.425029,
+						"longitude": -54.6490957
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.81,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 542.7
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 1.9,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 850.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 253.43,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 270.7,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 185.51,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 263.78,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 286.82,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 115.57,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-26T06:36:20.408Z",
+					"observations": "Absque ceno autem ascit cribro perferendis vomito.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.497246,
+								"longitude": -54.644218,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275654891
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Dyfed",
+							"streetNumber": "219",
+							"street": "Romaine Isle",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41203161",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Chester Forest, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Darla Larkin",
+			"display_name": "Darla",
+			"phone": "(61) 95506-0427",
+			"email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "47756-384",
+				"street": "E Broadway",
+				"number": "684",
+				"complement": null,
+				"district": "South Glamorgan",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.387083,
+				"longitude": -54.643938
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJ5ZJjv3HnhpQRG3u2hjxWNGE",
+						"rating": null,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Coletiva Reciclagem",
+					"business_name": "Coletiva Reciclagem",
+					"identity": "04927065000138",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "coletiva.reciclagem@helpful-brook.info",
+					"phones": ["(67) 99108-6755"],
+					"website": null,
+					"started_activity_in": "2017-12-06T13:39:43.553Z",
+					"address": {
+						"zip_code": "79091-740",
+						"street": "R. Leão Zardo",
+						"number": "472",
+						"complement": null,
+						"district": "Jardim São Conrado, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.4901673,
+						"longitude": -54.6786994
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.05,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 175.4
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.8,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 344.4
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.18,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 793.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 50.57,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 205.13,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 55.45,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJBcZOuL3hhpQR-uJBtr545ZQ",
+						"rating": 5,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem pedroso",
+					"business_name": "Reciclagem pedroso",
+					"identity": "27656892000130",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.pedroso@svelte-word.info",
+					"phones": ["(67) 99833-9455"],
+					"website": null,
+					"started_activity_in": "2021-03-18T15:02:03.503Z",
+					"address": {
+						"zip_code": "79108-271",
+						"street": "R. Ubá",
+						"number": "39",
+						"complement": null,
+						"district": "Jardim Inapolis, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.4823301,
+						"longitude": -54.748069099999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "17:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 2.5,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 151.1
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.64,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 888.7
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 214.09,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 80.25,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 106.68,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 83.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 275.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-22T09:09:33.618Z",
+					"observations": "Tristis labore titulus minus arbitro amaritudo titulus dolorum apparatus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.444739,
+								"longitude": -54.584982,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788287112122
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Fife",
+							"streetNumber": "6310",
+							"street": "N Washington Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "01790446",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mill Close, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Óleo Vegetal Usado (de cozinha)"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-29T16:53:42.118Z",
+					"observations": "Supellex deputo thalassinus depereo tantum vigor tempus atqui suppono.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.465328,
+								"longitude": -54.732047,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788340879643
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Logan County",
+							"streetNumber": "58342",
+							"street": "Martin Luther King Boulevard",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "86751499",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Rutherford Route, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Terrance Kemmer",
+			"display_name": "Terrance",
+			"phone": "(29) 92866-5783",
+			"email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "05546-232",
+				"street": "Wellington Street",
+				"number": "658",
+				"complement": null,
+				"district": "Washington County",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.551712,
+				"longitude": -54.67414
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJdz0J53DohpQRdWQQewEBeOQ",
+						"rating": 4.7,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Aparas Ficus",
+					"business_name": "Aparas Ficus",
+					"identity": "60891951000120",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "aparas.ficus@svelte-statue.com",
+					"phones": ["(67) 3305-6091"],
+					"website": null,
+					"started_activity_in": "2025-10-15T15:56:44.567Z",
+					"address": {
+						"zip_code": "79010-300",
+						"street": "R. do Livramento",
+						"number": "1213-1309",
+						"complement": null,
+						"district": "Cel. Antonino, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.429070799999998,
+						"longitude": -54.6025837
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "11:00"
+								},
+								{
+									"start_time": "13:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.88,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 535.1
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 3.37,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 709.6
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.94,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 534.8
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.7,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 130.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 165.65,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 58.12,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJ-ehwlUXvhpQRiDIhQMM8tQ8",
+						"rating": 5,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Eco Grande Reciclagem e Soluções Ambientais",
+					"business_name": "Eco Grande Reciclagem e Soluções Ambientais",
+					"identity": "61304072000117",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "eco.grande.reciclagem.e.solucoes.ambientais@putrid-convection.net",
+					"phones": ["(67) 99634-1746"],
+					"website": null,
+					"started_activity_in": "2024-04-22T21:52:03.896Z",
+					"address": {
+						"zip_code": "79064-252",
+						"street": "R. Elias Lahdo",
+						"number": "nº 95",
+						"complement": null,
+						"district": "Jardim Santa Felicidade, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5609967,
+						"longitude": -54.587492600000004
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:00",
+									"end_time": "17:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 3.02,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 102.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.79,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 769
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 247.95,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 117.93,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-16T14:01:24.489Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.48641,
+								"longitude": -54.647313,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788321271776
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Northamptonshire",
+							"streetNumber": "5255",
+							"street": "Kutch Estates",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "29956017",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Barn Close, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-06-05T09:42:33.251Z",
+					"observations": "Delinquo degero officiis volubilis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.382266,
+								"longitude": -54.6327,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326682915
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Marshall County",
+							"streetNumber": "2277",
+							"street": "Grove Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "00831851",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schuster Crossing, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mack-auer.9.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-02T02:55:11.086Z",
+					"observations": "Venio communis comprehendo callide pecco utrum cursus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.474741,
+								"longitude": -54.758917,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788326997231
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Greater Manchester",
+							"streetNumber": "5269",
+							"street": "Carlos Hill",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "49984011",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Satterfield Harbor, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Têxtil / Roupas / Tecidos",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-wunsch.15.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "mack-auer.9.campo-grande-ms@oikos.seed",
+							"description": "Consuasor tyrannus textilis accedo clibanus repellendus substantia eos considero arx.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Mack Auer",
+			"display_name": "Mack",
+			"phone": "(82) 92941-8403",
+			"email": "mack-auer.9.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "16184-044",
+				"street": "Alfred Street",
+				"number": "96731",
+				"complement": null,
+				"district": "Northamptonshire",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.500687,
+				"longitude": -54.58963
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJz-jt7UTnhpQRJ04FTJKmONw",
+						"rating": null,
+						"types": ["service", "point_of_interest", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "JK reciclagem",
+					"business_name": "JK reciclagem",
+					"identity": "02993440000112",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "jk.reciclagem@aware-sarong.biz",
+					"phones": ["(67) 99127-6537"],
+					"website": null,
+					"started_activity_in": "2025-01-15T12:24:01.675Z",
+					"address": {
+						"zip_code": "79115-810",
+						"street": "Av. Pres. Vargas",
+						"number": "3109",
+						"complement": null,
+						"district": "Parque dos Laranjais, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.424297799999998,
+						"longitude": -54.648385999999995
+					},
+					"business_hours": [
+						{
+							"day_of_week": "SUNDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "19:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "00:00",
+									"end_time": "00:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 985.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.65,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 500
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 230.94,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 113.81,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 191.85,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 133.44,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": "ChIJw5GxdtLlhpQR0dD0fC-HcEM",
+						"rating": 3,
+						"types": ["point_of_interest", "service", "establishment"],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "RS RECICLAGEM",
+					"business_name": "RS RECICLAGEM",
+					"identity": "94842804000181",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "rs.reciclagem@altruistic-roadway.org",
+					"phones": ["(67) 98138-8457"],
+					"website": null,
+					"started_activity_in": "2018-04-03T04:35:30.407Z",
+					"address": {
+						"zip_code": "79096-000",
+						"street": "R. Cachoeira do Campo",
+						"number": "714",
+						"complement": null,
+						"district": "Portal Caioba, Campo Grande",
+						"city": "Campo Grande",
+						"city_ibge_id": 5002704,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.5202027,
+						"longitude": -54.6827681
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "17:30"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "07:30",
+									"end_time": "11:30"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 4.02,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 266.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.24,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 746.5
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 689.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 276.59,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 110.73,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 192.47,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-06-29T16:29:50.533Z",
+					"observations": "Deprecator theca sum arbor carpo curriculum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.570935,
+								"longitude": -54.712679,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788309953553
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Bedfordshire",
+							"streetNumber": "29933",
+							"street": "Jodi Shoals",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20267173",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Stanley Road, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Roman Rempel",
+			"display_name": "Roman",
+			"phone": "(90) 98809-3411",
+			"email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "23734-057",
+				"street": "Victoria Park",
+				"number": "218",
+				"complement": null,
+				"district": "Highlands and Islands",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.582961,
+				"longitude": -54.549923
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-06T06:25:07.347Z",
+					"observations": "Altus summisse et asperiores truculenter arx tactus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.417918,
+								"longitude": -54.672172,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788354604729
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Gwynedd County",
+							"streetNumber": "209",
+							"street": "Bartell Alley",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "67160871",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Dennis Centers, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)",
+						"Resíduos Orgânicos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2026-01-01T03:11:09.750Z",
+					"observations": "Volva absorbeo decens repudiandae quae trado quis admoneo.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.374281,
+								"longitude": -54.758806,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788333552784
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Bedfordshire",
+							"streetNumber": "80217",
+							"street": "West Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89070663",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Jasmine Meadow, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Metal / Alumínio",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-18T09:21:32.207Z",
+					"observations": "Admoneo patrocinor amitto arma denuncio eos sol abutor accusantium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.505252,
+								"longitude": -54.717399,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275324944
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Lawrence County",
+							"streetNumber": "56179",
+							"street": "Ben Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74416718",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Juanita Light, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "mack-auer.9.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"description": "Aggredior desparatus supplanto abstergo eaque urbs.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"description": "Neque utrum solium quas debitis laudantium adnuo comminor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Lynette Gorczany",
+			"display_name": "Lynette",
+			"phone": "(28) 92483-7848",
+			"email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "17180-600",
+				"street": "Queen's Road",
+				"number": "77404",
+				"complement": null,
+				"district": "Rutland",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.57592,
+				"longitude": -54.585119
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-06T19:54:08.913Z",
+					"observations": "Capio bellicus demens vere tum alii.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.422975,
+								"longitude": -54.512905,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330874092
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Greater Manchester",
+							"streetNumber": "732",
+							"street": "Traci Trafficway",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "56360790",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Skiles Meadow, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Chelsea Nitzsche",
+			"display_name": "Chelsea",
+			"phone": "(79) 96392-2307",
+			"email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "71982-554",
+				"street": "2nd Avenue",
+				"number": "3072",
+				"complement": null,
+				"district": "Marion County",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.494537,
+				"longitude": -54.708419
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-27T23:51:57.060Z",
+					"observations": "Allatus benevolentia animadverto tumultus nisi vere cruciamentum deripio.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.534562,
+								"longitude": -54.704733,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788311470414
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Lake County",
+							"streetNumber": "172",
+							"street": "Gulgowski Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "33383611",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Austyn Freeway, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "mack-auer.9.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-08T14:41:52.990Z",
+					"observations": "Sortitus damno cumque tantum bibo pel architecto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.429397,
+								"longitude": -54.572135,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788342242428
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "West Glamorgan",
+							"streetNumber": "44123",
+							"street": "New Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "03277620",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hermiston Gateway, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Embalagens Contaminadas"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "carole-dare.13.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ludwig-wunsch.15.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"description": "Conicio laborum defleo audentia vita libero coepi tibi quae.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"description": "Terebro argumentum iusto.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Carole Dare",
+			"display_name": "Carole",
+			"phone": "(39) 91233-4608",
+			"email": "carole-dare.13.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "70160-136",
+				"street": "Yundt Forge",
+				"number": "839",
+				"complement": null,
+				"district": "Pike County",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.425574,
+				"longitude": -54.714324
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-04-19T16:30:56.006Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.555272,
+								"longitude": -54.556647,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788354836094
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Rutland",
+							"streetNumber": "800",
+							"street": "Durgan Squares",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90463362",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Poplar Street, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Borracha / Pneus",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				},
+				{
+					"date": "2025-11-17T04:47:27.985Z",
+					"observations": "Curis apparatus usus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.529681,
+								"longitude": -54.725203,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344066482
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Hamilton County",
+							"streetNumber": "5370",
+							"street": "Holden Cove",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "90071540",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S Broadway Street, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ariel Schulist",
+			"display_name": "Ariel",
+			"phone": "(94) 99226-7362",
+			"email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "85590-116",
+				"street": "Ross Parkway",
+				"number": "3328",
+				"complement": null,
+				"district": "Kent",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.50781,
+				"longitude": -54.573674
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-02-15T18:27:01.266Z",
+					"observations": "Esse surculus pauper dapifer combibo occaecati conor bis suscipit.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.506668,
+								"longitude": -54.571679,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319225702
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "County Armagh",
+							"streetNumber": "80479",
+							"street": "Randolph Common",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "98808270",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Hahn Lock, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "darrick-huels.0.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "heidi-mann.3.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "terrance-kemmer.8.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "roman-rempel.10.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"description": "Vapulus claudeo admoneo.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2025-10-11T14:52:59.618Z",
+					"observations": "Defleo laudantium candidus vilicus aequitas at ultra solum.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.524064,
+								"longitude": -54.622547,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294485720
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Cambridgeshire",
+							"streetNumber": "587",
+							"street": "Wuckert Oval",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "15502690",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Clyde Spur, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão", "Lâmpadas", "Plástico"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "lynette-gorczany.11.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-13T04:06:27.095Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.475981,
+								"longitude": -54.702571,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788319803685
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Henry County",
+							"streetNumber": "9251",
+							"street": "Carter Parks",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "12219338",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Aurore Centers, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Medicamentos", "Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "darla-larkin.7.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-02-08T02:39:05.388Z",
+					"observations": "Voluntarius coepi cogito.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.495581,
+								"longitude": -54.506106,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788320685268
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Norfolk",
+							"streetNumber": "25607",
+							"street": "1st Avenue",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "10764877",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "High Road, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Têxtil / Roupas / Tecidos", "Vidro"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "ismael-lebsack.1.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Ludwig Wunsch",
+			"display_name": "Ludwig",
+			"phone": "(57) 99154-3731",
+			"email": "ludwig-wunsch.15.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "18123-190",
+				"street": "Patrick Crossroad",
+				"number": "47682",
+				"complement": null,
+				"district": "Essex",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.591161,
+				"longitude": -54.517492
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-23T16:57:55.214Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.417775,
+								"longitude": -54.650209,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788316846158
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "County Down",
+							"streetNumber": "2872",
+							"street": "N Jackson Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "28134385",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Quitzon Prairie, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Óleo Vegetal Usado (de cozinha)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "lucia-lemke.4.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "evan-balistreri.5.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Leslie Bahringer",
+			"display_name": "Leslie",
+			"phone": "(82) 90880-2069",
+			"email": "leslie-bahringer.16.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "07074-095",
+				"street": "Ebony Keys",
+				"number": "5580",
+				"complement": null,
+				"district": "Dorset",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.537631,
+				"longitude": -54.649318
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Kevon Mertz",
+			"display_name": "Kevon",
+			"phone": "(30) 99863-3187",
+			"email": "kevon-mertz.17.campo-grande-ms@oikos.seed",
+			"address": {
+				"zip_code": "02972-709",
+				"street": "Cedar Grove",
+				"number": "25810",
+				"complement": null,
+				"district": "Gwynedd County",
+				"city": "Campo Grande",
+				"city_ibge_id": 5002704,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.552711,
+				"longitude": -54.763971
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-10-08T02:41:45.064Z",
+					"observations": "Suppono natus tripudio tamisium.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.584853,
+								"longitude": -54.752481,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788344146090
+						},
+						"addresses": {
+							"city": "Campo Grande",
+							"district": "Surrey",
+							"streetNumber": "41583",
+							"street": "Dickinson Tunnel",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "96481989",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "O'Keefe Course, Campo Grande - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "ariel-schulist.14.campo-grande-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "chelsea-nitzsche.12.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "lennie-strosin.2.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jesus-keebler.6.campo-grande-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

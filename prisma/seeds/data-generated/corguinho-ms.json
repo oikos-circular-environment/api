@@ -1,0 +1,5629 @@
+{
+	"_meta": {
+		"generated_at": "2026-09-02T14:53:52.364Z",
+		"city": "Corguinho",
+		"state_code": "MS",
+		"users_total": 18,
+		"companies_total": 20,
+		"complaints_total": 30
+	},
+	"users": [
+		{
+			"full_name": "Kyler Weber",
+			"display_name": "Kyler",
+			"phone": "(65) 99380-1926",
+			"email": "kyler-weber.0.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "95513-671",
+				"street": "William Street",
+				"number": "244",
+				"complement": null,
+				"district": "Leicestershire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.146438,
+				"longitude": -55.148389
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": "ChIJB6wKDgDBgJQRJkBNPu3Lh8o",
+						"rating": null,
+						"types": [
+							"non_profit_organization",
+							"association_or_organization",
+							"point_of_interest",
+							"establishment"
+						],
+						"is_ecoponto": false,
+						"synthetic": false
+					},
+					"corporate_name": "Reciclagem Dakila pesquisas",
+					"business_name": "Reciclagem Dakila pesquisas",
+					"identity": "21904114000136",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "reciclagem.dakila.pesquisas@spanish-ravioli.net",
+					"phones": ["(68) 90421-3023"],
+					"website": null,
+					"started_activity_in": "2026-08-22T15:12:58.091Z",
+					"address": {
+						"zip_code": "79460-000",
+						"street": "3VFG+V6",
+						"number": "S/N",
+						"complement": null,
+						"district": "Corguinho, MS, , Brasil",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.925288,
+						"longitude": -55.124401999999996
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.72,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 889.1
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.55,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 176.9
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.92,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 153.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.25,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 881.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 101.68,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 64.77,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 120.44,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 126.24,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 266.27,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Ratke Inc Reciclagem",
+					"business_name": "Ratke Inc Reciclagem",
+					"identity": "98564666448",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Brandy_Mann@honorable-precedent.biz",
+					"phones": ["(71) 93396-0482"],
+					"website": null,
+					"started_activity_in": "2021-01-17T11:49:30.178Z",
+					"address": {
+						"zip_code": "99796-910",
+						"street": "Heller Walks",
+						"number": "8675",
+						"complement": null,
+						"district": "Fife",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.952021,
+						"longitude": -54.904439
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.6,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 102.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 1.61,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 395.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.54,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 81.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.2,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 879.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 154.67,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 169.68,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 231.59,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2025-10-01T16:16:04.658Z",
+					"observations": "Audax universe suscipio vulgo teneo dicta creo vere eaque.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.737275,
+								"longitude": -54.788013,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788300209580
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Nottinghamshire",
+							"streetNumber": "6914",
+							"street": "Bogan Brooks",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "38752588",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Pound Lane, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Metal / Alumínio"
+					],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "gwen-jacobs-feeney.1.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "green-lind.13.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"description": "Arcesso trans succedo sollicito desidero attollo assentator.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"description": "Vigilo tabella volo baiulus corpus pax aetas defluo cado.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				},
+				{
+					"date": "2026-02-10T21:45:27.026Z",
+					"observations": "Vinitor triumphus aufero cursus corrumpo eum bis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.862259,
+								"longitude": -54.97701,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312177360
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Hertfordshire",
+							"streetNumber": "4903",
+							"street": "Maureen Burg",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20649483",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mildred Rue, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Lâmpadas",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Madeira"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Gwen Jacobs-Feeney",
+			"display_name": "Gwen",
+			"phone": "(97) 95269-6577",
+			"email": "gwen-jacobs-feeney.1.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "68474-466",
+				"street": "Cruickshank Freeway",
+				"number": "95311",
+				"complement": null,
+				"district": "Clwyd",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.594593,
+				"longitude": -54.899261
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "McClure Group Reciclagem",
+					"business_name": "McClure Group Reciclagem",
+					"identity": "54066294000183",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Kole_Labadie20@limited-marksman.name",
+					"phones": ["(79) 90299-7122"],
+					"website": null,
+					"started_activity_in": "2021-10-11T21:22:14.128Z",
+					"address": {
+						"zip_code": "81037-879",
+						"street": "Olaf Way",
+						"number": "20331",
+						"complement": null,
+						"district": "Northamptonshire",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.719988,
+						"longitude": -55.223331
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 4.1,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 152.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.21,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 881.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.62,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 907.2
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.51,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 205.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 62.49,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 287.32,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Parker, Steuber and Kozey Reciclagem",
+					"business_name": "Parker, Steuber and Kozey Reciclagem",
+					"identity": "35998402000101",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Erwin31@giving-dish.com",
+					"phones": ["(06) 94685-3064"],
+					"website": null,
+					"started_activity_in": "2024-12-09T07:46:29.673Z",
+					"address": {
+						"zip_code": "63965-600",
+						"street": "Water Lane",
+						"number": "71505",
+						"complement": null,
+						"district": "Jackson County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.100532,
+						"longitude": -54.784592
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.57,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 445.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.78,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 499.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 135.92,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 228.56,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-09T16:31:23.308Z",
+					"observations": "Vero nulla tristis acceptus amitto.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.456557,
+								"longitude": -55.220145,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788335293466
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Berkshire",
+							"streetNumber": "92684",
+							"street": "Ernesto Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "26161806",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Reynolds Fields, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Eddie Feeney",
+			"display_name": "Eddie",
+			"phone": "(44) 98874-7252",
+			"email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "75753-121",
+				"street": "Vine Street",
+				"number": "125",
+				"complement": null,
+				"district": "Norfolk",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.857297,
+				"longitude": -54.78295
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Deckow, McKenzie and MacGyver Reciclagem",
+					"business_name": "Deckow, McKenzie and MacGyver Reciclagem",
+					"identity": "31388751000150",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Maryam.Little0@productive-signature.biz",
+					"phones": ["(63) 94014-2771"],
+					"website": null,
+					"started_activity_in": "2022-06-30T15:04:33.499Z",
+					"address": {
+						"zip_code": "37882-741",
+						"street": "Gulgowski Mountains",
+						"number": "38238",
+						"complement": null,
+						"district": "Warren County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.700335,
+						"longitude": -55.391179
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.94,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 998.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 4.25,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 136.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.47,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 380.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 65.1,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 185.32,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 125.88,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 228.54,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Crona - Reichel Reciclagem",
+					"business_name": "Crona - Reichel Reciclagem",
+					"identity": "97755941000177",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Madonna35@quarterly-cutlet.org",
+					"phones": ["(10) 90238-2623"],
+					"website": null,
+					"started_activity_in": "2025-10-27T09:49:35.314Z",
+					"address": {
+						"zip_code": "57012-001",
+						"street": "Cromwell Road",
+						"number": "846",
+						"complement": null,
+						"district": "Humberside",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.667364,
+						"longitude": -54.722321
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 1.42,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 774.3
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 172.8
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 0.51,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 645.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 0.78,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 177.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.61,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 404.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 205.39,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 273.73,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 219.76,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 259.31,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 256.85,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 135.05,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Jeannie McClure",
+			"display_name": "Jeannie",
+			"phone": "(87) 99383-5227",
+			"email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "91412-968",
+				"street": "Grant Land",
+				"number": "8462",
+				"complement": null,
+				"district": "Hertfordshire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.54151,
+				"longitude": -54.74344
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Rippin and Sons Reciclagem",
+					"business_name": "Rippin and Sons Reciclagem",
+					"identity": "04882624702",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Gene_Konopelski36@sophisticated-kettledrum.com",
+					"phones": ["(82) 98081-7472"],
+					"website": null,
+					"started_activity_in": "2017-01-17T02:25:00.653Z",
+					"address": {
+						"zip_code": "18496-320",
+						"street": "Casper Burg",
+						"number": "6221",
+						"complement": null,
+						"district": "Surrey",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.706576,
+						"longitude": -55.341457
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 3.94,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 929.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 2.73,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 561
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.76,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 950.7
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 1.33,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 164.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 0.25,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 655.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.76,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 466.6
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 281,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 98.42,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 208.34,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Mosciski, Wilkinson and Dicki Reciclagem",
+					"business_name": "Mosciski, Wilkinson and Dicki Reciclagem",
+					"identity": "09272083000142",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "David57@honorable-waist.name",
+					"phones": ["(68) 99409-7087"],
+					"website": null,
+					"started_activity_in": "2023-04-05T06:53:04.405Z",
+					"address": {
+						"zip_code": "46662-505",
+						"street": "Patrick Valleys",
+						"number": "7536",
+						"complement": null,
+						"district": "Lee County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.121297,
+						"longitude": -54.869952
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.76,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 964
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.82,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 205.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 132.82,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 99.81,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 271.25,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 57.65,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 78.6,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 87.4,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Jaylon Schinner",
+			"display_name": "Jaylon",
+			"phone": "(78) 94847-2419",
+			"email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "72129-582",
+				"street": "Hackett Throughway",
+				"number": "18645",
+				"complement": null,
+				"district": "Wiltshire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.050058,
+				"longitude": -54.929514
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Mills-Rutherford and Sons Reciclagem",
+					"business_name": "Mills-Rutherford and Sons Reciclagem",
+					"identity": "19854952000109",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Ray_Johnson31@oval-hoof.name",
+					"phones": ["(96) 99136-7432"],
+					"website": null,
+					"started_activity_in": "2023-02-01T07:17:49.350Z",
+					"address": {
+						"zip_code": "37220-809",
+						"street": "Crona Streets",
+						"number": "6636",
+						"complement": null,
+						"district": "Cambridgeshire",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.850485,
+						"longitude": -55.283715
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.22,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 866.7
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.14,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 351.5
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 151.6,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 278.11,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 240.98,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 288.6,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Lâmpadas",
+							"description": "Serviço de coleta e transporte de Lâmpadas",
+							"price": 136.77,
+							"unit": "UNIT",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Cummings, Borer and Klein-Tillman Reciclagem",
+					"business_name": "Cummings, Borer and Klein-Tillman Reciclagem",
+					"identity": "17855073000168",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Sidney77@necessary-seal.net",
+					"phones": ["(50) 90039-8669"],
+					"website": null,
+					"started_activity_in": "2022-03-12T14:58:11.645Z",
+					"address": {
+						"zip_code": "95637-564",
+						"street": "Treutel Avenue",
+						"number": "5787",
+						"complement": null,
+						"district": "Fife",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.930571,
+						"longitude": -54.911009
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 4.53,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 376.3
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.94,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 351.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 291.88,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 86.88,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-07-27T06:52:02.410Z",
+					"observations": "Cilicium barba vestigium deporto turba deripio cursus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.497147,
+								"longitude": -54.773384,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788290999832
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Jackson County",
+							"streetNumber": "37784",
+							"street": "Jared Roads",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "81790634",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Spinka Track, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Veículos em Fim de Vida",
+						"Vidro",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Dorothy Wilderman",
+			"display_name": "Dorothy",
+			"phone": "(94) 96556-3672",
+			"email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "41041-896",
+				"street": "Dark Lane",
+				"number": "58059",
+				"complement": null,
+				"district": "Northamptonshire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.773053,
+				"longitude": -55.233819
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Gutmann, Reynolds and Braun Reciclagem",
+					"business_name": "Gutmann, Reynolds and Braun Reciclagem",
+					"identity": "04869837000122",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Sheryl.Balistreri25@cluttered-diversity.org",
+					"phones": ["(90) 93864-2539"],
+					"website": null,
+					"started_activity_in": "2024-07-14T19:04:06.368Z",
+					"address": {
+						"zip_code": "68131-613",
+						"street": "Iris Street",
+						"number": "512",
+						"complement": null,
+						"district": "Adams County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.780046,
+						"longitude": -55.096706
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 886.3
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.16,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 762.9
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.31,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 359.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.1,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 70.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 3.56,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 537.5
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 1.26,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 334.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 115.87,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 169.57,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 169.81,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Skiles, Schmitt and Morar Reciclagem",
+					"business_name": "Skiles, Schmitt and Morar Reciclagem",
+					"identity": "90693105000166",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Keanu85@palatable-distinction.name",
+					"phones": ["(30) 95199-8292"],
+					"website": null,
+					"started_activity_in": "2020-04-23T09:53:01.589Z",
+					"address": {
+						"zip_code": "12121-752",
+						"street": "Powlowski Groves",
+						"number": "951",
+						"complement": null,
+						"district": "Highlands and Islands",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.716939,
+						"longitude": -55.165801
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 504.8
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 1.49,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 567.2
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.87,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 880.4
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 1.98,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 75.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 0.85,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 113.2
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 4.03,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 290.8
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 239.19,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 111.83,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 272.52,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 72.52,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 244.18,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 104.18,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-05-03T22:15:40.595Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.553213,
+								"longitude": -55.306872,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788335370673
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Berkshire",
+							"streetNumber": "8800",
+							"street": "Hagenes Mall",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "34237240",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Andy Terrace, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Eletroeletrônicos (REEE)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"description": "Certus patruus tepidus velit urbanus ultio cresco tantum illo.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"description": "Creta ut aiunt una vae pectus suscipio cuppedia eum.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Jeannette Lesch",
+			"display_name": "Jeannette",
+			"phone": "(90) 94756-4011",
+			"email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "52396-781",
+				"street": "Orchard Street",
+				"number": "250",
+				"complement": null,
+				"district": "Isle of Wight",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.051349,
+				"longitude": -54.920815
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Hayes, Rosenbaum and Williamson Reciclagem",
+					"business_name": "Hayes, Rosenbaum and Williamson Reciclagem",
+					"identity": "14726375000148",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Mohammad_Franecki@devoted-drug.info",
+					"phones": ["(73) 97181-6435"],
+					"website": null,
+					"started_activity_in": "2026-02-25T11:24:44.662Z",
+					"address": {
+						"zip_code": "92182-156",
+						"street": "Anabelle Falls",
+						"number": "27189",
+						"complement": null,
+						"district": "Clwyd",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.664455,
+						"longitude": -55.202351
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Lâmpadas",
+							"description": "Coleta de resíduos: Lâmpadas",
+							"price": 0.43,
+							"unit": "KG",
+							"waste_category_name": "Lâmpadas",
+							"quantity": 61.6
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.68,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 812
+						},
+						{
+							"name": "Óleo Mineral / Lubrificante",
+							"description": "Coleta de resíduos: Óleo Mineral / Lubrificante",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 761.5
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 0.22,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 591.8
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.58,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 430.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 101.45,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 130.81,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Renner, Krajcik and Quitzon Reciclagem",
+					"business_name": "Renner, Krajcik and Quitzon Reciclagem",
+					"identity": "84558285000170",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Assunta_Sporer12@dependable-oil.net",
+					"phones": ["(68) 92598-8073"],
+					"website": null,
+					"started_activity_in": "2018-01-02T13:08:13.399Z",
+					"address": {
+						"zip_code": "45822-945",
+						"street": "E North Street",
+						"number": "8807",
+						"complement": null,
+						"district": "Cleveland",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.691057,
+						"longitude": -54.982385
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.57,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 655.6
+						},
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 1.12,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 844.3
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.11,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 706.7
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 2.76,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 724.7
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 366.1
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.8,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 645.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 269.46,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 165.06,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-02-10T13:58:16.955Z",
+					"observations": "Tunc alter aeneus contabesco pel vitium succedo aer vehemens.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.028185,
+								"longitude": -55.106206,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292421794
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "County Antrim",
+							"streetNumber": "66403",
+							"street": "Mervin Roads",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "70498018",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Quarry Lane, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Construção Civil e Demolição (RCD)",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Embalagens Contaminadas"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Chris Wiegand",
+			"display_name": "Chris",
+			"phone": "(68) 98554-8841",
+			"email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "96290-588",
+				"street": "Kohler Forks",
+				"number": "9243",
+				"complement": null,
+				"district": "Cheshire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.637483,
+				"longitude": -54.952365
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Leffler - Little Reciclagem",
+					"business_name": "Leffler - Little Reciclagem",
+					"identity": "12010536000177",
+					"identity_type": "CNPJ",
+					"company_type": "ONG",
+					"status": true,
+					"email": "Boris_Deckow@massive-convection.biz",
+					"phones": ["(98) 96710-3489"],
+					"website": null,
+					"started_activity_in": "2018-01-30T15:50:28.523Z",
+					"address": {
+						"zip_code": "64408-299",
+						"street": "Willow Drive",
+						"number": "62904",
+						"complement": null,
+						"district": "Herefordshire",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.042265,
+						"longitude": -54.795847
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.29,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 704.8
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.18,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 644.5
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 4.85,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 486.2
+						},
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.37,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 987.4
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.79,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 312.6
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.58,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 741.2
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 139.42,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 280.38,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 276.26,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 214.48,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 169.71,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 298.08,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Connelly - Schaden Reciclagem",
+					"business_name": "Connelly - Schaden Reciclagem",
+					"identity": "82251470000192",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Dave70@peppery-cruelty.net",
+					"phones": ["(44) 93316-2374"],
+					"website": null,
+					"started_activity_in": "2023-09-14T20:42:49.202Z",
+					"address": {
+						"zip_code": "07229-640",
+						"street": "Carroll Ville",
+						"number": "389",
+						"complement": null,
+						"district": "Calhoun County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.944599,
+						"longitude": -54.814975
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Óleo Vegetal Usado (de cozinha)",
+							"description": "Coleta de resíduos: Óleo Vegetal Usado (de cozinha)",
+							"price": 3.02,
+							"unit": "KG",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 809.6
+						},
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 0.66,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 472.7
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 4.46,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 919.3
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 2.47,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 421.2
+						},
+						{
+							"name": "Madeira",
+							"description": "Coleta de resíduos: Madeira",
+							"price": 3.01,
+							"unit": "KG",
+							"waste_category_name": "Madeira",
+							"quantity": 546.4
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 196.16,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Madeira",
+							"description": "Serviço de coleta e transporte de Madeira",
+							"price": 285.18,
+							"unit": "UNIT",
+							"waste_category_name": "Madeira",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Papel / Papelão",
+							"description": "Serviço de coleta e transporte de Papel / Papelão",
+							"price": 230.82,
+							"unit": "UNIT",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-01-06T17:44:58.371Z",
+					"observations": "Accusator artificiose conqueror vester adfectus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.937749,
+								"longitude": -54.850901,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788292430928
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Merseyside",
+							"streetNumber": "66227",
+							"street": "S Jackson Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63316691",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Alice Unions, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Vidro", "Têxtil / Roupas / Tecidos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-22T00:39:25.630Z",
+					"observations": "Crebro unus itaque crastinus territo tenetur.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.663928,
+								"longitude": -54.754186,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294835158
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Grampian",
+							"streetNumber": "531",
+							"street": "Lindsay Plains",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "63915026",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "S 7th Street, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "green-lind.13.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"description": "Tabula condico depromo ait vomito tolero tyrannus.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-05-18T08:48:16.638Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.032374,
+								"longitude": -55.119119,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788313631149
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Grant County",
+							"streetNumber": "755",
+							"street": "Mayfield Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "41966514",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Diane Spurs, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-11T20:59:40.774Z",
+					"observations": "Cogo recusandae altus defessus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.014534,
+								"longitude": -54.849614,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788328847879
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Clay County",
+							"streetNumber": "592",
+							"street": "Alfredo Fields",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05205473",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Isabel Fort, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Medicamentos",
+						"Embalagens Contaminadas",
+						"Vidro"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"description": "Thema tamquam solio arma taedium.",
+							"resolution_hint": "PREFER_COMPANY"
+						},
+						{
+							"resolver_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"description": "Libero aspicio accendo tempus turpis.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2025-11-24T17:44:44.200Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.607178,
+								"longitude": -55.118469,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788294195382
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Somerset",
+							"streetNumber": "500",
+							"street": "Stroman Ramp",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "83506759",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Maurine Fall, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos Orgânicos",
+						"Plástico",
+						"Construção Civil e Demolição (RCD)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"description": "Adsidue aqua cupiditas tabula aetas synagoga vergo coadunatio fugiat.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Caden Christiansen",
+			"display_name": "Caden",
+			"phone": "(87) 95225-8865",
+			"email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "03141-158",
+				"street": "Hamill Plaza",
+				"number": "84719",
+				"complement": null,
+				"district": "Warren County",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.649793,
+				"longitude": -55.291151
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Stanton - Frami Reciclagem",
+					"business_name": "Stanton - Frami Reciclagem",
+					"identity": "70263619000174",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Elena36@wonderful-comestible.name",
+					"phones": ["(83) 93660-3138"],
+					"website": null,
+					"started_activity_in": "2020-10-25T08:14:10.828Z",
+					"address": {
+						"zip_code": "95938-093",
+						"street": "E Jefferson Street",
+						"number": "90055",
+						"complement": null,
+						"district": "Worcestershire",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.072207,
+						"longitude": -54.734296
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Vidro",
+							"description": "Coleta de resíduos: Vidro",
+							"price": 4.36,
+							"unit": "KG",
+							"waste_category_name": "Vidro",
+							"quantity": 890.7
+						},
+						{
+							"name": "Construção Civil e Demolição (RCD)",
+							"description": "Coleta de resíduos: Construção Civil e Demolição (RCD)",
+							"price": 1.08,
+							"unit": "KG",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 441.9
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Construção Civil e Demolição (RCD)",
+							"description": "Serviço de coleta e transporte de Construção Civil e Demolição (RCD)",
+							"price": 162.94,
+							"unit": "UNIT",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 203.34,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 173.4,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 157.91,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 109.49,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Rippin LLC Reciclagem",
+					"business_name": "Rippin LLC Reciclagem",
+					"identity": "38457412000128",
+					"identity_type": "CNPJ",
+					"company_type": "COMPANY",
+					"status": true,
+					"email": "Bob31@cute-junior.net",
+					"phones": ["(98) 98888-3311"],
+					"website": null,
+					"started_activity_in": "2021-10-15T12:20:46.974Z",
+					"address": {
+						"zip_code": "60991-528",
+						"street": "Hilll Hill",
+						"number": "47234",
+						"complement": null,
+						"district": "Washington County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.568471,
+						"longitude": -55.076116
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 0.26,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 76.6
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 0.83,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 711.1
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 4.77,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 400.3
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 100.06,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Borracha / Pneus",
+							"description": "Serviço de coleta e transporte de Borracha / Pneus",
+							"price": 105.72,
+							"unit": "UNIT",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 284.35,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 222.37,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 110.33,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Metal / Alumínio",
+							"description": "Serviço de coleta e transporte de Metal / Alumínio",
+							"price": 173.18,
+							"unit": "UNIT",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": []
+		},
+		{
+			"full_name": "Nico Gutkowski",
+			"display_name": "Nico",
+			"phone": "(61) 99346-5303",
+			"email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "24684-740",
+				"street": "Crown Street",
+				"number": "380",
+				"complement": null,
+				"district": "Henry County",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.614257,
+				"longitude": -55.056789
+			},
+			"companies": [
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Crona Inc Reciclagem",
+					"business_name": "Crona Inc Reciclagem",
+					"identity": "53845999000136",
+					"identity_type": "CNPJ",
+					"company_type": "GOVERNMENT",
+					"status": true,
+					"email": "Cleo.Mosciski90@definitive-futon.net",
+					"phones": ["(68) 92734-3589"],
+					"website": null,
+					"started_activity_in": "2021-04-01T08:55:43.746Z",
+					"address": {
+						"zip_code": "28265-130",
+						"street": "Hauck Centers",
+						"number": "64530",
+						"complement": null,
+						"district": "Pike County",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -20.142284,
+						"longitude": -54.796886
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.75,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 250
+						},
+						{
+							"name": "Plástico",
+							"description": "Coleta de resíduos: Plástico",
+							"price": 4.26,
+							"unit": "KG",
+							"waste_category_name": "Plástico",
+							"quantity": 715.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Óleo Mineral / Lubrificante",
+							"description": "Serviço de coleta e transporte de Óleo Mineral / Lubrificante",
+							"price": 242.84,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Mineral / Lubrificante",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Pilhas e Baterias",
+							"description": "Serviço de coleta e transporte de Pilhas e Baterias",
+							"price": 106.47,
+							"unit": "UNIT",
+							"waste_category_name": "Pilhas e Baterias",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Construção Civil e Demolição (RCD)",
+							"description": "Serviço de coleta e transporte de Construção Civil e Demolição (RCD)",
+							"price": 70.28,
+							"unit": "UNIT",
+							"waste_category_name": "Construção Civil e Demolição (RCD)",
+							"quantity": 1
+						}
+					]
+				},
+				{
+					"_source": {
+						"google_place_id": null,
+						"rating": null,
+						"types": [],
+						"is_ecoponto": false,
+						"synthetic": true
+					},
+					"corporate_name": "Lubowitz LLC Reciclagem",
+					"business_name": "Lubowitz LLC Reciclagem",
+					"identity": "23635631159",
+					"identity_type": "CPF",
+					"company_type": "COLLECTOR",
+					"status": true,
+					"email": "Jalyn_Lang-Cartwright@classic-gym.biz",
+					"phones": ["(34) 96199-0321"],
+					"website": null,
+					"started_activity_in": "2020-03-08T19:16:11.784Z",
+					"address": {
+						"zip_code": "18985-065",
+						"street": "Kassulke Junctions",
+						"number": "1396",
+						"complement": null,
+						"district": "Rutland",
+						"city": "Corguinho",
+						"city_ibge_id": 5003108,
+						"state": "Mato Grosso do Sul",
+						"state_ibge_id": 50,
+						"state_code": "MS",
+						"latitude": -19.574617,
+						"longitude": -55.230865
+					},
+					"business_hours": [
+						{
+							"day_of_week": "MONDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "TUESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "WEDNESDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "THURSDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "FRIDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "18:00"
+								}
+							]
+						},
+						{
+							"day_of_week": "SATURDAY",
+							"is_open": true,
+							"time_slots": [
+								{
+									"start_time": "08:00",
+									"end_time": "12:00"
+								}
+							]
+						}
+					],
+					"wastes": [
+						{
+							"name": "Têxtil / Roupas / Tecidos",
+							"description": "Coleta de resíduos: Têxtil / Roupas / Tecidos",
+							"price": 2.84,
+							"unit": "KG",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 659.2
+						},
+						{
+							"name": "Metal / Alumínio",
+							"description": "Coleta de resíduos: Metal / Alumínio",
+							"price": 2.38,
+							"unit": "KG",
+							"waste_category_name": "Metal / Alumínio",
+							"quantity": 224.6
+						},
+						{
+							"name": "Borracha / Pneus",
+							"description": "Coleta de resíduos: Borracha / Pneus",
+							"price": 3.17,
+							"unit": "KG",
+							"waste_category_name": "Borracha / Pneus",
+							"quantity": 940.8
+						},
+						{
+							"name": "Papel / Papelão",
+							"description": "Coleta de resíduos: Papel / Papelão",
+							"price": 2.62,
+							"unit": "KG",
+							"waste_category_name": "Papel / Papelão",
+							"quantity": 524.2
+						},
+						{
+							"name": "Eletroeletrônicos (REEE)",
+							"description": "Coleta de resíduos: Eletroeletrônicos (REEE)",
+							"price": 3.54,
+							"unit": "KG",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 961.1
+						}
+					],
+					"services": [
+						{
+							"name": "Coleta de Vidro",
+							"description": "Serviço de coleta e transporte de Vidro",
+							"price": 271.12,
+							"unit": "UNIT",
+							"waste_category_name": "Vidro",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Plástico",
+							"description": "Serviço de coleta e transporte de Plástico",
+							"price": 96.23,
+							"unit": "UNIT",
+							"waste_category_name": "Plástico",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Têxtil / Roupas / Tecidos",
+							"description": "Serviço de coleta e transporte de Têxtil / Roupas / Tecidos",
+							"price": 203.68,
+							"unit": "UNIT",
+							"waste_category_name": "Têxtil / Roupas / Tecidos",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Óleo Vegetal Usado (de cozinha)",
+							"description": "Serviço de coleta e transporte de Óleo Vegetal Usado (de cozinha)",
+							"price": 103.93,
+							"unit": "UNIT",
+							"waste_category_name": "Óleo Vegetal Usado (de cozinha)",
+							"quantity": 1
+						},
+						{
+							"name": "Coleta de Eletroeletrônicos (REEE)",
+							"description": "Serviço de coleta e transporte de Eletroeletrônicos (REEE)",
+							"price": 131.04,
+							"unit": "UNIT",
+							"waste_category_name": "Eletroeletrônicos (REEE)",
+							"quantity": 1
+						}
+					]
+				}
+			],
+			"complaints": [
+				{
+					"date": "2026-04-24T16:36:52.644Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.693233,
+								"longitude": -55.352684,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788301924251
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Berkshire",
+							"streetNumber": "47234",
+							"street": "Kurt Mills",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "57988753",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Paddock, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-09-22T03:27:10.157Z",
+					"observations": "Anser vereor tempore perferendis acerbitas varietas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.928458,
+								"longitude": -55.320808,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788339253165
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Fife",
+							"streetNumber": "708",
+							"street": "Stan Lights",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "95401550",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Bradley Ramp, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Plástico",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-03-22T09:47:17.660Z",
+					"observations": "Subvenio sollers temeritas vel correptius caecus.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.748157,
+								"longitude": -55.00498,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788298032316
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "North Yorkshire",
+							"streetNumber": "381",
+							"street": "Old Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "05327302",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "West Burgs, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "green-lind.13.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gwen-jacobs-feeney.1.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-08T14:30:30.599Z",
+					"observations": "Suppono timidus viridis corrumpo stella thema ventosus stabilis tener ara.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.734799,
+								"longitude": -54.859833,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788323814095
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Highlands and Islands",
+							"streetNumber": "30746",
+							"street": "Kristy Canyon",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "46508147",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Main, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Eletroeletrônicos (REEE)",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Emmalee Cummerata",
+			"display_name": "Emmalee",
+			"phone": "(06) 98396-0902",
+			"email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "21487-236",
+				"street": "E Elm Street",
+				"number": "3244",
+				"complement": null,
+				"district": "North Yorkshire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.546025,
+				"longitude": -55.128001
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-05-25T20:49:06.397Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.009988,
+								"longitude": -55.23307,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788334693500
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Greater Manchester",
+							"streetNumber": "435",
+							"street": "Zackery Unions",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89970604",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Albert Forges, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Vidro", "Resíduos Orgânicos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-14T14:11:10.060Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.670374,
+								"longitude": -55.191588,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788279239973
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Northumberland",
+							"streetNumber": "5421",
+							"street": "Hane Shore",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "89265030",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Brett Parks, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Vegetal Usado (de cozinha)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "green-lind.13.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-05-29T20:11:53.910Z",
+					"observations": "Contra crudelis bestia clementia perferendis.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.582392,
+								"longitude": -55.099557,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788288163557
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Oxfordshire",
+							"streetNumber": "18759",
+							"street": "Welch Extensions",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "58615506",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Prospect Street, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos Orgânicos", "Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"description": "Creo video vindico aufero sollicito amor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"description": "Conduco paens adiuvo quis officiis cernuus earum virtus conforto acsi.",
+							"resolution_hint": "PREFER_COMPANY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Cathrine Wisozk",
+			"display_name": "Cathrine",
+			"phone": "(35) 96870-2203",
+			"email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "57576-594",
+				"street": "N Main Street",
+				"number": "58930",
+				"complement": null,
+				"district": "Worcestershire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -20.078186,
+				"longitude": -54.889768
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-03-24T05:22:29.622Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.877448,
+								"longitude": -54.775721,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347190062
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Powys",
+							"streetNumber": "396",
+							"street": "Guy Lights",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "54359423",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Franey Courts, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Papel / Papelão"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-01.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-02.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "CANCELED",
+					"votes": [
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Caden Gulgowski",
+			"display_name": "Caden",
+			"phone": "(31) 93391-3137",
+			"email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "89834-807",
+				"street": "Joe Passage",
+				"number": "330",
+				"complement": null,
+				"district": "Morgan County",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.720483,
+				"longitude": -54.958434
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-07-13T02:59:06.178Z",
+					"observations": "Velut speciosus deprimo iste carbo solus abscido clam tabella expedita.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.561128,
+								"longitude": -54.796921,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788275832900
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Lake County",
+							"streetNumber": "59769",
+							"street": "Brook Lane",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "09926306",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Klocko Place, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Pilhas e Baterias",
+						"Construção Civil e Demolição (RCD)",
+						"Borracha / Pneus"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "green-lind.13.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Green Lind",
+			"display_name": "Green",
+			"phone": "(70) 94523-4665",
+			"email": "green-lind.13.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "85679-789",
+				"street": "Franklin Avenue",
+				"number": "376",
+				"complement": null,
+				"district": "Jackson County",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.620545,
+				"longitude": -55.315301
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-06-12T03:48:50.228Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.692282,
+								"longitude": -55.11122,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788312190982
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "West Sussex",
+							"streetNumber": "167",
+							"street": "Castle Road",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "20566882",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Turcotte Manors, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Mineral / Lubrificante",
+						"Veículos em Fim de Vida",
+						"Metal / Alumínio"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "cathrine-wisozk.11.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"description": "Sursum accusantium constans amo coniuratio debitis clarus canis verto.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-18T18:29:25.214Z",
+					"observations": "Commemoro cito aperiam.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.603522,
+								"longitude": -54.98769,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788357471358
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Douglas County",
+							"streetNumber": "816",
+							"street": "Thompson Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "37086863",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Morissette Common, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Óleo Vegetal Usado (de cozinha)",
+						"Vidro",
+						"Resíduos de Serviços de Saúde (RSS)"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-06.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "gwen-jacobs-feeney.1.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-07T09:25:47.272Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.763958,
+								"longitude": -54.724015,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788299823193
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Essex",
+							"streetNumber": "45485",
+							"street": "Ortiz Via",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "25735949",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Julian Ports, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Construção Civil e Demolição (RCD)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "nico-gutkowski.9.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "gwen-jacobs-feeney.1.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"description": "Vallum tandem magni.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Isaac Fay",
+			"display_name": "Isaac",
+			"phone": "(07) 99887-8712",
+			"email": "isaac-fay.14.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "96333-290",
+				"street": "Gennaro Path",
+				"number": "42925",
+				"complement": null,
+				"district": "Warren County",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.739034,
+				"longitude": -55.391508
+			},
+			"companies": [],
+			"complaints": []
+		},
+		{
+			"full_name": "Arnold Ruecker",
+			"display_name": "Arnold",
+			"phone": "(47) 94607-9551",
+			"email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "33147-577",
+				"street": "Taylor Passage",
+				"number": "33141",
+				"complement": null,
+				"district": "County Tyrone",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.550992,
+				"longitude": -54.873879
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-01-26T00:05:02.555Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.777387,
+								"longitude": -55.295014,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788347408501
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Durham",
+							"streetNumber": "48839",
+							"street": "W North Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "62336656",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Schaden Coves, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Vidro"],
+					"attachments": [],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "dorothy-wilderman.5.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannette-lesch.6.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "green-lind.13.corguinho-ms@oikos.seed",
+							"description": "Surgo conforto conculco.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				},
+				{
+					"date": "2026-08-26T16:40:00.139Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.794344,
+								"longitude": -55.17432,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788330728501
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Hamilton County",
+							"streetNumber": "160",
+							"street": "Kaden Gateway",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "14120806",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Sandringham Road, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Veículos em Fim de Vida"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "RESOLVED",
+					"votes": [
+						{
+							"voter_email": "elijah-russel.16.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jaylon-schinner.4.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": [
+						{
+							"resolver_email": "gwen-jacobs-feeney.1.corguinho-ms@oikos.seed",
+							"description": "Vis statim sonitus tergeo copiose synagoga decumbo virga censura.",
+							"resolution_hint": "CITIZEN_ONLY"
+						},
+						{
+							"resolver_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"description": "Color despecto catena vitae neque allatus usque spero dens auditor.",
+							"resolution_hint": "CITIZEN_ONLY"
+						}
+					]
+				}
+			]
+		},
+		{
+			"full_name": "Elijah Russel",
+			"display_name": "Elijah",
+			"phone": "(21) 99666-9283",
+			"email": "elijah-russel.16.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "18826-939",
+				"street": "Beer Street",
+				"number": "89952",
+				"complement": null,
+				"district": "Leicestershire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.751688,
+				"longitude": -54.96668
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2026-08-12T22:09:00.047Z",
+					"observations": "Tubineus vir arguo patior decipio facilis barba strues aequitas.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.711635,
+								"longitude": -54.745748,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788290433008
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Staffordshire",
+							"streetNumber": "79544",
+							"street": "W Chestnut Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "43752622",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Runte Highway, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Plástico",
+						"Resíduos de Serviços de Saúde (RSS)",
+						"Óleo Mineral / Lubrificante"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "caden-christiansen.8.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "arnold-ruecker.15.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "kyler-weber.0.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-04-08T21:36:02.219Z",
+					"observations": "Venio facere vobis tempore confido adipisci.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.682677,
+								"longitude": -55.049269,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788303567803
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "County Armagh",
+							"streetNumber": "8760",
+							"street": "E Broadway Street",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "36765448",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Mante Harbors, Corguinho - MS"
+						}
+					},
+					"waste_category_names": [
+						"Papel / Papelão",
+						"Construção Civil e Demolição (RCD)",
+						"Têxtil / Roupas / Tecidos"
+					],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-07.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-04.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [],
+					"resolutions": []
+				}
+			]
+		},
+		{
+			"full_name": "Tyrone Boehm-Beatty",
+			"display_name": "Tyrone",
+			"phone": "(45) 92575-8133",
+			"email": "tyrone-boehm-beatty.17.corguinho-ms@oikos.seed",
+			"address": {
+				"zip_code": "02362-956",
+				"street": "Farm Close",
+				"number": "74842",
+				"complement": null,
+				"district": "Hertfordshire",
+				"city": "Corguinho",
+				"city_ibge_id": 5003108,
+				"state": "Mato Grosso do Sul",
+				"state_ibge_id": 50,
+				"state_code": "MS",
+				"latitude": -19.505567,
+				"longitude": -55.313036
+			},
+			"companies": [],
+			"complaints": [
+				{
+					"date": "2025-11-18T17:03:14.269Z",
+					"observations": "Tollo abutor vigor.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -20.087683,
+								"longitude": -55.257598,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788353205283
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Highlands and Islands",
+							"streetNumber": "4029",
+							"street": "Gorczany Lock",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74599248",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Joanie Drives, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Resíduos de Serviços de Saúde (RSS)"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						},
+						{
+							"asset_file": "complaint-sample-03.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "isaac-fay.14.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "jeannie-mcclure.3.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						},
+						{
+							"voter_email": "caden-gulgowski.12.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2025-12-10T23:16:38.435Z",
+					"observations": null,
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.87519,
+								"longitude": -55.158888,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788297433232
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Douglas County",
+							"streetNumber": "21522",
+							"street": "Ash Close",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "64308282",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "The Crescent, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Pilhas e Baterias", "Medicamentos"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "eddie-feeney.2.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						},
+						{
+							"voter_email": "emmalee-cummerata.10.corguinho-ms@oikos.seed",
+							"vote_type": "RESOLVED"
+						}
+					],
+					"resolutions": []
+				},
+				{
+					"date": "2026-08-07T22:20:42.875Z",
+					"observations": "Eaque nostrum nihil.",
+					"geospatial": {
+						"heading": null,
+						"location": {
+							"coords": {
+								"latitude": -19.865697,
+								"longitude": -54.742442,
+								"altitude": null,
+								"accuracy": null,
+								"altitudeAccuracy": null,
+								"heading": null,
+								"speed": null
+							},
+							"timestamp": 1788341169930
+						},
+						"addresses": {
+							"city": "Corguinho",
+							"district": "Marion County",
+							"streetNumber": "945",
+							"street": "Dalton Field",
+							"region": "MS",
+							"subregion": null,
+							"country": "Brasil",
+							"postalCode": "74118250",
+							"name": null,
+							"isoCountryCode": "BR",
+							"timezone": "America/Sao_Paulo",
+							"formattedAddress": "Holly Close, Corguinho - MS"
+						}
+					},
+					"waste_category_names": ["Borracha / Pneus"],
+					"attachments": [
+						{
+							"asset_file": "complaint-sample-05.jpg",
+							"type": "PHOTO"
+						}
+					],
+					"status": "OPEN",
+					"votes": [
+						{
+							"voter_email": "chris-wiegand.7.corguinho-ms@oikos.seed",
+							"vote_type": "NOT_RESOLVED"
+						}
+					],
+					"resolutions": []
+				}
+			]
+		}
+	]
+}

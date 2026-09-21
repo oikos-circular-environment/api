@@ -1,5 +1,7 @@
+import type { UsersRepository } from "@/modules/accounts/repositories/users-repository.js";
 import { AppError } from "@/modules/common/errors/app-error.js";
 import type { StorageProvider } from "@/modules/common/providers/storage/storage.js";
+import type { TransactionManager } from "@/modules/common/providers/transaction/transaction-manager.js";
 import type { ProfilesRepository } from "@/modules/profiles/repositories/profiles-repository.js";
 
 type DeleteProfileImageUseCaseRequest = {
@@ -10,6 +12,8 @@ export class DeleteProfileImageUseCase {
 	constructor(
 		private readonly profilesRepository: ProfilesRepository,
 		private readonly storageProvider: StorageProvider,
+		private readonly usersRepository: UsersRepository,
+		private readonly transactionManager: TransactionManager,
 	) {}
 
 	async execute({ userId }: DeleteProfileImageUseCaseRequest): Promise<void> {
@@ -29,6 +33,9 @@ export class DeleteProfileImageUseCase {
 
 		await this.storageProvider.deleteFile(profile.profile_image.path);
 
-		await this.profilesRepository.deleteProfileImage(profile.id);
+		await this.transactionManager.run(async (tx) => {
+			await this.profilesRepository.deleteProfileImage(profile.id, tx);
+			await this.usersRepository.updateImage(userId, null, tx);
+		});
 	}
 }

@@ -40,7 +40,6 @@ type AttachmentEntity = {
 	url: string;
 	file_name: string;
 	path: string;
-	base64: string;
 	metadata: Record<string, unknown> | null;
 	type: ComplaintCaptureMode;
 	created_at: Date;
@@ -62,7 +61,6 @@ type ResolutionAttachmentEntity = {
 	url: string;
 	file_name: string;
 	path: string;
-	base64: string;
 	created_at: Date;
 };
 
@@ -213,7 +211,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			metadata: data.metadata ?? null,
 			type: data.type,
 			created_at: new Date(),
@@ -355,7 +352,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					url: a.url,
 					file_name: a.file_name,
 					path: a.path,
-					base64: a.base64,
 					metadata: a.metadata,
 					type: a.type,
 					created_at: a.created_at,
@@ -513,7 +509,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		userId: string,
 		complaintId: string,
 		data: SubmitResolution,
-	): Promise<void> {
+	): Promise<{ id: string }> {
 		const resolution: ResolutionEntity = {
 			id: randomUUID(),
 			complaint_id: complaintId,
@@ -524,6 +520,7 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			updated_at: new Date(),
 		};
 		this.resolutions.push(resolution);
+		return { id: resolution.id };
 	}
 
 	async updateResolution(
@@ -541,15 +538,9 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 		}
 	}
 
-	async deleteResolutionByUser(
-		userId: string,
-		complaintId: string,
-	): Promise<void> {
-		const index = this.resolutions.findIndex(
-			(r) => r.complaint_id === complaintId && r.resolver_user_id === userId,
-		);
+	async deleteResolutionById(resolutionId: string): Promise<void> {
+		const index = this.resolutions.findIndex((r) => r.id === resolutionId);
 		if (index !== -1) {
-			const resolutionId = this.resolutions[index]?.id;
 			this.resolutions.splice(index, 1);
 			this.resolutionAttachments = this.resolutionAttachments.filter(
 				(a) => a.resolution_id !== resolutionId,
@@ -568,7 +559,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 			url: data.url,
 			file_name: data.file_name,
 			path: data.path,
-			base64: data.base64,
 			created_at: new Date(),
 		};
 		this.resolutionAttachments.push(attachment);
@@ -628,7 +618,6 @@ export class InMemoryComplaintsRepository implements ComplaintsRepository {
 					url: a.url,
 					file_name: a.file_name,
 					path: a.path,
-					base64: a.base64,
 					metadata: a.metadata,
 					type: a.type,
 					created_at: a.created_at,
