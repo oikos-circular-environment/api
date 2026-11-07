@@ -60,9 +60,9 @@ modelo com tool-calling mais confiável. O teste é reproduzível — basta repe
 de controle.
 
 **Nota sobre o Ollama:** existem dois compose separados de propósito.
-`docker-compose.ollama.yml` (porta 11434, `OLLAMA_CONTEXT_LENGTH=4096`) é do **graphify**,
+`ollama/docker-compose.ollama.yml` (porta 11434, `OLLAMA_CONTEXT_LENGTH=4096`) é do **graphify**,
 com o contexto calibrado para o chunking de arquivos — **não alterar**.
-`docker-compose.ollama-agents.yml` (porta 11435, 16k) é o dos agentes, isolado em volume
+`ollama/docker-compose.ollama-agents.yml` (porta 11435, 16k) é o dos agentes, isolado em volume
 próprio justamente para não interferir naquele.
 
 ## Presets
